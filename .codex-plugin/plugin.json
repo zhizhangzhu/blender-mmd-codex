@@ -1,0 +1,35 @@
+{
+  "name": "blender-mmd-codex",
+  "version": "0.1.0",
+  "description": "協助 MMD 使用者準備 Blender 環境、檢查模型並建立 MMD 動畫工作流程。",
+  "author": {
+    "name": "blender-mmd-codex contributors"
+  },
+  "license": "MIT",
+  "keywords": [
+    "Blender",
+    "MMD",
+    "PMX",
+    "PMD",
+    "VMD",
+    "animation"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Blender MMD Codex",
+    "shortDescription": "MMD 模型、動畫與 Blender 自動化助手",
+    "longDescription": "協助使用者檢查 PMX／PMD 模型、規劃 VMD 與 MMD 參考影片工作流程、產生 Blender Python 腳本，以及準備 Blender 執行環境。",
+    "developerName": "blender-mmd-codex contributors",
+    "category": "Productivity",
+    "capabilities": [
+      "Interactive",
+      "Write"
+    ],
+    "defaultPrompt": [
+      "檢查我的 MMD 模型與 Blender 環境",
+      "把這段 MMD 影片加入 Blender 作為動作參考",
+      "產生一個整理 MMD 模型的 Blender Python 腳本"
+    ],
+    "brandColor": "#E87D3E"
+  }
+}
