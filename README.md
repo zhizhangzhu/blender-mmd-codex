@@ -7,7 +7,7 @@
 - Codex Plugin：提供 skills、操作教學、錯誤排查與工作流程協調。
 - Blender Add-on：在 Blender 內執行場景檢查、模型基本檢查與 MMD 參考影片匯入。
 
-完整產品規劃請參考 [PROJECT_PLAN.md](PROJECT_PLAN.md)。
+MMD 制作 Skill 設計與驗證範圍見 [設計文件](docs/superpowers/specs/2026-10-26-mmd-production-design.md)。本機安裝位置與使用方式見 [本機環境](docs/LOCAL_SETUP.md)。
 
 ## 目前狀態
 
@@ -23,10 +23,12 @@
 - MMD 模型的 Mesh／Armature 基本檢查
 - 將使用者提供的 MMD 渲染影片加入 Blender 時間軸作為參考
 
-以下功能尚未完成：
+本版增加 `mmd-production` 工作流程：透過另外安裝的 Blender MCP 與官方 MMD Tools 操作模型、人物／相機 VMD、場景與渲染。MMD Tools Append 為可選的資源目錄與場景輔助工具；詳細範圍見 [MMD Skill](skills/mmd-production/SKILL.md)。
 
-- PMX／PMD 完整匯入
-- VMD 動作、相機與表情解析
+本專案自身仍未實作以下功能：
+
+- 自行解析 PMX／PMD（實際制作使用 MMD Tools 現有匯入器）
+- 自行解析 VMD（實際套用使用 MMD Tools 現有匯入器）
 - 影片姿勢擷取與骨架重定向
 - 完整材質、權重與物理修復
 - GitHub 發布與公開 Codex Plugin 提交
@@ -44,7 +46,7 @@
 ├─ scripts/                   # Blender 偵測、安裝與驗證工具
 ├─ skills/                    # Codex 可使用的工作流程
 ├─ tests/                     # Python 單元測試
-├─ PROJECT_PLAN.md            # 專案規劃書
+├─ docs/                      # 本機環境、設計與實施記錄
 ├─ LICENSE
 └─ README.md
 ```
@@ -53,10 +55,12 @@
 
 目前包含以下 skills：
 
+- `mmd-asset-search`：独立的模型／动作／镜头配布检索，核对作者、版本、获取条件和当前状态
+- `mmd-production`：資源配布檢索、模型／動作／相機套用、場景調整、預覽與影片輸出
 - `blender-setup`：偵測、下載、安裝與驗證 Blender
 - `mmd-model-check`：規劃 PMX／PMD 模型檢查流程
 - `mmd-video-reference`：處理 MMD 渲染影片參考流程
-- `vmd-workflow`：規劃 VMD 動作、相機與表情工作流程
+- `vmd-workflow`：透過 MMD Tools 套用 VMD 動作、相機與表情，檢查映射、比例與時間
 - `troubleshooting`：分析 Blender 與 MMD 常見問題
 
 Codex Plugin 與 Blender Add-on 是不同的安裝單位。Codex 負責理解需求與協調流程，Blender Add-on 負責在 Blender 內執行實際操作。
@@ -74,7 +78,9 @@ Codex Plugin 與 Blender Add-on 是不同的安裝單位。Codex 負責理解需
 ## 開發環境
 
 - Python 3.10 或更新版本
-- Blender 3.6 或更新版本（實際 Add-on 相容性仍會依功能調整）
+- Blender 4.2 或更新版本 + MMD Tools 4.x；本機目標為 Blender 4.5 LTS
+- Blender MCP：操作打開的 Blender 場景；服務端依賴安裝在獨立環境
+- MMD Tools Append：可選，提供資源目錄、材質與骨架等輔助功能
 - Codex CLI（若要使用 CLI 管理 Marketplace）
 - Git
 
@@ -179,11 +185,13 @@ Git commit
 - 測試案例與預期結果
 - 已驗證的個人或商業開發者身分
 
-目前本專案尚未設定 GitHub remote，也尚未提交至公開 Codex Plugin 目錄。
+本機安裝不代表已提交至公開 Codex Plugin 目錄。Skill 可從本機檔案系統載入；Blender MCP 必須另行完成服務註冊。
 
 ## 參考文件
 
-- [專案規劃書](PROJECT_PLAN.md)
+- [MMD 工作流程 Skill](skills/mmd-production/SKILL.md)
+- [圖文來源與版本核對](skills/mmd-production/references/learning-sources.md)
+- [本機安裝與驗證](docs/LOCAL_SETUP.md)
 - [OpenAI Plugin 建置文件](https://developers.openai.com/plugins/build/plugins)
 - [OpenAI Plugin 測試文件](https://developers.openai.com/plugins/deploy/connect-chatgpt)
 - [OpenAI Plugin 提交文件](https://developers.openai.com/plugins/deploy/submission)

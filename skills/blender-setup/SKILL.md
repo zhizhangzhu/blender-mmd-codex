@@ -1,6 +1,6 @@
 ---
 name: blender-setup
-description: 檢查 Blender 是否已安裝，必要時在使用者確認後從官方來源下載、安裝並驗證。
+description: 檢查 Blender 是否已安裝，依已授權範圍從官方來源下載、安裝並驗證。
 ---
 
 # Blender 環境準備
@@ -11,12 +11,12 @@ description: 檢查 Blender 是否已安裝，必要時在使用者確認後從�
 
 ## 工作規則
 
-1. 先使用 `scripts/blender_detect.py` 搜尋既有 Blender，不要直接下載。
+1. 優先讀取專案 `.blender/local-setup.json` 或使用者指定的執行檔，並檢查 `portable_blender/`。再用 `scripts/blender_detect.py` 搜尋系統；目前該腳本不搜尋 repo 內的 portable 安裝，不能因此重複下載。
 2. 優先使用使用者明確指定的 Blender 路徑與版本。
-3. 需要下載或安裝時，先顯示版本、來源、檔案大小、安裝位置與權限需求，取得使用者確認後再執行。
+3. 需要下載或安裝時，說明版本、來源、大小與位置。沿用本次會話已有的安裝授權；只有超出授權範圍或需要新的不可逆變更時才再確認。
 4. 只接受 Blender 官方下載來源；下載後應驗證 SHA-256。
 5. 優先使用 portable 安裝，避免不必要的系統寫入與管理員權限。
-6. 安裝完成後使用 `scripts/blender_validate.py` 驗證 Blender、Blender Python 與本 Add-on。
+6. 安裝完成後使用 `scripts/blender_validate.py` 驗證 Blender、Blender Python 與本 Add-on；另查 MMD Tools 和 Blender MCP 是否真的啟用。載入檢查不等於持久安裝，MCP 服務需實際初始化與場景回讀。
 7. 失敗時回報實際原因與官方手動下載連結，不繞過作業系統安全提示。
 
 ## 不可宣稱的結果

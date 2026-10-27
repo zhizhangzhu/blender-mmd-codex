@@ -58,7 +58,7 @@ def find_blender_executable(root: Path, system_name: str | None = None) -> Path:
         matches = sorted(root.rglob(name))
         for match in matches:
             if match.is_file():
-                return match
+                return match.resolve()
     raise InstallationError(f"安裝包內找不到 Blender 執行檔：{root}")
 
 

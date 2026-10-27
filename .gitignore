@@ -8,3 +8,6 @@ build/
 .blender/
 downloads/
 portable_blender/
+
+# Local MMD productions and third-party assets
+mmd_projects/

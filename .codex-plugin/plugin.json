@@ -1,7 +1,7 @@
 {
   "name": "blender-mmd-codex",
-  "version": "0.1.0",
-  "description": "協助 MMD 使用者準備 Blender 環境、檢查模型並建立 MMD 動畫工作流程。",
+  "version": "0.2.1",
+  "description": "透過 Blender 工具與 MMD Tools 協助模型、動作、相機、資源檢索與影片制作。",
   "author": {
     "name": "blender-mmd-codex contributors"
   },
@@ -18,7 +18,7 @@
   "interface": {
     "displayName": "Blender MMD Codex",
     "shortDescription": "MMD 模型、動畫與 Blender 自動化助手",
-    "longDescription": "協助使用者檢查 PMX／PMD 模型、規劃 VMD 與 MMD 參考影片工作流程、產生 Blender Python 腳本，以及準備 Blender 執行環境。",
+    "longDescription": "以 Skills 指導 Codex 使用另行安裝的 Blender MCP 與 MMD Tools，整理配布來源、匯入模型和 VMD、調整鏡頭與場景、預覽渲染並輸出影片。",
     "developerName": "blender-mmd-codex contributors",
     "category": "Productivity",
     "capabilities": [
@@ -26,9 +26,9 @@
       "Write"
     ],
     "defaultPrompt": [
-      "檢查我的 MMD 模型與 Blender 環境",
-      "把這段 MMD 影片加入 Blender 作為動作參考",
-      "產生一個整理 MMD 模型的 Blender Python 腳本"
+      "用 Blender 工具导入我的 PMX、人物动作和相机 VMD，并输出一段预览",
+      "按角色和歌曲寻找模型、动作与镜头配布，并整理来源与使用条款",
+      "检查我的 MMD 模型与 Blender 环境"
     ],
     "brandColor": "#E87D3E"
   }
