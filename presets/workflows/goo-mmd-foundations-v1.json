@@ -1,0 +1,60 @@
+{
+  "id": "goo-mmd-foundations-v1",
+  "date": "2026-11-18",
+  "guide": "docs/GOO_MMD_EIGHT_FOUNDATIONS_2026_11_18.md",
+  "runtime": "Goo5.2.1 community 0051aee03764",
+  "modules": [
+    {
+      "id": "B1",
+      "topic": "Coordinates and normals",
+      "status": "official_guide_read_and_mesh_normal_static_reopen_verified",
+      "remaining": "Real character head spaces, deformed meshes, target parenting and local vertex groups"
+    },
+    {
+      "id": "B2",
+      "topic": "Data blocks and modifier stack",
+      "status": "official_guide_read_and_sharing_and_stack_native_data_controls_verified",
+      "remaining": "Real character stack and all nested dependencies"
+    },
+    {
+      "id": "B3",
+      "topic": "MMD material and texture semantics",
+      "status": "official_image_guide_read_and_installed_mmd_source_sections_checked",
+      "remaining": "New model per-material mapping and Morph interactions"
+    },
+    {
+      "id": "B4",
+      "topic": "Goo lighting and shadows",
+      "status": "official_light_guide_read_with_prior_goo_controls_reused",
+      "remaining": "Full current-light parameter matrix and character face cast/self isolation"
+    },
+    {
+      "id": "B5",
+      "topic": "Basic toon material design",
+      "status": "official_material_node_guides_read",
+      "remaining": "Per-material still controls, no claim of achieved art quality"
+    },
+    {
+      "id": "B6",
+      "topic": "MMD rig and animation evaluation",
+      "status": "official_rig_action_guides_and_installed_import_source_read",
+      "remaining": "No new retargeting or real-character Action/Slot changes"
+    },
+    {
+      "id": "B7",
+      "topic": "Rigid bodies joints cache",
+      "status": "official_guides_read_and_prior_physics_notes_crosschecked",
+      "remaining": "No new physics simulation or enlarged dynamic verification"
+    },
+    {
+      "id": "B8",
+      "topic": "Compositing and plugin collaboration",
+      "status": "official_compositing_guides_author_mmr_article_and_package_source_read",
+      "remaining": "Kafei detailed guide unavailable; no new plugin production conversion or all-function certification"
+    }
+  ],
+  "all_eight_subjects_first_reading_pass": true,
+  "all_basics_mastered": false,
+  "production_modified": false,
+  "output_policy": "isolated static controls only"
+}

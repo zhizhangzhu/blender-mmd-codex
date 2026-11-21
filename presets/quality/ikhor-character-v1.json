@@ -1,0 +1,85 @@
+{
+  "id": "ikhor-character-v1",
+  "source_pmx": "D:/codex/output/MMD-Ikhor-Model-v1/source/Ikhor/Ikhor.pmx",
+  "source_pmx_sha256": "ebba744cee847c16cfe5be037e7464d4f701c8edb2f5033e7de5730bd6654a52",
+  "optional_parts": {
+    "hide_materials": ["环", "灯"],
+    "reason": "Omit the optional quest collar and lamp in the wedding look; integrator explicitly records source Alpha1 to effective Alpha0 and disables their hulls. Original PMX remains unchanged and these parts can be restored."
+  },
+  "helpers": {
+    "key": "Reference duet | ikhor | key",
+    "rim": "Reference duet | ikhor | rim",
+    "origin": "Quality | ikhor | head origin",
+    "forward": "Quality | ikhor | head forward",
+    "up": "Quality | ikhor | head up"
+  },
+  "material_roles": {
+    "颜": "face", "首": "skin", "眉毛": "ink", "睫毛": "ink", "二重": "ink",
+    "目白": "eye_white", "目": "iris", "目2": "eye_layer", "口": "mouth", "舌": "mouth", "齿": "eye_white", "bq": "hidden",
+    "鬓": "hair", "衣": "cloth", "衣2": "cloth", "衣领": "cloth", "带子": "cloth", "衣饰": "trim", "裙": "cloth",
+    "手": "skin", "裤": "cloth", "靴": "leather", "靴底": "leather", "靴饰": "trim", "灯": "trim", "环": "crystal"
+  },
+  "face_fallback": {
+    "path": "D:/codex/output/MMD-Ikhor-Model-v1/source/Ikhor/Textures/Avatar_Boy_Undefined_Purusa_Tex_Face_Diffuse.png",
+    "uv_evidence": "Actual imported face UV min(0.08779,0.17400), max(0.91188,0.92225), mean(0.49989,0.49452); supplied same-character FaceDiffuse inspected with matching paired face/eyeholes/mouth layout and existing source feature atlases. Edited y1.png absent; final 3D appearance remains subject to pilot review."
+  },
+  "lighting_response": {"low": 0.055, "high": 0.34, "form_low": -0.08, "form_high": 0.65, "face_form_floor": 0.60},
+  "ao": {"face_distance": 0.014, "face_strength": 0.035, "distance": 0.030, "strength": 0.075},
+  "palettes": {
+    "face": [[0.72,0.55,0.56,1],[1.025,1.01,1.0,1]],
+    "skin": [[0.78,0.63,0.61,1],[1.02,1.0,0.98,1]],
+    "hair": [[0.56,0.47,0.33,1],[1.04,1.02,0.95,1]],
+    "cloth": [[0.48,0.54,0.69,1],[1.02,1.025,1.045,1]],
+    "trim": [[0.55,0.51,0.43,1],[1.025,1.015,0.99,1]],
+    "leather": [[0.43,0.43,0.50,1],[1.0,1.01,1.025,1]],
+    "crystal": [[0.36,0.60,0.79,1],[1.0,1.025,1.05,1]]
+  },
+  "feature_gain": {"ink": 1.0, "eye_white": 0.97, "iris": 1.0, "eye_layer": 1.0, "mouth": 0.90, "hidden": 1.0},
+  "hair": {"exponent": 44, "strength": 0.08, "shadow_retention": 0.28, "color": [1.0,0.92,0.72]},
+  "rim": {"power": 5.5, "hair_strength": 0.80, "body_strength": 0.60, "skin_strength": 0.015, "color": [0.08,0.62,1.0]},
+  "physical": {
+    "face": {"mix": 0.025, "roughness": 0.70, "specular": 0.20},
+    "skin": {"mix": 0.04, "roughness": 0.67, "specular": 0.22},
+    "hair": {"mix": 0.03, "roughness": 0.35, "specular": 0.28},
+    "cloth": {"mix": 0.12, "roughness": 0.70, "specular": 0.30, "sheen": 0.15},
+    "trim": {"mix": 0.16, "roughness": 0.42, "specular": 0.35, "coat": 0.10},
+    "leather": {"mix": 0.16, "roughness": 0.43, "specular": 0.32},
+    "crystal": {"mix": 0.16, "roughness": 0.22, "specular": 0.50, "coat": 0.32},
+    "ink": {"mix": 0, "roughness": 1}, "eye_white": {"mix": 0.02, "roughness": 0.28, "specular": 0.35},
+    "iris": {"mix": 0.04, "roughness": 0.18, "specular": 0.50, "coat": 0.15},
+    "eye_layer": {"mix": 0.03, "roughness": 0.15, "specular": 0.50, "coat": 0.22},
+    "mouth": {"mix": 0, "roughness": 0.75}, "hidden": {"mix": 0, "roughness": 1}
+  },
+  "gold_partition": {
+    "materials": ["衣", "衣2", "衣领", "带子", "衣饰", "裙", "靴饰"],
+    "mask": {"hue": [0.055,0.08,0.19,0.23], "saturation": [0.12,0.30], "value": [0.10,0.36]},
+    "metallic": 0.80, "roughness": 0.27, "mix": 0.62
+  },
+  "local_emission": {
+    "cyan_gems": {
+      "materials": ["衣", "衣2", "衣领", "衣饰", "裙", "靴饰"],
+      "mask": {"hue": [0.45,0.48,0.61,0.66], "saturation": [0.32,0.65], "value": [0.16,0.48]},
+      "strength": 2.8, "color": [0.025,0.64,1.0]
+    },
+    "lamp_core": {
+      "materials": ["灯"],
+      "mask": {"hue": [0.025,0.05,0.14,0.18], "saturation": [0.45,0.68], "value": [0.20,0.65], "uv_box": [0.63,1.001,-0.001,0.50]},
+      "strength": 2.4, "color": [0.025,0.64,1.0]
+    },
+    "blue_crystal_ring": {
+      "materials": ["环"],
+      "mask": {"hue": [0.46,0.50,0.69,0.75], "saturation": [0.20,0.60], "value": [0.20,0.60]},
+      "strength": 1.7, "color": [0.025,0.64,1.0]
+    }
+  },
+  "limits": [
+    "Original edited y1.png is missing; fallback uses the supplied original Ikhor/Purusa FaceDiffuse and must be judged in the pilot, not called restoration of y1",
+    "No actual Face SDF was supplied or verified; head-forward soft form and key-facing diffuse are approximations, not original game SDF or pure visibility",
+    "Diffuse calibration is fixed to the integrated Ikhor key/light-link budget; extra diffuse lights or a changed key require revalidation",
+    "Lightmap and normal-map channels are not consumed without verified semantics; no Aether or other-character control image is reused",
+    "Gold and cyan masks are explicit source-texture HSV art selections, not original metallic/emission data",
+    "ReferenceDuetActor follows original MMD Alpha, including invisible bq; both COLOR AOVs also multiply Alpha",
+    "StageArtRim and BoldWeddingEmission are artistic source AOVs before final PBR mixture attenuation, not physical light passes",
+    "No motion/physics/PMX edge or geometry modifications; original sphere inputs including eye2 additive Eye_s are retained"
+  ]
+}

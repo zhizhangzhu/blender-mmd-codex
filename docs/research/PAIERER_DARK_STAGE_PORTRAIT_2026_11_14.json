@@ -1,0 +1,181 @@
+{
+  "schema_version": 1,
+  "id": "paierer-dark-stage-portrait-2026-11-14",
+  "recorded_date": "2026-11-14",
+  "status": "eight-local-video-stills-actually-viewed-and-current-clean-qualitative-comparison",
+  "priority": "观海子仍为核心方向；本条是猪猪直接给定的具体人物明暗/线条/舞台关系参考，不覆盖现有角色配色和雪/婚礼/爱的主题。",
+  "source": {
+    "folder_discovered_by": "PowerShell Get-ChildItem D:/JiJiDownload; exact directory selected by Name",
+    "title_from_local_folder": "奥黛塔&沃雅妮莎 _ 愛包ダンスホール",
+    "video": "D:/JiJiDownload/奥黛塔&沃雅妮莎 _ 愛包ダンスホール/奥黛塔&沃雅妮莎 _ 愛包ダンスホール - 1.奥黛塔&沃雅妮莎_愛包ダンスホール_4K(Av117097099234086,P1).mp4",
+    "sha256": "5638bda16d0872ce46d992a158c9be76fca24a8d2d20c50738b79864ae2f567a",
+    "bytes": 822455395,
+    "aid_label_from_filename": "117097099234086",
+    "part_label_from_filename": "P1",
+    "remote_metadata_or_account_independently_verified": false,
+    "visible_watermark": "paierer / bilibili, seen in all eight selected images",
+    "author_identity_scope": "仅以视频水印记录paierer；没有由文件名或角色名称推断确切账号UID、引擎或Shader。",
+    "metadata": {
+      "tool": "existing imageio_ffmpeg ffmpeg 7.1 metadata inspection",
+      "duration_reported_seconds": 220.03,
+      "duration_precision": "ffmpeg console rounded to 0.01 second; not exact decoded last PTS",
+      "dimensions": [3840, 2160],
+      "reported_fps": 60,
+      "codec": "H.264 High / yuv420p tv bt709",
+      "audio": "AAC LC, 44100 Hz stereo"
+    },
+    "deduplication": "此源SHA与既有FEMALE_CLEAN_NPR_REFERENCE的17.4秒竖屏源c5688a...不同；不是把此前神秘会员日/未解析短链的四张观察换名。"
+  },
+  "private_frames": {
+    "root": "D:/codex/output/MMD-Portrait-Lighting-Study-2026-11-14/paierer-private",
+    "method": "本地ffmpeg按时间码稀疏抽8张1280x720 JPEG；没有播放/下载4K网络视频或全片逐帧。",
+    "timestamps_seconds": [18, 50, 85, 105, 120, 160, 178, 195],
+    "all_eight_actually_viewed": true,
+    "reference_frames_or_video_in_repository": false,
+    "continuous_video_or_audio_reviewed": false,
+    "temporal_stability_certified": false
+  },
+  "observations": [
+    {
+      "seconds": 18,
+      "timecode": "00:18",
+      "file": "frame-018s.jpg",
+      "framing": "银蓝发角色近景、仰头、手臂与手套占前景",
+      "seen": "脸大面浅粉亮，鼻部是小而简化的粉色形；下颌至颈和肩/上臂有面积明确的粉紫阴影，白袖折叠有灰紫分面。头发、肩线、袖与手臂外缘有暖白/桃色窄亮边及少量柔晕。",
+      "line_detail": "上眼线/睫毛深而清楚，嘴/下颌/袖褶是细深线；亮边在外侧，不能把所有深结构线与发光边合为一个效果。",
+      "limit": "是有选择的层次概括，不证明SDF、法线编辑或具体投影算法；前景手与脸受光关系不能仅凭该帧认证几何正确。"
+    },
+    {
+      "seconds": 50,
+      "timecode": "00:50",
+      "file": "frame-050s.jpg",
+      "framing": "双人中景，角色轻微转身/侧倾",
+      "seen": "深蓝背景与亮人物分开，暖粉沙发/甜点桌并不暗。白衣保持浅灰紫内褶和较深袖/腰部；青发及银蓝发都留深浅发束和分段亮带，暖边集中在外缘局部。",
+      "limit": "角色底色不同，不能把银蓝发或青绿服装当成阿克西妮娅/伊科尔应更换的配色。"
+    },
+    {
+      "seconds": 85,
+      "timecode": "01:25",
+      "file": "frame-085s.jpg",
+      "framing": "双人全身，舞台装饰/台阶/气球完整可见",
+      "seen": "不是全场压暗：背景大面深蓝，前景暖粉台阶和沙发有较高明度；人物靠皮肤/白衣亮面、深色服装分区及窄边与背景分离。白裙/白裤仍有灰蓝/紫灰分面。",
+      "limit": "不能仅由暖色台阶和轮廓判断实际灯数、方向数量或环境曝光。"
+    },
+    {
+      "seconds": 105,
+      "timecode": "01:45",
+      "file": "frame-105s.jpg",
+      "framing": "银蓝发角色歪头闭眼半身，手在脸旁，头发后束露出",
+      "seen": "歪头时仍能读到下巴/颈、胸口和手臂的大块粉紫影，亮面保留肤色。发束后侧明显更深，轮廓暖亮沿上缘和侧缘分布；不是整根头发统一自发白。",
+      "limit": "这是歪头/偏侧静帧，未取得完整侧脸或背面，也未认证手靠脸的动态投影稳定。"
+    },
+    {
+      "seconds": 120,
+      "timecode": "02:00",
+      "file": "frame-120s.jpg",
+      "framing": "青发角色近景、举臂及手靠脸",
+      "seen": "发冠保留蓝黑分束和一条条断开的浅青高光；脸亮且五官线清楚，颈部是较深暖粉块，腋下/上臂也有分区阴影；白色袖面亮而内折灰紫。细桃色亮边主要沿发外轮廓、花饰/袖缘，不填满脸。",
+      "line_detail": "眼线与衣褶深线可见，外侧细亮边在其旁边；头发内部短高光带又是第三种图形。"
+    },
+    {
+      "seconds": 160,
+      "timecode": "02:40",
+      "file": "frame-160s.jpg",
+      "framing": "双人全身、双臂抬起，中远景",
+      "seen": "人物在较小占幅仍可辨明暗分区和眼部表情；白衣的层叠裙片不因提亮而全部同白。暖边分离手臂/袖子，中央舞台的暖色装饰没有形成横跨双脸的大雾面。",
+      "limit": "缩小显示和JPEG会改变细线观感，不能据此量化原4K描边像素宽度。"
+    },
+    {
+      "seconds": 178,
+      "timecode": "02:58",
+      "file": "frame-178s.jpg",
+      "framing": "较高机位俯拍、双人身体转角和抬腿",
+      "seen": "机位变化后白衣仍有灰紫/蓝灰褶面，青发内侧/长发后束较深；舞台台阶有自己的大范围明暗，暖亮边只给部分外缘。",
+      "limit": "俯拍不是背拍；没有用本帧认证背面不过曝或完整360度一致。"
+    },
+    {
+      "seconds": 195,
+      "timecode": "03:15",
+      "file": "frame-195s.jpg",
+      "framing": "低机位双人，银蓝发角色侧身、裙摆及长发飘起",
+      "seen": "深蓝背景更大，皮肤/白衣与其强分离；飘裙内层深紫蓝与白色外层清楚，长发有大块深色及紫色分区。暖亮边沿裙角、袖边、发冠形成选定细带，局部柔晕较强。",
+      "limit": "本帧表现并非完全无辉光；应学习层次/色块关系，猪猪不要求复制这里较强的裙缘炫光。"
+    }
+  ],
+  "what_can_be_said_about_motion": {
+    "actually_seen": "8张跨越18-195秒的静帧覆盖近景/半身/全身、较高/较低机位、歪头、举臂、侧身和飘起服饰。所述明暗和线条关系在这些样本中仍可辨。",
+    "not_seen": "没有抽到完整背面，未连续播放，未查每帧轮廓闪烁、阴影跳变、DOF边缘或蒙皮/物理错误。",
+    "allowed_conclusion": "抽样支持跨多个景别和姿态的画面设计可读，不支持背面或全片动态稳定通过。"
+  },
+  "line_rim_highlight_distinction": [
+    {
+      "element": "深色轮廓/结构线",
+      "visible_evidence": "眼睫、嘴/下颌局部、白衣内褶、手指及发束分界。并非每条均纯黑，常随材质呈蓝灰/紫灰。",
+      "implementation_unknown": "未取得网格、材质或合成，不判断它来自反壳、贴图、线稿pass还是组合。"
+    },
+    {
+      "element": "暖桃细亮边",
+      "visible_evidence": "多在外侧发冠/侧发、肩/袖/手臂及裙角，外缘附近有柔晕；会与深线同时出现。",
+      "implementation_unknown": "亮边可由材质/实际灯/屏幕效果及Glow多种方式形成；不由画面证明双侧面积灯或任何特定Shader。"
+    },
+    {
+      "element": "发束内部的短高光带",
+      "visible_evidence": "青发近景120秒最清楚：发冠按束断开的浅青短带，处在头发内部而非剪影边。",
+      "implementation_unknown": "不能据此认定某个各向异性模型、光照贴图通道或Nilo/Mooa实现。"
+    }
+  ],
+  "current_clean_comparison": {
+    "baseline": "当前Clean production-v2的现有原生无字幕审图；未打开blend或重新渲染。",
+    "actually_viewed": [
+      {"frame": 4140, "path": "D:/codex/output/MMD-Clean-Game-Characters-v1/review/native-clean-game-4140.png", "sha256": "74e9ca2164be2c99bc55f471501b054b84626c5fa961e71631adece7fbab9609"},
+      {"frame": 4290, "path": "D:/codex/output/MMD-Clean-Game-Characters-v1/review/native-clean-game-4290.png", "sha256": "66e89ddf71e004e1267dc2e0ee349d02474970b93bde81a688e0f9c4168eef09"}
+    ],
+    "not_counted": "4250图像调用因工具输出上限未显示，本账本不计其实际图审。",
+    "comparisons": [
+      {
+        "topic": "主体亮度与层次",
+        "reference": "肤色和白衣亮，但颈/肩/腋下/内折有明确粉紫或灰紫暗面。",
+        "clean": "两张现行图的脸及伊科尔白衣已经亮；部分大面响应较平均、明暗主次较弱。阿克西妮娅深蓝长衣与参考大面积白衣不同，不能以整人平均亮度判其失败。",
+        "inference": "更接近该方向需要组织局部亮暗与阴影色，而非先把曝光或所有人物颜色整体推高。"
+      },
+      {
+        "topic": "舞台与主体关系",
+        "reference": "深蓝大背景衬人物，暖粉舞台与装饰仍亮；明亮散景多在背景，双脸大面较清楚。",
+        "clean": "4140/4290中央雾面和宽蓝/金光柱占据人物间很大空间；其亮度/低对比面较抢眼。",
+        "inference": "后续可优先检查已有局部体积和舞台AOV贡献，保留指定礼堂的空间感与婚礼温暖；不能用这段生日舞台替换用户场景。"
+      },
+      {
+        "topic": "边缘与内线",
+        "reference": "暖桃/暖白细亮边与深色结构线分工清楚，角色内部主要靠材质分区和色块。",
+        "clean": "阿克西妮娅轮廓/饰物的青亮及伊科尔金边在这两图更饱和，部分外缘较连续；现有深线并未缺失。",
+        "inference": "后续应分别评估美术rim、实际高光、描边对比和Glow；不通过加粗所有黑线或换成一圈桃光统一处理。"
+      },
+      {
+        "topic": "头发与皮肤",
+        "reference": "发束内短亮带、较深内束和细外缘并存；近景仍保留颈部/肩部的大色块。",
+        "clean": "阿克西妮娅发冠已有较大白亮区，伊科尔金发有自身底色；肤色大面较浅。",
+        "inference": "保留两人发色、瞳色和肤色个性；先避免亮带/球面/实际高光/rim重复，颈与脸分开设计，不复制青发或银蓝发。"
+      }
+    ],
+    "measurement_performed": false,
+    "comparison_limit": "参考经过视频编码和本次缩小，角色/服装/景别不同；现行PNG与其不能作曝光、光度、参数或像素相似度比较。以上仅为所见画面的定性关系。"
+  },
+  "proposed_next_validation_not_implemented": [
+    "同帧4290先分别旁路舞台雾/光柱、Glow、实际轮廓灯和材质rim，确认哪个贡献造成中央雾面或青边抢脸；不自动把人物整体增亮。",
+    "以肤色/白衣亮面、脸的轻暗面、颈/肩/袖内更深面建立层级；阿克西妮娅深衣保留深蓝身份，不能为了匹配白衣参考而漂白。",
+    "深线只负责结构可读，rim只给选定外缘；色温和强度按当前婚礼冷暖重新标定，不复制整圈桃光或强色散。",
+    "保持原角色/相机/舞台后，分别做固定光转头、固定头移灯、相机绕拍；额外检查真正的侧后方与背面，弥补本次参考抽样没有背面的缺口。",
+    "最后看当前已验证动作4139-4441内的双人脸/手/发与袖子连续变化；技术通过、抽样美术观察和猪猪认可分别记录。"
+  ],
+  "not_established": [
+    "paierer确切账号UID、视频简介署名、所用引擎、灯数/功率/曝光或Shader",
+    "本地视频中每一帧或完整背面的稳定性",
+    "原神/鸣潮或观海子/Gosari原始材质实现",
+    "纯物理光照、纯Emission、真实几何发影或具体SDF算法",
+    "当前Clean目标已达成或用户美术认可"
+  ],
+  "production_scene_changed": false,
+  "new_mmd_render_generated": false,
+  "quality_target_achieved": false,
+  "user_art_approval": false
+}

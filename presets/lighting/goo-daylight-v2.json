@@ -1,0 +1,69 @@
+{
+  "id": "goo-daylight-v2",
+  "source": "D:\\codex\\output\\MMD-Goo-Wedding-v2\\production-v1\\Franken_Duet_Goo_Daylight.blend",
+  "source_sha256": "d15cd46980e033bee4191d7ce0146e1a9a1aadace3064087a5df08ac53589444",
+  "production": "D:\\codex\\output\\MMD-Goo-Wedding-v2\\production-v2\\Franken_Duet_Goo_Daylight.blend",
+  "project_sha256": "ca610cdaea99f9eca19e9067c42f5ada798a710e9f07f49b6aef8dcbb958a71f",
+  "runtime": "presets/runtime/goo-v1.json",
+  "native_floor_cast_range": [
+    0.48,
+    1
+  ],
+  "native_gobo_cast_range": [
+    0.72,
+    1.09
+  ],
+  "portal_energy_w": 650,
+  "portal_size_m": 0.22,
+  "window_pattern": {
+    "technique": "off-camera physical gobo blocks a stage-linked Spot; geometric shadows, not the original window-frame layout",
+    "source": "Goo daylight v2 | window gobo source",
+    "position": [
+      -12.0,
+      -8.0,
+      12.0
+    ],
+    "energy_watts": 10000.0,
+    "blockers": [
+      "Goo daylight v2 | gobo horizontal 0",
+      "Goo daylight v2 | gobo horizontal 1",
+      "Goo daylight v2 | gobo horizontal 2",
+      "Goo daylight v2 | gobo vertical 0",
+      "Goo daylight v2 | gobo vertical 1"
+    ]
+  },
+  "rim_side_relative_gain": [
+    0.95,
+    0.34
+  ],
+  "rim_shadow_permission": [
+    0.32,
+    1
+  ],
+  "stage_bounded_response": {
+    "input": [
+      0.05,
+      0.65
+    ],
+    "output": [
+      0.62,
+      1.24
+    ]
+  },
+  "camera": {
+    "fullbody_opening_source_frames": [
+      4140,
+      4228
+    ],
+    "original_from_frame": 4230
+  },
+  "preview": {
+    "width": 1920,
+    "height": 1080,
+    "fps": 30,
+    "frames": 150,
+    "seconds": 5,
+    "post_output_checks": false
+  },
+  "guide": "docs/MME_TO_GOO_LIGHTING_STUDY.md"
+}

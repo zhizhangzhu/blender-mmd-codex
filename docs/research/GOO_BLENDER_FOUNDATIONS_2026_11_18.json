@@ -1,0 +1,1314 @@
+{
+  "date": "2026-11-18",
+  "guide": "docs/GOO_BLENDER_FOUNDATIONS_2026_11_18.md",
+  "sources": [
+    {
+      "id": "blender44-shader-to-rgb",
+      "url": "https://docs.blender.org/manual/en/4.4/render/shader_nodes/converter/shader_to_rgb.html",
+      "status": "cached_public_body",
+      "characters": 1212,
+      "private_body_path": "D:/codex/temp/Goo-Blender-Official-Study-2026-11-18/blender44-shader-to-rgb.txt",
+      "body_sha256": "9af2430c6d84c45a715b1082b365f21644aabbd9326dc5a4e4ae8315659c7ce7",
+      "reading_scope": "full extracted article text"
+    },
+    {
+      "id": "blender44-color-management",
+      "url": "https://docs.blender.org/manual/en/4.4/render/color_management.html",
+      "status": "cached_public_body",
+      "characters": 13905,
+      "private_body_path": "D:/codex/temp/Goo-Blender-Official-Study-2026-11-18/blender44-color-management.txt",
+      "body_sha256": "e8d27269e45f2e60cb48d51f9f6571e8b55432aeaea0d9941c1ca560e8b26243",
+      "reading_scope": "full extracted article text"
+    },
+    {
+      "id": "blender44-light-settings",
+      "url": "https://docs.blender.org/manual/en/4.4/render/eevee/light_settings.html",
+      "status": "cached_public_body",
+      "characters": 3943,
+      "private_body_path": "D:/codex/temp/Goo-Blender-Official-Study-2026-11-18/blender44-light-settings.txt",
+      "body_sha256": "e438d1235f2b2a107884b7a209ad6c44aee72fb64978c576ab89b7118feb853b",
+      "reading_scope": "full extracted article text"
+    },
+    {
+      "id": "blender44-sampling",
+      "url": "https://docs.blender.org/manual/en/4.4/render/eevee/render_settings/sampling.html",
+      "status": "cached_public_body",
+      "characters": 1561,
+      "private_body_path": "D:/codex/temp/Goo-Blender-Official-Study-2026-11-18/blender44-sampling.txt",
+      "body_sha256": "d45d40d8181f5f74ed62a6dd583e7194c601116b6ba6e7709c964c2d11b715cf",
+      "reading_scope": "full extracted article text"
+    },
+    {
+      "id": "blender44-normal-edit",
+      "url": "https://docs.blender.org/manual/en/4.4/modeling/modifiers/modify/normal_edit.html",
+      "status": "cached_public_body",
+      "characters": 2672,
+      "private_body_path": "D:/codex/temp/Goo-Blender-Official-Study-2026-11-18/blender44-normal-edit.txt",
+      "body_sha256": "9516174e9077a2e833e8e0f4d2a30511259e30f726aefac3a64901aa32e986d0",
+      "reading_scope": "full extracted article text"
+    },
+    {
+      "id": "blender44-diffuse",
+      "url": "https://docs.blender.org/manual/en/4.4/render/shader_nodes/shader/diffuse.html",
+      "status": "cached_public_body",
+      "characters": 653,
+      "private_body_path": "D:/codex/temp/Goo-Blender-Official-Study-2026-11-18/blender44-diffuse.txt",
+      "body_sha256": "f93c7cddb8b29fd7f4f4bc6fa9ad5af55a5a393fa284654c4f811c16f293e52f",
+      "reading_scope": "full extracted article text"
+    },
+    {
+      "id": "blender44-limitations",
+      "url": "https://docs.blender.org/manual/en/4.4/render/eevee/limitations/limitations.html",
+      "status": "cached_public_body",
+      "characters": 5210,
+      "private_body_path": "D:/codex/temp/Goo-Blender-Official-Study-2026-11-18/blender44-limitations.txt",
+      "body_sha256": "2cadf62f6612de035c2ad53dd0423ab34fa4470db8396e907b0c35726e8bd6f1",
+      "reading_scope": "full extracted article text"
+    },
+    {
+      "id": "goo-features",
+      "url": "https://www.dillongoostudios.com/gooengine-features",
+      "status": "cached_public_body",
+      "characters": 12318,
+      "private_body_path": "D:/codex/temp/Goo-Blender-Official-Study-2026-11-18/goo-features.txt",
+      "body_sha256": "29af48b70da3e7172b0d71f298a5c68683d3c286cc890d65e23ba497e7d9c235",
+      "reading_scope": "targeted reread: lighting/shadows, light groups, Light Info and screen resources; other feature list previously read"
+    },
+    {
+      "id": "blender52-color-management",
+      "url": "https://docs.blender.org/manual/en/5.2/render/color_management.html",
+      "status": "cached_public_body",
+      "characters": 635,
+      "private_body_path": "D:/codex/temp/Goo-Blender-Official-Study-2026-11-18/blender52-color-management.txt",
+      "body_sha256": "bd1f7d2dffd57d564fa6a78fac34a673d7b6336b4f69a20cd20be0b457650b81",
+      "reading_scope": "index only; substantive child articles separately read"
+    },
+    {
+      "id": "blender52-shader-to-rgb",
+      "url": "https://docs.blender.org/manual/en/5.2/render/shader_nodes/color/shader_to_rgb.html",
+      "status": "cached_public_body",
+      "characters": 1212,
+      "private_body_path": "D:/codex/temp/Goo-Blender-Official-Study-2026-11-18/blender52-shader-to-rgb.txt",
+      "body_sha256": "9af2430c6d84c45a715b1082b365f21644aabbd9326dc5a4e4ae8315659c7ce7",
+      "reading_scope": "full extracted article text"
+    },
+    {
+      "id": "blender52-light-settings",
+      "url": "https://docs.blender.org/manual/en/5.2/render/eevee/light_settings.html",
+      "status": "cached_public_body",
+      "characters": 3960,
+      "private_body_path": "D:/codex/temp/Goo-Blender-Official-Study-2026-11-18/blender52-light-settings.txt",
+      "body_sha256": "dd74e8e26b8b5e23e424cbe155d99baf0b01277e3da6c1d73829235f6e1de312",
+      "reading_scope": "full extracted article text"
+    },
+    {
+      "id": "blender52-normal-edit",
+      "url": "https://docs.blender.org/manual/en/5.2/modeling/modifiers/normals/normal_edit.html",
+      "status": "cached_public_body",
+      "characters": 2659,
+      "private_body_path": "D:/codex/temp/Goo-Blender-Official-Study-2026-11-18/blender52-normal-edit.txt",
+      "body_sha256": "23daa21a9ba85628d13fb810810aeceaa7a0ee8a7e60cdaa8cda3a2765c41889",
+      "reading_scope": "full extracted article text"
+    },
+    {
+      "id": "blender52-color-spaces",
+      "url": "https://docs.blender.org/manual/en/5.2/render/color_management/color_spaces.html",
+      "resolved_url": "https://docs.blender.org/manual/en/5.2/render/color_management/color_spaces.html",
+      "status": "cached_public_body",
+      "characters": 6589,
+      "private_body_path": "D:/codex/temp/Goo-Blender-Official-Study-2026-11-18/blender52-color-spaces.txt",
+      "body_sha256": "3c560f48805332f322b899c369d0f9caf1b122cca883d9eae7e8502cf3418f16",
+      "reading_scope": "full extracted article text"
+    },
+    {
+      "id": "blender52-displays-views",
+      "url": "https://docs.blender.org/manual/en/5.2/render/color_management/displays_views.html",
+      "resolved_url": "https://docs.blender.org/manual/en/5.2/render/color_management/displays_views.html",
+      "status": "cached_public_body",
+      "characters": 8256,
+      "private_body_path": "D:/codex/temp/Goo-Blender-Official-Study-2026-11-18/blender52-displays-views.txt",
+      "body_sha256": "eee400df3e13e43baeb442a2e7adb816b111d50fbb594cf040d79017f4c02a9d",
+      "reading_scope": "full extracted article text"
+    },
+    {
+      "id": "blender52-color-settings",
+      "url": "https://docs.blender.org/manual/en/5.2/render/color_management/system_configuration.html",
+      "resolved_url": "https://docs.blender.org/manual/en/5.2/render/color_management/system_configuration.html",
+      "status": "cached_public_body",
+      "characters": 6709,
+      "private_body_path": "D:/codex/temp/Goo-Blender-Official-Study-2026-11-18/blender52-color-settings.txt",
+      "body_sha256": "80d305fda5ffba2710b625160919758d4d55a081e9ba124834c3ca7fd2f7d1b1",
+      "reading_scope": "full extracted article text"
+    },
+    {
+      "url": "https://github.com/dillongoostudios/goo-engine/blob/goo-engine-v4.4-release/source/blender/nodes/shader/nodes/node_shader_shader_info.cc",
+      "reading_scope": "targeted reread: declaration, defaults and default position/normal forwarding"
+    },
+    {
+      "url": "https://github.com/dillongoostudios/goo-engine/blob/goo-engine-v4.4-release/source/blender/gpu/shaders/material/gpu_shader_material_shader_info.glsl",
+      "reading_scope": "new full short wrapper; forwards arguments to calc_shader_info; callee not acquired",
+      "binary_commit_match": "not established"
+    }
+  ],
+  "acquisition_limits": [
+    "Web reader failed on several public manuals; ordinary public HTTP fetch succeeded, no authentication or access controls bypassed",
+    "Initial 5.2 colour subpage requests failed; corrected settings link from actual index and reused previously successful normal User-Agent; all three succeeded",
+    "Three guessed release-branch implementation paths returned 404; complete calc_shader_info backend not acquired, wrapper is not full backend audit",
+    "4.4 manual and online 5.2 manual differ from community binary; documentation is not proof of local implementation"
+  ],
+  "matrix_controls": {
+    "goo52": {
+      "measurements": {
+        "version": "5.2.1 LTS",
+        "build_hash": "0051aee03764",
+        "binary": "D:\\codex\\workspace\\goo-engine\\5.2.1-community\\blender-5.2.1-git.0051aee0-windows64\\blender.exe",
+        "cases": {
+          "A-default": {
+            "links": [
+              {
+                "panel": "half_lambert",
+                "Normal": false,
+                "WorldPosition": false
+              },
+              {
+                "panel": "diffuse",
+                "Normal": false,
+                "WorldPosition": false
+              },
+              {
+                "panel": "cast",
+                "Normal": false,
+                "WorldPosition": false
+              },
+              {
+                "panel": "self",
+                "Normal": false,
+                "WorldPosition": false
+              },
+              {
+                "panel": "diffuse_bsdf_combined",
+                "Normal": false,
+                "WorldPosition": false
+              }
+            ],
+            "panel_means_scaled": {
+              "half_lambert": [
+                0.9075260758399963,
+                0.9075260758399963,
+                0.9075260758399963
+              ],
+              "diffuse": [
+                0.04177503287792206,
+                0.04177503287792206,
+                0.04177503287792206
+              ],
+              "cast": [
+                0.9473543763160706,
+                0.9473543763160706,
+                0.9473543763160706
+              ],
+              "self": [
+                0.9456943273544312,
+                0.9456943273544312,
+                0.9456943273544312
+              ],
+              "diffuse_bsdf_combined": [
+                0.03420870378613472,
+                0.03420870378613472,
+                0.03420870378613472
+              ]
+            }
+          },
+          "N-up": {
+            "links": [
+              {
+                "panel": "half_lambert",
+                "Normal": true,
+                "WorldPosition": false
+              },
+              {
+                "panel": "diffuse",
+                "Normal": true,
+                "WorldPosition": false
+              },
+              {
+                "panel": "cast",
+                "Normal": true,
+                "WorldPosition": false
+              },
+              {
+                "panel": "self",
+                "Normal": true,
+                "WorldPosition": false
+              },
+              {
+                "panel": "diffuse_bsdf_combined",
+                "Normal": true,
+                "WorldPosition": false
+              }
+            ],
+            "panel_means_scaled": {
+              "half_lambert": [
+                0.9075260758399963,
+                0.9075260758399963,
+                0.9075260758399963
+              ],
+              "diffuse": [
+                0.04177503287792206,
+                0.04177503287792206,
+                0.04177503287792206
+              ],
+              "cast": [
+                0.9473543763160706,
+                0.9473543763160706,
+                0.9473543763160706
+              ],
+              "self": [
+                0.9456943273544312,
+                0.9456943273544312,
+                0.9456943273544312
+              ],
+              "diffuse_bsdf_combined": [
+                0.03420870378613472,
+                0.03420870378613472,
+                0.03420870378613472
+              ]
+            }
+          },
+          "N-down": {
+            "links": [
+              {
+                "panel": "half_lambert",
+                "Normal": true,
+                "WorldPosition": false
+              },
+              {
+                "panel": "diffuse",
+                "Normal": true,
+                "WorldPosition": false
+              },
+              {
+                "panel": "cast",
+                "Normal": true,
+                "WorldPosition": false
+              },
+              {
+                "panel": "self",
+                "Normal": true,
+                "WorldPosition": false
+              },
+              {
+                "panel": "diffuse_bsdf_combined",
+                "Normal": true,
+                "WorldPosition": false
+              }
+            ],
+            "panel_means_scaled": {
+              "half_lambert": [
+                0.9075260758399963,
+                0.9075260758399963,
+                0.9075260758399963
+              ],
+              "diffuse": [
+                0.04177503287792206,
+                0.04177503287792206,
+                0.04177503287792206
+              ],
+              "cast": [
+                0.9473543763160706,
+                0.9473543763160706,
+                0.9473543763160706
+              ],
+              "self": [
+                0.9456943273544312,
+                0.9456943273544312,
+                0.9456943273544312
+              ],
+              "diffuse_bsdf_combined": [
+                0.0,
+                0.0,
+                0.0
+              ]
+            }
+          },
+          "P-offset": {
+            "links": [
+              {
+                "panel": "half_lambert",
+                "Normal": false,
+                "WorldPosition": true
+              },
+              {
+                "panel": "diffuse",
+                "Normal": false,
+                "WorldPosition": true
+              },
+              {
+                "panel": "cast",
+                "Normal": false,
+                "WorldPosition": true
+              },
+              {
+                "panel": "self",
+                "Normal": false,
+                "WorldPosition": true
+              },
+              {
+                "panel": "diffuse_bsdf_combined",
+                "Normal": false,
+                "WorldPosition": true
+              }
+            ],
+            "panel_means_scaled": {
+              "half_lambert": [
+                0.9075260758399963,
+                0.9075260758399963,
+                0.9075260758399963
+              ],
+              "diffuse": [
+                0.04177503287792206,
+                0.04177503287792206,
+                0.04177503287792206
+              ],
+              "cast": [
+                0.9473543763160706,
+                0.9473543763160706,
+                0.9473543763160706
+              ],
+              "self": [
+                0.9456943273544312,
+                0.9456943273544312,
+                0.9456943273544312
+              ],
+              "diffuse_bsdf_combined": [
+                0.03420870378613472,
+                0.03420870378613472,
+                0.03420870378613472
+              ]
+            }
+          },
+          "L-real-move": {
+            "links": [
+              {
+                "panel": "half_lambert",
+                "Normal": false,
+                "WorldPosition": false
+              },
+              {
+                "panel": "diffuse",
+                "Normal": false,
+                "WorldPosition": false
+              },
+              {
+                "panel": "cast",
+                "Normal": false,
+                "WorldPosition": false
+              },
+              {
+                "panel": "self",
+                "Normal": false,
+                "WorldPosition": false
+              },
+              {
+                "panel": "diffuse_bsdf_combined",
+                "Normal": false,
+                "WorldPosition": false
+              }
+            ],
+            "panel_means_scaled": {
+              "half_lambert": [
+                0.8471906781196594,
+                0.8471906781196594,
+                0.8471906781196594
+              ],
+              "diffuse": [
+                0.1664068102836609,
+                0.1664068102836609,
+                0.1664068102836609
+              ],
+              "cast": [
+                0.8855466842651367,
+                0.8855466842651367,
+                0.8855466842651367
+              ],
+              "self": [
+                0.9603736996650696,
+                0.9603736996650696,
+                0.9603736996650696
+              ],
+              "diffuse_bsdf_combined": [
+                0.0852029100060463,
+                0.0852029100060463,
+                0.0852029100060463
+              ]
+            }
+          }
+        },
+        "deltas_vs_default": {
+          "N-up": {
+            "half_lambert": {
+              "max_abs_scaled": 0.0,
+              "mean_abs_scaled": 0.0
+            },
+            "diffuse": {
+              "max_abs_scaled": 0.0,
+              "mean_abs_scaled": 0.0
+            },
+            "cast": {
+              "max_abs_scaled": 0.0,
+              "mean_abs_scaled": 0.0
+            },
+            "self": {
+              "max_abs_scaled": 0.0,
+              "mean_abs_scaled": 0.0
+            },
+            "diffuse_bsdf_combined": {
+              "max_abs_scaled": 0.0,
+              "mean_abs_scaled": 0.0
+            }
+          },
+          "N-down": {
+            "half_lambert": {
+              "max_abs_scaled": 0.0,
+              "mean_abs_scaled": 0.0
+            },
+            "diffuse": {
+              "max_abs_scaled": 0.0,
+              "mean_abs_scaled": 0.0
+            },
+            "cast": {
+              "max_abs_scaled": 0.0,
+              "mean_abs_scaled": 0.0
+            },
+            "self": {
+              "max_abs_scaled": 0.0,
+              "mean_abs_scaled": 0.0
+            },
+            "diffuse_bsdf_combined": {
+              "max_abs_scaled": 0.04095458984375,
+              "mean_abs_scaled": 0.03420889377593994
+            }
+          },
+          "P-offset": {
+            "half_lambert": {
+              "max_abs_scaled": 0.0,
+              "mean_abs_scaled": 0.0
+            },
+            "diffuse": {
+              "max_abs_scaled": 0.0,
+              "mean_abs_scaled": 0.0
+            },
+            "cast": {
+              "max_abs_scaled": 0.0,
+              "mean_abs_scaled": 0.0
+            },
+            "self": {
+              "max_abs_scaled": 0.0,
+              "mean_abs_scaled": 0.0
+            },
+            "diffuse_bsdf_combined": {
+              "max_abs_scaled": 0.0,
+              "mean_abs_scaled": 0.0
+            }
+          },
+          "L-real-move": {
+            "half_lambert": {
+              "max_abs_scaled": 0.083984375,
+              "mean_abs_scaled": 0.06027611717581749
+            },
+            "diffuse": {
+              "max_abs_scaled": 0.169403076171875,
+              "mean_abs_scaled": 0.12462522089481354
+            },
+            "cast": {
+              "max_abs_scaled": 1.0,
+              "mean_abs_scaled": 0.0751478374004364
+            },
+            "self": {
+              "max_abs_scaled": 1.0,
+              "mean_abs_scaled": 0.0393565408885479
+            },
+            "diffuse_bsdf_combined": {
+              "max_abs_scaled": 0.076416015625,
+              "mean_abs_scaled": 0.051342904567718506
+            }
+          }
+        },
+        "display_scales": {
+          "half_lambert": 1.0,
+          "diffuse": 0.1,
+          "cast": 1.0,
+          "self": 1.0,
+          "diffuse_bsdf_combined": 0.1
+        },
+        "point_light": "400W; default (0,-2,4), real move (0,-0.5,2)",
+        "position_offset": [
+          3,
+          0,
+          1
+        ],
+        "normal_vectors": "linked unit up/down",
+        "production_loaded": false,
+        "video_created": false,
+        "limits": "Five fixed planar panels, one point light, simple external/joined blockers; Diffuse BSDF route is combined shading, not pure shadow visibility. Builds have different renderers; compare input effects within each build, not absolute cross-engine pixels."
+      },
+      "reopen": {
+        "build_hash": "0051aee03764",
+        "max_abs_linear_rgba_difference": 0.0,
+        "passed": true,
+        "production_loaded": false
+      }
+    },
+    "goo43": {
+      "measurements": {
+        "version": "4.3.2 Goo Engine",
+        "build_hash": "ba60b2412c76",
+        "binary": "D:\\codex\\workspace\\goo-engine\\4.3.2\\goo-engine-experimental-4_3\\blender.exe",
+        "cases": {
+          "A-default": {
+            "links": [
+              {
+                "panel": "half_lambert",
+                "Normal": false,
+                "WorldPosition": false
+              },
+              {
+                "panel": "diffuse",
+                "Normal": false,
+                "WorldPosition": false
+              },
+              {
+                "panel": "cast",
+                "Normal": false,
+                "WorldPosition": false
+              },
+              {
+                "panel": "self",
+                "Normal": false,
+                "WorldPosition": false
+              },
+              {
+                "panel": "diffuse_bsdf_combined",
+                "Normal": false,
+                "WorldPosition": false
+              }
+            ],
+            "panel_means_scaled": {
+              "half_lambert": [
+                0.907789945602417,
+                0.907789945602417,
+                0.907789945602417
+              ],
+              "diffuse": [
+                0.04202134162187576,
+                0.04202134162187576,
+                0.04202134162187576
+              ],
+              "cast": [
+                0.9462283849716187,
+                0.9462283849716187,
+                0.9462283849716187
+              ],
+              "self": [
+                0.9461627006530762,
+                0.9461627006530762,
+                0.9461627006530762
+              ],
+              "diffuse_bsdf_combined": [
+                0.034217655658721924,
+                0.034217655658721924,
+                0.034217655658721924
+              ]
+            }
+          },
+          "N-up": {
+            "links": [
+              {
+                "panel": "half_lambert",
+                "Normal": true,
+                "WorldPosition": false
+              },
+              {
+                "panel": "diffuse",
+                "Normal": true,
+                "WorldPosition": false
+              },
+              {
+                "panel": "cast",
+                "Normal": true,
+                "WorldPosition": false
+              },
+              {
+                "panel": "self",
+                "Normal": true,
+                "WorldPosition": false
+              },
+              {
+                "panel": "diffuse_bsdf_combined",
+                "Normal": true,
+                "WorldPosition": false
+              }
+            ],
+            "panel_means_scaled": {
+              "half_lambert": [
+                0.907789945602417,
+                0.907789945602417,
+                0.907789945602417
+              ],
+              "diffuse": [
+                0.04202134162187576,
+                0.04202134162187576,
+                0.04202134162187576
+              ],
+              "cast": [
+                0.9462283849716187,
+                0.9462283849716187,
+                0.9462283849716187
+              ],
+              "self": [
+                0.9461627006530762,
+                0.9461627006530762,
+                0.9461627006530762
+              ],
+              "diffuse_bsdf_combined": [
+                0.034217655658721924,
+                0.034217655658721924,
+                0.034217655658721924
+              ]
+            }
+          },
+          "N-down": {
+            "links": [
+              {
+                "panel": "half_lambert",
+                "Normal": true,
+                "WorldPosition": false
+              },
+              {
+                "panel": "diffuse",
+                "Normal": true,
+                "WorldPosition": false
+              },
+              {
+                "panel": "cast",
+                "Normal": true,
+                "WorldPosition": false
+              },
+              {
+                "panel": "self",
+                "Normal": true,
+                "WorldPosition": false
+              },
+              {
+                "panel": "diffuse_bsdf_combined",
+                "Normal": true,
+                "WorldPosition": false
+              }
+            ],
+            "panel_means_scaled": {
+              "half_lambert": [
+                0.09221010655164719,
+                0.09221010655164719,
+                0.09221010655164719
+              ],
+              "diffuse": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "cast": [
+                0.9462283849716187,
+                0.9462283849716187,
+                0.9462283849716187
+              ],
+              "self": [
+                0.9461627006530762,
+                0.9461627006530762,
+                0.9461627006530762
+              ],
+              "diffuse_bsdf_combined": [
+                0.0,
+                0.0,
+                0.0
+              ]
+            }
+          },
+          "P-offset": {
+            "links": [
+              {
+                "panel": "half_lambert",
+                "Normal": false,
+                "WorldPosition": true
+              },
+              {
+                "panel": "diffuse",
+                "Normal": false,
+                "WorldPosition": true
+              },
+              {
+                "panel": "cast",
+                "Normal": false,
+                "WorldPosition": true
+              },
+              {
+                "panel": "self",
+                "Normal": false,
+                "WorldPosition": true
+              },
+              {
+                "panel": "diffuse_bsdf_combined",
+                "Normal": false,
+                "WorldPosition": true
+              }
+            ],
+            "panel_means_scaled": {
+              "half_lambert": [
+                0.9005629420280457,
+                0.9005629420280457,
+                0.9005629420280457
+              ],
+              "diffuse": [
+                0.04350342974066734,
+                0.04350342974066734,
+                0.04350342974066734
+              ],
+              "cast": [
+                0.9670367240905762,
+                0.9670367240905762,
+                0.9670367240905762
+              ],
+              "self": [
+                0.9727799892425537,
+                0.9727799892425537,
+                0.9727799892425537
+              ],
+              "diffuse_bsdf_combined": [
+                0.034217655658721924,
+                0.034217655658721924,
+                0.034217655658721924
+              ]
+            }
+          },
+          "L-real-move": {
+            "links": [
+              {
+                "panel": "half_lambert",
+                "Normal": false,
+                "WorldPosition": false
+              },
+              {
+                "panel": "diffuse",
+                "Normal": false,
+                "WorldPosition": false
+              },
+              {
+                "panel": "cast",
+                "Normal": false,
+                "WorldPosition": false
+              },
+              {
+                "panel": "self",
+                "Normal": false,
+                "WorldPosition": false
+              },
+              {
+                "panel": "diffuse_bsdf_combined",
+                "Normal": false,
+                "WorldPosition": false
+              }
+            ],
+            "panel_means_scaled": {
+              "half_lambert": [
+                0.847362220287323,
+                0.847362220287323,
+                0.847362220287323
+              ],
+              "diffuse": [
+                0.16653595864772797,
+                0.16653595864772797,
+                0.16653595864772797
+              ],
+              "cast": [
+                0.8919903635978699,
+                0.8919903635978699,
+                0.8919903635978699
+              ],
+              "self": [
+                0.9598424434661865,
+                0.9598424434661865,
+                0.9598424434661865
+              ],
+              "diffuse_bsdf_combined": [
+                0.08528222143650055,
+                0.08528222143650055,
+                0.08528222143650055
+              ]
+            }
+          }
+        },
+        "deltas_vs_default": {
+          "N-up": {
+            "half_lambert": {
+              "max_abs_scaled": 0.0,
+              "mean_abs_scaled": 0.0
+            },
+            "diffuse": {
+              "max_abs_scaled": 0.0,
+              "mean_abs_scaled": 0.0
+            },
+            "cast": {
+              "max_abs_scaled": 0.0,
+              "mean_abs_scaled": 0.0
+            },
+            "self": {
+              "max_abs_scaled": 0.0,
+              "mean_abs_scaled": 0.0
+            },
+            "diffuse_bsdf_combined": {
+              "max_abs_scaled": 0.0,
+              "mean_abs_scaled": 0.0
+            }
+          },
+          "N-down": {
+            "half_lambert": {
+              "max_abs_scaled": 0.8660498857498169,
+              "mean_abs_scaled": 0.8155798316001892
+            },
+            "diffuse": {
+              "max_abs_scaled": 0.04873006045818329,
+              "mean_abs_scaled": 0.042021311819553375
+            },
+            "cast": {
+              "max_abs_scaled": 0.0,
+              "mean_abs_scaled": 0.0
+            },
+            "self": {
+              "max_abs_scaled": 0.0,
+              "mean_abs_scaled": 0.0
+            },
+            "diffuse_bsdf_combined": {
+              "max_abs_scaled": 0.04095173627138138,
+              "mean_abs_scaled": 0.03421761468052864
+            }
+          },
+          "P-offset": {
+            "half_lambert": {
+              "max_abs_scaled": 0.036100566387176514,
+              "mean_abs_scaled": 0.013240578584372997
+            },
+            "diffuse": {
+              "max_abs_scaled": 0.012564707547426224,
+              "mean_abs_scaled": 0.004076110199093819
+            },
+            "cast": {
+              "max_abs_scaled": 0.9934256672859192,
+              "mean_abs_scaled": 0.022806042805314064
+            },
+            "self": {
+              "max_abs_scaled": 1.0,
+              "mean_abs_scaled": 0.026618003845214844
+            },
+            "diffuse_bsdf_combined": {
+              "max_abs_scaled": 0.0,
+              "mean_abs_scaled": 0.0
+            }
+          },
+          "L-real-move": {
+            "half_lambert": {
+              "max_abs_scaled": 0.08386504650115967,
+              "mean_abs_scaled": 0.060427095741033554
+            },
+            "diffuse": {
+              "max_abs_scaled": 0.1692952960729599,
+              "mean_abs_scaled": 0.12451407313346863
+            },
+            "cast": {
+              "max_abs_scaled": 0.9997188448905945,
+              "mean_abs_scaled": 0.07856018841266632
+            },
+            "self": {
+              "max_abs_scaled": 1.0,
+              "mean_abs_scaled": 0.03955518454313278
+            },
+            "diffuse_bsdf_combined": {
+              "max_abs_scaled": 0.07639261335134506,
+              "mean_abs_scaled": 0.05128050222992897
+            }
+          }
+        },
+        "display_scales": {
+          "half_lambert": 1.0,
+          "diffuse": 0.1,
+          "cast": 1.0,
+          "self": 1.0,
+          "diffuse_bsdf_combined": 0.1
+        },
+        "point_light": "400W; default (0,-2,4), real move (0,-0.5,2)",
+        "position_offset": [
+          3,
+          0,
+          1
+        ],
+        "normal_vectors": "linked unit up/down",
+        "production_loaded": false,
+        "video_created": false,
+        "limits": "Five fixed planar panels, one point light, simple external/joined blockers; Diffuse BSDF route is combined shading, not pure shadow visibility. Builds have different renderers; compare input effects within each build, not absolute cross-engine pixels."
+      },
+      "reopen": {
+        "build_hash": "ba60b2412c76",
+        "max_abs_linear_rgba_difference": 0.0,
+        "passed": true,
+        "production_loaded": false
+      }
+    }
+  },
+  "display_controls": {
+    "build_hash": "0051aee03764",
+    "version": "5.2.1 LTS",
+    "display": "sRGB",
+    "input_color_space": "Linear Rec.709",
+    "patches": [
+      {
+        "id": "grey18",
+        "linear_rgb": [
+          0.18,
+          0.18,
+          0.18
+        ]
+      },
+      {
+        "id": "grey50",
+        "linear_rgb": [
+          0.5,
+          0.5,
+          0.5
+        ]
+      },
+      {
+        "id": "white1",
+        "linear_rgb": [
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "id": "white2",
+        "linear_rgb": [
+          2,
+          2,
+          2
+        ]
+      },
+      {
+        "id": "white4",
+        "linear_rgb": [
+          4,
+          4,
+          4
+        ]
+      },
+      {
+        "id": "warm",
+        "linear_rgb": [
+          0.8,
+          0.38,
+          0.27
+        ]
+      },
+      {
+        "id": "blue",
+        "linear_rgb": [
+          0.12,
+          0.35,
+          0.9
+        ]
+      },
+      {
+        "id": "blueHDR",
+        "linear_rgb": [
+          0.48,
+          1.4,
+          3.6
+        ]
+      }
+    ],
+    "cases": [
+      {
+        "id": "Standard-0",
+        "view_transform": "Standard",
+        "exposure_stops": 0,
+        "look": "None",
+        "source_linear_max_difference": 0.0
+      },
+      {
+        "id": "Standard-minus1",
+        "view_transform": "Standard",
+        "exposure_stops": -1,
+        "look": "None",
+        "source_linear_max_difference": 0.0
+      },
+      {
+        "id": "AgX-0",
+        "view_transform": "AgX",
+        "exposure_stops": 0,
+        "look": "None",
+        "source_linear_max_difference": 0.0
+      },
+      {
+        "id": "AgX-minus1",
+        "view_transform": "AgX",
+        "exposure_stops": -1,
+        "look": "None",
+        "source_linear_max_difference": 0.0
+      },
+      {
+        "id": "Neutral-0",
+        "view_transform": "Khronos PBR Neutral",
+        "exposure_stops": 0,
+        "look": "None",
+        "source_linear_max_difference": 0.0
+      }
+    ],
+    "method": "One generated float image; Image.save_render to 16-bit PNG, no scene render, no compositor; 80px square patches",
+    "production_loaded": false,
+    "video_created": false,
+    "limits": "Display-output control only; no character, light response, material calibration or artistic quality comparison"
+  },
+  "display_sampling": {
+    "method": "Pillow decoded RGB8 centre samples of display PNG; source files are 16-bit; not linear data",
+    "cases": {
+      "Standard-0": {
+        "grey18": [
+          118,
+          118,
+          118
+        ],
+        "grey50": [
+          188,
+          188,
+          188
+        ],
+        "white1": [
+          255,
+          255,
+          255
+        ],
+        "white2": [
+          255,
+          255,
+          255
+        ],
+        "white4": [
+          255,
+          255,
+          255
+        ],
+        "warm": [
+          232,
+          166,
+          142
+        ],
+        "blue": [
+          97,
+          160,
+          244
+        ],
+        "blueHDR": [
+          184,
+          255,
+          255
+        ]
+      },
+      "Standard-minus1": {
+        "grey18": [
+          84,
+          84,
+          84
+        ],
+        "grey50": [
+          137,
+          137,
+          137
+        ],
+        "white1": [
+          188,
+          188,
+          188
+        ],
+        "white2": [
+          255,
+          255,
+          255
+        ],
+        "white4": [
+          255,
+          255,
+          255
+        ],
+        "warm": [
+          170,
+          121,
+          103
+        ],
+        "blue": [
+          69,
+          116,
+          179
+        ],
+        "blueHDR": [
+          134,
+          218,
+          255
+        ]
+      },
+      "AgX-0": {
+        "grey18": [
+          118,
+          118,
+          118
+        ],
+        "grey50": [
+          170,
+          170,
+          170
+        ],
+        "white1": [
+          197,
+          197,
+          197
+        ],
+        "white2": [
+          218,
+          218,
+          218
+        ],
+        "white4": [
+          233,
+          233,
+          233
+        ],
+        "warm": [
+          192,
+          157,
+          143
+        ],
+        "blue": [
+          119,
+          157,
+          198
+        ],
+        "blueHDR": [
+          188,
+          209,
+          235
+        ]
+      },
+      "AgX-minus1": {
+        "grey18": [
+          82,
+          82,
+          82
+        ],
+        "grey50": [
+          136,
+          136,
+          136
+        ],
+        "white1": [
+          170,
+          170,
+          170
+        ],
+        "white2": [
+          197,
+          197,
+          197
+        ],
+        "white4": [
+          218,
+          218,
+          218
+        ],
+        "warm": [
+          162,
+          120,
+          104
+        ],
+        "blue": [
+          72,
+          121,
+          169
+        ],
+        "blueHDR": [
+          158,
+          186,
+          219
+        ]
+      },
+      "Neutral-0": {
+        "grey18": [
+          105,
+          105,
+          105
+        ],
+        "grey50": [
+          181,
+          181,
+          181
+        ],
+        "white1": [
+          239,
+          239,
+          239
+        ],
+        "white2": [
+          251,
+          251,
+          251
+        ],
+        "white4": [
+          254,
+          254,
+          254
+        ],
+        "warm": [
+          225,
+          157,
+          131
+        ],
+        "blue": [
+          80,
+          149,
+          235
+        ],
+        "blueHDR": [
+          162,
+          195,
+          253
+        ]
+      }
+    }
+  },
+  "visual_inspection": "Native A/N-down/P-offset and real light control stills plus labelled contact sheets; display patches checked; not characters",
+  "findings": [
+    "In scoped 5.2 point-light controls, linked Normal and WorldPosition do not affect four Shader Info outputs; physical light changes and ordinary Diffuse BSDF Normal do",
+    "Existing 4.3 build responds to Normal on Half-Lambert/Diffuse and to position on all four outputs; not an official 4.4 binary validation",
+    "Both saved research blends reproduce exact linear RGBA on independent reopen",
+    "Display view/exposure changes generated PNG output while source linear float pixels remain identical"
+  ],
+  "unverified": [
+    "Ambient and other light types",
+    "Normal Edit on current Goo runtime",
+    "all shadow tuning parameters in production",
+    "animation",
+    "other Goo nodes and interface features"
+  ],
+  "production_loaded": false,
+  "production_modified": false,
+  "new_character_render": false,
+  "video_created": false,
+  "eye_see_through": "deferred",
+  "all_basics_mastered": false,
+  "reference_quality_achieved": false
+}

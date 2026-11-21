@@ -1,0 +1,58 @@
+{
+  "id": "franken-ikhor-bold-wedding-v1",
+  "status": "verified-five-second-review-art-pending",
+  "project": "D:\\codex\\output\\MMD-Aksiniya-Ikhor-Wedding-v1\\production-v7\\Franken_Aksiniya_Ikhor_Bold_Wedding.blend",
+  "project_sha256": "f9442577a61a2c1cc4f39442e4468d42f13d42311fdd9f9e9616d165d40ea692",
+  "video": "D:\\codex\\output\\MMD-Aksiniya-Ikhor-Wedding-v1\\captions-5s-v3\\Franken_Duet_5s_Ikhor_Wedding_REVIEW.mp4",
+  "without_captions_video": "D:\\codex\\output\\MMD-Aksiniya-Ikhor-Wedding-v1\\captions-5s-v3\\Franken_Duet_5s_Ikhor_NoCaptions.mp4",
+  "performers": {
+    "aksiniya": "Full HimeTanaka",
+    "ikhor": "Full HinaSuzuki"
+  },
+  "source_frames": [
+    4140,
+    4439
+  ],
+  "resolution": [
+    1920,
+    1080
+  ],
+  "fps": 60,
+  "seconds": 5,
+  "audio_start_seconds": 68.98333333333333,
+  "audio_gain": 0.87,
+  "physical_validation_frames": [
+    4139,
+    4441
+  ],
+  "character_profile": "presets/quality/ikhor-character-v1.json",
+  "motion_profile": "presets/quality/ikhor-native-motion-v1.json",
+  "sleeve_repair_profile": "presets/quality/ikhor-sleeve-repair-v1.json",
+  "sleeve_integration": "D:\\codex\\output\\MMD-Aksiniya-Ikhor-Wedding-v1\\production-v6\\sleeve-integration.json",
+  "caption_target_repair": "D:\\codex\\output\\MMD-Aksiniya-Ikhor-Wedding-v1\\production-v7\\caption-target-repair.json",
+  "sleeve_repair_evidence": "sleeve-review/visual-review.json",
+  "stage_profile": "presets/stages/hesperides-bold-wedding-v1.json",
+  "caption_profile": "presets/typography/duet-blue-gold-wedding-v1.json",
+  "caption_cache": "D:\\codex\\temp\\MMD-Ikhor-v1\\final-cache-v3",
+  "output_color_contract": {
+    "input": "Full-range display sRGB RGB24",
+    "matrix": "bt709",
+    "primaries": "bt709",
+    "transfer": "iec61966-2-1",
+    "range": "tv",
+    "hdr": false,
+    "meaning": "SDR PC-review output, preserving source sRGB transfer; not a Rec.709/BT.1886 grading master"
+  },
+  "full_song_complete": false,
+  "user_art_approval": false,
+  "limits": [
+    "仅原帧4140–4439的五秒横屏；全曲未交付，等待猪猪美术认可",
+    "伊科尔新原生物理只验证4139–4441，不把完整body动作等同全曲衣发烘焙",
+    "v4因袖壁穿手退回并停渲；新袖修复范围与连续几何/画面检查见sleeve-review，不复用旧v4帧",
+    "缺失作者自改y1脸图，明确回退同包原FaceDiffuse；未取得验证过的FaceSDF",
+    "灯／环任务部件在婚礼版隐藏并同步关闭轮廓；原PMX未覆盖",
+    "Diffuse是综合受光近似；可见光束含美术体积Emission，不称完整Ray/Goo或观海子原始Shader",
+    "阿克西妮娅鼻影、部分手掌肤色、强蓝边与辉光主次仍可精修；最终人工范围另记",
+    "原初之人仅定位配布，未下载模型包或加入当前场景"
+  ]
+}

@@ -1,0 +1,190 @@
+{
+  "schema_version": 1,
+  "recorded_at": "2026-11-13",
+  "document": "docs/NPR_NEXT_EXPERIMENTS.md",
+  "status": "research_only_not_implemented",
+  "purpose": "下一轮脸影、发束法线与控制图的三个可独立关闭实验；不改变当前渲染输入。",
+  "baseline": {
+    "evidence_type": "parent_task_implementation_description",
+    "independently_inspected_blend": false,
+    "independently_verified_render": false,
+    "node_prefix": "Character layers |",
+    "reported_layer_roles": ["single material palette", "single contact AO", "one directional hair highlight"],
+    "existing_guide": "docs/CHARACTER_LAYER_REFINEMENT.md",
+    "reported_implemented": [
+      "MMDShaderDev.Color/Alpha 和 PMX 球面语义保留",
+      "底色乘一次综合 Diffuse/SDF 材质色带",
+      "一次短距 AO",
+      "随头轴与实际主灯变化的发带",
+      "保留 PBR 金属和透明分支"
+    ],
+    "reported_asset_limits": [
+      "MMDShaderDev.Color 不是游戏原始 albedo",
+      "Aksi 有原 FaceLightmap",
+      "Aether 缺配套身体和头发 Lightmap",
+      "Face SDF 原通用 Goo 接口部分不兼容普通 Blender，目前只复用可运行组件"
+    ]
+  },
+  "reading_limits": {
+    "primary_sources_only": true,
+    "web_text_read": true,
+    "source_images_systematically_inspected": false,
+    "new_reference_video_analysis": false,
+    "gosari542_or_guanhaizi_project_access": false,
+    "blender_execution": false,
+    "downloads_or_new_dependencies": false,
+    "copied_third_party_assets": false,
+    "repository_context_basis": "主任务已提供当前材质实现范围及仓库文档约束，明确无需本子任务重复读取；本子任务不调用本地命令或 Blender。",
+    "web_access_failures": [
+      {"url": "https://docs.blender.org/manual/en/latest/modeling/modifiers/normals/normal_edit.html", "observed": "402 Payment Required"},
+      {"url": "https://docs.blender.org/manual/en/latest/modeling/modifiers/modify/data_transfer.html", "observed": "402 Payment Required"},
+      {"url": "https://docs.blender.org/manual/en/latest/render/shader_nodes/color/shader_to_rgb.html", "observed": "402 Payment Required"},
+      {"url": "https://docs.blender.org/manual/en/latest/render/eevee/limitations/nodes_support.html", "observed": "402 Payment Required"},
+      {"url": "https://docs.blender.org/manual/en/5.2/modeling/modifiers/normals/normal_edit.html", "observed": "web tool reported URL not accessible"},
+      {"url": "https://docs.blender.org/manual/en/5.2/render/shader_nodes/color/shader_to_rgb.html", "observed": "web tool reported URL not accessible"}
+    ]
+  },
+  "sources": [
+    {
+      "id": "mooa_shadow",
+      "title": "Controlling the Shape of Shadows",
+      "author_or_publisher": "MooaToon",
+      "primary": true,
+      "url": "https://mooatoon.com/en/docs/Tutorial/ControlTheShapeOfShadows",
+      "access": "full_page_text",
+      "read_scope": ["Custom Normal Shadow", "Modify Shadow Gradient", "Distance Field Facial Shadow"],
+      "applies_to_experiments": ["E1", "E2", "E3"],
+      "tested_locally": false,
+      "boundary": "作者的 UE 功能与本工程普通 EEVEE 节点方案不同；未运行其示例，未移植 ID 射线或屏幕空间头发阴影。"
+    },
+    {
+      "id": "sdf_threshold_author",
+      "title": "sdf_shadow_threshold_map README",
+      "author_or_publisher": "akasaki1211",
+      "primary": true,
+      "url": "https://github.com/akasaki1211/sdf_shadow_threshold_map",
+      "access": "full_readme_text",
+      "read_scope": ["输入图像顺序", "reverse", "8/16-bit", "中间图输出"],
+      "applies_to_experiments": ["E1"],
+      "tested_locally": false,
+      "boundary": "仅用于理解控制图制作与调试选项；没有下载或执行工具。"
+    },
+    {
+      "id": "mooa_hair",
+      "title": "Add Stylized Hair Highlights",
+      "author_or_publisher": "MooaToon",
+      "primary": true,
+      "url": "https://mooatoon.com/en/docs/Tutorial/AddStylizedHairHighlights",
+      "access": "full_page_text",
+      "read_scope": ["Stylized Kajiya-Kay based on Tangent Transfer", "Specular Mask", "Specular Color Ramp"],
+      "applies_to_experiments": ["E2", "E3"],
+      "tested_locally": false,
+      "boundary": "发束法线实验不是切线传递，也不是已恢复该作者的高光实现。"
+    },
+    {
+      "id": "unity_uts_basic",
+      "title": "Three Color Map and Control Map Settings",
+      "author_or_publisher": "Unity Technologies",
+      "primary": true,
+      "url": "https://github.com/Unity-Technologies/com.unity.toonshader/blob/master/com.unity.toonshader/Documentation~/Basic.md",
+      "access": "full_document_text",
+      "read_scope": ["Three Basic Color Maps", "Shadow Control Maps"],
+      "applies_to_experiments": ["E3"],
+      "tested_locally": false,
+      "boundary": "借鉴数据职责分离；本工程公式和中性值为待测方案，不是 UTS 原样实现。"
+    },
+    {
+      "id": "blender52_data_transfer",
+      "title": "Data Transfer Modifier - Blender 5.2 LTS Manual",
+      "author_or_publisher": "Blender Foundation documentation",
+      "primary": true,
+      "url": "https://docs.blender.org/manual/id/5.2/modeling/modifiers/modify/data_transfer.html",
+      "access": "official_page_text_returned_in_web_search",
+      "read_scope": ["Custom Normals", "Mix Factor", "Vertex Group", "Face Corner mapping"],
+      "applies_to_experiments": ["E2"],
+      "tested_locally": false,
+      "boundary": "部分英文页面直开失败；本条依据官方 5.2 页面搜索正文，未检查本地蒙皮或修改器顺序。"
+    },
+    {
+      "id": "blender_normal_edit",
+      "title": "Normal Edit Modifier - official indexed page labelled Blender 5.2 LTS",
+      "author_or_publisher": "Blender Foundation documentation",
+      "primary": true,
+      "url": "https://docs.blender.org/manual/nb/latest/modeling/modifiers/normals/normal_edit.html",
+      "access": "official_page_text_returned_in_web_search",
+      "read_scope": ["Radial/Directional", "Mix", "Vertex Group", "Max Angle"],
+      "applies_to_experiments": ["E2"],
+      "tested_locally": false,
+      "boundary": "latest URL 会随版本漂移；不将索引标签视为本地 5.2 运行证据。"
+    },
+    {
+      "id": "blender52_passes",
+      "title": "Passes - Blender 5.2 LTS Manual",
+      "author_or_publisher": "Blender Foundation documentation",
+      "primary": true,
+      "url": "https://docs.blender.org/manual/nb/5.2/render/layers/passes.html",
+      "access": "official_page_text_returned_in_web_search",
+      "read_scope": ["EEVEE Limitations: Shader to RGB / Combined"],
+      "applies_to_experiments": ["E1", "E2", "E3"],
+      "tested_locally": false,
+      "boundary": "只约束验收通道，不声称拆分了当前综合探针中的真实遮挡。"
+    }
+  ],
+  "experiments": [
+    {
+      "id": "E1",
+      "title": "左右分别设计的脸影阈值图",
+      "status": "hypothesis_not_implemented",
+      "toggle": "exp_face_threshold_map",
+      "off_behavior": "回到现有 SDF 输入",
+      "blender52_stock_eevee": "principle_feasible_not_tested",
+      "new_dependencies_required": false,
+      "changes": "只替换现有 SDF 形状输入；独立验证头轴、实际主灯、左右角度和纹理阈值约定。",
+      "test": "两角色分别检查灯方位 -90/-45/0/45/90 度及转头、张嘴连续段。",
+      "reject_if": ["过零左右翻转或闪跳", "孤立鼻口黑岛", "需逐帧归一化或恢复高脸亮度下限才能成立"],
+      "guardrail": "保留平整脸部 Diffuse 探针和真实遮挡，不新增第二次脸影。",
+      "sources": ["mooa_shadow", "sdf_threshold_author", "blender52_passes"]
+    },
+    {
+      "id": "E2",
+      "title": "一簇刘海的法线包络",
+      "status": "hypothesis_not_implemented",
+      "toggle": "exp_hair_normal_envelope",
+      "off_behavior": "关闭诊断副本的单个法线传递修改器，保留原法线",
+      "blender52_stock_eevee": "builtin_capability_documented_rig_and_outline_not_tested",
+      "new_dependencies_required": false,
+      "changes": "一簇紧随头部的刘海以顶点组混合法线包络，先比较 0/0.25/0.5；发带固定。",
+      "test": "五个灯方位和该簇摆动段；先确认 Diffuse 分支读取实际改后法线。",
+      "reject_if": ["变形后法线包络滑动", "发根接缝", "消除侧面体积", "影响原 PMX 描边"],
+      "guardrail": "不改变权重、物理、脸或毛领；法线不冒充切线高光。",
+      "sources": ["blender52_data_transfer", "blender_normal_edit", "mooa_hair"]
+    },
+    {
+      "id": "E3",
+      "title": "职责明确的三个控制图",
+      "status": "hypothesis_not_implemented",
+      "toggle": "exp_control_maps",
+      "off_behavior": "回到原阈值、原 AO 强度与无遮罩裁除的发带",
+      "blender52_stock_eevee": "ordinary_nodes_feasible_semantics_not_tested",
+      "new_dependencies_required": false,
+      "controls": [
+        {"name": "form_bias", "color_space": "Non-Color", "neutral": 0.5, "formula": "D'=clamp(D+k*(2*M-1),0,1)", "trial_k": 0.05, "disable": "k=0"},
+        {"name": "ao_strength", "color_space": "Non-Color", "neutral": 1, "operation": "调节现有一次 AO 的强度", "disable": "旁路回原 AO 强度"},
+        {"name": "hair_highlight_allow", "color_space": "Non-Color", "neutral": 1, "operation": "仅裁除现有发带或高光", "disable": "恒为 1"}
+      ],
+      "test": "单项依次开启，区分边界移动、AO 强度和高光许可，再检查动态 UV 接缝。",
+      "reject_if": ["阈值偏移错误地推亮真实投影", "重复乘 AO", "未知原贴图按名字自动复用"],
+      "guardrail": "若当前综合 Diffuse 不能分离形体与真实遮挡，form_bias 只能先在无外部遮挡诊断副本试验。",
+      "sources": ["unity_uts_basic", "mooa_shadow", "mooa_hair", "blender52_passes"]
+    }
+  ],
+  "acceptance": {
+    "recommended_order": ["E1", "E2", "E3"],
+    "one_experiment_at_a_time": true,
+    "fixed_camera_exposure_and_light_energy": true,
+    "combined_beauty_ablation_required": true,
+    "continuous_motion_and_independent_reopen_required": true,
+    "production_preset_promoted": false,
+    "quality_status_upgraded": false
+  }
+}

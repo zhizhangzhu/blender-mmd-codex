@@ -1,0 +1,228 @@
+{
+  "schema_version": 1,
+  "date": "2026-11-14",
+  "status": "five-primary-technical-article-bodies-read-not-implemented",
+  "purpose": "按猪猪提出的摄影布光方向，学习可用于双人MMD的逐层多灯分工；当前重点为深蓝女装与白衣男装同场的暗部可读、主光塑形、白衣控制、环境及背光分离。",
+  "scope": {
+    "substantive_primary_article_bodies_read": 5,
+    "course_description_or_video_intro_pages_not_counted_as_lessons": 2,
+    "complete_zack_onelight_course_read_or_watched": false,
+    "complete_joe_mcnally_nikon_flash_course_read_or_watched": false,
+    "video_opened_or_played": false,
+    "images_or_lighting_diagrams_individually_inspected": false,
+    "third_party_full_text_cached_or_copied": false,
+    "production_blend_opened_or_changed": false,
+    "preset_or_catalog_changed": false,
+    "render_or_blender_experiment_performed": false,
+    "only_file_written_by_this_subtask": "docs/research/PHOTOGRAPHIC_LAYERED_LIGHTING_2026_11_14.json",
+    "external_access": "通过web工具读取原作者/官方文字；不开长视频、不重试知乎浏览器、不购买或绕过课程访问。"
+  },
+  "deduplication": {
+    "searched": "rg检索docs/research与docs中的Zack、Arias、McNally、Strobist、闪卓、Lighting 102、Shape and Detail、Combining Distance；未发现既有实读记录。",
+    "known_context_not_recounted_as_learning": [
+      "当前材质主要使用Emission型NPR输出，并带物理闭包和独立艺术rim。",
+      "当前Diffuse为多灯/法线/衰减/间接光综合受光，带面向实际主灯及相对距离补偿，不是独立灯通道或纯投影。",
+      "当前输入为Clean production-v2，现成双人动作/相机和指定礼堂不变；研究不自动开始新渲染。"
+    ],
+    "boundary": "未声称已搜索所有私人缓存或读过整部经典课程。"
+  },
+  "primary_technical_articles": [
+    {
+      "id": "strobist_shape_detail",
+      "author": "David Hobby / Strobist作者站",
+      "title": "Lighting 102: Shape and Detail",
+      "url": "https://strobist.blogspot.com/2016/07/lighting-102-shape-and-detail.html",
+      "access": "正文与末尾EXERCISE文字完整实读；不含独立图片观察",
+      "read_scope": ["单主光的形体/眼窝可读性折中", "近镜轴柔性legibility light先建立暗部底", "再加塑形主光", "主辅分工与练习"],
+      "source_facts": [
+        "把主光移近相机可减少死黑，却会牺牲形体；作者让近镜轴柔补光负责暗部细节，主光负责形状。",
+        "先把补光调到需要的阴影可读程度，再加主光；阴影保持暗但信息可见。",
+        "补光高低是画面戏剧性的选择，文章练习数值不是所有人物的固定配方。"
+      ],
+      "new_value_for_current_scene": "深蓝衣物的褶皱可读与脸部/身体主光形体可以分别调整，避免为了看见深蓝布而把主光推到近镜轴、把所有阴影冲平。",
+      "not_read_or_proven": ["图片像素或光位图", "其他Lighting 102章节", "本地EEVEE材质响应", "猪猪当前成片的逐帧对应问题"]
+    },
+    {
+      "id": "strobist_distance_two_lights",
+      "author": "David Hobby / Strobist作者站",
+      "title": "Lighting 102: Combining Distance and Two Lights",
+      "url": "https://strobist.blogspot.com/2016/07/lighting-102-combining-distance-and-two.html",
+      "access": "全部正文与婚纱THOUGHT EXERCISE实读；不含独立图片观察",
+      "read_scope": ["白kundura与人物脸的注意力竞争", "较远镜轴补光先给衣服基调", "近脸主光在躯干快速衰减", "婚纱与脸分区布光例"],
+      "source_facts": [
+        "近脸的伞主光令脸充分受光，向肩部/躯干快速衰减；较远镜轴补光为低处提供预设底值。",
+        "白衣仍读成白色，可以通过受光梯度而非全身满亮来保持珠光感与脸部优先级。",
+        "婚纱例先用宽光确定白裙/珍珠可接受亮度，再用窄束grid光只补脸，分别处理两个区域。"
+      ],
+      "new_value_for_current_scene": "对白衣男装，优先检查胸肩到下摆的亮度梯度与脸部优先级，不把提高人物亮度等同白布整片提白；女方深蓝与男方白衣不能只用同一个全身亮度目标。",
+      "not_read_or_proven": ["示例照片取样", "原始拍摄RAW", "面积灯近场衰减公式", "双人舞动的距离稳定性", "当前NPR距离补偿是否允许同样梯度"]
+    },
+    {
+      "id": "strobist_twilight_balance",
+      "author": "David Hobby / Strobist作者站",
+      "title": "Lighting 102 - 3.1 Balancing Light: Twilight",
+      "url": "https://strobist.blogspot.com/2007/09/lighting-102-balancing-light-twilight.html",
+      "access": "全部正文与Now, You Do it练习实读；不含独立图片观察",
+      "read_scope": ["人物曝光作为参考", "环境/闪光分别控制的思路", "快门/光圈/闪光功率的示例", "暮光练习"],
+      "source_facts": [
+        "作者先用闪光为人物建立稳定曝光参考，再把环境放到希望的明暗；背景可以有多种有效的艺术选择。",
+        "短闪光与持续环境光的时间行为不同，摄影师能在同步条件内改变快门，主要改变环境曝光。",
+        "光圈同时影响两种曝光；控制环境与闪光的关系需要说明其他变量是否固定。"
+      ],
+      "new_value_for_current_scene": "礼堂的背景明暗与人物本体明暗应分开建立参考，不用提高全局曝光来替代人物局部塑形；这是控制关系的迁移，不是把相机参数照搬进Blender。",
+      "not_read_or_proven": ["示例照片/直方图", "现场TTL或高速同步行为", "本地色彩和曝光链的实际改动"]
+    },
+    {
+      "id": "joe_city_color",
+      "author": "Joe McNally",
+      "title": "Light and Color in the Big City",
+      "url": "https://joemcnally.com/2021/04/20/light-and-color-in-the-big-city/",
+      "publication_date": "2021-04-20",
+      "access": "文章正文完整实读，排除评论/订阅表单与独立图片",
+      "read_scope": ["单灯柔箱置于模特上方的街头人像说明", "画外带色闪光的局部城市色提示", "双条形柔箱与带绿片背光、现场城市色分工"],
+      "source_facts": [
+        "作者分别描述主体上方柔箱、画外带色闪光及背光；环境原有城市颜色仍保留。",
+        "多灯可以承担主体塑形和局部场景色提示等不同职责，不需要把所有光或全局白平衡都染成同一种色。"
+      ],
+      "new_value_for_current_scene": "可保持脸部与白衣的中性/微暖识别，再让少量冷色背光或背景负责分离；绿片仅是作者场景说明，不移植成婚礼场景颜色。",
+      "not_read_or_proven": ["独立照片颜色及光位图", "精确光比/色温", "Nikon原始拍摄课程", "当前礼堂暖冷主次"]
+    },
+    {
+      "id": "joe_gels_grids",
+      "author": "Joe McNally",
+      "title": "Sculpting with Gels in the Studio!",
+      "url": "https://joemcnally.com/2023/06/12/sculpting-with-gels-in-the-studio/",
+      "publication_date": "2023-06-12",
+      "access": "文章正文完整实读，排除评论/订阅表单与独立图片",
+      "read_scope": ["闪光/持续灯适用情境", "softbox及小灯grid的用途", "多色灯精确落区", "移动/补一块遗漏区域的迭代"],
+      "source_facts": [
+        "作者强调grid限制颜色落在哪里，防止大柔光源的彩色溢光到处混合。",
+        "多灯分区可能留下需要修补的暗区，灯位要随实际画面迭代；文章举九灯为个案。",
+        "作者使用短闪光帮助动作清晰，并未把持续灯简单视为完全相同的时间过程。"
+      ],
+      "new_value_for_current_scene": "更复杂的多灯应逐灯说明作用区，先看它补哪一层，限制不该染色的脸/白布；不因经典多灯就复制九灯数量或满场叠色。",
+      "not_read_or_proven": ["九灯光位图与图片效果", "各灯功率/距离/色温", "文中预告的后续视频", "在MMD舞蹈全段中的跟随策略"]
+    }
+  ],
+  "requested_course_access_boundaries": [
+    {
+      "id": "zack_official_onelight_scope_only",
+      "author": "Zack Arias",
+      "url": "https://www.zackarias.com/onelight",
+      "access": "官网全部短介绍文字实读",
+      "actual_scope": "说明手动离机闪光、闪光灯/影室灯、修改器与实拍工作坊的范围；页面含2018旧日期，是课程介绍，不是灯光技术正文。",
+      "not_claimed": "不据此称已学完OneLight、已看演示或得到具体光比。",
+      "substantive_lesson_counted": false
+    },
+    {
+      "id": "nikon_joe_color_intro_only",
+      "author": "Nikon官方，署名Nikon Ambassador Joe McNally",
+      "url": "https://www.nikonusa.com/learn-and-explore/c/tips-and-techniques/photography-lighting-tutorial-part-1-control-of-color",
+      "access": "官方页面标题、署名与全部短简介实读；未播放视频",
+      "actual_scope": "简介确认本集用自然环境光与Speedlight、白平衡及色片共同塑形；页面未提供完整步骤转写。",
+      "not_claimed": "不据此称已读完整高级尼康闪光灯课程；实质技术替代为上面Joe本人两篇短文。",
+      "substantive_lesson_counted": false
+    }
+  ],
+  "bounded_failed_or_partial_access": [
+    {
+      "url": "https://dedpxl.com/the-many-uses-of-white-seamless-pt-1/",
+      "result": "从二手报道只提取原文链接后，web打开被重定向到无关crochetcabana站并失败；非可读作者正文。",
+      "used_as_technical_evidence": false,
+      "retry_policy": "不重试该无关重定向，不把二手归纳或视频标题当Zack原文实读。"
+    },
+    {
+      "url": "https://dedpxl.com/the-many-uses-of-white-seamless-pt-2/",
+      "result": "同样重定向到无关站；未读正文、未看视频。",
+      "used_as_technical_evidence": false
+    },
+    {
+      "url": "https://www.oreilly.com/library/view/photography-qa-real/9780133434644/ch003.html",
+      "result": "检索索引显示Zack Arias书中Exposure drills的开头节选，正文直开Cache miss。",
+      "actual_read_scope": "仅索引中的固定ISO/光圈、单独练快门的起始段，未取得整章。",
+      "used_as_technical_evidence": false,
+      "substantive_lesson_counted": false
+    },
+    {
+      "url": "https://www.zhihu.com/question/50627652",
+      "result": "父任务已记录浏览器读超时及web403；本子任务未再尝试。",
+      "used_as_technical_evidence": false,
+      "not_claimed": "未称该知乎回答已读，也未借登录或付费限制失败推测其正文。"
+    }
+  ],
+  "original_synthesis_for_current_duet": {
+    "evidence_level": "摄影原理到当前NPR管线的研究推导，未实施或渲染",
+    "classic_combination": "近镜轴弱柔补光建立可读底 + 斜上方有方向的主光塑形 + 受限的局部背光/边缘色分离 + 独立的礼堂背景明暗。每层先单独开关确认职责，再组合；多灯不等同每层都高亮。",
+    "layers": [
+      {
+        "layer": "暗部可读底",
+        "job": "让女方深蓝布暗褶、眼窝与男方深衬保持可读；可先把主光隐藏来确定需要的最低细节量。",
+        "guardrail": "这个底应保留深蓝本色与局部暗侧，不能把深蓝抬成灰蓝或让双方全身呈均匀自亮。摄影的补光底值不是强制钳高最终脸亮度。"
+      },
+      {
+        "layer": "主光塑形",
+        "job": "用斜上方有方向的柔光强化面部、锁骨/肩、衣褶的主次；保持眼睛可见后，不必把主光挪回镜轴来救暗部。",
+        "guardrail": "双人各自朝向、身高与换位不同，要分别验脸/头发/衣料响应；不是只看两张脸同样白。"
+      },
+      {
+        "layer": "白衣与脸分区",
+        "job": "用遮光、窄束或受限灯接收/材质许可区分男方脸与大片外白布；近脸主光渐变只是候选，先检查能否让白衣保留褶皱和金饰而脸仍优先。",
+        "guardrail": "不可直接照搬静止模特近灯：双人舞动会改变距离，可能造成泵亮、光斑跨脸或遮挡；若不能稳定追踪，应采用较稳定的灯距及明确的局部美术许可。"
+      },
+      {
+        "layer": "色温与轮廓分离",
+        "job": "先保持原中性/微暖肤色和白衣，再以低饱和冷色局部背光区分深蓝轮廓与礼堂；暖色点缀呼应原婚礼场景，颜色落区分别控制。",
+        "guardrail": "这里的冷暖为原创方向建议，不是已从Joe照片测得的色温；不把所有灯染青，不重开已隐藏两弧，也不通过全局WB把另一侧肤色同时推偏。"
+      },
+      {
+        "layer": "背景与注意力",
+        "job": "人物脸与可读衣料作为明暗参考，礼堂亮区、背光、雾与Glow各自决定是否支持主体；背景亮度是独立美术变量。",
+        "guardrail": "不改用白无缝背景，不换指定礼堂；中央雾光和Bloom不能用来掩盖源头主次。"
+      }
+    ]
+  },
+  "migration_boundaries": [
+    {
+      "topic": "多灯加法",
+      "boundary": "真实摄影多个光源在辐射/曝光层叠加；当前Emission型NPR可能先把多灯压入综合探针、阈值和色带，再与原Color或物理闭包混合。因此加一盏补光不一定只增加同量画面亮度，也可能改变主光阴影边界、整片色阶或无实际效果。先查具体灯参与Diffuse/Specular及哪条材质输入。"
+    },
+    {
+      "topic": "补光不是亮度钳位",
+      "boundary": "摄影中补光建立暗部底来自真实受光；当前不能为了模拟这个词就给最终脸色设最小亮度，从而抹去已有SDF/几何遮挡/AO。保留各职责可关闭并单独观察。"
+    },
+    {
+      "topic": "快门与环境曝光",
+      "boundary": "短闪光摄影在普通同步条件下可用快门改变环境相对曝光，因为闪光脉冲很短。Blender普通持续灯与NPR Emission没有这条摄影分离关系；相机快门主要改变运动模糊时间积分，不能拿它当只调礼堂背景的旋钮。保持fps/快门/DOF不动，另用确实分开的灯/场景响应或有证据的局部后期。"
+    },
+    {
+      "topic": "距离衰减与光源大小",
+      "boundary": "近光可形成更强的相对距离梯度，但扩展面积灯近场不等同理想点光的精确平方反比；改距离还会改变视角大小、软硬和覆盖。当前主灯综合探针带相对距离补偿，可能改变或抵消摄影式衰减，未实测前不能承诺把灯移近就能保护白衣/背景。"
+    },
+    {
+      "topic": "光比和功率",
+      "boundary": "教程中档数、闪光手动功率、伞尺寸与现场距离是拍摄示例；不能直接转换为当前Blender瓦数比例或Emission系数。应在固定显示变换下用同一区域线性输出/AOV与最终显示同时检查，明示比较的是灯能量、入射响应还是最终像素。"
+    },
+    {
+      "topic": "色温、色片与白平衡",
+      "boundary": "摄影色片改变单个光源光谱，WB处理影响全图；在当前RGB管线中以局部灯色/艺术rim色近似是美术映射，不能声称复制相同光谱与材质异谱反应。保持现有色彩链与全局曝光，仅逐个比较局部冷暖贡献。"
+    },
+    {
+      "topic": "遮光与灯光链接",
+      "boundary": "摄影grid/旗板控制光束落区；Blender几何遮光、灯光链接与材质mask是不同实现，必须记录实际接收对象及是否保留双方互投影。给Emission艺术rim加mask也不使其获得真实灯光可见性。"
+    }
+  ],
+  "next_validation_card": {
+    "performed": false,
+    "goal": "验证更明亮的双人人像是否保留深蓝层次、白衣细节与礼堂主次。",
+    "preconditions": ["锁定Clean production-v2工程与SHA，独立副本及新诊断输出", "静音继承File Output", "先核实每盏灯实际进入哪条NPR/物理/场景路径", "固定曝光、色彩、相机、动作、材质底色与Glow设置"],
+    "sequence": [
+      "只读各层单独关闭时的贡献：环境、补光、主光、局部背光、艺术rim/Glow。不要在尚未找到通路时盲加灯。",
+      "若要测试暗部底，只改一个已经确认参与人物受光的补光量；同帧观察女方深蓝与男方白布/深衬，主光保持固定。",
+      "暗部底候选通过后，固定它，另做主光方向或近远距离的一项比较；距离项需承认同时影响软硬/衰减，不伪装成纯强度测试。",
+      "最后独立比较局部背光颜色与强度，不与全局WB/曝光一并改。",
+      "静态后再看转身、双人换位、交叠和近远镜头；摄影站定模特的同帧结论不能直接推广整段舞蹈。"
+    ],
+    "reject_if": ["深蓝衣料变灰、原暗侧消失", "白外布大片夹白或比脸更抢眼", "脸部SDF/AO被亮度下限抹掉", "两人换位造成明暗泵动", "局部背光染青肤色/白衣或接触处漏光", "中央雾与Glow扩大却主体分离未改善", "动快门或全局曝光后把结果解释为只改了背景", "beauty与人物/字幕/Glow缓存消费者不一致"],
+    "promotion_requires": "同帧贡献对照、限定动态、保存工程重开及用户美术评价；本轮不晋升任何生产能力。"
+  }
+}

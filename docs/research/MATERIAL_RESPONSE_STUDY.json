@@ -1,0 +1,128 @@
+{
+  "schema_version": 1,
+  "date": "2026-11-13",
+  "document": "docs/MATERIAL_RESPONSE_STUDY.md",
+  "status": "primary-reading-and-local-source-inspection-only",
+  "scope": {
+    "new_conclusion_count": 2,
+    "production_blend_opened": false,
+    "render_generated": false,
+    "production_blend_changed": false,
+    "preset_changed": false,
+    "core_catalog_changed": false,
+    "engine_installed_or_changed": false,
+    "game_shader_port_completed": false,
+    "proposed_formulas_and_parameters_tested": false,
+    "excluded_as_already_known": [
+      "Highlight allowance versus ramp offset",
+      "Artistic suppression of highlights in shadow regions",
+      "MMD Color is not raw albedo",
+      "Generated art control maps are not recovered game data"
+    ]
+  },
+  "sources": [
+    {
+      "id": "blender-principled",
+      "publisher": "Blender official manual",
+      "url": "https://docs.blender.org/manual/en/latest/render/shader_nodes/shader/principled.html",
+      "reported_title_version": "Blender 5.2 LTS Manual",
+      "access": "official-search-index-body-excerpts-read",
+      "direct_open": "402 for latest and fixed en/5.2 URLs",
+      "sections_read_in_index": ["Layers", "Base Color", "Metallic", "Roughness", "Sheen", "Specular Anisotropy engine label"],
+      "facts_used": [
+        "Base Color tints the fully metallic reflective response; a fully metallic model has no diffuse component.",
+        "Sheen represents tiny surface fibers with soft edge reflection and is a separate layer.",
+        "The index marks native specular Anisotropy as Cycles Only."
+      ],
+      "not_done": ["Full page direct reading", "Image inspection", "Blender runtime validation"]
+    },
+    {
+      "id": "mmd-tools-material",
+      "publisher": "MMD-Blender author repository",
+      "url": "https://github.com/MMD-Blender/blender_mmd_tools/blob/main/mmd_tools/core/material.py",
+      "revision": "main; not commit-pinned",
+      "access": "rendered-source-relevant-functions-read",
+      "functions_read": ["update_sphere_texture_type", "__get_shader_uv", "__get_shader"],
+      "facts_used": [
+        "Ordinary sphere coordinates use normals transformed to camera space then mapped; SubTexture mode uses separate UV coordinates.",
+        "MMDShaderDev Color is exposed after sphere multiply/add composition."
+      ],
+      "not_done": ["Installed 4.5.14 source equivalence check", "Production node graph inspection", "Runtime render"]
+    },
+    {
+      "id": "unity-uts-matcap",
+      "publisher": "Unity official package documentation",
+      "url": "https://docs.unity3d.com/Packages/com.unity.toonshader@0.11/manual/MatCap.html",
+      "version_reported_by_page": "0.11.1-preview",
+      "access": "html-body-text-read",
+      "sections_read": ["Definition", "Color Blending Mode", "Stabilize Camera Rolling", "MatCap Camera Mode", "MatCap Mask"],
+      "fact_used": "The documented MatCap lighting expression and its UV area mask are distinct inputs; this is not evidence that UTS and PMX implement the same shader.",
+      "not_done": ["GIF playback", "Individual image inspection", "Unity execution", "Shader port"]
+    }
+  ],
+  "local_evidence": [
+    {
+      "path": "scripts/mmd_surface_refine.py",
+      "sha256": "4e7d12e046ab30c29e1e9b7b28456472daba5444414d7bcdb9669a307c3296fa",
+      "locator": "surface_material, lines 185-187",
+      "finding": "The Aksiniya masked gold Principled node is created with MMD Color and Alpha inputs."
+    },
+    {
+      "path": "scripts/aether_look_revision.py",
+      "sha256": "cbb47705a2b267703a9aad79a31a60e969fdd07d3c1e19d0f4d15537161567fa",
+      "locator": "rebuild, lines 136-146, 232, 250-254",
+      "finding": "Aether physical color comes from the base texture and color adjustments; cloth creation includes Sheen Weight 0.15."
+    },
+    {
+      "path": "scripts/prepare_character_layers.py",
+      "sha256": "d98f089a4e039482eb6819217a8ef470b83b35f77a0859d41a6a75407e28f207",
+      "locator": "rebuild, lines 330-349",
+      "finding": "Updates existing gold Metallic/Roughness and cloth/leather MixShader factors; does not replace physical Base Color inputs in this block."
+    },
+    {
+      "path": "scripts/make_surface_masks.py",
+      "sha256": "27a3b2044f58dbd1acfe25ca321df119dd303b3e4b164670d4041c80505cc9cc",
+      "locator": "control_map, lines 21-30",
+      "finding": "R is a color-derived gold candidate, G is computed from R, B is a source-brightness candidate; none is an independently recovered optical dataset."
+    },
+    {
+      "path": "presets/quality/duet-character-layers-v1.json",
+      "sha256": "40c613429b6357ccaa33f66797d5166e2e43fb6988d07eeca2668ff992c3ecb2",
+      "locator": "physical",
+      "finding": {"cloth_mix": 0.12, "leather_mix": 0.16, "gold_metallic": 0.88, "gold_roughness_range": [0.2, 0.46]}
+    }
+  ],
+  "conclusions": [
+    {
+      "id": "metal-reflectance-input-asymmetry",
+      "evidence_level": "source-localized-hypothesis; visual effect untested",
+      "claim": "The two character build scripts use different color sources for physical metal; first isolate whether sphere-containing Color is being reused as reflection tint in the current graph.",
+      "preconditions": ["Inspect the actual saved output connection", "Choose one metal region with an active nonconstant sphere texture"],
+      "proposed_single_variable": "Only the confirmed metal PBR Base Color selects original MMD Color versus a duplicate with Sphere Tex Fac=0.",
+      "control_values": [0, 1],
+      "fixed": ["NPR original MMD Color", "Original Alpha", "Metal mask", "Metallic", "Roughness", "Lighting", "Exposure", "Post processing"],
+      "stop_if": ["Current metal already uses a base texture source", "Sphere is absent or inactive", "Inputs show no meaningful difference", "Source design is lost"],
+      "not_claimed": ["Universal duplication bug", "Latest saved graph verified", "Sphere-neutral Color is raw albedo", "Production should remove PMX spheres"]
+    },
+    {
+      "id": "existing-cloth-sheen-contribution",
+      "evidence_level": "source-localized-test-design; visual effect untested",
+      "claim": "Aether cloth already has a Sheen creation setting; evaluate its contribution inside the 0.12 physical mix before adding another wide highlight.",
+      "preconditions": ["Verify actual saved Sheen Weight and output path", "Select an opaque cloth region outside metal, skin and fur masks"],
+      "proposed_single_variable": "Sheen Weight only",
+      "suggested_values_if_saved_baseline_is_0_15": [0, 0.15, 0.3],
+      "fixed": ["Physical mix=0.12", "Base color", "Ordinary Roughness", "Sheen Roughness and Tint", "Normals", "Alpha", "Lighting", "Exposure", "Glow off"],
+      "diagnostic_expression": "Delta L approximately equals 0.12 * (P(s) - P(0)) only as a local closure-contribution model without outer metal or transparency mixing.",
+      "reject_if": ["White area uniformly washes out", "Folds or colored shadows disappear", "Plastic appearance", "Temporal highlight instability"],
+      "not_claimed": ["All white cloth should look like velvet", "0.12 times 0.15 is an exact image brightness fraction", "Additional Sheen has demonstrated benefit"]
+    }
+  ],
+  "future_validation": {
+    "performed": false,
+    "initial_pose_frame": 4290,
+    "separate_motion_conditions": ["Fixed pose and lighting, camera orbit", "Fixed pose and camera, main light rotation"],
+    "frames_per_condition_suggested": 24,
+    "outputs_to_compare": ["Actual branch input previews", "Final no-Glow output", "Optional isolated closure diagnostic"],
+    "promotion_requires": "Static and temporal comparison, material recognition review, independent saved-file verification; no automatic catalog promotion."
+  }
+}

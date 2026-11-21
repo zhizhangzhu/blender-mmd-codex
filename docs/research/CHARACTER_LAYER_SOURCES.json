@@ -1,0 +1,14 @@
+{
+  "date": "2026-11-13",
+  "scope": "Official text excerpts plus local native Blender tests; no new Bilibili transcript or creator source project acquired",
+  "sources": [
+    {"url": "https://docs.blender.org/manual/en/5.0/render/shader_nodes/color/shader_to_rgb.html", "read_scope": "EEVEE-only conversion and PBR/shadow/AO caveats", "use": "Do not label combined illumination as isolated physical shadow"},
+    {"url": "https://docs.blender.org/manual/en/5.0/render/eevee/light_settings.html", "read_scope": "Virtual shadow mapping and shadow raytracing overview", "use": "Verify native shadow controls rather than infer from node installation"},
+    {"url": "https://docs.blender.org/manual/en/5.0/render/layers/passes.html", "read_scope": "Shader to RGB Combined-pass limitation", "use": "Use actual Combined same-frame shadow controls"}
+  ],
+  "local_version": "Blender 5.2.2 LTS",
+  "access": "Official search-index text excerpts read; direct open of all three listed pages returned 402. Full pages and illustrations were not reviewed.",
+  "profile": "presets/quality/duet-character-layers-v1.json",
+  "author_implementation_known": false,
+  "game_quality_certified": false
+}

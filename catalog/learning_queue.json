@@ -1,0 +1,695 @@
+{
+  "schema_version": 1,
+  "updated": "2026-11-14",
+  "purpose": "问题驱动、文字优先、证据分级的续接队列；不是后台进程或能力认证",
+  "coverage": "保留首批/袖口来源族，2026-11-14增摄影、方向rim、脸影作者、白菜教程、本机NW五族。六份账本含本地paierer参考；非全部历史知识或生产整合。",
+  "policy": {
+    "primary_reference": "观海子；Gosari542保留，御手洗板蓝根补充",
+    "research_order": [
+      "已有账本/缓存",
+      "维护者官方文档/原作者文章/规范",
+      "按需读取源码/图像",
+      "仅当文字不足时看必要视频片段"
+    ],
+    "active_limit": 3,
+    "refresh": "按问题、版本、依赖变化触发；没有新证据就停止重复检索",
+    "promotion": "研究→同帧消融→连续动态→独立重开→限定整合；美术评价由current_state保留",
+    "cache": "第三方全文只存D:/codex/temp或私人目录；repo保存原创归纳/URL/阅读范围/哈希，不重复抓取整站"
+  },
+  "sources": [
+    {
+      "id": "blender-local-correctives",
+      "title": "Blender Shape Keys / Armature / Corrective Smooth / Rigid Body",
+      "url": "https://docs.blender.org/manual/en/latest/animation/shape_keys/introduction.html",
+      "author": "Blender官方",
+      "kind": "official_documentation_and_source",
+      "version": "实际网页标5.3；另核对v5.2.2 modifier.cc 620–661；本机5.2.2",
+      "revision": "v5.2.2 source plus separately hashed online documentation",
+      "revision_locked": false,
+      "license_verified": false,
+      "reading": {
+        "level": "sections",
+        "scope": [
+          "Relative shape key displacement accumulation and storage",
+          "Shape keys before the Armature deformation chain in5.2.2",
+          "Corrective Smooth rest/bind/topology/volume limits; not a collision solver",
+          "Rigid body poses versus mesh deformation and sparse corrective data"
+        ],
+        "ledger": "docs/research/SLEEVE_CORRECTIVE_EXTERNAL_2026_11_14.json"
+      },
+      "guide": "docs/LOCAL_CORRECTIVE_SHAPES.md",
+      "limits": [
+        "v6仅本模型/固定动作窗的LBS逆映射与单shape实测；Corrective Smooth/Preserve Volume逆解/pose drivers未实测",
+        "没有视频播放、全教程转载或新插件安装"
+      ],
+      "refresh_trigger": "更换动作/蒙皮方式/拓扑，或局部修形已不能保持连续外形时再查对应章节"
+    },
+    {
+      "id": "mooa-shadow",
+      "title": "MooaToon：Controlling the Shape of Shadows",
+      "url": "https://mooatoon.com/en/docs/Tutorial/ControlTheShapeOfShadows",
+      "author": "MooaToon原作者",
+      "kind": "author_tutorial",
+      "version": "在线文档；既有阅读记录",
+      "revision": "unresolved",
+      "revision_locked": false,
+      "license_verified": false,
+      "reading": {
+        "level": "sections",
+        "scope": [
+          "Custom Normal Shadow",
+          "Modify Shadow Gradient",
+          "Distance Field Facial Shadow"
+        ],
+        "ledger": "docs/research/FACE_SHADOW_DESIGN_STUDY.json"
+      },
+      "limits": [
+        "仅文字；未实施UE/Houdini流程，不能当作Blender兼容证明"
+      ],
+      "refresh_trigger": "脸影形状仍不合适或需要重画阈值图时按节复读"
+    },
+    {
+      "id": "mooa-hair",
+      "title": "MooaToon：Add Stylized Hair Highlights",
+      "url": "https://mooatoon.com/en/docs/Tutorial/AddStylizedHairHighlights",
+      "author": "MooaToon原作者",
+      "kind": "author_tutorial",
+      "version": "在线文档；既有阅读记录",
+      "revision": "unresolved",
+      "revision_locked": false,
+      "license_verified": false,
+      "reading": {
+        "level": "sections",
+        "scope": [
+          "Tangent Transfer",
+          "Specular Mask",
+          "Specular Color Ramp"
+        ],
+        "ledger": "docs/research/NPR_PRIMARY_STUDY_2026_11_13.json"
+      },
+      "limits": [
+        "未运行UE/Houdini资产；法线、切线和遮罩职责不得混称"
+      ],
+      "refresh_trigger": "发带形状/许可范围有明确问题，或确需研究切线模型时"
+    },
+    {
+      "id": "uts-highlight",
+      "title": "Unity Toon Shader：Highlight",
+      "url": "https://docs.unity3d.com/Packages/com.unity.toonshader@0.11/manual/Highlight.html",
+      "author": "Unity Technologies",
+      "kind": "official_manual",
+      "version": "页面标0.11.1-preview",
+      "revision": "0.11.1-preview-doc-page-unpinned",
+      "revision_locked": false,
+      "license_verified": false,
+      "reading": {
+        "level": "sections",
+        "scope": [
+          "Highlight Mask",
+          "Highlight Blending on Shadows",
+          "Specular Mode"
+        ],
+        "ledger": "docs/research/NPR_PRIMARY_STUDY_2026_11_13.json"
+      },
+      "limits": [
+        "借鉴控制职责；版本文档与master源码不视为同一快照，未运行Unity"
+      ],
+      "refresh_trigger": "需要精确移植公式时先固定源码提交与许可；只讨论原理不反复下载"
+    },
+    {
+      "id": "mtoon-spec",
+      "title": "VRMC_materials_mtoon 1.0",
+      "url": "https://github.com/vrm-c/vrm-specification/blob/master/specification/VRMC_materials_mtoon-1.0/README.md",
+      "author": "VRM Consortium；Sumi Masataka / Obuchi Yutaka",
+      "kind": "official_specification",
+      "version": "1.0 / Complete",
+      "revision": "master-unpinned",
+      "revision_locked": false,
+      "license_verified": false,
+      "reading": {
+        "level": "sections",
+        "scope": [
+          "Outline Width及属性",
+          "Shading Shift / Shading Toony",
+          "Global Illumination",
+          "Vertex Colors"
+        ],
+        "ledger": "docs/research/TEXT_NPR_SOURCE_DISCOVERY.json"
+      },
+      "limits": [
+        "许可证未确认，仅原创归纳；不把规范当成原神/鸣潮Shader；MToon忽略顶点色的约定不可覆盖PMX描边权重"
+      ],
+      "refresh_trigger": "输出分辨率/画幅改变，或近远景线宽不稳定时"
+    },
+    {
+      "id": "vrm-blender-outline",
+      "title": "VRM Add-on for Blender：MToon实现入口",
+      "url": "https://github.com/saturday06/VRM-Addon-for-Blender/blob/main/src/io_scene_vrm/editor/mtoon1/property_group.py",
+      "author": "saturday06维护的作者项目",
+      "kind": "author_source",
+      "version": "main；仅指定符号",
+      "revision": "main-unpinned",
+      "revision_locked": false,
+      "license_verified": true,
+      "reading": {
+        "level": "sections",
+        "scope": [
+          "outline_width_mode_enum",
+          "update_outline_geometry",
+          "_assign_mtoon1_outline",
+          "convert_material_to_mtoon1"
+        ],
+        "ledger": "docs/research/TEXT_NPR_SOURCE_DISCOVERY.json"
+      },
+      "limits": [
+        "实际Geometry Nodes图未读；5.2.2未运行；MMD便利转换会重建材质树，不直接运行于生产工程"
+      ],
+      "refresh_trigger": "需要新描边单位实现且已有依赖审计需求时，先锁定版本/许可再读节点图",
+      "license": "MIT OR GPL-3.0-or-later；实施前另核固定版本与Notice"
+    },
+    {
+      "id": "mmd-material",
+      "title": "MMD Tools：material.py",
+      "url": "https://github.com/MMD-Blender/blender_mmd_tools/blob/main/mmd_tools/core/material.py",
+      "author": "MMD-Blender维护者",
+      "kind": "author_source",
+      "version": "main；非本机4.5.14等价证明",
+      "revision": "main-unpinned",
+      "revision_locked": false,
+      "license_verified": false,
+      "reading": {
+        "level": "sections",
+        "scope": [
+          "update_sphere_texture_type",
+          "__get_shader_uv",
+          "__get_shader"
+        ],
+        "ledger": "docs/research/MATERIAL_RESPONSE_STUDY.json"
+      },
+      "limits": [
+        "保留Color/Alpha与球面语义；尚未对最新人物图做本轮追踪"
+      ],
+      "refresh_trigger": "发现色源、球面或金属重复响应，或插件版本变化时"
+    },
+    {
+      "id": "blender-principled",
+      "title": "Blender：Principled BSDF",
+      "url": "https://docs.blender.org/manual/en/latest/render/shader_nodes/shader/principled.html",
+      "author": "Blender官方手册贡献者",
+      "kind": "official_manual",
+      "version": "索引标5.2；latest可漂移",
+      "revision": "latest-unpinned",
+      "revision_locked": false,
+      "license_verified": false,
+      "reading": {
+        "level": "index_excerpt",
+        "scope": [
+          "Layers",
+          "Base Color / Metallic / Roughness",
+          "Sheen",
+          "Anisotropy引擎标记"
+        ],
+        "ledger": "docs/research/MATERIAL_RESPONSE_STUDY.json"
+      },
+      "limits": [
+        "只取得官方索引正文片段；直开402；不声称全文或EEVEE各向异性实测"
+      ],
+      "refresh_trigger": "需要核对具体输入/引擎能力或升级版本时，优先本机RNA/源码与固定版本说明"
+    },
+    {
+      "id": "mmd-physics",
+      "title": "MMD Tools：物理限制与兼容表",
+      "url": "https://github.com/MMD-Blender/blender_mmd_tools#rigid-body-physics-limitations",
+      "author": "MMD-Blender维护者",
+      "kind": "author_documentation",
+      "version": "当前表4.2–5.2对应v4.x/main",
+      "revision": "main-unpinned",
+      "revision_locked": false,
+      "license_verified": false,
+      "reading": {
+        "level": "sections",
+        "scope": [
+          "Version Compatibility",
+          "Rigid Body Physics Limitations",
+          "IK Solver Differences"
+        ],
+        "ledger": "docs/research/TEXT_PHYSICS_SOURCE_DISCOVERY.json"
+      },
+      "limits": [
+        "主体内容已知，计为复核；不提供本模型参数秘诀"
+      ],
+      "refresh_trigger": "更换Blender/MMD Tools主版本，或源PMX约束持续无法收敛时"
+    },
+    {
+      "id": "blender-rigidbody-tips",
+      "title": "Blender 5.2：Rigid Body Tips",
+      "url": "https://docs.blender.org/manual/ar/5.2/physics/rigid_body/tips.html",
+      "author": "Blender官方手册贡献者",
+      "kind": "official_manual",
+      "version": "5.2 LTS",
+      "revision": "5.2-doc-unpinned",
+      "revision_locked": false,
+      "license_verified": false,
+      "reading": {
+        "level": "index_excerpt",
+        "scope": [
+          "Animation",
+          "Simulation Stability",
+          "Scaling Rigid Bodies",
+          "Passive Animated提醒"
+        ],
+        "ledger": "docs/research/TEXT_PHYSICS_SOURCE_DISCOVERY.json"
+      },
+      "limits": [
+        "搜索索引正文；直开失败；旧steps/second措辞不能直接等同本机substeps_per_frame"
+      ],
+      "refresh_trigger": "碰撞体移动但碰撞不动、启用约束突跳，或改变尺度时按小节复读"
+    },
+    {
+      "id": "photographic-layered-portrait",
+      "title": "摄影逐层布光：Strobist与Joe McNally",
+      "url": "https://strobist.blogspot.com/2016/07/lighting-102-shape-and-detail.html",
+      "author": "David Hobby / Joe McNally原作者",
+      "kind": "author_tutorial_family",
+      "version": "2026-11-14-body-reading",
+      "revision": "2026-11-14-body-reading-unpinned",
+      "revision_locked": false,
+      "license_verified": false,
+      "reading": {
+        "level": "sections",
+        "scope": [
+          "五篇技术正文：Shape and Detail、Distance and Two Lights、Twilight、Joe城市色光与grid局部塑形",
+          "Zack/Nikon Joe仅官方简介，不计完整课程"
+        ],
+        "ledger": "docs/research/PHOTOGRAPHIC_LAYERED_LIGHTING_2026_11_14.json"
+      },
+      "limits": [
+        "摄影快门不可照搬Blender；Emission/色带多灯非摄影直接加法",
+        "未看完整课程/独立光位图，不抄瓦数或灯数"
+      ],
+      "refresh_trigger": "出现本族具体问题或版本/依赖变化时，先查账本与缓存，仅按节复读；实施前核实际通路与固定版本。"
+    },
+    {
+      "id": "directional-rim-controls",
+      "title": "方向rim：亮度/覆盖/方向/材质许可",
+      "url": "https://docs.unity3d.com/Packages/com.unity.toonshader@0.11/manual/Rimlight.html",
+      "author": "Unity官方 / MooaToon / Poiyomi / HoyoToon实现作者",
+      "kind": "primary_documentation_and_source_family",
+      "version": "UTS0.11.1-preview-and-selected-source",
+      "revision": "UTS0.11.1-preview-and-selected-source-unpinned",
+      "revision_locked": false,
+      "license_verified": false,
+      "reading": {
+        "level": "sections",
+        "scope": [
+          "UTS颜色/覆盖/方向/mask及BuiltIn rim符号",
+          "MooaToon屏幕rim/照明、Poiyomi深度rim、HoyoToon rimlighting"
+        ],
+        "ledger": "docs/research/DIRECTIONAL_RIM_LIGHT_2026_11_14.json"
+      },
+      "limits": [
+        "文档与master不宣称同版；方向点积不是visibility",
+        "C只加法rim单帧，深度rim未移植，SCREEN Fac非HDR gain"
+      ],
+      "refresh_trigger": "出现本族具体问题或版本/依赖变化时，先查账本与缓存，仅按节复读；实施前核实际通路与固定版本。"
+    },
+    {
+      "id": "face-author-design-2026-11-14",
+      "title": "脸影作者：阈值图/完整头轴/刘海mask",
+      "url": "https://mos9527.com/posts/pjsk/shading-reverse-part-3/",
+      "author": "mos9527 / FlowingCrescent / 楸涵himoqiuhan",
+      "kind": "author_implementation_article_family",
+      "version": "2026-11-14-selected-body-reading",
+      "revision": "2026-11-14-selected-body-reading-unpinned",
+      "revision_locked": false,
+      "license_verified": false,
+      "reading": {
+        "level": "sections",
+        "scope": [
+          "四篇作者文章的阈值图、偏移发影、Blender坐标与脸颈调色选节",
+          "选定代码的通道/gamma及完整前上右姿态边界"
+        ],
+        "ledger": "docs/research/FACE_SHADOW_DESIGN_2026_11_14.json"
+      },
+      "limits": [
+        "EEVEE额外Stencil/pass未验证，代码片段通道/gamma不直接照抄",
+        "本轮三图未改脸影，不能据此晋级脸影卡"
+      ],
+      "refresh_trigger": "出现本族具体问题或版本/依赖变化时，先查账本与缓存，仅按节复读；实施前核实际通路与固定版本。"
+    },
+    {
+      "id": "baicai-layered-lighting-bv1gfwvzpeq8",
+      "title": "白菜MMD Blender第4集：逐层灯光/Glare",
+      "url": "https://www.bilibili.com/video/BV1GFWVzPEq8/",
+      "author": "画面水印叫我白菜就好啦；未独立核UID",
+      "kind": "user_supplied_author_tutorial",
+      "version": "BV1GFWVzPEq8-local-P1",
+      "revision": "BV1GFWVzPEq8-local-P1-unpinned",
+      "revision_locked": false,
+      "license_verified": false,
+      "reading": {
+        "level": "sections",
+        "scope": [
+          "用户给定542条字幕全部实读",
+          "14时点中13有效，4处原生UI裁图；未逐秒听音或连续看"
+        ],
+        "ledger": "docs/research/BAICAI_LAYERED_LIGHTING_TUTORIAL_2026_11_14.json"
+      },
+      "limits": [
+        "本集是PBR教程收尾，非原神脸SDF课",
+        "阶段灯值/Glare/色散/f2不是本项目最终参数或主辅比"
+      ],
+      "refresh_trigger": "出现本族具体问题或版本/依赖变化时，先查账本与缓存，仅按节复读；实施前核实际通路与固定版本。"
+    },
+    {
+      "id": "blender52-node-wrangler-light-diagnostics",
+      "title": "Blender5.2节点诊断/本机Node Wrangler4.1.0",
+      "url": "https://docs.blender.org/manual/en/5.2/addons/node_wrangler.html",
+      "author": "Blender官方文档及本机addons_core实现",
+      "kind": "official_manual_and_local_source_family",
+      "version": "Blender5.2.2-NW4.1.0",
+      "revision": "Blender5.2.2-NW4.1.0-unpinned",
+      "revision_locked": false,
+      "license_verified": false,
+      "reading": {
+        "level": "sections",
+        "scope": [
+          "官方5.2节点编辑/Viewer/AOV/File Output及EEVEE pass限制选节",
+          "本机4.1.0磁盘/临时注册注销、keymap与nw_link_out源码",
+          "Shader Ctrl-Shift-LMB由内置Connect to Output处理，会改接线"
+        ],
+        "ledger": "docs/research/NODE_WRANGLER_LIGHTING_2026_11_14.json"
+      },
+      "limits": [
+        "官方主要取索引正文选节，部分直开402；不称官网全页视觉浏览",
+        "注册成功非GUI启用；无提速测试；Shader to RGB需Combined交叉核对"
+      ],
+      "refresh_trigger": "出现本族具体问题或版本/依赖变化时，先查账本与缓存，仅按节复读；实施前核实际通路与固定版本。"
+    }
+  ],
+  "cards": [
+    {
+      "id": "portrait-received-light-calibration",
+      "title": "人物受光信号与主辅光标定",
+      "topic": "stage",
+      "priority": 0,
+      "status": "hypothesis",
+      "gap": "B去散射改善灰雾；C限定rim gain2未解决深蓝衣大面/脸。综合Diffuse是否饱和、各灯贡献未逐段采样。",
+      "source_ids": [
+        "photographic-layered-portrait",
+        "directional-rim-controls",
+        "face-author-design-2026-11-14",
+        "baicai-layered-lighting-bv1gfwvzpeq8",
+        "blender52-node-wrangler-light-diagnostics"
+      ],
+      "hypothesis": "先分清人物受光信号/散射/艺术rim，再分设暗部可读底和主光塑形，保护白衣、深蓝本色与颈肩暗面。",
+      "novelty": "new_primary_reading_and_bounded_diagnostic_followup",
+      "baseline": {
+        "path": "D:/codex/output/MMD-Clean-Game-Characters-v1/production-v2/Franken_Duet_Clean_Game.blend",
+        "sha256": "0ec95ee7162512ffc405a2a7337b355caf62cd993b3d8302886ee59e1561d9d4",
+        "scope": "冻结Clean v2；初轮三诊断未保存工程，后续重新布光已另存新工程，见related_implementation",
+        "kind": "production_blend"
+      },
+      "depends_on": [],
+      "implementation_sources": [],
+      "next_action": "本轮已产出4K重新布光静帧并独立重开；先收用户美术评价，再补yaw/pitch/roll、移灯、绕拍与交叠，不能把旧Clean动态结论转到新链。",
+      "bypass": "恢复socket及原Surface/Alpha/物理闭包，enable=0回冻结源；继承File Output先静音，不写生产或偏好。",
+      "fixed_variables": [
+        "相机驱动/焦距、曝光/显示变换、原Color/Alpha/sphere、SDF/AO、动作/几何固定",
+        "先禁Glow看源再恢复同一Glow；摄影快门不是只调环境旋钮",
+        "主辅/材质许可/rim颜色宽度强度逐项测，瓦数比非最终光比"
+      ],
+      "checks": {
+        "still": "原相机同帧列每段信号及头/身ROI；深蓝不灰、白衣不夹白、眼/内线/颈肩暗面保留；720p仅初筛。",
+        "motion": "静态后分别核yaw/pitch/roll、移灯、绕拍、手过脸、双人交错，查泵亮/漏光/线稳定，不沿用旧72帧。",
+        "reopen": "已有4290静帧新工程、独立结构重开与同帧重渲一致证据；完整动态后仍需重开相关抽样，不升动态关卡。",
+        "integration": "静帧/限定动态/重开后才生成绑定输入预设和同段完整新片；全帧解码/音轨/字幕/色彩/接缝另验，美术认可独立。"
+      },
+      "reject_if": [
+        "深蓝变灰、白衣夹白",
+        "最终脸亮度下限抹掉SDF/AO",
+        "只靠增加Glow/雾显有光",
+        "整圈亮边、染青肤色、交叠漏亮",
+        "换位泵亮或相机驱动失效",
+        "beauty与AOV/Glow/字幕beauty消费者不同步"
+      ],
+      "evidence": [],
+      "related_diagnostics": {
+        "report": "D:/codex/output/MMD-Portrait-Lighting-Study-2026-11-14/controls-v1/control-report.json",
+        "scope": "A/B/C仅4290三静帧，B灰雾减、C青边更抢眼；非主辅/脸影标定通过",
+        "stage_promotion": false
+      },
+      "limits": [
+        "本轮已有4K单帧、新工程和独立保存重开；卡片全部受光/动态验收尚未完成，维持hypothesis并保留有界实施证据。",
+        "新链无转头/移灯/绕拍/交叠连续画面，无新五秒或用户美术认可。",
+        "paierer/观海子Shader未知，保留指定礼堂，不因风格名宣称品质达标。"
+      ],
+      "related_implementation": {
+        "guide": "docs/PORTRAIT_RELIGHT_IMPLEMENTATION.md",
+        "delivery": "D:\\codex\\output\\MMD-Portrait-Relight-v1\\delivery.json",
+        "scope": "实际4K单帧/独立重开；原综合探针非纯visibility，未补齐卡片全部动态关卡",
+        "stage_promotion": false,
+        "new_video": false,
+        "evidence_reports": [
+          {
+            "path": "D:\\codex\\output\\MMD-Portrait-Relight-v1\\delivery.json",
+            "sha256": "a385dd7b04b1a6fc697228522be4ecf24b34ce4e5b4662e217bf3285910b6630"
+          },
+          {
+            "path": "D:\\codex\\output\\MMD-Portrait-Relight-v1\\production-v1\\preparation.json",
+            "sha256": "fa98ca46c79b0e6f548228d7aad93940f7bf264fbeb6ceb4f14b3a14c489798b"
+          },
+          {
+            "path": "D:\\codex\\output\\MMD-Portrait-Relight-v1\\production-v1\\master-verification.json",
+            "sha256": "ff41aed453260f6e20b6b5967200cb78c4f6be8f6ae2104ae1b7e9cfd81a0356"
+          },
+          {
+            "path": "D:\\codex\\output\\MMD-Portrait-Relight-v1\\verification\\reopen-render.json",
+            "sha256": "9638b44b8153c943bec29d1d4833303c1ae0cdbe01f80f343125e097e90762fe"
+          }
+        ]
+      }
+    },
+    {
+      "id": "face-threshold-shape",
+      "title": "脸影形状与真实遮挡分工",
+      "topic": "character",
+      "priority": 0,
+      "status": "hypothesis",
+      "gap": "鼻口、额头和转头时脸影需要设计，不能用提高全脸亮度抹掉",
+      "source_ids": [
+        "mooa-shadow"
+      ],
+      "hypothesis": "先确认原FaceLightmap和SDF语义，再在上游局部修改脸影形状，保留当前真实遮挡上界",
+      "novelty": "refinement_of_existing_E1",
+      "baseline": {
+        "path": "D:/codex/output/MMD-Character-Layer-Refinement-v1/production-v2/Franken_Duet_Character_Layers.blend",
+        "sha256": null,
+        "scope": "仅作为下一轮副本基线；本轮未打开、未冻结输入，不得重复运行Grounded迁移器",
+        "kind": "production_blend"
+      },
+      "depends_on": [],
+      "implementation_sources": [],
+      "next_action": "先读最新人物工程的SDF输入/UV与实际头轴，冻结副本和脚本SHA；仅在确认形状缺口后自绘小阈值图",
+      "bypass": "关闭exp_face_threshold_map，回现有上游SDF",
+      "fixed_variables": [
+        "曝光、Color/Alpha、主灯、实际遮挡、AO、五官线和相机固定"
+      ],
+      "checks": {
+        "still": "两角色分别检查主灯方位-90/-45/0/45/90度，鼻口无孤岛、左右不翻转、脸影仍清楚",
+        "motion": "先过同帧对照，再各角色24帧转头/移灯/绕拍；按实际缺口加眨眼、手过脸与连续动作，不沿用旧链通过结论",
+        "reopen": "保存诊断副本；独立后台重开，对照节点、贴图和同帧结果；不得覆盖当前production-v2",
+        "integration": "仅在本模型/灯组/画幅/片段通过后生成绑定输入的预设；最终视频全帧解码，技术与用户美术认可独立登记"
+      },
+      "reject_if": [
+        "正面过零跳变；提高亮度下限掩盖问题；把综合Diffuse当纯投影"
+      ],
+      "evidence": [],
+      "limits": [
+        "既有E1/脸影研究的续接，不是本轮新实现；未复制游戏Shader"
+      ]
+    },
+    {
+      "id": "hair-highlight-allowance",
+      "title": "发带许可与暗部强度分开",
+      "topic": "character",
+      "priority": 0,
+      "status": "hypothesis",
+      "gap": "旧生成代码含0.35+0.65B，但本轮核对保存基线四条实际发带直接来自POWER；新分支已加入常量许可与受光门控，专属UV许可图仍未绘制或验证",
+      "related_implementation": {
+        "guide": "docs/REFERENCE_TECHNIQUE_TRANSFER.md",
+        "scope": "仅绑定四个实际材质的常量许可0.9与综合受光门控；不是本卡完整UV遮罩实验或纯投影通道",
+        "full_hypothesis_verified": false
+      },
+      "source_ids": [
+        "mooa-hair",
+        "uts-highlight"
+      ],
+      "hypothesis": "在已有生成高光之后加入独立许可遮罩；暗部强度只作另一个控制，避免偏移非线性输入代替许可",
+      "novelty": "existing_reading_to_test",
+      "baseline": {
+        "path": "D:/codex/output/MMD-Character-Layer-Refinement-v1/production-v2/Franken_Duet_Character_Layers.blend",
+        "sha256": null,
+        "scope": "仅作为下一轮副本基线；本轮未打开、未冻结输入，不得重复运行Grounded迁移器",
+        "kind": "production_blend"
+      },
+      "depends_on": [],
+      "implementation_sources": [],
+      "next_action": "先在最新版追踪现有发带、球面与Alpha的实际节点；冻结副本，只选一簇头发测试0/1许可遮罩",
+      "bypass": "许可恒1且暗部调节回基线；只保留已有一条发带",
+      "fixed_variables": [
+        "底色、光能量、现有带宽/形状、AO、相机和曝光不变"
+      ],
+      "checks": {
+        "still": "许可为0处只去掉新增发带，底色/Alpha不变；许可为1回基线；分别观察银蓝与金发",
+        "motion": "先过同帧对照，再各角色24帧转头/移灯/绕拍；按实际缺口加眨眼、手过脸与连续动作，不沿用旧链通过结论",
+        "reopen": "保存诊断副本；独立后台重开，对照节点、贴图和同帧结果；不得覆盖当前production-v2",
+        "integration": "仅在本模型/灯组/画幅/片段通过后生成绑定输入的预设；最终视频全帧解码，技术与用户美术认可独立登记"
+      },
+      "reject_if": [
+        "同改阈值和许可无法归因；遮罩改动压黑底色或删除球面；UV闪烁"
+      ],
+      "evidence": [],
+      "limits": [
+        "MooaToon/UTS原理借鉴；独立真实visibility仍未取得，不把综合信号改名"
+      ]
+    },
+    {
+      "id": "material-contribution",
+      "title": "金属与布料贡献消融",
+      "topic": "character",
+      "priority": 1,
+      "status": "hypothesis",
+      "gap": "两人PBR色源不同，空已有Sheen；先辨认贡献再加效果",
+      "source_ids": [
+        "mmd-material",
+        "blender-principled"
+      ],
+      "hypothesis": "同帧隔离既有PBR/Sheen/球面可定位扁平或重复高光，减少无效叠层",
+      "novelty": "existing_reading_to_test",
+      "baseline": {
+        "path": "D:/codex/output/MMD-Character-Layer-Refinement-v1/production-v2/Franken_Duet_Character_Layers.blend",
+        "sha256": null,
+        "scope": "仅作为下一轮副本基线；本轮未打开、未冻结输入，不得重复运行Grounded迁移器",
+        "kind": "production_blend"
+      },
+      "depends_on": [],
+      "implementation_sources": [],
+      "next_action": "只读最新图追踪金属色源，记录本机插件源码版本与输入SHA；先做已有分支开/关，暂不新增着色器",
+      "bypass": "恢复现有PBR混合系数、色源与球面接线",
+      "fixed_variables": [
+        "光、粗糙度、基础颜色、AO、线条和曝光固定；每次只改一条贡献"
+      ],
+      "checks": {
+        "still": "单独显示金属/布料响应，确认空的Sheen是否被0.12混合压低；保留MMD Color/Alpha/球面",
+        "motion": "先过同帧对照，再各角色24帧转头/移灯/绕拍；按实际缺口加眨眼、手过脸与连续动作，不沿用旧链通过结论",
+        "reopen": "保存诊断副本；独立后台重开，对照节点、贴图和同帧结果；不得覆盖当前production-v2",
+        "integration": "仅在本模型/灯组/画幅/片段通过后生成绑定输入的预设；最终视频全帧解码，技术与用户美术认可独立登记"
+      },
+      "reject_if": [
+        "未追图就认定重复反射；同时更改多项；Glow关掉后材质仍不可区分却称通过"
+      ],
+      "evidence": [],
+      "limits": [
+        "main源码与本机版本未证明等价；假设不代表当前工程缺陷已确诊"
+      ]
+    },
+    {
+      "id": "outline-unit-contract",
+      "title": "外轮廓线宽的单位合同",
+      "topic": "character",
+      "priority": 1,
+      "status": "hypothesis",
+      "gap": "相对加粗不代表近远景或不同输出分辨率下像素宽度稳定",
+      "source_ids": [
+        "mtoon-spec",
+        "vrm-blender-outline"
+      ],
+      "hypothesis": "先区分世界厚度/画高比例/固定像素目标，再判断是否需要新描边实现",
+      "novelty": "new_text_specification_contract",
+      "baseline": {
+        "path": "D:/codex/output/MMD-Character-Layer-Refinement-v1/production-v2/Franken_Duet_Character_Layers.blend",
+        "sha256": null,
+        "scope": "仅作为下一轮副本基线；本轮未打开、未冻结输入，不得重复运行Grounded迁移器",
+        "kind": "production_blend"
+      },
+      "depends_on": [],
+      "implementation_sources": [
+        "vrm-blender-outline"
+      ],
+      "next_action": "先固定规范/作者实现版本并只读实际节点依赖；随后选择不透明发束/衣物轮廓测现有线宽，记录1080p像素目标",
+      "bypass": "关闭诊断新增描边修改器，回原PMX分区权重",
+      "fixed_variables": [
+        "同姿态同线色；关闭Glow/景深；先固定分辨率只改距离，再固定构图只改输出高度"
+      ],
+      "checks": {
+        "still": "测同一轮廓位置的世界厚度、画高比例与像素；2px@1080保持画高比例在2160应4px，这是单位推导而非推荐参数",
+        "motion": "24帧转头/眨眼，头发、脸、毛领、衣物分区；睫毛、嘴线与发缝不粘连",
+        "reopen": "保存诊断副本；独立后台重开，对照节点、贴图和同帧结果；不得覆盖当前production-v2",
+        "integration": "仅在本模型/灯组/画幅/片段通过后生成绑定输入的预设；最终视频全帧解码，技术与用户美术认可独立登记"
+      },
+      "reject_if": [
+        "只按物体原点补偿就声称所有局部恒定像素；靠540p截图推定1080p通过；便利转换重建主材质"
+      ],
+      "evidence": [],
+      "limits": [
+        "尚未实现或验证新线宽算法；MToon不等于观海子/原神的原Shader"
+      ]
+    },
+    {
+      "id": "cloth-physics-stability",
+      "title": "衣发快速动作稳定性排错",
+      "topic": "physics",
+      "priority": 2,
+      "status": "hypothesis",
+      "gap": "仅在出现可复现穿透/抖动时，提高精度才有验证价值",
+      "source_ids": [
+        "mmd-physics",
+        "blender-rigidbody-tips"
+      ],
+      "hypothesis": "先排除初态、碰撞和约束错误，再只改6→12子步可能减少小而快衣发链穿透",
+      "novelty": "mostly_covered_with_small_diagnostic_increment",
+      "baseline": {
+        "path": "presets/projects/franken-duet-full-v1.json",
+        "sha256": null,
+        "scope": "仅为选材清单；实验前替换为新建未Build模拟工程并记录原PMX/VMD/插件指纹，禁止作为求解已冻结基线",
+        "kind": "selection_manifest"
+      },
+      "depends_on": [],
+      "implementation_sources": [],
+      "next_action": "先确认问题可复现并核对Passive Animated/约束启用；从原PMX+VMD建立未Build输入清单、版本和SHA，不使用现有便携烘焙工程作模拟输入",
+      "bypass": "无可见收益保留6子步；回查初态/碰撞/轴，停止继续堆子步",
+      "fixed_variables": [
+        "原30fps、scale0.08、相同120源帧预滚、30迭代、碰撞/质量/阻尼/动作/IK与time_scale固定"
+      ],
+      "checks": {
+        "still": "先记录最小碰撞体尺寸、身高H、原始互穿与实际受驱动骨骼；静帧不能判模拟通过",
+        "motion": "同源连续预滚/快速动作/停稳尾段，A=6/B=12，各自清缓存顺序模拟；登记耗时和穿透/振铃",
+        "reopen": "分别视觉烘焙并停用实时世界后重开，对各自模拟比位置/旋转；误差预算与H/空间见来源账本",
+        "integration": "只在同源绑定和时基通过后建立物理预设；不能复用旧动作烘焙；不计为胸部模拟"
+      },
+      "reject_if": [
+        "A/B都无可见问题；穿模更差或迟滞；同步改fps/margin/尺度；用对象Bake替代骨骼验证"
+      ],
+      "evidence": [],
+      "limits": [
+        "主要为既有知识复核；没有新衣发solver或胸部物理"
+      ]
+    }
+  ],
+  "current_round": {
+    "id": "portrait-layer-study-2026-11-14",
+    "guide": "docs/PORTRAIT_LIGHTING_AND_SHADOW_STUDY.md",
+    "source_ledgers": [
+      "docs/research/PHOTOGRAPHIC_LAYERED_LIGHTING_2026_11_14.json",
+      "docs/research/DIRECTIONAL_RIM_LIGHT_2026_11_14.json",
+      "docs/research/FACE_SHADOW_DESIGN_2026_11_14.json",
+      "docs/research/BAICAI_LAYERED_LIGHTING_TUTORIAL_2026_11_14.json",
+      "docs/research/NODE_WRANGLER_LIGHTING_2026_11_14.json",
+      "docs/research/PAIERER_DARK_STAGE_PORTRAIT_2026_11_14.json"
+    ],
+    "local_reference_boundary": "paierer仅已知本地视频/水印，不构造HTTP URL、不新增queue URL；有限静帧范围见ledger。",
+    "diagnostic_report": "D:/codex/output/MMD-Portrait-Lighting-Study-2026-11-14/controls-v1/control-report.json",
+    "diagnostics_do_not_promote_cards": true
+  }
+}

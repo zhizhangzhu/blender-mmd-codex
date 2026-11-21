@@ -1,0 +1,64 @@
+{
+  "schema_version": 1,
+  "id": "duet-light-space-v1",
+  "source": "MMD-Ray-Hall-Genshin-Revision-v1/production-v3",
+  "status": "five-second-motion-and-linear-pipeline-verified",
+  "restore_stage_fixture_transforms": true,
+  "head_axes": "bone-parented world-space helper points; no RNA matrix indexing",
+  "light_direction": "actual actor key light minus posed head anchor",
+  "physical_response": {
+    "low": 0.0,
+    "high": 0.12,
+    "body_floor": 0.82,
+    "hair_floor": 0.88,
+    "face_floor": 0.98,
+    "stage_floor": 0.92
+  },
+  "contact": {
+    "actor_distance": 0.065,
+    "actor_strength": 0.12,
+    "face_distance": 0.025,
+    "face_strength": 0.025,
+    "stage_distance": 0.16,
+    "stage_strength": 0.09
+  },
+  "outline": {
+    "distance_lens_compensation": true,
+    "minimum_scale": 0.75,
+    "maximum_scale": 1.35
+  },
+  "render": {
+    "samples": 48,
+    "shadow_rays": 4,
+    "view_transform": "Standard",
+    "look": "None",
+    "exposure": 0
+  },
+  "linear_archive": {
+    "format": "OPEN_EXR_MULTILAYER",
+    "depth": "16",
+    "codec": "ZIP",
+    "display_transform": "none in EXR; apply Standard only on review output",
+    "mask_depth": "32 (native FLOAT socket)"
+  },
+  "scope": "model-specific duet adaptation; preserve source animation, camera and original vocal FLAC",
+  "face_library_contract": "Adapted festivities Face Factor receives head-minus-key; own FaceLightmap receives key-minus-head",
+  "validation": {
+    "production_frames": 300,
+    "production_resolution": [
+      1920,
+      1080
+    ],
+    "fps": 60,
+    "controlled_diagnostic_frames": 72,
+    "native_split_frames": [
+      4140,
+      4200,
+      4290,
+      4420,
+      4439
+    ],
+    "maximum_axis_error": 1.2255299202796802e-07,
+    "full_song_verified": false
+  }
+}

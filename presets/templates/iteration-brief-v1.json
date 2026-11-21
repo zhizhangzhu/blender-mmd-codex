@@ -1,0 +1,10 @@
+{
+  "id": "iteration-brief-v1",
+  "purpose": "Copy and fill relevant fields for one reviewable iteration; not a production configuration or required approval form",
+  "source": {"project": "", "sha256": "", "runtime": "resolve current_state intent; distinguish frozen Goo source from native53 trial", "actors": [], "frames_or_seconds": ""},
+  "request": {"visible_problem": "", "deliverable": "stills unless explicitly requested otherwise", "preserve": [], "allowed_changes": []},
+  "design": {"story_or_action_intent": "", "emotion": "", "primary_focus": "", "secondary_focus": "", "value_groups": "", "palette_roles": "", "camera_and_stage": "", "light_roles": [], "effect_role_and_timing": ""},
+  "implementation": {"route_ids": [], "knowledge_reused": [], "hypothesis": "", "module_or_channels_changed": [], "input_contract_checked": false},
+  "review": {"controls": [], "pose_or_frame_samples": [], "reject_if": [], "technical_results": [], "art_observations": [], "untested": [], "user_art_status": "pending"},
+  "handoff": {"outputs": [], "next_question_or_experiment": ""}
+}

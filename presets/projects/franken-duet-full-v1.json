@@ -1,0 +1,513 @@
+{
+  "id": "franken-duet-full-v1",
+  "preferred_runtime_profile": "presets/runtime/goo-v1.json",
+  "current_goo_working_scene": "D:\\codex\\output\\MMD-Jelly-Eyes-v1\\production-v16\\Franken_Duet_Goo_Eye_Hair_Stage.blend",
+  "status": "Eye jelly, bright highlights, opaque hair toon ramps, animated geometric face hair-shadows, luminous skin and stage surfaces integrated; eye see-through deferred; captioned five-second sample encoded; post-output QA skipped; full song not delivered",
+  "production_scene": "D:\\codex\\output\\MMD-Jelly-Eyes-v1\\production-v16\\Franken_Duet_Goo_Eye_Hair_Stage.blend",
+  "integration_verification": "D:\\codex\\output\\MMD-Goo-Wedding-v1\\migration-preservation.json",
+  "render_output": "D:\\codex\\output\\MMD-Jelly-Eyes-v1\\quick-5s-v16",
+  "character_style": {
+    "family": "guanhaizi",
+    "direction": "clear dark facial/garment lines, differentiated hair/cloth/metal, readable eyes and background separation",
+    "status": "reference-inspired local treatment; original author shaders not recovered; not claimed equal quality",
+    "adaptation": "Retain Aksiniya's silver/navy palette; Ikhor's own blonde/white/cyan/gold materials mapped independently; preserve authored camera."
+  },
+  "song": "HIMEHINA - フランケンシュタインの怪物",
+  "motion_fps": 30,
+  "target_fps": 60,
+  "mmd_scale": 0.08,
+  "scope": "full song, two performers",
+  "aspect": "landscape",
+  "aspect_status": "confirmed by user: landscape 16:9",
+  "aspect_ratio": [
+    16,
+    9
+  ],
+  "stage": {
+    "visual_reference": "User-selected Hesperides wedding hall; snow + wedding + love, with Snezhnaya atmosphere",
+    "visual_reference_priority": "The explicit final scene selection supersedes earlier palace candidates; retain winter grandeur and warm release",
+    "reference_entries": [
+      {
+        "url": "https://www.youtube.com/watch?v=j9fzP0Qn4hw",
+        "name": "官方《冬夜愚戏》",
+        "evidence_scope": "official title and description read; one shared hall still viewed; full-video shot analysis not completed"
+      }
+    ],
+    "mood": "tragic and majestic, with a feeling of release and remaining warmth",
+    "preferred_scene": "赫斯珀利德斯之馆-礼堂",
+    "status": "Selected Hesperides hall retained; latest five-second Ikhor bold-wedding review verified, art pending; full-song rendering stopped",
+    "existing_asset_required": true,
+    "original_stage_fallback_allowed": false,
+    "solid_floor_required": true,
+    "floor_requirement_status": "selected hall has visible solid floor and central aisle; final dance area/contact still needs calibration",
+    "preferred_candidate": {
+      "name": "【原神】赫斯珀利德斯之馆-礼堂",
+      "author": "paierer",
+      "page": "https://www.aplaybox.com/details/model/uRHK15qUygJZ",
+      "local_directory": "E:/tools/franken/【原神】赫斯珀利德斯之馆(礼堂)_by_paierer_08fc2e9ffe6ce8e16fb42e2032c6f401/GI_Hesperides",
+      "blend": "Hesperides.blend",
+      "pmx": "Hesperides.pmx",
+      "terms": "readme.txt",
+      "user_selected": true,
+      "status": "source blend audited and scene-only renders passed; not a completed duet",
+      "credits": {
+        "source": "miHoYo",
+        "adaptation": "paierer",
+        "ray_materials": "Rui_cg / 三金络合物 / paierer"
+      },
+      "usage": "noncommercial; credit source and adaptation; bundled prohibited-content restrictions apply",
+      "audit": "D:/codex/output/Hesperides-Stage-Study-v1/source-audit.json",
+      "render_guide": "docs/HESPERIDES_STAGE_RENDERING.md"
+    },
+    "alternative_candidates": [],
+    "excluded_assets": [
+      {
+        "name": "天空の城ステージ",
+        "page": "https://booth.pm/ja/items/4369252",
+        "reason": "user rejected visual fit and requested a solid-floor scene; do not request this download again",
+        "imported_in_production": false
+      },
+      {
+        "name": "Aiko 宮殿ステージ",
+        "page": "https://booth.pm/ja/items/3802318",
+        "local_directory": "E:/tools/franken/宮殿ステージ",
+        "reason": "current author terms prohibit final Blender rendering; external tools only allowed for intermediate preparation for MikuMikuDance",
+        "imported_in_production": false
+      },
+      {
+        "name": "聖堂前ステージ",
+        "page": "https://booth.pm/ja/items/4028466",
+        "reason": "user rejected visual fit; superseded by explicitly selected Hesperides hall",
+        "imported_in_production": false
+      },
+      {
+        "name": "玉座の間",
+        "page": "https://booth.pm/ja/items/3749610",
+        "reason": "user rejected visual fit; superseded by explicitly selected Hesperides hall",
+        "imported_in_production": false
+      }
+    ],
+    "previous_warm_salon_plan": "superseded by user's snow-country direction",
+    "search_guide": "docs/STAGE_SEARCH.md",
+    "themes": [
+      "snow",
+      "wedding",
+      "love"
+    ],
+    "search_sources": [
+      "BowlRoll",
+      "DeviantArt",
+      "BOOTH",
+      "author distribution pages"
+    ],
+    "aplaybox_search": "Do not search broadly here per user request; user explicitly selected the linked Hesperides asset",
+    "restricted_visual_reference": {
+      "name": "雪韵仙庭",
+      "page": "https://www.aplaybox.com/details/model/j45tGki9AtXJ",
+      "status": "visual reference only; user cannot download; no bypass"
+    }
+  },
+  "performers": [
+    {
+      "id": "aksiniya",
+      "display_name": "阿克西妮娅",
+      "model": "E:/tools/franken/阿克西妮娅2_by_神秘会员卡_85ba1d1257580930c054ba5201e4a36d/阿克西妮娅2.pmx",
+      "motion_part": "HimeTanaka",
+      "motion": "E:/tools/franken/drive-download-20261018T085726Z-1-001/FrankensteinNoKaibutsu_Motion(MMD)_Full_HimeTanaka_v1.0[f0].vmd"
+    },
+    {
+      "id": "ikhor",
+      "display_name": "伊科尔",
+      "model": "D:/codex/output/MMD-Ikhor-Model-v1/source/Ikhor/Ikhor.pmx",
+      "motion_part": "HinaSuzuki",
+      "motion": "E:/tools/franken/drive-download-20261018T085726Z-1-001/FrankensteinNoKaibutsu_Motion(MMD)_Full_HinaSuzuki_v1.0[f0].vmd",
+      "model_source": "https://www.aplaybox.com/details/model/L6PalbSZMmTW"
+    }
+  ],
+  "camera": {
+    "preference": "author-distributed full-song duet camera; adapt minimally after actual framing review",
+    "candidate_author": "とっとこ",
+    "candidate_page": "https://bowlroll.net/file/359108",
+    "candidate_demo": "https://www.nicovideo.jp/watch/sm46716183",
+    "downloaded_package": "D:/codex/output/blender-mmd-codex/camera-tottoko-359108-v001",
+    "import_frame_source": 0,
+    "status": "downloaded, instructions read, 173 cm variant imported with both Full actions and ten draft frames rendered; not full framing-approved",
+    "tested_height_variant_cm": 173,
+    "correction_scope": "user deferred full-song camera correction; preserve authored camera motion",
+    "layout_report": "D:/codex/output/Franken-Duet-Full-Preflight-v1/layout-draft/layout-report.json"
+  },
+  "audio": {
+    "bgm": "D:/codex/output/Franken-Duet-Full-Audio-v1/HIMEHINA - フランケンシュタインの怪物.flac",
+    "bgm_type": "original vocal recording supplied by user via local NCM",
+    "bgm_sha256": "3e9c3c62f49523ec2959192dd5a4b698edddf8e78829d89b2c7952f7e1a58d52",
+    "bgm_duration_seconds": 198.3158125,
+    "bgm_sample_rate": 96000,
+    "bgm_bits_per_sample": 24,
+    "bgm_channels": 2,
+    "bgm_source_ncm": "D:/CloudMusic/VipSongsDownload/HIMEHINA - フランケンシュタインの怪物.ncm",
+    "bgm_conversion_report": "D:/codex/output/Franken-Duet-Full-Audio-v1/HIMEHINA - フランケンシュタインの怪物.conversion.json",
+    "instrumental": "E:/tools/franken/FrankensteinNoKaibutsu_Audio_Inst±0.wav",
+    "instrumental_role": "reference only; user selected the vocal FLAC as production BGM",
+    "original_mv": "https://www.youtube.com/watch?v=J66gqneY518",
+    "manual_beat_sync_by_user": true,
+    "full_timeline_alignment": "estimated via both VMD mouth tracks versus vocal residual; VMD frame 329 aligns with FLAC start; retain native 30 fps timing, output 60 fps with transformed keyframe handles; fine beat sync remains user-adjustable",
+    "timebase_report": "D:/codex/output/Franken-Duet-Full-Final-v1/qa/audio-timebase-estimate.json",
+    "source_vmd_first": 329,
+    "baked_source_first": 450
+  },
+  "production_requirements": [
+    "Use both native Full VMD tracks and preserve their choreography/relative positions.",
+    "Replace Aksiniya's prior Hina action with Hime; old Hina physics bake is not reusable for the new assignment.",
+    "Map Ikhor materials, morphs, masks and outline controls separately; do not reuse Aksiniya UV masks.",
+    "Bake and audit physics for both performers across the full song.",
+    "Check duet contact, stage intersections and original camera throughout all sections.",
+    "Retain independent Gosari542 and Guanhaizi style presets, and separate aspect-specific camera/layout choices.",
+    "Verify the complete final image/audio sequence before declaring a finished full-song video."
+  ],
+  "aether_revision": {
+    "feedback": "flat overall, insufficient material separation, unnatural skin, dissatisfied face/eyes/ink",
+    "preset": "presets/quality/aether-hall-surface-v1.json",
+    "study_project": "D:/codex/output/Aether-Look-Revision-v1/look-v5/Franken_Duet_Aether_Revised.blend",
+    "guide": "docs/AETHER_LOOK_REVISION.md",
+    "old_render_role": "Obsolete visual comparison, not final delivery",
+    "camera_motion_changed": false,
+    "physics_changed": false,
+    "current_status": "20-second sample complete; decoded video/audio and seams passed; representative images inspected; full movie not delivered"
+  },
+  "current_iteration_scope": {
+    "kind": "clean-character-materials-and-hidden-wedding-arcs",
+    "requested_seconds": 5,
+    "source_frames": [
+      4140,
+      4439
+    ],
+    "fps": 60,
+    "resolution": [
+      1920,
+      1080
+    ],
+    "sample_output": "D:\\codex\\output\\MMD-Clean-Game-Characters-v1\\captions-5s",
+    "sample_movie": "D:\\codex\\output\\MMD-Clean-Game-Characters-v1\\captions-5s\\Franken_Duet_5s_CleanGame_Wedding_REVIEW.mp4",
+    "status": "completed and technically verified; user art review pending",
+    "full_movie": "not delivered or rendering",
+    "arcs_hidden": true,
+    "physics_changed": false
+  },
+  "sample_delivery": {
+    "movie": "D:\\codex\\output\\MMD-Clean-Game-Characters-v1\\captions-5s\\Franken_Duet_5s_CleanGame_Wedding_REVIEW.mp4",
+    "video_sha256": "f0e2a8053244cbc09dc16e55a4dadcfe5f94c09fcfede25e9acc66de2061e107",
+    "without_captions_video": "D:\\codex\\output\\MMD-Clean-Game-Characters-v1\\captions-5s\\Franken_Duet_5s_CleanGame_NoCaptions.mp4",
+    "without_captions_sha256": "e2bab89e41e3b1e4c53574888c28a3729632be27097b996c04a26e096bfe93d0",
+    "project": "D:\\codex\\output\\MMD-Clean-Game-Characters-v1\\production-v2\\Franken_Duet_Clean_Game.blend",
+    "project_sha256": "0ec95ee7162512ffc405a2a7337b355caf62cd993b3d8302886ee59e1561d9d4",
+    "source_frames": [
+      4140,
+      4439
+    ],
+    "frames": 300,
+    "seconds": 5,
+    "fps": 60,
+    "resolution": [
+      1920,
+      1080
+    ],
+    "camera_motion_changed": false,
+    "physics_changed": false,
+    "physics_change_scope": "No new physics; inherit the accepted native cloth/sleeve/corrective evidence only within 4139-4441",
+    "verified": {
+      "video": true,
+      "audio": true,
+      "seams": true,
+      "color": true,
+      "caption_coverage": true,
+      "neutral_diagnostics": true
+    },
+    "delivery_report": "D:\\codex\\output\\MMD-Clean-Game-Characters-v1\\delivery.json",
+    "recipe": "presets/recipes/duet-clean-game-v1.json",
+    "arcs_hidden": true,
+    "full_song_complete": false,
+    "user_art_approval": false
+  },
+  "latest_lighting_revision": {
+    "preset": "presets/quality/winter-wedding-clear-light-v1.json",
+    "guide": "docs/CLEAR_LIGHT_AND_GRADING.md",
+    "project": "D:/codex/output/MMD-Clear-Light-Revision-v1/lighting-v4/Franken_Duet_Clear_Light.blend",
+    "integration_verification": "D:/codex/output/MMD-Clear-Light-Revision-v1/lighting-v4/integration-verification.json",
+    "source_emission_present": true,
+    "actor_background_aov": "ClearLightActor",
+    "status": "five-second sample rendered and verified; 12 representative frames and seam row inspected; source bone/camera error zero",
+    "user_visual_status": "stage rendering/lighting/material quality still needs improvement; user requests comparison to supplied author Ray preview"
+  },
+  "previous_sample_deliveries": [
+    {
+      "status": "20-second review sample rendered and video/audio decode verified; not full-song delivery",
+      "movie": "D:\\codex\\output\\Aether-Look-Revision-v1\\sample-20s-v1\\Aether_Duet_20s_REVIEW.mp4",
+      "project": "D:\\codex\\output\\Franken-Duet-Full-Final-v1\\production-v5\\Franken_Duet_Aether_Revised.blend",
+      "source_frames": [
+        4140,
+        5339
+      ],
+      "frames": 1200,
+      "seconds": 20.0,
+      "bgm_source_start_seconds": 68.98333333333333,
+      "bgm": "User-selected original vocal FLAC; AAC delivery track",
+      "camera_motion_changed": false,
+      "physics_changed": false,
+      "note": "Material review sample requested by user; complete movie deferred",
+      "video_sha256": "accd18d6529048a003f51cc4617b64016f63be04b17133dad5ea9e8cf4aec4a2",
+      "visual_review": "12 representative frames and both seam contact-sheet rows inspected; no obvious material loss or render seam in inspected frames; existing camera cuts preserved",
+      "verification": {
+        "video_passed": true,
+        "audio_passed": true,
+        "seams_passed": true,
+        "audio_peak": 0.9265976548194885,
+        "audio_rms": 0.24004419200975471
+      }
+    },
+    {
+      "status": "5-second review sample rendered and video/audio decode verified; not full-song delivery",
+      "movie": "D:\\codex\\output\\MMD-Clear-Light-Revision-v1\\sample-5s-v1\\Aether_Duet_5s_REVIEW.mp4",
+      "project": "D:\\codex\\output\\MMD-Clear-Light-Revision-v1\\lighting-v4\\Franken_Duet_Clear_Light.blend",
+      "source_frames": [
+        4140,
+        4439
+      ],
+      "frames": 300,
+      "seconds": 5.0,
+      "bgm_source_start_seconds": 68.98333333333333,
+      "bgm": "User-selected original vocal FLAC; AAC delivery track",
+      "camera_motion_changed": false,
+      "physics_changed": false,
+      "note": "Material review sample requested by user; complete movie deferred",
+      "video_sha256": "7d18ecdaaf07f31cfc30dd9225f9023ae85dba4836765af04820197963aaa97d",
+      "verified": {
+        "video": true,
+        "audio": true,
+        "seam": true
+      },
+      "visual_review": "12 representative frames and the seam row inspected; brighter lighting and grade reviewed; original authored cuts preserved; not a claim of reference-author parity",
+      "look_preset": "winter-wedding-clear-light-v1"
+    },
+    {
+      "movie": "D:\\codex\\output\\MMD-Aksiniya-Ikhor-Wedding-v1\\captions-5s-v3\\Franken_Duet_5s_Ikhor_Wedding_REVIEW.mp4",
+      "video_sha256": "feeaefdef7477ed57c947122844207159e7aa4a84e75f5d24fd3d8580aff549a",
+      "project": "D:\\codex\\output\\MMD-Aksiniya-Ikhor-Wedding-v1\\production-v7\\Franken_Aksiniya_Ikhor_Bold_Wedding.blend",
+      "project_sha256": "f9442577a61a2c1cc4f39442e4468d42f13d42311fdd9f9e9616d165d40ea692",
+      "source_frames": [
+        4140,
+        4439
+      ],
+      "frames": 300,
+      "seconds": 5,
+      "camera_motion_changed": false,
+      "physics_changed": true,
+      "physics_change_scope": "Ikhor native local cloth bake plus8-sleeve local repair and one left corrective; not full-song physics",
+      "verified": {
+        "video": true,
+        "audio": true,
+        "seams": true
+      },
+      "delivery_report": "D:\\codex\\output\\MMD-Aksiniya-Ikhor-Wedding-v1\\delivery.json",
+      "full_song_complete": false,
+      "user_art_approval": false
+    }
+  ],
+  "author_stage_reference": {
+    "author": "paierer",
+    "bilibili_mid": 1503209807,
+    "distribution_video": "https://www.bilibili.com/video/BV1xEJe6oEmy/",
+    "author_share": "https://pan.baidu.com/s/1kmux6Vr0oPhgigSzH6BcUw?pwd=stpr",
+    "public_extraction_code": "stpr",
+    "public_share_listing_verified": true,
+    "local_ray_material_fx": 23,
+    "local_additive_matcap_enabled_materials": 14,
+    "local_normal_enabled_materials": 14,
+    "original_blend_lights": 0,
+    "original_blend_cameras": 0,
+    "complete_original_lighting_project": "not present in verified author archive; 121 asset files match previous package exactly; no extra files outside asset root",
+    "stage_specific_tutorial": "not found in checked sources; full author video-list API was restricted",
+    "guide": "docs/HESPERIDES_AUTHOR_SETUP.md",
+    "next_validation": "Stage-only same-view study complete; refine curtain seams, local highlights and material separation before integrating with actors; full-song rendering remains deferred",
+    "downloaded_author_archive": "D:/BaiduNetdiskDownload/【原神】赫斯珀利德斯之馆(礼堂).7z",
+    "archive_audit": "D:/codex/output/Hesperides-Baidu-Archive-Audit-v1/archive-audit.json",
+    "archive_integrity_passed": true,
+    "downloaded_archive_matches_existing_asset_files": 121,
+    "downloaded_archive_new_or_changed_files": 0
+  },
+  "stage_reference_rebuild": {
+    "status": "1080p stage-only still and controlled comparisons rendered; independent reopen and pixel comparison passed; artistic review pending",
+    "preset": "presets/stages/hesperides-ray-reference-v1.json",
+    "guide": "docs/HESPERIDES_REFERENCE_REBUILD.md",
+    "project": "D:/codex/output/Hesperides-Ray-Reference-Rebuild-v1/final-study/Hesperides_Reference_Rebuild.blend",
+    "preview": "D:/codex/output/Hesperides-Ray-Reference-Rebuild-v1/review/reference-comparison.jpg",
+    "verification": "D:/codex/output/Hesperides-Ray-Reference-Rebuild-v1/review/review-report.json",
+    "material_findings": {
+      "local_custom_enable_9_files": 23,
+      "adapted_toon_based_surfaces": 20,
+      "additive_matcap_surfaces": 14,
+      "curtain_submap_restored": true,
+      "author_global_toon_switch": "unknown; complete ray.conf unavailable"
+    },
+    "duet_project_changed": false,
+    "full_song_render_started": false
+  },
+  "latest_reference_duet_sample": {
+    "status": "five-second sample completed; video/audio/seam and source bone/camera verification passed; artistic acceptance pending",
+    "movie": "D:\\codex\\output\\MMD-Ray-Hall-Genshin-Revision-v1\\sample-5s-v1\\Aether_Duet_5s_REVIEW.mp4",
+    "project": "D:\\codex\\output\\MMD-Ray-Hall-Genshin-Revision-v1\\production-v3\\Franken_Duet_Reference_Genshin.blend",
+    "frames": 300,
+    "fps": 60,
+    "seconds": 5,
+    "resolution": [
+      1920,
+      1080
+    ],
+    "video_sha256": "6058192cbcdd8e5a12aba480303e1ca26cba939639e0ddd9f8fbbfaa3984a42a",
+    "audio_rms": 0.2589933108137932,
+    "audio_peak": 0.8937952518463135,
+    "source_frames": [
+      4140,
+      4439
+    ],
+    "source_audio_start_seconds": 68.98333333333333,
+    "source_bone_camera_max_error": 0,
+    "packed_file_images": 150,
+    "render_source": "production-v3",
+    "full_song_complete": false,
+    "visual_review": "12 decoded representative frames, source keyframes 4200/4420 and five-frame seam strip inspected; original camera cuts preserved",
+    "shader_sources": [
+      "festivities / GPL-3.0 Face Factor adaptation",
+      "三一七片的谎言 / hair highlight component"
+    ],
+    "goo_engine_used": false
+  },
+  "active_contract_state": "catalog/current_state.json",
+  "latest_character_layer_review": {
+    "recipe": "presets/recipes/duet-character-layers-v1.json",
+    "project": "D:/codex/output/MMD-Character-Layer-Refinement-v1/production-v2/Franken_Duet_Character_Layers.blend",
+    "scope": "frames 4140-4439; 1080p60; 5s; user art approval pending",
+    "note": "Historical production_scene/render_output fields remain version-bound inputs; use current_state for the latest selected review"
+  },
+  "latest_reference_transfer_review": "D:\\codex\\output\\MMD-Guanhai-Transfer-v1\\captions-5s\\Franken_Duet_5s_ReferenceTransfer_Wedding_REVIEW.mp4",
+  "superseded_performers": [
+    {
+      "id": "aether",
+      "display_name": "空",
+      "model": "E:/tools/franken/空_by_原神_f7bcc7fdca4fa1599bf6e57d0320f7f3/空/空.pmx",
+      "motion_part": "HinaSuzuki",
+      "motion": "E:/tools/franken/drive-download-20261018T085726Z-1-001/FrankensteinNoKaibutsu_Motion(MMD)_Full_HinaSuzuki_v1.0[f0].vmd"
+    }
+  ],
+  "latest_ikhor_wedding_project": "D:\\codex\\output\\MMD-Aksiniya-Ikhor-Wedding-v1\\production-v7\\Franken_Aksiniya_Ikhor_Bold_Wedding.blend",
+  "latest_ikhor_wedding_review": "D:\\codex\\output\\MMD-Aksiniya-Ikhor-Wedding-v1\\captions-5s-v3\\Franken_Duet_5s_Ikhor_Wedding_REVIEW.mp4",
+  "historical_full_song_production": {
+    "production_scene": "D:/codex/output/Franken-Duet-Full-Final-v1/production-v5/Franken_Duet_Aether_Revised.blend",
+    "integration_verification": "D:/codex/output/Franken-Duet-Full-Final-v1/production-v5/integration-verification.json",
+    "render_output": "D:/codex/output/Franken-Duet-Full-Final-v1/full-render-v2"
+  },
+  "production_scene_scope": {
+    "body_action": "full native Hime/Hina choreography retained",
+    "physics_validated_frames": [
+      4139,
+      4441
+    ],
+    "delivered_frames": [
+      4140,
+      4439
+    ],
+    "full_song_physics_ready": false,
+    "full_song_delivered": false,
+    "material_and_arc_revision": "duet-clean-game-v1",
+    "project_sha256": "0ec95ee7162512ffc405a2a7337b355caf62cd993b3d8302886ee59e1561d9d4"
+  },
+  "production_history": [
+    {
+      "production_scene": "D:\\codex\\output\\MMD-Aksiniya-Ikhor-Wedding-v1\\production-v7\\Franken_Aksiniya_Ikhor_Bold_Wedding.blend",
+      "integration_verification": "D:\\codex\\output\\MMD-Aksiniya-Ikhor-Wedding-v1\\production-v7\\master-verification.json",
+      "render_output": "D:\\codex\\output\\MMD-Aksiniya-Ikhor-Wedding-v1\\captions-5s-v3",
+      "production_scene_scope": {
+        "body_action": "full native Hime/Hina choreography retained",
+        "physics_validated_frames": [
+          4139,
+          4441
+        ],
+        "delivered_frames": [
+          4140,
+          4439
+        ],
+        "full_song_physics_ready": false,
+        "full_song_delivered": false
+      },
+      "current_iteration_scope": {
+        "kind": "ikhor-replacement-bold-wedding-and-local-sleeve-repair",
+        "requested_seconds": 5,
+        "source_frames": [
+          4140,
+          4439
+        ],
+        "fps": 60,
+        "resolution": [
+          1920,
+          1080
+        ],
+        "sample_output": "D:\\codex\\output\\MMD-Aksiniya-Ikhor-Wedding-v1\\captions-5s-v3",
+        "sample_movie": "D:\\codex\\output\\MMD-Aksiniya-Ikhor-Wedding-v1\\captions-5s-v3\\Franken_Duet_5s_Ikhor_Wedding_REVIEW.mp4",
+        "status": "completed and technically verified; user art review pending",
+        "full_movie": "not delivered or rendering"
+      },
+      "sample_delivery": {
+        "movie": "D:\\codex\\output\\MMD-Aksiniya-Ikhor-Wedding-v1\\captions-5s-v3\\Franken_Duet_5s_Ikhor_Wedding_REVIEW.mp4",
+        "video_sha256": "feeaefdef7477ed57c947122844207159e7aa4a84e75f5d24fd3d8580aff549a",
+        "project": "D:\\codex\\output\\MMD-Aksiniya-Ikhor-Wedding-v1\\production-v7\\Franken_Aksiniya_Ikhor_Bold_Wedding.blend",
+        "project_sha256": "f9442577a61a2c1cc4f39442e4468d42f13d42311fdd9f9e9616d165d40ea692",
+        "source_frames": [
+          4140,
+          4439
+        ],
+        "frames": 300,
+        "seconds": 5,
+        "camera_motion_changed": false,
+        "physics_changed": true,
+        "physics_change_scope": "Ikhor native local cloth bake plus8-sleeve local repair and one left corrective; not full-song physics",
+        "verified": {
+          "video": true,
+          "audio": true,
+          "seams": true
+        },
+        "delivery_report": "D:\\codex\\output\\MMD-Aksiniya-Ikhor-Wedding-v1\\delivery.json",
+        "full_song_complete": false,
+        "user_art_approval": false
+      },
+      "status": "Aksiniya/Ikhor five-second review delivered; art pending; full song and full-song Ikhor physics not delivered",
+      "archived_as_of": "2026-11-14",
+      "superseded_by_recipe": "presets/recipes/duet-clean-game-v1.json"
+    }
+  ],
+  "latest_clean_game_project": "D:\\codex\\output\\MMD-Clean-Game-Characters-v1\\production-v2\\Franken_Duet_Clean_Game.blend",
+  "latest_clean_game_review": "D:\\codex\\output\\MMD-Clean-Game-Characters-v1\\captions-5s\\Franken_Duet_5s_CleanGame_Wedding_REVIEW.mp4",
+  "latest_clean_game_recipe": "presets/recipes/duet-clean-game-v1.json",
+  "pre_goo_production": {
+    "production_scene": "D:\\codex\\output\\MMD-Clean-Game-Characters-v1\\production-v2\\Franken_Duet_Clean_Game.blend",
+    "integration_verification": "D:\\codex\\output\\MMD-Clean-Game-Characters-v1\\production-v2\\master-verification.json",
+    "render_output": "D:\\codex\\output\\MMD-Clean-Game-Characters-v1\\captions-5s",
+    "status": "Clean-character, arc-hidden five-second review delivered; art pending; full song and full-song physics not delivered"
+  },
+  "goo_daylight_v2": {
+    "project_sha256": "ca610cdaea99f9eca19e9067c42f5ada798a710e9f07f49b6aef8dcbb958a71f",
+    "video": "D:\\codex\\output\\MMD-Goo-Wedding-v2\\quick-5s-v1\\Franken_Duet_5s_GooDaylightV2_SUB_1080P.mp4",
+    "fullbody_opening_seconds": 1.5,
+    "post_output_qa": "skipped at user request"
+  },
+  "goo_tyndall_rim_v1": {
+    "project_sha256": "25565d772273d9991c5c5eedafb8283e81e4f9c81d5724b707d542ecdb652f96",
+    "video": "D:\\codex\\output\\MMD-Goo-Tyndall-Rim-v1\\quick-5s-v1\\Franken_Duet_5s_GooTyndallRim_SUB_1080P.mp4",
+    "post_output_qa": "skipped per user request"
+  },
+  "goo_window_wrap_v1": {
+    "project_sha256": "ed81e7325e7ef3f47fe80dd63b53e1e0e713f7d2b93b9dd4e6e296195a350d85",
+    "video": "D:\\codex\\output\\MMD-Goo-Window-Wrap-v1\\quick-5s-v3\\Franken_Duet_5s_GooWindowWrap_SUB_1080P.mp4",
+    "post_output_qa": "skipped per user request"
+  },
+  "caption_profile": "presets/typography/duet-blue-gold-wedding-v1.json",
+  "latest_captioned_review": "D:\\codex\\output\\MMD-Jelly-Eyes-v1\\quick-5s-v16\\Franken_Duet_5s_GooToonShadow_SUB_1080P.mp4"
+}

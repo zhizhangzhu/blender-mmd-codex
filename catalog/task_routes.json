@@ -1,0 +1,492 @@
+{
+  "schema_version": 1,
+  "purpose": "Read-only task-to-knowledge routing; no permission to execute listed production scripts and no certification of art quality",
+  "common_read": [
+    "SPEC.md",
+    "AGENTS.md",
+    "catalog/current_state.json",
+    "docs/AI_TASK_PLAYBOOK.md"
+  ],
+  "state_contract": {
+    "current_still": [
+      "active_iteration",
+      "latest_still"
+    ],
+    "historical_complete_video": "latest_review",
+    "runtime": "presets/runtime/goo-v1.json",
+    "runtime_execution_fields": [
+      "executable",
+      "build_hash",
+      "user_config",
+      "user_scripts"
+    ],
+    "runtime_production_project_is_historical_launcher_input": true,
+    "do_not_duplicate_sha_or_candidate_paths_here": true,
+    "runtime_resolution_note": "2026-11-20 user explicitly requested Goo artdirection in a new copy; frozen829f retained. Native53 migration remains separate. Always resolve active/trial runtime from current_state and exact profile."
+  },
+  "evidence_levels": [
+    "reading",
+    "interface_inventory",
+    "isolated_static",
+    "character_static",
+    "dynamic",
+    "independent_reopen",
+    "scoped_integration",
+    "user_art_review"
+  ],
+  "routes": [
+    {
+      "id": "model",
+      "label": "模型驱动与变形",
+      "aliases": [
+        "模型",
+        "模型驱动",
+        "绑定",
+        "rig"
+      ],
+      "read": [
+        "docs/STUDIO_SCENE_BENCH.md",
+        "docs/CHARACTER_NPR_PLAYBOOK.md",
+        "docs/GOO_MMD_EIGHT_FOUNDATIONS_2026_11_18.md",
+        "docs/LOCAL_CORRECTIVE_SHAPES.md",
+        "docs/IKHOR_HAIR_ALIGNMENT_STILL_REPAIR.md"
+      ],
+      "parameters": [
+        "presets/runtime/goo-v1.json",
+        "catalog/scene_benches.json"
+      ],
+      "tools": [
+        {
+          "path": "scripts/goo_runtime.py",
+          "mode": "inspect_runtime_bootstrap",
+          "scope": "Register portable add-ons before a separately authorized project load; not a model repair"
+        },
+        {
+          "path": "scripts/mmd_sample_pose.py",
+          "mode": "historical_inspect_only",
+          "scope": "Assumes first Armature and fixed bone names; adapt explicit actor targeting before reuse"
+        },
+        {
+          "path": "scripts/studio_bench.py",
+          "mode": "inspect_input_and_side_effects",
+          "scope": "Opt-in inspect/static controls from exact source/actor/material profile; never saves source; rejects active simulations; not a generic shader installer"
+        }
+      ],
+      "decisions": [
+        "Data/parent/rest/pose/action versus weights/modifier failure",
+        "Preserve MMD auxiliaries, Morph and mesh semantics",
+        "Inspect each shared data layer before edits"
+      ],
+      "evidence_required": [
+        "Explicit actor and source identity",
+        "Affected and unchanged geometry/pose samples",
+        "Independent reopen of new saved result"
+      ],
+      "limits": [
+        "No current character deformation improvement certified by factory sphere tests",
+        "Do not rebuild or rebind an already baked character as a routine cleanup"
+      ]
+    },
+    {
+      "id": "motion",
+      "label": "动作数据与局部K帧",
+      "aliases": [
+        "动作",
+        "K帧",
+        "keyframe",
+        "vmd",
+        "animation"
+      ],
+      "read": [
+        "docs/ANIMATION_AND_KEYFRAMING_PLAYBOOK.md",
+        "docs/PHYSICS_MOTION_PLAYBOOK.md",
+        "docs/LOCAL_CORRECTIVE_SHAPES.md",
+        "docs/IKHOR_SLEEVE_REPAIR.md"
+      ],
+      "parameters": [
+        "presets/projects/franken-duet-full-v1.json"
+      ],
+      "tools": [
+        {
+          "path": "scripts/mmd_first_scene.py",
+          "mode": "historical_inspect_only",
+          "scope": "Independent PMX/VMD draft import; not current production rebuild"
+        },
+        {
+          "path": "scripts/mmd_physics_bake.py",
+          "mode": "historical_inspect_only",
+          "scope": "First Armature selection and IK muting; never run blindly on the duet or baked master"
+        }
+      ],
+      "decisions": [
+        "Import/IK/rest/timing error versus intended local performance change",
+        "Original VMD before retargeting; explicit bone/Morph whitelist for edits",
+        "Action/Slot/NLA and physical driver must not double apply"
+      ],
+      "evidence_required": [
+        "Source fps and time mapping",
+        "Edited channels/frame window and transition poses",
+        "Contact/unchanged motion checks; temporal quality remains unverified with stills only"
+      ],
+      "limits": [
+        "No automatic video generation",
+        "Old physics bake applies only to documented actor/motion/frame scope"
+      ]
+    },
+    {
+      "id": "render",
+      "label": "Goo人物卡渲与材质",
+      "aliases": [
+        "渲染",
+        "卡渲",
+        "toon",
+        "材质"
+      ],
+      "read": [
+        "docs/STUDIO_ITERATION.md",
+        "docs/STUDIO_SCENE_BENCH.md",
+        "docs/GOO_FOUNDATIONS_AND_PARAMETERS.md",
+        "docs/FACE_SHADOW_DESIGN_STUDY_2026_11_18.md",
+        "docs/BLENDER53_TOON_PACKAGE_STUDY_2026_11_18.md",
+        "docs/CHARACTER_NPR_PLAYBOOK.md",
+        "docs/GOO_REFERENCE_FACE_HAIR_STUDY_2026_11_17.md",
+        "docs/GOO_MMD_EIGHT_FOUNDATIONS_2026_11_18.md",
+        "docs/DESIGN_FOUNDATIONS_AND_REVIEW.md",
+        "docs/GOO_CHARACTER_LOOKDEV_2026_11_18.md",
+        "docs/GOO_DUET_SDF_IMPLEMENTATION_2026_11_19.md"
+      ],
+      "parameters": [
+        "presets/workflows/goo-foundations-v1.json",
+        "presets/workflows/goo-mmd-foundations-v1.json",
+        "catalog/scene_benches.json"
+      ],
+      "tools": [
+        {
+          "path": "scripts/study_goo_mesh_normal_foundations.py",
+          "mode": "isolated_research_only",
+          "scope": "Factory sphere/cube controls, fixed build and output; not a character material installer"
+        },
+        {
+          "path": "scripts/study_goo_info_input_matrix.py",
+          "mode": "isolated_research_only",
+          "scope": "Two-build point-light input controls; no production loading"
+        },
+        {
+          "path": "scripts/studio_bench.py",
+          "mode": "inspect_input_and_side_effects",
+          "scope": "Opt-in inspect/static controls from exact source/actor/material profile; never saves source; rejects active simulations; not a generic shader installer"
+        }
+      ],
+      "decisions": [
+        "Separate palette, form, true occlusion, AO, specular, line and Glow",
+        "Preserve original Color/Alpha/Sphere and model-specific maps",
+        "Mesh Normal Edit and Shader Info Normal socket are different paths"
+      ],
+      "evidence_required": [
+        "Same pose/camera/exposure controls",
+        "No-Glow and layered output inspection",
+        "Actual character scope and remaining version limitations"
+      ],
+      "limits": [
+        "Do not apply one character's face SDF to another",
+        "No universal MME fx runtime or all-Goo-feature support verified"
+      ]
+    },
+    {
+      "id": "fx",
+      "label": "特效与合成",
+      "aliases": [
+        "特效",
+        "合成",
+        "vfx",
+        "glow"
+      ],
+      "read": [
+        "docs/DESIGN_FOUNDATIONS_AND_REVIEW.md",
+        "docs/LIGHT_SPACE_AND_COLOR_PIPELINE.md",
+        "docs/DUET_CAPTION_STABILITY_AND_LIGHTING.md",
+        "docs/JELLY_EYE_HAIR_STAGE_IMPLEMENTATION.md"
+      ],
+      "parameters": [
+        "presets/templates/iteration-brief-v1.json"
+      ],
+      "tools": [
+        {
+          "path": "scripts/stable_caption_layers.py",
+          "mode": "inspect_input_and_side_effects",
+          "scope": "Caption layer implementation; match current dual-actor identities and same beauty version"
+        }
+      ],
+      "decisions": [
+        "Effect purpose, focus protection and source/theme",
+        "Geometry/volume/material effect versus screen composite",
+        "Alpha, depth/mask and exposure-domain compatibility"
+      ],
+      "evidence_required": [
+        "Effect off/on stills with identical base",
+        "Face/hand/line/caption readability",
+        "Timing is a design intention until explicitly verified"
+      ],
+      "limits": [
+        "Eye see-through remains deferred despite historical implementation notes",
+        "Keep caption stroke/shadow and whole-group layering",
+        "Glow does not create physical cast shadows"
+      ]
+    },
+    {
+      "id": "stage",
+      "label": "舞台与空间设计",
+      "aliases": [
+        "舞台",
+        "场景",
+        "空间"
+      ],
+      "read": [
+        "docs/STUDIO_ITERATION.md",
+        "docs/DESIGN_FOUNDATIONS_AND_REVIEW.md",
+        "docs/HESPERIDES_AUTHOR_SETUP.md",
+        "docs/HESPERIDES_REFERENCE_REBUILD.md",
+        "docs/REFERENCE_AND_LIGHTING_PLAYBOOK.md",
+        "docs/FOX_STAGE_ART_DEEP_STUDY.md"
+      ],
+      "parameters": [
+        "presets/stages/hesperides-winter-wedding-v1.json"
+      ],
+      "tools": [
+        {
+          "path": "scripts/apply_fox_stageart.py",
+          "mode": "historical_inspect_only",
+          "scope": "Old stage recipe; inspect documented input and changes, not a generic installer"
+        }
+      ],
+      "decisions": [
+        "Preserve chosen licensed hall and wedding/snow theme",
+        "Actor movement zone, camera, foreground/midground/background and negative space",
+        "Stage materials versus intended light/reflection roles"
+      ],
+      "evidence_required": [
+        "Current-camera composition and background tangencies",
+        "Ground/contact and actor-background separation",
+        "New set changes identified separately from lighting"
+      ],
+      "limits": [
+        "Do not replace stage or restore hidden arcs as a design default",
+        "Historical stage presets are not current input contracts"
+      ]
+    },
+    {
+      "id": "lighting",
+      "label": "布光与明暗色彩",
+      "aliases": [
+        "布光",
+        "灯光",
+        "光影",
+        "light"
+      ],
+      "read": [
+        "docs/STUDIO_ITERATION.md",
+        "docs/STUDIO_SCENE_BENCH.md",
+        "docs/DESIGN_FOUNDATIONS_AND_REVIEW.md",
+        "docs/PORTRAIT_LIGHTING_AND_SHADOW_STUDY.md",
+        "docs/GOO_FOUNDATIONS_AND_PARAMETERS.md",
+        "docs/FACE_SHADOW_DESIGN_STUDY_2026_11_18.md",
+        "docs/BLENDER53_TOON_PACKAGE_STUDY_2026_11_18.md",
+        "docs/GOO_BROAD_WINDOW_AND_STRONG_RIM.md",
+        "docs/MME_REFERENCE_LIGHT_STILLS_2026_11_17.md",
+        "docs/GOO_CHARACTER_LOOKDEV_2026_11_18.md",
+        "docs/GOO_DUET_SDF_IMPLEMENTATION_2026_11_19.md"
+      ],
+      "parameters": [
+        "presets/templates/iteration-brief-v1.json",
+        "catalog/scene_benches.json"
+      ],
+      "tools": [
+        {
+          "path": "scripts/study_goo_basic_light_groups.py",
+          "mode": "isolated_research_only",
+          "scope": "Factory single-key/fill group control; no character integration"
+        },
+        {
+          "path": "scripts/studio_bench.py",
+          "mode": "inspect_input_and_side_effects",
+          "scope": "Opt-in inspect/static controls from exact source/actor/material profile; never saves source; rejects active simulations; not a generic shader installer"
+        }
+      ],
+      "decisions": [
+        "Primary/secondary focus and value/color roles",
+        "Motivated key/fill/rim/environment and affected objects",
+        "Shadow shape/size/group versus final exposure or Glow"
+      ],
+      "evidence_required": [
+        "Same-camera lighting comparison",
+        "Gray/color and no-Glow readability",
+        "Face shadow, white clothing, hair masses and floor contact"
+      ],
+      "limits": [
+        "More lights can wash out toon form",
+        "No source/engine numerical settings copied as universal Goo prescription"
+      ]
+    },
+    {
+      "id": "design",
+      "label": "设计简报与美术评审",
+      "aliases": [
+        "设计",
+        "美术",
+        "构图",
+        "art"
+      ],
+      "read": [
+        "docs/STUDIO_ITERATION.md",
+        "docs/DESIGN_FOUNDATIONS_AND_REVIEW.md",
+        "docs/AUTHOR_REFERENCE_MATRIX.md",
+        "docs/ANIMATION_AND_KEYFRAMING_PLAYBOOK.md",
+        "docs/QUALITY_GATES.md"
+      ],
+      "parameters": [
+        "presets/templates/iteration-brief-v1.json"
+      ],
+      "tools": [],
+      "decisions": [
+        "Story/action, emotion and focal hierarchy before effects",
+        "Value grouping, palette, silhouette, staging and timing",
+        "Reference observation versus unknown original shader/engine"
+      ],
+      "evidence_required": [
+        "Concrete visual goal and reject conditions",
+        "Same-scope art observations separate from technical validation",
+        "User approval remains explicit/pending, never inferred from checks"
+      ],
+      "limits": [
+        "Official guides support judgement but do not certify the reference style",
+        "Stills cannot validate rhythm or temporal stability"
+      ]
+    },
+    {
+      "id": "reference",
+      "label": "参考理解与风格重建",
+      "aliases": [
+        "参考",
+        "参考图",
+        "参考视频",
+        "风格",
+        "style"
+      ],
+      "read": [
+        "docs/STUDIO_ITERATION.md",
+        "docs/STUDIO_SCENE_BENCH.md",
+        "docs/STUDIO_WORKFLOW.md",
+        "docs/REFERENCE_AND_LIGHTING_PLAYBOOK.md",
+        "docs/FOX_STAGE_ART_DEEP_STUDY.md"
+      ],
+      "parameters": [
+        "catalog/studio.json",
+        "catalog/model_policy.json",
+        "catalog/scene_benches.json"
+      ],
+      "tools": [
+        {
+          "path": "scripts/reference_study.py",
+          "mode": "inspect_input_and_side_effects",
+          "scope": "Local source fingerprint and explicitly sampled frames; observation/hypothesis/goal separation; not automatic vision"
+        },
+        {
+          "path": "scripts/studio_bench.py",
+          "mode": "inspect_input_and_side_effects",
+          "scope": "Opt-in inspect/static controls from exact source/actor/material profile; never saves source; rejects active simulations; not a generic shader installer"
+        }
+      ],
+      "decisions": [
+        "先确认作品范围与可见目标，取用已有经验和反例",
+        "主控判断后给出有输入、所有权、验收和升级条件的任务",
+        "按实际范围保留证据，不从工具成功推断艺术或迁移能力"
+      ],
+      "evidence_required": [
+        "来源与适用条件",
+        "实际观察、预测、结果及未测",
+        "实际派发与推荐配置分开"
+      ],
+      "limits": [
+        "默认静帧；参考视频研究不授权输出视频",
+        "结构通过不等于艺术通过或跨项目通用"
+      ]
+    },
+    {
+      "id": "learning",
+      "label": "长期学习与能力迁移",
+      "aliases": [
+        "学习",
+        "长期建设",
+        "课程"
+      ],
+      "read": [
+        "SPEC.md",
+        "docs/STUDIO_WORKFLOW.md",
+        "docs/CONTINUOUS_LEARNING_SYSTEM.md"
+      ],
+      "parameters": [
+        "catalog/studio.json",
+        "catalog/model_policy.json"
+      ],
+      "tools": [
+        {
+          "path": "scripts/mmd_studio.py",
+          "mode": "inspect_input_and_side_effects",
+          "scope": "Read scoped capabilities, preferences and curriculum; no rendering or model calls"
+        }
+      ],
+      "decisions": [
+        "先确认作品范围与可见目标，取用已有经验和反例",
+        "主控判断后给出有输入、所有权、验收和升级条件的任务",
+        "按实际范围保留证据，不从工具成功推断艺术或迁移能力"
+      ],
+      "evidence_required": [
+        "来源与适用条件",
+        "实际观察、预测、结果及未测",
+        "实际派发与推荐配置分开"
+      ],
+      "limits": [
+        "默认静帧；参考视频研究不授权输出视频",
+        "结构通过不等于艺术通过或跨项目通用"
+      ]
+    },
+    {
+      "id": "orchestration",
+      "label": "高推理指挥与明确任务执行",
+      "aliases": [
+        "多模型",
+        "派发",
+        "调度"
+      ],
+      "read": [
+        "SPEC.md",
+        "docs/STUDIO_WORKFLOW.md"
+      ],
+      "parameters": [
+        "catalog/studio.json",
+        "catalog/model_policy.json"
+      ],
+      "tools": [
+        {
+          "path": "scripts/studio_tasks.py",
+          "mode": "inspect_input_and_side_effects",
+          "scope": "Plan/validate a bounded task packet; real dispatch uses current session collaboration tools"
+        }
+      ],
+      "decisions": [
+        "先确认作品范围与可见目标，取用已有经验和反例",
+        "主控判断后给出有输入、所有权、验收和升级条件的任务",
+        "按实际范围保留证据，不从工具成功推断艺术或迁移能力"
+      ],
+      "evidence_required": [
+        "来源与适用条件",
+        "实际观察、预测、结果及未测",
+        "实际派发与推荐配置分开"
+      ],
+      "limits": [
+        "默认静帧；参考视频研究不授权输出视频",
+        "结构通过不等于艺术通过或跨项目通用"
+      ]
+    }
+  ]
+}

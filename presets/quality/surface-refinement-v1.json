@@ -1,0 +1,9 @@
+{
+  "id": "aksiniya-surface-refinement-v1",
+  "status": "model-adapted; requires actual mask review on other models",
+  "hair": {"base_gain": 0.90, "strength": 0.30, "exponent": 18, "painted_mask_floor": 0.35, "color": [0.94, 0.96, 1.0]},
+  "metal": {"mix": 0.55, "metallic": 0.85, "roughness": 0.25, "coat": 0.08},
+  "cloth": {"sheen": 0.04, "exponent": 7, "color": [0.40, 0.47, 0.70]},
+  "stage": {"fill_power": 95, "stage_power": 225, "world_strength": 0.34},
+  "light_response": {"shadow_cloth_scale": 0.88, "shadow_hair_scale": 0.90}
+}

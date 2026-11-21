@@ -1,0 +1,214 @@
+{
+  "schema_version": 1,
+  "date": "2026-11-14",
+  "topic": "Node Wrangler在Blender5.2.2中的可用状态与人物光照诊断边界",
+  "scope": "先核查官方5.2手册、本机源码与独立进程的临时注册；随后另获授权，用固定Clean v2独立重开完成三张4290照明诊断。原生产工程与保存偏好未写回，两阶段证据分别记录",
+  "answer": {
+    "useful_for": "减少节点连接、整理和分段预览的人工操作，帮助定位人物暗处来自底色、形体、综合受光、AO或后期的哪一段",
+    "not_demonstrated": "没有实测渲染耗时下降、画质提升或GUI快捷键操作；它不是渲染引擎或自动布光/游戏Shader还原器",
+    "installation_required": false,
+    "persistent_enable_performed": false,
+    "production_parameters_changed": false
+  },
+  "local_state": {
+    "blender_version": "5.2.2 LTS",
+    "blender_executable": "E:/tools/Blender Foundation/Blender 5.2/blender.exe",
+    "disk": {
+      "present": true,
+      "module": "node_wrangler",
+      "path": "E:/tools/Blender Foundation/Blender 5.2/5.2/scripts/addons_core/node_wrangler/__init__.py",
+      "sha256": "ef166a7022e0f5976610f535c874ece0bdaaba98f7bab0cda18ade635aa412db",
+      "bl_info_version": [4, 1, 0],
+      "bl_info_blender_minimum": [5, 0, 0],
+      "bl_info_support": "OFFICIAL"
+    },
+    "saved_preferences": {
+      "read_in_separate_process": true,
+      "node_wrangler_enabled": false,
+      "node_wrangler_imported_after_read": false,
+      "nw_link_out_registered_after_read": false,
+      "addon_utils_check": [false, false],
+      "file": "C:/Users/Administrator/AppData/Roaming/Blender Foundation/Blender/5.2/config/userpref.blend",
+      "sha256_before_and_after": "cc546d5853f82d0c54dcfa086dd00595176cc1510b83c9861609284669a5a07c",
+      "unchanged": true,
+      "does_not_describe_live_gui": true
+    },
+    "temporary_registration": {
+      "method": "importlib.import_module('node_wrangler'); module.register(); query RNA; module.unregister()",
+      "success": true,
+      "operator": "node.nw_link_out",
+      "registered_keymap_items": 87,
+      "addon_preferences_entry_created": false,
+      "unregister_success": true,
+      "operator_absent_after_unregister": true,
+      "limits": "仅证明独立进程API可注册，不证明当前GUI启用、GUI交互或生产材质适配"
+    },
+    "existing_inventory": {
+      "path": "D:/codex/output/blender-mmd-codex/environment-2026-11-09.json",
+      "sha256": "fff3fbfd19b1e002691154a488d43c545633bcaf565ba2372214a3faf7213e56",
+      "enabled_list_contains_node_wrangler": false,
+      "caveat": "旧scripts/blender_inventory.py只扫描script_paths/addons与扩展目录，没有扫描addons_core；installed_addons缺席不能证明Node Wrangler磁盘不存在"
+    }
+  },
+  "official_sources": [
+    {
+      "url": "https://docs.blender.org/manual/en/5.2/addons/node_wrangler.html",
+      "title": "Node Wrangler — Blender5.2 LTS Manual",
+      "read_scope": "官方检索返回正文中的启用、菜单、Lazy Connect/Mix、预览、贴图接线、整理与批处理段落；直接open曾返回402，未伪称完成整个网页视觉浏览",
+      "original_summary": "该工具侧重节点编辑效率。Shift-W菜单、Alt-RMB连接、Shift-Alt-RMB精确选socket、Ctrl-T贴图坐标、Ctrl-Shift-T按文件名匹配Principled贴图、Shift-=排列。文档列出Shader的Ctrl-Shift-LMB预览；本机源码进一步证明该预览当前由Blender内置operator处理。"
+    },
+    {
+      "url": "https://docs.blender.org/manual/en/5.2/interface/controls/nodes/editing.html",
+      "title": "Editing Nodes — Blender5.2 LTS Manual",
+      "read_scope": "官方检索正文中Connect to Output、Mute、Node Preview段落",
+      "original_summary": "连接到输出会改变节点树的输出接线；Shift-H的节点内缩略预览限Compositor。文档列出的通用Connect to Output为Shift-Alt-LMB，需结合编辑器与本机keymap区分。"
+    },
+    {
+      "url": "https://docs.blender.org/manual/en/5.2/compositing/types/output/viewer.html",
+      "title": "Viewer Node — Blender5.2 LTS Manual",
+      "read_scope": "官方检索返回完整主要正文",
+      "original_summary": "Compositor的Ctrl-Shift-LMB连接Viewer；Viewer检查中间图像或数值而不替换最终输出。可用Ctrl-1至9分配Viewer、1至9切换；这些是Compositor原生能力。Viewer显示或保存一张图，不等同建立持久渲染通道或File Output序列。"
+    },
+    {
+      "url": "https://docs.blender.org/manual/en/5.2/render/layers/passes.html",
+      "title": "Passes — Blender5.2 LTS Manual",
+      "read_scope": "Shader AOV、Light Groups、EEVEE Limitations段落",
+      "original_summary": "AOV需在View Layer定义名称/类型，再由材质写入，Render Layers在合成中读取。EEVEE最多16个Color与16个Value AOV；Shader to RGB只在Combined保证正确。DOF/MB和Blended透明在其他passes亦有限制。Light Groups是Cycles专属，不能把本工程EEVEE美术AOV称作真实分灯pass。"
+    },
+    {
+      "url": "https://docs.blender.org/manual/id/5.2/render/shader_nodes/output/aov.html",
+      "title": "AOV Output Node — Blender5.2 LTS Manual",
+      "read_scope": "官方5.2页面中的英文说明、Color/Value输入与Name",
+      "original_summary": "AOV Output可用于Material与World；接收Color或单数值，名称必须对应已定义pass；它不是BSDF输出socket的自动录制器。"
+    },
+    {
+      "url": "https://docs.blender.org/manual/id/5.2/compositing/types/output/file_output.html",
+      "title": "File Output Node — Blender5.2 LTS Manual",
+      "read_scope": "官方5.2页面中英文概述、路径与多层EXR说明",
+      "original_summary": "File Output在合成/渲染时把连接的图像写到目录与帧号文件，可保存中间结果或多层EXR。它与屏幕Viewer有独立职责，继承File Output必须先静音，诊断输出另指新目录。"
+    },
+    {
+      "url": "https://extensions.blender.org/add-ons/node-wrangler/versions/",
+      "title": "Node Wrangler Version History — Blender Extensions",
+      "read_scope": "官方扩展站检索正文中的列表身份与3.54.0/3.53.0记录",
+      "original_summary": "页面列为Community、作者取消列出，显示2024年的3.54.0等版本。不能把这份旧在线包当成本机官方addons_core4.1.0的升级目标；本轮未下载或安装。"
+    }
+  ],
+  "shortcut_and_output_boundaries": [
+    {
+      "context": "Shader Editor",
+      "shortcut": "Ctrl-Shift-LMB；本机默认亦有Shift-Alt-LMB",
+      "implementation": "Blender内置node.connect_to_output，非本机Node Wrangler注册的快捷键",
+      "effect": "把被检节点输出接到材质/World最终输出以供视口预览；可循环输出",
+      "limit": "会改接线，是临时诊断编辑而非只读观察；需要在独立副本中做，记录并恢复原Surface/Volume/Displacement、Alpha及物理闭包接线。显示颜色也不等于原始浮点测量。"
+    },
+    {
+      "context": "Compositor",
+      "shortcut": "Ctrl-Shift-LMB",
+      "implementation": "Blender内置node.select_link_viewer",
+      "effect": "连接/激活Viewer检查已有图像或pass",
+      "limit": "与最终Group Output、File Output及材质AOV定义不同；不自动生成物理阴影或分灯数据。"
+    },
+    {
+      "context": "Node Wrangler已注册的节点编辑器",
+      "shortcut": "O",
+      "implementation": "node.nw_link_out",
+      "effect": "接到输出节点；本机Compositor对应NodeGroupOutput",
+      "limit": "不要把它当作Compositor Viewer快捷键；会改最终输出接线。"
+    },
+    {
+      "context": "Node Wrangler接线/整理",
+      "shortcut": "Shift-W；Alt-RMB拖动；Shift-Alt-RMB拖动；Shift-=",
+      "effect": "菜单、自动连接、socket菜单精确连接、排列",
+      "limit": "只有菜单和排列不改变着色函数；自动socket匹配仍须人工核对。"
+    },
+    {
+      "context": "Node Wrangler贴图建立",
+      "shortcut": "Ctrl-T；Ctrl-Shift-T",
+      "effect": "添加坐标/Mapping；给Principled按文件名建立贴图链接",
+      "limit": "本MMD工程保留MMDShaderDev Color/Alpha/sphere，控制图语义需逐模型验证，不对现有角色自动执行Principled贴图套线。"
+    }
+  ],
+  "local_source_evidence": [
+    {"path": "E:/tools/Blender Foundation/Blender 5.2/5.2/scripts/presets/keyconfig/keymap_data/blender_default.py", "lines": [2324, 2332], "finding": "内置Viewer与Connect to Output的默认快捷键；这只证明默认keymap，未实际操作当前GUI或认证用户自定义keymap"},
+    {"path": "E:/tools/Blender Foundation/Blender 5.2/5.2/scripts/addons_core/node_wrangler/preferences.py", "lines": [331, 369], "finding": "NW的O、Ctrl-T、Ctrl-Shift-T、Lazy Connect、排列与Shift-W键定义"},
+    {"path": "E:/tools/Blender Foundation/Blender 5.2/5.2/scripts/addons_core/node_wrangler/operators/link_to_output.py", "lines": [27, 108], "finding": "nw_link_out创建或寻找最终输出并接线，不创建Viewer或AOV"}
+  ],
+  "next_diagnostic_use": [
+    "只在固定Clean v2 SHA的独立临时副本中诊断，先静音全部继承File Output，保持曝光/相机/主灯与生产条件一致。当前冻结工程不写回。",
+    "先用内置Ctrl-Shift-LMB逐段看MMD Color、Face SDF/form、Diffuse灰度、距离补偿、response、palette、AO与rim。Ctrl-Shift-LMB无需为了这项功能安装或永久启用Node Wrangler。",
+    "对含Shader to RGB的综合受光信号优先用临时材质输出的Combined控制图交叉核验；若尝试AOV，先与Combined同信号对照，不把AOV当纯visibility。",
+    "比较原生beauty与Glow前后用Compositor Viewer，必要时新建独立诊断File Output；保存浮点值与ROI统计，不能只凭显示预览判断欠曝或饱和。",
+    "若需要大量人工连接与整理，可在单次独立进程临时注册本机4.1.0，不保存偏好。初始Node Wrangler核查没有执行生产诊断；后续授权的三张照明控制图见actual_lighting_control_followup，仍未使用Node Wrangler或整合到生产。"
+  ],
+  "actual_lighting_control_followup": {
+    "date": "2026-11-14",
+    "status": "Three same-frame diagnostic renders completed and individually viewed; no production integration or five-second render",
+    "node_wrangler_used": false,
+    "script": "scripts/render_portrait_light_controls.py",
+    "script_sha256": "4a55e15ba3f85ee21ac6fd8f14716890f642f8b219e41fa93523966f72e3cd6f",
+    "source": "D:/codex/output/MMD-Clean-Game-Characters-v1/production-v2/Franken_Duet_Clean_Game.blend",
+    "source_sha256_before_and_after": "0ec95ee7162512ffc405a2a7337b355caf62cd993b3d8302886ee59e1561d9d4",
+    "report": "D:/codex/output/MMD-Portrait-Lighting-Study-2026-11-14/controls-v1/control-report.json",
+    "report_sha256": "eb79578426390c0196d8dca81f028cbfb481fba73cec0e841a836cd17656ffae",
+    "same_frame_settings": {
+      "frame": 4290,
+      "resolution": [1280, 720],
+      "samples": 48,
+      "camera": "Duet | Tottoko authored camera",
+      "camera_lens_mm": 61.7346496582031,
+      "dof": false,
+      "motion_blur": false,
+      "source_dof_and_motion_blur": true,
+      "source_compositor_retained": true,
+      "all_existing_file_outputs_muted": true
+    },
+    "images": [
+      {"case": "A", "path": "D:/codex/output/MMD-Portrait-Lighting-Study-2026-11-14/controls-v1/A-current-4290.png", "sha256": "b0c9e64eeea700406d01470f926a3fa72b35bb521ada0f4e95bb757a7abe2681", "change": "Current frozen-source baseline with the common unblurred diagnostic settings"},
+      {"case": "B", "path": "D:/codex/output/MMD-Portrait-Lighting-Study-2026-11-14/controls-v1/B-scattering-off-4290.png", "sha256": "fb2699a4102a46e72c7e5993cf2083d70b64e11dc8b4fad2093b510de6980a13", "change": "Only Wedding | bounded rear scattering and Bold wedding | bounded beam fan air hide_render False to True; six independent luminous cone volumes remain"},
+      {"case": "C", "path": "D:/codex/output/MMD-Portrait-Lighting-Study-2026-11-14/controls-v1/C-scattering-off-rim-gain2-4290.png", "sha256": "e997abb6361cc9ffc18a41e49f76e6f5487babd442ab1a3999b79244baf1682d", "change": "B plus linear gain2 after Aksiniya current Bold HDR amount in12materials and after Ikhor current Clean rim strength in6hair/cloth materials. Existing shared beauty/AOV consumers follow the same controlled source; face/skin and Reference SCREEN remain unchanged"}
+    ],
+    "preservation": {
+      "each_case_reopened_same_source": true,
+      "common_source_state_sha256": "35d08a5fbd06b9a6631892fcbad954ba940f71439a9835efadd95543b768f03b",
+      "all_three_restored_state_digests_equal": true,
+      "source_bytes_unchanged": true,
+      "saved_preferences_bytes_unchanged": true,
+      "saved_preferences_sha256": "cc546d5853f82d0c54dcfa086dd00595176cc1510b83c9861609284669a5a07c",
+      "blend_saved": false,
+      "limits": "Bounded parameter/node preservation fingerprint in this diagnostic, not a repeat of the full321-item production audit or a geometry/physics certification"
+    },
+    "actual_manual_observation": {
+      "viewed": "All three accepted1280x720 PNGs individually at their actual paths; also compared the existing production4290 native preview for camera orientation",
+      "A_to_B": "Central gray air veil is visibly reduced and the rear dark opening separates more clearly. Remaining six luminous art cones, actual lamps, sparkles and stage geometry stay present. Character broad cloth colors remain similar by visual observation; no numeric ROI claim.",
+      "B_to_C": "Cyan edges become more pronounced on Aksiniya hair/backside, collar and sleeve contours and on Ikhor sleeve/cloth edges. Large navy cloth areas do not become broadly bright. The stronger cyan edge can itself draw attention; this single frame does not establish an artistic improvement.",
+      "temporal_or_user_approval": "No dynamic test, five-second render, new quality certification or user art approval"
+    },
+    "rejected_first_run": {
+      "directory": "D:/codex/temp/MMD-Portrait-Lighting-Study-2026-11-14/controls-v1-factory-camera-rejected",
+      "reason": "Initial factory-only process lacked registered MMD camera RNA; angle driver read zero, focal length fell back to1mm and actual visual inspection revealed an inverted/wrong camera. All three initial images were rejected and archived with REJECTED.json; they are excluded from accepted controls.",
+      "resolution": "The final script reads saved preferences in the independent process to register existing MMD Tools, verifies camera driver validity and lens derived from angle, and verifies userpref bytes unchanged. Factory startup alone is insufficient for rendering this project's driver-dependent camera."
+    },
+    "checks": {
+      "ast_parse": "passed with Blender bundled Python",
+      "ruff": "D:/codex/temp/blender-mmd-format-tools/bin/ruff.exe check scripts/render_portrait_light_controls.py scripts/clean_aksiniya_materials.py scripts/clean_ikhor_materials.py",
+      "ruff_result": "All checks passed; check only, no --fix and no frozen module changes",
+      "log": "D:/codex/temp/MMD-Portrait-Lighting-Study-2026-11-14/portrait-light-controls-v2.log"
+    }
+  },
+  "evidence": {
+    "scope": "Initial Node Wrangler registration-only probe; separate actual render evidence is under actual_lighting_control_followup",
+    "startup_flags": ["--background", "--factory-startup", "--disable-autoexec", "--python-exit-code", "1"],
+    "preference_query": "在factory进程中bpy.ops.wm.read_userpref()只读加载已保存偏好；没有save_userpref或addon_utils.enable调用",
+    "probe_script": "D:/codex/temp/MMD-Portrait-Lighting-Study-2026-11-14/node-wrangler-readonly-probe.py",
+    "probe_script_sha256": "301fa68ad6511278414858d709207f61b606998e80530d54e903f831df913699",
+    "report": "D:/codex/temp/MMD-Portrait-Lighting-Study-2026-11-14/node-wrangler-readonly-probe.json",
+    "report_sha256": "3231ca68a5599ea714dd56116204d43db2fce2c510186e8041790c8834dd06dc",
+    "log": "D:/codex/temp/MMD-Portrait-Lighting-Study-2026-11-14/node-wrangler-readonly-probe.log",
+    "log_sha256": "a96eee05411995fd120a699c4af4c93cb44d4908e77ae4e519be696a621caf81",
+    "opened_project": "",
+    "rendered": false,
+    "node_editing_operators_executed": false,
+    "production_art_status_changed": false
+  }
+}

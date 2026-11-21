@@ -1,0 +1,180 @@
+{
+  "id": "mmd-mme-goo-workflow-v1",
+  "date": "2026-11-17",
+  "kind": "proposed_native_learning_recipe",
+  "guide": "docs/MMD_MME_GOO_WORKFLOW.md",
+  "lab_guide": "docs/MME_NATIVE_LEARNING_LAB.md",
+  "production_engine_changed": false,
+  "native_runtime_verified": false,
+  "native_effects_executed": false,
+  "output_policy": "stills_only",
+  "preferred_trial_route": "Full native MMD/MME scene first; Goo asset preparation second; split-engine composition only after a separate proof",
+  "native_runtime_sources": {
+    "mmd": "https://sites.google.com/view/vpvp/",
+    "mme_x64_037": "https://bowlroll.net/file/35013",
+    "status": "not found in recorded local search scope; no installation performed"
+  },
+  "paths": {
+    "private_workbench_proposed": "D:/codex/temp/MMD-MME-Native-Lab",
+    "future_still_delivery_proposed": "D:/codex/output/MMD-MME-Native-Lab-v1",
+    "existing_packages": "D:/codex/temp/MME-Deep-Study-2026-11-16/packages",
+    "existing_source_ledger": "docs/research/MME_DEEP_STUDY_2026_11_16.json"
+  },
+  "primary_branches": [
+    {
+      "id": "powershader-toon",
+      "package": "195743.zip",
+      "source": "https://bowlroll.net/file/195743",
+      "version": "3.2",
+      "sha256": "2fdbc3d0e50dbe5235a6d3eb451ca6b37dbcefeb3e07ed883eaffbd082e60e37",
+      "status": "cached_and_partially_read_not_native_run",
+      "test": "Compare Main/Toon plus AllShadow/NoShadow as isolated controls, then add one post effect"
+    },
+    {
+      "id": "mstc-shadow-rt",
+      "package": "msToonCoordinator_v2.1.zip",
+      "source": "https://note.com/mashimashi_note/n/n2c2144638054",
+      "version": "2.1",
+      "sha256": "812941318b914c3495f56616f7e908c0e447ade25625878138b20af02fef3ebe",
+      "status": "cached_and_partially_read_not_native_run",
+      "required_dependency": "Compatible ExcellentShadow package and assignment must be verified separately",
+      "author_readme_assignment": {
+        "load": [
+          "Shade.x",
+          "Edge.x",
+          "ExcellentShadow.x",
+          "msToonCoordinatorController.pmx",
+          "default.vmd"
+        ],
+        "main_material": "Main/SimplePaint_EgeOff.fx",
+        "main_ExcellentShadow_visible": false,
+        "msTC_ShadeRT_ExcellentShadow_visible": true
+      },
+      "critical_limit": "Shade_Normal computes normal-based shading and does not use ExcellentShadow projected shadows"
+    }
+  ],
+  "optional_branches": [
+    {
+      "id": "patoon",
+      "package": "104601.zip",
+      "status": "cached_alternative_do_not_stack_as_another_main_shader"
+    },
+    {
+      "id": "ray-pbr",
+      "source": "https://github.com/ray-cast/ray-mmd",
+      "status": "independent_pbr_branch_not_assumed_compatible_with_other_main_shaders"
+    }
+  ],
+  "cases": [
+    {
+      "id": "N00",
+      "name": "Native runtime and effect compile",
+      "status": "not_run",
+      "evidence": [
+        "actual MMD/MME version",
+        "MME menu",
+        "native still",
+        "independent reopen"
+      ]
+    },
+    {
+      "id": "N01",
+      "name": "Original Ikhor PMX fixed-pose baseline",
+      "status": "not_run",
+      "evidence": [
+        "original material and alpha",
+        "correct hairstyle",
+        "camera and light record",
+        "physics disabled for fixed pose"
+      ]
+    },
+    {
+      "id": "N02",
+      "name": "PowerShader isolated shading controls",
+      "status": "not_run",
+      "depends_on": [
+        "N01"
+      ],
+      "evidence": [
+        "same camera baseline",
+        "Main or Toon",
+        "AllShadow",
+        "NoShadow"
+      ]
+    },
+    {
+      "id": "N03",
+      "name": "msTC shadow and colour RT",
+      "status": "not_run",
+      "depends_on": [
+        "N01"
+      ],
+      "evidence": [
+        "ExcellentShadow compatibility",
+        "RT assignments",
+        "hair cast shadow",
+        "face shadow colour",
+        "saved controller values"
+      ]
+    },
+    {
+      "id": "N04",
+      "name": "Selective rim light",
+      "status": "not_run",
+      "depends_on": [
+        "N02 or N03"
+      ],
+      "evidence": [
+        "one selected main shader",
+        "rim enabled and disabled",
+        "cloth detail retained"
+      ]
+    },
+    {
+      "id": "N05",
+      "name": "Single diffusion or bloom",
+      "status": "not_run",
+      "depends_on": [
+        "N04"
+      ],
+      "evidence": [
+        "locked base exposure",
+        "strength separate from radius",
+        "no doubled bloom"
+      ]
+    },
+    {
+      "id": "N06",
+      "name": "Duet in selected hall",
+      "status": "not_run",
+      "depends_on": [
+        "N05"
+      ],
+      "evidence": [
+        "both actors",
+        "specified stage",
+        "portable reopen",
+        "visual comparison with Goo v6"
+      ]
+    }
+  ],
+  "handoff_contract": {
+    "exchange_candidates": [
+      "PMX model copy",
+      "VPD fixed pose",
+      "VMD supported bone and morph animation",
+      "verified camera VMD"
+    ],
+    "not_assumed_transferable": [
+      "Goo shader nodes",
+      "original MME execution",
+      "arbitrary Geometry Nodes deformation",
+      "identical physics",
+      "depth and alpha from a normal beauty image"
+    ],
+    "time": "Record frame origin and fps on both sides; map through seconds and do not silently round half frames",
+    "physics": "One authoritative solver per chain; verify baked interchange before disabling the other solver",
+    "split_composite": "Match projection/colour/occlusion and validate passes first; add bloom once after merge"
+  },
+  "selection_status": "deferred_by_user_in_favour_of_goo_foundations"
+}

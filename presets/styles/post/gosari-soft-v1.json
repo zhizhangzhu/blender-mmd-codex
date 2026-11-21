@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "gosari-soft-post-v1",
+  "grade": {"rgb_gain": [1.02, 1.00, 1.01], "saturation": 1.02, "mix": 0.25},
+  "background": {"mode": "scene"},
+  "sticker_rgb": [1, 1, 1],
+  "border_rgb": [0.95, 0.87, 0.90],
+  "vignette": 0.035,
+  "typography": {"tint_srgb": [0.98, 0.91, 1.0], "opacity": 0.90, "stroke_rgb": [0.18, 0.10, 0.28], "glow_rgb": [0.82, 0.48, 0.76], "glow_strength": 0.12}
+}

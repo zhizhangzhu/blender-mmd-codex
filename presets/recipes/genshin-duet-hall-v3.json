@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "id": "genshin-duet-hall-v3",
+  "kind": "project_recipe",
+  "status": "five-second-sample-reviewed",
+  "engine": "Blender 5.2.2 / EEVEE",
+  "aspect": "16:9",
+  "source_project": "D:/codex/output/MMD-Ray-Hall-Genshin-Revision-v1/production-v3/Franken_Duet_Reference_Genshin.blend",
+  "stage_component": "../stages/hesperides-ray-reference-v1.json",
+  "character_method": "docs/GENSHIN_CHARACTER_AND_PRESETS.md",
+  "performers": {"aksiniya": "HimeTanaka VMD; model-specific FaceLightmap; light hair highlight", "aether": "HinaSuzuki VMD; adapted festivities Boy Face Factor"},
+  "sample": {"first_frame": 4140, "last_frame": 4439, "fps": 60, "resolution": [1920, 1080]},
+  "limitations": ["A reproducible project recipe, not a generic material converter", "Existing source project and baked animation are required", "Not a completed full-song film"]
+}

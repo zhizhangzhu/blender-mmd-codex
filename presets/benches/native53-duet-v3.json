@@ -1,0 +1,206 @@
+{
+  "schema_version": 1,
+  "id": "native53-duet-v3-static",
+  "source": {
+    "path": "D:\\codex\\output\\Blender53-Duet-Toon-2026-11-19\\author-trial-v3\\Franken_Duet_Author53_Still.blend",
+    "sha256": "b740a2b24b87572faee68ebc59a7d801c3d891304fed704312cf872918af7abb"
+  },
+  "runtime": "presets/runtime/native53-v1.json",
+  "scene": {
+    "name": "Scene",
+    "camera": "Duet | Tottoko authored camera",
+    "expected_lens_mm": 61.7346496582031,
+    "registration": "mmd_tools"
+  },
+  "actors": [
+    {
+      "id": "aksiniya",
+      "objects": [
+        "阿克西妮娅2_mesh"
+      ],
+      "armature": "阿克西妮娅2_arm",
+      "materials": {
+        "ink": [
+          "mmd_edge.disabled",
+          "mmd_edge.前装饰",
+          "mmd_edge.前鬓",
+          "mmd_edge.口",
+          "mmd_edge.后装饰",
+          "mmd_edge.呆毛",
+          "mmd_edge.头饰",
+          "mmd_edge.手",
+          "mmd_edge.披肩",
+          "mmd_edge.毛领",
+          "mmd_edge.腿",
+          "mmd_edge.舌",
+          "mmd_edge.衣",
+          "mmd_edge.裙",
+          "mmd_edge.颜",
+          "mmd_edge.首",
+          "mmd_edge.鬓",
+          "眉",
+          "睫"
+        ],
+        "other": [
+          "前装饰",
+          "前装饰+",
+          "后装饰",
+          "后装饰+",
+          "头饰",
+          "头饰+"
+        ],
+        "hair": [
+          "前鬓",
+          "前鬓+",
+          "呆毛",
+          "鬓",
+          "鬓+"
+        ],
+        "mouth": [
+          "口",
+          "舌",
+          "齿"
+        ],
+        "cloth": [
+          "帽",
+          "帽+",
+          "披肩",
+          "披肩+",
+          "腿",
+          "腿+",
+          "衣",
+          "衣+",
+          "裙",
+          "裙+"
+        ],
+        "skin": [
+          "手",
+          "首"
+        ],
+        "fur": [
+          "毛领"
+        ],
+        "eye_white": [
+          "白目"
+        ],
+        "iris": [
+          "目"
+        ],
+        "face": [
+          "颜",
+          "颜+"
+        ]
+      }
+    },
+    {
+      "id": "ikhor",
+      "objects": [
+        "Ikhor | mesh | Ikhor_mesh"
+      ],
+      "armature": "Ikhor | armature",
+      "materials": {
+        "transparent": [
+          "bq",
+          "目2"
+        ],
+        "ink": [
+          "mmd_edge.disabled",
+          "mmd_edge.带子",
+          "mmd_edge.手.001",
+          "mmd_edge.衣.001",
+          "mmd_edge.衣2",
+          "mmd_edge.衣领",
+          "mmd_edge.衣饰",
+          "mmd_edge.裙.001",
+          "mmd_edge.裤",
+          "mmd_edge.靴",
+          "mmd_edge.靴底",
+          "mmd_edge.靴饰",
+          "mmd_edge.颜.001",
+          "mmd_edge.首.001",
+          "mmd_edge.鬓.001",
+          "二重.001",
+          "眉毛",
+          "睫毛"
+        ],
+        "mouth": [
+          "口.001",
+          "舌.001",
+          "齿.002"
+        ],
+        "cloth": [
+          "带子",
+          "衣.001",
+          "衣2",
+          "衣领",
+          "裙.001",
+          "裤"
+        ],
+        "skin": [
+          "手.001",
+          "首.001"
+        ],
+        "other": [
+          "灯",
+          "环",
+          "衣饰",
+          "靴",
+          "靴底",
+          "靴饰"
+        ],
+        "iris": [
+          "目.002"
+        ],
+        "eye_white": [
+          "目白.001"
+        ],
+        "face": [
+          "颜.001"
+        ],
+        "hair": [
+          "鬓.001"
+        ]
+      }
+    }
+  ],
+  "switches": {
+    "ikhor_cloth_bright": {
+      "kind": "node_input",
+      "material": "衣.001",
+      "node": "Native53 | actual author toon shader",
+      "socket": "亮部强度",
+      "expected": 0.76
+    }
+  },
+  "cases": [
+    {
+      "id": "baseline",
+      "frame": 4290,
+      "overrides": []
+    },
+    {
+      "id": "ikhor_cloth_dim",
+      "frame": 4290,
+      "overrides": [
+        {
+          "switch": "ikhor_cloth_bright",
+          "value": 0.6
+        }
+      ]
+    }
+  ],
+  "render": {
+    "width": 640,
+    "height": 360,
+    "samples": 16,
+    "dof": "source",
+    "motion_blur": false
+  },
+  "limits": [
+    "Native53 author-trial-v3 remains an unfinished migration diagnostic; do not promote active iteration or art approval",
+    "Only4290/source camera/source DOF; no new physics/video/eye-through",
+    "Mapping based on actual object slots, rig modifiers and audited category properties, with explicit face/eye/mouth overrides",
+    "other retains mixed trim/leather/crystal semantic uncertainty; not a pure-metal assertion",
+    "cloth_dim is a diagnostic control, not an accepted artistic revision"
+  ]
+}

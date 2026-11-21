@@ -1,0 +1,74 @@
+{
+  "id": "goo-foundations-v1",
+  "date": "2026-11-18",
+  "guide": "docs/GOO_FOUNDATIONS_AND_PARAMETERS.md",
+  "chosen_engine": "Goo 5.2.1 community port 0051aee03764",
+  "user_order": "Basic functionality and parameter meanings before advanced NPR/MME conversion",
+  "native_mmd_main_render": "deferred_by_user",
+  "mme_compatibility_plugin_development": "not_started_pending_foundation_learning",
+  "production_modified": false,
+  "output_policy": "isolated_static_controls_only",
+  "official_sources": [
+    "https://www.dillongoostudios.com/gooengine",
+    "https://www.dillongoostudios.com/gooengine-features",
+    "https://github.com/dillongoostudios/goo-engine/tree/goo-engine-v4.4-release"
+  ],
+  "local_parameter_inventory": "D:/codex/output/Goo-Basics-Study-2026-11-17/parameter-inventory-v2.json",
+  "modules": [
+    {
+      "id": "F0",
+      "subject": "Version, colour space, base material, emission and display transform",
+      "status": "official_reading_and_new_display_output_controls_verified_not_character_calibration",
+      "new_evidence": "D:/codex/output/Goo-Blender-Official-Study-2026-11-18/color-controls/measurements.json"
+    },
+    {
+      "id": "F1",
+      "subject": "Shader Info signals and single key per light group",
+      "status": "new_static_and_reopen_verified",
+      "evidence": "D:/codex/output/Goo-Basics-Study-2026-11-17/light-group-controls/measurements.json"
+    },
+    {
+      "id": "F2",
+      "subject": "Cast/Self shadow IDs, WorldPosition, Normal and light masks",
+      "status": "partial_four_outputs_two_build_input_controls_and_reopen_verified",
+      "new_evidence": [
+        "D:/codex/output/Goo-Input-Matrix-Study-2026-11-18/goo52/measurements.json",
+        "D:/codex/output/Goo-Input-Matrix-Study-2026-11-18/goo43/measurements.json"
+      ],
+      "remaining": "Ambient, other lights/meshes, real-character deformation and target spaces, animation; Normal Edit sphere path now tested",
+      "mesh_normal_evidence": "D:/codex/output/Goo-MMD-Eight-Foundations-2026-11-18/controls/measurements.json"
+    },
+    {
+      "id": "F3",
+      "subject": "Ramp stops, thresholds, interpolation, Light Info and ambient contribution",
+      "status": "interface_documented_partial_prior_static_evidence"
+    },
+    {
+      "id": "F4",
+      "subject": "Screenspace, Set Depth, Curvature and activation conditions",
+      "status": "prior_static_evidence_official_version_crosscheck_partial"
+    },
+    {
+      "id": "F5",
+      "subject": "SDF, Hex Grid, Twirl, Water Ripples and OKLab parameters",
+      "status": "interface_inventory_complete_behavior_incomplete"
+    },
+    {
+      "id": "F6",
+      "subject": "Holdout, overrides, per-layer sampling, GP, rig and interface additions",
+      "status": "official_feature_list_read_local_operation_not_verified"
+    }
+  ],
+  "mastery_gate": [
+    "purpose and location",
+    "inputs and outputs",
+    "observed defaults and units",
+    "change direction and necessary switches",
+    "one-variable still control",
+    "save and reopen",
+    "version boundary"
+  ],
+  "advanced_work": "defer until relevant basic modules pass; do not infer mastery from node count",
+  "blender_foundation_guide": "docs/GOO_BLENDER_FOUNDATIONS_2026_11_18.md",
+  "eight_subject_guide": "docs/GOO_MMD_EIGHT_FOUNDATIONS_2026_11_18.md"
+}

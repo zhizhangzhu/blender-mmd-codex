@@ -1,0 +1,22 @@
+{
+  "id": "hesperides-fox-cinema-v1",
+  "reference": "https://www.bilibili.com/video/BV1PPgpzLEdb/",
+  "interpretation": "Observed bright faces over a darker chromatic stage; translate to a blue-hour wedding hall, not the author's original parameters.",
+  "ambient_tint": [0.09, 0.12, 0.23, 1],
+  "moon_pool": {"center": [-9, 11, 7], "radius": 22, "tint": [0.11, 0.17, 0.30, 1]},
+  "altar_pool": {"center": [0, 9, 0.4], "radius": 9, "tint": [0.90, 0.28, 0.12, 1]},
+  "actor_tint": [0.94, 0.92, 0.96, 1],
+  "sky_dark": [0.001, 0.0025, 0.010, 1],
+  "sky_cloud": [0.006, 0.015, 0.045, 1],
+  "volume_density": 0.00035,
+  "volume_anisotropy": 0.25,
+  "moon_area": {"location": [-8, 3, 10], "target": [0, 1, 1], "watts": 700, "color": [0.42, 0.59, 1], "size": 6},
+  "moon_spot": {"location": [-6, 9, 11], "target": [0, 0, 0], "watts": 2400, "color": [0.45, 0.62, 1], "angle_degrees": 48, "blend": 0.65},
+  "altar_spot": {"location": [2, 17, 8], "target": [0, 13, 0], "watts": 1100, "color": [1, 0.54, 0.35], "angle_degrees": 65, "blend": 0.8},
+  "back_projector": {"location": [1.7, 5, 4.5], "target": [0, -2, 0], "watts": 400, "color": [0.65, 0.72, 1], "angle_degrees": 70, "blend": 0.55},
+  "stage_physical_response": {"floor": 0.55, "high": 0.18},
+  "actor_rim": {"location": [1.7, 2.5, 3], "color": [0.46, 0.62, 1], "hair_gain": 0.15, "body_gain": 0.065, "face_gain": 0.0},
+  "camera": {"preserve_authored_lens_and_path": true, "minimum_fstop": 2.8, "maximum_fstop": 10, "maximum_face_coc_pixels": 1.2, "aperture_blades": 8, "aperture_ratio": 1, "focus": "mean optical-axis depth of two heads; bake each native frame"},
+  "motion": {"fps": 60, "shutter_frames": 0.35, "shutter_angle_degrees": 126, "steps": 3, "max_blur_pixels": 24, "bleeding_bias": 50, "cut_translation_per_frame": 0.5, "cut_rotation_radians_per_frame": 0.18, "cut_lens_mm_per_frame": 6},
+  "limits": ["NPR spatial pools have no occlusion; actual lights drive specular and volume.", "Native DOF and motion blur are local reconstruction choices, not recovered MME settings.", "This horizontal five-second study does not establish full-song or portrait correctness."]
+}

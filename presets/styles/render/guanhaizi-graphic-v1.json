@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "id": "guanhaizi-graphic-render-v1",
+  "reference_status": "Inspired by Cherry Pop sample frames; not author settings",
+  "ramp_interpolation": "EASE",
+  "ramp_positions": [0.18, 0.43],
+  "palette": {
+    "skin": [[1.00, 0.88, 1.08], [1.10, 1.05, 1.18]],
+    "eye": [[1.0, 0.98, 1.04], [1.06, 1.03, 1.08]],
+    "ink": [[0.44, 0.29, 0.60], [0.58, 0.43, 0.72]],
+    "hair": [[0.51, 0.42, 0.78], [1.02, 0.96, 1.11]],
+    "trim": [[0.59, 0.43, 0.72], [1.09, 0.98, 1.04]],
+    "cloth": [[0.53, 0.38, 0.78], [1.04, 0.95, 1.12]],
+    "fur": [[0.81, 0.72, 0.97], [1.06, 0.98, 1.10]]
+  },
+  "saturation": {"skin": 0.85, "eye": 1.12, "ink": 1.12, "hair": 1.12, "trim": 1.12, "cloth": 1.14, "fur": 1.05},
+  "value": {"skin": 1.04},
+  "edge_rgb": [0.27, 0.12, 0.42],
+  "edge_width_scale": 1.1,
+  "lights": {
+    "Key softbox": {"color": [1.0, 0.88, 0.96], "energy": 170},
+    "Tutorial | rim light": {"color": [0.76, 0.58, 1.0], "energy": 65}
+  },
+  "bloom": {"Threshold": 0.95, "Strength": 0.055, "Size": 0.055}
+}

@@ -1,0 +1,275 @@
+{
+  "schema_version": 1,
+  "id": "face-shadow-design-study-2026-11-18",
+  "started_on": "2026-11-18",
+  "continued_on": "2026-11-19",
+  "status": "external-primary-reading-and-separate-actor-plans-complete;native53-author-substudy-complete",
+  "guide": "docs/FACE_SHADOW_DESIGN_STUDY_2026_11_18.md",
+  "director": {
+    "model": "gpt-6.1-sol",
+    "reasoning": "xhigh",
+    "personally_performed": [
+      "external primary text/source reading",
+      "deduplication",
+      "technical conclusions",
+      "separate actor experiment plans"
+    ],
+    "low_role": "Fixed URL acquisition,hashes,inventory,private extraction,specified video frames,and explicitly supplied native audit/render commands;no source interpretation,experiment design or artistic acceptance"
+  },
+  "baseline": {
+    "project": "D:/codex/output/Goo-Character-Lookdev-2026-11-18/final-v1/Franken_Character_Lookdev_Still.blend",
+    "sha256": "66a030e52f93f373f009cd4308ad6b6bc6504387346ce4ca4adc43851357928a",
+    "runtime": "Goo5.2.1 unofficial0051aee03764",
+    "rendered_scope": "Existing4290 static candidate; this study does not open or modify it",
+    "aksiniya": "Existing verified FaceLightmap/SDF,new warm form0.52",
+    "ikhor": "No verified face SDF,new warm form0.78",
+    "local_normals": "partial head-parented Normal Edit mix0.23/max32degrees",
+    "occlusion": "Packed512x512 hair maps specific to4290"
+  },
+  "deduplication": {
+    "checked": [
+      "docs/research/FACE_SHADOW_DESIGN_STUDY.json",
+      "docs/research/FACE_SHADOW_DESIGN_2026_11_14.json",
+      "docs/research/NPR_NEXT_EXPERIMENTS.json",
+      "docs/research/STAR_RAIL_FACE_HAIR_2026_11_17.json",
+      "docs/research/GOO_FOUNDATIONS_2026_11_17.json",
+      "docs/research/GOO_MMD_EIGHT_FOUNDATIONS_2026_11_18.json",
+      "docs/GENSHIN_CHARACTER_AND_PRESETS.md",
+      "docs/CHARACTER_NPR_PLAYBOOK.md",
+      "docs/GOO_CHARACTER_LOOKDEV_2026_11_18.md"
+    ],
+    "not_new": [
+      "FlowingCrescent threshold generation and offset hair shadow articles",
+      "mos9527 PJSK text/formulas",
+      "himoqiuhan face and neck sections",
+      "MooaToon shadows",
+      "Nilo public lighting equation",
+      "xSnowFlakesx and Endfield face sections",
+      "StarRail face/hair core sections",
+      "akasaki1211 generator README",
+      "Vector Transform and Normal Edit cached guides"
+    ],
+    "new_source_families": [
+      "Goo4.4 primitive declaration and selected GLSL formula paths, previously unavailable/not read in depth",
+      "qjh5606 SDF-LightMap generation implementation at pinned commit",
+      "Complete official Blender5.2 Data Transfer text; previously only partial indexed excerpts"
+    ]
+  },
+  "source_locks": {
+    "goo": {
+      "repository": "dillongoostudios/goo-engine",
+      "branch": "goo-engine-v4.4-release",
+      "commit": "d281a65ebe227cad2726f79255218dcf88d03f92"
+    },
+    "generator": {
+      "repository": "qjh5606/SDF-LightMap",
+      "branch_at_acquisition": "main",
+      "commit": "d7c416278f70608ad72f6829ac4efb0045f40967",
+      "commit_obtained_via": "GitHub plugin commits/main metadata"
+    }
+  },
+  "sources": [
+    {
+      "url": "https://raw.githubusercontent.com/dillongoostudios/goo-engine/d281a65ebe227cad2726f79255218dcf88d03f92/source/blender/nodes/shader/nodes/node_shader_sdf_primitive.cc",
+      "cache_path": "D:\\codex\\temp\\Goo-Face-Shadow-Study-2026-11-18\\goo\\node_shader_sdf_primitive.cc",
+      "http_status": 200,
+      "status": "downloaded",
+      "sha256": "29443c20e6a61cc1f1984e48c7ba53b44cf53bb9eef6feb51aeb1d550f47838e",
+      "bytes": 19953,
+      "actual_read_scope": "Full declaration, mode GPU function dispatch, available socket selection/labels and registration; actual file name corrected from guessed node_shader_sdf.cc",
+      "new_substantive_reading": true
+    },
+    {
+      "url": "https://raw.githubusercontent.com/dillongoostudios/goo-engine/d281a65ebe227cad2726f79255218dcf88d03f92/source/blender/gpu/shaders/material/gpu_shader_material_sdf_primitive.glsl",
+      "cache_path": "D:\\codex\\temp\\Goo-Face-Shadow-Study-2026-11-18\\goo\\gpu_shader_material_sdf_primitive.glsl",
+      "http_status": 200,
+      "status": "downloaded",
+      "sha256": "babe30a75904d44a7f9d75bc2203311d6dec222338ab4519449ceda10c9d9c5e",
+      "bytes": 63813,
+      "actual_read_scope": "Selected lines1-170,781-900,1216-1337: basic geometric helpers, sdf_alteration/dimension, sphere, plane,2D circle/line entries; not full sixty-four-kilobyte file",
+      "new_substantive_reading": true
+    },
+    {
+      "url": "https://raw.githubusercontent.com/dillongoostudios/goo-engine/d281a65ebe227cad2726f79255218dcf88d03f92/source/blender/gpu/shaders/material/gpu_shader_material_sdf_util.glsl",
+      "cache_path": "D:\\codex\\temp\\Goo-Face-Shadow-Study-2026-11-18\\goo\\gpu_shader_material_sdf_util.glsl",
+      "http_status": 200,
+      "status": "downloaded",
+      "sha256": "f82473dcdfcf8f4f48b605875b2b088be4d5f96e2538ae3475185630c10047bc",
+      "bytes": 10760,
+      "actual_read_scope": "Selected lines1-170 and211-226: common mapping/safety helpers and union/difference/intersection",
+      "new_substantive_reading": true
+    },
+    {
+      "url": "https://raw.githubusercontent.com/dillongoostudios/goo-engine/d281a65ebe227cad2726f79255218dcf88d03f92/source/blender/gpu/shaders/material/gpu_shader_material_sdf_op.glsl",
+      "cache_path": "D:\\codex\\temp\\Goo-Face-Shadow-Study-2026-11-18\\goo\\gpu_shader_material_sdf_op.glsl",
+      "http_status": 200,
+      "status": "downloaded",
+      "sha256": "c0e404efeba355cf7d8ffe99f99100b2018dbec0e4fd85ffe1fa4e7464f0d342",
+      "bytes": 5358,
+      "actual_read_scope": "Lines1-200 wrapper functions; focus on dilate, mask, invert and Boolean operations; not all advanced operation formulas",
+      "new_substantive_reading": true
+    },
+    {
+      "url": "https://raw.githubusercontent.com/qjh5606/SDF-LightMap/d7c416278f70608ad72f6829ac4efb0045f40967/README.md",
+      "cache_path": "D:\\codex\\temp\\Goo-Face-Shadow-Study-2026-11-18\\qjh\\README.md",
+      "http_status": 200,
+      "status": "downloaded",
+      "sha256": "67a7fc37c7e531c42524dfb2772eb6da3296a4d21f3eb65270295b158202f17b",
+      "bytes": 956,
+      "actual_read_scope": "Full README text; input/output image illustrations not individually inspected; no linked CSDN full article claimed",
+      "new_substantive_reading": true
+    },
+    {
+      "url": "https://raw.githubusercontent.com/qjh5606/SDF-LightMap/d7c416278f70608ad72f6829ac4efb0045f40967/SDFGenerator/main.cpp",
+      "cache_path": "D:\\codex\\temp\\Goo-Face-Shadow-Study-2026-11-18\\qjh\\SDFGenerator__main.cpp",
+      "http_status": 200,
+      "status": "downloaded",
+      "sha256": "b3db7ac783486aba5a0da02ff04e3fcd9421b36e62f2fd2d4761b84a64d61a64",
+      "bytes": 4216,
+      "actual_read_scope": "Full171-line entry: eight hardcoded input masks, merge order and SDL preview; no execution",
+      "new_substantive_reading": true
+    },
+    {
+      "url": "https://raw.githubusercontent.com/qjh5606/SDF-LightMap/d7c416278f70608ad72f6829ac4efb0045f40967/SDFGenerator/original.cpp",
+      "cache_path": "D:\\codex\\temp\\Goo-Face-Shadow-Study-2026-11-18\\qjh\\SDFGenerator__original.cpp",
+      "http_status": 200,
+      "status": "downloaded",
+      "sha256": "4992ed72669e5749080dcf6f29980584238909b1ec9b2f4b9bac353b2982d00b",
+      "bytes": 6651,
+      "actual_read_scope": "Full261-line implementation: grid propagation, R>0 binarization, integer distances,8-bit truncation, interpolation and JPEG output",
+      "new_substantive_reading": true
+    },
+    {
+      "url": "https://raw.githubusercontent.com/qjh5606/SDF-LightMap/d7c416278f70608ad72f6829ac4efb0045f40967/SDFGenerator/original.h",
+      "cache_path": "D:\\codex\\temp\\Goo-Face-Shadow-Study-2026-11-18\\qjh\\SDFGenerator__original.h",
+      "http_status": 200,
+      "status": "downloaded",
+      "sha256": "4e112dd087344e6837faf174240fe0c164b365067af47418647922579d228dbf",
+      "bytes": 985,
+      "actual_read_scope": "Full class declarations",
+      "new_substantive_reading": true
+    },
+    {
+      "url": "https://raw.githubusercontent.com/qjh5606/SDF-LightMap/d7c416278f70608ad72f6829ac4efb0045f40967/SDFGenerator/sdf.h",
+      "cache_path": "D:\\codex\\temp\\Goo-Face-Shadow-Study-2026-11-18\\qjh\\SDFGenerator__sdf.h",
+      "http_status": 200,
+      "status": "downloaded",
+      "sha256": "9747cd85dcbd37e9482713773893ec3eb8941cbc8624b2a62c61f55235547062",
+      "bytes": 1103,
+      "actual_read_scope": "Full point/grid data and initialization declarations",
+      "new_substantive_reading": true
+    },
+    {
+      "url": "https://docs.blender.org/manual/en/5.2/modeling/modifiers/modify/data_transfer.html",
+      "cache_path": "D:\\codex\\temp\\Goo-Face-Shadow-Study-2026-11-18\\blender\\data_transfer.html",
+      "http_status": 200,
+      "status": "downloaded",
+      "sha256": "793e4436b09ebe5ae2e4553fa812e7303041ba7b153404687d525467fd823b52",
+      "bytes": 470167,
+      "article_text": "D:\\codex\\temp\\Goo-Face-Shadow-Study-2026-11-18\\blender\\data_transfer.txt",
+      "actual_read_scope": "Full extracted article in data_transfer.txt, including transform,mix,corner mapping,distance controls; embedded images not individually analysed",
+      "new_substantive_reading": true
+    }
+  ],
+  "extracted_article": {
+    "path": "D:/codex/temp/Goo-Face-Shadow-Study-2026-11-18/blender/data_transfer.txt",
+    "sha256": "7cf19734618b4acc7130b073a3ae3d52fcb9d1ea5e9dc2f6095d4732ea2adf2a"
+  },
+  "findings": [
+    {
+      "id": "sdf-types",
+      "finding": "Analytic shape distance, offline per-mask signed distance and final UV angular threshold are different representations; Goo primitive nodes do not automatically author a face threshold texture or detect bangs occlusion",
+      "evidence": [
+        "Goo sphere/plane/circle entry formulas",
+        "qjh Original::run and SDFMerger::MergeImage"
+      ]
+    },
+    {
+      "id": "shape-mask",
+      "finding": "For positive nonzero Size, sphere computes signed geometric distance with scale correction; circle usesxy; Linewidth makes a shell; Mask converts signed distance to scalar permission",
+      "limits": "Source-level reading of official4.4 only; no new community5.2 behavior validation"
+    },
+    {
+      "id": "author-data",
+      "finding": "Generator reads first channel>0 as binary, uses two distance grids, then interpolates ordered masks. A single scalar threshold cannot reproduce multiple lit/dark toggles of one pixel over one parameter interval",
+      "limits": "Monotonicity constraint is project analysis, not an explicit input validator in the author code"
+    },
+    {
+      "id": "numeric-pipeline",
+      "finding": "Integer distances,8-bit remapping/clamping and JPEG output are actual implementation choices; do not treat demo output as high precision control-data master. README display-gamma note is distinct from commented pow expression",
+      "limits": "Tool not compiled/run,linked CSDN article not read,full reuse license not established"
+    },
+    {
+      "id": "normal-transfer",
+      "finding": "Data Transfer changes selected data through explicit mappings; object transform,corner matching,per-element permission and distance limits matter; it does not create a head coordinate frame or replace geometric occlusion",
+      "limits": "No donor mesh,modified skinning or stack experiment executed"
+    },
+    {
+      "id": "light-contract",
+      "finding": "The existing added warm form matching the real lamp does not independently prove the retained SDF consumes the same evaluated light direction; next implementation begins by tracing the saved graph",
+      "limits": "Historical creation scripts inspected only; no claim of a confirmed current blend bug"
+    }
+  ],
+  "actor_plans": {
+    "aksiniya": {
+      "priority": 1,
+      "first": "Read-only trace retained SDF input channel,head basis,light direction,threshold curve and nose correction in the current saved graph",
+      "minimum_static_controls": [
+        "current4290",
+        "new warm form off",
+        "current bangs occlusion off",
+        "both warm form and bangs occlusion off"
+      ],
+      "fixed": [
+        "frame",
+        "camera",
+        "lights",
+        "color pipeline",
+        "Glow disabled"
+      ],
+      "then": "Adjust a single local face permission only after source of nose/mouth softness is identified; isolate SDF from hair when checking left/right lights",
+      "reject": [
+        "new red/gray nose-mouth dirt",
+        "dark eyes",
+        "lost mouth line",
+        "whole-face brightness floor required"
+      ]
+    },
+    "ikhor": {
+      "priority": 2,
+      "first": "Audit this model's face UV and material/feature masks; preserve current non-SDF baseline",
+      "minimum_plan": "Draw a small ordered set of this face's shadow shapes for one light hemisphere,check monotonicity and numeric convention,then evaluate whether mirroring is valid; separate sides if necessary",
+      "reject": [
+        "borrowed Aksiniya map treated as matching",
+        "UV mismatch/seams",
+        "nonmonotonic threshold toggles",
+        "blue iris or expression lost"
+      ],
+      "not_yet_done": "No new threshold image,material application or render"
+    }
+  },
+  "known_limits": [
+    "Goo4.4 source is not compatibility proof for unofficial5.2 binary",
+    "Known unresponsive Shader Info Normal/Position input findings remain unchanged",
+    "A horizontal threshold alone does not provide a stable azimuth for vertical light directions",
+    "SDF,soft form and comprehensive Diffuse response can duplicate shading; mask polarity and color budget must be specified",
+    "Static4290 occlusion cannot be reused to certify other poses or light locations"
+  ],
+  "author53_substudy": {
+    "user_provided": true,
+    "status": "Seven sampled video frames,official5.3 lighting documentation,native53/Goo52 v2 readonly audits,and two native53 primary-face SDF controls completed",
+    "companion_guide": "docs/BLENDER53_TOON_PACKAGE_STUDY_2026_11_18.md",
+    "no_production_append": true
+  },
+  "production_modified": false,
+  "new_face_sdf_implemented": false,
+  "new_render": true,
+  "new_physics": false,
+  "new_video": false,
+  "eye_see_through": "deferred",
+  "user_art_approval": false,
+  "reference_quality_achieved": false,
+  "new_actor_render": false,
+  "render_scope": "Only separate author Furina native53 SDF-on/off diagnostic;current Aksiniya and Ikhor production and experiment plans remain unmodified",
+  "author53_direct_goo_compatibility": false
+}

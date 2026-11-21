@@ -1,0 +1,237 @@
+{
+  "schema_version": 1,
+  "reviewed_on": "2026-11-13",
+  "timezone": "Asia/Shanghai",
+  "topic": "MMD衣发与身体次级运动、可重复烘焙和候选求解路线",
+  "scope": {
+    "repository_and_local_source_review": true,
+    "existing_artifact_read": true,
+    "new_simulation_run": false,
+    "new_plugin_installed": false,
+    "breast_motion_separately_validated": false,
+    "note": "已有物理烘焙证据和本轮新增文档研究分开；没有通过教程阅读把候选能力升级为实测。"
+  },
+  "existing_evidence": [
+    {
+      "id": "duet-native-physics-v2",
+      "path": "D:/codex/output/Franken-Duet-Full-Final-v1/physics-v2/physics-report.json",
+      "sha256": "0e954e6d57f0fd11698798db633727ebd55f4b5e9aa794fed1a6027810890cb3",
+      "read_scope": "本轮实际解析整个JSON，统计物理骨骼并核对报告字段；未重新模拟",
+      "source_fps": 30,
+      "preroll_frames": 120,
+      "export_range": [121, 6488],
+      "physical_bones": {"aksiniya": 390, "aether": 97},
+      "substeps_per_frame": 6,
+      "solver_iterations": 30,
+      "maximum_baked_pose_matrix_error": 0.000002682209014892578,
+      "assembly_through_cache_seconds": 4090.097575902939,
+      "total_seconds": 4603.4945323467255,
+      "runtime_rigidbody_world_removed": true,
+      "limits": [
+        "simulation_seconds的起始计时早于组装，不能当纯求解时间",
+        "抽样矩阵误差不证明无穿模或美术自然",
+        "报告没有胸部分区映射，骨名文本不能证明该部位是否已经适配",
+        "未完整记录每刚体质量、margin、重力和碰撞排除表"
+      ]
+    },
+    {
+      "id": "latest-five-second-preserves-motion",
+      "path": "D:/codex/output/MMD-Duet-Shadow-Color-v1/master-verification-v3.json",
+      "read_scope": "本轮读取报告头部，核对最终工程路径及十时点动作保留记录",
+      "supports": "最新自阴影和描边分支沿用原有烘焙运动",
+      "does_not_support": "最新分支重新优化了胸部或全曲物理"
+    }
+  ],
+  "repository_sources": [
+    {
+      "path": "docs/PRODUCTION_TECHNIQUES.md",
+      "read_scope": "全文复审，重点原生物理、便携Action、30到60fps、缓存失败边界",
+      "status": "historical-verified-method-record"
+    },
+    {
+      "path": "docs/DUET_FULL_PRODUCTION.md",
+      "read_scope": "全文复审，核对模型动作分配、物理-v2记录与全曲未交付边界",
+      "status": "project-record-with-historical-status"
+    },
+    {
+      "path": "scripts/mmd_duet_physics.py",
+      "read_scope": "全文代码，预滚、Build、缓存、视觉导出、清理、矩阵比对及计时范围",
+      "limits": ["仅用于未构建的双人30fps源导入工程", "IK统一mute的做法不能推广到其他动作", "报告source_fps为脚本约定，复用前须核验实际时间基准"]
+    },
+    {
+      "path": "scripts/mmd_physics_bake.py",
+      "read_scope": "全文代码，单人历史内存缓存与可选visual bake导出",
+      "limits": ["历史骨骼名和单角色选择逻辑不适合作为双人通用入口"]
+    },
+    {
+      "path": "scripts/mmd_final_scene.py",
+      "read_scope": "retime_actions函数，核对关键点及左右插值柄同步映射"
+    }
+  ],
+  "installed_source_review": {
+    "module": "bl_ext.blender_org.mmd_tools",
+    "version_from_existing_environment_record": "4.5.14",
+    "version_was_not_reprobed_this_round": true,
+    "root": "C:/Users/Administrator/AppData/Roaming/Blender Foundation/Blender/5.2/extensions/blender_org/mmd_tools",
+    "files": [
+      {
+        "path": "core/pmx/importer.py",
+        "sha256": "b391524a122cb8a76ce9df2f0caf3c92967ac1929612ad699822a9725357a20f",
+        "read_scope": "刚体与关节导入段、位置和尺寸及限位缩放、质量/阻尼/摩擦直接传入"
+      },
+      {
+        "path": "core/model.py",
+        "sha256": "6d956c270f817c67399b4604c179481059bd6354c9ff043098ee5d9ca85eb762",
+        "read_scope": "build/updateRigid/buildRigids以及非碰撞约束组装段"
+      },
+      {
+        "path": "core/rigid_body.py",
+        "sha256": "235d74531d5ecb33022ce42e4e888955c7e4c8c728eb68a94746a2dcb2cb507a",
+        "read_scope": "刚体字段赋值、new_joint_object软硬约束说明、setup_joint_object限位和弹簧设置",
+        "finding": "注释指出Blender硬约束与MMD软约束差异，作者示例只作解释，未将其参数复制为本项目预设"
+      },
+      {
+        "path": "properties/rigid_body.py",
+        "sha256": "ba938aec0f53fd6db43b1c426f752c4d9996a4067bf4532ce56247080770e5f0",
+        "read_scope": "字段定义及spring_linear/spring_angular对应更新关系"
+      }
+    ],
+    "remote_main_is_not_same_version_evidence": true
+  },
+  "online_sources": [
+    {
+      "id": "blender-mass-units",
+      "url": "https://docs.blender.org/manual/en/latest/scene_layout/object/editing/rigid_body.html",
+      "publisher": "Blender Foundation",
+      "read_level": "搜索返回Calculate Mass章节及密度kg/m³说明",
+      "supports": ["质量/密度与模型尺度必须有一致的工作单位"],
+      "version_limit": "未对当前PMX按体积或材料密度重新计算质量"
+    },
+    {
+      "id": "blender-constraint-api",
+      "url": "https://docs.blender.org/api/main/bpy.types.RigidBodyConstraint.html",
+      "publisher": "Blender Foundation",
+      "read_level": "搜索返回角限位及SPRING1/SPRING2字段说明",
+      "supports": ["角限位脚本数值和弹簧实现须分别核验"],
+      "version_limit": "在线main不代替本机RNA；未采用文中默认值作为角色预设"
+    },
+    {
+      "id": "mmd-tools-known-issues",
+      "url": "https://github.com/MMD-Blender/blender_mmd_tools#rigid-body-physics-limitations",
+      "publisher": "MMD-Blender",
+      "read_level": "官方README的物理限制和IK差异章节，实际返回正文",
+      "supports": ["MMD和Blender约束行为存在差异", "碰撞排除带来额外约束成本", "作者建议MMDBridge候选路线"],
+      "local_validation": "本机源码已核对；MMDBridge未运行"
+    },
+    {
+      "id": "mmd-tools-rigid-source",
+      "url": "https://github.com/MMD-Blender/blender_mmd_tools/blob/main/mmd_tools/core/rigid_body.py",
+      "publisher": "MMD-Blender",
+      "read_level": "作者源码页面相关段；精确本机实现以本台账列出的文件哈希为准",
+      "supports": ["刚体数据字段与关节创建职责", "软硬约束差异注释"],
+      "local_validation": "读源码，不等于新参数已模拟"
+    },
+    {
+      "id": "blender-world",
+      "url": "https://docs.blender.org/manual/id/5.0/physics/rigid_body/world.html",
+      "publisher": "Blender Foundation",
+      "read_level": "搜索返回的World章节正文；直接打开该页失败",
+      "supports": ["子步与求解迭代的职责不同", "提高精度有性能代价"],
+      "version_limit": "5.0概念参考；5.2字段名称以本机脚本为准"
+    },
+    {
+      "id": "blender-damping",
+      "url": "https://docs.blender.org/manual/en/4.5/physics/rigid_body/properties/dynamics.html",
+      "publisher": "Blender Foundation",
+      "read_level": "搜索返回的完整Dynamics短章节；直接打开失败",
+      "supports": ["平移与转动阻尼", "休眠可能影响动态表现"],
+      "version_limit": "4.5概念参考"
+    },
+    {
+      "id": "blender-collision",
+      "url": "https://docs.blender.org/manual/id/4.5/physics/rigid_body/properties/collisions.html",
+      "publisher": "Blender Foundation",
+      "read_level": "搜索返回的Surface Response、Sensitivity、Collections段",
+      "supports": ["margin受碰撞形状影响", "摩擦与回弹的职责"],
+      "version_limit": "4.5概念参考，未替当前模型校准margin"
+    },
+    {
+      "id": "blender-spring",
+      "url": "https://docs.blender.org/manual/sr/4.5/physics/rigid_body/constraints/types/generic_spring.html",
+      "publisher": "Blender Foundation",
+      "read_level": "搜索返回的Generic Spring章节；直接打开失败",
+      "supports": ["限位与弹簧应配合", "弹簧阻尼不能按刚体阻尼简单互换"],
+      "version_limit": "4.5说明，不直接照搬其数值到不同spring_type"
+    },
+    {
+      "id": "blender-rigidbody-api",
+      "url": "https://docs.blender.org/UATEST/api/current/bpy.types.RigidBodyObject.html",
+      "publisher": "Blender Foundation",
+      "read_level": "搜索返回字段定义，重点mass、linear_damping、angular_damping、collision_margin",
+      "supports": ["刚体字段语义与数值范围"],
+      "version_limit": "在线current不替代本机RNA验证"
+    },
+    {
+      "id": "blender-bake",
+      "url": "https://docs.blender.org/UATEST/manual/en/4.5/physics/baking.html",
+      "publisher": "Blender Foundation",
+      "read_level": "搜索返回烘焙、缓存、修改参数和保存相关章节",
+      "supports": ["先缓存/烘焙再交付", "缓存状态与参数修改相关"],
+      "version_limit": "通用物理缓存说明，各求解器选项不完全相同"
+    },
+    {
+      "id": "blender-stability-tips",
+      "url": "https://docs.blender.org/manual/id/5.3/physics/rigid_body/tips.html",
+      "publisher": "Blender Foundation",
+      "read_level": "搜索返回Simulation Stability及Scaling章节",
+      "supports": ["小型快速碰撞体和缩放是排查点"],
+      "version_limit": "晚于本机5.2，未采用其界面和统一尺度数值"
+    },
+    {
+      "id": "mmdbridge-recommended-fork",
+      "url": "https://github.com/rintrint/mmdbridge",
+      "publisher": "rintrint / MMDBridge contributors",
+      "read_level": "从MMD Tools官方README链接实际进入，读取用户安装、格式和已知问题段",
+      "supports": ["可导出VMD/ABC", "与MME不能同时使用是作者列出的限制"],
+      "local_validation": "未下载、安装、运行或测试导入"
+    },
+    {
+      "id": "mmdbridge-guide",
+      "url": "https://github.com/rintrint/mmdbridge/blob/master/docs/how_to_use.md",
+      "publisher": "rintrint / MMDBridge contributors",
+      "read_level": "实际读取短用户指南正文，未观看页面外演示",
+      "supports": ["作者要求先验证模型", "运行导出和out目录职责"],
+      "local_validation": "候选流程研究，尚未建立本地命令"
+    },
+    {
+      "id": "mmdbridge-original",
+      "url": "https://github.com/uimac/mmdbridge",
+      "publisher": "uimac",
+      "read_level": "读取项目定位和构建依赖，用于辨别原始项目与当前推荐分支",
+      "supports": ["MMDBridge属于MMD侧工具而非Blender插件"],
+      "local_validation": "没有声称构建过"
+    },
+    {
+      "id": "wiggle-bones",
+      "url": "https://extensions.blender.org/add-ons/wiggle-bones/",
+      "publisher": "Hans_Xwh / Blender Extensions",
+      "read_level": "读取骨骼、碰撞、Pinning和Baking说明",
+      "supports": ["存在带预滚与骨骼烘焙的替代候选"],
+      "local_validation": "未安装或测后台/碰撞/骨骼层兼容，不替换已走通的原生PMX路线"
+    },
+    {
+      "id": "ulyssas-physics-tutorial-unread",
+      "url": "https://ulyssas.github.io/my_tutorials/9",
+      "publisher": "ulyssas",
+      "read_level": "访问失败，正文未读",
+      "supports": [],
+      "local_validation": "仅保留候选链接，不据其推导参数或操作"
+    }
+  ],
+  "next_experiments": [
+    {"id": "physics-role-audit", "status": "proposed-unrun", "scope": "原模型骨骼/刚体/关节/权重与衣发胸部分区映射，补齐参数快照"},
+    {"id": "native-short-clip-ab", "status": "proposed-unrun", "scope": "同一源动作10–15秒，起动急停转身抬臂与双人近身互动；一次只改一类参数"},
+    {"id": "breast-secondary-motion", "status": "proposed-unrun", "scope": "检查软约束依赖、自由度和重复驱动，服装约束下的小幅动态；未得到任何专门通过结果"},
+    {"id": "bridge-compatibility", "status": "proposed-unrun", "scope": "若原生约束仍限制效果，验证MMD侧求解到VMD/ABC的小段往返；先核对素材使用范围"}
+  ]
+}

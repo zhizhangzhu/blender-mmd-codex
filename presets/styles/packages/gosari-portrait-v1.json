@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "id": "gosari-portrait-v1",
+  "family": "gosari542",
+  "aspect": "portrait",
+  "render": "../render/gosari-soft-v1.json",
+  "post": "../post/gosari-soft-v1.json",
+  "typography": "../../typography/portrait-study.json",
+  "camera": {"strategy": "portrait", "lens_mm": 65, "dof": true, "fstop": 4},
+  "layout": {"sticker_width_height": 0, "border_height": 0, "border_inset_height": 0.016, "character_margin_height": 0.003125, "face_margin_height": 0.008333}
+}

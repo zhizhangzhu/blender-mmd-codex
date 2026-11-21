@@ -1,0 +1,21 @@
+{
+  "date": "2026-11-16",
+  "topic": "Goo migration, native NPR outputs and preset reuse",
+  "user_supplied_model_answer_treated_as": "claims to verify, not authoritative API documentation",
+  "sources_read": [
+    {"url": "https://github.com/dillongoostudios/goo-engine", "publisher": "DillonGoo Studios", "scope": "Goo-specific README section", "supports": "NPR fork, custom shader nodes and light groups"},
+    {"url": "https://raw.githubusercontent.com/dillongoostudios/goo-engine/goo-engine-main/source/blender/nodes/shader/nodes/node_shader_shader_info.cc", "scope": "entire 91-line node declaration and GPU interface"},
+    {"url": "https://raw.githubusercontent.com/dillongoostudios/goo-engine/goo-engine-main/source/blender/nodes/shader/nodes/node_shader_curvature.cc", "scope": "entire 65-line declaration and GPU interface; not entire GPU algorithm"},
+    {"url": "https://github.com/NaMgAl-Studio/goo-engine-5.2.0/releases/tag/GooBlender5.2.1_2026.9.12", "publisher": "NaMgAl-Studio", "scope": "release body and asset metadata; binary downloaded from this publisher's release", "official_dillongoo_binary": false},
+    {"url": "https://raw.githubusercontent.com/NaMgAl-Studio/goo-engine-5.2.0/main/source/blender/nodes/shader/nodes/node_shader_shader_info.cc", "scope": "entire 126-line declaration and forward-path flag/uniform selection; main may be newer than downloaded release"},
+    {"url": "https://raw.githubusercontent.com/NaMgAl-Studio/goo-engine-5.2.0/main/source/blender/gpu/shaders/material/gpu_shader_material_shader_info.glsl", "scope": "entire 30-line bridge entry, not complete underlying evaluation"},
+    {"url": "https://developer.blender.org/docs/release_notes/5.0/core/", "scope": "indexed file-format compatibility explanation, not full page"},
+    {"url": "https://mmdx.codingbot.kr/en/docs/mme/", "scope": "MME architecture and tested-effect compatibility sections; this is a separate app and was not installed"}
+  ],
+  "local_source_read": ["Goo packaged goo_engine_light_groups.py membership, synchronization and PropertyGroups", "MMD Tools import/registration paths", "Cafei preset transfer source", "Paper helper README and operator interfaces"],
+  "actually_tested": ["Local Goo 4.3.2 cannot open current 5.2 file", "Community Goo 5.2.1 opens and renders it", "All actions/curve coordinates and handles, mesh coordinates and five evaluated pose samples preserved", "Native half-lambert, cast-shadow and light-group primitive render", "21 character material hooks and actual portrait render", "PMX import and Cafei source-to-target material transfer", "Paper helper six add/remove operation pairs", "Isolated launcher path, add-on source path and camera RNA"],
+  "not_proven": ["PowerShader or Ray-MMD original execution in Goo", "A universal Blender/Goo MME runtime", "Complete equivalence to either MME shader", "Working Curvature Scene Rim in this pipeline; study was black", "Every MMR/other add-on feature", "Full-song physics", "User art approval"],
+  "video_or_subtitle_downloaded": false,
+  "production_profile": "presets/lighting/goo-wedding-v1.json",
+  "guide": "docs/GOO_ENGINE_MIGRATION.md"
+}

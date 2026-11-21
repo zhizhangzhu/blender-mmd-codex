@@ -1,0 +1,59 @@
+{
+  "id": "hesperides-bold-wedding-v1",
+  "source_sha256": "a86716008af6801f8518618ca48a2c3b728aee7d9efe04cd7314eca97f929c28",
+  "input_revision": "duet-guanhai-transfer-v1",
+  "intent": "Readable wedding portraits against saturated blue/gold light architecture, separate stage pools and rear beam fans; preserve the selected Hesperides hall.",
+  "source_frames": [4140, 4439],
+  "material_profile": "presets/quality/duet-bold-wedding-emission-v1.json",
+  "material_variant": "pilot",
+  "stage_lights": {
+    "Softlight | front soft fill": {"energy": 330},
+    "Softlight | hall ceiling bounce": {"energy": 1100},
+    "Softlight | overhead softbox": {"energy": 330},
+    "Focused light | cold window key": {"energy": 4200, "color": [0.15, 0.38, 1.0]},
+    "Focused light | warm altar": {"energy": 7400, "color": [1.0, 0.46, 0.12]},
+    "Focused light | warm vase accent": {"energy": 380, "color": [1.0, 0.50, 0.13]},
+    "Focused light | cool column accent": {"energy": 680, "color": [0.13, 0.42, 1.0]},
+    "Stage art | grounded backlight": {"energy": 2600, "color": [1.0, 0.87, 0.66]},
+    "Wedding | blue vow shaft": {"energy": 11000, "color": [0.12, 0.42, 1.0]},
+    "Wedding | gold vow shaft": {"energy": 10500, "color": [1.0, 0.59, 0.18]}
+  },
+  "foreground_gain": 0.56,
+  "actor_specular_rim": {"energy": 225, "blue": [0.22, 0.57, 1.0], "gold": [1.0, 0.65, 0.24]},
+  "beam_fans": {
+    "center": [0.0, 5.6, 2.5],
+    "scale": [4.5, 3.0, 2.5],
+    "density": 0.018,
+    "anisotropy": 0.42,
+    "watts": 650,
+    "volume_factor": 11.0,
+    "angle_degrees": 6.5,
+    "count_per_side": 3,
+    "blue": [0.09, 0.38, 1.0],
+    "gold": [1.0, 0.56, 0.13],
+    "sweep_metres": 0.16,
+    "sweep_period_seconds": 9.0
+  },
+  "vow_arcs": {
+    "y": 4.0,
+    "z": 1.48,
+    "radius_x": 1.35,
+    "radius_z": 1.65,
+    "offset_x": 0.55,
+    "thickness": 0.008,
+    "strength": 4.0,
+    "blue": [0.12, 0.53, 1.0, 1.0],
+    "gold": [1.0, 0.59, 0.17, 1.0]
+  },
+  "sparkles": {"count": 32, "seed": 542, "strength": 3.5, "radius_range": [0.009, 0.021]},
+  "actor_glow": {"threshold": 0.75, "strength": 0.20, "size": 0.018},
+  "fx_glow": {"threshold": 1.15, "strength": 0.22, "size": 0.026},
+  "bake_stage_bounce": true,
+  "limits": [
+    "Wedding lighting reference supplied by the user is used as design guidance, not measured real-world lamp settings",
+    "The fixed character key/shadow calibration is preserved; new back/rim lights have no diffuse contribution to NPR probes",
+    "Emission and AOV halos are artistic sources, not proof of actual illumination of neighbouring geometry",
+    "New beam volume starts at y2.6 behind the duet; original hall remains the stage",
+    "Only the specified five-second landscape clip is validated; no new choreography, full-song render or physics bake"
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "guanhaizi-graphic-post-v1",
+  "grade": {"rgb_gain": [1.02, 0.97, 1.04], "saturation": 1.05, "mix": 0.35},
+  "background": {"mode": "argyle", "colors": [[0.99, 0.81, 0.89], [1.0, 0.94, 0.97]], "period_height": 0.16, "particles": 24, "accent": [1, 1, 1]},
+  "sticker_rgb": [1, 0.985, 1],
+  "border_rgb": [1, 1, 1],
+  "vignette": 0,
+  "typography": {"tint_srgb": [0.26, 0.13, 0.48], "opacity": 0.98, "stroke_rgb": [1, 0.96, 1], "glow_rgb": [0.95, 0.73, 0.9], "glow_strength": 0.025}
+}

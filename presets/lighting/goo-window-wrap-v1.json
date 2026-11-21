@@ -1,0 +1,241 @@
+{
+  "id": "goo-window-wrap-v1",
+  "source": "D:\\codex\\output\\MMD-Goo-Window-Wrap-v1\\production-v1\\Franken_Duet_Goo_Window_Wrap.blend",
+  "source_sha256": "72fad1e734a79df11b716deca02f841c1a11c47d7029b81a167351f796aed0a6",
+  "project": "D:\\codex\\output\\MMD-Goo-Window-Wrap-v1\\production-v3\\Franken_Duet_Goo_Window_Wrap.blend",
+  "project_sha256": "ed81e7325e7ef3f47fe80dd63b53e1e0e713f7d2b93b9dd4e6e296195a350d85",
+  "changes": {
+    "hidden_narrow_shafts": [
+      "Goo Tyndall v2 | window shaft 0",
+      "Goo Tyndall v2 | window shaft 1",
+      "Goo Tyndall v2 | shaft divider 0",
+      "Goo Tyndall v2 | shaft divider 1"
+    ],
+    "materials": [
+      {
+        "material": "前装饰",
+        "width_power_before": 3.799999952316284,
+        "width_power_after": 1.850000023841858,
+        "hair_band_strengthened": false,
+        "new_aov": "WindowWrapRim"
+      },
+      {
+        "material": "前鬓",
+        "width_power_before": 3.4000000953674316,
+        "width_power_after": 1.5499999523162842,
+        "hair_band_strengthened": true,
+        "new_aov": "WindowWrapRim"
+      },
+      {
+        "material": "后装饰",
+        "width_power_before": 3.799999952316284,
+        "width_power_after": 1.850000023841858,
+        "hair_band_strengthened": false,
+        "new_aov": "WindowWrapRim"
+      },
+      {
+        "material": "呆毛",
+        "width_power_before": 3.4000000953674316,
+        "width_power_after": 1.5499999523162842,
+        "hair_band_strengthened": true,
+        "new_aov": "WindowWrapRim"
+      },
+      {
+        "material": "头饰",
+        "width_power_before": 3.799999952316284,
+        "width_power_after": 1.850000023841858,
+        "hair_band_strengthened": false,
+        "new_aov": "WindowWrapRim"
+      },
+      {
+        "material": "带子",
+        "width_power_before": 4.5,
+        "width_power_after": 1.850000023841858,
+        "hair_band_strengthened": false,
+        "new_aov": "WindowWrapRim"
+      },
+      {
+        "material": "帽",
+        "width_power_before": 3.799999952316284,
+        "width_power_after": 1.850000023841858,
+        "hair_band_strengthened": false,
+        "new_aov": "WindowWrapRim"
+      },
+      {
+        "material": "披肩",
+        "width_power_before": 3.799999952316284,
+        "width_power_after": 1.850000023841858,
+        "hair_band_strengthened": false,
+        "new_aov": "WindowWrapRim"
+      },
+      {
+        "material": "毛领",
+        "width_power_before": 4.400000095367432,
+        "width_power_after": 1.850000023841858,
+        "hair_band_strengthened": false,
+        "new_aov": "WindowWrapRim"
+      },
+      {
+        "material": "腿",
+        "width_power_before": 3.799999952316284,
+        "width_power_after": 1.850000023841858,
+        "hair_band_strengthened": false,
+        "new_aov": "WindowWrapRim"
+      },
+      {
+        "material": "衣",
+        "width_power_before": 3.799999952316284,
+        "width_power_after": 1.850000023841858,
+        "hair_band_strengthened": false,
+        "new_aov": "WindowWrapRim"
+      },
+      {
+        "material": "衣.001",
+        "width_power_before": 3.799999952316284,
+        "width_power_after": 1.850000023841858,
+        "hair_band_strengthened": false,
+        "new_aov": "WindowWrapRim"
+      },
+      {
+        "material": "衣2",
+        "width_power_before": 3.799999952316284,
+        "width_power_after": 1.850000023841858,
+        "hair_band_strengthened": false,
+        "new_aov": "WindowWrapRim"
+      },
+      {
+        "material": "衣领",
+        "width_power_before": 4.199999809265137,
+        "width_power_after": 1.850000023841858,
+        "hair_band_strengthened": false,
+        "new_aov": "WindowWrapRim"
+      },
+      {
+        "material": "裙",
+        "width_power_before": 3.799999952316284,
+        "width_power_after": 1.850000023841858,
+        "hair_band_strengthened": false,
+        "new_aov": "WindowWrapRim"
+      },
+      {
+        "material": "裙.001",
+        "width_power_before": 4.199999809265137,
+        "width_power_after": 1.850000023841858,
+        "hair_band_strengthened": false,
+        "new_aov": "WindowWrapRim"
+      },
+      {
+        "material": "鬓",
+        "width_power_before": 3.4000000953674316,
+        "width_power_after": 1.5499999523162842,
+        "hair_band_strengthened": true,
+        "new_aov": "WindowWrapRim"
+      },
+      {
+        "material": "鬓.001",
+        "width_power_before": 3.4000000953674316,
+        "width_power_after": 1.5499999523162842,
+        "hair_band_strengthened": true,
+        "new_aov": "WindowWrapRim"
+      }
+    ],
+    "window_lights": [
+      {
+        "name": "Goo window wrap | large window 0",
+        "type": "AREA",
+        "position": [
+          -16.25,
+          28.8,
+          10.7
+        ],
+        "dimensions": [
+          6.1,
+          14
+        ],
+        "energy": 42000
+      },
+      {
+        "name": "Goo window wrap | large window 1",
+        "type": "AREA",
+        "position": [
+          16.65,
+          29.1,
+          10.7
+        ],
+        "dimensions": [
+          6.1,
+          14
+        ],
+        "energy": 18000
+      },
+      {
+        "name": "Goo window wrap | parallel window daylight",
+        "type": "SUN",
+        "source_direction": [
+          -0.45390060544013977,
+          0.8013238906860352,
+          0.38968488574028015
+        ],
+        "energy": 3.200000047683716,
+        "angle": 0.03500000014901161
+      }
+    ],
+    "glows": [
+      {
+        "label": "tight white edge bloom",
+        "strength": 0.85,
+        "threshold": 0.18,
+        "size": 0.018,
+        "source": "WindowWrapRim"
+      },
+      {
+        "label": "soft outer edge diffusion",
+        "strength": 0.25,
+        "threshold": 0.8,
+        "size": 0.045,
+        "source": "WindowWrapRim"
+      }
+    ]
+  },
+  "window_basis": "Surveyed glass mat_89.001 at x approx ±16.5; front side window spans y25.6-32.0, z3.5-19.0; window-sized area fills and common directional sun, no near-camera cone pair",
+  "volume_bounds": [
+    [
+      -8,
+      1,
+      0.05
+    ],
+    [
+      8,
+      16,
+      11.95
+    ]
+  ],
+  "volume_density": 0.0025,
+  "guide": "docs/GOO_BROAD_WINDOW_AND_STRONG_RIM.md",
+  "shadow_pool": {
+    "before": "1536",
+    "after": "2048",
+    "resolution_limits": [
+      {
+        "light": "Goo window wrap | parallel window daylight",
+        "before": 0.0010000000474974513,
+        "after": 0.004999999888241291,
+        "use_shadow": true
+      },
+      {
+        "light": "Goo window wrap | large window 0",
+        "before": 0.0010000000474974513,
+        "after": 0.009999999776482582,
+        "use_shadow": true
+      },
+      {
+        "light": "Goo window wrap | large window 1",
+        "before": 0.0010000000474974513,
+        "after": 0.009999999776482582,
+        "use_shadow": true
+      }
+    ],
+    "reason": "Actual render log Shadow buffer full, 6600-7700+ pages requested for6144; raise pool and bound broad window shadow texel precision; actor key lamps and art graph unchanged",
+    "abandoned_partial_frames": 67
+  }
+}

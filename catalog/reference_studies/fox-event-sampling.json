@@ -1,0 +1,67 @@
+{
+  "schema_version": 1,
+  "id": "fox-event-sampling",
+  "title": "观海子小狐狸：局部事件取帧练习",
+  "kind": "video",
+  "status": "draft",
+  "source": {
+    "path": "D:\\JiJiDownload\\【鸣潮MMD】亲亲小狐狸！「露帕×女漂」\\1.【鸣潮MMD】亲亲小狐狸！「露帕×女漂」(Av114895777436699,P1).mp4",
+    "sha256": "d1b9d4d70922aede9520ad3f7579ffc1e0c7ab442f94f17b81a0f6051dfc2cf2"
+  },
+  "intent": {
+    "borrow": [
+      "后续研究动作与焦点的局部变化"
+    ],
+    "preserve": [
+      "用户作品自己的角色、舞台和范围"
+    ]
+  },
+  "observations": [],
+  "hypotheses": [],
+  "targets": [],
+  "shots": [
+    {
+      "id": "around-19s",
+      "start_seconds": 19.2,
+      "end_seconds": 19.8,
+      "sample_times": [
+        19.2,
+        19.5,
+        19.8
+      ],
+      "events": [
+        {
+          "time_seconds": 19.5,
+          "description": "已知参考帧附近的采样中心，事件性质待实际观察"
+        }
+      ],
+      "review": {
+        "continuous": false,
+        "scope": "首期只验证取帧，尚未连续审看本段"
+      }
+    }
+  ],
+  "implementation": {
+    "status": "unstarted",
+    "recipe_refs": [],
+    "evidence": []
+  },
+  "review": {
+    "art_status": "pending",
+    "user_feedback_provenance": null
+  },
+  "media_review": {
+    "audio": {
+      "status": "not_reviewed",
+      "scope": ""
+    },
+    "transcript": {
+      "status": "not_reviewed",
+      "scope": ""
+    }
+  },
+  "limits": [
+    "复用已缓存本地源，不下载新视频",
+    "局部三张帧仅验证工具，不认证动态质量或整段理解"
+  ]
+}

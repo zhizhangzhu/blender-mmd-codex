@@ -1,0 +1,70 @@
+{
+  "id": "duet-clean-game-v1",
+  "status": "verified-five-second-review-art-pending",
+  "project": "D:\\codex\\output\\MMD-Clean-Game-Characters-v1\\production-v2\\Franken_Duet_Clean_Game.blend",
+  "project_sha256": "0ec95ee7162512ffc405a2a7337b355caf62cd993b3d8302886ee59e1561d9d4",
+  "source": "D:\\codex\\output\\MMD-Aksiniya-Ikhor-Wedding-v1\\production-v7\\Franken_Aksiniya_Ikhor_Bold_Wedding.blend",
+  "source_sha256": "f9442577a61a2c1cc4f39442e4468d42f13d42311fdd9f9e9616d165d40ea692",
+  "video": "D:\\codex\\output\\MMD-Clean-Game-Characters-v1\\captions-5s\\Franken_Duet_5s_CleanGame_Wedding_REVIEW.mp4",
+  "without_captions_video": "D:\\codex\\output\\MMD-Clean-Game-Characters-v1\\captions-5s\\Franken_Duet_5s_CleanGame_NoCaptions.mp4",
+  "performers": {
+    "aksiniya": "Full HimeTanaka",
+    "ikhor": "Full HinaSuzuki"
+  },
+  "source_frames": [
+    4140,
+    4439
+  ],
+  "frames": 300,
+  "fps": 60,
+  "seconds": 5,
+  "resolution": [
+    1920,
+    1080
+  ],
+  "caption_cache": "D:\\codex\\temp\\MMD-Clean-Game-Characters-v1\\final-cache",
+  "audio_start_seconds": 68.98333333333333,
+  "audio_gain": 0.87,
+  "character_profiles": [
+    "presets/quality/aksiniya-clean-game-v1.json",
+    "presets/quality/ikhor-clean-game-v1.json"
+  ],
+  "project_profile": "presets/projects/franken-duet-full-v1.json",
+  "caption_profile": "presets/typography/duet-blue-gold-wedding-v1.json",
+  "stage_profile": "presets/stages/hesperides-bold-wedding-v1.json",
+  "static_proofs": {
+    "production-v1/master-verification.json": "e4b658fb6a4e9d7132ea6207d732ba8e3282df8f2bd1045311f55f4835f8cb23",
+    "production-v2/master-verification.json": "37a183d210a010c800d783dd76f64f0c191c1c13d8491fea467959ec71cf24c0"
+  },
+  "diagnostics": "diagnostic-review/diagnostics-verification.json",
+  "native_manifest": "native-5s/chunks.json",
+  "arcs_hidden": true,
+  "physics_changed": false,
+  "physical_validation_frames": [
+    4139,
+    4441
+  ],
+  "old_beauty_reused": false,
+  "full_song_complete": false,
+  "user_art_approval": false,
+  "output_color_contract": {
+    "input": "Full-range display sRGB RGB24",
+    "matrix": "bt709",
+    "primaries": "bt709",
+    "transfer": "iec61966-2-1",
+    "range": "tv",
+    "hdr": false,
+    "meaning": "SDR PC-review output, preserving source sRGB transfer; not a Rec.709/BT.1886 grading master"
+  },
+  "limits": [
+    "仅原帧4140–4439、1080p60的五秒；技术通过，美术待猪猪评价，全曲未完成。",
+    "两份本地参考各实际检查四张清晰帧，未完整连续观看；作者Shader/MME未知，女性正式角色名与原作者未独立核定。",
+    "321项人物材质检查与26项去弧增量检查为两级独立证据；袖修/动作继承4139–4441范围，未新增物理或零碰撞认证。",
+    "仅隐藏两道蓝金弧，数据保留可逆；Probe未重烘，内部缓存负载未另作独立认证。",
+    "缺失作者自改y1脸图，继续原FaceDiffuse回退；完整体积阴影未开启，可见光束含美术Emission。",
+    "旧beauty/actor与旧视频未复用；人工仅覆盖manual-review列明抽样，不称300帧美术逐帧批准或风格达标。",
+    "Manual inspection is sampled still review, not continuous viewing of every final frame or every edge. Geometry contacts at cuff openings remain outside zero-collision certification; no new physics simulation in this material-only iteration.",
+    "Broad female crown highlight, some locally white gold reflection and relatively ochre male hair sides remain; central haze and cyan ornaments are still strong. Exact game/author style parity is not established.",
+    "User art approval pending; complete song remains undelivered."
+  ]
+}

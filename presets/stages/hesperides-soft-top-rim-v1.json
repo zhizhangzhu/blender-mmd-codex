@@ -1,0 +1,119 @@
+{
+  "id": "hesperides-soft-top-rim-v1",
+  "reference": "https://www.bilibili.com/video/BV1PPgpzLEdb/",
+  "intent": "Raise the hall's dark regions with broad soft light, while adding overhead shape and a warm rear rim. Local interpretation, not author settings.",
+  "world_strength": 0.3,
+  "stage_albedo_gain": [
+    0.96,
+    0.97,
+    1.0,
+    1.0
+  ],
+  "areas": [
+    {
+      "name": "overhead softbox",
+      "location": [
+        0,
+        0.5,
+        7
+      ],
+      "target": [
+        0,
+        0.5,
+        0
+      ],
+      "watts": 450,
+      "color": [
+        0.82,
+        0.91,
+        1
+      ],
+      "size": 6,
+      "receivers": "all"
+    },
+    {
+      "name": "hall ceiling bounce",
+      "location": [
+        0,
+        12,
+        12
+      ],
+      "target": [
+        0,
+        25,
+        3
+      ],
+      "watts": 3000,
+      "color": [
+        0.86,
+        0.92,
+        1
+      ],
+      "size": 14,
+      "receivers": "stage"
+    },
+    {
+      "name": "front soft fill",
+      "location": [
+        0,
+        -7,
+        7
+      ],
+      "target": [
+        0,
+        12,
+        2
+      ],
+      "watts": 1300,
+      "color": [
+        1,
+        0.93,
+        0.85
+      ],
+      "size": 12,
+      "receivers": "stage"
+    },
+    {
+      "name": "warm rear edge",
+      "location": [
+        -3,
+        3.5,
+        5
+      ],
+      "target": [
+        0,
+        0,
+        1.3
+      ],
+      "watts": 700,
+      "color": [
+        1,
+        0.72,
+        0.59
+      ],
+      "size": 3,
+      "receivers": "actors"
+    }
+  ],
+  "toon_rim": {
+    "location": [
+      -3,
+      3.5,
+      5
+    ],
+    "color": [
+      1,
+      0.83,
+      0.68,
+      1
+    ],
+    "hair_gain": 1.0,
+    "body_gain": 0.38,
+    "narrow_power": 4
+  },
+  "limits": [
+    "This five-second horizontal duet only",
+    "Actor rim combines physical specular with an explicitly art-directed NPR edge; facial skin and ink excluded",
+    "Preserve fixed official caption groups and native camera/physics"
+  ]
+}

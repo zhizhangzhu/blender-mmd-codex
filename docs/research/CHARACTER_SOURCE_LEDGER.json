@@ -1,0 +1,150 @@
+{
+  "schema_version": 1,
+  "reviewed_at": "2026-11-13",
+  "timezone": "Asia/Shanghai",
+  "purpose": "人物三渲二质量复审；记录读取范围、事实与推断，不将阅读或静帧实验晋升为生产兼容或参考级质量",
+  "new_render_performed_in_this_review": false,
+  "new_bilibili_transcript_obtained": false,
+  "sources": [
+    {
+      "id": "kuro-epic-interview-2024",
+      "title": "Exploring the post-apocalyptic charm of ASG open worlds in Wuthering Waves",
+      "url": "https://www.unrealengine.com/developer-interviews/exploring-the-post-apocalyptic-charm-of-asg-open-worlds-in-wuthering-waves",
+      "publisher": "Epic Games / Kuro Games受访者",
+      "source_type": "game_developer_primary_interview",
+      "published_at": "2024-05-21",
+      "accessed_at": "2026-11-13",
+      "read_scope": "实际读取正文中人物与环境协调、独立人物照明、渐变／遮罩、表演光影与特殊脸影段落；没有取得引擎源码或节点",
+      "supported_claims": ["独立人物照明仍需与环境匹配", "渐变与表演脸影需要美术设计"],
+      "does_not_prove": ["当前版本的全部游戏渲染实现", "Blender节点或具体参数", "Gosari542或观海子采用相同实现"]
+    },
+    {
+      "id": "festivities-genshin-library",
+      "title": "Blender-miHoYo-Shaders README",
+      "url": "https://github.com/festivities/Blender-miHoYo-Shaders",
+      "publisher": "festivities",
+      "source_type": "community_implementation_author_primary",
+      "accessed_at": "2026-11-13",
+      "read_scope": "实际读取README用途、配置、预览说明、许可和局限；网页显示2025-07-21归档",
+      "supported_claims": ["主要面向游戏数据，MMD变体不能保证直接适用", "预览含后期，作者也不保证百分百游戏还原"],
+      "local_prior_audit": "docs/GENSHIN_CHARACTER_AND_PRESETS.md",
+      "does_not_prove": ["原神官方Shader源码", "全部节点已在本机Blender 5.2运行通过"]
+    },
+    {
+      "id": "goo-official-readme",
+      "title": "Goo Engine README",
+      "url": "https://github.com/dillongoostudios/goo-engine",
+      "publisher": "DillonGoo Studios",
+      "source_type": "engine_author_primary",
+      "accessed_at": "2026-11-13",
+      "read_scope": "实际读取原仓库README关于源码修改、EEVEE自定义节点和Light Groups的说明；没有下载或运行引擎",
+      "supported_claims": ["Goo属于独立Blender构建，不能当普通扩展安装"],
+      "does_not_prove": ["用户磁盘压缩包可直接打开当前5.2制作工程", "第三方移植版与原作者构建等价", "Goo已经安装或取得生产收益"]
+    },
+    {
+      "id": "blender-emission",
+      "title": "Emission — Blender 4.4 Manual",
+      "url": "https://docs.blender.org/manual/en/4.4/render/shader_nodes/shader/emission.html",
+      "publisher": "Blender Foundation",
+      "source_type": "official_documentation",
+      "accessed_at": "2026-11-13",
+      "read_scope": "搜索结果返回完整节点说明；直接打开部分版本手册受限。用于Emission基本概念，本机API另以已验证5.2链路为准",
+      "supported_claims": ["Emission强度1可输出输入颜色的无阴影表面；上游可先计算NPR颜色"],
+      "does_not_prove": ["EEVEE emissive网格自动成为完整动态灯光", "角色恒亮就能达到游戏级质量"]
+    },
+    {
+      "id": "blender-shader-to-rgb",
+      "title": "Shader To RGB — Blender Manual",
+      "url": "https://docs.blender.org/manual/id/5.3/render/shader_nodes/color/shader_to_rgb.html",
+      "publisher": "Blender Foundation",
+      "source_type": "official_documentation",
+      "accessed_at": "2026-11-13",
+      "read_scope": "搜索结果返回节点正文、EEVEE专属与pass／后期组合局限；若干5.1/4.5直接链接不可访问。该页版本是5.3，不当作本机5.2完整兼容保证",
+      "supported_claims": ["BSDF加实际灯光可转换为颜色以制作NPR", "需要验证采样、透明与pass组合局限"],
+      "does_not_prove": ["当前受光探针是阴影专用pass", "Shader to RGB在Cycles可用"]
+    },
+    {
+      "id": "genshin-gdc-2021-unread",
+      "title": "Genshin Impact — Haoyu Cai, GDC 2021 presentation",
+      "url": "https://media.gdcvault.com/GDC%2B2021/2021GDC%2B_%2BHaoyu%2BCai%2B_%2Bpresentation%2Bfile.pdf",
+      "publisher": "GDC Vault / 原演讲者",
+      "source_type": "game_developer_primary_presentation",
+      "accessed_at": "2026-11-13",
+      "read_scope": "仅搜索索引；直接打开返回403，没有读取全文、图表或演讲音频",
+      "supported_claims": [],
+      "status": "retrieval_blocked_not_learned",
+      "next_action": "若能通过正常作者／会议访问渠道取得正文，再记录页码和实际学习范围；不依索引补造官方算法"
+    },
+    {
+      "id": "latest-duet-evidence",
+      "title": "最新人物自阴影与描边研究的本机证据",
+      "source_type": "local_implementation_and_reports_reviewed",
+      "accessed_at": "2026-11-13",
+      "paths": [
+        "docs/SHADOW_GROUNDING_AND_PLAYBACK_COLOR.md",
+        "scripts/prepare_graphic_self_shadows.py",
+        "scripts/integrate_light_space.py",
+        "scripts/diagnose_actor_light.py",
+        "presets/quality/duet-graphic-self-shadow-v1.json",
+        "D:/codex/output/MMD-Duet-Shadow-Color-v1/delivery.json",
+        "D:/codex/output/MMD-Duet-Shadow-Color-v1/production-v3/grounded-4290.png"
+      ],
+      "read_scope": "复查源码、参数、交付JSON并实际查看4290原生PNG；没有在本轮重开Blender或重新渲染",
+      "artifact_sha256_from_report": "ea72afadbeff7aae5eb47e9d976555ca33bf324d0f884afc217d68fc7d8b21fb",
+      "technical_scope": "5秒横屏1080p60、300帧，SDF＋受控真实受光、加粗反壳、地面接触；非全曲",
+      "user_art_status": "用户最新反馈人物三渲二仍需提升；技术通过不表示美术认可",
+      "limitations": ["探针测综合受光，非纯主灯可见性", "阈值依赖当前光照预算", "最新链路尚未重跑完整三轴72帧诊断"]
+    },
+    {
+      "id": "wuwa-local-hair-audit",
+      "title": "用户鸣潮发丝预设的本机输入审计",
+      "source_type": "local_prior_experiment_reaudited",
+      "accessed_at": "2026-11-13",
+      "paths": [
+        "docs/WUWA_TOON_STUDY.md",
+        "scripts/wuwa_hair_input_lab.py",
+        "D:/codex/output/Stage-Art-Wuwa-Study-v1/wuwa-hair-v1/hair-study.json"
+      ],
+      "read_scope": "实际读取报告的两份发材质输入和所有图片色彩空间／Alpha模式；复查实验脚本与旧笔记",
+      "observed_connections": {"group_HM": "_HN图片Color", "group_HN": "_HM图片Color"},
+      "technical_scope": "原预设自带模型的三张静帧开关；当前双人未完成移植和动态测试",
+      "does_not_prove": ["这些缩写的普遍游戏语义", "交换连接就是修复", "原神Lightmap可直接替代此处输入"]
+    },
+    {
+      "id": "gosari-local-reference",
+      "title": "Gosari542《哥伦比娅 Pretty Girl》",
+      "url": "https://www.bilibili.com/video/BV1nCWH6dEp9/",
+      "source_type": "visual_reference_not_shader_source",
+      "accessed_at": "2026-11-13",
+      "paths": [
+        "docs/GOSARI_REFERENCE.md",
+        "D:/codex/output/blender-mmd-codex/gosari-pretty-girl-reference-v001/frame-02-02.867s.png"
+      ],
+      "read_scope": "复读既有观察并再次查看本地2.867秒帧；非新下载或完整观看",
+      "observed_features": ["深发体块与分束亮带", "明亮白衣保留偏冷形体暗部", "眉眼与浅肤色分开"],
+      "does_not_prove": ["作者引擎、节点、灯位或官方游戏算法"]
+    },
+    {
+      "id": "guanhaizi-local-reference",
+      "title": "观海子《亲亲小狐狸》",
+      "url": "https://www.bilibili.com/video/BV1PPgpzLEdb/",
+      "source_type": "visual_reference_not_shader_source",
+      "accessed_at": "2026-11-13",
+      "paths": [
+        "docs/GUANHAIZI_REFERENCE.md",
+        "D:/codex/temp/Fox-Cinema-Deep-v2/reference/stage-entry-19.500.png"
+      ],
+      "read_scope": "复读既有观察并再次查看本地19.500秒全身帧；非新取得平台字幕或完整逐镜观看",
+      "observed_features": ["舞台色与人物亮边", "斜向地面投影及支撑／抬脚空间关系"],
+      "credit_scope": "原笔记记录投稿者观海子、简介另列黑煤球后期；不将所有效果归于同一人",
+      "does_not_prove": ["原灯数、焦距、阴影参数或渲染引擎"]
+    }
+  ],
+  "review_rules": [
+    "官方游戏说明、社区复现、原作者教程、本机实现和画面观察分别记录",
+    "不访问登录凭据、购买或绕过素材门槛",
+    "不把搜索摘要、OCR采样或自动ASR写成完整阅读／平台字幕",
+    "新方法必须经过同角色同条件A/B、三轴动态与正式场景检查后才晋升预设",
+    "最新用户美术反馈优先于旧文档的当轮完成描述"
+  ]
+}

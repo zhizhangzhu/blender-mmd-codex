@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "id": "guanhaizi-neon-render-v1",
+  "reference_status": "Inspired by Kiss Kitsune stage frames; not an original scene reconstruction",
+  "ramp_interpolation": "EASE",
+  "ramp_positions": [0.06, 0.55],
+  "palette": {
+    "skin": [[0.92, 0.81, 1.07], [1.08, 1.02, 1.18]],
+    "eye": [[1.00, 0.96, 1.04], [1.07, 1.03, 1.09]],
+    "ink": [[0.39, 0.28, 0.53], [0.60, 0.44, 0.71]],
+    "hair": [[0.34, 0.27, 0.66], [0.96, 0.89, 1.12]],
+    "trim": [[0.47, 0.30, 0.65], [1.09, 0.93, 1.03]],
+    "cloth": [[0.34, 0.26, 0.65], [1.00, 0.88, 1.09]],
+    "fur": [[0.65, 0.53, 0.85], [1.03, 0.94, 1.10]]
+  },
+  "saturation": {"skin": 0.82, "eye": 1.14, "ink": 1.08, "hair": 1.13, "trim": 1.13, "cloth": 1.15, "fur": 1.06},
+  "value": {"skin": 1.05},
+  "edge_rgb": [0.19, 0.09, 0.32],
+  "edge_width_scale": 0.95,
+  "lights": {
+    "Key softbox": {"color": [1.0, 0.69, 0.89], "energy": 170},
+    "Tutorial | rim light": {"color": [0.80, 0.33, 1.0], "energy": 160}
+  },
+  "bloom": {"Threshold": 0.70, "Strength": 0.22, "Size": 0.11}
+}

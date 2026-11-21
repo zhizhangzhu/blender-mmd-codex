@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "roles": {
+    "supervisor": {"model": "gpt-6.1-sol", "reasoning_effort": "xhigh"},
+    "executor": {"model": "gpt-6.1-sol", "reasoning_effort": "low"}
+  },
+  "session_model_roles": {
+    "note": "猪猪2026-11-22：按当前会话实际所用模型族选择档位；roles为GPT默认值，供任务包推荐使用。",
+    "gpt-6.1-sol": {"supervisor": "xhigh", "executor": "low"},
+    "claude-opus-5.5": {"supervisor": "high", "executor": "low"},
+    "gemini-4-neon": {"supervisor": "high", "executor": "low"}
+  },
+  "task_kinds": {
+    "intent_and_design": "supervisor",
+    "reference_analysis": "supervisor",
+    "technical_learning": "supervisor",
+    "architecture": "supervisor",
+    "complex_debugging": "supervisor",
+    "art_review": "supervisor",
+    "integration_review": "supervisor",
+    "frame_extraction": "executor",
+    "data_preparation": "executor",
+    "bounded_implementation": "executor",
+    "run_checks": "executor"
+  },
+  "escalation": {
+    "max_attempts": 2,
+    "conditions": [
+      "输入与约定不符，或需要改变技术路线／美术目标",
+      "无法解释失败原因、出现跨模块冲突或触及未授权写入路径",
+      "需要新的复杂技术判断或参考／美术取舍",
+      "达到任务重试上限；交回证据，由主控重新判断"
+    ]
+  },
+  "principles": [
+    "主控亲自学习关键原理、分析参考、确定方案并验收",
+    "执行者仅接明确输入、所有权、输出及验收的任务",
+    "单产物单编辑者；仅对独立任务并行派发",
+    "推荐配置不等于实际运行；由当前会话工具核可用模型并记录实际派发",
+    "不切换主聊天模型、不修改全局配置、不自动调用付费API",
+    "未知耗时与费用保留null；技术通过与用户认可分开"
+  ]
+}

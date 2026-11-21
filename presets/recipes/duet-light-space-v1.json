@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "id": "duet-light-space-v1",
+  "kind": "verified-project-recipe",
+  "status": "five-second-review-sample; user aesthetic feedback pending",
+  "engine": "Blender 5.2.2 / EEVEE",
+  "quality_component": "../quality/duet-light-space-v1.json",
+  "source_project": "D:\\codex\\output\\MMD-Quality-Integration-v1\\production-v4\\Franken_Duet_Quality_Master.blend",
+  "sample": "D:\\codex\\output\\MMD-Quality-Integration-v1\\sample-5s-v2\\Aether_Duet_5s_REVIEW.mp4",
+  "sample_frames": [
+    4140,
+    4439
+  ],
+  "fps": 60,
+  "resolution": [
+    1920,
+    1080
+  ],
+  "native_scenes": [
+    "Quality | native actor RGBA",
+    "Quality | clean stage"
+  ],
+  "linear_archive": "D:\\codex\\output\\MMD-Quality-Integration-v1\\linear-sequence-v2",
+  "linear_parts": {
+    "RawBeauty": "16-bit float RGBA before creative compositor grade",
+    "FinalLinear": "16-bit float RGBA after creative grade, before display transform",
+    "ActorMask": "32-bit float value"
+  },
+  "limits": [
+    "Specific Genshin duet and supplied material inputs",
+    "Native actor/stage split plus signed interaction tested at five frames; full sample archives beauty/final/mask",
+    "Interaction must be rerendered after geometry or lighting changes",
+    "Not full-song verification or a completed personal signature style"
+  ]
+}

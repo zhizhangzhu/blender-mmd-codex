@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "families": {
+    "gosari542": {
+      "label": "Gosari542 参考方向：柔光暖色舞台",
+      "variants": {"soft": ["packages/gosari-portrait-v1.json", "packages/gosari-landscape-v1.json"]}
+    },
+    "guanhaizi": {
+      "label": "观海子参考方向",
+      "variants": {
+        "graphic": ["packages/guanhaizi-graphic-portrait-v1.json", "packages/guanhaizi-graphic-landscape-v1.json"],
+        "neon": ["packages/guanhaizi-neon-portrait-v1.json", "packages/guanhaizi-neon-landscape-v1.json"]
+      }
+    }
+  },
+  "personal_style_policy": "Future custom families derive from versioned components, with their own reference and validation records. No personal signature style is claimed as complete."
+}

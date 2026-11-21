@@ -1,0 +1,55 @@
+{
+  "source": "D:\\codex\\output\\MMD-Citlali-Fringe-Shadow-v1\\production-v2\\Franken_Citlali_Fringe_Shadow_Still.blend",
+  "source_sha256": "3a81d73083061c76b0a1e85be63c7663e60b49e70075dd1fa21a567c68e13990",
+  "project": "D:\\codex\\output\\MMD-Citlali-Fringe-Shadow-v1\\production-v3\\Franken_Citlali_Fringe_Shadow_Still.blend",
+  "project_sha256": "10dcd973b57b24f8db99b8d250e8acd957171ef0b0cd7bef805e00a6314d7574",
+  "scope": "Static4290 only; narrow frontal artistic contact-shadow, not author original shader; no video",
+  "reference_local_time_seconds": 8,
+  "pose_hash": "556eef476f7006ca214ab98d2fb3b7a63dfd774fb4998c21d2fb134094af37a5",
+  "poses_preserved": true,
+  "actors": [
+    {
+      "actor": "aksiniya",
+      "valid_face_texels": 131550,
+      "shadowed_texels": 79213,
+      "resolution": 512,
+      "shadow_direction_local": [
+        1,
+        0.2,
+        -0.06
+      ]
+    },
+    {
+      "actor": "ikhor",
+      "valid_face_texels": 122299,
+      "shadowed_texels": 68284,
+      "resolution": 512,
+      "shadow_direction_forward_up_right": [
+        1,
+        0.35,
+        -0.06
+      ]
+    }
+  ],
+  "independent_reopen_passed": true,
+  "per_actor": {
+    "aksiniya": {
+      "up": 0.2,
+      "shadow_multiplier": [
+        1,
+        0.64,
+        0.38
+      ],
+      "mask_origin": "production-v1"
+    },
+    "ikhor": {
+      "up": 0.35,
+      "shadow_multiplier": [
+        0.98,
+        0.53,
+        0.25
+      ],
+      "mask_origin": "production-v2"
+    }
+  }
+}

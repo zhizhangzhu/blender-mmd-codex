@@ -1,0 +1,40 @@
+{
+  "id": "duet-blue-gold-wedding-v1",
+  "status": "verified-five-second-study",
+  "user_art_approval": false,
+  "project": "D:\\codex\\output\\MMD-Duet-Blue-Gold-Wedding-v1\\production-v4\\Franken_Duet_Blue_Gold_Wedding.blend",
+  "source": "D:\\codex\\output\\MMD-Duet-Soft-Top-Rim-v1\\production-v2\\Franken_Duet_Soft_Top_Rim.blend",
+  "stage_profile": "presets/stages/hesperides-blue-gold-wedding-v1.json",
+  "caption_profile": "presets/typography/duet-blue-gold-wedding-v1.json",
+  "caption_cache": "D:\\codex\\temp\\Duet-Blue-Gold-Wedding-v1\\final-cache",
+  "video": "D:\\codex\\output\\MMD-Duet-Blue-Gold-Wedding-v1\\captions-5s-v1\\Franken_Duet_5s_Wedding_REVIEW.mp4",
+  "without_captions_video": "D:\\codex\\output\\MMD-Duet-Blue-Gold-Wedding-v1\\lighting-sample-5s-v1\\Aether_Duet_5s_REVIEW.mp4",
+  "frames": [
+    4140,
+    4439
+  ],
+  "fps": 60,
+  "resolution": [
+    1920,
+    1080
+  ],
+  "audio_project": "presets/projects/franken-duet-full-v1.json",
+  "audio_start_seconds": 68.98333333333333,
+  "controls": [
+    {
+      "effect": "scattering",
+      "mean_absolute_rgb_difference_255": 9.19505500793457,
+      "fraction_pixels_over_one": 0.5760041644349512
+    },
+    {
+      "effect": "halos",
+      "mean_absolute_rgb_difference_255": 0.0412980318069458,
+      "fraction_pixels_over_one": 0.00849557636338997
+    }
+  ],
+  "limits": [
+    "Five seconds only; waiting for user art feedback",
+    "Art-directed spotlight volume/surface factors; inherited EEVEE volumetric shadows disabled",
+    "Final typography is separate Python compositing; not visible in the Blender viewport"
+  ]
+}

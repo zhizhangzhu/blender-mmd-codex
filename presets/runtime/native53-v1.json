@@ -1,0 +1,16 @@
+{
+  "id": "native53-v1",
+  "purpose": "Existing isolated official Blender5.3 runtime; source/final project must be resolved from current_state, never inferred from this file",
+  "executable": "D:/codex/workspace/blender-runtimes/5.3.0/blender-5.3.0-windows-x64/blender.exe",
+  "version": "5.3.0",
+  "build_hash": "02f0899d78e3",
+  "user_config": "D:/codex/workspace/blender-runtimes/5.3.0/portable/config",
+  "user_scripts": "D:/codex/workspace/blender-runtimes/5.3.0/portable/scripts",
+  "bootstrap": "scripts/native53_runtime.py",
+  "frozen_goo_reference": "presets/runtime/goo-v1.json",
+  "limits": [
+    "Runtime metadata only; does not prove the ongoing migration or art quality complete",
+    "Register the MMD camera dependency before opening; do not open a Goo-specific frozen source in this runtime to save over it",
+    "The historical bootstrap contains duet frame/camera checks; inspect its input contract before reuse"
+  ]
+}

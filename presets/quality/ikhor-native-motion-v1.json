@@ -1,0 +1,32 @@
+{
+  "id": "ikhor-native-motion-v1",
+  "performer_id": "ikhor",
+  "pmx": "D:/codex/output/MMD-Ikhor-Model-v1/source/Ikhor/Ikhor.pmx",
+  "pmx_sha256": "ebba744cee847c16cfe5be037e7464d4f701c8edb2f5033e7de5730bd6654a52",
+  "vmd": "E:/tools/franken/drive-download-20261018T085726Z-1-001/FrankensteinNoKaibutsu_Motion(MMD)_Full_HinaSuzuki_v1.0[f0].vmd",
+  "scale": 0.08,
+  "source_fps": 30,
+  "output_fps": 60,
+  "source_vmd_zero_to_output_frame_one": 329,
+  "source_blender_frame_one_offset": 1,
+  "output_frame_range": [1, 11899],
+  "review_output_frames": [4140, 4439],
+  "physics": {
+    "preroll_source_frames": 120,
+    "substeps_per_frame": 6,
+    "solver_iterations": 30,
+    "time_scale": 1.0,
+    "simulation_source_blender_frames": [2279, 2550],
+    "export_source_blender_frames": [2399, 2550],
+    "verified_output_frames_with_guard": [4139, 4441],
+    "scope": "bounded review segment first; preserve full native body/morph action outside the physically baked interval",
+    "ik_policy": "audit source VMD and imported constraints before choosing; no blanket inherited IK mute"
+  },
+  "output_dir": "D:/codex/output/MMD-Ikhor-Model-v1/motion-v1",
+  "temp_dir": "D:/codex/temp/MMD-Ikhor-v1",
+  "limits": [
+    "Independent Ikhor-only candidate; no production-duet Build, source changes or old Aether caches.",
+    "Full source motion is retained; local physics acceptance does not certify full-song secondary motion.",
+    "Material, SDF, outline and scene integration belong to the parent task."
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "id": "hesperides-fox-cinema-v1",
+  "status": "verified-5-second-study",
+  "user_art_approval": false,
+  "engine": "Blender 5.2.2 EEVEE",
+  "input": "D:\\codex\\output\\MMD-Quality-Integration-v1\\production-v4\\Franken_Duet_Quality_Master.blend",
+  "project": "D:\\codex\\output\\MMD-Fox-Cinema-v1\\production-v2\\Franken_Duet_Fox_Cinema.blend",
+  "preset": "presets/stages/hesperides-fox-cinema-v1.json",
+  "frame_range": [
+    4140,
+    4439
+  ],
+  "resolution": [
+    1920,
+    1080
+  ],
+  "fps": 60,
+  "video": "D:\\codex\\output\\MMD-Fox-Cinema-v1\\sample-5s-v1\\Aether_Duet_5s_REVIEW.mp4",
+  "focus": {
+    "minimum_fstop": 2.8,
+    "maximum_predicted_head_coc_pixels": 0.46720116933802774
+  },
+  "motion": {
+    "fps": 60,
+    "shutter_frames": 0.35,
+    "shutter_angle_degrees": 126,
+    "steps": 3,
+    "max_blur_pixels": 24,
+    "bleeding_bias": 50,
+    "cut_translation_per_frame": 0.5,
+    "cut_rotation_radians_per_frame": 0.18,
+    "cut_lens_mm_per_frame": 6
+  },
+  "cuts": [
+    4174,
+    4175,
+    4200,
+    4201,
+    4230,
+    4231,
+    4260,
+    4261,
+    4324,
+    4325
+  ],
+  "native_exr_export": false,
+  "limits": [
+    "NPR spatial pools have no occlusion; actual lights drive specular and volume.",
+    "Native DOF and motion blur are local reconstruction choices, not recovered MME settings.",
+    "This horizontal five-second study does not establish full-song or portrait correctness."
+  ]
+}

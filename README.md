@@ -1,194 +1,70 @@
 # blender-mmd-codex
 
-協助 MMD 使用者在 Blender 中進行模型檢查、參考影片整理、環境準備與自動化工作的 Codex 外掛專案。
+猪猪的 MMD 制作与技术学习仓库。现行版本、历史交付和实验记录分开管理；目标是逐步改善三渲二质量，当前尚未达到参考作品的感知质量。
 
-本專案由兩個主要部分組成：
+## 当前入口
 
-- Codex Plugin：提供 skills、操作教學、錯誤排查與工作流程協調。
-- Blender Add-on：在 Blender 內執行場景檢查、模型基本檢查與 MMD 參考影片匯入。
+| 要做什么 | 从哪里开始 |
+| --- | --- |
+| 项目长期目标与最高层规范 | [SPEC](SPEC.md)：能力成长、参考理解、美术经验、多模型分工、完成标准与分阶段建设 |
+| 接手长期制作与学习 | [工作入口](docs/STUDIO_WORKFLOW.md)／[mmd-studio技能](skills/mmd-studio/SKILL.md)；`python -m scripts.mmd_studio status`与`context` |
+| 实际角色映射与静帧对照 | [安全试验台](docs/STUDIO_SCENE_BENCH.md)／[有界配置](catalog/scene_benches.json)；`python -m scripts.mmd_studio benches`，执行须显式指定 |
+| 参考到作品、图审与经验复用 | [制作闭环](docs/STUDIO_ITERATION.md)：冻结预测→真实对照→逐假设图审→经验检索；选定方案另存并独立重开 |
+| AI接手具体任务 | [任务制作导航](docs/AI_TASK_PLAYBOOK.md)／[机器路线目录](catalog/task_routes.json)：模型、动作/K帧、卡渲、特效、舞台、布光、设计 |
+| 确认当前工程、反馈与输出范围 | [现行状态](catalog/current_state.json) |
+| 查看最新Goo人物与舞台静帧 | [礼堂层次优化](docs/GOO_DUET_ARTDIRECTION_2026_11_20.md)；`D:/codex/output/Goo-Duet-ArtDirection-2026-11-20/final-v3/Candidate.blend`；仅4290，SourceDOF／完整保护／独立重开通过，用户美术待评；原829f冻结保留 |
+| 当前学习方向 | [Goo基础功能与参数](docs/GOO_FOUNDATIONS_AND_PARAMETERS.md)／[基础课程](presets/workflows/goo-foundations-v1.json) |
+| 最新基础发现 | [八项基础指南与法线实测](docs/GOO_MMD_EIGHT_FOUNDATIONS_2026_11_18.md)／[双版本输入与色彩](docs/GOO_BLENDER_FOUNDATIONS_2026_11_18.md)／[近景目标](docs/GOO_REFERENCE_FACE_HAIR_STUDY_2026_11_17.md) |
+| 已评估的原生路线，现暂缓 | [MMD MME 与 Goo 分工方案](docs/MMD_MME_GOO_WORKFLOW.md) |
+| 找文档、源码、参数和历史版本 | [仓库导航](docs/REPOSITORY_GUIDE.md)／[全文件索引](docs/REPOSITORY_FILE_INDEX.md) |
+| 选择脚本 | [脚本入口](scripts/README.md)／[输入与副作用约定](docs/TOOL_AND_PRESET_MAP.md) |
+| 设计与动作修订 | [设计基础与美术评审](docs/DESIGN_FOUNDATIONS_AND_REVIEW.md)／[动作数据与局部K帧](docs/ANIMATION_AND_KEYFRAMING_PLAYBOOK.md)／[迭代简报](presets/templates/iteration-brief-v1.json) |
 
-完整產品規劃請參考 [PROJECT_PLAN.md](PROJECT_PLAN.md)。
+**后续默认只看静帧。** 只有猪猪明确要求视频时才渲染片段或全曲。眼透暂缓；字幕保留黑边和投影。本轮 final-v3 仅4290有界静帧，仍待用户美术评价，不把技术通过写成用户认可。
 
-## 目前狀態
+## 当前制作与研究
 
-目前完成第一個可驗證的垂直切片：
+11月20日按猪猪新要求，在Goo5.2.1独立副本优化双人及指定礼堂，已交付正式1080p静帧和独立重开验证的新候选。11月19日原829f仍冻结；[官方5.3迁移](docs/BLENDER53_DUET_TOON_MIGRATION_2026_11_19.md)保留为另一条试作。当前实际工程与范围仍读现行状态。原生MMD主渲方案暂缓，MME通用兼容插件不立即开发。
 
-- Codex plugin manifest：`.codex-plugin/plugin.json`
-- Blender 執行檔偵測
-- Blender 官方下載網址產生
-- SHA-256 下載驗證
-- ZIP／tar.xz portable Blender 安裝
-- Blender 版本、Python API 與 Add-on 載入驗證
-- Blender 場景基本檢查
-- MMD 模型的 Mesh／Armature 基本檢查
-- 將使用者提供的 MMD 渲染影片加入 Blender 時間軸作為參考
+学习以[官网](https://www.dillongoostudios.com/gooengine)及官方GitHub发布分支为主，区分原版4.4与社区5.2接口。已完成13类专属节点参数清单和独立灯组基础静帧；其他基础项继续按证据推进，不称全部掌握。人物工程未因此修改。
 
-以下功能尚未完成：
+人物仍为阿克西妮娅＋伊科尔，保留原生 VMD、现成相机、指定赫斯珀利德斯礼堂、雪／婚礼主题及原声 FLAC。伊科尔发型修复和窄刘海影目前只有静帧证据，不能直接继承为新动态通过。
 
-- PMX／PMD 完整匯入
-- VMD 動作、相機與表情解析
-- 影片姿勢擷取與骨架重定向
-- 完整材質、權重與物理修復
-- GitHub 發布與公開 Codex Plugin 提交
+## 仓库结构
 
-## 專案結構
+| 目录 | 内容 |
+| --- | --- |
+| `catalog/` | 唯一现行状态、资料库、学习队列、自动生成的文件索引 |
+| `docs/` | 操作指南和技术总结；`research/`为来源账本，`history/`为整理前快照 |
+| `presets/` | 运行时、实验参数、项目／材质／后期／字幕配方 |
+| `scripts/` | 可查询工具与绑定历史版本的制作脚本，分类见目录内 README |
+| `tests/` | 工具与数据约定的回归检查 |
+| `skills/`、`blender_addon/` | 工作技能与 Blender 辅助插件源码 |
+| `site/` | 离线资料库源码；旧生成站点不是最新工程入口 |
 
-```text
-.
-├─ .codex-plugin/
-│  └─ plugin.json             # Codex Plugin manifest
-├─ blender_addon/             # Blender 內的 Add-on
-│  ├─ __init__.py
-│  ├─ operators/
-│  └─ panels/
-├─ scripts/                   # Blender 偵測、安裝與驗證工具
-├─ skills/                    # Codex 可使用的工作流程
-├─ tests/                     # Python 單元測試
-├─ PROJECT_PLAN.md            # 專案規劃書
-├─ LICENSE
-└─ README.md
+源码放 `D:/codex/workspace/`，交付放 `D:/codex/output/`，临时／第三方私人缓存放 `D:/codex/temp/`。第三方完整预设、教程、模型和软件不提交本仓库。
+
+## 常用检查
+
+在仓库根目录执行，以下命令不启动渲染，需要本机可用的 Python。
+
+```powershell
+python -m scripts.repository_index --check
+python -m scripts.knowledge_route --list
+python -m scripts.knowledge_route --task lighting
+python -m scripts.knowledge_route --check
+python -m scripts.audit_knowledge
+python -m scripts.mmd_studio check
+python -m scripts.mmd_studio context --task reference --query "白衣 发束"
+python -m scripts.learning_queue plan --limit 3
 ```
 
-## Codex Plugin 功能
+新增或删除源码文件后用 `python -m scripts.repository_index --write` 更新索引。版本专用 `prepare_*`、`package_*`、`complete_*` 不是通用入口，不从最新工程随意重跑。
 
-目前包含以下 skills：
+本机没有裸`python`命令时，用[工作入口](docs/STUDIO_WORKFLOW.md)列出的已有便携Python执行；无需重新安装。能力、情境偏好、课程、参考准备与任务包可检索；角色映射、真实对照、逐假设评审、经验检索和安全另存／重开均已有实际入口。本轮176项相关回归通过；登记数量与工具通过均不代表渲染质量或课程完成。
 
-- `blender-setup`：偵測、下載、安裝與驗證 Blender
-- `mmd-model-check`：規劃 PMX／PMD 模型檢查流程
-- `mmd-video-reference`：處理 MMD 渲染影片參考流程
-- `vmd-workflow`：規劃 VMD 動作、相機與表情工作流程
-- `troubleshooting`：分析 Blender 與 MMD 常見問題
+## 历史与整理记录
 
-Codex Plugin 與 Blender Add-on 是不同的安裝單位。Codex 負責理解需求與協調流程，Blender Add-on 負責在 Blender 內執行實際操作。
+[11月17日整理记录](docs/REPOSITORY_ORGANIZATION_2026_11_17.md)说明实际修改范围。之前的入口、完整约定与状态保存在 `docs/history/2026-11-17/repository-before-organization/`。
 
-## Blender Add-on 功能
-
-在 Blender 的 `Properties > Scene` 中提供 `Blender MMD Codex` 面板，可執行：
-
-1. 檢查目前場景中的物件、Mesh 與骨架數量。
-2. 檢查選取物件是否同時包含 Mesh 與 Armature。
-3. 將 `.mp4`、`.mov`、`.mkv`、`.webm` 或 `.avi` MMD 影片加入 Video Sequence Editor。
-
-參考影片是已渲染的 2D 影片，只能作為動作、節奏與鏡頭參考。若要精確套用原始動畫，仍需要原始 VMD、VPD、相機檔或 Blender 專案。
-
-## 開發環境
-
-- Python 3.10 或更新版本
-- Blender 3.6 或更新版本（實際 Add-on 相容性仍會依功能調整）
-- Codex CLI（若要使用 CLI 管理 Marketplace）
-- Git
-
-本專案不將 Blender 安裝包直接提交進 Git；安裝工具會依明確指定的版本與官方下載來源取得檔案。
-
-## 執行環境工具
-
-所有命令都應從專案根目錄執行。
-
-### 偵測 Blender
-
-```bash
-python3 -m scripts.blender_detect
-```
-
-找不到 Blender 時，命令會回傳非零狀態；這代表需要進入安裝流程，不代表程式本身崩潰。
-
-### 取得官方下載資訊
-
-必須指定完整版本，不在程式內自動猜測不可控的最新版：
-
-```bash
-python3 -m scripts.blender_download \
-  --version <blender-version> \
-  --system <Windows|Darwin|Linux> \
-  --machine <x86_64|arm64>
-```
-
-### 安裝 portable Blender
-
-下載與安裝需要使用者明確確認，且必須提供官方檔案的 SHA-256：
-
-```bash
-python3 -m scripts.blender_bootstrap \
-  --version <blender-version> \
-  --sha256 <official-sha256> \
-  --install-dir ./portable_blender \
-  --addon-path ./blender_addon \
-  --yes
-```
-
-安裝流程會：
-
-1. 先檢查現有 Blender。
-2. 確認下載來源為 Blender 官方 HTTPS 網域。
-3. 下載並驗證 SHA-256。
-4. 解壓縮至指定 portable 目錄。
-5. 執行 Blender 版本與 Python API 驗證。
-6. 嘗試載入並註冊本專案 Add-on。
-
-不使用 `--yes` 時，不會執行下載或安裝。
-
-## 安裝 Blender Add-on
-
-目前可在 Blender 內使用以下方式安裝：
-
-1. 將 `blender_addon/` 打包成 ZIP。
-2. 開啟 Blender。
-3. 進入 `Edit > Preferences > Add-ons`。
-4. 選擇 `Install...`，指定 Add-on ZIP。
-5. 啟用 `Blender MMD Codex`。
-6. 到 `Properties > Scene` 找到外掛面板。
-
-正式版本會再提供自動打包與自動啟用流程。
-
-## 執行測試
-
-```bash
-python3 -m unittest discover -s tests -v
-python3 -m compileall -q scripts blender_addon tests
-```
-
-Codex Plugin manifest 可使用 plugin-creator 提供的驗證工具檢查：
-
-```bash
-python3 /path/to/plugin-creator/scripts/validate_plugin.py .
-```
-
-目前測試不需要安裝 Blender，會使用測試替身驗證偵測、下載驗證、portable 解壓縮、路徑安全與驗證報告流程。若要確認 Blender Add-on 真正能啟動，仍需在實際 Blender 環境執行測試。
-
-## Git 與 Codex 發布
-
-GitHub repository 用來保存原始碼與版本；GitHub 本身不會自動將專案發佈成 Codex Plugin。
-
-一般流程是：
-
-```text
-Git commit
-→ 推送 GitHub
-→ 本機／Repo Marketplace 測試
-→ 準備公開提交資料
-→ OpenAI Plugin Submission 審核
-```
-
-公開 Codex Plugin 需要準備：
-
-- 有效的 `.codex-plugin/plugin.json`
-- 最終版 skills
-- 外掛名稱與描述
-- Logo、分類、網站與支援網址
-- 隱私政策與服務條款
-- 測試案例與預期結果
-- 已驗證的個人或商業開發者身分
-
-目前本專案尚未設定 GitHub remote，也尚未提交至公開 Codex Plugin 目錄。
-
-## 參考文件
-
-- [專案規劃書](PROJECT_PLAN.md)
-- [OpenAI Plugin 建置文件](https://developers.openai.com/plugins/build/plugins)
-- [OpenAI Plugin 測試文件](https://developers.openai.com/plugins/deploy/connect-chatgpt)
-- [OpenAI Plugin 提交文件](https://developers.openai.com/plugins/deploy/submission)
-- [Blender 官方下載頁](https://www.blender.org/download/)
-
-## License
-
-本專案採用 [MIT License](LICENSE)。
+旧 Clean 两版五秒、Goo v16 快样等保留于原路径；最新视频记录看现行状态中的历史字段。它们不代表 v6 静帧已有对应视频。更早资料见[11月13日复审](docs/REPOSITORY_REVIEW_2026_11.md)。

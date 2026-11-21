@@ -1,0 +1,37 @@
+{
+  "date": "2026-11-13",
+  "observer": "root actual CUA browser results",
+  "complete_transcript_obtained": false,
+  "ai_subtitle_generation_verified": false,
+  "full_comments_read": false,
+  "pages": [
+    {
+      "url": "https://www.bilibili.com/video/BV1PPgpzLEdb/",
+      "title": "【鸣潮MMD】亲亲小狐狸！「露帕×女漂」",
+      "author": "观海子",
+      "read_scope": "Actual logged-in visible title, description and creator labels; not full video or comments",
+      "findings": ["Description names HIMEHINA music and praises 黑煤球 postproduction", "No character shader or engine recovered from this description"]
+    },
+    {
+      "url": "https://www.bilibili.com/video/BV18DJC6dE1S/",
+      "title": "【MMD|Blender|三渲二】小白向！一个视频讲清楚三渲二MMD的流程分享！",
+      "author": "良宇喵喵喵",
+      "read_scope": "Visible title and introductory description in IAB and Chrome; subtitle entry seen; no full transcript or comments acquired"
+    },
+    {
+      "url": "https://www.bilibili.com/video/BV1rM7X6bEFJ/",
+      "title": "【blender】基础三渲二教程",
+      "author": "Yume_Lyra",
+      "read_scope": "Visible title, description, Chinese subtitle menu and one on-screen cue near 08:35; no complete transcript",
+      "findings": ["Description offers script and Blender project link, not downloaded or license-verified", "One displayed cue contained likely terminology recognition errors; not treated as accurate author quotation"]
+    }
+  ],
+  "subtitle_network": {
+    "observed_resource_paths_without_queries": ["api.bilibili.com/x/player/wbi/v2", "api.bilibili.com/x/v2/subtitle/web/view"],
+    "body_response_saved": false,
+    "raw_cdp_capture": "timed_out",
+    "queries_headers_har_or_credentials_saved_to_repository": false
+  },
+  "cleanup": {"agent_created_chrome_research_tabs_closed": 2, "absence_verified": true},
+  "production_blend_modified": false
+}

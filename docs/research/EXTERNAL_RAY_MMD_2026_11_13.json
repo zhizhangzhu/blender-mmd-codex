@@ -1,0 +1,132 @@
+{
+  "schema_version": 1,
+  "date": "2026-11-13",
+  "status": "external-tutorial-body-and-author-source-read; not-implemented",
+  "scope": {
+    "source_families": 2,
+    "video_or_player_opened": false,
+    "whole_package_downloaded": false,
+    "mmd_or_blender_run": false,
+    "production_project_changed": false,
+    "catalog_or_learning_queue_changed": false,
+    "new_render_or_art_approval": false
+  },
+  "deduplication": {
+    "searched": "rg检索docs/research及人物手册中的ray-mmd/ray-cast/skybox/接触/投影；读取已有NPR_PRIMARY_STUDY、TEXT_NPR_SOURCE_DISCOVERY、NPR_NEXT_EXPERIMENTS。",
+    "finding": "已有研究重点为MooaToon、UTS、MToon；该检索范围内未发现Ray-MMD材质手册或IBL代码的技术阅读记录。",
+    "reinforcement_only": [
+      "AO、形体分色与真实投影必须分开。",
+      "Emission输出与实际照亮邻近物体是两种职责。",
+      "按材质分区，保留PMX颜色/球面/透明语义。"
+    ],
+    "context_read": [
+      "README.md",
+      "catalog/current_state.json: current task/latest review/project contract/priority",
+      "docs/PRODUCTION_WORKFLOW.md",
+      "docs/KNOWLEDGE_INDEX.md",
+      "docs/LOCAL_ENVIRONMENT.md",
+      "docs/CHARACTER_NPR_PLAYBOOK.md: 搜索命中节"
+    ]
+  },
+  "sources": [
+    {
+      "id": "ray-cast-author-repository",
+      "author": "Rui / ray-cast及Ray-MMD Developers；效果原作者仓库",
+      "url": "https://github.com/ray-cast/ray-mmd",
+      "access": "web实际读取README正文；GitHub连接器实际读取材质文档与选定文本源码；未取二进制包。",
+      "revision": "读取master，随后解析到218a91cd1c53f49850b2772ebbcb98bf258e75b1（提交日期2021-12-05）；不是本机运行版本。",
+      "read_parts": [
+        {"path": "README.md", "sections": ["Requirement", "Features", "implementation environment"]},
+        {"path": "Materials/README_chs.md", "sections": ["ALBEDO", "Alpha", "Normal", "Smoothness", "Metalness", "Specular", "Occlusion", "Emissive", "Shading Model ID"]},
+        {"path": "Materials/README.md", "lines": [315, 400], "purpose": "交叉核对Cloth/CustomA/CustomB英语定义"},
+        {"path": "Materials/material_2.0.fx", "sections": ["默认参数与贴图来源"]},
+        {"path": "Shader/skylighting.fxsub", "sections": ["EnvDiffLight/EnvSpecLight controls", "ShadingMaterial", "EnvLightingPS"]},
+        {"path": "Shader/ibl.fxsub", "sections": ["EnvironmentMip", "EnvironmentSpecularCloth", "ComputeSpecularOcclusion"]},
+        {"path": "ray.conf", "sections": ["SUN_LIGHT_ENABLE", "SUN_SHADOW_QUALITY", "IBL_QUALITY", "SSDO_QUALITY"]},
+        {"path": "ray_advanced.conf", "sections": ["mEnvLightIntensityMin/Max", "mSSDO parameters"]},
+        {"path": "ray.fx", "lines": [1, 470], "sections": ["controller remaps", "included shaders", "shadow/SSDO render passes"]},
+        {"path": "Shader/ShadingMaterials.fxsub", "sections": ["ShadingMaterial", "ShadingImageBasedLighting", "ShadingOpacityPS", "ShadingTransparentPS"]},
+        {"path": "Shader/PostProcessOcclusion.fxsub", "lines": [1, 180], "purpose": "核对深度/法线与屏幕采样；未读后半段"},
+        {"path": "Shader/SSAOVisibility.fxsub", "sections": ["visibility输出及Alpha裁切"]},
+        {"path": "Shader/ContactShadow.fxsub", "sections": ["TraceScreenSpaceShadow", "ConstantShadowPS"], "limit": "仅确认源码存在；未追到现行主链调用，不能声称默认启用或实际验证。"}
+      ],
+      "license": "仓库README标MIT；本记录只保存原创归纳与链接，不复制效果包或图片。"
+    },
+    {
+      "id": "trackdancer-beginners-guide",
+      "author": "Trackdancer；LearnMMD署名作者，文中使用其Neru/户外场景实作，不是Ray-MMD原作者",
+      "title": "Beginner’s Guide: Using Ray-MMD ver 1.5.0",
+      "url": "https://learnmmd.com/http%3A/learnmmd.com/using-ray-mmd-ver-1-5-0-beginners-guide/",
+      "page_dates": ["2019-10-24", "2024-07-08"],
+      "access": "实际打开正文，阅读What is Ray-MMD、What you will need、Step 1–7与Credits；不是只读搜索摘要。",
+      "native_context": "教程自报MMD 9.31、Ray-MMD 1.5.0、Tda/Vk Neru、Norendai Town户外场景。",
+      "not_inspected": "未独立打开示例图片、未运行其工程；正文参数只能称作者示例，不能由未查看图片宣称画面已复现。",
+      "used_sections": ["Step 2 Main", "Step 3 EnvLightMap", "Step 4 material specification", "Step 6 SSAO example", "Step 7 light direction/self shadow"]
+    }
+  ],
+  "methods": [
+    {
+      "id": "separate-environment-diffuse-and-specular",
+      "learned_method": "天空外观、环境光计算、物体材质分别建立输入；在固定主光/曝光下独立调环境漫反射和环境镜面反射，先确认是哪一项改变白衣和金属。",
+      "source_evidence": [
+        "教程Step 2把main.fx给人物/舞台，Step 3把Time of Lighting.fx在EnvLightMap给天空，Step 4再分配材质。单载一个效果不等于完整环境链。",
+        "skylighting.fxsub用两套预滤波纹理、独立mEnvIntensityDiff与mEnvIntensitySpec；后者还参与材质Fresnel/光滑度相关反射。"
+      ],
+      "source_parameters": {
+        "EnvDiffLight+/-": "环境漫反射强度，不是主光功率。",
+        "EnvSpecLight+/-": "环境镜面反射强度，不是全局曝光。",
+        "range_context": "该代码强度为lerp(lerp(min,max,+),0,-)；所读advanced.conf的min=1、max=6.2831852。数值是Ray内部标定，不能换算成现有450/18/95W。"
+      },
+      "project_application_inference": "礼堂蓝金环境可能同时洗平人物和改变金属；未来独立副本应分别观察环境底光与金属反射，避免为救脸而整体降低环境，导致金属失去礼堂空间线索。",
+      "required_inputs": ["能明确分开的环境漫反射/反射输入", "固定主光、曝光和显示变换", "白衣、皮肤、金属各一块对照区域"],
+      "limits": "当前Blender综合Diffuse探针含多灯/法线/衰减/间接光；仅改灯组不能宣称已取得Ray的独立IBL通道。材质Emission链也不会自动接受环境高光。",
+      "new_vs_existing": "新增Ray原生具体输入、控制器重映射及IBL漫反射/镜面分流证据；职责分层原则本身是复核。",
+      "tested_in_project": false
+    },
+    {
+      "id": "use-material-specific-closures-and-typed-inputs",
+      "learned_method": "布料的绒面高光与金属反射使用不同材质模型；先确认贴图/参数语义，再调强弱，不能给整个人套同一种光滑亮面。",
+      "source_evidence": [
+        "Materials手册CUSTOM_ENABLE=5为Cloth；customA是GGX/InvGGX之间的sheen混合，customB是Fresnel F0绒毛色；customA为线性数据、customB文档要求sRGB。",
+        "默认material_2.0.fx的SMOOTHNESS_MAP_FROM=9取PMX光泽度。手册另将smoothness贴图type 0与roughness输入type 1/2区分。"
+      ],
+      "source_parameters": {
+        "CUSTOM_ENABLE=5": "选择Ray布料闭包；不是新增一层无条件自发光。",
+        "customA/customB": "角色衣服/毛领分区的绒面权重与绒毛反射色，不能沿用金属度遮罩当作这两个输入。",
+        "SMOOTHNESS_MAP_TYPE": "1在Ray语义下做1-sqrt(roughness)，2做1-roughness；属于该管线的输入约定，不是所有PBR软件的通用转换。"
+      },
+      "project_application_inference": "婚礼白衣和毛领需要保留柔软层次、金属仍需独立闭包；以后可在单块毛领/布料副本评估掠射绒面响应，先保留现有Color/Alpha及SDF，不重建全人物。",
+      "required_inputs": ["已核对UV及材质归属的布料/毛领分区", "色彩空间与roughness/smoothness定义", "保持底色与主光不动的近景和掠射视角"],
+      "limits": "CUSTOM_ENABLE和Ray的编码不能直接接入Blender节点。现有MMDShaderDev Color含PMX着色语义，不等同纯albedo；Blender已是roughness的输入不能再照抄Ray转换。毛领观感没有本轮图片或动态实测。",
+      "new_vs_existing": "新增Ray布料闭包及CustomA/B的确切职责和smoothness来源；按材质分区、保留PMX输入是复核。",
+      "tested_in_project": false
+    },
+    {
+      "id": "separate-ao-scale-radius-and-cast-shadow",
+      "learned_method": "先检查真实投影，再用有限范围AO补眼窝/领口/鞋底；AO半径与强度分开调，不能用全局AO或烘焙环境遮蔽代替随动作变化的地面投影。",
+      "source_evidence": [
+        "教程Step 1关闭MMD旧ground shadow；Step 7用主光方向控制日光，并在该户外例中使用self-shadow mode 2/range 9000。它没有把旧地面影平面当完整Ray投影。",
+        "教程Step 6的SSAO-=1是作者处理Tda凹陷眼白的示例。ray.fx分别暴露SSAO强度和SSAORadius，主链也分别执行ShadowMapGen与SSDO。",
+        "ShadingImageBasedLighting把SSDOMap.w与material.visibility合并后衰减环境漫反射，镜面另走ComputeSpecularOcclusion；Materials/Occlusion说明小范围SSAO与较大尺度烘焙AO各自用途。"
+      ],
+      "source_parameters": {
+        "SSAORadius+/-": "所读ray.fx将基础1向2或0.5插值；是Ray屏幕采样范围的控制，不是Blender米制接触距离。",
+        "SSAO-/SSDO-": "控制不同分支的衰减强度；作者眼白示例不能当作本项目全局关闭AO的处方。",
+        "occlusion=0": "材质手册说会去掉环境漫反射和环境镜面反射；不能拿它当作仅关闭直接投影的开关。",
+        "mode2/range9000": "教程MMD户外设置；不映射到礼堂或Blender阴影参数。"
+      },
+      "project_application_inference": "现有角色已只做一次短距AO。未来若眼白/毛领脏，应先区分AO与真实发影；若鞋底漂浮，先核真实鞋底/地坪和遮挡者，再调局部接触。不能为补脚底而加大全人物AO，或为救眼白抹掉礼堂接地层。",
+      "required_inputs": ["AO与投影可单独关闭的副本", "站立/抬脚姿态及真实地坪", "近景眼白和全身鞋底两种观察范围"],
+      "limits": "屏幕深度采样只能观察已写入深度的信息，画外/被前景遮住的几何不能按完整场景处理。本轮读到ContactShadow.fxsub沿日光方向采样深度，但未追到主链启用；不把文件存在称作已运行接触影。",
+      "new_vs_existing": "新增具体主链AO/投影分流、半径/强度控制与occlusion=0的副作用；AO不等于投影是复核。",
+      "tested_in_project": false
+    }
+  ],
+  "engine_boundary": "Ray-MMD是面向MMD/MME的DX9/HLSL效果系统，依赖其G-buffer、资源槽和控制器；.fx/.fxsub不能直接由现有Blender 5.2普通EEVEE加载。本轮可借鉴输入语义、闭包选择、分层归因与遮挡尺度；没有安装Ray、迁移Shader、改灯或渲染。",
+  "promotion": {
+    "new_external_reading_completed": true,
+    "production_capability_verified": false,
+    "art_target_achieved": false,
+    "next_action": "保留为问题定向的文字学习证据；没有自动创建制作任务或恢复全曲。"
+  }
+}

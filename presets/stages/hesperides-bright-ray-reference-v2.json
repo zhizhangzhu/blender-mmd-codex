@@ -1,0 +1,28 @@
+{
+  "id": "hesperides-bright-ray-reference-v2",
+  "supersedes_for_this_project": "hesperides-winter-wedding-v1",
+  "reason": "User requested a brighter hall, closer to the supplied Ray preview",
+  "implementation": "scripts/mmd_duet_polish.py",
+  "base_scene": "D:/codex/output/Franken-Duet-Full-Final-v1/production-v2/Franken_Duet_Full.blend",
+  "validated_scene": "D:/codex/output/Franken-Duet-Full-Final-v1/production-v4/Franken_Duet_Full.blend",
+  "character_style_family": "guanhaizi",
+  "world_strength": 1.05,
+  "architecture_tint_linear": [0.83, 0.89, 1.0, 1.0],
+  "contact_ao_strength": 0.06,
+  "matcap": {"mode": "masked additive albedo adaptation", "file": "metal1.bmp", "gain": 0.65, "mask": "channel selected by each supplied fx", "materials_tested": 14},
+  "additional_lights": [
+    {"name": "left blue window fill", "position": [-11, 12, 7], "target": [0, 12, 3], "watts": 7000, "color": [0.48, 0.66, 1], "size": 13},
+    {"name": "right ivory window fill", "position": [11, 12, 7], "target": [0, 12, 3], "watts": 6000, "color": [0.8, 0.87, 1], "size": 13},
+    {"name": "broad altar fill", "position": [0, 42, 14], "target": [0, 34, 4], "watts": 8500, "color": [0.6, 0.71, 1], "size": 15}
+  ],
+  "previous_area_lights": {"power_multiplier": 1.15, "minimum_size": 14},
+  "point_light_shadows": false,
+  "static_architectural_bounce_rebaked": true,
+  "moving_characters_in_static_bake": false,
+  "volume_box_enabled": false,
+  "screen_raytracing": false,
+  "samples": 32,
+  "dof": {"target": "midpoint of both head bones", "fstop": 10},
+  "camera_motion_changed": false,
+  "scope": "actual Blender reference adaptation; not the author's original Ray pipeline"
+}

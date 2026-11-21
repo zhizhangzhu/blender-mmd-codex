@@ -4,15 +4,30 @@ import tempfile
 import unittest
 from pathlib import Path
 from subprocess import CompletedProcess
+from unittest.mock import patch
 
 from scripts.blender_detect import (
     detect_blender,
     find_blender_candidates,
     parse_blender_version,
+    main,
 )
 
 
 class BlenderDetectTests(unittest.TestCase):
+    def test_configured_launcher_takes_priority_over_path(self) -> None:
+        candidates = find_blender_candidates(
+            system_name="Windows",
+            env={"BLENDER_EXECUTABLE": "E:/custom/Blender/blender-launcher.exe"},
+            which=lambda _: "C:/other/blender.exe",
+        )
+        self.assertEqual(candidates[0], Path("E:/custom/Blender/blender.exe"))
+
+    def test_invalid_explicit_path_does_not_fall_back_to_other_install(self) -> None:
+        with patch("scripts.blender_detect.detect_blender") as discover, patch("builtins.print"):
+            self.assertEqual(main(["--executable", "nonexistent-blender.exe"]), 1)
+            discover.assert_not_called()
+
     def test_parse_blender_version(self) -> None:
         self.assertEqual(parse_blender_version("Blender 4.5.1\n"), "4.5.1")
         self.assertIsNone(parse_blender_version("not blender"))

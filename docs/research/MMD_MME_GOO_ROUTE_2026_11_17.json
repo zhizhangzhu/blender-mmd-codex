@@ -1,0 +1,108 @@
+{
+  "date": "2026-11-17",
+  "guide": "docs/MMD_MME_GOO_WORKFLOW.md",
+  "lab_guide": "docs/MME_NATIVE_LEARNING_LAB.md",
+  "recipe": "presets/workflows/mmd-mme-goo-v1.json",
+  "local_environment": {
+    "recursive_search": "E:/tools: MikuMikuDance/MMEffect names, and miku/mmd/pmx/pmd exe names",
+    "additional_top_level_directory_checks": [
+      "D:/Program Files",
+      "C:/Users/Administrator/Downloads",
+      "D:/codex/workspace"
+    ],
+    "native_matches": [],
+    "scope": "Scoped search only, not all disks or every installation location",
+    "native_mmd_started": false,
+    "native_mme_executed": false,
+    "software_installed": false,
+    "renderer_started": false
+  },
+  "cached_packages_verified": [
+    {
+      "archive": "104601.zip",
+      "source": "https://bowlroll.net/file/104601",
+      "sha256": "f7e4a37233d9f7fa704f3ce11b03afcb0aa33d2d2617244367493c6eb1ea43e6"
+    },
+    {
+      "archive": "146255.zip",
+      "source": "https://bowlroll.net/file/146255",
+      "sha256": "a0bd7e92f9f7e9298e81829f113dce281460ead8c23b4085cc6e2b60abb7fb11"
+    },
+    {
+      "archive": "149977.zip",
+      "source": "https://bowlroll.net/file/149977",
+      "sha256": "75ad2bdae1c34ad7c3b49d0520fb1cc476a7154d70d2c0ba4cf5269a09ce6940"
+    },
+    {
+      "archive": "188141.zip",
+      "source": "https://bowlroll.net/file/188141",
+      "sha256": "b75373a0a5f4d3139a567422d3c126e19745abe4c2bf7e7e80c01525c254892a"
+    },
+    {
+      "archive": "195743.zip",
+      "source": "https://bowlroll.net/file/195743",
+      "sha256": "2fdbc3d0e50dbe5235a6d3eb451ca6b37dbcefeb3e07ed883eaffbd082e60e37"
+    },
+    {
+      "archive": "HAToon2_r14.zip",
+      "source": "https://sorairo.pictures/3dcg/mme-effects/hatoon2/",
+      "sha256": "57429b1949163568c78395b969926d9eee5183b994527991745aedc5ae3727a4"
+    },
+    {
+      "archive": "M4Layer_r12.zip",
+      "source": "https://sorairo.pictures/3dcg/mme-effects/m4layer/",
+      "sha256": "a7094eaf1e9fd189368e524ee6cbce7d819513dd2d33aacde2fd6671f5bf8ac2"
+    },
+    {
+      "archive": "msToonCoordinator_v2.1.zip",
+      "source": "https://note.com/mashimashi_note/n/n2c2144638054",
+      "sha256": "812941318b914c3495f56616f7e908c0e447ade25625878138b20af02fef3ebe"
+    },
+    {
+      "archive": "PostRimLighting_r4.zip",
+      "source": "https://sorairo.pictures/3dcg/mme-effects/postrimlighting/",
+      "sha256": "81cab264cdac2ec2e3069dae0f02672c41a19b59255613b7e2cf9d9b3849e4b6"
+    }
+  ],
+  "cache_reading": [
+    "msToonCoordinator2.1 full readme: native loading, Main/RT assignment and controller diagnostic stages",
+    "PowerShader preset explanations: Main/MMD/AllShadow/NoShadow/Toon roles",
+    "Diffusion readme: independent Tr and Si controls and default strength warning"
+  ],
+  "online_primary_reading": [
+    {
+      "url": "https://sites.google.com/view/vpvp/",
+      "scope": "MMD x64 distribution and runtime links"
+    },
+    {
+      "url": "https://bowlroll.net/file/35013",
+      "scope": "MME x64 0.37 package metadata, not package README"
+    },
+    {
+      "url": "https://github.com/ray-cast/ray-mmd",
+      "scope": "README runtime and feature list; original HLSL/DX9 environment"
+    },
+    {
+      "url": "https://github.com/MikuMikuShaders/LightBloom",
+      "scope": "README native requirements and threshold/radius/layer controls"
+    },
+    {
+      "url": "https://note.com/mashimashi_note/n/n2c2144638054",
+      "scope": "ShadeColorRT, pseudoSSS and Shade_Normal restrictions"
+    },
+    {
+      "url": "https://github.com/MMD-Blender/blender_mmd_tools",
+      "scope": "Maintainer supported data formats; fileio.py VPD current pose export operator"
+    }
+  ],
+  "recommendation": "Test a full native MMD/MME still baseline first, use Goo for assets and verified deformation/simulation, postpone split-engine composition",
+  "new_findings": [
+    "msTC requires Main and RT assignments; merely loading Shade.x does not reproduce it",
+    "Shade_Normal does not use ExcellentShadow cast shadows; relevant to the missing fringe shadow problem",
+    "Native MME already has multi-light, volume, DOF and bloom implementations; these are not categorical Goo-only features"
+  ],
+  "production_project_changed": false,
+  "video_created": false,
+  "cases_executed": [],
+  "third_party_complete_source_redistributed": false
+}

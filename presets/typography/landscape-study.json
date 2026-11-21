@@ -1,0 +1,15 @@
+{
+  "name": "Franken landscape typography study",
+  "aspect": [16, 9],
+  "source_start_seconds": 66.7666666667,
+  "timing_note": "Uses the current clip's source-time estimate, not a completed lyric sync.",
+  "tint_srgb": [0.98, 0.91, 1.0],
+  "opacity": 0.90,
+  "character_margin_pixels": 3,
+  "face_margin_pixels": 8,
+  "cues": [
+    {"start": 0, "end": 2, "order": "behind", "protect": "character"},
+    {"start": 2, "end": 3.4, "order": "front", "protect": "face"},
+    {"start": 3.4, "end": 4, "order": "behind", "protect": "character"}
+  ]
+}

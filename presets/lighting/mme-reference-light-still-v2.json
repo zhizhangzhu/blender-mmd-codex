@@ -1,0 +1,84 @@
+{
+  "source": "D:\\codex\\output\\MMD-MME-Reference-Light-v1\\production-v3\\Franken_MME_Clear_Light_Still.blend",
+  "source_sha256": "1ac199423c418220612e8b7b7e0b862b6b42c06bb0e0e40d6857cc898a486fc7",
+  "project": "D:\\codex\\output\\MMD-MME-Reference-Light-v1\\production-v5\\Franken_MME_Balanced_Light_Still.blend",
+  "project_sha256": "c42c2f1c814f025ed33affd73724b57468d63d2da39ac8189680a35e98abf6af",
+  "frame": 4290,
+  "pose_hash": "556eef476f7006ca214ab98d2fb3b7a63dfd774fb4998c21d2fb134094af37a5",
+  "independent_reopen_passed": true,
+  "changed_materials": [
+    {
+      "material": "带子",
+      "role": "cloth",
+      "new_palette_weight": 0.25,
+      "core_radiance_gain": 0.65,
+      "contour_and_trim_protected": true
+    },
+    {
+      "material": "手.001",
+      "role": "skin",
+      "new_palette_weight": 0.2,
+      "core_radiance_gain": 0.76,
+      "contour_and_trim_protected": false
+    },
+    {
+      "material": "衣.001",
+      "role": "cloth",
+      "new_palette_weight": 0.25,
+      "core_radiance_gain": 0.65,
+      "contour_and_trim_protected": true
+    },
+    {
+      "material": "衣2",
+      "role": "cloth",
+      "new_palette_weight": 0.25,
+      "core_radiance_gain": 0.65,
+      "contour_and_trim_protected": true
+    },
+    {
+      "material": "衣领",
+      "role": "cloth",
+      "new_palette_weight": 0.25,
+      "core_radiance_gain": 0.65,
+      "contour_and_trim_protected": true
+    },
+    {
+      "material": "裙.001",
+      "role": "cloth",
+      "new_palette_weight": 0.25,
+      "core_radiance_gain": 0.65,
+      "contour_and_trim_protected": true
+    },
+    {
+      "material": "颜.001",
+      "role": "face",
+      "new_palette_weight": 0.2,
+      "core_radiance_gain": 0.76,
+      "contour_and_trim_protected": false
+    },
+    {
+      "material": "首.001",
+      "role": "skin",
+      "new_palette_weight": 0.2,
+      "core_radiance_gain": 0.76,
+      "contour_and_trim_protected": false
+    },
+    {
+      "material": "鬓.001",
+      "role": "hair",
+      "new_palette_weight": 0.5,
+      "core_radiance_gain": 0.84,
+      "contour_and_trim_protected": true
+    }
+  ],
+  "aksiniya_materials_modified": false,
+  "lights_modified": false,
+  "global_exposure_modified": false,
+  "compositor_modified": false,
+  "physics_changed": false,
+  "video_created": false,
+  "scope": "Ikhor only: restrain added palette and broad surface radiance with contour/gold/cyan protection. Lights, alpha and compositor unchanged. Static4290 only.",
+  "art_status": "pending user review",
+  "manual_observation": "Compared v3/v5 matching hero and double frames: reduced broad white sleeve and lower garment radiance, retained bright silhouette; face remains intentionally bright. Aksiniya before/v3 differences are visible but small; no strong improvement claimed.",
+  "discarded_iteration": "v4 palette rollback alone changed too little; not main candidate"
+}

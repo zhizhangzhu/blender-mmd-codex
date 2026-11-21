@@ -1,0 +1,131 @@
+{
+  "date": "2026-11-18",
+  "guide": "docs/DESIGN_FOUNDATIONS_AND_REVIEW.md",
+  "sources": [
+    {
+      "id": "pixar-story",
+      "url": "https://sciencebehindpixar.org/pipeline/story-and-art",
+      "author": "Museum of Science Boston in collaboration with Pixar",
+      "reading_scope": "Story/concept/model packets/colorscripts explanations read via web; no full linked course or video",
+      "stage": "reading_not_production_implementation",
+      "private_body_path": null,
+      "retrieval": "Web tool parsed body read; raw private cache acquisition failed/not needed"
+    },
+    {
+      "id": "pixar-lighting",
+      "url": "https://sciencebehindpixar.org/pipeline/lighting",
+      "author": "Museum of Science Boston in collaboration with Pixar",
+      "reading_scope": "Lighting body read via web and private cached text; attention/mood/effect responsibilities, not a production shader tutorial",
+      "stage": "reading_not_production_implementation",
+      "private_body_path": "D:/codex/temp/MMD-Design-Foundations-2026-11-18/pixar-lighting.txt",
+      "body_sha256": "c5e06840cc84f6b3e4afd088798f7189e3dc9bbc16f405a131771d0afccebfd3"
+    },
+    {
+      "id": "pixar-staging",
+      "url": "https://sciencebehindpixar.org/pipeline/sets-and-cameras",
+      "author": "Museum of Science Boston in collaboration with Pixar",
+      "reading_scope": "Sets/camera design body read via web; no embedded video playback",
+      "stage": "reading_not_production_implementation",
+      "private_body_path": null,
+      "retrieval": "Web tool parsed body read; raw private cache acquisition failed/not needed"
+    },
+    {
+      "id": "pixar-animation",
+      "url": "https://sciencebehindpixar.org/pipeline/animation",
+      "author": "Museum of Science Boston in collaboration with Pixar",
+      "reading_scope": "Acting/key-pose/interpolation body read via web; not full animation course",
+      "stage": "reading_not_production_implementation",
+      "private_body_path": null,
+      "retrieval": "Web tool parsed body read; raw private cache acquisition failed/not needed"
+    },
+    {
+      "id": "epic-composition",
+      "url": "https://dev.epicgames.com/documentation/fortnite/making-cinematics-1-composition-techniques-in-unreal-editor-for-fortnite",
+      "author": "Epic Games",
+      "reading_scope": "Composition/leading lines/angle descriptions read via web; not all images inspected",
+      "stage": "reading_not_production_implementation",
+      "private_body_path": null,
+      "retrieval": "Web tool parsed body read; raw private cache acquisition failed/not needed"
+    },
+    {
+      "id": "epic-framing",
+      "url": "https://dev.epicgames.com/documentation/fortnite/making-cinematics-3-camera-movement-and-framing-in-unreal-editor-for-fortnite",
+      "author": "Epic Games",
+      "reading_scope": "Movement and framing body read via web and cached text; no video playback; axis/genre prescriptions not transferred",
+      "stage": "reading_not_production_implementation",
+      "private_body_path": "D:/codex/temp/MMD-Design-Foundations-2026-11-18/epic-framing.txt",
+      "body_sha256": "651e4ed20b991dc9e929f1ea691be0ca26fa49c904369541ec35b55b1a555421"
+    },
+    {
+      "id": "epic-lighting",
+      "url": "https://dev.epicgames.com/documentation/en-us/fortnite/making-cinematics-2-lighting-and-color-in-unreal-editor-for-fortnite",
+      "author": "Epic Games",
+      "reading_scope": "Targeted reread of existing source; light roles and palette/mood; numerical examples and imprecise physical descriptions not adopted",
+      "stage": "reading_not_production_implementation",
+      "private_body_path": null,
+      "retrieval": "Web tool parsed body read; raw private cache acquisition failed/not needed"
+    },
+    {
+      "id": "adobe-contrast",
+      "url": "https://www.adobe.com/uk/creativecloud/design/discover/color-contrast.html",
+      "author": "Adobe",
+      "reading_scope": "Available web/search body read: hierarchy/value/warm-cool/saturation/quantity/gray-first guidance; private HTTP403, no image study",
+      "stage": "reading_not_production_implementation",
+      "private_body_path": null,
+      "retrieval": "Web tool parsed body read; raw private cache acquisition failed/not needed"
+    },
+    {
+      "id": "riot-vfx",
+      "url": "https://www.riotgames.com/en/artedu/visual-effects",
+      "author": "Riot Games",
+      "reading_scope": "Only full available introductory body and resource links read via web; restraint/clarity/theme/source; no video or full style PDF",
+      "stage": "reading_not_production_implementation",
+      "private_body_path": null,
+      "retrieval": "Web tool parsed body read; raw private cache acquisition failed/not needed"
+    },
+    {
+      "id": "blender-nla-sidebar",
+      "url": "https://docs.blender.org/manual/en/5.2/editors/nla/sidebar.html",
+      "author": "Blender",
+      "reading_scope": "Full cached article read: Action/Slot, strip/source time, blending and influence/extrapolation/scale",
+      "stage": "reading_not_production_implementation",
+      "private_body_path": "D:/codex/temp/MMD-Design-Foundations-2026-11-18/blender-nla-sidebar.txt",
+      "body_sha256": "d444b4ae058df6c564dce906bb5cb4ebab031c41ec3fb3cfeaf069a06fdc9bc1"
+    }
+  ],
+  "limited_sources": [
+    {
+      "url": "https://docs.blender.org/manual/en/5.2/animation/keyframes/introduction.html",
+      "scope": "Body retrieval failed; reference link only, not registered as new full reading"
+    },
+    {
+      "url": "https://docs.blender.org/manual/en/5.2/editors/graph_editor/fcurves/properties.html",
+      "scope": "Official search excerpts read (Constant/Linear/Bezier and handles); full body unavailable"
+    },
+    {
+      "url": "https://help.steampowered.com/en/faqs/view/0688-7692-4D5A-1935",
+      "scope": "Official page returned only unusable body/navigation; not read or adopted"
+    },
+    {
+      "url": "https://nexus.leagueoflegends.com/wp-content/uploads/2017/10/VFX_Styleguide_final_public_hidpjqwx7lqyx0pjj3ss.pdf",
+      "scope": "Redirected to game homepage, not acquired/read; Riot live intro substituted and accurately scoped"
+    }
+  ],
+  "design_gaps_identified": [
+    "Existing art/lighting studies fragmented across dated cases",
+    "No unified intent/focal hierarchy/value/color/staging/effect review at task entry",
+    "Motion performance and local keyframing decisions lack a central playbook",
+    "Chronological scripts and full-file index do not select applicable input/evidence"
+  ],
+  "new_decisions": [
+    "Task routes select existing knowledge before tools",
+    "Design brief distinguishes intention, implementation and review",
+    "Explicit motion/rig/physics/corrective decision table",
+    "Effects need a role, focus relationship and timing intention; stills do not validate timing"
+  ],
+  "production_modified": false,
+  "new_render": false,
+  "new_animation": false,
+  "art_quality_certified": false,
+  "limits": "Documentation/routing and primary-source reading; no production visual implementation, no reference style certification"
+}

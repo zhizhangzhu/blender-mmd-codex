@@ -1,0 +1,106 @@
+{
+  "date": "2026-11-16",
+  "guide": "docs/MME_TO_GOO_LIGHTING_STUDY.md",
+  "roundup": "https://www.bilibili.com/opus/844214760220131363",
+  "roundup_authors_indexed": 49,
+  "all_49_effect_families_deeply_read": false,
+  "private_cache": "D:\\codex\\temp\\MME-Deep-Study-2026-11-16",
+  "archives": [
+    {
+      "archive": "104601.zip",
+      "sha256": "f7e4a37233d9f7fa704f3ce11b03afcb0aa33d2d2617244367493c6eb1ea43e6",
+      "source": "https://bowlroll.net/file/104601",
+      "private_text_files": 124,
+      "all_code_fully_read": false
+    },
+    {
+      "archive": "146255.zip",
+      "sha256": "a0bd7e92f9f7e9298e81829f113dce281460ead8c23b4085cc6e2b60abb7fb11",
+      "source": "https://bowlroll.net/file/146255",
+      "private_text_files": 13,
+      "all_code_fully_read": false
+    },
+    {
+      "archive": "149977.zip",
+      "sha256": "75ad2bdae1c34ad7c3b49d0520fb1cc476a7154d70d2c0ba4cf5269a09ce6940",
+      "source": "https://bowlroll.net/file/149977",
+      "private_text_files": 5,
+      "all_code_fully_read": false
+    },
+    {
+      "archive": "188141.zip",
+      "sha256": "b75373a0a5f4d3139a567422d3c126e19745abe4c2bf7e7e80c01525c254892a",
+      "source": "https://bowlroll.net/file/188141",
+      "private_text_files": 11,
+      "all_code_fully_read": false
+    },
+    {
+      "archive": "195743.zip",
+      "sha256": "2fdbc3d0e50dbe5235a6d3eb451ca6b37dbcefeb3e07ed883eaffbd082e60e37",
+      "source": "https://bowlroll.net/file/195743",
+      "private_text_files": 16,
+      "all_code_fully_read": false
+    },
+    {
+      "archive": "HAToon2_r14.zip",
+      "sha256": "57429b1949163568c78395b969926d9eee5183b994527991745aedc5ae3727a4",
+      "source": "https://sorairo.pictures/3dcg/mme-effects/hatoon2/",
+      "private_text_files": 9,
+      "all_code_fully_read": false
+    },
+    {
+      "archive": "M4Layer_r12.zip",
+      "sha256": "a7094eaf1e9fd189368e524ee6cbce7d819513dd2d33aacde2fd6671f5bf8ac2",
+      "source": "https://sorairo.pictures/3dcg/mme-effects/m4layer/",
+      "private_text_files": 30,
+      "all_code_fully_read": false
+    },
+    {
+      "archive": "msToonCoordinator_v2.1.zip",
+      "sha256": "812941318b914c3495f56616f7e908c0e447ade25625878138b20af02fef3ebe",
+      "source": "https://note.com/mashimashi_note/n/n2c2144638054",
+      "private_text_files": 25,
+      "all_code_fully_read": false
+    },
+    {
+      "archive": "PostRimLighting_r4.zip",
+      "sha256": "81cab264cdac2ec2e3069dae0f02672c41a19b59255613b7e2cf9d9b3849e4b6",
+      "source": "https://sorairo.pictures/3dcg/mme-effects/postrimlighting/",
+      "private_text_files": 7,
+      "all_code_fully_read": false
+    }
+  ],
+  "read_scope": "Original guide details exact primary readme/code sections; downloaded does not mean fully read or executed",
+  "additional_primary_sources": [
+    "https://github.com/ray-cast/ray-mmd",
+    "https://github.com/ray-cast/ray-mmd/blob/master/ray.conf",
+    "https://pip-mmd.hatenablog.com/entry/ar1026319",
+    "https://github.com/MikuMikuShaders/LightBloom/blob/master/LightBloom.fxsub",
+    "https://github.com/MikuMikuShaders/FXAA/blob/master/FXAA.fx",
+    "https://pip-mmd.hatenablog.com/entry/ar1909483",
+    "https://pip-mmd.hatenablog.com/entry/2024/02/24/230134",
+    "https://pip-mmd.hatenablog.com/entry/ar945815"
+  ],
+  "actually_executed": "Goo native node/material adaptation only; no MME .fx or package executables",
+  "video_downloaded": false,
+  "third_party_sources_redistributed": false,
+  "preproduction_renders_viewed": [
+    "production-v1/portrait-4290.png",
+    "production-v1/opening-4140.png",
+    "production-v1/fullbody-light-study-4290.png",
+    "production-v1/external-sun-visibility-study.png",
+    "production-v2/opening-4140.png"
+  ],
+  "known_limits": [
+    "External Sun current direction blocked; actual off-camera gobo simulates window pattern",
+    "No original PowerShader/Ray execution in Goo",
+    "Not all 49 author effects mastered",
+    "Goo Curvature rim unresolved and unused",
+    "No new physics simulation",
+    "No user art approval"
+  ],
+  "additional_code_read_scope": {
+    "LightBloom": "Threshold, blur/composition and input/output transforms, lines 145-482; not all 555 lines",
+    "FXAA": "Quality preset and wrapper/parameters; not a derivation or port of compressed NVIDIA core"
+  }
+}

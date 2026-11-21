@@ -1,0 +1,40 @@
+{
+  "id": "duet-soft-top-rim-v1",
+  "status": "verified-five-second-study",
+  "user_art_approval": false,
+  "project": "D:\\codex\\output\\MMD-Duet-Soft-Top-Rim-v1\\production-v2\\Franken_Duet_Soft_Top_Rim.blend",
+  "source": "D:\\codex\\output\\MMD-Duet-Captions-Contrast-v1\\production-v3\\Franken_Duet_Focused_Caption_Source.blend",
+  "stage_profile": "presets/stages/hesperides-soft-top-rim-v1.json",
+  "caption_profile": "presets/typography/duet-official-locked-v2.json",
+  "caption_cache": "D:\\codex\\temp\\Duet-Soft-Top-Rim-v1\\final-cache",
+  "frames": [
+    4140,
+    4439
+  ],
+  "fps": 60,
+  "resolution": [
+    1920,
+    1080
+  ],
+  "video": "D:\\codex\\output\\MMD-Duet-Soft-Top-Rim-v1\\captions-5s-v1\\Franken_Duet_5s_Captions_REVIEW.mp4",
+  "without_captions_video": "D:\\codex\\output\\MMD-Duet-Soft-Top-Rim-v1\\lighting-sample-5s-v1\\Aether_Duet_5s_REVIEW.mp4",
+  "audio_project": "presets/projects/franken-duet-full-v1.json",
+  "audio_start_seconds": 68.98333333333333,
+  "controls": [
+    {
+      "effect": "direct-soft",
+      "mean_absolute_rgb_difference_255": 50.221927642822266,
+      "fraction_pixels_over_one": 0.8331741555511101
+    },
+    {
+      "effect": "rim",
+      "mean_absolute_rgb_difference_255": 0.7460228800773621,
+      "fraction_pixels_over_one": 0.07728403984607078
+    }
+  ],
+  "limits": [
+    "Five seconds only; waiting for user art feedback",
+    "NPR rim is art-directed, not fully occlusion-aware physical lighting",
+    "Final captions require the separate Python compositor"
+  ]
+}

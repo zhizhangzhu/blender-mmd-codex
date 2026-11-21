@@ -1,0 +1,164 @@
+{
+  "date": "2026-11-17",
+  "guide": "docs/GOO_FOUNDATIONS_AND_PARAMETERS.md",
+  "user_priority": "Goo primary, learn basic functionality and parameter meanings before advanced rendering; native MMD route deferred",
+  "official_sources": [
+    "https://www.dillongoostudios.com/gooengine",
+    "https://www.dillongoostudios.com/gooengine-features",
+    "https://github.com/dillongoostudios/goo-engine/branches/all"
+  ],
+  "official_website_scope": "Main page and complete feature directory read, including shading, procedural nodes and non-render UI additions; author images not analysed and linked videos not played",
+  "official_source_lock": {
+    "repo": "dillongoostudios/goo-engine",
+    "branch": "goo-engine-v4.4-release",
+    "commit": "d281a65ebe227cad2726f79255218dcf88d03f92"
+  },
+  "default_branch_note": "goo-engine-main 8457395892beec33d4605ef9d894a1aff4a8d79f lacks the Half-lambert output in its Shader Info declaration; use release branch for current official reference",
+  "acquisitions": [
+    {
+      "path": "source/blender/nodes/shader/nodes/node_shader_curvature.cc",
+      "private_file": "D:\\codex\\temp\\Goo-Official-Basics-2026-11-17\\goo-engine-v4.4-release\\node_shader_curvature.cc",
+      "url": "https://raw.githubusercontent.com/dillongoostudios/goo-engine/d281a65ebe227cad2726f79255218dcf88d03f92/source/blender/nodes/shader/nodes/node_shader_curvature.cc",
+      "sha256": "0b9c48d23da2f2b1baf62af4e34cd1c6c87dd39a11a47650826c53283ffb71a0"
+    },
+    {
+      "path": "source/blender/nodes/shader/nodes/node_shader_light_info.cc",
+      "private_file": "D:\\codex\\temp\\Goo-Official-Basics-2026-11-17\\goo-engine-v4.4-release\\node_shader_light_info.cc",
+      "url": "https://raw.githubusercontent.com/dillongoostudios/goo-engine/d281a65ebe227cad2726f79255218dcf88d03f92/source/blender/nodes/shader/nodes/node_shader_light_info.cc",
+      "sha256": "ac2f2feb04c60cd864faf21002db2cf0ce25f0020455105133cdae7623eed242"
+    },
+    {
+      "path": "source/blender/nodes/shader/nodes/node_shader_light_info_new.cc",
+      "url": "https://raw.githubusercontent.com/dillongoostudios/goo-engine/d281a65ebe227cad2726f79255218dcf88d03f92/source/blender/nodes/shader/nodes/node_shader_light_info_new.cc",
+      "acquisition_error": "<urlopen error [Errno 2] No such file or directory>"
+    },
+    {
+      "path": "source/blender/nodes/shader/nodes/node_shader_oklab_color_ramp.cc",
+      "private_file": "D:\\codex\\temp\\Goo-Official-Basics-2026-11-17\\goo-engine-v4.4-release\\node_shader_oklab_color_ramp.cc",
+      "url": "https://raw.githubusercontent.com/dillongoostudios/goo-engine/d281a65ebe227cad2726f79255218dcf88d03f92/source/blender/nodes/shader/nodes/node_shader_oklab_color_ramp.cc",
+      "sha256": "8c37472dd4047b977c97ed56cf5f6092263252172857dc2fa69d108262f6fe62"
+    },
+    {
+      "path": "source/blender/nodes/shader/nodes/node_shader_screenspace_info.cc",
+      "private_file": "D:\\codex\\temp\\Goo-Official-Basics-2026-11-17\\goo-engine-v4.4-release\\node_shader_screenspace_info.cc",
+      "url": "https://raw.githubusercontent.com/dillongoostudios/goo-engine/d281a65ebe227cad2726f79255218dcf88d03f92/source/blender/nodes/shader/nodes/node_shader_screenspace_info.cc",
+      "sha256": "2acc1db8e8eb97dfce66d0b8a75b9eef74dc29b862c7693347a6a95fc02bc110"
+    },
+    {
+      "path": "source/blender/nodes/shader/nodes/node_shader_sdf_noise.cc",
+      "private_file": "D:\\codex\\temp\\Goo-Official-Basics-2026-11-17\\goo-engine-v4.4-release\\node_shader_sdf_noise.cc",
+      "url": "https://raw.githubusercontent.com/dillongoostudios/goo-engine/d281a65ebe227cad2726f79255218dcf88d03f92/source/blender/nodes/shader/nodes/node_shader_sdf_noise.cc",
+      "sha256": "363300d2bf3af7cd932a5362fced2e07f536e0426f7bfcc54ca8046a1126b2fd"
+    },
+    {
+      "path": "source/blender/nodes/shader/nodes/node_shader_sdf_op.cc",
+      "private_file": "D:\\codex\\temp\\Goo-Official-Basics-2026-11-17\\goo-engine-v4.4-release\\node_shader_sdf_op.cc",
+      "url": "https://raw.githubusercontent.com/dillongoostudios/goo-engine/d281a65ebe227cad2726f79255218dcf88d03f92/source/blender/nodes/shader/nodes/node_shader_sdf_op.cc",
+      "sha256": "9dd33ea3df5d56ec3623fc1957b5b362e6dfb1021a69a1a2c6964099abebb388"
+    },
+    {
+      "path": "source/blender/nodes/shader/nodes/node_shader_sdf_primitive.cc",
+      "url": "https://raw.githubusercontent.com/dillongoostudios/goo-engine/d281a65ebe227cad2726f79255218dcf88d03f92/source/blender/nodes/shader/nodes/node_shader_sdf_primitive.cc",
+      "acquisition_error": "<urlopen error [Errno 2] No such file or directory>"
+    },
+    {
+      "path": "source/blender/nodes/shader/nodes/node_shader_sdf_vector_op.cc",
+      "url": "https://raw.githubusercontent.com/dillongoostudios/goo-engine/d281a65ebe227cad2726f79255218dcf88d03f92/source/blender/nodes/shader/nodes/node_shader_sdf_vector_op.cc",
+      "acquisition_error": "<urlopen error [Errno 2] No such file or directory>"
+    },
+    {
+      "path": "source/blender/nodes/shader/nodes/node_shader_set_depth.cc",
+      "url": "https://raw.githubusercontent.com/dillongoostudios/goo-engine/d281a65ebe227cad2726f79255218dcf88d03f92/source/blender/nodes/shader/nodes/node_shader_set_depth.cc",
+      "acquisition_error": "<urlopen error [Errno 2] No such file or directory>"
+    },
+    {
+      "path": "source/blender/nodes/shader/nodes/node_shader_shader_info.cc",
+      "private_file": "D:\\codex\\temp\\Goo-Official-Basics-2026-11-17\\goo-engine-v4.4-release\\node_shader_shader_info.cc",
+      "url": "https://raw.githubusercontent.com/dillongoostudios/goo-engine/d281a65ebe227cad2726f79255218dcf88d03f92/source/blender/nodes/shader/nodes/node_shader_shader_info.cc",
+      "sha256": "24fcde41efe31cf95f48dd4c8f2c466c9211b1736ea6644b22834cd58c3bf7e5"
+    },
+    {
+      "path": "source/blender/nodes/shader/nodes/node_shader_tex_hexagon.cc",
+      "private_file": "D:\\codex\\temp\\Goo-Official-Basics-2026-11-17\\goo-engine-v4.4-release\\node_shader_tex_hexagon.cc",
+      "url": "https://raw.githubusercontent.com/dillongoostudios/goo-engine/d281a65ebe227cad2726f79255218dcf88d03f92/source/blender/nodes/shader/nodes/node_shader_tex_hexagon.cc",
+      "sha256": "7ac79f5c6bfd015efe02dfd8ed4ad69d385b747547ab56076cf94649b19ea4e6"
+    },
+    {
+      "path": "source/blender/nodes/shader/nodes/node_shader_twirl.cc",
+      "url": "https://raw.githubusercontent.com/dillongoostudios/goo-engine/d281a65ebe227cad2726f79255218dcf88d03f92/source/blender/nodes/shader/nodes/node_shader_twirl.cc",
+      "acquisition_error": "<urlopen error [Errno 2] No such file or directory>"
+    },
+    {
+      "path": "source/blender/nodes/shader/nodes/node_shader_water_ripples.cc",
+      "private_file": "D:\\codex\\temp\\Goo-Official-Basics-2026-11-17\\goo-engine-v4.4-release\\node_shader_water_ripples.cc",
+      "url": "https://raw.githubusercontent.com/dillongoostudios/goo-engine/d281a65ebe227cad2726f79255218dcf88d03f92/source/blender/nodes/shader/nodes/node_shader_water_ripples.cc",
+      "sha256": "e250be4f4f08e28787c2b228c955b0f4a99c0e12270af20dfbbe33d0249bb3c6"
+    }
+  ],
+  "actually_read_source_files": [
+    "node_shader_shader_info.cc",
+    "node_shader_light_info.cc",
+    "node_shader_curvature.cc",
+    "node_shader_water_ripples.cc",
+    "node_shader_screenspace_info.cc"
+  ],
+  "source_read_scope": "Short node declarations, input fallbacks, UI selectors and GPU bridges; not a full renderer code audit or a proof that every source variant is compiled",
+  "runtime": {
+    "binary": "D:\\codex\\workspace\\goo-engine\\5.2.1-community\\blender-5.2.1-git.0051aee0-windows64\\blender.exe",
+    "version": "5.2.1 LTS",
+    "build_hash": "0051aee03764",
+    "node_count": 13
+  },
+  "inventory": "D:\\codex\\output\\Goo-Basics-Study-2026-11-17\\parameter-inventory-v2.json",
+  "inventory_scope": "Observed defaults and one-enum-at-a-time sockets; not all combinations or visual behavior verified",
+  "new_static_evidence": {
+    "version": "5.2.1 LTS",
+    "build_hash": "0051aee03764",
+    "production_loaded": false,
+    "video_created": false,
+    "left": "raw Half-lambert factor",
+    "right": "fixed three-band palette driven only by that factor",
+    "measurements": {
+      "A-single-key": {
+        "half_lambert_min_visible": 1.1980533599853516e-05,
+        "half_lambert_max": 0.99951171875,
+        "half_lambert_mean_visible": 0.5926119089126587,
+        "linear_exr": "D:\\codex\\temp\\Goo-Official-Basics-2026-11-17\\linear\\A-single-key.exr"
+      },
+      "B-two-opposite-lights": {
+        "half_lambert_min_visible": 7.712841033935547e-05,
+        "half_lambert_max": 1.0,
+        "half_lambert_mean_visible": 0.974846601486206,
+        "linear_exr": "D:\\codex\\temp\\Goo-Official-Basics-2026-11-17\\linear\\B-two-opposite-lights.exr"
+      },
+      "C-fill-excluded-from-key-group": {
+        "half_lambert_min_visible": 1.1980533599853516e-05,
+        "half_lambert_max": 0.99951171875,
+        "half_lambert_mean_visible": 0.5926119089126587,
+        "linear_exr": "D:\\codex\\temp\\Goo-Official-Basics-2026-11-17\\linear\\C-fill-excluded-from-key-group.exr"
+      },
+      "A_vs_C_max_abs_linear_difference": 0.0
+    },
+    "limits": "Static spheres, direct light, own light groups only; not a production shadow or animation validation"
+  },
+  "independent_reopen": {
+    "version": "5.2.1 LTS",
+    "build_hash": "0051aee03764",
+    "max_abs_linear_rgba_difference": 0.0,
+    "mean_abs_difference": 0.0,
+    "passed": true,
+    "production_loaded": false
+  },
+  "prior_evidence": "docs/research/GOO_FEATURE_MME_MECHANISMS_2026_11_16.json",
+  "all_basics_mastered": false,
+  "pending": [
+    "SDF mode-specific formulas and paired controls",
+    "additional shader parameter variation tests",
+    "non-render official UI features in community port",
+    "broader version/animation behavior"
+  ],
+  "production_loaded_or_modified": false,
+  "native_mmd_started": false,
+  "video_created": false,
+  "third_party_complete_sources_in_repo": false
+}

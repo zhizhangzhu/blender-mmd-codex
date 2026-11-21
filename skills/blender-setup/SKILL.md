@@ -5,6 +5,8 @@ description: 檢查 Blender 是否已安裝，必要時在使用者確認後從�
 
 # Blender 環境準備
 
+本机已验证的环境与插件清单见 `../../docs/LOCAL_ENVIRONMENT.md`。执行文件不在默认目录时使用 `scripts.blender_detect --executable <path>` 或 `BLENDER_EXECUTABLE`；Windows 启动器路径会解析为同目录 `blender.exe`。盘点用户插件用 `scripts/blender_inventory.py`，不要加 `--factory-startup`；工厂启动只适用于隔离验证。
+
 ## 使用時機
 
 當使用者要執行 Blender、安裝 Blender Add-on、匯入 MMD 檔案，或回報找不到 Blender 時使用。

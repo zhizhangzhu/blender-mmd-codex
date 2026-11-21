@@ -1,0 +1,683 @@
+{
+  "schema_version": 1,
+  "id": "blender53-toon-package-study-2026-11-18",
+  "started_on": "2026-11-18",
+  "continued_on": "2026-11-19",
+  "guide": "docs/BLENDER53_TOON_PACKAGE_STUDY_2026_11_18.md",
+  "face_foundations": "docs/FACE_SHADOW_DESIGN_STUDY_2026_11_18.md",
+  "director": {
+    "model": "gpt-6.1-sol",
+    "reasoning": "xhigh",
+    "low_role": "Fixed downloads,metadata,hashes,private extraction,selected frame extraction,and fixed native command execution only"
+  },
+  "user_authorization": "Research local author packages/tutorial and,where useful,try independently on included Furina or actor copies;stills only;no automatic production migration",
+  "packages": [
+    {
+      "path": "D:/BaiduNetdiskDownload/5.3卡渲节点.zip",
+      "sha256": "bbfb8d2ee4840ef10b4278e0ed10d2a2c9071d7ff27e476b7d0b3b81156ad6d5",
+      "inventory": "D:/codex/temp/Goo-Face-Shadow-Study-2026-11-18/package-inventory.json",
+      "extraction": "D:/codex/temp/Goo-Face-Shadow-Study-2026-11-18/package53/author-toon.blend",
+      "blend_sha256": "d9696f8f165823e17fb542ce4b157351c657c79e958aefb87fe677d4e71f80fe",
+      "read_scope": "ZIP/model Text/targeted material and node groups in native53 and Goo52 v2 audits;two controlled native53 renders;unused branches not comprehensively reviewed",
+      "external_readme_or_license_found": false,
+      "header": "Zstandard compressed,not directly readable BLENDER version header",
+      "model_text_rules_found": true
+    },
+    {
+      "path": "D:/BaiduNetdiskDownload/一些或许有用的节点.zip",
+      "sha256": "b2d6d8bb1170952bf0208f0a099e51036c193fc8ff641878df1c033284669b4a",
+      "bytes": 264302334,
+      "entries": 16,
+      "inventory": "D:/codex/temp/Goo-Face-Shadow-Study-2026-11-18/package2-inventory.json",
+      "decoded_inventory": "D:/codex/temp/Goo-Face-Shadow-Study-2026-11-18/package2-decoded-inventory.json",
+      "read_scope": "Only archive names/size/safety metadata and unique231byte UTF8 notes text;no plugin or other blend opened",
+      "notes_sha256": "d4dc52f31ec1b0c571ab069d56b2eb91b4eaa8ffcd54087d0da947b006e72334",
+      "notes_finding": "Author describes old plugin mainly for view-layer main light binding and older node performance limitations",
+      "filename_warning": "One old modular-node filename says its hair-shadow method fails in5.3;not yet independently reproduced",
+      "nested_plugin_enabled": false
+    }
+  ],
+  "video": {
+    "path": "D:/JiJiDownload/blender5.3三渲二节点分享/1.blender5.3三渲二节点分享(Av117620598639649,P1).mp4",
+    "sha256": "d5633274b5511f57896f8c5ec4bf34609f5f92083bd7e7f2b2d17367e71c0978",
+    "duration_seconds": 283.65,
+    "resolution": [
+      1920,
+      1080
+    ],
+    "fps": 60,
+    "subtitles_stream_present": false,
+    "audio_transcribed": false,
+    "played": false,
+    "frames_personally_viewed": [
+      {
+        "seconds": 8,
+        "command": [
+          "D:/codex/temp/blender-mmd-video-tools/imageio_ffmpeg/binaries/ffmpeg-win-x86_64-v7.1.exe",
+          "-hide_banner",
+          "-ss",
+          "8",
+          "-i",
+          "D:\\JiJiDownload\\blender5.3三渲二节点分享\\1.blender5.3三渲二节点分享(Av117620598639649,P1).mp4",
+          "-frames:v",
+          "1",
+          "-n",
+          "D:\\codex\\temp\\Goo-Face-Shadow-Study-2026-11-18\\video53-frames\\t0008.png"
+        ],
+        "path": "D:\\codex\\temp\\Goo-Face-Shadow-Study-2026-11-18\\video53-frames\\t0008.png",
+        "size": [
+          1920,
+          1080
+        ]
+      },
+      {
+        "seconds": 55,
+        "command": [
+          "D:/codex/temp/blender-mmd-video-tools/imageio_ffmpeg/binaries/ffmpeg-win-x86_64-v7.1.exe",
+          "-hide_banner",
+          "-ss",
+          "55",
+          "-i",
+          "D:\\JiJiDownload\\blender5.3三渲二节点分享\\1.blender5.3三渲二节点分享(Av117620598639649,P1).mp4",
+          "-frames:v",
+          "1",
+          "-n",
+          "D:\\codex\\temp\\Goo-Face-Shadow-Study-2026-11-18\\video53-frames\\t0055.png"
+        ],
+        "path": "D:\\codex\\temp\\Goo-Face-Shadow-Study-2026-11-18\\video53-frames\\t0055.png",
+        "size": [
+          1920,
+          1080
+        ]
+      },
+      {
+        "seconds": 105,
+        "command": [
+          "D:/codex/temp/blender-mmd-video-tools/imageio_ffmpeg/binaries/ffmpeg-win-x86_64-v7.1.exe",
+          "-hide_banner",
+          "-ss",
+          "105",
+          "-i",
+          "D:\\JiJiDownload\\blender5.3三渲二节点分享\\1.blender5.3三渲二节点分享(Av117620598639649,P1).mp4",
+          "-frames:v",
+          "1",
+          "-n",
+          "D:\\codex\\temp\\Goo-Face-Shadow-Study-2026-11-18\\video53-frames\\t0105.png"
+        ],
+        "path": "D:\\codex\\temp\\Goo-Face-Shadow-Study-2026-11-18\\video53-frames\\t0105.png",
+        "size": [
+          1920,
+          1080
+        ]
+      },
+      {
+        "seconds": 155,
+        "command": [
+          "D:/codex/temp/blender-mmd-video-tools/imageio_ffmpeg/binaries/ffmpeg-win-x86_64-v7.1.exe",
+          "-hide_banner",
+          "-ss",
+          "155",
+          "-i",
+          "D:\\JiJiDownload\\blender5.3三渲二节点分享\\1.blender5.3三渲二节点分享(Av117620598639649,P1).mp4",
+          "-frames:v",
+          "1",
+          "-n",
+          "D:\\codex\\temp\\Goo-Face-Shadow-Study-2026-11-18\\video53-frames\\t0155.png"
+        ],
+        "path": "D:\\codex\\temp\\Goo-Face-Shadow-Study-2026-11-18\\video53-frames\\t0155.png",
+        "size": [
+          1920,
+          1080
+        ]
+      },
+      {
+        "seconds": 205,
+        "command": [
+          "D:/codex/temp/blender-mmd-video-tools/imageio_ffmpeg/binaries/ffmpeg-win-x86_64-v7.1.exe",
+          "-hide_banner",
+          "-ss",
+          "205",
+          "-i",
+          "D:\\JiJiDownload\\blender5.3三渲二节点分享\\1.blender5.3三渲二节点分享(Av117620598639649,P1).mp4",
+          "-frames:v",
+          "1",
+          "-n",
+          "D:\\codex\\temp\\Goo-Face-Shadow-Study-2026-11-18\\video53-frames\\t0205.png"
+        ],
+        "path": "D:\\codex\\temp\\Goo-Face-Shadow-Study-2026-11-18\\video53-frames\\t0205.png",
+        "size": [
+          1920,
+          1080
+        ]
+      },
+      {
+        "seconds": 255,
+        "command": [
+          "D:/codex/temp/blender-mmd-video-tools/imageio_ffmpeg/binaries/ffmpeg-win-x86_64-v7.1.exe",
+          "-hide_banner",
+          "-ss",
+          "255",
+          "-i",
+          "D:\\JiJiDownload\\blender5.3三渲二节点分享\\1.blender5.3三渲二节点分享(Av117620598639649,P1).mp4",
+          "-frames:v",
+          "1",
+          "-n",
+          "D:\\codex\\temp\\Goo-Face-Shadow-Study-2026-11-18\\video53-frames\\t0255.png"
+        ],
+        "path": "D:\\codex\\temp\\Goo-Face-Shadow-Study-2026-11-18\\video53-frames\\t0255.png",
+        "size": [
+          1920,
+          1080
+        ]
+      },
+      {
+        "seconds": 275,
+        "command": [
+          "D:/codex/temp/blender-mmd-video-tools/imageio_ffmpeg/binaries/ffmpeg-win-x86_64-v7.1.exe",
+          "-hide_banner",
+          "-ss",
+          "275",
+          "-i",
+          "D:\\JiJiDownload\\blender5.3三渲二节点分享\\1.blender5.3三渲二节点分享(Av117620598639649,P1).mp4",
+          "-frames:v",
+          "1",
+          "-n",
+          "D:\\codex\\temp\\Goo-Face-Shadow-Study-2026-11-18\\video53-frames\\t0275.png"
+        ],
+        "path": "D:\\codex\\temp\\Goo-Face-Shadow-Study-2026-11-18\\video53-frames\\t0275.png",
+        "size": [
+          1920,
+          1080
+        ]
+      }
+    ],
+    "observations": [
+      {
+        "seconds": 8,
+        "seen": "Blender5.3.0 title bar,Furina,occluder blocks and projected-shadow statement;not full face wiring"
+      },
+      {
+        "seconds": 55,
+        "seen": "Light Emission to Light Output and custom light-property statement;not character surface output"
+      },
+      {
+        "seconds": 105,
+        "seen": "Material graph with author lighting component and closure-related nodes;the sampled frame alone does not establish exact native identities,which are resolved separately by the native53-v2 audit"
+      },
+      {
+        "seconds": 155,
+        "seen": "Face normals group connected;Use SDF unchecked"
+      },
+      {
+        "seconds": 205,
+        "seen": "Use SDF checked,face nose shadow visibly changes;additional UV/elevation/soft-shadow interfaces visible"
+      },
+      {
+        "seconds": 255,
+        "seen": "Character key light edited;Emitter graph still selected"
+      },
+      {
+        "seconds": 275,
+        "seen": "Lighting contribution toggled/edited;not proof of a unique final light configuration"
+      }
+    ],
+    "limits": "Seven sampled images with some burned-in captions are not a full lecture viewing or transcript"
+  },
+  "official_reading": {
+    "eevee": [
+      {
+        "url": "https://www.blender.org/releases/5-3/",
+        "path": "D:\\codex\\temp\\Goo-Face-Shadow-Study-2026-11-18\\official53\\release.html",
+        "status": "failed",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://developer.blender.org/docs/release_notes/5.3/eevee/",
+        "path": "D:\\codex\\temp\\Goo-Face-Shadow-Study-2026-11-18\\official53\\eevee.html",
+        "http_status": 200,
+        "status": "downloaded",
+        "bytes": 454432,
+        "sha256": "b5874e0cb9501af9f4ef5443486f5fc4ef2efde55b2dfcb0eb27738ffc165cdd",
+        "text_path": "D:\\codex\\temp\\Goo-Face-Shadow-Study-2026-11-18\\official53\\eevee.txt"
+      }
+    ],
+    "manuals": [
+      {
+        "url": "https://docs.blender.org/manual/en/5.3/render/shader_nodes/shader/light_accumulation.html",
+        "path": "D:\\codex\\temp\\Goo-Face-Shadow-Study-2026-11-18\\official53\\light_accumulation.html",
+        "http_status": 200,
+        "status": "downloaded",
+        "bytes": 471743,
+        "sha256": "1c7482bdb553b83ade6fb885f9cb573b1069e9ba66b277a0e7bc3269cd75d026",
+        "text_path": "D:\\codex\\temp\\Goo-Face-Shadow-Study-2026-11-18\\official53\\light_accumulation.txt"
+      },
+      {
+        "url": "https://docs.blender.org/manual/en/5.3/render/shader_nodes/input/light_info.html",
+        "path": "D:\\codex\\temp\\Goo-Face-Shadow-Study-2026-11-18\\official53\\light_info.html",
+        "http_status": 200,
+        "status": "downloaded",
+        "bytes": 468107,
+        "sha256": "3aa507b76c8dbbf18db66f597d7641fdd75de1f0fbe305f2df6969c2b60299ac",
+        "text_path": "D:\\codex\\temp\\Goo-Face-Shadow-Study-2026-11-18\\official53\\light_info.txt"
+      },
+      {
+        "url": "https://docs.blender.org/manual/en/5.3/render/shader_nodes/input/light_evaluation.html",
+        "path": "D:\\codex\\temp\\Goo-Face-Shadow-Study-2026-11-18\\official53\\light_evaluation.html",
+        "http_status": 200,
+        "status": "downloaded",
+        "bytes": 469519,
+        "sha256": "4943e871a3b65bef38a4f913861fa19555033121e5a1e4b45c73c3358e60a580",
+        "text_path": "D:\\codex\\temp\\Goo-Face-Shadow-Study-2026-11-18\\official53\\light_evaluation.txt"
+      },
+      {
+        "url": "https://docs.blender.org/manual/en/5.3/render/shader_nodes/input/shadow_raycast.html",
+        "path": "D:\\codex\\temp\\Goo-Face-Shadow-Study-2026-11-18\\official53\\shadow_raycast.html",
+        "http_status": 200,
+        "status": "downloaded",
+        "bytes": 468534,
+        "sha256": "2ec98645cd86942dd9948b9d825b85f4319785cb5aede81ed1f9e10c90081a85",
+        "text_path": "D:\\codex\\temp\\Goo-Face-Shadow-Study-2026-11-18\\official53\\shadow_raycast.txt"
+      }
+    ],
+    "text_byte_hashes": [
+      {
+        "path": "D:\\codex\\temp\\Goo-Face-Shadow-Study-2026-11-18\\official53\\eevee.txt",
+        "sha256": "5e0082b821da39bd7696d089bb24b0d887aa27e8d98ee5da51d02672c39d99cd"
+      },
+      {
+        "path": "D:\\codex\\temp\\Goo-Face-Shadow-Study-2026-11-18\\official53\\light_accumulation.txt",
+        "sha256": "7cf273d103229bffd19fcd67acbfae4311228cdced35cb45971034df5a4a6a9b"
+      },
+      {
+        "path": "D:\\codex\\temp\\Goo-Face-Shadow-Study-2026-11-18\\official53\\light_evaluation.txt",
+        "sha256": "8473a857e0c68b2b8399fa790ec4cd4e237becde57e92c46149e9aa3d4aab9bf"
+      },
+      {
+        "path": "D:\\codex\\temp\\Goo-Face-Shadow-Study-2026-11-18\\official53\\light_info.txt",
+        "sha256": "a6a72d6413fcc57d652f20f71bd0bb3530d71bbf7a4e57b91300eb36ebbe788e"
+      },
+      {
+        "path": "D:\\codex\\temp\\Goo-Face-Shadow-Study-2026-11-18\\official53\\shadow_raycast.txt",
+        "sha256": "ae3cdd5430a0a049fedf9e05de4e712d975c7ceefe2f6f221d7695b7d9de48e9"
+      }
+    ],
+    "actual_scope": "Full extracted article text of EEVEE5.3 release section and four lighting-node manuals;illustrations/examples not comprehensively analysed",
+    "release_homepage": "Local full text request403 stopped;official web search excerpt used only for release identification"
+  },
+  "new_mechanism_findings": [
+    "Lighting inputs are evaluated for each light in a Light Accumulation input tree;nonlinear banding before vs after summation is not equivalent",
+    "Official5.3 Light Info implicitly reads the current light and has no light-object selector;Goo name equivalence is insufficient",
+    "Light Evaluation Mask is distance cutoff/spot cone permission,not geometric visibility",
+    "Shadow Raycast is the independent light-shadow mask,1unoccluded/0occluded;the name alone does not prove hardware ray tracing or per-character IDs",
+    "Power divided bypi and reflection Factor multiplied bypi are documented conventions;do not copy numerical controls across interfaces blindly",
+    "Light Evaluation supports explicit position/normal in5.3 documentation;this is not evidence that the known ignored Goo5.2 inputs work"
+  ],
+  "runtime_plan": {
+    "version": "Official Blender5.3.0 portable Windowsx64",
+    "official_zip": "https://download.blender.org/release/Blender5.3/blender-5.3.0-windows-x64.zip",
+    "expected_bytes": 425299259,
+    "official_manifest": "https://download.blender.org/release/Blender5.3/blender-5.3.0.sha256",
+    "expected_sha256": "3ac567a63d59d9934f7b9213bfb27ba05760e1fb366f8f55c381573ec3eabfa8",
+    "private_root": "D:/codex/temp/Goo-Face-Shadow-Study-2026-11-18/runtime53",
+    "independent_config": true,
+    "global_preferences_changed": false,
+    "production_default_runtime_changed": false,
+    "download_status": "Four disjoint remaining ranges and official final SHA verified;safe portable extraction completed",
+    "actual_build": "02f0899d78e3",
+    "actual_version": [
+      5,
+      3,
+      0
+    ],
+    "verified": true
+  },
+  "production": {
+    "project": "D:/codex/output/Goo-Character-Lookdev-2026-11-18/final-v1/Franken_Character_Lookdev_Still.blend",
+    "sha256": "66a030e52f93f373f009cd4308ad6b6bc6504387346ce4ca4adc43851357928a",
+    "modified": false,
+    "new_sdf_implemented": false,
+    "eye_see_through": "deferred",
+    "new_physics": false,
+    "new_video": false,
+    "reference_quality_achieved": false
+  },
+  "status": "primary-reading-native-and-goo-readonly-audits-and-two-static-controls-complete-not-production-integrated",
+  "native_audit": {
+    "status": "completed-readonly-in-independent-runtimes",
+    "script": "scripts/inspect_blender53_toon_package.py",
+    "native_report": "D:/codex/temp/Goo-Face-Shadow-Study-2026-11-18/package53/audit-native53-v2.json",
+    "goo_report": "D:/codex/temp/Goo-Face-Shadow-Study-2026-11-18/package53/audit-goo52-v2.json",
+    "initial_report_caveat": "Initial report keyed internal trees by nonunique tree.name and lost some material ownership records;preserved but superseded by v2 owner-qualified keys",
+    "native_runtime": {
+      "version": [
+        5,
+        3,
+        0
+      ],
+      "build": "02f0899d78e3"
+    },
+    "saved_file_version_tuple": [
+      5,
+      3,
+      31
+    ],
+    "goo_runtime": {
+      "version": [
+        5,
+        2,
+        1
+      ],
+      "build": "0051aee03764"
+    },
+    "undefined_native": 0,
+    "undefined_goo": 22,
+    "undefined_goo_locations": {
+      "Group/新卡渲着色器": 19,
+      "Group/面部sdf": 1,
+      "Material/材质": 2
+    },
+    "autoexecute": false,
+    "rendered_during_audit": false,
+    "saved": false,
+    "source_sha_guard_passed": true,
+    "included_model": {
+      "object": "【芙宁娜_荒】_mesh",
+      "base_vertices": 29989,
+      "base_polygons": 37255,
+      "evaluated_vertices_with_outline": 59978
+    },
+    "image_data": {
+      "all_datablocks": 20,
+      "file_images": 18,
+      "packed_file_images": 17,
+      "viewer_datablocks": 2
+    },
+    "missing_image": {
+      "name": "未命名.png.001",
+      "dimensions": [
+        0,
+        0
+      ],
+      "only_node_owner": "Material/材质",
+      "node": "图像纹理",
+      "outgoing_links": 0,
+      "not_primary_face_dependency": true,
+      "substituted": false
+    },
+    "actual_director_read_scope": [
+      "Complete primary face material links and values",
+      "Face SDF33-node group",
+      "Face normals,head placement and selected spherical-normal groups",
+      "Relevant control,lighting and output paths of283-node new shader",
+      "Not all unused branches or all second-package assets"
+    ]
+  },
+  "active_face_chain": {
+    "material": "颜",
+    "surface_group": "新卡渲着色器",
+    "sdf_enable": {
+      "identifier": "Socket_29",
+      "saved_value": true,
+      "linked": false
+    },
+    "receive_shadows": {
+      "identifier": "Socket_2",
+      "saved_value": false,
+      "linked": false
+    },
+    "sdf_image": {
+      "name": "Avatar_Girl_Sword_LittleIdolGirl_Tex_Face_SDF.png",
+      "packed": true,
+      "colorspace": "Non-Color",
+      "channel": "R",
+      "resolution": [
+        1024,
+        1024
+      ]
+    },
+    "sdf_sampling": "UV-valued closure evaluated after left/right selection;threshold0.5-0.5*frontdot;optional SMOOTHSTEP halfwidth0.025",
+    "direction_source": "ShaderNodeLightEvaluation.Direction in light evaluation context",
+    "ignore_elevation_branch": "Zeroes world direction Z then normalizes;not a proof of arbitrary rolled-head support",
+    "normal_source": "Named face-normal attribute,Normal transform Object to World",
+    "head_attributes": [
+      "面部法线",
+      "头顶朝向",
+      "人物左侧",
+      "前面"
+    ],
+    "unused_primary_face_group_node": "面部法线2 instance is not connected to output inMaterial/颜",
+    "main_light_protocol": "LIGHT Attribute named主光 reads role tag;人物主光 data stores主光1.0;lamp name alone is not equivalent"
+  },
+  "compatibility": {
+    "direct_goo52_compatible": false,
+    "same_id_semantic_loss": {
+      "bl_idname": "ShaderNodeLightInfo",
+      "native_usable_outputs": [
+        "Color",
+        "Power",
+        "Position"
+      ],
+      "native_disabled_internal_input": "LightIndex",
+      "goo_outputs": [
+        "Light Color",
+        "Light Power",
+        "Perceptual Power"
+      ],
+      "example_native_color_linked": true,
+      "goo_light_color_linked": false
+    },
+    "light_attribute_enum_preserved": false,
+    "candidate_structural_reuse_only": {
+      "面部法线": {
+        "nodes": 3,
+        "links": 2
+      },
+      "头部定位": {
+        "nodes": 8,
+        "links": 12
+      },
+      "球型面部法线.001": {
+        "nodes": 21,
+        "links": 26
+      }
+    },
+    "candidate_reuse_limit": "Node/link counts retained in both reads;not a render validation on current Goo actors",
+    "requires_rebuild": [
+      "Explicit current light selection and light-vector convention",
+      "Actor-specific complete head basis and local normal permission",
+      "Actor-specific UV/channel/polarity and threshold design",
+      "Independent geometric bangs occlusion and combination budget"
+    ],
+    "not_directly_portable": [
+      "Light Accumulation/Evaluation/Shadow Raycast context",
+      "LIGHT custom property evaluation",
+      "Whole new shader including links lost by same-name node reinterpretation"
+    ],
+    "closure_caution": "Generic closure nodes are not universally undefined in Goo;do not overgeneralize failure to every closure feature",
+    "production_migration_performed": false
+  },
+  "model_credit_and_rules": {
+    "source": "Embedded250-character model Text personally read;not copied into repository",
+    "provider": "miHoYo",
+    "model_modification_credit": "观海;contact name观海子",
+    "rules_observed": [
+      "noncommercial",
+      "no redistribution",
+      "no part extraction for other models"
+    ],
+    "shader_author_identity_established": false,
+    "shader_package_license_established": false,
+    "third_party_complete_blend_or_nodes_delivered": false
+  },
+  "driver_warning_limit": {
+    "warnings": [
+      "Scene.fast_toon_sun_angle[0]",
+      "Scene.fast_toon_sun_angle[1]",
+      "Scene.fast_toon_sun_angle[2]"
+    ],
+    "investigation": "Selected active primary-face SDF direction traced toLight Evaluation;all-scene reachability of old Scene drivers not fully established",
+    "external_plugin_installed": false,
+    "full_author_video_appearance_restored": false
+  },
+  "delivery": {
+    "root": "D:/codex/output/Goo-Face-Shadow-Study-2026-11-18",
+    "readme": "README.md",
+    "stills_directory": "author53-face-ab-v1",
+    "comparison": "author53-face-ab-v1/comparison-author53-face-sdf.jpg",
+    "detail": "author53-face-ab-v1/comparison-author53-nose-detail.jpg",
+    "original_learning_copies": [
+      "learning/FACE_SHADOW_DESIGN_STUDY_2026_11_18.md",
+      "learning/BLENDER53_TOON_PACKAGE_STUDY_2026_11_18.md",
+      "learning/research/FACE_SHADOW_DESIGN_STUDY_2026_11_18.json",
+      "learning/research/BLENDER53_TOON_PACKAGE_STUDY_2026_11_18.json"
+    ]
+  },
+  "static_experiment": {
+    "source": "D:\\codex\\temp\\Goo-Face-Shadow-Study-2026-11-18\\package53\\author-toon.blend",
+    "source_sha256": "d9696f8f165823e17fb542ce4b157351c657c79e958aefb87fe677d4e71f80fe",
+    "runtime": {
+      "version": [
+        5,
+        3,
+        0
+      ],
+      "build": "02f0899d78e3"
+    },
+    "frame": 16064,
+    "model": "【芙宁娜_荒】_mesh",
+    "material": "颜",
+    "original_camera": "Camera",
+    "original_markers": [],
+    "diagnostic_camera": {
+      "position": [
+        1.5471964616153855E-06,
+        -1.2519011497497559,
+        1.8396925926208496
+      ],
+      "target": [
+        9.050956464307092E-07,
+        -0.05670920014381409,
+        1.443719506263733
+      ],
+      "forward_from_area_weighted_face_normals": [
+        5.099768145555572E-07,
+        -0.9492592811584473,
+        0.3144943118095398
+      ],
+      "up": [
+        -1.6895782550818694E-07,
+        0.3144942820072174,
+        0.9492592811584473
+      ],
+      "lens_mm": 62.0,
+      "vertical_span": 0.6498469453494041,
+      "face_height": 0.19113145451453062,
+      "face_width": 0.1752881705760843
+    },
+    "geometry": {
+      "sha256": "67bca774b0f1d9ae649b1e0a247fc236d97c18dc951fe1eaaadc09c01d4d5b8b",
+      "vertices": 59978,
+      "face_vertices": 1094
+    },
+    "lights_sha256": "411579991875e1db39e5b136f95fa6642d34b3839a0dff7f349923228125679b",
+    "saved_primary_face_sdf": true,
+    "primary_face_receive_shadow": false,
+    "scope": "Only primary face material SDF enable changes;author normals,input textures,other materials,pose and lights retained",
+    "render_settings": {
+      "resolution": [
+        850,
+        900
+      ],
+      "samples": 64,
+      "compositor": false,
+      "sequencer": false,
+      "motion_blur": false,
+      "dof": false,
+      "view_transform": "Standard",
+      "exposure": 0.0
+    },
+    "limits": [
+      "Diagnostic camera,not the video viewport or source render camera",
+      "Author compositor including Glow is bypassed to isolate material",
+      "Primary face receives real shadows=false is preserved;this does not validate bangs projection",
+      "No animation,physics or current-Goo production changes",
+      "No third-party blend/model delivered"
+    ],
+    "stills": [
+      {
+        "file": "author53-face-sdf-on.png",
+        "sdf_enabled": true,
+        "sha256": "7e64d7f2147889f628b852eea72b9f4d3d89ace3160080279c9f0923ac807f3b"
+      },
+      {
+        "file": "author53-face-sdf-off.png",
+        "sdf_enabled": false,
+        "sha256": "eb067b738505c7882b30363f6b279a2f0d0a504490c37c730f1a51e02f40501a"
+      }
+    ],
+    "sdf_render_difference": {
+      "max_rgb": 0.36035552620887756,
+      "mean_rgb": 0.00020566361490637064,
+      "pixel_fraction_gt_0_001": 0.0027908496732026145,
+      "space": "Blender decoded original PNG RGB"
+    },
+    "source_unchanged": true,
+    "blend_saved": false,
+    "new_video": false,
+    "director_review": "xhigh personally inspected both original PNGs and both comparison layouts;accepted as controlled static diagnostic;artistic superiority not established",
+    "director_review_record": "director-review.json"
+  },
+  "director_review": {
+    "date": "2026-11-19",
+    "director": {
+      "model": "gpt-6.1-sol",
+      "reasoning": "xhigh"
+    },
+    "status": "accepted-as-controlled-static-diagnostic",
+    "source_blend_sha256": "d9696f8f165823e17fb542ce4b157351c657c79e958aefb87fe677d4e71f80fe",
+    "actually_viewed": [
+      "author53-face-sdf-off.png",
+      "author53-face-sdf-on.png",
+      "comparison-author53-face-sdf.jpg",
+      "comparison-author53-nose-detail.jpg"
+    ],
+    "comparison": {
+      "left": "SDF OFF",
+      "right": "SDF ON",
+      "main_size": [
+        1700,
+        940
+      ],
+      "detail_roi_xyxy": [
+        300,
+        500,
+        520,
+        615
+      ],
+      "detail_scale": 2,
+      "source_pngs_unchanged": true
+    },
+    "visual_finding": "SDF ON creates a localized brown teardrop-shaped nose shadow; OFF removes it. No broad face,pose,hair or outfit change was observed.",
+    "artistic_improvement_proven": false,
+    "sdf_enable_affects_render": true,
+    "primary_face_receive_shadows": false,
+    "real_bangs_shadow_validated": false,
+    "scope": "Primary face material only,frame16064,one shared diagnostic camera and lighting,850x900,64samples,PNG16,Standard exposure0,author compositor/sequencer/DOF/MB bypassed",
+    "limits": [
+      "Not a reproduction of the full author video or finished look",
+      "No left-right light sweep,elevation,pose or temporal certification",
+      "Three old fast_toon_sun_angle Scene driver warnings remain;complete scene-wide reachability not established",
+      "No generic conclusion that SDF ON is always artistically preferable or face shadows should always be disabled"
+    ],
+    "goo52_direct_compatibility": false,
+    "goo52_undefined_nodes": 22,
+    "same_name_light_info_semantics_preserved": false,
+    "current_actor_production_modified": false,
+    "current_actor_face_sdf_added": false,
+    "new_physics": false,
+    "new_video": false,
+    "eye_see_through": "deferred",
+    "user_art_approval": false,
+    "reference_quality_achieved": false
+  }
+}

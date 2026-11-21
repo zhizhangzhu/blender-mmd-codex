@@ -1,0 +1,560 @@
+{
+  "date": "2026-11-16",
+  "guide": "docs/GOO_FEATURES_AND_MME_MECHANISMS.md",
+  "previous_ledger": "docs/research/MME_DEEP_STUDY_2026_11_16.json",
+  "incremental_not_all_49_authors_mastered": true,
+  "goo_sources": [
+    "https://github.com/NaMgAl-Studio/goo-engine-5.2.0/blob/main/README.md",
+    "https://github.com/NaMgAl-Studio/goo-engine-5.2.0/blob/main/source/blender/draw/engines/eevee/shaders/eevee_nodetree_lib.bsl.hh",
+    "https://github.com/NaMgAl-Studio/goo-engine-5.2.0/blob/main/source/blender/draw/engines/eevee/shaders/eevee_forward_lib.bsl.hh",
+    "https://github.com/NaMgAl-Studio/goo-engine-5.2.0/blob/main/source/blender/nodes/shader/nodes/node_shader_curvature.cc",
+    "https://github.com/NaMgAl-Studio/goo-engine-5.2.0/blob/main/source/blender/nodes/shader/nodes/node_shader_light_info.cc",
+    "https://github.com/NaMgAl-Studio/goo-engine-5.2.0/blob/main/source/blender/nodes/shader/nodes/node_shader_set_depth.cc",
+    "https://github.com/NaMgAl-Studio/goo-engine-5.2.0/blob/main/source/blender/gpu/shaders/material/gpu_shader_material_curvature.glsl",
+    "https://github.com/NaMgAl-Studio/goo-engine-5.2.0/blob/main/source/blender/gpu/shaders/material/gpu_shader_material_screenspace_info.glsl",
+    "https://github.com/NaMgAl-Studio/goo-engine-5.2.0/blob/main/source/blender/gpu/shaders/material/gpu_shader_material_set_depth.glsl",
+    "https://github.com/NaMgAl-Studio/goo-engine-5.2.0/blob/main/source/blender/gpu/shaders/material/gpu_shader_material_light_info.glsl"
+  ],
+  "original_goo": "https://github.com/dillongoostudios/goo-engine/blob/goo-engine-main/README.md",
+  "source_read_scope": {
+    "README": "Original Goo introduction and community README read",
+    "nodetree": "Curvature 353-416; Screenspace 417-459; Shader Info 464-529; targeted subsequent raycast definitions",
+    "forward": "Targeted hl computation, light accumulation and output; not all 21 KB read",
+    "node_and_glsl": "Listed short Curvature, Light Info, Set Depth and GLSL bridge implementations read; Shader Info interface revisited",
+    "source_binary_commit_lock": "Unresolved: local build short SHA not found by GitHub fetch; current main code is supporting explanation, runtime experiments are separate evidence"
+  },
+  "author_distribution": [
+    "https://w.atwiki.jp/beamman/",
+    "https://beammanp.github.io/BeamMan-MME-Archive/",
+    "https://github.com/BeamManP/BeamMan-MME-Archive/blob/main/data.json"
+  ],
+  "archives": [
+    {
+      "archive": "DropShadow_0_3.zip",
+      "sha256": "9f62804febe0c2442ed1930b0a3397aaf139ad1fc5800da470c17549bc58a55d",
+      "files": [
+        {
+          "name": "DropShadow_0_3/DropShadow.fx",
+          "text": "D:\\codex\\temp\\Goo-MME-Feature-Study-2026-11-16\\text\\DropShadow_0_3\\001-DropShadow.fx.txt",
+          "encoding": "cp932",
+          "bytes": 7157,
+          "lines": 227,
+          "sha256": "3418ae429bada91461cca88ebf1d41bd4fedf6d3998df83af2d4b0934c174943"
+        },
+        {
+          "name": "DropShadow_0_3/readme.txt",
+          "text": "D:\\codex\\temp\\Goo-MME-Feature-Study-2026-11-16\\text\\DropShadow_0_3\\003-readme.txt.txt",
+          "encoding": "cp932",
+          "bytes": 685,
+          "lines": 19,
+          "sha256": "f613bbe598cf052d759f0c2bbcf4a83decd4f6f54172d55375585f715ebe1664"
+        },
+        {
+          "name": "DropShadow_0_3/サンプル/水玉/DropShadow.fx",
+          "text": "D:\\codex\\temp\\Goo-MME-Feature-Study-2026-11-16\\text\\DropShadow_0_3\\007-DropShadow.fx.txt",
+          "encoding": "cp932",
+          "bytes": 7155,
+          "lines": 227,
+          "sha256": "8f107cd2e33379088cfc0a3ec16326c0718c6269eadf18ec66028902e042d16b"
+        },
+        {
+          "name": "DropShadow_0_3/サンプル/白/DropShadow.fx",
+          "text": "D:\\codex\\temp\\Goo-MME-Feature-Study-2026-11-16\\text\\DropShadow_0_3\\011-DropShadow.fx.txt",
+          "encoding": "cp932",
+          "bytes": 7155,
+          "lines": 227,
+          "sha256": "927bf2aa193ecf38f95df81b136fd08ca1d82f819d7a6f8db686914ad5af5cb1"
+        },
+        {
+          "name": "DropShadow_0_3/サンプル/緑/DropShadow.fx",
+          "text": "D:\\codex\\temp\\Goo-MME-Feature-Study-2026-11-16\\text\\DropShadow_0_3\\015-DropShadow.fx.txt",
+          "encoding": "cp932",
+          "bytes": 7158,
+          "lines": 227,
+          "sha256": "a77851858cd907ab5738415223e6c409512f41d080275accb7213eaa9c7db288"
+        },
+        {
+          "name": "DropShadow_0_3/サンプル/縞/DropShadow.fx",
+          "text": "D:\\codex\\temp\\Goo-MME-Feature-Study-2026-11-16\\text\\DropShadow_0_3\\019-DropShadow.fx.txt",
+          "encoding": "cp932",
+          "bytes": 7155,
+          "lines": 227,
+          "sha256": "927bf2aa193ecf38f95df81b136fd08ca1d82f819d7a6f8db686914ad5af5cb1"
+        },
+        {
+          "name": "DropShadow_0_3/サンプル/黄/DropShadow.fx",
+          "text": "D:\\codex\\temp\\Goo-MME-Feature-Study-2026-11-16\\text\\DropShadow_0_3\\023-DropShadow.fx.txt",
+          "encoding": "cp932",
+          "bytes": 7157,
+          "lines": 227,
+          "sha256": "3418ae429bada91461cca88ebf1d41bd4fedf6d3998df83af2d4b0934c174943"
+        }
+      ],
+      "source_url": "https://github.com/BeamManP/BeamMan-MME-Archive/releases/download/BeamMan2/BeamMan2_4_DropShadow_0_3.zip",
+      "downloaded_this_round": true
+    },
+    {
+      "archive": "GodRay_Marching_v1_0_2.zip",
+      "sha256": "cd1193ab262e6a3b5941f38e015e07f8dcfd70626b8eac099ede6d039bed3fac",
+      "files": [
+        {
+          "name": "GodRay_Marching_v1_0_2/Croquis.fx",
+          "text": "D:\\codex\\temp\\Goo-MME-Feature-Study-2026-11-16\\text\\GodRay_Marching_v1_0_2\\000-Croquis.fx.txt",
+          "encoding": "cp932",
+          "bytes": 13585,
+          "lines": 468,
+          "sha256": "f0aecb3e0392d3e5c91753b08c3f963a4dc73d567ecbbac8185721a1022348c9"
+        },
+        {
+          "name": "GodRay_Marching_v1_0_2/DepthDraw.fxsub",
+          "text": "D:\\codex\\temp\\Goo-MME-Feature-Study-2026-11-16\\text\\GodRay_Marching_v1_0_2\\001-DepthDraw.fxsub.txt",
+          "encoding": "cp932",
+          "bytes": 2753,
+          "lines": 101,
+          "sha256": "1e12b83a2239e77ef2b9fdc24772f9556b725fb79b6dfd8254ddd96bd255ddf6"
+        },
+        {
+          "name": "GodRay_Marching_v1_0_2/EnvMap.fx",
+          "text": "D:\\codex\\temp\\Goo-MME-Feature-Study-2026-11-16\\text\\GodRay_Marching_v1_0_2\\002-EnvMap.fx.txt",
+          "encoding": "cp932",
+          "bytes": 4261,
+          "lines": 148,
+          "sha256": "db0f44c37db0202cb3d2c40c338430387f2d585d68e3abd4aeb69d5985214ab3"
+        },
+        {
+          "name": "GodRay_Marching_v1_0_2/GodRay_Marching.fx",
+          "text": "D:\\codex\\temp\\Goo-MME-Feature-Study-2026-11-16\\text\\GodRay_Marching_v1_0_2\\003-GodRay_Marching.fx.txt",
+          "encoding": "cp932",
+          "bytes": 20785,
+          "lines": 700,
+          "sha256": "5c208b742cd506353667d34754f84991a4b5175ecd0687ec25a696b341df439a"
+        },
+        {
+          "name": "GodRay_Marching_v1_0_2/GodRay_Marching_Rev.fx",
+          "text": "D:\\codex\\temp\\Goo-MME-Feature-Study-2026-11-16\\text\\GodRay_Marching_v1_0_2\\005-GodRay_Marching_Rev.fx.txt",
+          "encoding": "cp932",
+          "bytes": 20833,
+          "lines": 700,
+          "sha256": "25812e9e5878f0c4cff6f56977e48db02307bdb2fc6dac0b7c8ea37e891d516a"
+        },
+        {
+          "name": "GodRay_Marching_v1_0_2/ModelPos.fx",
+          "text": "D:\\codex\\temp\\Goo-MME-Feature-Study-2026-11-16\\text\\GodRay_Marching_v1_0_2\\008-ModelPos.fx.txt",
+          "encoding": "cp932",
+          "bytes": 2727,
+          "lines": 103,
+          "sha256": "ac9546c4f1232fcda594148d056b39614c312b484b4180542a0e137a97e125ed"
+        },
+        {
+          "name": "GodRay_Marching_v1_0_2/使い方.txt",
+          "text": "D:\\codex\\temp\\Goo-MME-Feature-Study-2026-11-16\\text\\GodRay_Marching_v1_0_2\\010-使い方.txt.txt",
+          "encoding": "cp932",
+          "bytes": 705,
+          "lines": 25,
+          "sha256": "6bd08ec17462ad9e81423220d8c70828cb0ccfe1b0e589319737ce6b9eb03c95"
+        }
+      ],
+      "source_url": "https://github.com/BeamManP/BeamMan-MME-Archive/releases/download/BeamMan3/BeamMan3_23_GodRay_Marching_v1_0_2.zip",
+      "downloaded_this_round": true
+    },
+    {
+      "archive": "GodRay_v2_5.zip",
+      "sha256": "ece0a78de870dc435892778550e763950a5eba3d3e5029c9805ab7642790260a",
+      "files": [
+        {
+          "name": "GodRay_v2_5_32_64_MMM/BlackObject.fx",
+          "text": "D:\\codex\\temp\\Goo-MME-Feature-Study-2026-11-16\\text\\GodRay_v2_5\\001-BlackObject.fx.txt",
+          "encoding": "cp932",
+          "bytes": 1990,
+          "lines": 77,
+          "sha256": "f40daaface4867b92dbc630a5e3ee243bcf74217f722730a2c26f3bc7d89568a"
+        },
+        {
+          "name": "GodRay_v2_5_32_64_MMM/GodRay.fx",
+          "text": "D:\\codex\\temp\\Goo-MME-Feature-Study-2026-11-16\\text\\GodRay_v2_5\\002-GodRay.fx.txt",
+          "encoding": "cp932",
+          "bytes": 11155,
+          "lines": 344,
+          "sha256": "d3eb06e523b4ec4f45d94f8329e31c323e665f2a790a186005f1f6fda8c33782"
+        },
+        {
+          "name": "GodRay_v2_5_32_64_MMM/MMM/BlackObject.fxsub",
+          "text": "D:\\codex\\temp\\Goo-MME-Feature-Study-2026-11-16\\text\\GodRay_v2_5\\005-BlackObject.fxsub.txt",
+          "encoding": "cp932",
+          "bytes": 1990,
+          "lines": 77,
+          "sha256": "f40daaface4867b92dbc630a5e3ee243bcf74217f722730a2c26f3bc7d89568a"
+        },
+        {
+          "name": "GodRay_v2_5_32_64_MMM/MMM/GodRay.fx",
+          "text": "D:\\codex\\temp\\Goo-MME-Feature-Study-2026-11-16\\text\\GodRay_v2_5\\006-GodRay.fx.txt",
+          "encoding": "cp932",
+          "bytes": 11015,
+          "lines": 363,
+          "sha256": "2faf910b733e587d5c06076a8604e542b52f4743e7438fbc132e1b6ae509ecd9"
+        },
+        {
+          "name": "GodRay_v2_5_32_64_MMM/MMM/使い方.txt",
+          "text": "D:\\codex\\temp\\Goo-MME-Feature-Study-2026-11-16\\text\\GodRay_v2_5\\007-使い方.txt.txt",
+          "encoding": "cp932",
+          "bytes": 292,
+          "lines": 13,
+          "sha256": "32ac21cef9ad38f5c577cadbfc21c2eb26ea9445a84dda55afdbdde18d814c92"
+        },
+        {
+          "name": "GodRay_v2_5_32_64_MMM/Readme.txt",
+          "text": "D:\\codex\\temp\\Goo-MME-Feature-Study-2026-11-16\\text\\GodRay_v2_5\\008-Readme.txt.txt",
+          "encoding": "cp932",
+          "bytes": 132,
+          "lines": 5,
+          "sha256": "e21fee1ccb8a9251b6b5bcc923c0f598c4ea4409dff3e3a52a3e79318d437cb1"
+        },
+        {
+          "name": "GodRay_v2_5_32_64_MMM/使い方.txt",
+          "text": "D:\\codex\\temp\\Goo-MME-Feature-Study-2026-11-16\\text\\GodRay_v2_5\\009-使い方.txt.txt",
+          "encoding": "cp932",
+          "bytes": 299,
+          "lines": 13,
+          "sha256": "fa0c02c607484940898cc5a8b2092bfea9724848f8ce0cf22147d1bbada37512"
+        }
+      ],
+      "source_url": "https://github.com/BeamManP/BeamMan-MME-Archive/releases/download/BeamMan2/BeamMan2_33_GodRay_v2_5_32_64_MMM.zip",
+      "downloaded_this_round": true
+    },
+    {
+      "archive": "HAToon2_r14.zip",
+      "sha256": "57429b1949163568c78395b969926d9eee5183b994527991745aedc5ae3727a4",
+      "files": [
+        {
+          "name": "HACore.hlsl",
+          "text": "D:\\codex\\temp\\Goo-MME-Feature-Study-2026-11-16\\text\\HAToon2_r14\\009-HACore.hlsl.txt",
+          "encoding": "cp932",
+          "bytes": 17620,
+          "lines": 622,
+          "sha256": "934c05d6e9dabd63dd0fcc72ba221b40a6008d7f71808cb95ffb6ee7876e611a"
+        },
+        {
+          "name": "HAGenerator.txt",
+          "text": "D:\\codex\\temp\\Goo-MME-Feature-Study-2026-11-16\\text\\HAToon2_r14\\012-HAGenerator.txt.txt",
+          "encoding": "utf-8-sig",
+          "bytes": 6437,
+          "lines": 145,
+          "sha256": "afc2fcb0348d3a8e42e7f55b645a75e151d123d51686d40fd43492fff85350c9"
+        },
+        {
+          "name": "HAHead.hlsl",
+          "text": "D:\\codex\\temp\\Goo-MME-Feature-Study-2026-11-16\\text\\HAToon2_r14\\013-HAHead.hlsl.txt",
+          "encoding": "utf-8-sig",
+          "bytes": 1780,
+          "lines": 85,
+          "sha256": "9dc20f4cab5ec04a97ba160297efd075d18a0c6ce5bf292ebba5d2617933c27e"
+        },
+        {
+          "name": "設定例/グラデトゥーン/HACore.hlsl",
+          "text": "D:\\codex\\temp\\Goo-MME-Feature-Study-2026-11-16\\text\\HAToon2_r14\\018-HACore.hlsl.txt",
+          "encoding": "cp932",
+          "bytes": 17620,
+          "lines": 622,
+          "sha256": "934c05d6e9dabd63dd0fcc72ba221b40a6008d7f71808cb95ffb6ee7876e611a"
+        },
+        {
+          "name": "設定例/グラデトゥーン/HAHead.hlsl",
+          "text": "D:\\codex\\temp\\Goo-MME-Feature-Study-2026-11-16\\text\\HAToon2_r14\\019-HAHead.hlsl.txt",
+          "encoding": "utf-8-sig",
+          "bytes": 1780,
+          "lines": 85,
+          "sha256": "9dc20f4cab5ec04a97ba160297efd075d18a0c6ce5bf292ebba5d2617933c27e"
+        },
+        {
+          "name": "設定例/グラデトゥーン/グラデトゥーン.fx",
+          "text": "D:\\codex\\temp\\Goo-MME-Feature-Study-2026-11-16\\text\\HAToon2_r14\\021-グラデトゥーン.fx.txt",
+          "encoding": "cp932",
+          "bytes": 10128,
+          "lines": 236,
+          "sha256": "cd875c4434faf1b1b421eca0b6448ee1114000c80139747b3bd86345b9b8709f"
+        },
+        {
+          "name": "設定例/スタンダード/HACore.hlsl",
+          "text": "D:\\codex\\temp\\Goo-MME-Feature-Study-2026-11-16\\text\\HAToon2_r14\\025-HACore.hlsl.txt",
+          "encoding": "cp932",
+          "bytes": 17620,
+          "lines": 622,
+          "sha256": "934c05d6e9dabd63dd0fcc72ba221b40a6008d7f71808cb95ffb6ee7876e611a"
+        },
+        {
+          "name": "設定例/スタンダード/HAHead.hlsl",
+          "text": "D:\\codex\\temp\\Goo-MME-Feature-Study-2026-11-16\\text\\HAToon2_r14\\026-HAHead.hlsl.txt",
+          "encoding": "utf-8-sig",
+          "bytes": 1780,
+          "lines": 85,
+          "sha256": "9dc20f4cab5ec04a97ba160297efd075d18a0c6ce5bf292ebba5d2617933c27e"
+        },
+        {
+          "name": "設定例/スタンダード/スタンダード.fx",
+          "text": "D:\\codex\\temp\\Goo-MME-Feature-Study-2026-11-16\\text\\HAToon2_r14\\028-スタンダード.fx.txt",
+          "encoding": "cp932",
+          "bytes": 8789,
+          "lines": 204,
+          "sha256": "0dd29c49fe7871d68552108f41fd5b0ee0edfd5589de918aa6200b378fe6f00c"
+        },
+        {
+          "name": "設定例/スタンダードフラット/HACore.hlsl",
+          "text": "D:\\codex\\temp\\Goo-MME-Feature-Study-2026-11-16\\text\\HAToon2_r14\\032-HACore.hlsl.txt",
+          "encoding": "cp932",
+          "bytes": 17620,
+          "lines": 622,
+          "sha256": "934c05d6e9dabd63dd0fcc72ba221b40a6008d7f71808cb95ffb6ee7876e611a"
+        },
+        {
+          "name": "設定例/スタンダードフラット/HAHead.hlsl",
+          "text": "D:\\codex\\temp\\Goo-MME-Feature-Study-2026-11-16\\text\\HAToon2_r14\\033-HAHead.hlsl.txt",
+          "encoding": "utf-8-sig",
+          "bytes": 1780,
+          "lines": 85,
+          "sha256": "9dc20f4cab5ec04a97ba160297efd075d18a0c6ce5bf292ebba5d2617933c27e"
+        },
+        {
+          "name": "設定例/スタンダードフラット/スタンダードフラット.fx",
+          "text": "D:\\codex\\temp\\Goo-MME-Feature-Study-2026-11-16\\text\\HAToon2_r14\\035-スタンダードフラット.fx.txt",
+          "encoding": "cp932",
+          "bytes": 8789,
+          "lines": 204,
+          "sha256": "0bdb926b9ac9d5b98c005afe042401d04ba3b930840b4f0255e0df118542c134"
+        },
+        {
+          "name": "設定例/トゥーン/HACore.hlsl",
+          "text": "D:\\codex\\temp\\Goo-MME-Feature-Study-2026-11-16\\text\\HAToon2_r14\\041-HACore.hlsl.txt",
+          "encoding": "cp932",
+          "bytes": 17620,
+          "lines": 622,
+          "sha256": "934c05d6e9dabd63dd0fcc72ba221b40a6008d7f71808cb95ffb6ee7876e611a"
+        },
+        {
+          "name": "設定例/トゥーン/HAHead.hlsl",
+          "text": "D:\\codex\\temp\\Goo-MME-Feature-Study-2026-11-16\\text\\HAToon2_r14\\042-HAHead.hlsl.txt",
+          "encoding": "utf-8-sig",
+          "bytes": 1780,
+          "lines": 85,
+          "sha256": "9dc20f4cab5ec04a97ba160297efd075d18a0c6ce5bf292ebba5d2617933c27e"
+        },
+        {
+          "name": "設定例/トゥーン/トゥーン.fx",
+          "text": "D:\\codex\\temp\\Goo-MME-Feature-Study-2026-11-16\\text\\HAToon2_r14\\044-トゥーン.fx.txt",
+          "encoding": "cp932",
+          "bytes": 12951,
+          "lines": 290,
+          "sha256": "474624a8ea32913acdc579d6cceb756a8f1f6cc1e298c1a2cf97e57c70c691f5"
+        },
+        {
+          "name": "設定例/トゥーン2/HACore.hlsl",
+          "text": "D:\\codex\\temp\\Goo-MME-Feature-Study-2026-11-16\\text\\HAToon2_r14\\053-HACore.hlsl.txt",
+          "encoding": "cp932",
+          "bytes": 17620,
+          "lines": 622,
+          "sha256": "934c05d6e9dabd63dd0fcc72ba221b40a6008d7f71808cb95ffb6ee7876e611a"
+        },
+        {
+          "name": "設定例/トゥーン2/HAHead.hlsl",
+          "text": "D:\\codex\\temp\\Goo-MME-Feature-Study-2026-11-16\\text\\HAToon2_r14\\054-HAHead.hlsl.txt",
+          "encoding": "utf-8-sig",
+          "bytes": 1780,
+          "lines": 85,
+          "sha256": "9dc20f4cab5ec04a97ba160297efd075d18a0c6ce5bf292ebba5d2617933c27e"
+        },
+        {
+          "name": "設定例/トゥーン2/トゥーン2.fx",
+          "text": "D:\\codex\\temp\\Goo-MME-Feature-Study-2026-11-16\\text\\HAToon2_r14\\056-トゥーン2.fx.txt",
+          "encoding": "cp932",
+          "bytes": 17264,
+          "lines": 375,
+          "sha256": "ea51ff08ba4d2f2e28a19dc6ba8af960072a2d9e0d4d3a98437266898c32ddfc"
+        },
+        {
+          "name": "設定例/トゥーンフラット/HACore.hlsl",
+          "text": "D:\\codex\\temp\\Goo-MME-Feature-Study-2026-11-16\\text\\HAToon2_r14\\062-HACore.hlsl.txt",
+          "encoding": "cp932",
+          "bytes": 17620,
+          "lines": 622,
+          "sha256": "934c05d6e9dabd63dd0fcc72ba221b40a6008d7f71808cb95ffb6ee7876e611a"
+        },
+        {
+          "name": "設定例/トゥーンフラット/HAHead.hlsl",
+          "text": "D:\\codex\\temp\\Goo-MME-Feature-Study-2026-11-16\\text\\HAToon2_r14\\063-HAHead.hlsl.txt",
+          "encoding": "utf-8-sig",
+          "bytes": 1780,
+          "lines": 85,
+          "sha256": "9dc20f4cab5ec04a97ba160297efd075d18a0c6ce5bf292ebba5d2617933c27e"
+        },
+        {
+          "name": "設定例/トゥーンフラット/トゥーンフラット.fx",
+          "text": "D:\\codex\\temp\\Goo-MME-Feature-Study-2026-11-16\\text\\HAToon2_r14\\065-トゥーンフラット.fx.txt",
+          "encoding": "cp932",
+          "bytes": 15315,
+          "lines": 339,
+          "sha256": "4a9a6e12ea18d8dbff12d4c17fc2631c0fed8952ebd08dcc4a8184d0ba6b889a"
+        },
+        {
+          "name": "設定例/プラ/HACore.hlsl",
+          "text": "D:\\codex\\temp\\Goo-MME-Feature-Study-2026-11-16\\text\\HAToon2_r14\\071-HACore.hlsl.txt",
+          "encoding": "cp932",
+          "bytes": 17620,
+          "lines": 622,
+          "sha256": "934c05d6e9dabd63dd0fcc72ba221b40a6008d7f71808cb95ffb6ee7876e611a"
+        },
+        {
+          "name": "設定例/プラ/HAHead.hlsl",
+          "text": "D:\\codex\\temp\\Goo-MME-Feature-Study-2026-11-16\\text\\HAToon2_r14\\072-HAHead.hlsl.txt",
+          "encoding": "utf-8-sig",
+          "bytes": 1780,
+          "lines": 85,
+          "sha256": "9dc20f4cab5ec04a97ba160297efd075d18a0c6ce5bf292ebba5d2617933c27e"
+        },
+        {
+          "name": "設定例/プラ/HAToon2_プラ.fx",
+          "text": "D:\\codex\\temp\\Goo-MME-Feature-Study-2026-11-16\\text\\HAToon2_r14\\073-HAToon2_プラ.fx.txt",
+          "encoding": "cp932",
+          "bytes": 11238,
+          "lines": 260,
+          "sha256": "228b7d15a2a63de6edb31b5b0c8e585f841c3cfa60a80bea4c2e091d8ed06fca"
+        },
+        {
+          "name": "設定例/メタリック/HACore.hlsl",
+          "text": "D:\\codex\\temp\\Goo-MME-Feature-Study-2026-11-16\\text\\HAToon2_r14\\075-HACore.hlsl.txt",
+          "encoding": "cp932",
+          "bytes": 17620,
+          "lines": 622,
+          "sha256": "934c05d6e9dabd63dd0fcc72ba221b40a6008d7f71808cb95ffb6ee7876e611a"
+        },
+        {
+          "name": "設定例/メタリック/HAHead.hlsl",
+          "text": "D:\\codex\\temp\\Goo-MME-Feature-Study-2026-11-16\\text\\HAToon2_r14\\076-HAHead.hlsl.txt",
+          "encoding": "utf-8-sig",
+          "bytes": 1780,
+          "lines": 85,
+          "sha256": "9dc20f4cab5ec04a97ba160297efd075d18a0c6ce5bf292ebba5d2617933c27e"
+        },
+        {
+          "name": "設定例/メタリック/メタリック.fx",
+          "text": "D:\\codex\\temp\\Goo-MME-Feature-Study-2026-11-16\\text\\HAToon2_r14\\078-メタリック.fx.txt",
+          "encoding": "cp932",
+          "bytes": 8195,
+          "lines": 199,
+          "sha256": "51537b90f0e70bca35f3baefc5f72a71d8302a6929afb741a15ae7d69fcdb462"
+        }
+      ],
+      "source_url": "https://sorairo.pictures/3dcg/mme-effects/hatoon2/",
+      "downloaded_this_round": false
+    },
+    {
+      "archive": "NewToon_v1_0.zip",
+      "sha256": "a67f6a224ea96ac2c52e5525b594efab3f22a24f882ce97a1121908f3208ffd7",
+      "files": [
+        {
+          "name": "NewToon_v1_0/NewToon.fx",
+          "text": "D:\\codex\\temp\\Goo-MME-Feature-Study-2026-11-16\\text\\NewToon_v1_0\\000-NewToon.fx.txt",
+          "encoding": "cp932",
+          "bytes": 24689,
+          "lines": 619,
+          "sha256": "bc18b5ffd6424b3e0d45d9af2c48d18fab9f02a4ac779fa0dd59f74e7a5477b5"
+        },
+        {
+          "name": "NewToon_v1_0/使い方.txt",
+          "text": "D:\\codex\\temp\\Goo-MME-Feature-Study-2026-11-16\\text\\NewToon_v1_0\\001-使い方.txt.txt",
+          "encoding": "cp932",
+          "bytes": 301,
+          "lines": 12,
+          "sha256": "d38c48375ceaed8f8595557f35da4f12b2b680383144dde77f317d081d64416d"
+        }
+      ],
+      "source_url": "https://github.com/BeamManP/BeamMan-MME-Archive/releases/download/BeamMan/BeamMan_197_NewToon_v1_0.zip",
+      "downloaded_this_round": true
+    },
+    {
+      "archive": "PostFog.zip",
+      "sha256": "9f4fc421e1df00a68478b0a3a37560cbddbfc4cb6e379eebc5f82abc8ccd86f9",
+      "files": [
+        {
+          "name": "PostFog/HeightFog_post/DrawHeight.fx",
+          "text": "D:\\codex\\temp\\Goo-MME-Feature-Study-2026-11-16\\text\\PostFog\\000-DrawHeight.fx.txt",
+          "encoding": "cp932",
+          "bytes": 2537,
+          "lines": 90,
+          "sha256": "9d86bcee52a36f4955202012dde202f3e8017bc818fdca7e5f94f24c5b28f5b4"
+        },
+        {
+          "name": "PostFog/HeightFog_post/HeightFog_post.fx",
+          "text": "D:\\codex\\temp\\Goo-MME-Feature-Study-2026-11-16\\text\\PostFog\\001-HeightFog_post.fx.txt",
+          "encoding": "cp932",
+          "bytes": 3747,
+          "lines": 127,
+          "sha256": "b44e173a37e99a002c5f9a20eca5cfcf6eb66efc51faf5dc16617a2925481d20"
+        },
+        {
+          "name": "PostFog/HeightFog_post/NoFog.fx",
+          "text": "D:\\codex\\temp\\Goo-MME-Feature-Study-2026-11-16\\text\\PostFog\\003-NoFog.fx.txt",
+          "encoding": "cp932",
+          "bytes": 2429,
+          "lines": 87,
+          "sha256": "127a6288f7c9e782e3a90033a772b89dd2a7c64864e648f1d21c05f4dcfd8e3e"
+        },
+        {
+          "name": "PostFog/HeightFog_post/簡易りーどみ.txt",
+          "text": "D:\\codex\\temp\\Goo-MME-Feature-Study-2026-11-16\\text\\PostFog\\004-簡易りーどみ.txt.txt",
+          "encoding": "cp932",
+          "bytes": 183,
+          "lines": 3,
+          "sha256": "fd8c804efc13e2f10c4a16254bbcb5afb56c851128cb28977de5e4268796991d"
+        },
+        {
+          "name": "PostFog/ZFog_post/DrawZ.fx",
+          "text": "D:\\codex\\temp\\Goo-MME-Feature-Study-2026-11-16\\text\\PostFog\\005-DrawZ.fx.txt",
+          "encoding": "cp932",
+          "bytes": 2427,
+          "lines": 87,
+          "sha256": "1c7d481f1aa6ba6a1e641b260e2dfe400a2c636e742c947ecdfc463f1988dcbd"
+        },
+        {
+          "name": "PostFog/ZFog_post/NoFog.fx",
+          "text": "D:\\codex\\temp\\Goo-MME-Feature-Study-2026-11-16\\text\\PostFog\\006-NoFog.fx.txt",
+          "encoding": "cp932",
+          "bytes": 2424,
+          "lines": 87,
+          "sha256": "b4cc2d5ba2050f6709989847d95fdcc63336dc5da0faf1b70088cdad36dc90ac"
+        },
+        {
+          "name": "PostFog/ZFog_post/ZFog_post.fx",
+          "text": "D:\\codex\\temp\\Goo-MME-Feature-Study-2026-11-16\\text\\PostFog\\007-ZFog_post.fx.txt",
+          "encoding": "cp932",
+          "bytes": 3479,
+          "lines": 118,
+          "sha256": "60530a8f182e7c6a2f9a33eb4bcf51c1ef70c0a9d9516a4fb92722c74ed5f6e0"
+        },
+        {
+          "name": "PostFog/ZFog_post/簡易りーどみ.txt",
+          "text": "D:\\codex\\temp\\Goo-MME-Feature-Study-2026-11-16\\text\\PostFog\\009-簡易りーどみ.txt.txt",
+          "encoding": "cp932",
+          "bytes": 173,
+          "lines": 3,
+          "sha256": "acb70727382fbb7bf24a8390bf7f2e339b2473dee3c52d4cbf04daada57166ea"
+        }
+      ],
+      "source_url": "https://github.com/BeamManP/BeamMan-MME-Archive/releases/download/BeamMan/BeamMan_35_PostFog.zip",
+      "downloaded_this_round": true
+    }
+  ],
+  "mme_read_scope": {
+    "GodRay_v2_5": "13-line usage; directional radial blur 148-185, Gaussian and composite portions; not every declaration",
+    "GodRay_Marching": "25-line usage; constants; 338-421 ray march, visibility and final additive/multiplicative composite; selected filters",
+    "PostFog": "Both 3-line usages; DrawHeight/DrawZ 35-61; HeightFog 84-101 and ZFog 83-91",
+    "DropShadow": "19-line readme; fx 122-135, 139-151, 157-191 and technique passages; duplicate pattern variants not reread",
+    "NewToon": "12-line usage; 339-419 shading core and targeted standard Toon/edge expressions; not full619 lines",
+    "HAToon2": "Previously cached archive; newly decoded .hlsl; HACore 501-577 incl. light accumulation, not full generator nor all622 lines",
+    "msToonCoordinator": "Prior cache Shade.fx 350-510; Gaussian mask, HSY boundary, threshold and final Alpha; selected common code; no MMD execution"
+  },
+  "failed_source": "HgSpot Seesaa author page timed out; no HgSpot archive obtained and no new claim based on unseen page",
+  "experiment_output": "D:\\codex\\output\\Goo-MME-Feature-Study-2026-11-16",
+  "feature_matrix": "D:\\codex\\output\\Goo-MME-Feature-Study-2026-11-16\\feature-matrix.json",
+  "summary": "D:\\codex\\output\\Goo-MME-Feature-Study-2026-11-16\\study-summary.json",
+  "production_modified": false,
+  "third_party_full_text_redistributed": false
+}

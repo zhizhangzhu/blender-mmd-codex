@@ -1,0 +1,112 @@
+{
+  "schema_version": 1,
+  "date": "2026-11-20",
+  "purpose": "Original record of implemented reference-experiment-review-lesson-save/reopen workflow and real Goo use",
+  "guide": "docs/GOO_DUET_ARTDIRECTION_2026_11_20.md",
+  "spec": "SPEC.md",
+  "runtime": "presets/runtime/goo-v1.json",
+  "frozen_source": {
+    "path": "D:/codex/output/Goo-Duet-SDF-2026-11-19/final-v1/Franken_Duet_SDF_SourceDOF_Still.blend",
+    "sha256": "829f2d88827320c48a19ed76df4dc70af495455e4a660769c2bb53fe461caa69"
+  },
+  "candidate": {
+    "path": "D:\\codex\\output\\Goo-Duet-ArtDirection-2026-11-20\\final-v3\\Candidate.blend",
+    "sha256": "fad1fdf5877bec468d1b8d357f9b3dcd8c81b61bda053b86eea2f06cdcd6af8b"
+  },
+  "selected_iteration": {
+    "path": "D:\\codex\\output\\Goo-Duet-ArtDirection-2026-11-20\\iteration-03\\lesson.json",
+    "sha256": "146ab65bd18445451ae8c977781ecbdb45b5564e2a70a317a1f3c921d6ff79b0"
+  },
+  "negative_lesson": {
+    "path": "D:\\codex\\output\\Goo-Duet-ArtDirection-2026-11-20\\iteration-02\\lesson.json",
+    "sha256": "d96c31f44241705b916ee8c6cba0b5d18bee0a7a7a7d78fb11311d9e1dba9eff"
+  },
+  "source_path_diagnostics": [
+    {
+      "path": "D:\\codex\\output\\Goo-Duet-ArtDirection-2026-11-20\\diagnostics\\active-paths.json",
+      "sha256": "2dcb42dc682934ba19bd53e7e581c028bd63a01d620ce024593f2dc678b79b22"
+    },
+    {
+      "path": "D:\\codex\\output\\Goo-Duet-ArtDirection-2026-11-20\\diagnostics\\active-rois.json",
+      "sha256": "d2a1b5cef0df3d2b644508cbd032c149d954184121098de1a02ae9aa6b172f9f"
+    }
+  ],
+  "real_runs": [
+    {
+      "path": "D:\\codex\\output\\Goo-Duet-ArtDirection-2026-11-20\\iteration-01",
+      "passed": false
+    },
+    {
+      "path": "D:\\codex\\output\\Goo-Duet-ArtDirection-2026-11-20\\iteration-02",
+      "passed": true
+    },
+    {
+      "path": "D:\\codex\\output\\Goo-Duet-ArtDirection-2026-11-20\\iteration-03",
+      "passed": true
+    },
+    {
+      "path": "D:\\codex\\output\\Goo-Duet-ArtDirection-2026-11-20\\final-v1",
+      "passed": false
+    },
+    {
+      "path": "D:\\codex\\output\\Goo-Duet-ArtDirection-2026-11-20\\final-v2",
+      "passed": false
+    },
+    {
+      "path": "D:\\codex\\output\\Goo-Duet-ArtDirection-2026-11-20\\final-v3",
+      "passed": true
+    },
+    {
+      "path": "D:\\codex\\output\\Goo-Duet-ArtDirection-2026-11-20\\reopened-v3",
+      "passed": true
+    }
+  ],
+  "failures_retained": [
+    "iteration01: float32 readback tolerance too strict",
+    "finalv1: stopped verified task worker during excessive reflective scan",
+    "finalv2: unsupported IDProperties on a modifier",
+    "private smoke: INT16_2D missing and image.pixels expansion fixed before formalv3"
+  ],
+  "fixes": [
+    "exact RNA identifier selection for repeated display names",
+    "bulk complete action/handle/easing/flags hashing with bounded memory",
+    "shared node trees deduplicated by pointer, embedded trees keyed by owner",
+    "packed bytes/external files/generated pixel buffers hashed without pixel lists",
+    "known unsupported IDProperties handled, unknown errors propagate",
+    "real INT16_2D attribute pairs protected",
+    "4full publication protection phases and independent reopen"
+  ],
+  "model_execution": [
+    {
+      "task": "/root/iteration_architecture_review",
+      "model": "gpt-6.1-sol",
+      "reasoning": "xhigh",
+      "actual_scope": "architecture/art/source learning/complex publish worker and independent art review"
+    },
+    {
+      "task": "/root/iteration_core",
+      "model": "gpt-6.1-sol",
+      "reasoning": "low",
+      "actual_scope": "bounded coordinator/launcher/test implementation"
+    },
+    {
+      "task": "/root/iteration_board",
+      "model": "gpt-6.1-sol",
+      "reasoning": "low",
+      "actual_scope": "bounded board/lesson/context implementation"
+    }
+  ],
+  "root_runtime_model": null,
+  "root_runtime_reasoning": null,
+  "model_cost": null,
+  "acceptance": {
+    "path": "D:\\codex\\output\\Goo-Duet-ArtDirection-2026-11-20\\acceptance.json",
+    "sha256": "959546abfbe5aaea0c1d67fedd43c98e8646130921005f9cb65473122533f035"
+  },
+  "user_art_approval": false,
+  "transfer_level": "single_case",
+  "limits": [
+    "白衣胸肩亮面仍大、青边较醒目、鼻区SDF小形状仍孤立",
+    "未达到完整参考风格质量；仅4290静帧；JPEG不代替PNG数值检查"
+  ]
+}

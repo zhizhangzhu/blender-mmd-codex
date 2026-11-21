@@ -1,0 +1,199 @@
+{
+  "schema_version": 1,
+  "id": "goo-duet-sdf-implementation-2026-11-19",
+  "date": "2026-11-19",
+  "status": "two-character-static-adaptation-rendered-reviewed-and-source-dof-independently-reopened",
+  "guide": "docs/GOO_DUET_SDF_IMPLEMENTATION_2026_11_19.md",
+  "director": {
+    "model": "gpt-6.1-sol",
+    "reasoning": "xhigh",
+    "role": "Primary source/video-frame reading,technical diagnosis,original shader/data design,complex implementation,visual acceptance",
+    "low_role": "Fixed commands,frame extraction,background audit/render,copy/index verification;no substitute technical/artistic judgment"
+  },
+  "authorization": {
+    "user_approved_author_sdf_reference_direction": true,
+    "user_requested_actual_duet_adaptation": true,
+    "current_duet_candidate_approved": false,
+    "scope": "Reversible separate4290 static branch;no video,eye see-through or new physics"
+  },
+  "baseline": {
+    "project": "D:/codex/output/Goo-Character-Lookdev-2026-11-18/final-v1/Franken_Character_Lookdev_Still.blend",
+    "sha256": "66a030e52f93f373f009cd4308ad6b6bc6504387346ce4ca4adc43851357928a",
+    "runtime": "Goo5.2.1 unofficial0051aee03764",
+    "preserve": true
+  },
+  "implementation_script": "scripts/build_goo_duet_sdf.py",
+  "existing_primary_learning": [
+    "docs/FACE_SHADOW_DESIGN_STUDY_2026_11_18.md",
+    "docs/BLENDER53_TOON_PACKAGE_STUDY_2026_11_18.md"
+  ],
+  "private_current_audit": {
+    "path": "D:/codex/temp/Goo-Duet-SDF-2026-11-19/current-face-audit.json",
+    "sha256": "5345ad15a54e60fd7a1311f1254dea0f8f55a6c70e1f493b6ebc554f55563110",
+    "actually_read": "Both primary face trees,actual live FaceLightmap threshold links,legacy group output reachability,key drivers,head basis and own actor UV geometry"
+  },
+  "additional_video_reading": {
+    "source": "D:/JiJiDownload/blender5.3三渲二节点分享/1.blender5.3三渲二节点分享(Av117620598639649,P1).mp4",
+    "source_sha256": "d5633274b5511f57896f8c5ec4bf34609f5f92083bd7e7f2b2d17367e71c0978",
+    "inventory": "D:/codex/temp/Goo-Duet-SDF-2026-11-19/video-detail/inventory.json",
+    "inventory_sha256": "9f438ecd4710bd24b98b609eacca3f41932ec16f1eaf288044aae1c1595cf5d0",
+    "new_personally_viewed_seconds": [
+      165,
+      175,
+      185,
+      195,
+      215
+    ],
+    "prior_sampled_seconds": [
+      8,
+      55,
+      105,
+      155,
+      205,
+      255,
+      275
+    ],
+    "audio_transcribed": false,
+    "full_subtitle_obtained": false,
+    "whole_video_watched": false,
+    "findings": [
+      "175s main highlight strength already0",
+      "185s environment factor0.579 and orange tint",
+      "195s SDF on/soft on/environment factor0",
+      "215s auxiliary strength0",
+      "Cross-time images are not a one-variable SDF test"
+    ]
+  },
+  "findings": [
+    {
+      "id": "live-sdf-chain",
+      "fact": "Aksiniya's named festivities Face Factor instance has no linked outputs;actual live primary-material chain samples her own FaceLightmap R"
+    },
+    {
+      "id": "old-axes-caution",
+      "fact": "Face tree reads old head controller custom properties;historical integrate_light_space.py installs WORLD_SPACE endpoint-difference drivers on that controller",
+      "limit": "Do not label the prior axes static or broken solely because they enter via SINGLE_PROP"
+    },
+    {
+      "id": "new-direction-contract",
+      "fact": "Each character now uses its own actual head key and complete head-following right/front/up basis;15 world-position Transform drivers per character",
+      "limit": "Selected-key angular response,not equivalent native53 per-light accumulation,power,reflection and all closures"
+    },
+    {
+      "id": "aksiniya",
+      "fact": "Original matching FaceLightmap R retained;new narrow threshold bypasses legacy local nose averaging and stacked warm-form branch;original mouth feature retained"
+    },
+    {
+      "id": "ikhor",
+      "fact": "Original right/left angular threshold atlas designed from own rest face dimensions,eye reference and own UV;compact tapered nose lobe and cheek division",
+      "limit": "Not restored original game data,no borrowed Furina/Aksiniya pixels;512-square prototype tested only4290"
+    },
+    {
+      "id": "hair",
+      "fact": "Existing geometry-derived4290 bangs visibility stays independent;min(SDF,bangs) enters one warm skin palette",
+      "limit": "Static occlusion map is not a live temporal shadow solution"
+    },
+    {
+      "id": "reversibility",
+      "fact": "Legacy face pipeline remains on an explicit whole-pipeline switch;SDF-only switch affects new form,not independent bangs;original MMD Alpha/output closure preserved"
+    }
+  ],
+  "trial": {
+    "directory": "D:/codex/output/Goo-Duet-SDF-2026-11-19/trial-v1",
+    "project_sha256": "eb0a49fcab738c7fbed3476e30ce34a31df5953b149af1606ee8eca2041c462a",
+    "status": "Controlled duet ON/OFF and corrected two-character closeups ON/OFF personally reviewed",
+    "rejected_original_closeups": "Original camera marker overrode selected closeup camera;files retained,4 corrected-* images rendered without saving blend",
+    "art_findings": [
+      "Aksiniya restored distinct nose shadow and retained independent forehead occlusion/mouth/gold eyes",
+      "Ikhor newly authored nose responds to on/off at its own face location;blue eyes/open mouth remain clear",
+      "Ikhor trial skin too white and shadow pale pink;final palette alone adjusted"
+    ]
+  },
+  "technical_trial": {
+    "checks_all_passed": true,
+    "original_actions_geometry_uv_weights_shapes_alpha_camera_preserved": true,
+    "five_pose_evaluated_coordinate_max_abs": 0,
+    "new_valid_transform_drivers": 30,
+    "world_position_driver_error_max": 2.980232238769531e-8,
+    "head_rotation_error_max": 1.1920928955078125e-7,
+    "frames": [
+      4140,
+      4218,
+      4290,
+      4370,
+      4438
+    ],
+    "scope": "Numeric geometry/driver contract,not rendered motion or temporal artistic certification"
+  },
+  "final": {
+    "project": "D:/codex/output/Goo-Duet-SDF-2026-11-19/final-v1/Franken_Duet_SDF_SourceDOF_Still.blend",
+    "project_sha256": "829f2d88827320c48a19ed76df4dc70af495455e4a660769c2bb53fe461caa69",
+    "implementation_script_sha256": "722ff9e84bf0e17adb8bcf3af725b27c5ba4305388936b2aa6a1dd79be1e73bb",
+    "primary_still": "beauty-sdf-on-duet-4290.png",
+    "primary_control": "beauty-sdf-off-duet-4290.png",
+    "formal_reopened_still": "reopened-beauty-sdf-on-duet-4290.png",
+    "beauty_report": "beauty-finalization.json",
+    "reopen_report": "beauty-reopen-verification.json",
+    "technical_status": "passed-limited-4290-static-source-dof-with-minor-render-variance",
+    "art_status": "xhigh-reviewed-candidate-awaiting-user",
+    "all_formal_checks_passed": true,
+    "saved_full_source_dof_and_actual_formal_render_dof": true,
+    "dof": {
+      "use_dof": true,
+      "focus_object": null,
+      "focus_distance": 2.6024155616760254,
+      "aperture_fstop": 3.200000047683716,
+      "aperture_blades": 8,
+      "aperture_rotation": 0,
+      "aperture_ratio": 1
+    },
+    "formal_reopen_pixels": {
+      "max_rgb": 0.0029214024543762207,
+      "mean_rgb": 0.000015810706827323884,
+      "pixel_fraction_gt_0_001": 0.000042920524691358025,
+      "tolerance": {"max_rgb_below": 0.005, "mean_rgb_below": 0.0001},
+      "basis": "Prior same-runtime same-scene repeat evidence max~0.00318/mean~0.0000321;set before this run,not raised after failure",
+      "pixel_identical": false
+    },
+    "personally_viewed": [
+      "Final ON two original850x900 PNGs",
+      "Remaining5 diagnostic stills via original-size review JPEGs",
+      "Diagnostic reopened duet JPEG",
+      "Two actor OFF/ON comparison JPEGs",
+      "Initial before-after duet comparison identified as mixed-DOF and rejected",
+      "Formal source-DOF ON/OFF and formal reopened ON via original-size JPEGs"
+    ],
+    "visual_findings": [
+      "Aksiniya retained own matching map,distinct warm nose and independent forehead bang shadow;gold eyes/mouth line remain",
+      "Ikhor own atlas produces compact tapered nose at this actor's own position;blue eyes/open mouth and pale-pink skin remain",
+      "Full scene formal background blur restored to source DOF;strong body/hair rim and stage/action preserved",
+      "This frontal/key setup chiefly demonstrates nose changes,not complete all-angle cheek design"
+    ],
+    "diagnostic_correction": {
+      "early_project_sha256": "5c804f0f0ab52fa964f0cd559f50ae7ae4545bb798edabe653b152b4158518c2",
+      "early_project": "Franken_Duet_SDF_Still.blend",
+      "diagnostic_dof": false,
+      "saved_early_project_dof": true,
+      "initial_diagnostic_reopen_max_rgb": 0.002450287342071533,
+      "initial_diagnostic_reopen_mean_rgb": 0.000028068703613826074,
+      "rejected_comparison": "comparison-before-after-duet-4290.jpg",
+      "reason": "Old beauty uses source DOF,new initial output disabled DOF;not a pure material before-after",
+      "replacement": "comparison-beauty-before-after-duet-4290.jpg",
+      "correction_scope": "Only2 formal source-DOF duet stills plus1 independent formal rerender;no atlas or closeup rerender"
+    }
+  },
+  "limits": [
+    "No new left-right/elevation light sweep",
+    "No temporal or new physics certification",
+    "No reference-quality achievement claim",
+    "No native53 whole shader appended",
+    "No Furina mesh,textures,full node library or old plugin redistributed"
+  ],
+  "source_modified": false,
+  "default_runtime_replaced": false,
+  "new_video": false,
+  "new_physics": false,
+  "eye_see_through": "deferred",
+  "user_art_approval": false,
+  "reference_quality_achieved": false
+}

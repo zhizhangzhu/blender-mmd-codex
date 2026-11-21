@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "id": "guanhaizi-neon-landscape-v1",
+  "family": "guanhaizi",
+  "aspect": "landscape",
+  "render": "../render/guanhaizi-neon-v1.json",
+  "post": "../post/guanhaizi-neon-v1.json",
+  "typography": "../../typography/landscape-study.json",
+  "camera": {"strategy": "landscape", "lens_mm": 50, "dof": true, "fstop": 3.5, "shot_heights": [1.7, 1.3], "target_offsets": [0.38, -0.28], "yaw": [-0.20, 0.20]},
+  "layout": {"sticker_width_height": 0, "border_height": 0.00185, "border_inset_height": 0.025, "character_margin_height": 0.0037, "face_margin_height": 0.00926}
+}

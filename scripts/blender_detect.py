@@ -73,6 +73,13 @@ def find_blender_candidates(
     user_home = Path(home or variables.get("USERPROFILE") or variables.get("HOME") or Path.home())
     candidates: list[Path] = []
 
+    explicit = variables.get("BLENDER_EXECUTABLE")
+    if explicit:
+        explicit_path = Path(explicit).expanduser()
+        if explicit_path.name.lower() == "blender-launcher.exe":
+            explicit_path = explicit_path.with_name("blender.exe")
+        _add_candidate(candidates, explicit_path)
+
     _add_candidate(candidates, which("blender"))
     _add_candidate(candidates, which("blender.exe"))
 
@@ -144,8 +151,16 @@ def main(argv: Sequence[str] | None = None) -> int:
 
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--system", help="Override the detected operating system")
+    parser.add_argument("--executable", type=Path, help="Use this Blender executable (or Windows launcher)")
     args = parser.parse_args(argv)
-    installation = detect_blender(system_name=args.system)
+    if args.executable:
+        executable = args.executable.expanduser()
+        if executable.name.lower() == "blender-launcher.exe":
+            executable = executable.with_name("blender.exe")
+        version = probe_blender_version(executable) if executable.is_file() else None
+        installation = BlenderInstallation(str(executable), version, "explicit") if version else None
+    else:
+        installation = detect_blender(system_name=args.system)
     payload = {
         "ok": installation is not None,
         "installation": asdict(installation) if installation else None,

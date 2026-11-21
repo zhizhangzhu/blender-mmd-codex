@@ -1,0 +1,107 @@
+{
+  "id": "duet-official-locked-v2",
+  "source": "E:/tools/franken/FrankensteinNoKaibutsu_Video_Full_Typography(Wide).mp4",
+  "source_sha256": "9a2fe3ddf442e06103555731771c423314423dd1ad545a391663912930b0e724",
+  "asset_credit": "HIMEHINA / Studio LaRa official typography distribution",
+  "aspect": [
+    16,
+    9
+  ],
+  "fps": 60,
+  "render_start_frame": 4140,
+  "render_frames": 300,
+  "source_start_frame": 4141,
+  "audio_offset_bgm_minus_typography_seconds": -0.03,
+  "timing_note": "Three audio-envelope windows agreed at -30 ms; the nearest 60 fps source frame is used. Not choreography alignment.",
+  "tint_srgb": [
+    1.0,
+    0.95,
+    0.86
+  ],
+  "stroke_srgb": [
+    0.085,
+    0.055,
+    0.15
+  ],
+  "shadow_srgb": [
+    0.055,
+    0.035,
+    0.1
+  ],
+  "stroke_pixels_at_1080": 3,
+  "shadow_offset_pixels_at_1080": [
+    7,
+    7
+  ],
+  "shadow_opacity": 0.45,
+  "matte_margin_pixels_at_1080": 1,
+  "policy": "Entire cue group has one fixed front/behind order; front cues use no facial or character holdout. Rear cues use continuous native object coverage. No per-frame overlap-based layer selection.",
+  "cues": [
+    {
+      "id": "vertical-intro",
+      "start_frame": 4141,
+      "end_frame": 4162,
+      "order": "behind",
+      "key_mode": "mixed",
+      "scale": 1,
+      "offset": [
+        0,
+        0
+      ],
+      "opacity": 0.92
+    },
+    {
+      "id": "small-tag-run",
+      "start_frame": 4162,
+      "end_frame": 4245,
+      "order": "front",
+      "key_mode": "plate",
+      "scale": 0.68,
+      "offset": [
+        0,
+        0.24
+      ],
+      "opacity": 1
+    },
+    {
+      "id": "oversized-tag",
+      "start_frame": 4245,
+      "end_frame": 4271,
+      "order": "behind",
+      "key_mode": "plate",
+      "scale": 1,
+      "offset": [
+        0,
+        0
+      ],
+      "opacity": 1
+    },
+    {
+      "id": "large-script",
+      "start_frame": 4271,
+      "end_frame": 4311,
+      "order": "behind",
+      "key_mode": "glyph",
+      "scale": 1,
+      "offset": [
+        0,
+        0
+      ],
+      "opacity": 0.93
+    },
+    {
+      "id": "small-verse-and-emphasis",
+      "start_frame": 4311,
+      "end_frame": 4441,
+      "order": "front",
+      "key_mode": "glyph",
+      "scale": 1,
+      "offset": [
+        0,
+        0.18
+      ],
+      "opacity": 1
+    }
+  ],
+  "boundary_review": "Native consecutive frames: old vertical intro remains at source 4161; first hashtag at 4162. First script pixels already appear at 4271. Whole animation groups keep order and layout until their actual cut."
+}

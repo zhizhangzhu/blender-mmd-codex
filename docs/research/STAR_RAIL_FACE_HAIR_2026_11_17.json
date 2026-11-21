@@ -1,0 +1,104 @@
+{
+  "date": "2026-11-17",
+  "guide": "docs/STAR_RAIL_FACE_HAIR_STUDY_2026_11_17.md",
+  "user_reference": "C:/Users/ADMINI~1/AppData/Local/Temp/codex-clipboard-bdb59529-8a7c-45fb-9377-121204fc6839.png",
+  "requested_focus": [
+    "readable hair and facial shadows",
+    "luminous skin",
+    "preserve strong rim bloom and eye highlights"
+  ],
+  "eye_see_through": "Explicitly deferred by user; additional hair transparency disconnected and zero",
+  "sources": [
+    {
+      "url": "https://github.com/stalomeow/StarRailNPRShader/blob/main/Shaders/Character/CharFaceCore.hlsl",
+      "blob_sha": "a168e702fbfcc9b065d63dc4d56a727c287885c4",
+      "scope": "Face SDF threshold and mirrored UV selection, projected head light, screen hair-depth occlusion, eye permission, nose line and separate emission",
+      "status": "Read original author public code through repository connector; fan reconstruction, not official game code"
+    },
+    {
+      "url": "https://github.com/stalomeow/StarRailNPRShader/blob/main/Shaders/Character/CharHairCore.hlsl",
+      "blob_sha": "07b4f9e69015eaca9ead51b007674ed7f83c21e0",
+      "scope": "Hair ramp diffuse, specular, rim and emission layering; stencil/depth eye overlay technique inspected but not integrated"
+    },
+    {
+      "url": "https://github.com/stalomeow/StarRailNPRShader/blob/main/Shaders/Character/Shared/CharRenderingHelpers.hlsl",
+      "blob_sha": "a5e58837f77740c7548e82171789055e79e50663",
+      "scope": "GetRampUV, GetRampDiffuse, GetSpecular and GetEmission functions"
+    },
+    {
+      "url": "https://github.com/stalomeow/StarRailNPRShader/blob/main/Shaders/Character/Shared/CharHairDepthTexture.hlsl",
+      "blob_sha": "06d403559641fbe89f092daff5794e5a84f60e03",
+      "scope": "Hair depth sampling helper"
+    },
+    {
+      "url": "https://srshader.stalomeow.com/latest/character/material/",
+      "scope": "Original author material inputs and model limitations"
+    },
+    {
+      "url": "https://srshader.stalomeow.com/latest/character/rendering-controller/",
+      "scope": "Head bone and main-light synchronization"
+    },
+    {
+      "url": "https://srshader.stalomeow.com/latest/advanced/rendering-flowchart/",
+      "scope": "Original author render ordering and hair depth prepass"
+    },
+    {
+      "url": "https://github.com/ColinLeung-NiloCat/UnityURPToonLitShaderExample/blob/master/SimpleURPToonLitOutlineExample_LightingEquation.hlsl",
+      "scope": "Complete public 66-line lighting equation; limited AO and additional light contribution, face handling, emission layering; separate shared-shader sections inspected",
+      "status": "Public educational example; not paid NiloToon"
+    }
+  ],
+  "local_transfer": {
+    "game_official_shader_claimed": false,
+    "unity_plugin_installed": false,
+    "third_party_complete_source_committed": false,
+    "hair": "Compact cool/warm ramp multiplied at final NPR color; original alpha and palette retained",
+    "face": "Actual deformed hair BVH, three light samples, local distance/height permission, 300 source frames per actor baked to UV sequence",
+    "skin": "Existing SDF/form retained, controlled 1.16 gain, warm local cast shadow and authored nose form",
+    "project": "D:\\codex\\output\\MMD-Jelly-Eyes-v1\\production-v16\\Franken_Duet_Goo_Eye_Hair_Stage.blend",
+    "project_sha256": "4e189d6b098e3bfa61e45325bb7f4456d8e9a8fb8943549b5a1e89a6bbe1c4e2",
+    "saved_master_report": "D:\\codex\\output\\MMD-Jelly-Eyes-v1\\production-v16\\master-verification.json",
+    "actual_rendered_shadow_sampling_report": "D:\\codex\\output\\MMD-Jelly-Eyes-v1\\production-v16\\rendered-shadow-sequence-check.json"
+  },
+  "limits": [
+    "Only the agreed five-second motion range",
+    "User art acceptance pending",
+    "Eye see-through deferred",
+    "Final video decoding/playback waived by user"
+  ],
+  "shadow_budget_revision": {
+    "before": "2048",
+    "after": "2048",
+    "reason": "Full150-frame render exposed8192-page overflow; pool already at build maximum, bound overly fine light shadow texels",
+    "shadow_precision_bounds": [
+      {
+        "light": "Goo window wrap | parallel window daylight",
+        "before": 0.004999999888241291,
+        "after": 0.00800000037997961
+      },
+      {
+        "light": "Goo window wrap | large window 0",
+        "before": 0.009999999776482582,
+        "after": 0.014999999664723873
+      },
+      {
+        "light": "Goo window wrap | large window 1",
+        "before": 0.009999999776482582,
+        "after": 0.014999999664723873
+      },
+      {
+        "light": "Eye hair v1 | aksiniya directional head key",
+        "before": 0.003000000026077032,
+        "after": 0.003000000026077032
+      },
+      {
+        "light": "Eye hair v1 | ikhor directional head key",
+        "before": 0.003000000026077032,
+        "after": 0.003000000026077032
+      }
+    ],
+    "global_resolution_scale_before": 1.0,
+    "global_resolution_scale_after": 0.75,
+    "light_energy_transform_materials_animation_changed": false
+  }
+}

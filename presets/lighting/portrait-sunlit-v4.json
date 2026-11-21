@@ -1,0 +1,634 @@
+{
+  "id": "portrait-sunlit-v4",
+  "status": "bright-day-hall-still-iteration",
+  "source_sha256": "0ec95ee7162512ffc405a2a7337b355caf62cd993b3d8302886ee59e1561d9d4",
+  "reference": "docs/research/PAIERER_DARK_STAGE_PORTRAIT_2026_11_14.json",
+  "hidden_volumes": [
+    "Wedding | bounded rear scattering",
+    "Bold wedding | bounded beam fan air",
+    "Bold wedding | blue luminous volume 0",
+    "Bold wedding | blue luminous volume 1",
+    "Bold wedding | blue luminous volume 2",
+    "Bold wedding | gold luminous volume 0",
+    "Bold wedding | gold luminous volume 1",
+    "Bold wedding | gold luminous volume 2"
+  ],
+  "stage_light_multipliers": {
+    "Focused light | cold window key": 0.6,
+    "Focused light | warm altar": 0.25,
+    "Focused light | warm vase accent": 0.5,
+    "Focused light | cool column accent": 0.5,
+    "Stage art | grounded backlight": 0.5,
+    "Wedding | blue vow shaft": 0.12,
+    "Wedding | gold vow shaft": 0.12,
+    "Softlight | front soft fill": 1.5,
+    "Softlight | hall ceiling bounce": 1.6
+  },
+  "character_lights": {
+    "key_direction_camera": [
+      -2.7,
+      1.5,
+      2.6
+    ],
+    "fill_direction_camera": [
+      1.3,
+      0.65,
+      3.2
+    ],
+    "rim_direction_camera": [
+      -1.8,
+      1.0,
+      -1.0
+    ],
+    "key_energy": 490,
+    "key_size": 1.2,
+    "key_color": [
+      1.0,
+      0.93,
+      0.86
+    ],
+    "fill_energy": 85,
+    "fill_size": 2.5,
+    "fill_color": [
+      1,
+      0.94,
+      0.93
+    ],
+    "rim_energy": 300,
+    "rim_size": 1.0,
+    "rim_color": [
+      1,
+      0.92,
+      0.94
+    ],
+    "preserve_original_light_distance": true,
+    "preserve_diffuse_factors": true,
+    "key_direction_head": [
+      0.36,
+      0.84,
+      0.4
+    ],
+    "key_specular_factor": 0.22,
+    "rim_specular_factor": 0.3,
+    "reflection_specular_factor": 0.7,
+    "fill_specular_factor": 0.25,
+    "fill_direction_head": [
+      -0.42,
+      0.87,
+      0.25
+    ]
+  },
+  "glow_strength_multiplier": 0.48,
+  "key_fill": {
+    "actors": {
+      "aksiniya": {
+        "face": {
+          "palette": [
+            [
+              0.22,
+              [
+                0.88,
+                0.74,
+                0.76,
+                1
+              ]
+            ],
+            [
+              0.59,
+              [
+                1.0,
+                0.95,
+                0.95,
+                1
+              ]
+            ],
+            [
+              0.88,
+              [
+                1.055,
+                1.02,
+                1.015,
+                1
+              ]
+            ]
+          ]
+        },
+        "skin": {
+          "form_range": [
+            -0.05,
+            0.72
+          ],
+          "fill_strength": 0.18,
+          "palette": [
+            [
+              0.14,
+              [
+                0.86,
+                0.7,
+                0.73,
+                1
+              ]
+            ],
+            [
+              0.56,
+              [
+                1,
+                0.93,
+                0.94,
+                1
+              ]
+            ],
+            [
+              0.88,
+              [
+                1.05,
+                1.015,
+                1.015,
+                1
+              ]
+            ]
+          ]
+        }
+      },
+      "ikhor": {
+        "face": {
+          "analytic_form": {
+            "enabled": true,
+            "half_width": 0.0823,
+            "center_offset": 0.002857,
+            "curvature": 0.55,
+            "up_bias": 0.03,
+            "range": [
+              0.18,
+              0.82
+            ],
+            "floor": 0.45,
+            "gain": 1.0
+          },
+          "palette": [
+            [
+              0.24,
+              [
+                0.87,
+                0.75,
+                0.76,
+                1
+              ]
+            ],
+            [
+              0.58,
+              [
+                0.995,
+                0.95,
+                0.94,
+                1
+              ]
+            ],
+            [
+              0.86,
+              [
+                1.04,
+                1.01,
+                1.0,
+                1
+              ]
+            ]
+          ],
+          "directional_fill": {
+            "enabled": true,
+            "strength": 0.24,
+            "range": [
+              -0.1,
+              0.8
+            ],
+            "tint": [
+              1.02,
+              1.0,
+              0.985,
+              1
+            ]
+          }
+        },
+        "skin": {
+          "form_range": [
+            -0.05,
+            0.72
+          ],
+          "fill_strength": 0.18,
+          "palette": [
+            [
+              0.14,
+              [
+                0.86,
+                0.7,
+                0.73,
+                1
+              ]
+            ],
+            [
+              0.56,
+              [
+                1,
+                0.93,
+                0.94,
+                1
+              ]
+            ],
+            [
+              0.88,
+              [
+                1.05,
+                1.015,
+                1.015,
+                1
+              ]
+            ]
+          ]
+        }
+      }
+    }
+  },
+  "rim_ink": {
+    "rim": {
+      "headroom_luminance_range": [
+        0.85,
+        1.9
+      ],
+      "highlight_retention": 0.68,
+      "actors": {
+        "aksiniya": {
+          "hair": {
+            "hdr_gain": 2.1,
+            "power": 3.4,
+            "left_color": [
+              0.86,
+              0.94,
+              1
+            ],
+            "right_color": [
+              1.0,
+              0.89,
+              0.93
+            ],
+            "left_gain": 1.0,
+            "right_gain": 0.78
+          },
+          "body": {
+            "hdr_gain": 1.65,
+            "power": 3.8,
+            "left_color": [
+              1.0,
+              0.93,
+              0.92
+            ],
+            "right_color": [
+              1.0,
+              0.9,
+              0.94
+            ],
+            "left_gain": 1.0,
+            "right_gain": 0.74
+          },
+          "fur": {
+            "hdr_gain": 0.8,
+            "power": 4.4,
+            "left_color": [
+              1.0,
+              0.94,
+              0.93
+            ],
+            "right_color": [
+              1.0,
+              0.92,
+              0.95
+            ],
+            "left_gain": 1.0,
+            "right_gain": 0.7
+          }
+        },
+        "ikhor": {
+          "hair": {
+            "hdr_gain": 2.1,
+            "power": 3.4,
+            "left_color": [
+              1,
+              0.95,
+              0.9
+            ],
+            "right_color": [
+              1.0,
+              0.91,
+              0.95
+            ],
+            "left_gain": 1.0,
+            "right_gain": 0.78
+          },
+          "body": {
+            "hdr_gain": 1.5,
+            "power": 3.8,
+            "left_color": [
+              1.0,
+              0.94,
+              0.94
+            ],
+            "right_color": [
+              1.0,
+              0.92,
+              0.96
+            ],
+            "left_gain": 1.0,
+            "right_gain": 0.74
+          }
+        }
+      },
+      "material_overrides": {
+        "带子": {
+          "hdr_gain": 0.65,
+          "power": 4.5
+        },
+        "裙.001": {
+          "hdr_gain": 0.95,
+          "power": 4.2
+        },
+        "衣领": {
+          "hdr_gain": 1.05,
+          "power": 4.2
+        }
+      },
+      "reference_screen_gain": 0.0,
+      "left_direction_camera": [
+        -1.0,
+        0.3,
+        -0.6
+      ],
+      "right_direction_camera": [
+        1.0,
+        0.35,
+        -0.55
+      ],
+      "direction_gate": [
+        0.08,
+        0.65
+      ],
+      "view_edge_range": [
+        0.025,
+        0.44
+      ],
+      "contact_ao_range": [
+        0.35,
+        0.92
+      ]
+    },
+    "ink": {
+      "actors": {
+        "aksiniya": {
+          "face": {
+            "strength": 0.35
+          },
+          "skin": {
+            "strength": 0.25
+          },
+          "cloth": {
+            "strength": 0.6
+          },
+          "hair": {
+            "color": [
+              0.007,
+              0.009,
+              0.02
+            ],
+            "strength": 1.0
+          },
+          "fur": {
+            "color": [
+              0.014,
+              0.017,
+              0.027
+            ],
+            "strength": 1.0
+          }
+        },
+        "ikhor": {
+          "face": {
+            "strength": 0.35
+          },
+          "skin": {
+            "strength": 0.25
+          },
+          "cloth": {
+            "strength": 0.6
+          },
+          "hair": {
+            "color": [
+              0.006,
+              0.008,
+              0.015
+            ],
+            "strength": 0.85
+          }
+        }
+      }
+    },
+    "id": "portrait-rim-ink-v2"
+  },
+  "stage_midtones": {
+    "enabled": false,
+    "amount": 0.6,
+    "tint": [
+      0.05,
+      0.08,
+      0.16,
+      1
+    ],
+    "ramp": [
+      [
+        0.025,
+        0
+      ],
+      [
+        0.12,
+        0.6
+      ],
+      [
+        0.45,
+        1
+      ],
+      [
+        0.95,
+        0
+      ]
+    ]
+  },
+  "note": "Exterior sun through real window geometry; stage combined response has stronger shadow contrast, broad fill reduced. Soft portrait/rim reference supplied by user, no recovered author settings.",
+  "physical_highlights": {
+    "materials": [
+      "带子",
+      "裙.001",
+      "衣领",
+      "衣.001",
+      "衣2"
+    ],
+    "gold_roughness": 0.54,
+    "gold_physical_mix": 0.28
+  },
+  "environment_lights": [
+    {
+      "name": "window portal shadow key",
+      "location": [
+        -3.5,
+        -2,
+        4.5
+      ],
+      "target": [
+        0,
+        0.3,
+        0
+      ],
+      "energy": 450,
+      "size": 0.35,
+      "color": [
+        1,
+        0.96,
+        0.91
+      ]
+    }
+  ],
+  "stage_light_colors": {
+    "Focused light | cold window key": [
+      0.76,
+      0.86,
+      1
+    ],
+    "Focused light | warm altar": [
+      1,
+      0.9,
+      0.95
+    ],
+    "Focused light | warm vase accent": [
+      1,
+      0.79,
+      0.77
+    ],
+    "Focused light | cool column accent": [
+      0.65,
+      0.76,
+      1
+    ]
+  },
+  "day_stage": {
+    "gain": 1.0,
+    "matcap_relative_gain": 0.4,
+    "diffuse_response_range": [
+      0.08,
+      0.6
+    ],
+    "diffuse_response_output": [
+      0.52,
+      1.1
+    ],
+    "lights": {
+      "items": [
+        {
+          "name": "left daylight soft",
+          "position": [
+            -12,
+            14,
+            10
+          ],
+          "target": [
+            0,
+            18,
+            4
+          ],
+          "energy": 900,
+          "size": 16,
+          "color": [
+            0.76,
+            0.84,
+            1
+          ]
+        },
+        {
+          "name": "right daylight soft",
+          "position": [
+            12,
+            14,
+            10
+          ],
+          "target": [
+            0,
+            18,
+            4
+          ],
+          "energy": 700,
+          "size": 16,
+          "color": [
+            0.91,
+            0.91,
+            1
+          ]
+        },
+        {
+          "name": "high diffuse bounce",
+          "position": [
+            0,
+            22,
+            18
+          ],
+          "target": [
+            0,
+            22,
+            0
+          ],
+          "energy": 1000,
+          "size": 18,
+          "color": [
+            0.88,
+            0.91,
+            1
+          ]
+        }
+      ]
+    }
+  },
+  "day_sky": {
+    "world_strength": 0.95
+  },
+  "daylight_compositor": {
+    "bypass_legacy_foreground_holdback": true
+  },
+  "actor_accent_lights": {
+    "direction_camera": [
+      -0.6,
+      0.55,
+      2.4
+    ],
+    "distance": 2.5,
+    "energy": 90,
+    "size": 1.5,
+    "color": [
+      1,
+      0.94,
+      0.9
+    ]
+  },
+  "window_sunlight": {
+    "energy": 1.8,
+    "color": [
+      1,
+      0.94,
+      0.86
+    ],
+    "angle_radians": 0.025,
+    "location": [
+      -50,
+      10,
+      30
+    ],
+    "target": [
+      0,
+      10,
+      0
+    ]
+  }
+}

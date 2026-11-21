@@ -1,0 +1,191 @@
+{
+  "schema_version": 1,
+  "recorded_date": "2026-11-13",
+  "status": "primary_text_reading_only_not_implemented",
+  "purpose": "以现有人物质量缺口筛选可持续复读的一手文字来源；本轮集中补描边单位、分色参数语义和Blender迁移边界。",
+  "scope": {
+    "primary_source_families_retained": 2,
+    "browser_opened": false,
+    "video_opened_or_watched": false,
+    "subtitle_acquired": false,
+    "full_repository_or_image_pack_downloaded": false,
+    "blender_started": false,
+    "production_blend_opened_or_changed": false,
+    "render_generated": false,
+    "core_state_or_library_changed": false,
+    "new_dependency_installed": false
+  },
+  "deduplication": {
+    "local_ledgers_read": [
+      "docs/research/NPR_PRIMARY_STUDY_2026_11_13.json",
+      "docs/research/FACE_SHADOW_DESIGN_STUDY.json",
+      "docs/research/MATERIAL_RESPONSE_STUDY.json",
+      "docs/research/NPR_NEXT_EXPERIMENTS.json"
+    ],
+    "local_context": [
+      "docs/EFFICIENT_RESEARCH_WORKFLOW.md",
+      "docs/CHARACTER_NPR_PLAYBOOK.md",
+      "README.md: introductory/current-state sections",
+      "catalog/current_state.json: current task, review and priority sections",
+      "docs/PRODUCTION_WORKFLOW.md: G0-G8 sections",
+      "docs/KNOWLEDGE_INDEX.md: current boundaries and next-reading sections",
+      "docs/LOCAL_ENVIRONMENT.md: verified environment and plugin boundaries"
+    ],
+    "already_known_not_counted_as_new": [
+      "MooaToon的脸影/自定义法线、ID射线和屏幕空间头发阴影职责",
+      "MooaToon与UTS的高光许可、偏移、暗区抑制以及控制图职责分离",
+      "MMD Color不是原始albedo，PMX球面和Alpha必须保留",
+      "目前描边相对加粗与有限距离/焦距补偿，不等于已验证固定像素宽度"
+    ],
+    "search_boundary": "检索docs/research及人物手册、人物分层说明中的MToon、outline、描边、world/screen术语；不声称搜索过所有历史私人缓存。"
+  },
+  "sources": [
+    {
+      "id": "vrmc_mtoon_1_0_complete_spec",
+      "title": "VRMC_materials_mtoon Version 1.0",
+      "url": "https://github.com/vrm-c/vrm-specification/blob/master/specification/VRMC_materials_mtoon-1.0/README.md",
+      "author_identity": "VRM Consortium维护的vrm-c规范仓库；Contributors列Sumi Masataka、Obuchi Yutaka。是一手VRM材质规范，不是原神/鸣潮游戏Shader。",
+      "access": "official_rendered_document_body_read_at_selected_sections",
+      "read_scope": [
+        "Version、Contributors、Complete status、Overview、Vertex Colors",
+        "Lighting Model、Shading Shift、implementation pseudocode及相关贴图/参数定义",
+        "Global Illumination与giEqualizationFactor示例",
+        "Outline Width、Outline Lighting Mix、Implementation及width/texture/color属性"
+      ],
+      "not_read_or_tested": [
+        "独立示例图、VRM模型和测试套件",
+        "运行时对阴影、透明及不同实现的一致性",
+        "原神或鸣潮游戏源码"
+      ],
+      "source_facts": [
+        "worldCoordinates线宽单位是米；screenCoordinates线宽单位是屏幕高度比例，距离改变时保持屏幕中的相对厚度。",
+        "outlineWidthMultiplyTexture为线性数据，使用G通道，缺图值为1；描边顶点使用蒙皮后的变换位置/法线。",
+        "shadingShiftFactor及R通道线性shift图控制明暗边界位置，shadingToonyFactor控制过渡宽度；这组参数不等于真实光源可见性。",
+        "GI均衡单独调节间接受光方向差异；规范还明确忽略顶点色。"
+      ],
+      "applicable_problem": "把近景、远景、不同输出分辨率的线宽目标写成明确单位；学习可分开的分色位置/软硬控制和间接光职责。",
+      "blender_5_2_stock_eevee_boundary": [
+        "可直接借鉴参数职责、单位与验收方法；不意味着现有Solidify/PMX描边已经实现MToon屏幕单位。",
+        "当前综合Diffuse包含多灯、法线、衰减与间接受光，不能把它直接代入该规范的单项N dot L或独立GI输入后称等价。",
+        "现有PMX顶点描边权重必须保留；MToon忽略顶点色的约定不能覆盖PMX语义。G通道打包也不能按名字套给现有图集。",
+        "选择性借鉴不替换现有SDF、真实遮挡、Color/Alpha、球面、高光或PBR分支；普通EEVEE兼容尚未运行验证。"
+      ],
+      "license_and_version": {
+        "specification_version": "1.0; page status Complete",
+        "source_revision": "master; commit SHA not resolved",
+        "revision_locked": false,
+        "license_verified": false,
+        "license_note": "仓库根目录和所读规范未显示许可证；/LICENSE与/LICENSE.md尝试均404。只登记原创归纳及链接，不据此认定规范文字/图片可整份复制。",
+        "before_implementation": "固定规范链接对应提交/节名；若参考实现或复制代码，另核对该实现的版本和许可证。"
+      },
+      "new_vs_duplicate": {
+        "new": [
+          "新增权威单位合同：屏幕高度比例与跨分辨率固定像素须分别验收。",
+          "新增可按问题复读的正式规范入口及蒙皮后描边/线性G通道约定。"
+        ],
+        "reinforcement_only": [
+          "分色位置和软硬度应分开，仍属于已知控制职责分离原则。",
+          "独立间接光有助于解释补光洗平，但没有解决当前综合探针分离。"
+        ]
+      },
+      "minimum_validation_card": {
+        "id": "future_outline_unit_contract",
+        "performed": false,
+        "hypothesis": "在讨论加粗前先声明像素目标或画高比例，可避免近远景补偿和分辨率改变被误判为同一种固定线宽。",
+        "input": "独立诊断副本的一块不透明头发/衣物外轮廓，保留PMX权重和蒙皮；禁用Glow/景深，固定姿态、光和线色。",
+        "single_variable_sequence": [
+          "固定1920x1080及焦距，只改变相机距离，测同一轮廓位置的最终像素宽度。",
+          "恢复同一构图，把输出高度从1080改2160，只检查所声明单位的预测。"
+        ],
+        "own_derived_example_not_source_parameter": "若选2px@1080，则画高比例为2/1080；保持该比例在2160高应为4px。若要求2160高也2px，比例须改2/2160。这里只是单位推导，不是作者推荐线宽。",
+        "bypass": "关闭诊断副本新增分支，回到现有描边。",
+        "acceptance": "记录世界厚度、画高比例、实测像素和误差，分别声明目标；再看眨眼/转头24帧，保持睫毛、嘴线、发缝不粘连。",
+        "reject_if": [
+          "只有物体原点距离补偿，局部深度变化仍大却宣称所有轮廓恒定像素",
+          "改变线宽同时改变线色或面部内部线，无法归因",
+          "只以540p或截图推定1080p/2160p成片线宽通过"
+        ]
+      },
+      "future_reread_trigger": "用户指出近远景线条忽粗忽细，或输出分辨率/横竖画幅改变时，先复读Outline Width这一节；不定期全量抓取规范。"
+    },
+    {
+      "id": "saturday06_blender_mtoon_author_implementation",
+      "title": "VRM Add-on for Blender: MToon property and outline implementation",
+      "url": "https://github.com/saturday06/VRM-Addon-for-Blender/blob/main/src/io_scene_vrm/editor/mtoon1/property_group.py",
+      "raw_url": "https://raw.githubusercontent.com/saturday06/VRM-Addon-for-Blender/main/src/io_scene_vrm/editor/mtoon1/property_group.py",
+      "author_identity": "saturday06维护的作者项目；README说明承接iCyP在0.79之后的开发。不是VRM规范本身，也不是当前工程已启用的插件。",
+      "access": "raw_source_selected_symbols_read; companion_author_documentation_read",
+      "read_scope": [
+        "源码SPDX首行",
+        "outline_width_mode_enum及_set_outline_width_mode、update_outline_geometry",
+        "_assign_mtoon1_outline的Geometry Nodes、独立描边材质、Alpha/UV同步和Blender版本分支",
+        "convert_material_to_mtoon1中的MMD材料转换分支",
+        "作者Create Anime Style Material页的World Coordinates示例；只读文字，没有检查图片",
+        "LICENSE_MAIN.txt正文、仓库README作者说明"
+      ],
+      "companion_urls": [
+        "https://vrm-addon-for-blender.info/en-us/material-mtoon/",
+        "https://github.com/saturday06/VRM-Addon-for-Blender/blob/main/LICENSE_MAIN.txt",
+        "https://github.com/saturday06/VRM-Addon-for-Blender"
+      ],
+      "not_read_or_tested": [
+        "被加载的实际描边Geometry Nodes图和MToon shader节点库",
+        "完整common/shader.py和版本兼容矩阵",
+        "插件安装、节点注册、渲染、PMX转VRM或当前生产工程转换"
+      ],
+      "source_facts": [
+        "代码包含worldCoordinates/screenCoordinates枚举，并把线宽模式和系数传给Geometry Nodes描边路径；仅此尚不能证明屏幕单位渲染正确。",
+        "描边分支创建独立材质，同步Alpha cutoff/mode与UV设置，并含Blender 4.x/5.x版本条件。",
+        "MMD转MToon便利入口调用reset_shader_node_group并设置reset_material_node_tree=True；这属于重建材料路径。",
+        "源码SPDX和LICENSE_MAIN.txt均标MIT OR GPL-3.0-or-later。"
+      ],
+      "applicable_problem": "当普通EEVEE需要实现可控外壳描边时，先定位模式、材质、Alpha、UV和修改器接口；评估复用边界，避免把自动转换当成无损追加。",
+      "blender_5_2_stock_eevee_boundary": [
+        "存在面向Blender的原作者实现线索，比把Unity着色代码直接贴入节点更接近本环境；本轮未证明5.2.2可运行。",
+        "尚未读其Geometry Nodes图，不能声称实现了真正固定像素、完整法线处理或PMX权重继承。",
+        "不在当前生产材质运行转换入口；它会重建节点树，所读MMD分支不足以证明保留球面、当前Color/Alpha合成、SDF、金属与自定义发带。",
+        "教程的Standard显示变换和0.03世界宽度只是作者球体示例，不迁移为当前人物或婚礼场景默认参数。"
+      ],
+      "license_and_version": {
+        "license_verified": true,
+        "license": "MIT OR GPL-3.0-or-later",
+        "source_revision": "main; commit SHA not resolved",
+        "revision_locked": false,
+        "cache_caution": "GitHub HTML元数据报告4977行，raw响应报告4571行；不认定两次缓存同版。结论按raw符号定位，不给跨响应行号。",
+        "before_implementation": "锁定具体release/tag和提交，读取其节点库与Notice.txt，再核对本机Blender5.2.2；本轮不复制代码或安装依赖。"
+      },
+      "new_vs_duplicate": {
+        "new": [
+          "补到真实Blender作者实现入口，以及模式/Geometry Nodes/Alpha/UV之间的接口位置。",
+          "实际查到便利MMD转换会重建材质，形成明确的非无损迁移边界。"
+        ],
+        "reinforcement_only": [
+          "安装或存在枚举不代表动态和成片通过。",
+          "保留PMX球面与透明语义仍是原有约定。"
+        ]
+      },
+      "minimum_validation_card": {
+        "id": "future_blender_outline_dependency_audit",
+        "performed": false,
+        "hypothesis": "只研究独立描边路径，有机会复用作者的模式/UV接口而保留现有主材质；实际节点依赖尚待证明。",
+        "smallest_next_action": "先固定提交，只读加载函数及实际Geometry Nodes图；列出相机、屏幕尺寸、法线、Alpha、UV和材质依赖。未通过此步不安装、不转换人物。",
+        "future_diagnostic_scope": "若依赖可在本机满足，仅用一个复制的不透明网格和独立材质测试；现有生产工程不作为输入。",
+        "bypass": "删除诊断副本的新描边修改器；原材质节点树保持逐项一致。",
+        "acceptance": "原材质Color/Alpha及自定义节点不变；新增描边可单独开关；再采用future_outline_unit_contract的距离/分辨率检查。",
+        "reject_if": [
+          "必须执行全材质重建才能获取描边",
+          "实际节点依赖未读取便宣称普通EEVEE兼容",
+          "需要丢弃PMX顶点权重、球面或透明才能运行"
+        ]
+      },
+      "future_reread_trigger": "确需实现新的描边单位时，只读锁定版本的相关符号和节点图；普通分色/发带问题不重复读该库。"
+    }
+  ],
+  "learning_policy": {
+    "priority": "MToon规范用于单位和职责合同；作者Blender源码仅在实现缺口明确时续读。",
+    "unit_of_learning": "一个可见问题、一节规范或一段源代码、一条新增结论、一个可关闭验证卡。",
+    "stop_rule": "发现与本地账本重复，或仅剩未读取图像/未解锁依赖时登记边界并停止；不为凑来源数继续搜索。",
+    "refresh_rule": "按问题或目标版本变更触发复读，不持续拉取整个仓库/图库。",
+    "promotion": "文字阅读、实现、静帧、动态和用户美术认可分级记录；本JSON不晋升任何生产能力。"
+  }
+}

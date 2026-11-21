@@ -1,0 +1,269 @@
+{
+  "schema": "female-clean-npr-local-reference-v1",
+  "date": "2026-11-14",
+  "status": "actual_local_still_observation_and_proposed_transfer_only",
+  "reviewer": "reference_transfer_review",
+  "source": {
+    "user_label": "沃雅妮莎（用户称呼；本轮未独立核定角色正式名）",
+    "video": "C:\\Users\\Administrator\\Downloads\\183ee6b2-ddef-4b91-a197-f0da6c92a11b.mp4",
+    "sha256": "c5688ae46358740bf4d909c1ece8d7b8397bd5d15d5fad855c2c8210f5056ef7",
+    "sha256_independently_checked": true,
+    "metadata": {
+      "path": "D:\\codex\\output\\MMD-Local-Character-References-v1\\video-b\\reference-metadata.json",
+      "sha256": "c074e4233d79dc2fcb46281029bc9f7b78cae89d231c4ecba3a739e0e6a5380b",
+      "bytes": 1307
+    },
+    "width": 720,
+    "height": 1280,
+    "reported_fps": 29.921320137067596,
+    "reported_frames": 521,
+    "reported_duration_seconds": 17.412333333333333,
+    "timing_limit": "时间及零基帧号沿用已缓存OpenCV元数据，未新增ffprobe时间戳校准；不把近似时点当成精确PTS。",
+    "visible_watermark": "神秘会员日 / bilibili（9.425s、12.299s可见白色水印）",
+    "verified_original_author": false,
+    "original_shader_or_mme_known": false,
+    "author_project_or_shader_obtained": false,
+    "remote_shortlink": {
+      "url": "https://b23.tv/g3yy5v3",
+      "resolved": false,
+      "fetched": false,
+      "reason": "优先完成现有本地四帧实看，本轮没有联网。"
+    }
+  },
+  "actual_observation_scope": {
+    "contact_sheet": {
+      "path": "D:\\codex\\output\\MMD-Local-Character-References-v1\\video-b\\contact-sheet.jpg",
+      "sha256": "7c609ffbc847954879be9bcaa48f7146a3e2739d410cc2d660afde9d0c1030e5",
+      "bytes": 419365
+    },
+    "clear_original_stills": [
+      {
+        "path": "D:\\codex\\output\\MMD-Local-Character-References-v1\\video-b\\frame-02-03.609s.png",
+        "sha256": "5566ebf9cef9072a3132d72b5ad9ea155cac4af1b87b35e367515f7ecb5e2818",
+        "bytes": 1077137,
+        "frame_index_zero_based": 108,
+        "cached_reported_seconds": 3.6094664107485603,
+        "use": "正面脸部色块、鼻线、虹膜与刘海短亮带；前景手有运动模糊，不据其评细手线。"
+      },
+      {
+        "path": "D:\\codex\\output\\MMD-Local-Character-References-v1\\video-b\\frame-03-06.517s.png",
+        "sha256": "4f191319212c2169391c5f0752b29685c054469c33d38a542944e9e4f9caf18e",
+        "bytes": 1080626,
+        "frame_index_zero_based": 195,
+        "cached_reported_seconds": 6.517092130518234,
+        "use": "偏侧脸、下颌到颈部的暖影、立领和胸前银色硬饰、发束层次。"
+      },
+      {
+        "path": "D:\\codex\\output\\MMD-Local-Character-References-v1\\video-b\\frame-04-09.425s.png",
+        "sha256": "fb2cc85ff360674af5ccaacf7edb229f554ae97015f7a5e90be5eb9442b958e4",
+        "bytes": 1123788,
+        "frame_index_zero_based": 282,
+        "cached_reported_seconds": 9.424717850287907,
+        "use": "正面半闭眼表情、粉色鼻痕与颊部、发冠断续亮带、手／袖边的RGB分边。"
+      },
+      {
+        "path": "D:\\codex\\output\\MMD-Local-Character-References-v1\\video-b\\frame-05-12.299s.png",
+        "sha256": "0556d7f2d76e916f8ac8c0f59cb83a980b6807ebffaa9586bd64f2c6a9db5352",
+        "bytes": 1174188,
+        "frame_index_zero_based": 368,
+        "cached_reported_seconds": 12.298922584772873,
+        "use": "正面微笑、细五官线、头发分束及胸饰暗缝与窄亮面；手部仍有软化。"
+      }
+    ],
+    "excluded_from_quality_inference": [
+      {
+        "file": "frame-01-00.735s.png",
+        "reason": "仅在联系表见到；首秒移动端覆盖／二维码／叠帧干扰明显。"
+      },
+      {
+        "file": "frame-06-15.207s.png",
+        "reason": "仅在联系表见到；B站尾片，不是角色渲染。"
+      }
+    ],
+    "continuous_video_watched": false,
+    "full_521_frames_individually_reviewed": false,
+    "dynamic_stability_or_flicker_certified": false
+  },
+  "comparison_baseline": {
+    "character": "阿克西妮娅，v6原生beauty4290",
+    "project": "D:\\codex\\output\\MMD-Aksiniya-Ikhor-Wedding-v1\\production-v6\\Franken_Aksiniya_Ikhor_Bold_Wedding.blend",
+    "project_sha256": "201e2632befaf0a16f17b931963626a91bbc6b8f7e58d148d5047298a530de01",
+    "source_frame": 4290,
+    "actual_native_beauty": {
+      "path": "D:\\codex\\temp\\MMD-Ikhor-v1\\final-cache-v2\\beauty\\frame_4290beauty.png",
+      "sha256": "89a97a8888edf99777d4290c39bc3b9de4dc4c5cf988e935fb3ceebfb45e07cb",
+      "bytes": 8831256
+    },
+    "existing_preflight_full_frame_actually_viewed": {
+      "path": "D:\\codex\\output\\MMD-Aksiniya-Ikhor-Wedding-v1\\preflight-beauty-v6\\native-4290.png",
+      "sha256": "ee179f805583c2d02306dbb5bd6cc8777860f1896cb1cf1bf91eace7bd4e7d58",
+      "bytes": 2176115
+    },
+    "actual_native_inspection": {
+      "method": "原PNG内存读取，原尺寸裁切后JPEG85仅供工具显示；未落盘新图片。",
+      "source_box_xyxy": [
+        180,
+        75,
+        720,
+        665
+      ],
+      "crop_size": [
+        540,
+        590
+      ],
+      "resized": false
+    },
+    "eight_bit_preview_comparison_to_preflight": {
+      "max_abs_channel_difference": [
+        1,
+        1,
+        1
+      ],
+      "mean_abs_channel_difference": [
+        0.1824146412037037,
+        0.153647762345679,
+        0.16455391589506174
+      ]
+    },
+    "framing_limit": "参考为720×1280单人近景，脸部占幅更大；Aksi为1920×1080双人舞台。只比较明暗职责与线条层次，不做跨角色像素相似度评分。",
+    "caption_fixed_v7_note": "本轮视觉基线来自v6。既有production-v7/master-verification.json已证明v7仅修字幕Cryptomatte目标、beauty依赖不变；本研究没有修改v6或v7。"
+  },
+  "observed_comparison": [
+    {
+      "topic": "脸",
+      "reference": "四个清晰时点里脸大面很干净，鼻只是一条较短的粉色细痕或浅暖色形状；颊部有低对比暖粉，眼睫／上眼线比鼻口线更清楚。6.517s仍可见下颌到颈部的单块暖影，不能把它概括成所有皮肤全自发光。",
+      "aksi_4290": "鼻中央有孤立棕色泪滴状深块，明度和面积都更抢眼；脸颊大面较平，鼻块与周围明暗缺少连续关系。金瞳、表情和本角色底色应保留。",
+      "limit": "凭画面不能确定该鼻块来自SDF、形体项、AO或贴图，须先逐支路关闭定位。参考鼻痕也不是恢复原游戏SDF的证据。"
+    },
+    {
+      "topic": "头发",
+      "reference": "青发有可读的分束深浅，靠近颈后和发束内侧更深；刘海／发冠有按束断开的短亮带，许多内线为细蓝灰线，并非全头一道白塑料高光。3.609s、9.425s、12.299s均能看到这种图形关系。",
+      "aksi_4290": "银白发冠已有较宽白块，侧发转蓝灰；局部内线与外侧连续青边都较重。新叠亮带容易与既有贴图／球面亮部重复。",
+      "limit": "不能由四帧推断作者的高光公式、各向异性、法线编辑或MME插件；不把参考青发复制给Aksi。"
+    },
+    {
+      "topic": "毛领与浅色边缘",
+      "reference": "可见的是荷叶状立领、束口袖及银白服装，没有可辨的毛绒外领。",
+      "aksi_4290": "白毛领顶部亮、下侧灰，但大块折面和外轮廓转折较硬，内凹灰面与外毛尖层次不足。",
+      "limit": "毛领改进属于针对Aksi自身的适配假设；不能把参考立领的表现冒称已读到毛发Shader。仅着色也不能消除现有网格轮廓的折角。"
+    },
+    {
+      "topic": "深衣",
+      "reference": "主体服装偏亮，只有袖侧与腰部蝴蝶结等少量蓝黑区域；深部仍能看出几层折面／线条，与银白服装分离。",
+      "aksi_4290": "深蓝袖和胸腹较大面积接近同一暗值，部分造型依靠黑线和图案，宽的布料形体响应偏弱。",
+      "limit": "参考没有Aksi这样大面积深色长外套，不能宣称已从它读出整套深衣或皮革材质实现。"
+    },
+    {
+      "topic": "金属",
+      "reference": "胸前银色硬饰用深色缝、冷灰侧面和窄亮面分开，中央蓝饰与周围金属也有区分；亮而不需要把所有边都做成同强度Glow。",
+      "aksi_4290": "领前金饰有明确金色，但大片暖黄面之间的反光形状与暗部间隙还可进一步拉开；深衣上的小扣与大金饰应有不同尺度的亮面。",
+      "limit": "只借硬材质的亮暗形状和材质分区，不把Aksi金饰改成参考的银色，也不从成片RGB反推原Metallic／Roughness贴图。"
+    },
+    {
+      "topic": "边缘光、背景与后期",
+      "reference": "近白背景、顶部柔亮晕与整体高键对脸／白花的干净观感贡献很大；袖缘、发梢和飘带可见青／红黄分边，属可见后期特征候选，不能全部解释成物理轮廓光。",
+      "aksi_4290": "深色礼堂内，头发右缘及外套侧缘的青蓝亮线较连续且醒目，接近背景婚礼光弧的亮度语言，角色容易出现描亮一圈的剪贴感。",
+      "limit": "保持猪猪选定礼堂和原相机；不把白背景搬入生产，不为追参考全局加曝光或RGB分边。原作者的灯数、曝光、Bloom与色差算法未知。"
+    }
+  ],
+  "proposed_independently_bypassable_modules": [
+    {
+      "id": "aksi_clean_face",
+      "priority": 1,
+      "enable_contract": "新增脸部局部响应组；Enable=0重接原Colour路径，不能靠最后脸亮度下限实现旁路。",
+      "concrete_change": "先分别关现有SDF／形体项、主灯综合受光响应及AO，查明泪滴鼻块来源；只在产生该块的美术支路增加本角色鼻区UV许可与强度控制，把孤立棕块缩小／减弱为较轻暖色鼻痕。同时用极弱、连续的大面颊部响应承接光向，保留刘海和手靠近脸的真实遮挡。",
+      "proposed_starting_brackets_not_tested": {
+        "existing_nose_art_shadow_gain": [
+          0.25,
+          0.5,
+          1
+        ],
+        "low_frequency_cheek_contrast": [
+          0.04,
+          0.08
+        ]
+      },
+      "unchanged_inputs": "不更换FaceDiffuse／FaceLightmap，不套参考角色SDF，不改Morph、眼睛颜色、头部法线或最终显示曝光；新UV许可是原创美术遮罩，不称游戏Lightmap。",
+      "visible_success": "同4290鼻块不再先于眼睛吸引注意；脸颊有轻微方向而非一片粉白，颈下及真实遮挡仍成立。",
+      "failure_to_reject": "整脸发白、眼睫变灰、鼻口消失，或用亮度地板抹掉真实发影。"
+    },
+    {
+      "id": "aksi_hair_bundle_response",
+      "priority": 3,
+      "enable_contract": "仅hair角色增加可旁路发束响应组；额外亮带与内线尺度各有单独强度，不改原PMX描边权重。",
+      "concrete_change": "保留银白／蓝灰原色，先给已有新增亮带做0／0.5／1消融，避免与原贴图／sphere亮部叠成宽白块；把亮带许可限制为顺发束的断续短段，保留发束根部和颈后较深蓝灰。仅对发材质试较细内线，避免同时削薄脸、衣服和毛领。",
+      "proposed_starting_brackets_not_tested": {
+        "existing_extra_band_gain": [
+          0,
+          0.5,
+          1
+        ],
+        "hair_inner_line_scale": [
+          0.7,
+          0.85,
+          1
+        ]
+      },
+      "unchanged_inputs": "不染青发，不重写蒙皮／形态键／原法线，不假设已取得参考的HM／HN或各向异性图。",
+      "visible_success": "白发仍亮但能分清冠顶、侧束与内层；亮带支持发束而非压掉体积，发梢线在原生像素下仍连续。",
+      "failure_to_reject": "头顶全白、发束接缝变黑，或细线在转头／远景中消失和闪烁。"
+    },
+    {
+      "id": "aksi_surface_zone_contrast",
+      "priority": 4,
+      "enable_contract": "分材质响应模块可整体精确旁路，并为fur／deep cloth／gold三个子区保留独立权重。",
+      "concrete_change": {
+        "fur": "保留洁白上缘，增加低频的暖白顶面／冷灰侧面分工，把深色接触限制在领根和内凹，适度软化大面色带转折；不要全领加AO、假毛刺或Glow。轮廓网格若仍方折，另记几何限制。",
+        "deep_cloth": "只在现有主光／宽法线响应下把可读中间调试抬约5–10%，保留最暗折缝和深蓝饱和度；形成一块宽、弱的布料亮面，避免整件变浅紫塑料。",
+        "gold": "保留金色，以已有金属闭包和反射灯做亮暗形状校准：较窄亮面、暖暗侧面与扣件缝；粗糙度可在0.20／0.35附近作对照起点，最终取值以实际当前闭包和同帧效果为准，不能直接覆盖未核材质。"
+      },
+      "unchanged_inputs": "MMDShaderDev Color／Alpha、sphere、透明叠层和材质槽语义保持；不把参考银饰改色方案迁到Aksi金饰。",
+      "visible_success": "同一灯组下毛领、深布、金属可凭亮暗形状区分；灰阶看毛领最亮、布料保留层次、金属只有局部窄峰。",
+      "failure_to_reject": "毛领脏灰、衣物灰化或出现均匀反光；金饰全白发光、遮住原纹理。"
+    },
+    {
+      "id": "aksi_directional_rim_post_separation",
+      "priority": 2,
+      "enable_contract": "保留已有头／身rim独立控制与AOV；新增校准可旁路，Glow与rim源分开关闭，不改舞台。",
+      "concrete_change": "先对现有头／身青边分别做相对0.35／0.6／1强度消融，再用光向／朝向许可把它收回发梢和背光侧轮廓；服装大段连续青边减弱，必要时靠近冷白而非加饱和青。脸与五官不接rim。先关闭选择性Glow检查源，再恢复少量溢光。",
+      "proposed_starting_brackets_not_tested": {
+        "existing_head_rim_gain": [
+          0.35,
+          0.6,
+          1
+        ],
+        "existing_body_rim_gain": [
+          0.35,
+          0.6,
+          1
+        ]
+      },
+      "unchanged_inputs": "礼堂、婚礼弧／光点、原相机与DOF保持；不新增RGB色差模拟参考，不把受控Emission边缘称物理照明。",
+      "visible_success": "仍与蓝金礼堂有联系，但人物边缘不再处处与背景光弧竞争；关Glow仍看得出发束和衣服体块。",
+      "failure_to_reject": "整圈描亮、皮肤起雾、蓝边吞没毛尖，或抬背景曝光后才显得干净。"
+    }
+  ],
+  "proposed_validation_scope": {
+    "first_step": "字幕基线修复完成后，仅从固定候选另存同帧材质实验；本账本不触发修改或渲染。",
+    "ab_conditions": "相同4290、原相机／姿态／DOF／礼堂／灯组／曝光／显示变换；先单模块开关，再组合，保留原路径可恢复。",
+    "native_checks": [
+      "原生全画幅看角色主次与青边",
+      "同脸像素观察鼻、发内线和毛尖，不凭参考近景占幅更大判优",
+      "分别关AO／specular／rim／Glow确定每层职责",
+      "确认Alpha=0任务件、描边、ReferenceDuetActor与字幕遮挡不回归"
+    ],
+    "before_beauty_gate": "若同帧确有进步，再用转头、移灯、绕拍的少量代表时点及原动作关键段检查，尤其鼻影、发束亮带和细线是否跳变；本次没有完成这些动态实验。"
+  },
+  "evidence_status": {
+    "local_reference_read": true,
+    "visual_hypotheses_written": true,
+    "material_transfer_implemented": false,
+    "production_project_modified": false,
+    "rendering_performed": false,
+    "new_image_files_written": false,
+    "only_repository_file_written": "docs/research/FEMALE_CLEAN_NPR_REFERENCE_2026_11_14.json",
+    "user_art_approval": false,
+    "reference_style_matched": false,
+    "third_party_video_or_frames_copied_into_repository": false
+  }
+}

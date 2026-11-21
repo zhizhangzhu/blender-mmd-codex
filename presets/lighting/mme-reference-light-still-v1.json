@@ -1,0 +1,239 @@
+{
+  "source": "D:\\codex\\output\\MMD-MME-Reference-Light-v1\\production-v2\\Franken_MME_Reference_Light_Still.blend",
+  "source_sha256": "c10e0f70c22fde863b28e4cc862c4f5dd029bb0c8fab1bc06427c65c9bce5788",
+  "project": "D:\\codex\\output\\MMD-MME-Reference-Light-v1\\production-v3\\Franken_MME_Clear_Light_Still.blend",
+  "project_sha256": "1ac199423c418220612e8b7b7e0b862b6b42c06bb0e0e40d6857cc898a486fc7",
+  "scope": "Static4290 only; MME-inspired native Goo adaptation, not original .fx execution",
+  "pose_hash": "556eef476f7006ca214ab98d2fb3b7a63dfd774fb4998c21d2fb134094af37a5",
+  "lights": [
+    {
+      "name": "Reference duet | aksiniya | key",
+      "watts": 560,
+      "size": 0.8,
+      "position": [
+        -1.190536379814148,
+        -1.0171688795089722,
+        2.226534605026245
+      ]
+    },
+    {
+      "name": "Eye hair v1 | aksiniya directional head key",
+      "watts": 220,
+      "size": 0.55,
+      "position": [
+        -1.0484132766723633,
+        -0.989398717880249,
+        2.119157552719116
+      ]
+    },
+    {
+      "name": "Reference duet | ikhor | key",
+      "watts": 560,
+      "size": 0.8,
+      "position": [
+        -0.5244098901748657,
+        -0.677206814289093,
+        2.0442299842834473
+      ]
+    },
+    {
+      "name": "Eye hair v1 | ikhor directional head key",
+      "watts": 220,
+      "size": 0.55,
+      "position": [
+        -0.36743345856666565,
+        -0.7001073360443115,
+        1.9585914611816406
+      ]
+    }
+  ],
+  "materials": [
+    {
+      "name": "前装饰",
+      "role": "trim",
+      "skin": false
+    },
+    {
+      "name": "前鬓",
+      "role": "hair",
+      "skin": false
+    },
+    {
+      "name": "前鬓+",
+      "role": "hair",
+      "skin": false
+    },
+    {
+      "name": "后装饰",
+      "role": "trim",
+      "skin": false
+    },
+    {
+      "name": "呆毛",
+      "role": "hair",
+      "skin": false
+    },
+    {
+      "name": "头饰",
+      "role": "trim",
+      "skin": false
+    },
+    {
+      "name": "带子",
+      "role": "cloth",
+      "skin": false
+    },
+    {
+      "name": "帽",
+      "role": "cloth",
+      "skin": false
+    },
+    {
+      "name": "帽+",
+      "role": "cloth",
+      "skin": false
+    },
+    {
+      "name": "手",
+      "role": "skin",
+      "skin": true
+    },
+    {
+      "name": "手.001",
+      "role": "skin",
+      "skin": true
+    },
+    {
+      "name": "披肩",
+      "role": "cloth",
+      "skin": false
+    },
+    {
+      "name": "披肩+",
+      "role": "cloth",
+      "skin": false
+    },
+    {
+      "name": "毛领",
+      "role": "fur",
+      "skin": false
+    },
+    {
+      "name": "腿",
+      "role": "cloth",
+      "skin": false
+    },
+    {
+      "name": "腿+",
+      "role": "cloth",
+      "skin": false
+    },
+    {
+      "name": "衣",
+      "role": "cloth",
+      "skin": false
+    },
+    {
+      "name": "衣+",
+      "role": "cloth",
+      "skin": false
+    },
+    {
+      "name": "衣.001",
+      "role": "cloth",
+      "skin": false
+    },
+    {
+      "name": "衣2",
+      "role": "cloth",
+      "skin": false
+    },
+    {
+      "name": "衣领",
+      "role": "cloth",
+      "skin": false
+    },
+    {
+      "name": "裙",
+      "role": "cloth",
+      "skin": false
+    },
+    {
+      "name": "裙+",
+      "role": "cloth",
+      "skin": false
+    },
+    {
+      "name": "裙.001",
+      "role": "cloth",
+      "skin": false
+    },
+    {
+      "name": "颜",
+      "role": "skin",
+      "skin": true
+    },
+    {
+      "name": "颜.001",
+      "role": "face",
+      "skin": true
+    },
+    {
+      "name": "首",
+      "role": "skin",
+      "skin": true
+    },
+    {
+      "name": "首.001",
+      "role": "skin",
+      "skin": true
+    },
+    {
+      "name": "鬓",
+      "role": "hair",
+      "skin": false
+    },
+    {
+      "name": "鬓+",
+      "role": "hair",
+      "skin": false
+    },
+    {
+      "name": "鬓.001",
+      "role": "hair",
+      "skin": false
+    }
+  ],
+  "physics_changed": false,
+  "video_created": false,
+  "independent_reopen_passed": true,
+  "refinements": {
+    "failed_stage_grade_disabled": true,
+    "white_cloth_reconstruction_weight": 0.18,
+    "white_ramp_lit": [
+      1.2,
+      1.23,
+      1.28
+    ],
+    "trim_materials_restored": true
+  },
+  "trim_protection_materials": [
+    "带子",
+    "衣.001",
+    "衣2",
+    "衣领",
+    "裙.001"
+  ],
+  "soft_project": "D:\\codex\\output\\MMD-MME-Reference-Light-v1\\production-v3\\Franken_MME_Soft_Light_Still.blend",
+  "soft_project_sha256": "32c32515835a951420c60e80966fe708e94655971e6115659cef592da977eb65",
+  "soft_variant": {
+    "bright_diffusion_strength": 0.24,
+    "threshold": 1.05,
+    "size": 0.028,
+    "outer_rim_strength": 0.62,
+    "outer_rim_size": 0.055
+  },
+  "render_log_shadow_overflow_messages": 0,
+  "art_status": "pending user review",
+  "soft_variant_visual_note": "Small visible difference in this bright scene; clear version selected as main candidate"
+}

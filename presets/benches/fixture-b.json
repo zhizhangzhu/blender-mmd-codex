@@ -1,0 +1,162 @@
+{
+  "schema_version": 1,
+  "id": "studio-fixture-b",
+  "source": {
+    "path": "D:\\codex\\temp\\MMD-Studio-SceneBench-2026-11-20\\fixtures-v3\\fixture-B.blend",
+    "sha256": "fce863bd93917182b03393f20663435a48105075bbea3d221eae65e380b7eeb7"
+  },
+  "runtime": "presets/runtime/native53-v1.json",
+  "scene": {
+    "name": "BenchSceneB",
+    "camera": "Camera_B",
+    "expected_lens_mm": 50,
+    "registration": "none"
+  },
+  "actors": [
+    {
+      "id": "left",
+      "objects": [
+        "RenamedWestTorso",
+        "RenamedWestHead",
+        "RenamedWestCrown",
+        "RenamedWestEye-1",
+        "RenamedWestEye1"
+      ],
+      "armature": "RenamedWestRig",
+      "materials": {
+        "face": [
+          "RenamedWestFace"
+        ],
+        "cloth": [
+          "RenamedWestCloth"
+        ],
+        "hair": [
+          "RenamedWestHair"
+        ],
+        "iris": [
+          "RenamedWestIris"
+        ]
+      }
+    },
+    {
+      "id": "right",
+      "objects": [
+        "RenamedEastTorso",
+        "RenamedEastHead",
+        "RenamedEastCrown",
+        "RenamedEastEye-1",
+        "RenamedEastEye1"
+      ],
+      "armature": "RenamedEastRig",
+      "materials": {
+        "face": [
+          "RenamedEastFace"
+        ],
+        "cloth": [
+          "RenamedEastCloth"
+        ],
+        "hair": [
+          "RenamedEastHair"
+        ],
+        "iris": [
+          "RenamedEastIris"
+        ]
+      }
+    }
+  ],
+  "switches": {
+    "key": {
+      "kind": "light_energy",
+      "object": "Key_B",
+      "expected": 2.5
+    },
+    "cloth_tint": {
+      "kind": "node_input",
+      "material": "RenamedEastCloth",
+      "node": "ClothTint",
+      "socket": "Color2",
+      "expected": [
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    "glow_off": {
+      "kind": "glow_bypass",
+      "nodes": [
+        {
+          "tree": "compositor",
+          "scene": "BenchSceneB",
+          "node": "FixtureGlow",
+          "image_output": "Image",
+          "glare_output": "Glare"
+        }
+      ]
+    }
+  },
+  "cases": [
+    {
+      "id": "baseline",
+      "frame": 1,
+      "overrides": []
+    },
+    {
+      "id": "key_low",
+      "frame": 1,
+      "overrides": [
+        {
+          "switch": "key",
+          "value": 0.35
+        }
+      ]
+    },
+    {
+      "id": "cloth_tint",
+      "frame": 1,
+      "overrides": [
+        {
+          "switch": "cloth_tint",
+          "value": [
+            0.62,
+            0.72,
+            0.91,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "id": "glow_off",
+      "frame": 1,
+      "overrides": [
+        {
+          "switch": "glow_off",
+          "value": true
+        }
+      ]
+    },
+    {
+      "id": "pose_10",
+      "frame": 10,
+      "overrides": []
+    },
+    {
+      "id": "baseline_repeat",
+      "frame": 1,
+      "overrides": []
+    }
+  ],
+  "render": {
+    "width": 640,
+    "height": 360,
+    "samples": 16,
+    "dof": "source",
+    "motion_blur": false
+  },
+  "limits": [
+    "Original procedural proxy fixture, not an MMD quality sample",
+    "No physics; frame1/frame10 are independent static evaluations",
+    "Renamed fixture variation is tool transfer evidence, not cross-project art mastery"
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "status": "bounded-static-case-not-general-installer",
+  "source": {
+    "project": "D:/codex/output/MMD-MME-Reference-Light-v1/production-v6/Franken_MME_Balanced_Light_Still.blend",
+    "sha256": "65766b3befc9031f5c27efb25f91b1516cd2a0cd195b4ea98125bab93c07bf7a"
+  },
+  "output": {
+    "project": "D:\\codex\\output\\Goo-Character-Lookdev-2026-11-18\\final-v1\\Franken_Character_Lookdev_Still.blend",
+    "sha256": "66a030e52f93f373f009cd4308ad6b6bc6504387346ce4ca4adc43851357928a"
+  },
+  "frame": 4290,
+  "parameters": {
+    "face_form_strength": {
+      "aksiniya": 0.52,
+      "ikhor": 0.78
+    },
+    "normal_edit": {
+      "mix": 0.23,
+      "max_angle": 32,
+      "vertex_group": "local face side vertex group",
+      "after_solidify": true,
+      "head_bone_target": true,
+      "positions_unchanged": true
+    },
+    "hair_shadow": {
+      "resolution": 512,
+      "static_frame": 4290
+    },
+    "key_head_space_right_forward_up": [
+      -0.95,
+      0.8,
+      1.05
+    ],
+    "power_unchanged": true,
+    "secondary_rim_multiplier": 0.64,
+    "primary_unchanged": true,
+    "glow_strength": {
+      "tight": 1.15,
+      "outer": 0.24,
+      "selective": 0.055
+    },
+    "eye_see_through": "deferred",
+    "key_position_scope": "4290头部轴采样后设置的静态world灯位；未验证全曲跟头追光"
+  },
+  "unverified": [
+    "dynamic normals/hair shadow",
+    "new physics",
+    "game-reference quality"
+  ],
+  "guide": "docs/GOO_CHARACTER_LOOKDEV_2026_11_18.md"
+}

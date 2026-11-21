@@ -1,0 +1,359 @@
+{
+  "schema_version": 1,
+  "recorded_date": "2026-11-14",
+  "timezone": "Asia/Shanghai",
+  "status": "offline_local_720p_clear_frames_reviewed_and_palette_hypotheses_refined",
+  "current_observation_scope": "用户随后提供本地视频；本轮停止外网，只补本账本。以local_video_followup内四张清晰渲染抽帧和UI分类为当前视觉依据，前面的在线获取范围保留为历史记录。",
+  "user_reference": {
+    "short_url": "https://b23.tv/Sl0y59y",
+    "canonical_url": "https://www.bilibili.com/video/BV1UauH6AEw8/",
+    "bvid": "BV1UauH6AEw8",
+    "aid": 117049367993262,
+    "cid": 40662665589,
+    "title": "哪来这么帅的小王子",
+    "user_preference": "参考里的伊科尔更干净、明亮、有质感。",
+    "owner": {
+      "display_name": "神秘会员日",
+      "mid": 3546844833516481,
+      "profile_url": "https://space.bilibili.com/3546844833516481",
+      "identity_evidence": "B站公开view响应owner字段；未打开作者主页。"
+    },
+    "publication_unix": 1786031803,
+    "publication_utc": "2026-08-06T15:56:43Z",
+    "duration_seconds_metadata": 17,
+    "playurl_duration_milliseconds": 16874,
+    "source_dimension_metadata": [2160, 3840],
+    "portrait": true
+  },
+  "read_description_credits": {
+    "source": "https://api.bilibili.com/x/web-interface/view?bvid=BV1UauH6AEw8",
+    "http_status": 200,
+    "api_code": 0,
+    "scope": "实际读取标题、owner、简介全文、分P、时长、尺寸与rights字段；未读评论、置顶、弹幕、字幕或作者主页。",
+    "model": ["米哈游", "作者自署我"],
+    "motion_and_camera": ["林栀"],
+    "mme": [
+      "そぼろ",
+      "針金P",
+      "ましまし",
+      "データP",
+      "下っ腹P",
+      "三金络合物",
+      "くろくま",
+      "养乐多",
+      "Ellen",
+      "NenemSdmn"
+    ],
+    "implementation_boundary": "简介以MME列出作者，没有指定具体effect、Shader、节点、色带、曝光或参数；不能把署名名单当作复原其材质算法的证据。",
+    "model_provenance_increment": "该作品UP显示名与本地PMX comment的模型编辑署名神秘会员日相同，且本条简介自署Model/米哈游/我。这是可追溯的作者线索，不证明显示名唯一、不证明本地社区归档文件与本条工程同版，也不证明镜像获得再配布授权。本条简介未给出模型配布链接。",
+    "rights_fields": {
+      "download": 1,
+      "no_reprint": 1,
+      "pay": 0,
+      "ugc_pay": 0,
+      "is_chargeable_season": false,
+      "is_upower_exclusive": false
+    },
+    "rights_interpretation": "以上是平台响应字段，不是第三方素材再配布许可。帧仅私人研究，不纳入公开素材库或声称可转载。"
+  },
+  "access_log": [
+    {
+      "stage": "web_shortlink_and_exact_title_search",
+      "result": "web工具短链不可达；标题检索返回无关结果，未采为证据。"
+    },
+    {
+      "stage": "ordinary_public_shortlink_request",
+      "method": "获批只读HttpClient，AllowAutoRedirect=false，不带cookie",
+      "result": "HTTP302的Location实际含BV1UauH6AEw8；只保留canonical BV URL，不保存分享追踪参数。"
+    },
+    {
+      "stage": "public_view_metadata",
+      "result": "普通Invoke-WebRequest实际HTTP200/api code0，读到作品正文与署名。"
+    },
+    {
+      "stage": "public_timeline_metadata",
+      "url": "https://api.bilibili.com/x/player/videoshot?bvid=BV1UauH6AEw8&index=1",
+      "result": "HTTP200/code0，得到单张4800×2700 sprite的10×10槽位、480×270每槽，以及index=[0,0,5,12]。只前三槽有图。"
+    },
+    {
+      "stage": "public_timeline_image",
+      "url": "https://bimp.hdslb.com/videoshotpvhdboss/40662665589_oucemb-0001.jpg",
+      "result": "HTTP请求成功，91354 bytes，实际view了前三槽的横排图。不是封面，也没有播放视频。",
+      "sha256": "e184cad03ee6b81903ad192a8d6d1a77021a81870cd50e32e470eeb1cf80212d"
+    },
+    {
+      "stage": "public_lowest_resolution_playurl",
+      "request": "x/player/playurl，bvid/cid同上，qn16/fnval0/fourk0，不带cookie",
+      "result": "HTTP200/code0，quality16/mp4/16874ms，返回单段1797285 bytes；没有请求高码率、登录或付费资源。",
+      "private_cache": "D:/codex/temp/MMD-Ikhor-Prince-Reference-v1/public-playurl-360p.json"
+    },
+    {
+      "stage": "public_stream_frame_extraction_attempt",
+      "method": "本地ffmpeg尝试仅流式抽0/5/10/15秒四帧，正常作品Referer，无cookie",
+      "result": "CDN HTTP403，未取得任何解码帧或完整视频；停止此分支。未更换账号、伪造登录、轮换CDN或重试绕过限制。",
+      "private_log": "D:/codex/temp/MMD-Ikhor-Prince-Reference-v1/frame-extraction.log"
+    },
+    {
+      "stage": "authorized_chrome_fallback",
+      "result": "CUA实际inventory apps=[]/browsers=[]；单次createBrowserTab(chrome,canonical?autoplay=0)返回Browser is not available: chrome。已提交CUA completion summary；未创建标签、未开播放器、没有自动播放或待暂停的代理标签。"
+    },
+    {
+      "stage": "public_platform_first_frame_image",
+      "url": "https://i1.hdslb.com/bfs/storyff/_00001e82uwb2zlg822kr0yjeioucemb_firsti.jpg",
+      "result": "随后发现view.pages[0].first_frame字段与cover pic字段不同，正常公开请求成功：74010 bytes、720×1280 JPEG。实际view整张首帧，其手指靠脸姿态与时间轴首槽相符。未据此声称成功解码视频流。",
+      "sha256": "cf1ab1c7cd1b325912f7c181808413431bb9fc8affdfb2e31176cb582d3701c0"
+    }
+  ],
+  "visual_scope": {
+    "reference_frames_observed": 3,
+    "reference_image_files_observed": 4,
+    "type": "官方公开播放器三张不同时间轴画面，加一张与首槽同姿态的720×1280平台first_frame图片",
+    "cover_used_for_visual_analysis": false,
+    "full_video_observed": false,
+    "continuous_motion_observed": false,
+    "decoded_video_stream_frames_observed": 0,
+    "effective_frame_size": [152, 270],
+    "platform_first_frame_size": [720, 1280],
+    "sprite_slot_size": [480, 270],
+    "raw_index": [0, 0, 5, 12],
+    "nominal_timestamps_seconds": [0, 5, 12],
+    "timestamp_boundary": "前三个非空槽按时间轴索引起始重复0为占位的方式标为约0/5/12秒。未用播放器seek或成功解码PTS复核，不能当逐帧精确时码。",
+    "crop": "每槽保留竖幅区域152×270：x=164、644、1124，y=0；从原sprite解码裁切为PNG，无AI增强或补细节。",
+    "actual_displays": [
+      "先实际view 1920×270前三槽横排JPEG，看到三张不同姿态与景别；第四槽为空。",
+      "实际view本地v6 4290 beauty的960×540 JPEG对照。原PNG太大的一次工具调用未显示，不计为原分辨率审图。",
+      "实际view720×1280平台first_frame，补充RGB分边、深灰袖内衬与金甲大面的观察，修正早期低清轮廓判断。"
+    ],
+    "cannot_evaluate": [
+      "金属粗糙度、法线微结构、真实高光宽度或Bloom卷积半径。",
+      "发带闪烁、轮廓时域稳定性、镜头动态、转头时SDF及阴影响应。",
+      "原始render engine、具体MME实现、材质参数或本地模型与作者工程是否逐顶点同版。"
+    ]
+  },
+  "private_artifacts": {
+    "root": "D:/codex/output/MMD-Ikhor-Prince-Reference-v1",
+    "third_party_frames_not_for_republication": true,
+    "timeline_sprite_private_temp": "D:/codex/temp/MMD-Ikhor-Prince-Reference-v1/videoshot-sprite.jpg",
+    "platform_first_frame": {
+      "path": "D:/codex/output/MMD-Ikhor-Prince-Reference-v1/public-first-frame.jpg",
+      "source": "view.pages[0].first_frame；不同于view.pic封面字段",
+      "size": [720, 1280],
+      "bytes": 74010,
+      "sha256": "cf1ab1c7cd1b325912f7c181808413431bb9fc8affdfb2e31176cb582d3701c0",
+      "nominal_time_seconds": 0,
+      "boundary": "平台标注首帧且画面与时间轴首槽相符；未以视频PTS独立验证首帧精确时码。"
+    },
+    "frames": [
+      {
+        "path": "D:/codex/output/MMD-Ikhor-Prince-Reference-v1/timeline-000s.png",
+        "nominal_time_seconds": 0,
+        "size": [152, 270],
+        "sha256": "0672fb25f7a180eccf91e105a74e2f736a7d501d9ebcb43f6fb0ac7b43dbf607"
+      },
+      {
+        "path": "D:/codex/output/MMD-Ikhor-Prince-Reference-v1/timeline-005s.png",
+        "nominal_time_seconds": 5,
+        "size": [152, 270],
+        "sha256": "6ab369caad53e771e8058211f76aec8e97da71e94d11318544b26ee38ff52edb"
+      },
+      {
+        "path": "D:/codex/output/MMD-Ikhor-Prince-Reference-v1/timeline-012s.png",
+        "nominal_time_seconds": 12,
+        "size": [152, 270],
+        "sha256": "8b211a4b25ec3503096eac0d65336d9afb7cd45773f1ff7574a27d607235a144"
+      }
+    ],
+    "contact_row": {
+      "path": "D:/codex/output/MMD-Ikhor-Prince-Reference-v1/timeline-row-0-5-12s.jpg",
+      "sha256": "c6badd0a01942df660135e136ff9a83d564432f80a130c0086c0201a07f77484",
+      "note": "最初临时名含0a-0b-5-12s；读图发现只有前三槽有画面后改为当前名，仍以nominal timestamps而非PTS解释。"
+    },
+    "local_baseline": {
+      "source_png": "D:/codex/temp/MMD-Ikhor-v1/final-cache-v2/beauty/frame_4290beauty.png",
+      "source_png_sha256": "89a97a8888edf99777d4290c39bc3b9de4dc4c5cf988e935fb3ceebfb45e07cb",
+      "production_source": "production-v6；v7修字幕Crypto人物名单，不在本轮重新验证其RGB等价性。",
+      "source_frame": 4290,
+      "viewed_preview": "D:/codex/output/MMD-Ikhor-Prince-Reference-v1/baseline-v6-4290-960.jpg",
+      "viewed_preview_size": [960, 540],
+      "viewed_preview_sha256": "7461a6073bec316e1f90fdea8cf5765fd014a0f64616d408afcc883926d297d9",
+      "comparison_limit": "不同时长、镜头、姿态、环境与分辨率；不是同条件A/B，不做像素亮度或肤色精度匹配。"
+    }
+  },
+  "observations_and_bounded_hypotheses": [
+    {
+      "area": "整体和背景",
+      "seen": "三张参考均为很浅的近白背景，人物大面高明度；本地4290是深蓝金婚礼舞台，亮环、光束和高饱和青色边缘参与视觉对比。",
+      "confidence": "高：大色块可见",
+      "hypothesis": "参考更亮部分来自整体画面设计。先固定当前婚礼舞台和曝光，局部改善角色色带，不能用全图增曝宣称复现其人物质感。"
+    },
+    {
+      "area": "脸和手",
+      "seen": "720首帧的脸与可见手指是浅桃／粉白，鼻部保留窄粉褐形体线，颈下有较明显淡紫褐阴影；本地4290举起的掌心比脸显著红棕。原先低清下鼻线难见的判断不能解释成参考没有鼻影。",
+      "confidence": "中高：720首帧可核鼻线及脸手关系，但姿态和照明不同",
+      "hypothesis": "先同条件核脸与手的中间色和阴影色，减掌心棕红；保留原贴图、表情与五官线。按形体／SDF/实际受光分项，避免给最终脸亮度加统一下限抹掉阴影。"
+    },
+    {
+      "area": "头发",
+      "seen": "参考是浅奶金大面、细暗色发束线；720首帧也有明确的褐色发根和右侧发束暗带，并非全头无影。本地4290金发中下部的金褐色总体更重。",
+      "confidence": "中高：整体分带可见，无法分离贴图／镜面／后期的贡献",
+      "hypothesis": "提升hair暗带／中间带的明度并缩小深褐色覆盖，保留原细发线与局部高光层次；不能把头发统一发白或据此猜具体发带Shader。"
+    },
+    {
+      "area": "白衣",
+      "seen": "参考胸襟和外层袖布大面接近白；720首帧清楚显示袖口内衬仍是深蓝灰，不能把所有衣物色块都归为应提亮的白布。本地4290外袖／前臂有面积更大的中灰冷色块。",
+      "confidence": "高：外白布／深内衬分区在720首帧可见，姿态不同",
+      "hypothesis": "只对白色外布的高明度低彩区域减小暗带深度或面积，保留深内衬、衣纹／接触及边界；先做同帧开关对照，防止白底贴图夹白。UV／颜色区域应实际核对，不能按衣材质名整体抬亮，也不要改所有材质共用曝光。"
+    },
+    {
+      "area": "金属和装饰",
+      "seen": "720首帧金甲大面偏柔和黄／芥末金，带褐色分层和窄边，并非大片亮白；青羽饰和胸口宝石本身很鲜亮。本地4290肩／胸金色亮线更突出。",
+      "confidence": "中高：金甲与青饰分区可见，粗糙度和高光算法仍未知",
+      "hypothesis": "保留金属闭包与局部明暗，不把所有金边改同一强Emission；用限定静帧检验更清楚的金／白分离。粗糙度或真实镜面形状暂不据低清参考下结论。"
+    },
+    {
+      "area": "边缘光和后期",
+      "seen": "720首帧在发丝、脸／手、金边可见明显RGB错位彩边，青羽饰也有亮晕；这修正了先前仅凭152px宽缩略图觉得参考彩边更少的判断。不能把参考的干净解释成没有彩边或后期。本地4290腕／袖的局部cyan亮边及婚礼亮环属于不同画面环境。",
+      "confidence": "高：首帧RGB分边可见；其成因及是否特定色散effect仍仅为推断",
+      "hypothesis": "把skin／外白布的局部cyan rim作为独立开关试验，保留青羽饰与宝石；不可全人物去青。无需为匹配参考而主动复制色散。婚礼舞台、Glow与角色配色分开归因。"
+    }
+  ],
+  "local_video_followup": {
+    "status": "offline_frame_observation_and_unmeasured_parameter_suggestions_only",
+    "network_used_in_this_followup": false,
+    "source": {
+      "path": "C:/Users/Administrator/Downloads/0cbc5e98-505d-49dd-9984-9d621efdad0c.mp4",
+      "sha256_independently_read": "ef140e1a20d1678442d2b1dbfac80b8592932dfb22bc2b1070eaecd89559a608",
+      "bytes": 4879753,
+      "root_extracted_frames": "D:/codex/output/MMD-Local-Character-References-v1/video-a",
+      "root_metadata": "D:/codex/output/MMD-Local-Character-References-v1/video-a/reference-metadata.json",
+      "root_metadata_sha256": "6390bb68c764a43429ca3372e59c2a80ed17e6584b3f616fcbd69f83ef82c5b4",
+      "metadata_dimensions": [720, 1280],
+      "metadata_frame_count": 599,
+      "metadata_duration_seconds": 20.015333333333334,
+      "metadata_fps_reported": 29.92705592379176,
+      "timing_boundary": "沿用root的OpenCV零起点帧索引／近似秒数；本轮未重提取或用PTS逐帧核时间。文件含分享卡与B站尾片，不将20秒全算作者实际渲染。"
+    },
+    "frames_actually_viewed_at_full_extracted_size": [
+      {
+        "file": "frame-01-00.835s.png", "index_zero_based": 25, "seconds_approx": 0.8353644963828604,
+        "sha256": "e55c149be2e88e3c8e382ab77d605177c30a4894b73e4681900c17db704cc273",
+        "classification": "B站分享卡／片头截图叠加层：灰白横条、二维码、打开APP文字和底部渐暗压在角色画面上；不用于采色、阴影或材质推断。"
+      },
+      {
+        "file": "frame-02-04.177s.png", "index_zero_based": 125, "seconds_approx": 4.176822481914302,
+        "sha256": "ca6f5842e395be158d71e3c76474aca4e47a48f70dea42447755afa8a8cf7c63",
+        "classification": "实际渲染，侧向半身／交叠袖；可看奶金发束、金色大面、外白布和深衬分区。左上水印／底部标题不是服装贴图。"
+      },
+      {
+        "file": "frame-03-07.485s.png", "index_zero_based": 224, "seconds_approx": 7.484865887590429,
+        "sha256": "5a520883178f210bd3cfb81ba4129dc9e67287d16cf272bb07987ac7f6a1ab12",
+        "classification": "实际渲染，正面半身；脸／胸可读，但近处手和袖有明显运动模糊，不能拿其软边判断高光宽度或几何细节。"
+      },
+      {
+        "file": "frame-04-10.826s.png", "index_zero_based": 324, "seconds_approx": 10.82632387312187,
+        "sha256": "ffb78813181e4ad59b984126ebb23832465dca80aa60679ce01a5abc3d8c25bd",
+        "classification": "实际渲染，清晰正面脸／颈／上身；本轮人工选ROI的主要色板来源。"
+      },
+      {
+        "file": "frame-05-14.168s.png", "index_zero_based": 424, "seconds_approx": 14.167781858653312,
+        "sha256": "b929ebc1ab3341c0843250b218295afda06fecaa946f20b7f948e7cdc8be946c",
+        "classification": "实际渲染，正面抬臂；核对浅粉脸、发侧褐影、灰紫颈影、白衣和RGB分边。"
+      },
+      {
+        "file": "frame-06-17.476s.png", "index_zero_based": 523, "seconds_approx": 17.475825264329437,
+        "sha256": "e6f6f14e5d3c51add9b8fbd369e49f056969f08dfa5ef8a22cddd41fb84da27d",
+        "classification": "黑底B站品牌尾标，不是作者舞台、曝光或渲染材质。"
+      }
+    ],
+    "observed_render_sample_count": 4,
+    "observed_ui_or_outro_sample_count": 2,
+    "full_clip_played_or_continuously_watched": false,
+    "unclassified_intervals": "没有逐帧界定分享卡消失／尾标开始的精确边界，也没有用四帧推断全段动态稳定。",
+    "refined_findings": [
+      "干净的主体是浅粉高明度脸、近冷白外布、奶油金发冠与明确装饰分区；不是所有部位无影或全材质提亮。",
+      "四张渲染抽帧仍有窄粉褐鼻线、灰紫颈影、发根／发侧褐影、蓝灰侧缝与深袖内衬；这些不能一并抹掉。",
+      "当前v6的脸本来已经很亮，主要是比参考更暖米色；手掌的红棕差异更显著。先校色／处理手部中暗部，不先给整脸再加曝光。",
+      "参考金甲是柔和黄／橄榄金大面与褐色窄影，亮边有限；本地金色局部白亮更强。亮度降低一点而色相分层更清楚，也可能更接近参考的质感。",
+      "所有清晰帧均有RGB错位彩边、柔亮雾感和水印；7.485秒有明显前景运动模糊。色散、柔亮后期、运动模糊不等于头发或布料金属Shader的微结构。"
+    ],
+    "approximate_display_swatches": {
+      "method": "System.Drawing读取既有PNG／JPEG；人工选小矩形，分别取R/G/B中位数。xyxy为左上原点，右下不含。不是自动语义分割，也未复原原作者显示变换。",
+      "color_space_boundary": "仅8-bit存储RGB的近似显示色板，可作为sRGB式目标观感；不是线性NPR乘数或源BaseColor。不能把HEX转成浮点后直接塞现有乘法色带。",
+      "reference_source": "frame-04-10.826s.png",
+      "reference_samples": [
+        {"area": "face_cheek", "xyxy": [255,357,280,384], "rgb": [250,232,241], "hex": "#FAE8F1"},
+        {"area": "neck_shadow", "xyxy": [330,510,375,535], "rgb": [199,169,182], "hex": "#C7A9B6"},
+        {"area": "hair_light", "xyxy": [217,129,245,162], "rgb": [249,233,217], "hex": "#F9E9D9"},
+        {"area": "hair_side", "xyxy": [538,360,555,405], "rgb": [179,154,148], "hex": "#B39A94"},
+        {"area": "white_torso", "xyxy": [421,979,443,1001], "rgb": [242,242,250], "hex": "#F2F2FA"},
+        {"area": "gold_chest", "xyxy": [455,650,475,675], "rgb": [222,205,151], "hex": "#DECD97"}
+      ],
+      "baseline_source": "D:/codex/output/MMD-Ikhor-Prince-Reference-v1/baseline-v6-4290-960.jpg",
+      "baseline_samples": [
+        {"area": "face_cheek", "xyxy": [791,243,803,253], "rgb": [248,234,231], "hex": "#F8EAE7"},
+        {"area": "raised_palm", "xyxy": [620,262,635,275], "rgb": [205,155,149], "hex": "#CD9B95"}
+      ],
+      "comparison_limit": "两视频不同pose／灯光／背景；本地baseline还是缩小JPEG。ROI只支持色相和明度的大方向，不是相同照明下的反射率比较，不据此规定所有帧像素值。"
+    },
+    "candidate_parameters_not_applied": {
+      "status": "具体静帧试验起点，未在Blender渲染或验证，不是作者原参数、也不是已通过预设",
+      "inspected_baseline_preset": "presets/quality/ikhor-character-v1.json",
+      "inspected_baseline_preset_sha256": "3cde8b838b8dbe5701c6bac17e1ca3f4236b24e9ebdf676557f170d61445517e",
+      "inspected_helper": "scripts/ikhor_character_materials.py",
+      "inspected_helper_sha256": "0e3fef00c1333203132496bb99b151d7ee2197ea47190b7f496d3789866c1a3d",
+      "parameter_space": "下列palette建议保持现有helper中线性RGB乘数的含义；原Color/Alpha与贴图不动。色带位置是form×实际response输入的无量纲值，不是像素亮度阈值。只在新候选副本按role覆盖，不能改全角色共用受光标定来硬追图。",
+      "palettes": {
+        "face": {"dark_current": [0.72,0.55,0.56,1], "dark_candidate": [0.82,0.70,0.77,1], "light_current": [1.025,1.01,1.0,1], "light_candidate": [1.025,1.01,1.08,1], "purpose": "亮面主要补蓝粉，R/G不整体加亮；暗面去黄褐，保鼻影与颈影"},
+        "skin": {"dark_current": [0.78,0.63,0.61,1], "dark_candidate": [0.90,0.84,0.87,1], "light_current": [1.02,1.0,0.98,1], "light_candidate": [1.02,1.01,1.06,1], "purpose": "首／手减红棕、提高G/B相对比例；须同帧查掌纹和颈下，不能抹掉手形"},
+        "hair": {"dark_current": [0.56,0.47,0.33,1], "dark_candidate": [0.70,0.63,0.49,1], "light_current": [1.04,1.02,0.95,1], "light_candidate": [1.04,1.025,0.99,1], "purpose": "减中下部深棕和过强黄感，保褐发根与窄发束线"},
+        "white_outer_cloth_only": {"dark_current": [0.48,0.54,0.69,1], "dark_candidate": [0.72,0.77,0.85,1], "light_current": [1.02,1.025,1.045,1], "light_candidate": [1.015,1.02,1.03,1], "purpose": "抬白布暗带而非再推最高白；必须以已核对的白布UV或高明度低彩区域限定，不整体套衣／衣2／衣领，排除深衬、蓝灰缝、金甲和青饰"}
+      },
+      "ramp_positions": {
+        "current_all_roles": [0.24,0.80], "interpolation": "EASE",
+        "candidate_face": [0.24,0.74], "candidate_skin": [0.18,0.68],
+        "candidate_hair": [0.18,0.70], "candidate_white_outer_cloth_only": [0.20,0.66],
+        "keep": "lighting_response low/high=0.055/0.34、form范围与face_form_floor=0.60先保留；不加最终脸亮度floor。先palette、后单测ramp位置，避免同时改太多失去归因。"
+      },
+      "rim": {
+        "power_current": 5.5, "power_candidate": 7.0,
+        "hair_strength_current": 0.80, "hair_strength_candidate": 0.38,
+        "skin_strength_current": 0.015, "skin_strength_candidate": 0.008,
+        "body_strength_current": 0.60, "white_outer_cloth_strength_candidate": 0.28,
+        "scope": "body当前为多角色类别共用分支，候选0.28只给白布／非宝石饰边，需独立role覆盖；不是把全身crystal／trim一并削弱。cyan_gems选择性Emission=2.8先保留，灯／环仍隐藏。参考RGB色散不由此rim反推，也不主动照搬。"
+      },
+      "highlights": {
+        "hair": {"exponent_current": 44, "exponent_candidate": 28, "strength_current": 0.08, "strength_candidate": 0.05, "purpose": "更宽但更弱的奶金亮带，不做大片加白；shadow_retention=0.28先保留，转头闪烁另查"},
+        "gold_partition": {"metallic_keep": 0.80, "roughness_current": 0.27, "roughness_candidate": 0.39, "physical_mix_current": 0.62, "physical_mix_candidate": 0.44, "purpose": "有限降低白色镜面压过金黄大面的概率；只是近似观感试验，参考的真实PBR粗糙度未知"},
+        "preserve_first": "face/skin/cloth原physical mix及cloth roughness/sheen先保留，不为了变亮把全部PBR删除或全材质改Emission。"
+      },
+      "texture_boundary": "本地颜材质缺作者编辑y1.png而用包内原FaceDiffuse回退，首／手也使用不同atlas肤色。本参考可能含作者编辑纹理，不能把所有色差归因于Shader；上述下游乘数只能做受控适配，不叫恢复原贴图。"
+    },
+    "proposed_validation": [
+      "固定v7的4290与4250：先skin/face配色、hair配色、外白布、rim四个独立开关，不先改舞台／曝光。脸已亮，优先拒绝夹白而非追更高像素值。",
+      "高光与ramp位置各单独对照，检查白布细纹、金甲黄面、深内衬和青宝石是否保留；原Alpha、球面、隐藏道具与双人matte不变。",
+      "静帧方向成立后，选转头／侧掌／袖口关键时段做连续检查及原五秒动作回归；四张参考不能证明作者全段或本地新版时域稳定。"
+    ],
+    "writes_in_this_followup": ["docs/research/IKHOR_PRINCE_REFERENCE_2026_11_14.json"],
+    "production_or_preset_changed": false
+  },
+  "next_local_experiment_suggestion": {
+    "status": "建议，未执行",
+    "freeze": "v7动作／全部非袖纠正／相机／字幕范围／舞台／显示变换，原MMDShaderDev Color与Alpha及贴图语义不变。",
+    "small_controls": [
+      "4290近景：skin脸手配色、hair色带、白布暗带、角色cyan rim四项分别开关，不先合并全改。",
+      "4250中景：检查双人主次、白衣与舞台分离，避免局部明亮以牺牲Aksi或舞台层次换取。",
+      "局部候选选定后再验证短动态、原五秒袖形／脸影／边缘稳定和独立重开；不能仅用参考三帧宣布风格达标。"
+    ],
+    "rejection_conditions": [
+      "脸或白衣细节夹白、五官被整体抹平、头发成为单色亮块。",
+      "金属闭包／Alpha或隐藏部件改变，青饰件全部消失。",
+      "只靠背景／曝光／Glow变动获得更亮印象，角色分层没有可归因改善。"
+    ]
+  },
+  "not_claimed": [
+    "未完整连续观看17秒原作或用户20秒文件；在线360p流未成功解码，后续已实际看用户本地720视频的四张清晰渲染抽帧和两张UI／尾标分类帧。",
+    "未凭封面下结论；旧在线时间轴／first_frame与后续本地清晰抽帧的观察范围分别留证。",
+    "未确认具体MME效果、引擎、原材质参数或可授权复用预设。",
+    "未改生产工程／材质／动作／preset／catalog，也未把参考观察当作用户已认可新版。"
+  ]
+}

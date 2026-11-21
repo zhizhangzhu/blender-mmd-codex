@@ -1,0 +1,25 @@
+{
+  "id": "hesperides-stageart-v2",
+  "reference": "https://www.bilibili.com/video/BV1PPgpzLEdb/",
+  "intent": "Rehearse light pool, cast shadows, rim halation and restrained shot transition as one stage design; not author settings.",
+  "ambient_tint": [0.12, 0.13, 0.20, 1],
+  "pools": [
+    {"center": [-7, 8, 7], "radius": 18, "tint": [0.10, 0.18, 0.32, 1]},
+    {"center": [8, 6, 3], "radius": 8, "tint": [0.75, 0.10, 0.32, 1]},
+    {"center": [0, 7, 0.5], "radius": 8, "tint": [0.70, 0.33, 0.17, 1]}
+  ],
+  "ground_materials": ["mat_10.001", "mat_20.010"],
+  "ground_polygon_selection": {"minimum_world_normal_z": 0.95, "maximum_world_center_z": 0.12, "minimum_world_center_z": -0.2},
+  "ground_color_gain": [0.78, 0.81, 0.92, 1],
+  "ground_roughness_min": 0.34,
+  "projector": {"location": [-2.8, 3, 5.5], "target": [0.2, -0.5, 0], "watts": 900, "color": [1, 0.77, 0.61], "angle_degrees": 68, "blend": 0.4, "source_radius": 0.06},
+  "sky_dark": [0.002, 0.008, 0.025, 1],
+  "sky_cloud": [0.018, 0.060, 0.16, 1],
+  "rose_area": {"location": [5, 7, 5], "target": [0, 2, 1], "watts": 430, "color": [1, 0.24, 0.43], "size": 4},
+  "rim": {"hair_gain": 0.85, "body_gain": 0.28, "narrow_power": 5, "color": [1, 0.78, 0.56, 1]},
+  "air": {"center": [0, 6, 5], "scale": [9, 4.5, 4], "density": 0.003, "color": [0.72, 0.80, 1, 1], "anisotropy": 0.30},
+  "bloom": {"stage_threshold": 1.1, "stage_strength": 0.07, "rim_threshold": 0.05, "rim_strength": 0.4, "rim_size": 0.026},
+  "optics": {"minimum_fstop": 3.2, "wide_fstop_max": 5.6, "shutter_frames": 0.28, "blur_max_pixels": 20},
+  "transition": {"enabled": true, "frames": [4260, 4262, 4265, 4272], "rim_glow_strength": [0.4, 0.9, 0.65, 0.4]},
+  "scope": "Native 4140-4439 review only. Existing camera/lens/choreography retained. NPR wall pools and added rims do not have physical occlusion; native ground and lights do."
+}

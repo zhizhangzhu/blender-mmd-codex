@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "id": "guanhaizi-neon-portrait-v1",
+  "family": "guanhaizi",
+  "aspect": "portrait",
+  "render": "../render/guanhaizi-neon-v1.json",
+  "post": "../post/guanhaizi-neon-v1.json",
+  "typography": "../../typography/portrait-study.json",
+  "camera": {"strategy": "portrait", "lens_mm": 65, "dof": true, "fstop": 3.5},
+  "layout": {"sticker_width_height": 0, "border_height": 0.0011, "border_inset_height": 0.018, "character_margin_height": 0.003125, "face_margin_height": 0.008333}
+}

@@ -1,0 +1,962 @@
+{
+  "schema_version": 1,
+  "id": "goo-duet-artdirection-candidate-v1",
+  "source": {
+    "path": "D:\\codex\\output\\Goo-Duet-ArtDirection-2026-11-20\\final-v3\\Candidate.blend",
+    "sha256": "fad1fdf5877bec468d1b8d357f9b3dcd8c81b61bda053b86eea2f06cdcd6af8b"
+  },
+  "runtime": "presets/runtime/goo-v1.json",
+  "scene": {
+    "name": "Scene",
+    "camera": "Duet | Tottoko authored camera",
+    "expected_lens_mm": 61.7346496582031,
+    "registration": "mmd_tools"
+  },
+  "actors": [
+    {
+      "id": "aksiniya",
+      "objects": [
+        "阿克西妮娅2_mesh"
+      ],
+      "armature": "阿克西妮娅2_arm",
+      "materials": {
+        "ink": [
+          "mmd_edge.disabled",
+          "mmd_edge.前装饰",
+          "mmd_edge.前鬓",
+          "mmd_edge.口",
+          "mmd_edge.后装饰",
+          "mmd_edge.呆毛",
+          "mmd_edge.头饰",
+          "mmd_edge.手",
+          "mmd_edge.披肩",
+          "mmd_edge.毛领",
+          "mmd_edge.腿",
+          "mmd_edge.舌",
+          "mmd_edge.衣",
+          "mmd_edge.裙",
+          "mmd_edge.颜",
+          "mmd_edge.首",
+          "mmd_edge.鬓",
+          "眉",
+          "睫"
+        ],
+        "other": [
+          "前装饰",
+          "前装饰+",
+          "后装饰",
+          "后装饰+",
+          "头饰",
+          "头饰+"
+        ],
+        "hair": [
+          "前鬓",
+          "前鬓+",
+          "呆毛",
+          "鬓",
+          "鬓+"
+        ],
+        "mouth": [
+          "口",
+          "舌",
+          "齿"
+        ],
+        "cloth": [
+          "帽",
+          "帽+",
+          "披肩",
+          "披肩+",
+          "腿",
+          "腿+",
+          "衣",
+          "衣+",
+          "裙",
+          "裙+"
+        ],
+        "skin": [
+          "手",
+          "首"
+        ],
+        "fur": [
+          "毛领"
+        ],
+        "eye_white": [
+          "白目"
+        ],
+        "iris": [
+          "目"
+        ],
+        "face": [
+          "颜",
+          "颜+"
+        ]
+      }
+    },
+    {
+      "id": "ikhor",
+      "objects": [
+        "Ikhor | mesh | Ikhor_mesh"
+      ],
+      "armature": "Ikhor | armature",
+      "materials": {
+        "transparent": [
+          "bq",
+          "目2"
+        ],
+        "ink": [
+          "mmd_edge.disabled",
+          "mmd_edge.带子",
+          "mmd_edge.手.001",
+          "mmd_edge.衣.001",
+          "mmd_edge.衣2",
+          "mmd_edge.衣领",
+          "mmd_edge.衣饰",
+          "mmd_edge.裙.001",
+          "mmd_edge.裤",
+          "mmd_edge.靴",
+          "mmd_edge.靴底",
+          "mmd_edge.靴饰",
+          "mmd_edge.颜.001",
+          "mmd_edge.首.001",
+          "mmd_edge.鬓.001",
+          "二重.001",
+          "眉毛",
+          "睫毛"
+        ],
+        "mouth": [
+          "口.001",
+          "舌.001",
+          "齿.002"
+        ],
+        "cloth": [
+          "带子",
+          "衣.001",
+          "衣2",
+          "衣领",
+          "裙.001",
+          "裤"
+        ],
+        "skin": [
+          "手.001",
+          "首.001"
+        ],
+        "other": [
+          "灯",
+          "环",
+          "衣饰",
+          "靴",
+          "靴底",
+          "靴饰"
+        ],
+        "iris": [
+          "目.002"
+        ],
+        "eye_white": [
+          "目白.001"
+        ],
+        "face": [
+          "颜.001"
+        ],
+        "hair": [
+          "鬓.001"
+        ]
+      }
+    },
+    {
+      "id": "hesperides_stage",
+      "objects": [
+        "mesh_100.004",
+        "mesh_101.024",
+        "mesh_101.028",
+        "mesh_102",
+        "mesh_104.008",
+        "mesh_108.008",
+        "mesh_114",
+        "mesh_116.004",
+        "mesh_123.012",
+        "mesh_127.006",
+        "mesh_128.026",
+        "mesh_131.002",
+        "mesh_131.005",
+        "mesh_135",
+        "mesh_137",
+        "mesh_138",
+        "mesh_139.001",
+        "mesh_140.006",
+        "mesh_141",
+        "mesh_141.001",
+        "mesh_141.003",
+        "mesh_142.004",
+        "mesh_143.003",
+        "mesh_143.006",
+        "mesh_143.014",
+        "mesh_144.011",
+        "mesh_144.015",
+        "mesh_144.020",
+        "mesh_146.009",
+        "mesh_153.001",
+        "mesh_183",
+        "mesh_185",
+        "mesh_186.015",
+        "mesh_187",
+        "mesh_188.018",
+        "mesh_189.016",
+        "mesh_191",
+        "mesh_192.006",
+        "mesh_192.007",
+        "mesh_192.008",
+        "mesh_192.009",
+        "mesh_192.010",
+        "mesh_192.011",
+        "mesh_192.012",
+        "mesh_192.013",
+        "mesh_192.014",
+        "mesh_192.015",
+        "mesh_192.016",
+        "mesh_192.017",
+        "mesh_192.018",
+        "mesh_192.019",
+        "mesh_192.020",
+        "mesh_192.021",
+        "mesh_192.022",
+        "mesh_192.023",
+        "mesh_192.024",
+        "mesh_192.025",
+        "mesh_192.026",
+        "mesh_192.027",
+        "mesh_192.028",
+        "mesh_192.029",
+        "mesh_192.030",
+        "mesh_192.031",
+        "mesh_192.032",
+        "mesh_192.033",
+        "mesh_192.034",
+        "mesh_192.035",
+        "mesh_192.036",
+        "mesh_192.037",
+        "mesh_192.038",
+        "mesh_192.039",
+        "mesh_192.040",
+        "mesh_192.041",
+        "mesh_192.042",
+        "mesh_192.043",
+        "mesh_192.044",
+        "mesh_192.045",
+        "mesh_192.046",
+        "mesh_192.047",
+        "mesh_192.048",
+        "mesh_192.052",
+        "mesh_195.004",
+        "mesh_198.002",
+        "mesh_200.002",
+        "mesh_205.010",
+        "mesh_220.002",
+        "mesh_229.001",
+        "mesh_234",
+        "mesh_237.003",
+        "mesh_24.002",
+        "mesh_38.002",
+        "mesh_74",
+        "mesh_81.001",
+        "mesh_81.024",
+        "mesh_83.030",
+        "mesh_84.002",
+        "mesh_98",
+        "mesh_99.023"
+      ],
+      "materials": {
+        "other": [
+          "mat_10.001",
+          "mat_12.001",
+          "mat_14.001",
+          "mat_15.001",
+          "mat_20.007",
+          "mat_20.008",
+          "mat_20.009",
+          "mat_20.010",
+          "mat_20.011",
+          "mat_20.012",
+          "mat_22.001",
+          "mat_24.001",
+          "mat_26.001",
+          "mat_28.001",
+          "mat_51.001",
+          "mat_52.001",
+          "mat_54.001",
+          "mat_55.001",
+          "mat_61.001",
+          "mat_9.001"
+        ]
+      }
+    }
+  ],
+  "switches": {
+    "rim_00": {
+      "kind": "node_input",
+      "material": "前鬓",
+      "node": "Portrait relight | rimink | left HDR gain only",
+      "socket": "Value_001",
+      "expected": 5.322534799575806
+    },
+    "rim_01": {
+      "kind": "node_input",
+      "material": "前鬓",
+      "node": "Portrait relight | rimink | right HDR gain only",
+      "socket": "Value_001",
+      "expected": 0.7833591401576997
+    },
+    "rim_02": {
+      "kind": "node_input",
+      "material": "呆毛",
+      "node": "Portrait relight | rimink | left HDR gain only",
+      "socket": "Value_001",
+      "expected": 5.322534799575806
+    },
+    "rim_03": {
+      "kind": "node_input",
+      "material": "呆毛",
+      "node": "Portrait relight | rimink | right HDR gain only",
+      "socket": "Value_001",
+      "expected": 0.7833591401576997
+    },
+    "rim_04": {
+      "kind": "node_input",
+      "material": "鬓",
+      "node": "Portrait relight | rimink | left HDR gain only",
+      "socket": "Value_001",
+      "expected": 5.322534799575806
+    },
+    "rim_05": {
+      "kind": "node_input",
+      "material": "鬓",
+      "node": "Portrait relight | rimink | right HDR gain only",
+      "socket": "Value_001",
+      "expected": 0.7833591401576997
+    },
+    "rim_06": {
+      "kind": "node_input",
+      "material": "帽",
+      "node": "Portrait relight | rimink | left HDR gain only",
+      "socket": "Value_001",
+      "expected": 4.181992292404175
+    },
+    "rim_07": {
+      "kind": "node_input",
+      "material": "帽",
+      "node": "Portrait relight | rimink | right HDR gain only",
+      "socket": "Value_001",
+      "expected": 0.5839325666427613
+    },
+    "rim_08": {
+      "kind": "node_input",
+      "material": "披肩",
+      "node": "Portrait relight | rimink | left HDR gain only",
+      "socket": "Value_001",
+      "expected": 4.181992292404175
+    },
+    "rim_09": {
+      "kind": "node_input",
+      "material": "披肩",
+      "node": "Portrait relight | rimink | right HDR gain only",
+      "socket": "Value_001",
+      "expected": 0.5839325666427613
+    },
+    "rim_10": {
+      "kind": "node_input",
+      "material": "腿",
+      "node": "Portrait relight | rimink | left HDR gain only",
+      "socket": "Value_001",
+      "expected": 4.181992292404175
+    },
+    "rim_11": {
+      "kind": "node_input",
+      "material": "腿",
+      "node": "Portrait relight | rimink | right HDR gain only",
+      "socket": "Value_001",
+      "expected": 0.5839325666427613
+    },
+    "rim_12": {
+      "kind": "node_input",
+      "material": "衣",
+      "node": "Portrait relight | rimink | left HDR gain only",
+      "socket": "Value_001",
+      "expected": 4.181992292404175
+    },
+    "rim_13": {
+      "kind": "node_input",
+      "material": "衣",
+      "node": "Portrait relight | rimink | right HDR gain only",
+      "socket": "Value_001",
+      "expected": 0.5839325666427613
+    },
+    "rim_14": {
+      "kind": "node_input",
+      "material": "裙",
+      "node": "Portrait relight | rimink | left HDR gain only",
+      "socket": "Value_001",
+      "expected": 4.181992292404175
+    },
+    "rim_15": {
+      "kind": "node_input",
+      "material": "裙",
+      "node": "Portrait relight | rimink | right HDR gain only",
+      "socket": "Value_001",
+      "expected": 0.5839325666427613
+    },
+    "rim_16": {
+      "kind": "node_input",
+      "material": "毛领",
+      "node": "Portrait relight | rimink | left HDR gain only",
+      "socket": "Value_001",
+      "expected": 2.0276323556900024
+    },
+    "rim_17": {
+      "kind": "node_input",
+      "material": "毛领",
+      "node": "Portrait relight | rimink | right HDR gain only",
+      "socket": "Value_001",
+      "expected": 0.26781511306762695
+    },
+    "rim_18": {
+      "kind": "node_input",
+      "material": "鬓.001",
+      "node": "Portrait relight | rimink | left HDR gain only",
+      "socket": "Value_001",
+      "expected": 5.322534799575806
+    },
+    "rim_19": {
+      "kind": "node_input",
+      "material": "鬓.001",
+      "node": "Portrait relight | rimink | right HDR gain only",
+      "socket": "Value_001",
+      "expected": 0.7833591401576997
+    },
+    "rim_20": {
+      "kind": "node_input",
+      "material": "带子",
+      "node": "Portrait relight | rimink | left HDR gain only",
+      "socket": "Value_001",
+      "expected": 1.6474512219429016
+    },
+    "rim_21": {
+      "kind": "node_input",
+      "material": "带子",
+      "node": "Portrait relight | rimink | right HDR gain only",
+      "socket": "Value_001",
+      "expected": 0.2300340384244919
+    },
+    "rim_22": {
+      "kind": "node_input",
+      "material": "衣.001",
+      "node": "Portrait relight | rimink | left HDR gain only",
+      "socket": "Value_001",
+      "expected": 3.801810622215271
+    },
+    "rim_23": {
+      "kind": "node_input",
+      "material": "衣.001",
+      "node": "Portrait relight | rimink | right HDR gain only",
+      "socket": "Value_001",
+      "expected": 0.5308478087186814
+    },
+    "rim_24": {
+      "kind": "node_input",
+      "material": "衣2",
+      "node": "Portrait relight | rimink | left HDR gain only",
+      "socket": "Value_001",
+      "expected": 3.801810622215271
+    },
+    "rim_25": {
+      "kind": "node_input",
+      "material": "衣2",
+      "node": "Portrait relight | rimink | right HDR gain only",
+      "socket": "Value_001",
+      "expected": 0.5308478087186814
+    },
+    "rim_26": {
+      "kind": "node_input",
+      "material": "衣领",
+      "node": "Portrait relight | rimink | left HDR gain only",
+      "socket": "Value_001",
+      "expected": 2.661267399787903
+    },
+    "rim_27": {
+      "kind": "node_input",
+      "material": "衣领",
+      "node": "Portrait relight | rimink | right HDR gain only",
+      "socket": "Value_001",
+      "expected": 0.37159350216388704
+    },
+    "rim_28": {
+      "kind": "node_input",
+      "material": "裙.001",
+      "node": "Portrait relight | rimink | left HDR gain only",
+      "socket": "Value_001",
+      "expected": 2.407813310623169
+    },
+    "rim_29": {
+      "kind": "node_input",
+      "material": "裙.001",
+      "node": "Portrait relight | rimink | right HDR gain only",
+      "socket": "Value_001",
+      "expected": 0.3362036198377609
+    },
+    "stage_032": {
+      "kind": "node_input",
+      "material": "mat_10.001",
+      "node": "Portrait day stage | bounded daylight response",
+      "socket": "To Min",
+      "socket_match": "identifier",
+      "expected": 0.3
+    },
+    "stage_033": {
+      "kind": "node_input",
+      "material": "mat_10.001",
+      "node": "Portrait day stage | bounded daylight response",
+      "socket": "To Max",
+      "socket_match": "identifier",
+      "expected": 0.9
+    },
+    "stage_034": {
+      "kind": "node_input",
+      "material": "mat_10.001",
+      "node": "Portrait day stage | relative authored MatCap gain",
+      "socket": "Value_001",
+      "socket_match": "identifier",
+      "expected": 0.2
+    },
+    "stage_035": {
+      "kind": "node_input",
+      "material": "mat_12.001",
+      "node": "Portrait day stage | bounded daylight response",
+      "socket": "To Min",
+      "socket_match": "identifier",
+      "expected": 0.3
+    },
+    "stage_036": {
+      "kind": "node_input",
+      "material": "mat_12.001",
+      "node": "Portrait day stage | bounded daylight response",
+      "socket": "To Max",
+      "socket_match": "identifier",
+      "expected": 0.9
+    },
+    "stage_037": {
+      "kind": "node_input",
+      "material": "mat_14.001",
+      "node": "Portrait day stage | bounded daylight response",
+      "socket": "To Min",
+      "socket_match": "identifier",
+      "expected": 0.3
+    },
+    "stage_038": {
+      "kind": "node_input",
+      "material": "mat_14.001",
+      "node": "Portrait day stage | bounded daylight response",
+      "socket": "To Max",
+      "socket_match": "identifier",
+      "expected": 0.9
+    },
+    "stage_039": {
+      "kind": "node_input",
+      "material": "mat_15.001",
+      "node": "Portrait day stage | bounded daylight response",
+      "socket": "To Min",
+      "socket_match": "identifier",
+      "expected": 0.3
+    },
+    "stage_040": {
+      "kind": "node_input",
+      "material": "mat_15.001",
+      "node": "Portrait day stage | bounded daylight response",
+      "socket": "To Max",
+      "socket_match": "identifier",
+      "expected": 0.9
+    },
+    "stage_041": {
+      "kind": "node_input",
+      "material": "mat_20.007",
+      "node": "Portrait day stage | bounded daylight response",
+      "socket": "To Min",
+      "socket_match": "identifier",
+      "expected": 0.3
+    },
+    "stage_042": {
+      "kind": "node_input",
+      "material": "mat_20.007",
+      "node": "Portrait day stage | bounded daylight response",
+      "socket": "To Max",
+      "socket_match": "identifier",
+      "expected": 0.9
+    },
+    "stage_043": {
+      "kind": "node_input",
+      "material": "mat_20.007",
+      "node": "Portrait day stage | relative authored MatCap gain",
+      "socket": "Value_001",
+      "socket_match": "identifier",
+      "expected": 0.2
+    },
+    "stage_044": {
+      "kind": "node_input",
+      "material": "mat_20.008",
+      "node": "Portrait day stage | bounded daylight response",
+      "socket": "To Min",
+      "socket_match": "identifier",
+      "expected": 0.3
+    },
+    "stage_045": {
+      "kind": "node_input",
+      "material": "mat_20.008",
+      "node": "Portrait day stage | bounded daylight response",
+      "socket": "To Max",
+      "socket_match": "identifier",
+      "expected": 0.9
+    },
+    "stage_046": {
+      "kind": "node_input",
+      "material": "mat_20.008",
+      "node": "Portrait day stage | relative authored MatCap gain",
+      "socket": "Value_001",
+      "socket_match": "identifier",
+      "expected": 0.2
+    },
+    "stage_047": {
+      "kind": "node_input",
+      "material": "mat_20.009",
+      "node": "Portrait day stage | bounded daylight response",
+      "socket": "To Min",
+      "socket_match": "identifier",
+      "expected": 0.3
+    },
+    "stage_048": {
+      "kind": "node_input",
+      "material": "mat_20.009",
+      "node": "Portrait day stage | bounded daylight response",
+      "socket": "To Max",
+      "socket_match": "identifier",
+      "expected": 0.9
+    },
+    "stage_049": {
+      "kind": "node_input",
+      "material": "mat_20.009",
+      "node": "Portrait day stage | relative authored MatCap gain",
+      "socket": "Value_001",
+      "socket_match": "identifier",
+      "expected": 0.2
+    },
+    "stage_050": {
+      "kind": "node_input",
+      "material": "mat_20.010",
+      "node": "Portrait day stage | bounded daylight response",
+      "socket": "To Min",
+      "socket_match": "identifier",
+      "expected": 0.3
+    },
+    "stage_051": {
+      "kind": "node_input",
+      "material": "mat_20.010",
+      "node": "Portrait day stage | bounded daylight response",
+      "socket": "To Max",
+      "socket_match": "identifier",
+      "expected": 0.9
+    },
+    "stage_052": {
+      "kind": "node_input",
+      "material": "mat_20.010",
+      "node": "Portrait day stage | relative authored MatCap gain",
+      "socket": "Value_001",
+      "socket_match": "identifier",
+      "expected": 0.2
+    },
+    "stage_053": {
+      "kind": "node_input",
+      "material": "mat_20.011",
+      "node": "Portrait day stage | bounded daylight response",
+      "socket": "To Min",
+      "socket_match": "identifier",
+      "expected": 0.3
+    },
+    "stage_054": {
+      "kind": "node_input",
+      "material": "mat_20.011",
+      "node": "Portrait day stage | bounded daylight response",
+      "socket": "To Max",
+      "socket_match": "identifier",
+      "expected": 0.9
+    },
+    "stage_055": {
+      "kind": "node_input",
+      "material": "mat_20.011",
+      "node": "Portrait day stage | relative authored MatCap gain",
+      "socket": "Value_001",
+      "socket_match": "identifier",
+      "expected": 0.2
+    },
+    "stage_056": {
+      "kind": "node_input",
+      "material": "mat_20.012",
+      "node": "Portrait day stage | bounded daylight response",
+      "socket": "To Min",
+      "socket_match": "identifier",
+      "expected": 0.3
+    },
+    "stage_057": {
+      "kind": "node_input",
+      "material": "mat_20.012",
+      "node": "Portrait day stage | bounded daylight response",
+      "socket": "To Max",
+      "socket_match": "identifier",
+      "expected": 0.9
+    },
+    "stage_058": {
+      "kind": "node_input",
+      "material": "mat_20.012",
+      "node": "Portrait day stage | relative authored MatCap gain",
+      "socket": "Value_001",
+      "socket_match": "identifier",
+      "expected": 0.2
+    },
+    "stage_059": {
+      "kind": "node_input",
+      "material": "mat_22.001",
+      "node": "Portrait day stage | bounded daylight response",
+      "socket": "To Min",
+      "socket_match": "identifier",
+      "expected": 0.3
+    },
+    "stage_060": {
+      "kind": "node_input",
+      "material": "mat_22.001",
+      "node": "Portrait day stage | bounded daylight response",
+      "socket": "To Max",
+      "socket_match": "identifier",
+      "expected": 0.9
+    },
+    "stage_061": {
+      "kind": "node_input",
+      "material": "mat_22.001",
+      "node": "Portrait day stage | relative authored MatCap gain",
+      "socket": "Value_001",
+      "socket_match": "identifier",
+      "expected": 0.2
+    },
+    "stage_062": {
+      "kind": "node_input",
+      "material": "mat_24.001",
+      "node": "Portrait day stage | bounded daylight response",
+      "socket": "To Min",
+      "socket_match": "identifier",
+      "expected": 0.3
+    },
+    "stage_063": {
+      "kind": "node_input",
+      "material": "mat_24.001",
+      "node": "Portrait day stage | bounded daylight response",
+      "socket": "To Max",
+      "socket_match": "identifier",
+      "expected": 0.9
+    },
+    "stage_064": {
+      "kind": "node_input",
+      "material": "mat_24.001",
+      "node": "Portrait day stage | relative authored MatCap gain",
+      "socket": "Value_001",
+      "socket_match": "identifier",
+      "expected": 0.2
+    },
+    "stage_065": {
+      "kind": "node_input",
+      "material": "mat_26.001",
+      "node": "Portrait day stage | bounded daylight response",
+      "socket": "To Min",
+      "socket_match": "identifier",
+      "expected": 0.3
+    },
+    "stage_066": {
+      "kind": "node_input",
+      "material": "mat_26.001",
+      "node": "Portrait day stage | bounded daylight response",
+      "socket": "To Max",
+      "socket_match": "identifier",
+      "expected": 0.9
+    },
+    "stage_067": {
+      "kind": "node_input",
+      "material": "mat_26.001",
+      "node": "Portrait day stage | relative authored MatCap gain",
+      "socket": "Value_001",
+      "socket_match": "identifier",
+      "expected": 0.2
+    },
+    "stage_068": {
+      "kind": "node_input",
+      "material": "mat_28.001",
+      "node": "Portrait day stage | bounded daylight response",
+      "socket": "To Min",
+      "socket_match": "identifier",
+      "expected": 0.3
+    },
+    "stage_069": {
+      "kind": "node_input",
+      "material": "mat_28.001",
+      "node": "Portrait day stage | bounded daylight response",
+      "socket": "To Max",
+      "socket_match": "identifier",
+      "expected": 0.9
+    },
+    "stage_070": {
+      "kind": "node_input",
+      "material": "mat_28.001",
+      "node": "Portrait day stage | relative authored MatCap gain",
+      "socket": "Value_001",
+      "socket_match": "identifier",
+      "expected": 0.2
+    },
+    "stage_071": {
+      "kind": "node_input",
+      "material": "mat_51.001",
+      "node": "Portrait day stage | bounded daylight response",
+      "socket": "To Min",
+      "socket_match": "identifier",
+      "expected": 0.3
+    },
+    "stage_072": {
+      "kind": "node_input",
+      "material": "mat_51.001",
+      "node": "Portrait day stage | bounded daylight response",
+      "socket": "To Max",
+      "socket_match": "identifier",
+      "expected": 0.9
+    },
+    "stage_073": {
+      "kind": "node_input",
+      "material": "mat_51.001",
+      "node": "Portrait day stage | relative authored MatCap gain",
+      "socket": "Value_001",
+      "socket_match": "identifier",
+      "expected": 0.2
+    },
+    "stage_074": {
+      "kind": "node_input",
+      "material": "mat_52.001",
+      "node": "Portrait day stage | bounded daylight response",
+      "socket": "To Min",
+      "socket_match": "identifier",
+      "expected": 0.3
+    },
+    "stage_075": {
+      "kind": "node_input",
+      "material": "mat_52.001",
+      "node": "Portrait day stage | bounded daylight response",
+      "socket": "To Max",
+      "socket_match": "identifier",
+      "expected": 0.9
+    },
+    "stage_076": {
+      "kind": "node_input",
+      "material": "mat_52.001",
+      "node": "Portrait day stage | relative authored MatCap gain",
+      "socket": "Value_001",
+      "socket_match": "identifier",
+      "expected": 0.2
+    },
+    "stage_077": {
+      "kind": "node_input",
+      "material": "mat_54.001",
+      "node": "Portrait day stage | bounded daylight response",
+      "socket": "To Min",
+      "socket_match": "identifier",
+      "expected": 0.3
+    },
+    "stage_078": {
+      "kind": "node_input",
+      "material": "mat_54.001",
+      "node": "Portrait day stage | bounded daylight response",
+      "socket": "To Max",
+      "socket_match": "identifier",
+      "expected": 0.9
+    },
+    "stage_079": {
+      "kind": "node_input",
+      "material": "mat_55.001",
+      "node": "Portrait day stage | bounded daylight response",
+      "socket": "To Min",
+      "socket_match": "identifier",
+      "expected": 0.3
+    },
+    "stage_080": {
+      "kind": "node_input",
+      "material": "mat_55.001",
+      "node": "Portrait day stage | bounded daylight response",
+      "socket": "To Max",
+      "socket_match": "identifier",
+      "expected": 0.9
+    },
+    "stage_081": {
+      "kind": "node_input",
+      "material": "mat_61.001",
+      "node": "Portrait day stage | bounded daylight response",
+      "socket": "To Min",
+      "socket_match": "identifier",
+      "expected": 0.3
+    },
+    "stage_082": {
+      "kind": "node_input",
+      "material": "mat_61.001",
+      "node": "Portrait day stage | bounded daylight response",
+      "socket": "To Max",
+      "socket_match": "identifier",
+      "expected": 0.9
+    },
+    "stage_083": {
+      "kind": "node_input",
+      "material": "mat_9.001",
+      "node": "Portrait day stage | bounded daylight response",
+      "socket": "To Min",
+      "socket_match": "identifier",
+      "expected": 0.3
+    },
+    "stage_084": {
+      "kind": "node_input",
+      "material": "mat_9.001",
+      "node": "Portrait day stage | bounded daylight response",
+      "socket": "To Max",
+      "socket_match": "identifier",
+      "expected": 0.9
+    },
+    "stage_085": {
+      "kind": "node_input",
+      "material": "mat_9.001",
+      "node": "Portrait day stage | relative authored MatCap gain",
+      "socket": "Value_001",
+      "socket_match": "identifier",
+      "expected": 0.2
+    }
+  },
+  "cases": [
+    {
+      "id": "baseline",
+      "frame": 4290,
+      "overrides": []
+    }
+  ],
+  "render": {
+    "width": 1280,
+    "height": 720,
+    "samples": 32,
+    "dof": "source",
+    "motion_blur": false
+  },
+  "limits": [
+    "Exact saved strong_stage candidate snapshot; only4290/sourceDOF; user art approval pending",
+    "Expected values are post-selection; original-source design recipe is separately retained; do not apply old controls blindly",
+    "Already-disabled Glow branches have no enable/disable switch here; no automatic reinstall, physics, video or eye transparency"
+  ],
+  "selection_origin": {
+    "iteration": "goo-duet-stage-response-02",
+    "case": "strong_stage",
+    "report": "D:\\codex\\output\\Goo-Duet-ArtDirection-2026-11-20\\final-v3\\publish-report.json",
+    "sha256": "2e964b18943e25d09277e1cb73dfcf6df30ee7a418dc523f869e8b182e451512"
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "id": "duet-captions-focused-v1",
+  "status": "verified-five-second-study",
+  "user_art_approval": false,
+  "project": "D:\\codex\\output\\MMD-Duet-Captions-Contrast-v1\\production-v3\\Franken_Duet_Focused_Caption_Source.blend",
+  "source": "D:\\codex\\output\\MMD-Fox-StageArt-v2\\production-v5\\Franken_Duet_StageArt_v2.blend",
+  "stage_profile": "presets/stages/hesperides-focused-light-v3.json",
+  "caption_profile": "presets/typography/duet-official-locked-v2.json",
+  "caption_cache": "D:\\codex\\temp\\Duet-Captions-Contrast-v1\\final-cache-v1",
+  "video": "D:\\codex\\output\\MMD-Duet-Captions-Contrast-v1\\captions-5s-v2\\Franken_Duet_5s_Captions_REVIEW.mp4",
+  "without_captions_video": "D:\\codex\\output\\MMD-Duet-Captions-Contrast-v1\\lighting-sample-5s-v1\\Aether_Duet_5s_REVIEW.mp4",
+  "frames": [
+    4140,
+    4439
+  ],
+  "fps": 60,
+  "resolution": [
+    1920,
+    1080
+  ],
+  "bgm": "User-selected vocal FLAC from presets/projects/franken-duet-full-v1.json",
+  "audio_start_seconds": 68.98333333333333,
+  "typography_source_start_frame": 4141,
+  "typography_audio_offset_bgm_minus_source_seconds": -0.03,
+  "caption_method": "Official animation with fixed whole-group order; no front facial holdout",
+  "limits": [
+    "Black-backed MP4 is not original RGBA; black artwork outside a white plate cannot be reconstructed",
+    "Native continuous mask insertion over beauty is an edge-protection approximation, not exact independent actor/background RGBA reconstruction",
+    "No per-word timing claim; source offset measured from audio envelopes",
+    "Five seconds only; full-song groups and portrait layout not adapted",
+    "Native .blend contains lighting and mask source; final captions are composited by Python"
+  ]
+}

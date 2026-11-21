@@ -1,0 +1,8 @@
+{
+  "schema_version": 1,
+  "status": "experimental; not a replacement of validated style presets",
+  "face_normals": {"mix": 0.5, "ellipsoid_radius": [0.14, 0.14, 0.20], "center_behind_face": 0.03},
+  "ao": {"distance": 0.035, "samples": 16, "strength": {"hair": 0.22, "cloth": 0.16, "fur": 0.08, "trim": 0.10}},
+  "trim_bsdf": {"mix": 0.35, "metallic": 0.75, "roughness": 0.28, "coat": 0.12},
+  "fog": {"density": 0.025, "anisotropy": 0.25, "color": [0.72, 0.78, 1.0], "spot_energy": 350, "spot_size": 0.52}
+}

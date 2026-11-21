@@ -1,0 +1,67 @@
+{
+  "id": "duet-grounded-color-v1",
+  "status": "verified-five-second-study",
+  "project": "D:\\codex\\output\\MMD-Duet-Shadow-Color-v1\\production-v3\\Franken_Duet_Grounded_Wedding.blend",
+  "source": "D:\\codex\\output\\MMD-Duet-Blue-Gold-Wedding-v1\\production-v4\\Franken_Duet_Blue_Gold_Wedding.blend",
+  "shadow_profile": "presets/stages/hesperides-grounded-shadows-v1.json",
+  "graphic_profile": "presets/quality/duet-graphic-self-shadow-v1.json",
+  "caption_profile": "presets/typography/duet-blue-gold-wedding-v1.json",
+  "inherited_lighting": [
+    "presets/stages/hesperides-soft-top-rim-v1.json",
+    "presets/stages/hesperides-blue-gold-wedding-v1.json"
+  ],
+  "output_color_contract": {
+    "input": "Full-range display sRGB RGB24",
+    "matrix": "bt709",
+    "primaries": "bt709",
+    "transfer": "iec61966-2-1",
+    "range": "tv",
+    "hdr": false,
+    "meaning": "SDR PC-review output, preserving source sRGB transfer; not a Rec.709/BT.1886 grading master"
+  },
+  "cache": "D:\\codex\\temp\\Duet-Shadow-Color-v1\\final-cache-v2",
+  "video": "D:\\codex\\output\\MMD-Duet-Shadow-Color-v1\\captions-5s-v2\\Franken_Duet_5s_Grounded_Wedding_REVIEW.mp4",
+  "without_captions_video": "D:\\codex\\output\\MMD-Duet-Shadow-Color-v1\\captions-5s-v2\\Franken_Duet_5s_Grounded_NoCaptions.mp4",
+  "frames": [
+    4140,
+    4439
+  ],
+  "fps": 60,
+  "resolution": [
+    1920,
+    1080
+  ],
+  "audio_project": "presets/projects/franken-duet-full-v1.json",
+  "audio_start_seconds": 68.98333333333333,
+  "controls": [
+    {
+      "effect": "cast",
+      "mean_absolute_rgb_difference_255": 0.41645801067352295,
+      "max_difference": 151.0,
+      "fraction_pixels_over_one": 0.029722704475308642
+    },
+    {
+      "effect": "contact",
+      "mean_absolute_rgb_difference_255": 0.13576260209083557,
+      "max_difference": 36.0,
+      "fraction_pixels_over_one": 0.025789930555555556
+    },
+    {
+      "effect": "self-shadow",
+      "mean_absolute_rgb_difference_255": 2.152031660079956,
+      "max_difference": 150.0
+    },
+    {
+      "effect": "ink",
+      "mean_absolute_rgb_difference_255": 0.2375403493642807,
+      "max_difference": 135.0
+    }
+  ],
+  "user_art_approval": false,
+  "limits": [
+    "仅五秒横屏样片，尚非全曲，待猪猪美术评价",
+    "美术化灯光链接、近地AO，脸部SDF与真实遮挡组合",
+    "SDR电脑sRGB审片约定，非BT.1886调色监看母版",
+    "未确认PotPlayer具体设置及其与其他播放器的一致性"
+  ]
+}

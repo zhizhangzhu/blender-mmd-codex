@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "guanhaizi-neon-post-v1",
+  "grade": {"rgb_gain": [1.05, 0.92, 1.10], "saturation": 1.08, "mix": 0.40},
+  "background": {"mode": "neon", "colors": [[0.42, 0.08, 0.34], [0.08, 0.025, 0.14]], "mix": 0.58, "particles": 36, "accent": [0.94, 0.42, 0.69]},
+  "sticker_rgb": [1, 1, 1],
+  "border_rgb": [0.91, 0.68, 0.85],
+  "vignette": 0.28,
+  "typography": {"tint_srgb": [1, 0.79, 0.95], "opacity": 0.93, "stroke_rgb": [0.18, 0.07, 0.26], "glow_rgb": [0.99, 0.28, 0.7], "glow_strength": 0.16}
+}

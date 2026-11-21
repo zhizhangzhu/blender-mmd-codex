@@ -1,0 +1,18 @@
+{
+  "name": "Eight-second surface refinement portrait study",
+  "aspect": [9, 16],
+  "source_start_seconds": 17.9833333333,
+  "timing_note": "Official asset alignment; audio beat sync remains manual.",
+  "tint_srgb": [0.98, 0.91, 1.0],
+  "opacity": 0.90,
+  "character_margin_pixels": 4,
+  "face_margin_pixels": 11,
+  "cues": [
+    {"start": 0, "end": 0.65, "order": "front", "protect": "face"},
+    {"start": 0.65, "end": 2.75, "order": "behind", "protect": "character"},
+    {"start": 2.75, "end": 3.40, "order": "front", "protect": "face"},
+    {"start": 3.40, "end": 5.20, "order": "behind", "protect": "character"},
+    {"start": 5.20, "end": 6.50, "order": "front", "protect": "face"},
+    {"start": 6.50, "end": 8, "order": "behind", "protect": "character"}
+  ]
+}

@@ -1,0 +1,90 @@
+{
+  "date": "2026-11-13",
+  "status": "external-primary-text-read; transfer-methods-unimplemented",
+  "purpose": "给现有三渲二的金属和布料闭包补充诊断方法，不替换主要NPR色带，也不改成写实渲染。",
+  "deduplication": {
+    "searched": "rg -n -i filament|sheen|金属|exposure docs/research",
+    "prior_read": "docs/research/MATERIAL_RESPONSE_STUDY.json",
+    "new_scope": "既有记录没有Filament来源；本次不重报金属数值、Sheen权重开关、MMD Color非纯albedo或球面输入对照。"
+  },
+  "sources": [
+    {
+      "id": "filament-theory",
+      "title": "Physically Based Rendering in Filament",
+      "authors": ["Romain Guy", "Mathias Agopian"],
+      "publisher": "Google Filament project",
+      "url": "https://google.github.io/filament/main/filament.html",
+      "version": "2026-11-13读取的/main活文档；未固定提交或发行版。",
+      "read_body_sections": [
+        "4.8.3 Remapping: Base color、Roughness",
+        "5.3 Image based lights / IBL Types / IBL Unit",
+        "5.3.4 Specular BRDF integration开头关于粗糙度与反射模糊",
+        "8.5.1 Scene referred visualization / Luminance stops"
+      ],
+      "access": "web打开官方HTML正文成功；旧Filament.html仅返回重定向。",
+      "not_read": "未通读整篇；未看插图、视频、完整IBL推导或运行Filament。"
+    },
+    {
+      "id": "filament-materials",
+      "title": "Filament Materials Guide",
+      "authors": ["Romain Guy", "Mathias Agopian"],
+      "publisher": "Google Filament project",
+      "url": "https://google.github.io/filament/main/materials.html",
+      "version": "2026-11-13读取的/main活文档；未固定提交或发行版。",
+      "read_body_sections": [
+        "3.2.14 Sheen color",
+        "3.2.15 Sheen roughness",
+        "3.4 Cloth model / Sheen color / Subsurface color",
+        "6.1 Linear colors"
+      ],
+      "access": "web打开官方HTML正文成功；旧Materials.html仅返回重定向。",
+      "not_read": "未通读整篇、观察插图或编译材质。"
+    }
+  ],
+  "methods": [
+    {
+      "id": "metal-reflection-field-before-material-edit",
+      "source": "filament-theory: 5.3及4.8.3",
+      "input": "同一金属区域、固定材质/姿态/相机/曝光；能确认进入镜面路径的中性宽光源。",
+      "operation": "先只移光或旋转环境，检查亮斑是否随反射方向移动；确认覆盖后，再单独改粗糙度看亮斑宽度。不要同时改底色和灯强。",
+      "principle": "镜面结果同时取决于入射光场与BRDF；粗糙度会模糊环境反射。HDRI像素亮度并非已标定绝对光强。",
+      "current_mapping": "阿克西妮娅Surface | masked gold response、空的gold, not cloth or skin及其金属遮罩可作独立观察区。它们的源码位置已读，保存工程未打开。",
+      "interpretation": "亮斑随光场移动但大部分面仍暗时，先检查反射覆盖；不能仅凭黑金属就降低Metallic或提亮全角色。",
+      "transfer_limit": "EEVEE的探针、光线追踪和light linking与Filament不同，先确认源确实进入镜面路径；不直接复制IBL强度、粗糙度重映射或数值下限。",
+      "tested": false
+    },
+    {
+      "id": "cloth-sheen-color-and-width-separate",
+      "source": "filament-materials: 3.2.14–15、3.4",
+      "input": "非金属衣料局部；固定底色、普通粗糙度、Sheen权重、混合比例和灯光。",
+      "operation": "先对比中性与带色纤维光泽，选择保留布料固有色的一种；随后只调整Sheen Roughness比较斜视角的软边宽度。皮革、缎面与毛领单独判断。",
+      "principle": "Lit模型的Sheen Roughness只管纤维光泽层；棉布可将色彩留在底色，绒面则可由暗底色与带色光泽形成双色。皮革、丝绸、缎面不必使用同一种cloth模型。",
+      "current_mapping": "scripts/aether_look_revision.py已有衣料Principled；scripts/prepare_character_layers.py调节其toon/physical混合。新增问题是光泽色与宽度职责，区别于既有Sheen Weight消融。",
+      "transfer_limit": "Filament独立Cloth模型与其Lit附加Sheen层也有区别；Blender Principled不是同一BRDF，不能直接照抄sqrt(baseColor)或把全身白衣改成绒布。当前保存图的Sheen Tint/Roughness连接尚未核实。",
+      "tested": false
+    },
+    {
+      "id": "exposed-linear-luminance-stops",
+      "source": "filament-theory: 8.5.1；filament-materials: 6.1",
+      "input": "显示变换/Glow前、已明确曝光处理与工作色域的线性RGB副本；不要使用MP4或sRGB截图。",
+      "operation": "按工作色域求亮度Y，制作log2(max(Y,epsilon)/0.18)的stop图；并排检查白衣、金属高光和礼堂亮源，再只改变一个闭包或光强。",
+      "principle": "色调映射和量化可能掩盖不协调的HDR亮度；stop图显示亮度相差几档，不只看屏幕是否发白。",
+      "current_mapping": "当前人物同时有NPR Emission输出和物理闭包，可比较各分支与最终合成，定位白衣过亮来自哪一层；既有最终视频不能恢复此诊断输入。",
+      "transfer_limit": "0.18是曝光归一化后的参考，不能据此认定18%材质必读0.18；先核实Blender曝光施加位置，避免重复曝光。混合NPR图仅用于相对诊断，不视作物理能量认证或推翻美术亮度设计。",
+      "tested": false
+    }
+  ],
+  "local_source_inspection": [
+    "scripts/mmd_surface_refine.py:160–196",
+    "scripts/aether_look_revision.py:72–77、136–146、231–254",
+    "scripts/prepare_character_layers.py:330–349",
+    "docs/CHARACTER_LAYER_REFINEMENT.md"
+  ],
+  "execution_boundary": {
+    "production_blend_opened_or_changed": false,
+    "render_or_comparison_generated": false,
+    "catalog_or_queue_changed": false,
+    "engine_or_plugin_installed": false,
+    "knowledge_promotion": "仅阅读及未测试移植方法；Filament是独立渲染引擎文档，不是Blender插件或本机验证结果。"
+  }
+}

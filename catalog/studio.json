@@ -1,0 +1,643 @@
+{
+  "schema_version": 1,
+  "purpose": "经验索引与学习路线；不替代原始阅读、实际制作或美术认可",
+  "capabilities": [
+    {
+      "id": "reference-visual-relations",
+      "title": "从参考提取明暗、材质与焦点关系",
+      "route": "reference",
+      "tags": [
+        "参考",
+        "风格",
+        "明亮",
+        "白衣",
+        "发束",
+        "构图",
+        "reference",
+        "style"
+      ],
+      "problem": "看图描述尚未变成可执行目标；不同参考职责混淆",
+      "when_to_use": "有明确参考图或片段，需要建立视觉目标",
+      "avoid_when": [
+        "仅凭成图猜唯一shader或灯数",
+        "抽帧后声称已完整看过视频"
+      ],
+      "method": [
+        "标明借鉴维度和保留项",
+        "分开观察、实现假设和可检验目标",
+        "用自有素材小样重建，再换素材验证"
+      ],
+      "entrypoints": [
+        "scripts/reference_study.py"
+      ],
+      "knowledge": [
+        "docs/REFERENCE_AND_LIGHTING_PLAYBOOK.md",
+        "docs/DESIGN_FOUNDATIONS_AND_REVIEW.md"
+      ],
+      "evidence": [
+        {
+          "dimension": "reading",
+          "result": "passed",
+          "scope": "既有参考原帧与原创观察已核；尚未证明跨项目风格重建",
+          "provenance": "docs/REFERENCE_AND_LIGHTING_PLAYBOOK.md",
+          "artifacts": [
+            {
+              "path": "D:/codex/workspace/blender-mmd-codex/docs/REFERENCE_AND_LIGHTING_PLAYBOOK.md",
+              "sha256": "d62920d03667019e5a57537d5800248e77736eba2104edcd117a916cfd1f3a5f"
+            },
+            {
+              "path": "D:/codex/output/MMD-Knowledge-Review-v1/private-reference-study/gosari-310.jpg",
+              "sha256": "9228f06fc7238adb6b46ce5d0809e58070c20344c482d4727e2df92ac4de3430"
+            }
+          ]
+        },
+        {
+          "dimension": "transfer",
+          "result": "untested",
+          "scope": "待在新角色和新场景进行受控迁移",
+          "provenance": "docs/REFERENCE_AND_LIGHTING_PLAYBOOK.md",
+          "artifacts": []
+        }
+      ],
+      "art_status": "pending",
+      "user_feedback_provenance": null,
+      "transfer_level": "single_case",
+      "next_exercise": "同一主参考先做构图/明暗重建，再换角色；比较三处最大偏差"
+    },
+    {
+      "id": "bounded-face-shadow",
+      "title": "双角色SDF与几何发影分工",
+      "route": "render",
+      "tags": [
+        "脸影",
+        "SDF",
+        "刘海",
+        "鼻影",
+        "face",
+        "shadow"
+      ],
+      "problem": "形体影与真实遮挡重复相乘，或角色图不匹配",
+      "when_to_use": "具有本角色UV与已核头轴的静帧脸部适配",
+      "avoid_when": [
+        "把4290遮罩用于新姿态或移灯",
+        "交换两角色SDF图",
+        "把源Goo节点直接当原生5.3兼容"
+      ],
+      "method": [
+        "读取角色自身数据和真实主光",
+        "分别检查形体与几何遮挡",
+        "同相机DOF做开关对照，保存并独立重开"
+      ],
+      "entrypoints": [
+        "scripts/build_goo_duet_sdf.py"
+      ],
+      "knowledge": [
+        "docs/GOO_DUET_SDF_IMPLEMENTATION_2026_11_19.md",
+        "docs/BLENDER53_TOON_PACKAGE_STUDY_2026_11_18.md"
+      ],
+      "evidence": [
+        {
+          "dimension": "still",
+          "result": "passed",
+          "scope": "Goo5.2.1特定两角色4290、源DOF；用户美术待评",
+          "provenance": "docs/GOO_DUET_SDF_IMPLEMENTATION_2026_11_19.md",
+          "artifacts": [
+            {
+              "path": "D:/codex/output/Goo-Duet-SDF-2026-11-19/final-v1/beauty-sdf-on-duet-4290.png",
+              "sha256": "e41fad7bccb6e5d421a1e07aba2bb3382b2ca0381cdd4f516eb2b6baeb9fb3ec"
+            }
+          ]
+        },
+        {
+          "dimension": "reopen",
+          "result": "passed",
+          "scope": "相同4290正式图重开存在已记录微小渲染方差",
+          "provenance": "docs/GOO_DUET_SDF_IMPLEMENTATION_2026_11_19.md",
+          "artifacts": [
+            {
+              "path": "D:/codex/output/Goo-Duet-SDF-2026-11-19/final-v1/beauty-reopen-verification.json",
+              "sha256": "2e802cb97c4153517f4ed47b9b8827d07f8573575017e971d2e75e1a3c098ffe"
+            }
+          ]
+        },
+        {
+          "dimension": "motion",
+          "result": "untested",
+          "scope": "未做转头、移灯与时间稳定性认证",
+          "provenance": "docs/GOO_DUET_SDF_IMPLEMENTATION_2026_11_19.md",
+          "artifacts": []
+        }
+      ],
+      "art_status": "pending",
+      "user_feedback_provenance": null,
+      "transfer_level": "single_case",
+      "next_exercise": "在官方5.3完成输入契约后做少量侧光/转头静帧，保留旧Goo冻结源"
+    },
+    {
+      "id": "hair-driver-diagnosis",
+      "title": "区分发型错位与材质问题",
+      "route": "model",
+      "tags": [
+        "头发",
+        "错位",
+        "骨骼",
+        "绑定",
+        "驱动",
+        "hair"
+      ],
+      "problem": "视觉发型错位可能来自发骨烘焙位移",
+      "when_to_use": "发根相对头部出现持续偏移，需要定位驱动层",
+      "avoid_when": [
+        "用材质改动掩盖骨骼位移",
+        "将静态绑定修复说成新头发物理"
+      ],
+      "method": [
+        "核骨骼求值与原绑定",
+        "隔离位移和旋转分别比较",
+        "保存修复范围；动态另立任务"
+      ],
+      "entrypoints": [
+        "scripts/inspect_ikhor_hair_alignment.py"
+      ],
+      "knowledge": [
+        "docs/IKHOR_HAIR_ALIGNMENT_STILL_REPAIR.md",
+        "docs/ANIMATION_AND_KEYFRAMING_PLAYBOOK.md"
+      ],
+      "evidence": [
+        {
+          "dimension": "reading",
+          "result": "passed",
+          "scope": "伊科尔单工程三项静帧隔离及静态修复已有原记录；此条只登记原理阅读",
+          "provenance": "docs/IKHOR_HAIR_ALIGNMENT_STILL_REPAIR.md",
+          "artifacts": [
+            {
+              "path": "D:/codex/workspace/blender-mmd-codex/docs/IKHOR_HAIR_ALIGNMENT_STILL_REPAIR.md",
+              "sha256": "5a07aa38c425d6b006fd82ec2ed63f66127bc675c185ced583df9f4bf9a99dd4"
+            }
+          ]
+        }
+      ],
+      "art_status": "pending",
+      "user_feedback_provenance": null,
+      "transfer_level": "single_case",
+      "next_exercise": "对另一种驱动故障定位层级，先预测再隔离验证"
+    },
+    {
+      "id": "layered-material-review",
+      "title": "分层诊断人物灰蒙与材质同质化",
+      "route": "lighting",
+      "tags": [
+        "灰蒙",
+        "泛白",
+        "太亮",
+        "材质",
+        "白衣",
+        "Glow",
+        "light"
+      ],
+      "problem": "底色、形体、遮挡、高光和Glow混合使调整难以归因",
+      "when_to_use": "需判断灰雾或发白来自受光、材质还是合成",
+      "avoid_when": [
+        "根据全图平均亮度统一提亮",
+        "把Diffuse探针称纯shadow pass",
+        "旧diagnose_actor_light探针依赖历史节点命名；新5.3工程须先适配并验证有效输出，不能直接运行"
+      ],
+      "method": [
+        "追有效输出路径",
+        "分层关闭并保持相机曝光一致",
+        "优先修最大视觉差距，保护脸眼与原配色"
+      ],
+      "entrypoints": [
+        "scripts/studio_bench.py",
+        "scripts/diagnose_actor_light.py"
+      ],
+      "knowledge": [
+        "docs/STUDIO_SCENE_BENCH.md",
+        "docs/CHARACTER_NPR_PLAYBOOK.md",
+        "docs/GOO_CHARACTER_LOOKDEV_2026_11_18.md"
+      ],
+      "evidence": [
+        {
+          "dimension": "reading",
+          "result": "passed",
+          "scope": "已有七层设计与真实人物局部案例；不声称七个独立通用组件已实现",
+          "provenance": "docs/CHARACTER_NPR_PLAYBOOK.md",
+          "artifacts": [
+            {
+              "path": "D:/codex/workspace/blender-mmd-codex/docs/CHARACTER_NPR_PLAYBOOK.md",
+              "sha256": "31fce62aee76a4ec0d013593c0ab5ffe08cc391e05e46ebf9af4b7da1442e4f4"
+            }
+          ]
+        }
+      ],
+      "art_status": "pending",
+      "user_feedback_provenance": null,
+      "transfer_level": "single_case",
+      "next_exercise": "在两个不同光照场景中准确定位外观相似的过曝/补光/Glow问题"
+    },
+    {
+      "id": "safe-profiled-static-controls",
+      "title": "显式角色映射与可复用静帧诊断",
+      "route": "render",
+      "tags": [
+        "试验台",
+        "诊断",
+        "映射",
+        "静帧",
+        "多姿态",
+        "对照",
+        "灰蒙",
+        "bench"
+      ],
+      "problem": "旧角色/节点命名绑定使每次诊断需要重写脚本，控制是否真正生效难核",
+      "when_to_use": "固定官方5.3运行时、明确源SHA与角色语义、无活动模拟的静帧对照",
+      "avoid_when": [
+        "缺少明确素材/rig/材质映射或混用角色SDF",
+        "活动或可能按动画启用的模拟；不可自动关闭来凑通过",
+        "将代理场景通过当成美术或跨项目shader通过",
+        "其他渲染引擎或未验证的版本/节点；需先适配"
+      ],
+      "method": [
+        "按显式source/runtime/scene/actors建立profile并检查",
+        "逐case重开源，静音递归输出，按expected定位控制",
+        "固定机位和曝光做静帧，记录实际开关、尺寸、相机与姿态",
+        "独立verify先声明基线及数值阈值，亲看图再记评价"
+      ],
+      "entrypoints": [
+        "scripts/studio_scene_contract.py",
+        "scripts/studio_bench.py"
+      ],
+      "knowledge": [
+        "docs/STUDIO_SCENE_BENCH.md",
+        "docs/research/STUDIO_SCENE_BENCH_2026_11_20.json"
+      ],
+      "evidence": [
+        {
+          "dimension": "still",
+          "result": "passed",
+          "scope": "两套原创双rig代理各6case；固定5.3工具控制，未认证人物美术",
+          "provenance": "docs/research/STUDIO_SCENE_BENCH_2026_11_20.json",
+          "artifacts": [
+            {
+              "path": "D:\\codex\\output\\MMD-Studio-SceneBench-2026-11-20\\fixture-a-release\\report.json",
+              "sha256": "f4beecfbf86601fa04929ae983bf083b9c147538dc552f8b8622df8a5b2a27c5"
+            }
+          ]
+        },
+        {
+          "dimension": "reopen",
+          "result": "passed",
+          "scope": "A在新进程逐case重开相同已存输入，6case PNG max/mean差均0；不等于新生产候选重开",
+          "provenance": "docs/research/STUDIO_SCENE_BENCH_2026_11_20.json",
+          "artifacts": [
+            {
+              "path": "D:\\codex\\output\\MMD-Studio-SceneBench-2026-11-20\\fixture-a-release-verified\\report.json",
+              "sha256": "af6d0fc24a2d6d63aed3cd935d46d6be269fc74c4c8e7366b2f4575683706ff3"
+            }
+          ]
+        },
+        {
+          "dimension": "integration",
+          "result": "passed",
+          "scope": "未完成迁移的native53 author-trial-v3，仅4290源相机DOF、两张局部参数对照；不保存源",
+          "provenance": "docs/research/STUDIO_SCENE_BENCH_2026_11_20.json",
+          "artifacts": [
+            {
+              "path": "D:\\codex\\output\\MMD-Studio-SceneBench-2026-11-20\\native53-controls-final\\report.json",
+              "sha256": "17f878705d904145507142d421f1c6257799e946ed52beedab3df69f500c8543"
+            }
+          ]
+        },
+        {
+          "dimension": "transfer",
+          "result": "passed",
+          "scope": "同类工具夹具A/B更名rig/材质并改变机位/布置；仅软件复用，非跨作品美术迁移",
+          "provenance": "docs/research/STUDIO_SCENE_BENCH_2026_11_20.json",
+          "artifacts": [
+            {
+              "path": "D:\\codex\\output\\MMD-Studio-SceneBench-2026-11-20\\fixture-a-release\\report.json",
+              "sha256": "f4beecfbf86601fa04929ae983bf083b9c147538dc552f8b8622df8a5b2a27c5"
+            },
+            {
+              "path": "D:\\codex\\output\\MMD-Studio-SceneBench-2026-11-20\\fixture-b-release\\report.json",
+              "sha256": "b47a1faa79ca781278db3c80d2e08f9884c00a3b4b8f3036ec49ea5a3372e3f1"
+            }
+          ]
+        },
+        {
+          "dimension": "motion",
+          "result": "untested",
+          "scope": "未输出或认证动态；源动画只作独立静态姿态求值",
+          "provenance": "docs/research/STUDIO_SCENE_BENCH_2026_11_20.json",
+          "artifacts": []
+        }
+      ],
+      "art_status": "pending",
+      "user_feedback_provenance": null,
+      "transfer_level": "same_class",
+      "next_exercise": "用新角色/新素材建立显式profile并先检查语义与控制，完成一套有参考目标的静帧重建与反例评审"
+    },
+    {
+      "id": "controlled-reference-iteration",
+      "title": "把可见问题变成可复核的制作实验",
+      "route": "reference",
+      "tags": [
+        "参考",
+        "方案",
+        "灯光",
+        "舞台",
+        "白衣",
+        "图审",
+        "消融",
+        "经验"
+      ],
+      "problem": "盲调参数、按节点名字误判有效链或在结果出来后倒填预测",
+      "when_to_use": "已有明确源、实际看过的参考与可控参数，需要比较设计方案并留下下一轮能用的经验",
+      "avoid_when": [
+        "把多个参数组合变化当成单一参数因果证据",
+        "用指纹校验代替实际看图或代填用户认可",
+        "把单帧成功直接用于新姿态/新人物"
+      ],
+      "method": [
+        "先检索适用经验与反例，再亲看参考并区分观察/假设/目标",
+        "固定输入和预测后用精确角色/舞台映射执行同条件方案",
+        "检查实际有效输出链；逐目标与逐假设图审，不只选图",
+        "结案single_case并登记到原studio表，后续检索重新核来源"
+      ],
+      "entrypoints": [
+        "scripts/studio_iteration.py",
+        "scripts/studio_review_board.py",
+        "scripts/studio_lessons.py"
+      ],
+      "knowledge": [
+        "docs/STUDIO_ITERATION.md",
+        "docs/GOO_DUET_ARTDIRECTION_2026_11_20.md"
+      ],
+      "evidence": [
+        {
+          "dimension": "integration",
+          "result": "passed",
+          "scope": "Goo两角色/指定礼堂4290：改善不足反例与舞台层次方案均真实执行、图审结案并可检索；不证明外部风格重建、跨项目迁移或用户认可",
+          "provenance": "docs/GOO_DUET_ARTDIRECTION_2026_11_20.md",
+          "artifacts": [
+            {
+              "path": "D:\\codex\\output\\Goo-Duet-ArtDirection-2026-11-20\\iteration-03\\lesson.json",
+              "sha256": "146ab65bd18445451ae8c977781ecbdb45b5564e2a70a317a1f3c921d6ff79b0"
+            },
+            {
+              "path": "D:\\codex\\output\\Goo-Duet-ArtDirection-2026-11-20\\iteration-03\\run\\report.json",
+              "sha256": "95a812d7cdbb45096b7bd5de30f0e1790a3b86be860c1bb1f8b07aa2e0753395"
+            },
+            {
+              "path": "D:\\codex\\output\\Goo-Duet-ArtDirection-2026-11-20\\iteration-03\\board\\manifest.json",
+              "sha256": "cf734dbaddfa8d5560707c21b7401d2ce0a2b0823e4dc6872f6a9ee31fadb989"
+            }
+          ]
+        }
+      ],
+      "art_status": "pending",
+      "user_feedback_provenance": null,
+      "transfer_level": "single_case",
+      "next_exercise": "换一套独立工程与明确参考复用方法，重新映射材质与光影职责，不继承4290发影。"
+    }
+  ],
+  "preferences": [
+    {
+      "id": "reference-priority",
+      "statement": "观海子优先，Gosari542保留，御手洗板蓝根补充",
+      "scope": "当前MMD长期感知方向；每次参考仍须具体到作品和镜头",
+      "source": {
+        "kind": "user_instruction",
+        "provenance": "AGENTS.md"
+      },
+      "examples": [
+        {
+          "path": "D:/codex/output/MMD-Knowledge-Review-v1/private-reference-study/gosari-310.jpg",
+          "sha256": "9228f06fc7238adb6b46ce5d0809e58070c20344c482d4727e2df92ac4de3430",
+          "role": "context"
+        }
+      ],
+      "exceptions": [
+        "作者名字不等于特定shader或唯一风格配方"
+      ]
+    },
+    {
+      "id": "ikhor-overbright-counterexample",
+      "statement": "保留伊科尔白衣与亮肤色的层次，避免局部版本人物过亮",
+      "scope": "11月17日MME式礼堂静帧v5，伊科尔；用户反馈为还需降亮",
+      "source": {
+        "kind": "user_feedback",
+        "provenance": "catalog/current_state.json"
+      },
+      "examples": [
+        {
+          "path": "D:/codex/output/MMD-MME-Reference-Light-v1/production-v5/balanced-double-4290.jpg",
+          "sha256": "3abeeb5f0c2b474f0cfcbd35778399b85e10c34f7e54f2afeff3a1a470c2ba81",
+          "role": "negative"
+        }
+      ],
+      "exceptions": [
+        "不泛化为所有人物或所有场景统一压暗",
+        "该负例不否定其所有技术"
+      ]
+    },
+    {
+      "id": "long-term-method",
+      "statement": "形成可继承的完整制作方法；技术学习、参考重建、迁移和反馈持续修订",
+      "scope": "本仓库长期建设，2026-11-20用户讨论确认",
+      "source": {
+        "kind": "user_instruction",
+        "provenance": "SPEC.md"
+      },
+      "examples": [],
+      "exceptions": [
+        "不以笔记数量或登记通过代替学习和作品进步"
+      ]
+    }
+  ],
+  "curriculum": [
+    {
+      "id": "design-foundations",
+      "title": "构图、明暗、色彩和焦点",
+      "route": "design",
+      "prerequisites": [],
+      "capability_ids": [
+        "reference-visual-relations"
+      ],
+      "exercise": "同一素材做两种情绪；先预测观众第一眼和第二眼位置，再比较结果",
+      "acceptance": [
+        "实际阅读直接相关的一手资料并说明输入假设",
+        "先提出可验证预测，再比较实际结果",
+        "新素材迁移记录收益、失败和未测；用户美术评价另列"
+      ]
+    },
+    {
+      "id": "model-drive",
+      "title": "模型结构、绑定与输入诊断",
+      "route": "model",
+      "prerequisites": [],
+      "capability_ids": [
+        "hair-driver-diagnosis"
+      ],
+      "exercise": "区分骨架、动作、权重和材质故障；独立诊断一个陌生模型问题",
+      "acceptance": [
+        "实际阅读直接相关的一手资料并说明输入假设",
+        "先提出可验证预测，再比较实际结果",
+        "新素材迁移记录收益、失败和未测；用户美术评价另列"
+      ]
+    },
+    {
+      "id": "npr-materials",
+      "title": "角色分色与材质职责",
+      "route": "render",
+      "prerequisites": [
+        "model-drive"
+      ],
+      "capability_ids": [
+        "bounded-face-shadow",
+        "layered-material-review",
+        "safe-profiled-static-controls"
+      ],
+      "exercise": "用自有角色分别控制形体、投影和高光，再换一种服装验证",
+      "acceptance": [
+        "实际阅读直接相关的一手资料并说明输入假设",
+        "先提出可验证预测，再比较实际结果",
+        "新素材迁移记录收益、失败和未测；用户美术评价另列"
+      ]
+    },
+    {
+      "id": "lighting-color",
+      "title": "摄影布光与色彩组织",
+      "route": "lighting",
+      "prerequisites": [
+        "design-foundations"
+      ],
+      "capability_ids": [
+        "layered-material-review"
+      ],
+      "exercise": "有限灯光下做两种情绪，预测补光与Glow差异并保住材质身份",
+      "acceptance": [
+        "实际阅读直接相关的一手资料并说明输入假设",
+        "先提出可验证预测，再比较实际结果",
+        "新素材迁移记录收益、失败和未测；用户美术评价另列"
+      ]
+    },
+    {
+      "id": "reference-rebuild",
+      "title": "参考重建与跨素材设计",
+      "route": "reference",
+      "prerequisites": [
+        "design-foundations",
+        "lighting-color"
+      ],
+      "capability_ids": [
+        "reference-visual-relations",
+        "safe-profiled-static-controls"
+      ],
+      "exercise": "拆一张参考，做风格小样，再换角色和空间；保留失败反例",
+      "acceptance": [
+        "实际阅读直接相关的一手资料并说明输入假设",
+        "先提出可验证预测，再比较实际结果",
+        "新素材迁移记录收益、失败和未测；用户美术评价另列"
+      ]
+    },
+    {
+      "id": "motion-performance",
+      "title": "姿态、表情与接触",
+      "route": "motion",
+      "prerequisites": [
+        "model-drive"
+      ],
+      "capability_ids": [],
+      "exercise": "先看关键姿态、眼神和手势；明确授权动态后再检验过渡与节奏",
+      "acceptance": [
+        "实际阅读直接相关的一手资料并说明输入假设",
+        "先提出可验证预测，再比较实际结果",
+        "新素材迁移记录收益、失败和未测；用户美术评价另列"
+      ]
+    },
+    {
+      "id": "secondary-motion",
+      "title": "衣发与次级运动",
+      "route": "motion",
+      "prerequisites": [
+        "motion-performance"
+      ],
+      "capability_ids": [
+        "hair-driver-diagnosis"
+      ],
+      "exercise": "记录驱动和碰撞条件；授权动态后连续模拟并独立重开",
+      "acceptance": [
+        "实际阅读直接相关的一手资料并说明输入假设",
+        "先提出可验证预测，再比较实际结果",
+        "新素材迁移记录收益、失败和未测；用户美术评价另列"
+      ]
+    },
+    {
+      "id": "camera-stage-fx",
+      "title": "舞台、镜头和合成统筹",
+      "route": "stage",
+      "prerequisites": [
+        "design-foundations",
+        "reference-rebuild"
+      ],
+      "capability_ids": [],
+      "exercise": "把构图、材质、灯光和字幕组合为完整场景，记录每个效果职责与取舍",
+      "acceptance": [
+        "实际阅读直接相关的一手资料并说明输入假设",
+        "先提出可验证预测，再比较实际结果",
+        "新素材迁移记录收益、失败和未测；用户美术评价另列"
+      ]
+    }
+  ],
+  "lessons": [
+    {
+      "id": "goo-duet-artdirection-01",
+      "title": "人物亮边收敛与礼堂补光层次对照",
+      "directory": "D:\\codex\\output\\Goo-Duet-ArtDirection-2026-11-20\\iteration-02",
+      "lesson": {
+        "path": "D:\\codex\\output\\Goo-Duet-ArtDirection-2026-11-20\\iteration-02\\lesson.json",
+        "sha256": "d96c31f44241705b916ee8c6cba0b5d18bee0a7a7a7d78fb11311d9e1dba9eff"
+      },
+      "route": "lighting",
+      "tags": [
+        "礼堂",
+        "补光",
+        "HDR轮廓",
+        "改善不足",
+        "白衣"
+      ],
+      "scope": [
+        "两角色、原动作与机位、脸SDF与4290刘海影、SourceDOF、指定礼堂"
+      ],
+      "transfer_level": "single_case",
+      "user_approval": false
+    },
+    {
+      "id": "goo-duet-stage-response-02",
+      "title": "礼堂舞台着色响应与MatCap层次设计",
+      "directory": "D:\\codex\\output\\Goo-Duet-ArtDirection-2026-11-20\\iteration-03",
+      "lesson": {
+        "path": "D:\\codex\\output\\Goo-Duet-ArtDirection-2026-11-20\\iteration-03\\lesson.json",
+        "sha256": "146ab65bd18445451ae8c977781ecbdb45b5564e2a70a317a1f3c921d6ff79b0"
+      },
+      "route": "lighting",
+      "tags": [
+        "礼堂",
+        "舞台",
+        "白衣",
+        "MatCap",
+        "明暗层次",
+        "参考迭代"
+      ],
+      "scope": [
+        "4290姿态/原相机/SourceDOF",
+        "两位头部主光方向与220能量",
+        "原舞台几何/纹理/透明语义",
+        "脸/SDF/眼/眉睫/皮肤/PMX描边"
+      ],
+      "transfer_level": "single_case",
+      "user_approval": false
+    }
+  ]
+}

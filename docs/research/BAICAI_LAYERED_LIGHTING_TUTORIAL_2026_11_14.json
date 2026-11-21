@@ -1,0 +1,256 @@
+{
+  "schema_version": 1,
+  "id": "baicai-layered-lighting-tutorial-2026-11-14",
+  "recorded_date": "2026-11-14",
+  "status": "complete-user-supplied-subtitle-reading-and-sparse-local-frame-review-only",
+  "purpose": "从教程实际操作学习更明亮而有层次的人像灯光；不以强炫光、PBR演示或单人静态成功代替现有双人NPR制作验证。",
+  "source": {
+    "title": "【MMD教程_Blender】#4 老东西终于把焚决交出来了！",
+    "url": "https://www.bilibili.com/video/BV1GFWVzPEq8/",
+    "part": "P1 per local filename",
+    "author_identity": "实际画面水印为叫我白菜就好啦；本子任务未独立核验其B站UID/账号主页。",
+    "video_path": "D:/JiJiDownload/【MMD教程_Blender】#4 老东西终于把焚决交出来了！/【MMD教程_Blender】#4 老东西终于把焚决交出来了！ - 1.【MMD教程_Blender】#4 老东西终于把焚决交出来了！(Av115231741187246,P1).mp4",
+    "video_sha256": "4d07d52f60e356ccada2bff19eb1c8e42b6f422ab30e5e573e7545da57d5093a",
+    "video_bytes": 285691163,
+    "video_metadata": {
+      "tool": "existing imageio_ffmpeg bundled ffmpeg 7.1, metadata inspection only",
+      "duration_reported_seconds": 1354.94,
+      "duration_precision": "ffmpeg console rounded to 0.01 second; not exact decoded duration",
+      "dimensions": [1920, 1080],
+      "fps_reported": 60,
+      "video": "H.264 High, yuv420p tv bt709",
+      "audio": "AAC LC, 48000 Hz stereo"
+    },
+    "subtitle_input": "C:/Users/Administrator/.codex/attachments/e8d78630-9c1c-4d99-aedc-3ed2dcf7aa86/已粘贴的文本.txt",
+    "subtitle_sha256": "e8c80823c2645eb05799c1fb155a2563445c47084c2a93c81a4daf443f35894c",
+    "subtitle_input_bytes": 85781,
+    "subtitle_container": "JSON array with from/to/content; body_path=$",
+    "subtitle_statistics": {
+      "input_cues": 542,
+      "normalized_cues": 542,
+      "content_codepoints": 6340,
+      "first_start_seconds": 0.08,
+      "last_end_seconds": 1341.82,
+      "span_seconds": 1341.74,
+      "covered_seconds": 1280.356,
+      "internal_gaps": 32,
+      "internal_gap_seconds": 61.384,
+      "trailing_gap_against_reported_video_seconds": 13.12,
+      "start_regressions": 0,
+      "overlap_witnesses": 0,
+      "exact_duplicate_groups": 0
+    },
+    "subtitle_completeness": "完整读取用户提供的542条，按原始顺序分1-190、191-390、391-542读完。它覆盖开场到告别，但未逐秒听音，不能认证平台原始字幕完整或识别全正确。"
+  },
+  "private_cache": {
+    "root": "D:/codex/output/MMD-Portrait-Lighting-Study-2026-11-14/tutorial-private",
+    "normalizer": "scripts/ingest_bilibili_subtitles.py, run once with Blender bundled Python -B",
+    "normalized_products": ["subtitles/subtitles.normalized.json", "subtitles/subtitles.srt", "subtitles/subtitles.md", "subtitles/report.json"],
+    "frame_method": "对本地视频按讲解时间码逐张ffmpeg -ss抽取；14张1280x720 JPEG，并对同样4个时间点另取原生UI小裁图。未新造提取工具或全片逐帧。",
+    "existing_script_decision": "video_reference_frames.py仅支持等间隔采样，不能按本次讲解时间码选点，故直接复用现有ffmpeg；ingest_bilibili_subtitles.py可直接适配输入。",
+    "raw_subtitle_or_frames_committed_to_repository": false
+  },
+  "reading_scope": {
+    "all_supplied_subtitles_read": true,
+    "selected_timestamps_viewed": 14,
+    "useful_timestamps": 13,
+    "native_crop_timestamps": [83, 806, 1116, 1209],
+    "audio_listened": false,
+    "full_continuous_video_viewed": false,
+    "chapters_1_to_3_material_lessons_obtained": false,
+    "source_blend_obtained": false,
+    "key_boundary": "作者结尾把本系列称为四集PBR材质教程，并说明三渲二自己刚开始学。本集主要是既有PBR材质上的渲染、打光、相机与合成；不是面部SDF绘制或原神/鸣潮NPR源码课程。"
+  },
+  "frame_observations": [
+    {
+      "seconds": 83,
+      "timecode": "01:23",
+      "file": "frames/frame-0083s.jpg",
+      "native_crop": "frames/frame-0083s-native-modifier-crop.jpg",
+      "seen": "脸部加权法向修改器在Armature之后；面部鼻周仍有体积。节点区可见SSS/BSSRDF着色分支，但没有完整展示其前3集材质构建。",
+      "ui_values": {"weighted_normal_mode": "面的面积", "weight": 50, "threshold": 0.01, "keep_sharp": false, "face_influence": false},
+      "version_seen": "Blender 4.5.2 LTS",
+      "limit": "此片段演示的是调整该模型法线，不证明当前PMX已有编辑法线也应重算；未取得前后同帧对照或动态证据。"
+    },
+    {
+      "seconds": 185,
+      "timecode": "03:05",
+      "file": "frames/frame-0185s.jpg",
+      "seen": "EEVEE屏幕追踪与快速GI近似的独立精度控制；字幕的0.5与两处UI当前状态不同步。",
+      "ui_values": {"raytrace_method": "屏幕追踪", "raytrace_resolution": "1:1", "screen_trace_precision": 0.25, "screen_trace_thickness_m": 0.2, "fast_gi_resolution": "1:2", "fast_gi_precision_display": 0.5},
+      "limit": "记录为中间操作状态，不能声称两项最终均0.5或只有一种精度参数。"
+    },
+    {
+      "seconds": 334,
+      "timecode": "05:34",
+      "file": "frames/frame-0334s.jpg",
+      "seen": "空的Render Result棋盘格和讲解字幕。",
+      "usable_for_numeric_verification": false,
+      "limit": "没有在该帧看到阴影池或分辨率UI；不以字幕把所有render error都解释为阴影池不足。"
+    },
+    {
+      "seconds": 370,
+      "timecode": "06:10",
+      "file": "frames/frame-0370s.jpg",
+      "seen": "开始搭建灯光前的显示与渲染配置；Gamma字段仍在编辑。",
+      "ui_values": {"display_device": "sRGB", "view_transform": "Filmic", "look": "High Contrast", "exposure": 0, "gamma_current_edit_display": 1, "shadow_pool_mb": 512, "light_probe_volume_mb": 16, "compositor_device_selected": "GPU"},
+      "narration_not_same_frame_verified": "字幕说将Gamma设0.7；这张图并非已经确认0.7的最终状态。"
+    },
+    {
+      "seconds": 446,
+      "timecode": "07:26",
+      "file": "frames/frame-0446s.jpg",
+      "seen": "降低环境光影响后，用单个暖色面光先建立主方向。此中间态阴影侧很深，后续才加补光。",
+      "ui_values": {"type": "Area", "power_display": 100, "exposure": 0, "normalize_checked": true, "shape": "Square", "size_m": 0.75, "color": "warm peach/yellow swatch; RGB not opened"},
+      "limit": "不能从颜色条反推精确RGB/色温。100是这个模型尺度/灯距/材质/显示下的操作值。"
+    },
+    {
+      "seconds": 515,
+      "timecode": "08:35",
+      "file": "frames/frame-0515s.jpg",
+      "seen": "对侧蓝色面光抬起暗部，保留主光与补光的明显强弱。主方向暖、补方向冷，头发也出现冷暖分区。",
+      "ui_values": {"selected_light": "面光.001", "power_display": 30.9, "size_m": 1, "normalize_checked": true, "shadow_jitter_checked": true, "shadow_overblur_percent": 10, "color": "blue swatch; numeric RGB not visible"},
+      "limit": "此刻约0.309的显示功率比仅属起始同场关系，不能推广成现有工程的照度比或所有角度规则。"
+    },
+    {
+      "seconds": 578,
+      "timecode": "09:38",
+      "file": "frames/frame-0578s.jpg",
+      "seen": "Outliner出现主/补及另两盏面光，灯线位于角色后上方；正在把双侧背光分成冷暖色。",
+      "ui_values": {"selected_light": "面光.003", "power_at_this_creation_stage": 10, "size_m": 1},
+      "narration": "讲解约斜后45度并从上向下；不是该帧数值变换面板核定的精确角度。",
+      "limit": "后面将大幅提高轮廓灯，不能把此处10当作最终功率。作者也承认背面会偏亮并回避拍背面，不能据此放行本项目动态运镜。"
+    },
+    {
+      "seconds": 650,
+      "timecode": "10:50",
+      "file": "frames/frame-0650s.jpg",
+      "seen": "场景已加入，角色与灯组一同被移动；是在处理新增场景光对人物的影响，不是只叠后期。",
+      "ui_values": {"render_engine": "EEVEE", "viewport_samples": 64, "render_samples": 64, "screen_trace_precision_now": 0.5},
+      "narration": "前段说导入场景后脸过曝，于是移动人物与其灯组。",
+      "limit": "该帧是实体视图，不是过曝修复后的beauty对比；本项目不据此更换指定礼堂或移动生产人物。"
+    },
+    {
+      "seconds": 806,
+      "timecode": "13:26",
+      "file": "frames/frame-0806s.jpg",
+      "native_crop": "frames/frame-0806s-native-camera-crop.jpg",
+      "seen": "相机对焦人物，背景灯形已产生明显景深虚化；人物面部仍保有冷暖、鼻翼和颈部结构。",
+      "ui_values": {"focal_length_mm": 50, "focus_distance_m": 1.603, "f_stop": 2, "blades_current_edit": 6, "rotation_degrees_at_sample": 26.7, "ratio_at_sample": 1},
+      "narration_not_same_frame_verified": "稍后口述常用旋转12度及比率2；不把这两项写成13:26已显示的参数。",
+      "limit": "单人正面静态演示；双人交叠、前后距离与原相机VMD不能直接套f2。"
+    },
+    {
+      "seconds": 1028,
+      "timecode": "17:08",
+      "file": "frames/frame-1028s.jpg",
+      "seen": "Glare的高亮输出接Viewer，先看哪些区域超过阈值，再返回完整图像；画面仅少量轮廓/背景灯保留。",
+      "ui_values": {"glare_type": "辉光", "quality": "中等", "threshold": 2.71, "smoothness_at_this_stage": 0.1, "strength_at_this_stage": 1, "saturation": 1, "size_at_this_stage": 0.5, "view_transform": "Filmic", "look": "High Contrast", "exposure": -0.3, "gamma": 0.6},
+      "limit": "这是有效的高亮诊断方法；阈值2.71依赖其scene-linear数值及之前操作，后续还修改其他项。"
+    },
+    {
+      "seconds": 1065,
+      "timecode": "17:45",
+      "file": "frames/frame-1065s.jpg",
+      "seen": "双侧轮廓与辉光已经很强；选中暖侧后光，并将该灯的体积散射影响单独降至0。",
+      "ui_values": {"selected_light": "面光.003", "power_display": 1200, "size_m": 1, "normalize_checked": true, "diffuse_influence": 1, "glossy_influence": 1, "transmission_influence": 1, "volume_scatter_influence": 0},
+      "limit": "可学表面与体积贡献分开；不能把体积影响0说成全场体积或自定义Emission体积被关闭。强亮边是作者此时风格选择，不是猪猪要求。"
+    },
+    {
+      "seconds": 1093,
+      "timecode": "18:13",
+      "file": "frames/frame-1093s.jpg",
+      "seen": "作者发现背光压过主光后继续调平衡；当前选中蓝色补光。",
+      "ui_values": {"selected_light": "面光.001", "power_current_edit_text": "50", "size_m": 1},
+      "narration_not_verified_here": "字幕前后有主光150改120；该帧不是主光面板，且补光50也处于编辑中，不能声称取得最终120:50:1200完整配方。"
+    },
+    {
+      "seconds": 1116,
+      "timecode": "18:36",
+      "file": "frames/frame-1116s.jpg",
+      "native_crop": "frames/frame-1116s-native-convert-crop.jpg",
+      "seen": "插入另一个角色/工程的色彩设置说明。标题写ACES，当前可见节点和显示管理如下。",
+      "ui_values": {"version": "Blender 4.5.3 LTS", "convert_from": "sRGB", "convert_to_at_sample": "线性 Rec.709", "display_device": "sRGB", "view_transform": "Filmic", "look": "无", "exposure_at_sample": 0.711, "gamma_at_sample": 1.278},
+      "limit": "未看到本帧实际选择ACES目标空间，也未追踪整条输入/工作/显示变换，不能以标题证明完整ACES流程正确。现有线性EXR管线不直接复制此转换。"
+    },
+    {
+      "seconds": 1209,
+      "timecode": "20:09",
+      "file": "frames/frame-1209s.jpg",
+      "native_crop": "frames/frame-1209s-native-node-crop.jpg",
+      "seen": "最终风格化合成图及节点链：Render Layers经Glare、Lens Distortion、正片叠底进入Viewer与Composite；另一输入来自遮罩分支。",
+      "ui_values": {"glare_threshold": 2.71, "glare_smoothness_now": 1, "glare_strength_now": 3, "glare_saturation": 1, "lens_distortion": 0, "lens_dispersion": 0.03, "multiply_factor": 1},
+      "narration": "椭圆遮罩加模糊再正片叠底做暗角，将视线集中人物。",
+      "limit": "新图审确认17:08的平滑0.1/强度1已不再是此时值。椭圆与模糊节点不在该裁图内，未核数值；没有完整连续开关比较。"
+    }
+  ],
+  "original_learning_summary": [
+    {
+      "id": "key-before-fill",
+      "time_ranges_seconds": [[376.24, 428.9], [440.64, 530.24]],
+      "lesson": "先减小环境干扰确定暖主光方向，再用对侧冷补光只抬可读性。亮的脸仍可留一侧较暗、鼻翼轻暗和更深的颈部；主补先后及强弱关系比全场加亮更有操作价值。",
+      "project_inference": "在未来独立NPR诊断中先看无Glow脸部，再标定主灯综合响应及现有补灯预算；不把教程100/30.9按比例换成当前490W/18W等灯值。"
+    },
+    {
+      "id": "softness-and-normal-ownership",
+      "time_ranges_seconds": [[70.58, 87.03], [445.93, 485.16]],
+      "lesson": "修改器处理受光法线与面光尺寸/阴影抖动属于不同控制。一个控制面部几何受光，一个控制投影采样及软硬，不能混作同一种去脏块按钮。",
+      "project_inference": "当前阿克西妮娅SDF鼻岛和伊科尔未知脸图不因加权法向自动修复。必须保留原法线/描边耦合，独立小簇或脸区验证后才决定是否采用；本轮未改法线。"
+    },
+    {
+      "id": "two-rims-with-volume-budget",
+      "time_ranges_seconds": [[536.21, 613.44], [1038.08, 1097.83]],
+      "lesson": "两侧后上方轮廓灯沿主补冷暖延续，并能单独限制体积散射。教程后期追求非常强的边缘，其自身也暴露背面过亮和主光需重新平衡的问题。",
+      "project_inference": "本项目仅借鉴方向和职责分离；目标应是细而局部的分离，保留发束和衣缘，不复制1200功率或大面积白亮。当前NPR美术rim与实际灯是两条链，必须分别旁路。"
+    },
+    {
+      "id": "threshold-inspection-before-bloom-strength",
+      "time_ranges_seconds": [[891.42, 946.02], [996.88, 1037]],
+      "lesson": "在实际渲染样张而非仅小视口中调合成；先查看Glare高亮输出，用阈值限制发光来源，检查整片雾化再看完整结果。",
+      "project_inference": "保留头发/衣缘少量高亮，观察脸/白衣/背景窗光是否误入；Glow开关不应改变脸部结构判断。当前中央雾光与青边问题需要逐来源分析，不能只依靠提高阈值宣称已解决。"
+    },
+    {
+      "id": "separate-from-background-with-focus-and-value",
+      "time_ranges_seconds": [[713.88, 858.88], [1160.26, 1233.74]],
+      "lesson": "景深与暗角可帮助注意力集中，但不能替代主体光比。教程的50mm/f2与强色散服务单人正面构图。",
+      "project_inference": "双人主次、景深及遮挡应随现有镜头验证，优先保证两张脸及手部可读；色散/大暗角为可选风格，本轮不迁移。"
+    }
+  ],
+  "compatibility_and_nontransfer": [
+    "实测画面是Blender4.5.2/4.5.3 EEVEE，不能只凭同名面板假定5.2 API或效果完全相同。",
+    "该教程追加前3集PBR材质，并有SSS/真实高光响应；当前MMDShaderDev Color/Alpha→形体/SDF×综合受光→palette→Emission的材质不能照抄加灯后期待同样结果。",
+    "加权法向会改变原编辑法线及与高光/描边的关系；不当作当前SDF鼻影或所有PMX的通用修复。",
+    "屏幕追踪/快速GI包含视角限制；当前Diffuse探针本就不是独立投影。该教程没有提供从它反推纯visibility的办法。",
+    "灯光Volume影响为0不关闭材质中独立的美术Emission体积，也不等于整个舞台没有体积。",
+    "字幕中旧ABC高版本无UV的笼统说法未独立验证，本项目PMX+VMD不因此降级导入流程。",
+    "字幕中阴影池及一般render error的对应关系仅算作者排错经验，不能对任意渲染错误照用。",
+    "色彩插入段的完整输入编码与变换闭环未核，不能把sRGB→linear Rec709直接插入当前场景线性结果，也不能宣布恢复ACES。",
+    "作者输出JPG/PNG8建议不覆盖本项目已有EXR、Alpha、Cryptomatte、字幕及色彩/编码验证约定。",
+    "原教程前向静态视角回避背面过亮，未提供MMD动态/双人/手近脸/轮廓闪烁/DOF及透明交叠验收。"
+  ],
+  "next_experiment_design_only": {
+    "implemented": false,
+    "input": "最新Clean production-v2已固定SHA的独立诊断副本；不重新运行历史全量构建器。",
+    "same_frame": "4290先关Glow、雾的可视贡献、字幕与镜头色散，保留原曝光显示；依次查看现有主光、补光、实际背光、美术rim、AO及SDF/形体，逐项记录。阶段差异不靠最终亮度下限掩盖。",
+    "candidate": "只在已解释通道上调主补预算，使暗侧脸仍有浅色层次、颈部更深且不成黑片；实际灯与美术rim分别控制。先小幅缩减多余青边/体积影响，再决定是否需要提高主体有效受光。",
+    "compositor_check": "在原生尺寸看高亮mask、Glow-only和最终图；脸/白衣大面不应成为泛雾源，灯窗和发尖可以保留适量高亮。具体阈值按当前线性输入重新标定。",
+    "dynamic_check": "固定灯转头yaw/pitch/roll、固定头移灯、相机绕拍分别检查，再看现有4139-4441编舞内双人面部和手部；光色不能随角度把两人染成不同底色。",
+    "reject": [
+      "亮侧脸白剪、暗侧去色/发灰、鼻口棕块或AO脏圈；颈部/手部与脸出现新的肤色断层。",
+      "为追求亮边使背面过曝、前面五官变平，或全圈青边/白边抢过脸。",
+      "关Glow后主要层次消失，或开Glow后脸和白衣被整体雾化。",
+      "只改灯功率便把综合D变化误称纯投影，或补光把既有脸影/真实手部遮挡洗掉。",
+      "材质法线、轮廓壳、Alpha、SDF/嘴缝受到非许可更改。"
+    ]
+  },
+  "not_performed": [
+    "新MMD静帧或动画渲染",
+    "打开或修改生产blend、材质、灯光、法线、相机、合成和色彩设置",
+    "安装插件、下载教程工程或完整字幕再次采集",
+    "取得其前三集完整材质流程、SDF算法、观海子或Gosari工程",
+    "用户美术认可或目标质量认证"
+  ],
+  "production_ready": false,
+  "quality_target_achieved": false,
+  "user_art_approval": false
+}

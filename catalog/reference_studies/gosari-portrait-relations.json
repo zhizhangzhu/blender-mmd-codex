@@ -1,0 +1,117 @@
+{
+  "schema_version": 1,
+  "id": "gosari-portrait-relations",
+  "title": "Gosari Pretty Girl：人物明暗与材质关系",
+  "kind": "image",
+  "status": "analyzed",
+  "source": {
+    "path": "D:/codex/output/MMD-Knowledge-Review-v1/private-reference-study/gosari-310.jpg",
+    "sha256": "9228f06fc7238adb6b46ce5d0809e58070c20344c482d4727e2df92ac4de3430"
+  },
+  "intent": {
+    "borrow": [
+      "亮肤色与深发的焦点关系",
+      "白衣灰紫暗面",
+      "按束断开的头发亮带"
+    ],
+    "preserve": [
+      "使用者角色原配色、造型和身份",
+      "当前项目的舞台与交付范围"
+    ]
+  },
+  "observations": [
+    {
+      "id": "face-focus",
+      "dimension": "value",
+      "locator": "原视频约5.166655s / frame310；脸与头发区域",
+      "description": "浅肤色与深发强分开，眉眼清楚；参考原帧见既有账本",
+      "seen": true
+    },
+    {
+      "id": "white-cloth",
+      "dimension": "material",
+      "locator": "同帧胸口、肩部和袖片",
+      "description": "白衣仍保留灰紫分面与细深线",
+      "seen": true
+    },
+    {
+      "id": "hair-bands",
+      "dimension": "material",
+      "locator": "同帧发冠与长发内束",
+      "description": "暗发保留成束亮带与紫红变化，亮带没有填满所有发面",
+      "seen": true
+    }
+  ],
+  "hypotheses": [
+    {
+      "id": "h-value",
+      "observation_ids": [
+        "face-focus",
+        "white-cloth"
+      ],
+      "explanation": "选择性明暗组织有助于清楚焦点；具体灯数与shader未知",
+      "test": "固定素材和曝光，分别调整补光、材质亮端与Glow做分项对照",
+      "prediction": "材质亮端收束应恢复衣褶分面，且背景亮度保持",
+      "status": "untested",
+      "evidence_refs": []
+    }
+  ],
+  "targets": [
+    {
+      "id": "t-value",
+      "observation_ids": [
+        "face-focus",
+        "white-cloth"
+      ],
+      "priority": 0,
+      "visual_goal": "脸眼成为焦点，白衣同时读出亮面和有色暗面",
+      "controls": [
+        "人物key/fill职责",
+        "白衣分色范围",
+        "Glow开关"
+      ],
+      "check": "缩略图焦点、原尺寸脸与白衣ROI、关Glow对照",
+      "reject_if": "白衣变灰或全白，眉眼被光晕抹掉"
+    },
+    {
+      "id": "t-hair",
+      "observation_ids": [
+        "hair-bands"
+      ],
+      "priority": 1,
+      "visual_goal": "保留原发色并组织整体体块与分束亮带",
+      "controls": [
+        "高光许可",
+        "亮带宽度",
+        "发束暗面"
+      ],
+      "check": "正面与侧角同光对照",
+      "reject_if": "整头塑料白或换角度亮带无解释地跳变"
+    }
+  ],
+  "shots": [],
+  "implementation": {
+    "status": "unstarted",
+    "recipe_refs": [],
+    "evidence": []
+  },
+  "review": {
+    "art_status": "pending",
+    "user_feedback_provenance": null
+  },
+  "media_review": {
+    "audio": {
+      "status": "not_reviewed",
+      "scope": "仅研究既有抽帧"
+    },
+    "transcript": {
+      "status": "not_reviewed",
+      "scope": "无完整字幕阅读"
+    }
+  },
+  "limits": [
+    "沿用既有参考原帧和阅读账本，未声明本轮新看完整视频",
+    "参考观察不证明原作者shader参数",
+    "此条尚未完成自有素材重建与迁移"
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "id": "hesperides-winter-wedding-v1",
+  "scope": "Stage-only material and lighting study; duet integration pending",
+  "themes": ["snow", "wedding", "love"],
+  "normal_strength": 0.6,
+  "architecture_tint": [0.58, 0.64, 0.78, 1.0],
+  "bench_tint": [0.55, 0.6, 0.78, 1.0],
+  "local_ao_strength": 0.18,
+  "local_ao_distance": 0.35,
+  "roughness_minimum": 0.24,
+  "fabric_roughness_minimum": 0.55,
+  "window_mode": "transparent_without_glints",
+  "hide_authored_fake_godrays": true,
+  "exposure": 0.0,
+  "look": "AgX - Medium High Contrast",
+  "world_strength": 0.65,
+  "lights": [
+    {"name": "winter window key", "location": [-12, 8, 16], "target": [0, 10, 1], "watts": 17000, "color": [0.48, 0.67, 1.0], "size": 7},
+    {"name": "ivory window fill", "location": [12, -8, 13], "target": [0, 2, 1], "watts": 7000, "color": [1.0, 0.83, 0.67], "size": 8},
+    {"name": "altar glow", "location": [0, 35, 12], "target": [0, 22, 2], "watts": 10000, "color": [0.58, 0.66, 1.0], "size": 6},
+    {"name": "soft front bounce", "location": [0, -35, 12], "target": [0, 10, 4], "watts": 3500, "color": [0.72, 0.78, 1.0], "size": 12}
+  ],
+  "cameras": [
+    {"name": "hall", "location": [2.5, -37, 4.8], "target": [0, 28, 9], "lens": 30},
+    {"name": "aisle", "location": [-3.5, -32, 3.4], "target": [0, 25, 6.5], "lens": 30}
+  ],
+  "bloom": {"threshold": 2.5, "strength": 0.1, "size": 0.06},
+  "volume_density": 0.0015,
+  "probe_resolution": [6, 12, 6],
+  "probe_bake_samples": 128,
+  "candle_watts": 70,
+  "snow_status": "not added to indoor stage study"
+}

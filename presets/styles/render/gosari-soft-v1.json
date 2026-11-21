@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "id": "gosari-soft-render-v1",
+  "reference_status": "Inspired by observed Pretty Girl frames; not author settings",
+  "ramp_interpolation": "EASE",
+  "ramp_positions": [0, 0.65],
+  "palette": {
+    "skin": [[0.96, 0.96, 1.05], [1.07, 1.10, 1.21]],
+    "eye": [[0.99, 0.99, 1], [1.04, 1.04, 1.04]],
+    "ink": [[0.52, 0.47, 0.61], [0.67, 0.63, 0.72]],
+    "hair": [[0.48, 0.52, 0.76], [0.97, 0.99, 1.04]],
+    "trim": [[0.53, 0.52, 0.68], [1.04, 1.00, 0.96]],
+    "cloth": [[0.56, 0.57, 0.78], [1.00, 0.99, 1.04]],
+    "fur": [[0.80, 0.82, 0.94], [1.02, 1.01, 1.04]]
+  },
+  "saturation": {"skin": 0.80, "eye": 1.08, "ink": 1.08, "hair": 1.08, "trim": 1.08, "cloth": 1.08, "fur": 1.08},
+  "value": {"skin": 1.05},
+  "edge_rgb": [0.25, 0.28, 0.45],
+  "edge_width_scale": 1.0,
+  "lights": {
+    "Key softbox": {"color": [1.0, 0.88, 0.80], "energy": 170},
+    "Tutorial | rim light": {"color": [0.55, 0.70, 1.0], "energy": 100}
+  },
+  "bloom": {"Threshold": 0.8, "Strength": 0.14, "Size": 0.08}
+}

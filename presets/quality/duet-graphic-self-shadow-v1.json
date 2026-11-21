@@ -1,0 +1,9 @@
+{
+  "id": "duet-graphic-self-shadow-v1",
+  "width_relative_to_grounded_v1": {"face": 1.25, "skin": 1.25, "hair": 1.45, "cloth": 1.4, "trim": 1.25, "fur": 1.18, "other": 1.2, "features": 1.0},
+  "physical_response": {"low": 0.18, "high": 0.28, "body_floor": 0.60, "hair_floor": 0.70, "skin_body_floor": 0.68, "face_floor": 0.68},
+  "actor_key_size": 0.65,
+  "face_probe_normal": "posed-head-forward",
+  "ink_color": [0.002, 0.002, 0.004],
+  "notes": ["Relative vertex-weight change preserves source material and vertex-width design; not uniform screen pixel width", "Real EEVEE diffuse-to-RGB occlusion replaces the unsupported Goo cast-shadow path; SDF remains upstream", "Threshold measured from unclipped actor-light AOV; faces no longer nearly immune to actual shadow", "Do not apply this to emissive eyes, mouth interior or line feature textures"]
+}

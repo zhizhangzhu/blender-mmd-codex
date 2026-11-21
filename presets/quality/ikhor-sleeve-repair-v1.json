@@ -1,0 +1,200 @@
+{
+  "id": "ikhor-sleeve-repair-v1",
+  "pmx": "D:/codex/output/MMD-Ikhor-Model-v1/source/Ikhor/Ikhor.pmx",
+  "pmx_sha256": "ebba744cee847c16cfe5be037e7464d4f701c8edb2f5033e7de5730bd6654a52",
+  "native": "D:/codex/output/MMD-Ikhor-Model-v1/motion-v1/native-import-30fps.blend",
+  "portable": "D:/codex/output/MMD-Ikhor-Model-v1/motion-v1/physics-v3/Ikhor_Hina_Portable.blend",
+  "portable_sha256": "f864ad0efa936e3e1dde9462bdf42a0245d00158180b3b3c49ee5acf79cc5a4f",
+  "source_master": "D:/codex/output/MMD-Aksiniya-Ikhor-Wedding-v1/production-v4/Franken_Aksiniya_Ikhor_Bold_Wedding.blend",
+  "source_master_sha256": "283acdf2f1063fae32b0ed49caed07952706ff4d7b9ed1675490fa7ad021a0c1",
+  "armature": "Ikhor | armature",
+  "output_dir": "D:/codex/output/MMD-Ikhor-Sleeve-Repair-v1",
+  "temp_dir": "D:/codex/temp/MMD-Ikhor-Sleeve-Repair-v1",
+  "focus_frame": 4290,
+  "review_frames": [
+    4140,
+    4439
+  ],
+  "guard_frames": [
+    4139,
+    4441
+  ],
+  "native_frame_formula": "imported Blender 30fps = 330 + (output60 - 1) / 2; source VMD = imported frame - 1",
+  "sleeve_bones": [
+    "Bone_Sleeve01_L",
+    "Bone_Sleeve01_L錘",
+    "Bone_Sleeve02_L",
+    "Bone_Sleeve02_L錘",
+    "Bone_Sleeve01_R",
+    "Bone_Sleeve01_R錘",
+    "Bone_Sleeve02_R",
+    "Bone_Sleeve02_R錘"
+  ],
+  "near_bones": [
+    "Bone_Sleeve01_L",
+    "Bone_Sleeve01_L錘",
+    "Bone_Sleeve01_R",
+    "Bone_Sleeve01_R錘"
+  ],
+  "weighted_sleeve_bones": [
+    "Bone_Sleeve01_L",
+    "Bone_Sleeve02_L",
+    "Bone_Sleeve01_R",
+    "Bone_Sleeve02_R"
+  ],
+  "diagnostic_modes": [
+    "native_sleeves",
+    "translations_only",
+    "proximal_native"
+  ],
+  "post_physics_rig": {
+    "source_attempt": "local-v2",
+    "method": "explicit rig correction after genuine local physics; not a pure solver result",
+    "angle_formula": "native-relative output angle = limit*tanh(source_angle/limit), retaining the physical rotation axis and time signal",
+    "near_limit_degrees": 4,
+    "far_limit_degrees": 10,
+    "soft_limit_sides": [
+      "R"
+    ],
+    "weighted_bone_location": "native forearm-relative position; no wrist-follow displacement is applied in v6",
+    "production_status": "Only the R tanh amplitude limit is active; wrist-follow search is diagnostic and not applied",
+    "wrist_follow_applied": false,
+    "wrist_follow_state": "not adopted; windows=[]; search_gains/axis/max-angle fields are retained diagnostic inputs only",
+    "wrist_follow_max_degrees": 25,
+    "wrist_pivot_max_translation": 0.02,
+    "swing_axis": "normalize(cross(elbow-to-wrist axis,wrist-to-hand axis)), recomputed each frame in armature space; no fixed Euler or inherited wrist roll",
+    "search_gains": [
+      -0.5,
+      -0.25,
+      0,
+      0.125,
+      0.25,
+      0.375,
+      0.5,
+      0.75,
+      1.0
+    ],
+    "windows": [],
+    "scope": "Bone stage changes only the eight named sleeve bones. A separate single left corrective is explicitly recorded; main wrist/forearm pose, Basis, UV, skin weights, materials and camera are unchanged."
+  },
+  "corrective_prototype": {
+    "shape_name": "Sleeve repair | L wrist flex clearance",
+    "side": "L",
+    "reference_frame": 4220,
+    "allowed_region": "Only the original573 vertices with sum(weights Bone_Sleeve01_L,Bone_Sleeve02_L)>0.001",
+    "clearance_candidates": [
+      0.0012,
+      0.0018,
+      0.0025
+    ],
+    "maximum_world_displacement": 0.012,
+    "maximum_iteration_step": 0.003,
+    "iterations": 12,
+    "smoothing": 0.18,
+    "uv_seam_sync": "Equal rest positions rounded1e-6 and equal bone weights share the corrective delta; no topology weld or UV edit",
+    "intersection_refinement": "Small normal offsets on residual intersecting cloth triangle neighborhoods, accepted only when exact intersection/ray score improves",
+    "window_frames": [
+      4210,
+      4218,
+      4225,
+      4233
+    ],
+    "window_values": [
+      0,
+      1,
+      1,
+      0
+    ],
+    "window_interpolation": "C1 smoothstep Bezier: horizontal FREE handles at1/3 interval, CONSTANT extrapolation",
+    "method": "Nearest skin normal vertex projection plus barycentric cloth-interior contact samples; spatial smoothing and inverse linear skinning to rest-relative shape. Actual triangle intersections decide the result, not vertex outside tests."
+  },
+  "collision_mask_semantics": "MMD Tools collision_group_mask True means ignore. Original sleeve ignores body group0. New skin contact group6 and weighted sleeve group4 do not mutually ignore.",
+  "preserved_failed_attempts": [
+    {
+      "directory": ".",
+      "reason": "Mode1 reanchor retained sleeve-root translation and visible right wrist sidewall intersections"
+    },
+    {
+      "directory": "local-v2",
+      "reason": "Mode2 fixed4290 but the full-range scan and uncorrected production views still identified wrist-root faults. Native scan also flags L4219-4225; no-physics control alone did not establish visual clearance."
+    }
+  ],
+  "local_solver": {
+    "simulation_source_frames": [
+      2279,
+      2550
+    ],
+    "export_source_frames": [
+      2399,
+      2550
+    ],
+    "substeps": 12,
+    "iterations": 60,
+    "near_angle_degrees": 2,
+    "far_angle_degrees": 8,
+    "weighted_sleeve_binding_mode": "2",
+    "collision_group": 6,
+    "margin": 0.001,
+    "contact_geometry": "source skin convex hulls, not enlarged circular capsules",
+    "skin_material": "手",
+    "palm_axial_range": [
+      -0.015,
+      0.06
+    ],
+    "palm_min_wrist_weight": 0.25,
+    "contact_shrink": 0.96,
+    "forearm_inset_elbow": 0.015,
+    "forearm_inset_wrist": 0.006,
+    "keep_rigid_indices": [
+      16,
+      20,
+      71,
+      72,
+      73,
+      74,
+      75,
+      76,
+      77,
+      78
+    ],
+    "anchor_bones": {
+      "016_右手首": "Bone_ForearmTwistA01_R",
+      "020_左手首": "Bone_ForearmTwistA01_L"
+    },
+    "contact_scope": "Kinematic convex approximations of actual skin forearm/palm vertex clouds. Fingers remain separately articulated and are not certified by these contact shapes. Requires mesh intersection and all-frame visual checks."
+  },
+  "limits": [
+    "No full 514-body rebuild before local cause is demonstrated.",
+    "Diagnostic sleeve ablations are not an accepted repair or visual penetration pass.",
+    "Preserve the source hand/forearm pose, every non-sleeve curve, Basis, topology, UV, original shapes, materials and weights; only the explicitly fixed new left corrective may deform its independently rebuilt source vertex region.",
+    "Any accepted candidate still requires all 300 frames with both cuffs, chest and hands inspected."
+  ],
+  "candidate_v6_scope": {
+    "project": "D:/codex/output/MMD-Aksiniya-Ikhor-Wedding-v1/production-v6/Franken_Aksiniya_Ikhor_Bold_Wedding.blend",
+    "project_sha256": "201e2632befaf0a16f17b931963626a91bbc6b8f7e58d148d5047298a530de01",
+    "body_actor_sha256": "eeb88de34d39e65be66fcdb0f741f4e81498d2b2d7901ef7932ba3a06c664779",
+    "body_action": "Ikhor | sleeve diagnostic | fitted_repair",
+    "corrective_data": "D:/codex/output/MMD-Ikhor-Sleeve-Repair-v1/corrective-L-preview-v1/corrective-data.json",
+    "corrective_data_sha256": "0ea6bf3741c7c18be36902da5b574aae7cefc7027ce39e29761cc0457b97bea7",
+    "corrective_shape_name": "Sleeve repair | L wrist flex clearance",
+    "corrective_shape_count": 1,
+    "corrective_allowed_vertices": 573,
+    "corrective_nonzero_vertices": 398,
+    "active_components": [
+      "local-v2 14-body/8-dynamic Mode2 solve",
+      "R native-relative tanh amplitude4/10degrees",
+      "one L corrective398 nonzero vertices in573 and C1 window"
+    ],
+    "unexecuted_proposal": "Three-shape multi-pose union was stopped before execution after production-shader visual review; not part of v6 and no generated candidate data.",
+    "review_snapshot_2026_11_14": {
+      "delta_checks_passed": 49,
+      "geometry_guard_frames_completed": 303,
+      "wrist_pngs_rendered": 600,
+      "side_by_side_video_frames_decoded": 300,
+      "manual_contact_sheet_timepoints_per_side": 33,
+      "interpretation": "Root plus independent review examined the contact sheets, hand references and key800px production-shader images; the original opaque sidewall break/fold was not observed. Raw303 intersection flags remain and are not a zero-intersection or full manual-frame claim.",
+      "native_beauty300_completed_at_snapshot": false,
+      "status": "Candidate review evidence only; not a newly completed beauty movie or user art approval. Current delivery state remains in catalog/current_state.json."
+    }
+  }
+}

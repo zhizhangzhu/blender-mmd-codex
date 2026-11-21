@@ -1,0 +1,387 @@
+{
+  "id": "goo-eye-hair-stage-v1",
+  "runtime": "presets/runtime/goo-v1.json",
+  "source": "D:\\codex\\output\\MMD-Goo-Window-Wrap-v1\\production-v3\\Franken_Duet_Goo_Window_Wrap.blend",
+  "source_sha256": "ed81e7325e7ef3f47fe80dd63b53e1e0e713f7d2b93b9dd4e6e296195a350d85",
+  "project": "D:\\codex\\output\\MMD-Jelly-Eyes-v1\\production-v16\\Franken_Duet_Goo_Eye_Hair_Stage.blend",
+  "project_sha256": "4e189d6b098e3bfa61e45325bb7f4456d8e9a8fb8943549b5a1e89a6bbe1c4e2",
+  "jelly": [
+    {
+      "actor": "aksiniya",
+      "object": "阿克西妮娅2_mesh",
+      "eye_bones": {
+        "l": "目.L",
+        "r": "目.R",
+        "both": ""
+      },
+      "blink_sources": [
+        [
+          "まばたき",
+          "BOTH"
+        ],
+        [
+          "ウィンク",
+          "BOTH"
+        ],
+        [
+          "ウィンク右",
+          "R"
+        ],
+        [
+          "ｳｨﾝｸ２",
+          "BOTH"
+        ],
+        [
+          "ウィンク２右",
+          "R"
+        ],
+        [
+          "笑い",
+          "BOTH"
+        ]
+      ],
+      "bake_range": [
+        4080,
+        4441
+      ],
+      "modifiers": 2,
+      "masked_vertices": 122,
+      "allowed_vertices": 122,
+      "amplitude": 0.9,
+      "size": 0.14,
+      "damping": 0.5,
+      "move": 0.035
+    },
+    {
+      "actor": "ikhor",
+      "object": "Ikhor | mesh | Ikhor_mesh",
+      "eye_bones": {
+        "l": "目.L",
+        "r": "目.R",
+        "both": ""
+      },
+      "blink_sources": [
+        [
+          "まばたき-",
+          "BOTH"
+        ],
+        [
+          "ウィンク",
+          "BOTH"
+        ],
+        [
+          "ウィンク右",
+          "R"
+        ],
+        [
+          "ウィンク２",
+          "BOTH"
+        ],
+        [
+          "ウィンク２右",
+          "R"
+        ],
+        [
+          "笑い-",
+          "BOTH"
+        ],
+        [
+          "じと目",
+          "BOTH"
+        ]
+      ],
+      "bake_range": [
+        4080,
+        4441
+      ],
+      "modifiers": 2,
+      "masked_vertices": 644,
+      "allowed_vertices": 644,
+      "amplitude": 0.9,
+      "size": 0.14,
+      "damping": 0.5,
+      "move": 0.035
+    }
+  ],
+  "eyes": [
+    {
+      "actor": "aksiniya",
+      "material": "目",
+      "painted_gain": 2.6,
+      "roughness": 0.055
+    },
+    {
+      "actor": "ikhor",
+      "material": "目.002",
+      "painted_gain": 2.6,
+      "roughness": 0.055
+    },
+    {
+      "actor": "ikhor",
+      "material": "目2",
+      "painted_gain": 2.6,
+      "roughness": 0.055
+    }
+  ],
+  "hair": [
+    {
+      "material": "前鬓",
+      "native_form_weight": 0.75,
+      "native_visibility_mapping_min": 0.32,
+      "additional_eye_transparency": 0
+    },
+    {
+      "material": "前鬓+",
+      "native_form_weight": 0.75,
+      "native_visibility_mapping_min": 0.32,
+      "additional_eye_transparency": 0
+    },
+    {
+      "material": "呆毛",
+      "native_form_weight": 0.75,
+      "native_visibility_mapping_min": 0.32,
+      "additional_eye_transparency": 0
+    },
+    {
+      "material": "鬓",
+      "native_form_weight": 0.75,
+      "native_visibility_mapping_min": 0.32,
+      "additional_eye_transparency": 0
+    },
+    {
+      "material": "鬓+",
+      "native_form_weight": 0.75,
+      "native_visibility_mapping_min": 0.32,
+      "additional_eye_transparency": 0
+    },
+    {
+      "material": "鬓.001",
+      "native_form_weight": 0.75,
+      "native_visibility_mapping_min": 0.32,
+      "additional_eye_transparency": 0
+    }
+  ],
+  "face_shadows": [
+    {
+      "material": "颜",
+      "skin_gain": 1.16,
+      "native_visibility_mapping_min": 0.5899999737739563,
+      "original_face_form_retained": true,
+      "verified_model_face_sdf": true
+    },
+    {
+      "material": "颜.001",
+      "skin_gain": 1.16,
+      "native_visibility_mapping_min": 0.6399999856948853,
+      "original_face_form_retained": true,
+      "verified_model_face_sdf": false
+    }
+  ],
+  "glow": [
+    {
+      "node": "Goo window wrap | tight white edge bloom",
+      "strength": 1.3,
+      "size": 0.022
+    },
+    {
+      "node": "Goo window wrap | soft outer edge diffusion",
+      "strength": 0.58,
+      "size": 0.065
+    }
+  ],
+  "rim_glow_source": "ContourRim excludes hair-band radiance",
+  "eye_peek": {
+    "status": "deferred by user",
+    "additional_transparency": 0,
+    "original_pmx_alpha_preserved": true
+  },
+  "stage": [
+    {
+      "material": "Stage art | ground only | mat_10.001",
+      "kind": "neutral-stone-only procedural marble",
+      "old_atlas_and_mask_retained": true
+    },
+    {
+      "material": "mat_20.008",
+      "kind": "neutral-stone-only procedural marble",
+      "old_atlas_and_mask_retained": true
+    },
+    {
+      "material": "mat_20.012",
+      "kind": "neutral-stone-only procedural marble",
+      "old_atlas_and_mask_retained": true
+    },
+    {
+      "material": "mat_24.001",
+      "kind": "authored-mask metal",
+      "old_atlas_and_mask_retained": true
+    },
+    {
+      "material": "mat_115.001",
+      "kind": "existing candle emission",
+      "before": 50.0,
+      "after": 60.0
+    }
+  ],
+  "candle_lights": [
+    {
+      "name": "Hall | warm candle.013",
+      "watts": 42.47999954223633
+    },
+    {
+      "name": "Hall | warm candle.012",
+      "watts": 42.47999954223633
+    },
+    {
+      "name": "Hall | warm candle.011",
+      "watts": 42.47999954223633
+    },
+    {
+      "name": "Hall | warm candle.010",
+      "watts": 42.47999954223633
+    },
+    {
+      "name": "Hall | warm candle.009",
+      "watts": 42.47999954223633
+    },
+    {
+      "name": "Hall | warm candle.008",
+      "watts": 42.47999954223633
+    },
+    {
+      "name": "Hall | warm candle.007",
+      "watts": 42.47999954223633
+    },
+    {
+      "name": "Hall | warm candle.006",
+      "watts": 42.47999954223633
+    },
+    {
+      "name": "Hall | warm candle.005",
+      "watts": 42.47999954223633
+    },
+    {
+      "name": "Hall | warm candle.004",
+      "watts": 42.47999954223633
+    },
+    {
+      "name": "Hall | warm candle.003",
+      "watts": 42.47999954223633
+    },
+    {
+      "name": "Hall | warm candle.002",
+      "watts": 42.47999954223633
+    },
+    {
+      "name": "Hall | warm candle.001",
+      "watts": 42.47999954223633
+    },
+    {
+      "name": "Hall | warm candle",
+      "watts": 42.47999954223633
+    }
+  ],
+  "caption_profile": "presets/typography/duet-blue-gold-wedding-v1.json",
+  "validation_scope": "Saved project independent reopen; native600 shadow files; actual rendered UV/visibility AOV comparison; original actions/cameras and eye-only GN preserved; final MP4 QA skipped by user",
+  "face_skin_gain": 1.16,
+  "face_nose_form": {
+    "kind": "model-local UV authored mask",
+    "warm_multiplier": [
+      1,
+      0.74,
+      0.6
+    ],
+    "amount": 0.6
+  },
+  "hair_value_ramps": {
+    "interval": [
+      0.32,
+      0.72
+    ],
+    "silver_dark_multiplier": [
+      0.62,
+      0.68,
+      0.85
+    ],
+    "gold_dark_multiplier": [
+      0.72,
+      0.58,
+      0.43
+    ]
+  },
+  "animated_face_hair_shadows": {
+    "frames": [
+      4140,
+      4439
+    ],
+    "algorithm": "actual deformed hair BVH / three head-key samples / face UV raster; local distance and forehead permission",
+    "distance_limit_m": 0.055,
+    "maximum_coverage": 0.88,
+    "size": [
+      512,
+      512
+    ],
+    "elapsed_seconds": 54.63378559995908,
+    "portable_relative_paths": true
+  },
+  "study": "docs/STAR_RAIL_FACE_HAIR_STUDY_2026_11_17.md",
+  "head_key_lights": [
+    {
+      "name": "Eye hair v1 | aksiniya directional head key",
+      "position": [
+        -1.0835078954696655,
+        -0.6855023503303528,
+        2.646728515625
+      ],
+      "watts": 175,
+      "size": 0.3,
+      "group": "EyeHair head key | aksiniya"
+    },
+    {
+      "name": "Eye hair v1 | ikhor directional head key",
+      "position": [
+        -0.02491632103919983,
+        -0.6223654747009277,
+        2.5124330520629883
+      ],
+      "watts": 175,
+      "size": 0.3,
+      "group": "EyeHair head key | ikhor"
+    }
+  ],
+  "shadow_budget": {
+    "before": "2048",
+    "after": "2048",
+    "reason": "Full150-frame render exposed8192-page overflow; pool already at build maximum, bound overly fine light shadow texels",
+    "shadow_precision_bounds": [
+      {
+        "light": "Goo window wrap | parallel window daylight",
+        "before": 0.004999999888241291,
+        "after": 0.00800000037997961
+      },
+      {
+        "light": "Goo window wrap | large window 0",
+        "before": 0.009999999776482582,
+        "after": 0.014999999664723873
+      },
+      {
+        "light": "Goo window wrap | large window 1",
+        "before": 0.009999999776482582,
+        "after": 0.014999999664723873
+      },
+      {
+        "light": "Eye hair v1 | aksiniya directional head key",
+        "before": 0.003000000026077032,
+        "after": 0.003000000026077032
+      },
+      {
+        "light": "Eye hair v1 | ikhor directional head key",
+        "before": 0.003000000026077032,
+        "after": 0.003000000026077032
+      }
+    ],
+    "global_resolution_scale_before": 1.0,
+    "global_resolution_scale_after": 0.75,
+    "light_energy_transform_materials_animation_changed": false
+  }
+}

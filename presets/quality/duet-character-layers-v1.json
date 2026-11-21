@@ -1,0 +1,21 @@
+{
+  "id": "duet-character-layers-v1",
+  "input_revision": "duet-graphic-self-shadow-v1",
+  "illumination": {"low": 0.025, "high": 0.24, "ao_distance": 0.035, "ao_strength": 0.10},
+  "lighting": {"key_watts": 450, "key_size": 0.85, "fill_watts": 18, "fill_size": 3.0, "rim_watts": 95, "rim_size": 1.6},
+  "palettes": {
+    "face": [[0.74,0.62,0.64,1],[0.96,0.91,0.90,1],[1.025,1.015,1.01,1]],
+    "skin": [[0.66,0.53,0.51,1],[0.94,0.88,0.84,1],[1.02,1.0,0.98,1]],
+    "hair": [[0.53,0.59,0.75,1],[0.88,0.91,0.98,1],[1.02,1.015,1.025,1]],
+    "gold_hair": [[0.68,0.60,0.47,1],[0.96,0.91,0.79,1],[1.05,1.02,0.95,1]],
+    "cloth": [[0.48,0.51,0.65,1],[0.87,0.89,0.97,1],[1.02,1.015,1.035,1]],
+    "leather": [[0.46,0.43,0.48,1],[0.87,0.83,0.86,1],[1.015,0.99,1.015,1]],
+    "gold": [[0.58,0.54,0.48,1],[0.94,0.88,0.75,1],[1.04,1.015,0.94,1]],
+    "trim": [[0.56,0.57,0.68,1],[0.91,0.91,0.96,1],[1.025,1.015,1.01,1]],
+    "fur": [[0.69,0.73,0.83,1],[0.94,0.96,1.0,1],[1.04,1.025,1.02,1]]
+  },
+  "hair": {"exponent": 44, "silver_strength": 0.09, "gold_strength": 0.075},
+  "physical": {"cloth_mix": 0.12, "leather_mix": 0.16, "gold_roughness_min": 0.20, "gold_roughness_max": 0.46, "gold_metallic": 0.88},
+  "eyes": {"iris_saturation": 1.06, "coat_roughness": 0.14, "normal_strength": 0.65},
+  "limits": ["MMD Color retains source MMD color composition and is not asserted to be raw game albedo", "Native diffuse is a combined illumination signal, not an isolated shadow pass", "SDF and native response are combined before one palette; one short-range AO and one directional hair highlight follow", "No original game Lightmap is invented for Aether", "Requires actual static and temporal verification before production promotion"]
+}

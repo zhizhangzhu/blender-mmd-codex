@@ -1,0 +1,64 @@
+{
+  "schema_version": 1,
+  "id": "external-toon-shadow-2026-11-13",
+  "read_date": "2026-11-13",
+  "topic": "从Nilo作者公开简化示例学习脸部形体、投影和多灯的计算次序",
+  "evidence_stage": "external-text-and-source-read-only",
+  "deduplication": {
+    "scope": "docs/research中的md、json；rg检索Nilo、脸影、自阴影、MooaToon、UTS、MToon",
+    "finding": "已有MooaToon/UTS/MToon研究；未找到Nilo阅读记录。本次不复读这些已读外部来源。"
+  },
+  "sources": [
+    {
+      "id": "nilo_readme",
+      "author": "Colin Leung / NiloCat（GitHub：ColinLeung-NiloCat）",
+      "title": "UnityURPToonLitShaderExample README",
+      "url": "https://github.com/ColinLeung-NiloCat/UnityURPToonLitShaderExample/blob/master/README.md",
+      "actual_read_url": "https://raw.githubusercontent.com/ColinLeung-NiloCat/UnityURPToonLitShaderExample/master/README.md",
+      "version": "2026-11-13读取master；开头标明教学示例面向Unity2022.3LTS；未取得commit SHA，不声称固定版本快照",
+      "read_scope": "web实际读到开头About this repository与完整版介绍/支持版本段落；没有阅读完整1339行README或观看链接视频。",
+      "fact": "公开代码是MIT许可的简化教学示例；README的完整版展示与闭源NiloToonURP不等于本次读到的实现。"
+    },
+    {
+      "id": "nilo_lighting_equation",
+      "author": "Colin Leung / NiloCat",
+      "title": "SimpleURPToonLitOutlineExample_LightingEquation.hlsl",
+      "url": "https://github.com/ColinLeung-NiloCat/UnityURPToonLitShaderExample/blob/master/SimpleURPToonLitOutlineExample_LightingEquation.hlsl",
+      "actual_read_url": "https://raw.githubusercontent.com/ColinLeung-NiloCat/UnityURPToonLitShaderExample/master/SimpleURPToonLitOutlineExample_LightingEquation.hlsl",
+      "version": "2026-11-13读取master；raw正文与GitHub文件页交叉核对，相关公式一致；commit SHA未核定",
+      "read_scope": "web实际读完整文件正文：ShadeGI、ShadeSingleLight、ShadeEmission、CompositeAllLightResults；未读Shared.hlsl、URP库函数内部或完整版源码。"
+    }
+  ],
+  "new_technical_points": [
+    {
+      "id": "face-remap-before-shadowmap",
+      "inputs": "世界法线N、逐灯方向L、色阶中点/宽度、occlusion、脸标记、该灯shadowAttenuation与接收强度",
+      "source_fact": "ShadeSingleLight先对N·L作smoothstep并乘occlusion；脸标记把该因子映射到0.5–1，之后才乘阴影贴图的接收因子，再插值暗色/亮色。",
+      "responsibility": "软化脸部几何形体的暗区，同时在后一步保留该灯的实际遮挡；这不是SDF，也不是把最终脸亮度设为0.5。",
+      "project_transfer_inference": "当前鼻口易出现几何暗斑，可借鉴先处理形体、后保留刘海/手部遮挡的顺序；不能给现有综合探针直接加亮度下限，否则连遮挡也会一起抬亮。",
+      "ordinary_blender_5_2_eevee_limit": "本库现行Diffuse→Shader to RGB已经合并形体、各灯、间接光和遮挡，不能从该结果还原独立shadowAttenuation；本次未实现对应分离接口。"
+    },
+    {
+      "id": "per-light-budget-before-composite",
+      "inputs": "各灯独立N·L/阴影、距离衰减、灯色、是否附加灯",
+      "source_fact": "每灯先独立计算色阶；距离衰减上限4，灯色各通道限制到0–1；附加灯返回贡献乘0.25，主灯乘1。",
+      "responsibility": "限制近距离灯与多盏加算补光把角色推得过亮；这些常量是教学美术选择，不是物理定律。",
+      "project_transfer_inference": "当前补光可能洗平脸部色带，应在独立主光/补光贡献进入合成前控制预算；0.25不能直接换算为现有450/18/95W灯组比例。",
+      "ordinary_blender_5_2_eevee_limit": "普通材质节点的综合探针没有这里的逐灯循环/主附加标记；光链接只能控制照射关系，不能自动提供每灯颜色与投影因子。"
+    },
+    {
+      "id": "constant-ambient-and-max-composite",
+      "inputs": "SampleSH(0)、间接光最低色、occlusion、主光/附加光结果、albedo与emission",
+      "source_fact": "ShadeGI取常量环境项、设最低色，AO在间接项只用一半权重；最终按RGB分量取间接光与直接光总和的较大值，再乘albedo、加emission。",
+      "responsibility": "环境底光与直接光避免无条件相加，减少环境方向细节和AO黑死；RGB逐分量max并不保证任意彩灯下色相不变。",
+      "project_transfer_inference": "可研究把环境底光从当前综合受光中分开，比较加算与max对婚礼冷暖、脸暗部和材质色的影响；不可把示例albedo直接等同已有PMX/球面合成的MMD Color。",
+      "ordinary_blender_5_2_eevee_limit": "常量环境色和max数学可用普通节点表达，但现有探针已混合间接/直接光，不能事后精确拆分；没有新测SH等价性、彩灯变化或动态稳定性。"
+    }
+  ],
+  "untested_boundaries": [
+    "仅学到公开教学公式，不代表取得NiloToonURP完整版、原神或参考作者着色实现。",
+    "所有针对当前双人的迁移判断均为推论；本次未运行Unity、Blender、试渲染或动态/独立重开验证。",
+    "普通EEVEE限制依据本库已记录综合探针的实测边界；本次没有新增Blender官方文档阅读或引擎源码核验。",
+    "未修改生产工程、参数、catalog、学习队列；没有新增插件、脚本或浏览器/视频会话。"
+  ]
+}

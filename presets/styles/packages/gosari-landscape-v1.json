@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "id": "gosari-landscape-v1",
+  "family": "gosari542",
+  "aspect": "landscape",
+  "render": "../render/gosari-soft-v1.json",
+  "post": "../post/gosari-soft-v1.json",
+  "typography": "../../typography/landscape-study.json",
+  "camera": {"strategy": "landscape", "lens_mm": 50, "dof": true, "fstop": 4, "shot_heights": [1.62, 1.25], "target_offsets": [0.40, -0.28], "yaw": [-0.16, 0.18]},
+  "layout": {"sticker_width_height": 0, "border_height": 0, "border_inset_height": 0.025, "character_margin_height": 0.0037, "face_margin_height": 0.00926}
+}

@@ -1,0 +1,506 @@
+{
+  "date": "2026-11-18",
+  "guide": "docs/GOO_MMD_EIGHT_FOUNDATIONS_2026_11_18.md",
+  "scope": "First reading pass through all eight agreed subjects; not all software features mastered",
+  "new_blender_manual_articles": [
+    {
+      "id": "01-geometry",
+      "url": "https://docs.blender.org/manual/en/5.2/render/shader_nodes/input/geometry.html",
+      "status": "acquired_public_body",
+      "characters": 1420,
+      "sha256": "3051ebc6755c55374cb30dc8b55c3f50da7b79df04f5bace1f620dcc13827d37",
+      "body_path": "D:/codex/temp/Goo-MMD-Eight-Foundations-2026-11-18/01-geometry.txt",
+      "body_sha256": "93877b356094a9beb7a8933f406478d6c84530eaa57edad3aed13d4e166034ce",
+      "reading_scope": "Extracted article text read; embedded images/example blend files not comprehensively inspected",
+      "version": "Online Blender5.2 manual; not proof every option exists in community binary"
+    },
+    {
+      "id": "01-normal-map",
+      "url": "https://docs.blender.org/manual/en/5.2/render/shader_nodes/vector/normal_map.html",
+      "status": "acquired_public_body",
+      "characters": 1760,
+      "sha256": "98daaf502721ecf99a45ca368826c8300c75ca167c44f2130a6543a072d24e0f",
+      "body_path": "D:/codex/temp/Goo-MMD-Eight-Foundations-2026-11-18/01-normal-map.txt",
+      "body_sha256": "3f91e8ee5f1b7827712eddf07e17a6e323262fc1964c6c94bd02ee25b216fe7e",
+      "reading_scope": "Extracted article text read; embedded images/example blend files not comprehensively inspected",
+      "version": "Online Blender5.2 manual; not proof every option exists in community binary"
+    },
+    {
+      "id": "02-linked-duplicate",
+      "url": "https://docs.blender.org/manual/en/5.2/scene_layout/object/editing/duplicate_linked.html",
+      "status": "acquired_public_body",
+      "characters": 2629,
+      "sha256": "f92f29e0946f0a97ee0165594194365132ba2006965a3ca523485c8ba73e0203",
+      "body_path": "D:/codex/temp/Goo-MMD-Eight-Foundations-2026-11-18/02-linked-duplicate.txt",
+      "body_sha256": "06f910f4721215cc63348252e114d5a9d13807d377662c49a30d7614dde2e989",
+      "reading_scope": "Extracted article text read; embedded images/example blend files not comprehensively inspected",
+      "version": "Online Blender5.2 manual; not proof every option exists in community binary"
+    },
+    {
+      "id": "02-apply",
+      "url": "https://docs.blender.org/manual/en/5.2/scene_layout/object/editing/apply.html",
+      "status": "acquired_public_body",
+      "characters": 7801,
+      "sha256": "6d764876330af162bd73fb503d9951cfd04f70a06648c49b521974fa9f251059",
+      "body_path": "D:/codex/temp/Goo-MMD-Eight-Foundations-2026-11-18/02-apply.txt",
+      "body_sha256": "a710b7bbf8b6d7b8a5aac69a605f1db5d0f1d95dcab5db887585c768bd9653fa",
+      "reading_scope": "Extracted article text read; embedded images/example blend files not comprehensively inspected",
+      "version": "Online Blender5.2 manual; not proof every option exists in community binary"
+    },
+    {
+      "id": "02-modifier-stack",
+      "url": "https://docs.blender.org/manual/en/5.2/modeling/modifiers/introduction.html",
+      "status": "acquired_public_body",
+      "characters": 8492,
+      "sha256": "8a76fa600dc536003aeed347155b29673b01350a38c69aa742f7e8706330cab3",
+      "body_path": "D:/codex/temp/Goo-MMD-Eight-Foundations-2026-11-18/02-modifier-stack.txt",
+      "body_sha256": "c7eea3530bdedd3a104ee3376517b58e085babde8f0bea2906ae751009dd6e66",
+      "reading_scope": "Extracted article text read; embedded images/example blend files not comprehensively inspected",
+      "version": "Online Blender5.2 manual; not proof every option exists in community binary"
+    },
+    {
+      "id": "03-image-texture",
+      "url": "https://docs.blender.org/manual/en/5.2/render/shader_nodes/textures/image.html",
+      "status": "acquired_public_body",
+      "characters": 4369,
+      "sha256": "a69eeb9b0ecca96b7cedb9f80d9a4368e9e0819efb60f2599e47cb6b17c716bd",
+      "body_path": "D:/codex/temp/Goo-MMD-Eight-Foundations-2026-11-18/03-image-texture.txt",
+      "body_sha256": "ee78d9ac56f3774c8d996b86a938ae3d8fafb45aab72fe1e23376d5979ff0cdf",
+      "reading_scope": "Extracted article text read; embedded images/example blend files not comprehensively inspected",
+      "version": "Online Blender5.2 manual; not proof every option exists in community binary"
+    },
+    {
+      "id": "04-light-common",
+      "url": "https://docs.blender.org/manual/en/5.2/render/lights/light_object.html",
+      "status": "acquired_public_body",
+      "characters": 8901,
+      "sha256": "c63e7ae7839c1768a41485128bcd9c9bd9e8f88bde5fbc5d95f63673342f1e37",
+      "body_path": "D:/codex/temp/Goo-MMD-Eight-Foundations-2026-11-18/04-light-common.txt",
+      "body_sha256": "59b0f0e1c05d09b9ea2fc4ec36fa8cdf6299be32e06ecb8537bdf5baf759cad3",
+      "reading_scope": "Extracted article text read; embedded images/example blend files not comprehensively inspected",
+      "version": "Online Blender5.2 manual; not proof every option exists in community binary"
+    },
+    {
+      "id": "05-color-ramp",
+      "url": "https://docs.blender.org/manual/en/5.2/render/shader_nodes/converter/color_ramp.html",
+      "status": "acquired_public_body",
+      "characters": 1442,
+      "sha256": "7a1c72597ab0a5cf197faf6d4619f968aad41cb4ad513274272da25f49976bf9",
+      "body_path": "D:/codex/temp/Goo-MMD-Eight-Foundations-2026-11-18/05-color-ramp.txt",
+      "body_sha256": "897cad3c5605f08fe58223020c6c43dee61675dfd917bfe17a86638097bd6340",
+      "reading_scope": "Extracted article text read; embedded images/example blend files not comprehensively inspected",
+      "version": "Online Blender5.2 manual; not proof every option exists in community binary"
+    },
+    {
+      "id": "05-map-range",
+      "url": "https://docs.blender.org/manual/en/5.2/render/shader_nodes/converter/map_range.html",
+      "status": "acquired_public_body",
+      "characters": 1482,
+      "sha256": "001195ae85e6ff79f00840a59a87b1129d591295255528934b92f9d9a0cd9763",
+      "body_path": "D:/codex/temp/Goo-MMD-Eight-Foundations-2026-11-18/05-map-range.txt",
+      "body_sha256": "99eb87b7c430b4231f2a41c62cbaed78eee6ba68879e2fb0a3f03bf0a57e13d4",
+      "reading_scope": "Extracted article text read; embedded images/example blend files not comprehensively inspected",
+      "version": "Online Blender5.2 manual; not proof every option exists in community binary"
+    },
+    {
+      "id": "05-layer-weight",
+      "url": "https://docs.blender.org/manual/en/5.2/render/shader_nodes/input/layer_weight.html",
+      "status": "acquired_public_body",
+      "characters": 749,
+      "sha256": "b06c6e1e89d3a77b69a051582a21f66d9eaa4acb0c0d52ee01396be1f4bf8869",
+      "body_path": "D:/codex/temp/Goo-MMD-Eight-Foundations-2026-11-18/05-layer-weight.txt",
+      "body_sha256": "2c26aae93ea0e231f3d5f2fb2ae96ec3210045277b096bc5f78613e887b3b678",
+      "reading_scope": "Extracted article text read; embedded images/example blend files not comprehensively inspected",
+      "version": "Online Blender5.2 manual; not proof every option exists in community binary"
+    },
+    {
+      "id": "05-principled",
+      "url": "https://docs.blender.org/manual/en/5.2/render/shader_nodes/shader/principled.html",
+      "status": "acquired_public_body",
+      "characters": 10587,
+      "sha256": "03de2dce99694c9a53c54388d99016c10524975052df5cf19e9944a0e57bed53",
+      "body_path": "D:/codex/temp/Goo-MMD-Eight-Foundations-2026-11-18/05-principled.txt",
+      "body_sha256": "5743aa14cade790634ef19865e37929f6d5a92e6329ccad729563f874480cc0c",
+      "reading_scope": "Extracted article text read; embedded images/example blend files not comprehensively inspected",
+      "version": "Online Blender5.2 manual; not proof every option exists in community binary"
+    },
+    {
+      "id": "06-armature",
+      "url": "https://docs.blender.org/manual/en/5.2/modeling/modifiers/deform/armature.html",
+      "status": "acquired_public_body",
+      "characters": 3491,
+      "sha256": "626228caa96f816b188563fbf0bfce59c737fa381a893050f9f12303989563ad",
+      "body_path": "D:/codex/temp/Goo-MMD-Eight-Foundations-2026-11-18/06-armature.txt",
+      "body_sha256": "88eb1306ab8d6fa3b551d1391dea7f41b41980df0f0bb5a6793cc30814b82e45",
+      "reading_scope": "Extracted article text read; embedded images/example blend files not comprehensively inspected",
+      "version": "Online Blender5.2 manual; not proof every option exists in community binary"
+    },
+    {
+      "id": "06-bone-relations",
+      "url": "https://docs.blender.org/manual/en/5.2/animation/armatures/bones/properties/relations.html",
+      "status": "acquired_public_body",
+      "characters": 6767,
+      "sha256": "40198a2811defa47177a5518ada89b70aa733f11251fd2c67da0f8fecab2436c",
+      "body_path": "D:/codex/temp/Goo-MMD-Eight-Foundations-2026-11-18/06-bone-relations.txt",
+      "body_sha256": "5578e176fab420e49d65899c18f364ceeec62819cf03258f9edecee2842ae7d3",
+      "reading_scope": "Extracted article text read; embedded images/example blend files not comprehensively inspected",
+      "version": "Online Blender5.2 manual; not proof every option exists in community binary"
+    },
+    {
+      "id": "06-ik",
+      "url": "https://docs.blender.org/manual/en/5.2/animation/constraints/tracking/ik_solver.html",
+      "status": "acquired_public_body",
+      "characters": 3983,
+      "sha256": "0f4bd553477854dfac08d9efd8cdaeec383bb22f23ac19ee26d9ddfe76772cca",
+      "body_path": "D:/codex/temp/Goo-MMD-Eight-Foundations-2026-11-18/06-ik.txt",
+      "body_sha256": "e7f161913cd84699dbe088e6579368122a33a3b7f2e228f0c5f30b4cad223897",
+      "reading_scope": "Extracted article text read; embedded images/example blend files not comprehensively inspected",
+      "version": "Online Blender5.2 manual; not proof every option exists in community binary"
+    },
+    {
+      "id": "06-shape-workflow",
+      "url": "https://docs.blender.org/manual/en/5.2/animation/shape_keys/workflow.html",
+      "status": "acquired_public_body",
+      "characters": 3137,
+      "sha256": "37bd1595604c81bc238de2c47a49daf80dce25e5ec0e1c202052e168b8132d37",
+      "body_path": "D:/codex/temp/Goo-MMD-Eight-Foundations-2026-11-18/06-shape-workflow.txt",
+      "body_sha256": "152c58b5c11887be1b3ba0961302aa5ea7cb2cdd0547c482c891d89fe6bbed86",
+      "reading_scope": "Extracted article text read; embedded images/example blend files not comprehensively inspected",
+      "version": "Online Blender5.2 manual; not proof every option exists in community binary"
+    },
+    {
+      "id": "07-rigid-world",
+      "url": "https://docs.blender.org/manual/en/5.2/physics/rigid_body/world.html",
+      "status": "acquired_public_body",
+      "characters": 2981,
+      "sha256": "52b68d9ece67e97e841cf13bbbe2e625f13be9d4faff849a33484f2fc6e6874a",
+      "body_path": "D:/codex/temp/Goo-MMD-Eight-Foundations-2026-11-18/07-rigid-world.txt",
+      "body_sha256": "b25e429785f16be4ecae59b23ae34f8a470992499dd55e8bf7d0819c106063c8",
+      "reading_scope": "Extracted article text read; embedded images/example blend files not comprehensively inspected",
+      "version": "Online Blender5.2 manual; not proof every option exists in community binary"
+    },
+    {
+      "id": "07-rigid-collision",
+      "url": "https://docs.blender.org/manual/en/5.2/physics/rigid_body/properties/collisions.html",
+      "status": "acquired_public_body",
+      "characters": 3304,
+      "sha256": "dbe3d669342d0e2dcd351c16eedc4d4f65e8dbac8f23059a0a49b7226cb467dd",
+      "body_path": "D:/codex/temp/Goo-MMD-Eight-Foundations-2026-11-18/07-rigid-collision.txt",
+      "body_sha256": "c2acb34e79d63df75a31d7d13a5c0fa56d90c922006491527496312c3f5d663e",
+      "reading_scope": "Extracted article text read; embedded images/example blend files not comprehensively inspected",
+      "version": "Online Blender5.2 manual; not proof every option exists in community binary"
+    },
+    {
+      "id": "07-rigid-dynamics",
+      "url": "https://docs.blender.org/manual/en/5.2/physics/rigid_body/properties/dynamics.html",
+      "status": "acquired_public_body",
+      "characters": 1093,
+      "sha256": "01fe0142d9d97e4876476009aabc4ea6346a3ed5a2a82ef5a6018c8179c38cae",
+      "body_path": "D:/codex/temp/Goo-MMD-Eight-Foundations-2026-11-18/07-rigid-dynamics.txt",
+      "body_sha256": "c15cf98dc22a6b47b3f3ab011730163d9e9bfbdc44f8600a6090d7932b3df64b",
+      "reading_scope": "Extracted article text read; embedded images/example blend files not comprehensively inspected",
+      "version": "Online Blender5.2 manual; not proof every option exists in community binary"
+    },
+    {
+      "id": "07-generic-spring",
+      "url": "https://docs.blender.org/manual/en/5.2/physics/rigid_body/constraints/types/generic_spring.html",
+      "status": "acquired_public_body",
+      "characters": 1829,
+      "sha256": "6c5289f8176078a7241184c26f981bb0e2029cf5170423f4eb7967edf4bd5c9c",
+      "body_path": "D:/codex/temp/Goo-MMD-Eight-Foundations-2026-11-18/07-generic-spring.txt",
+      "body_sha256": "93fd8f9504fb9e9dd148cb0c1e6d180db63889d66b2ebdf1eb9db92b4030a386",
+      "reading_scope": "Extracted article text read; embedded images/example blend files not comprehensively inspected",
+      "version": "Online Blender5.2 manual; not proof every option exists in community binary"
+    },
+    {
+      "id": "08-alpha-over",
+      "url": "https://docs.blender.org/manual/en/5.2/compositing/types/color/mix/alpha_over.html",
+      "status": "acquired_public_body",
+      "characters": 1989,
+      "sha256": "1e3316631910ed0477fbec4d7f8d0e0ed08cf2ba7ee49246dd4f85bc5ec759d0",
+      "body_path": "D:/codex/temp/Goo-MMD-Eight-Foundations-2026-11-18/08-alpha-over.txt",
+      "body_sha256": "b5d5c720f912a976b2329dfdc138503b7489ffc55ab142f5ad5cf721259ce898",
+      "reading_scope": "Extracted article text read; embedded images/example blend files not comprehensively inspected",
+      "version": "Online Blender5.2 manual; not proof every option exists in community binary"
+    },
+    {
+      "id": "08-alpha-convert",
+      "url": "https://docs.blender.org/manual/en/5.2/compositing/types/converter/alpha_convert.html",
+      "status": "acquired_public_body",
+      "characters": 1051,
+      "sha256": "24337a17bd610c235216cbe79c54dc142a5d7b77b14f1692986f92c6859ff3b0",
+      "body_path": "D:/codex/temp/Goo-MMD-Eight-Foundations-2026-11-18/08-alpha-convert.txt",
+      "body_sha256": "ae7cf4128f2afc8f9378dd0cff17eb9ac86c00b807df74120f87e8b9ab9b8111",
+      "reading_scope": "Extracted article text read; embedded images/example blend files not comprehensively inspected",
+      "version": "Online Blender5.2 manual; not proof every option exists in community binary"
+    },
+    {
+      "id": "08-glare",
+      "url": "https://docs.blender.org/manual/en/5.2/compositing/types/filter/glare.html",
+      "status": "acquired_public_body",
+      "characters": 5444,
+      "sha256": "fe50033289c2b45cc708cfbcc45d82f66dac74adf44119d511aa79a051ae4058",
+      "body_path": "D:/codex/temp/Goo-MMD-Eight-Foundations-2026-11-18/08-glare.txt",
+      "body_sha256": "0b3825fefe2aec7f8829c0688174520daaa517d0f6264e333b4927ca9c7d5507",
+      "reading_scope": "Extracted article text read; embedded images/example blend files not comprehensively inspected",
+      "version": "Online Blender5.2 manual; not proof every option exists in community binary"
+    },
+    {
+      "id": "08-node-groups",
+      "url": "https://docs.blender.org/manual/en/5.2/interface/controls/nodes/groups.html",
+      "status": "acquired_public_body",
+      "characters": 16426,
+      "sha256": "035736ab68abb9a6ae9df53fd7e22f77a6152add869d512782fa86593a8652c8",
+      "body_path": "D:/codex/temp/Goo-MMD-Eight-Foundations-2026-11-18/08-node-groups.txt",
+      "body_sha256": "9ff1f2198eca83f69bc4e0e117566d69dac0c9846a7b969fa7e1c99314426ce3",
+      "reading_scope": "Extracted article text read; embedded images/example blend files not comprehensively inspected",
+      "version": "Online Blender5.2 manual; not proof every option exists in community binary"
+    },
+    {
+      "id": "01-vector-transform",
+      "url": "https://docs.blender.org/manual/en/5.2/render/shader_nodes/vector/transform.html",
+      "status": "public_html_acquired",
+      "article_extracted": true,
+      "characters": 470128,
+      "body_path": "D:/codex/temp/Goo-MMD-Eight-Foundations-2026-11-18/01-vector-transform.txt",
+      "body_sha256": "2c53370dbf0694f1b5b9e33e457211e447bfedd48b80a97c7874a115352bcf71",
+      "reading_scope": "Extracted article text read; embedded images/example blend files not comprehensively inspected",
+      "version": "Online Blender5.2 manual; not proof every option exists in community binary"
+    },
+    {
+      "id": "06-actions",
+      "url": "https://docs.blender.org/manual/en/5.2/animation/actions.html",
+      "characters": 12107,
+      "status": "acquired_public_body",
+      "body_path": "D:/codex/temp/Goo-MMD-Eight-Foundations-2026-11-18/06-actions.txt",
+      "body_sha256": "843b0c7f7ccb113df16fcd34c01edd7cf6c772bab1b62883676bbabbb6a10816",
+      "reading_scope": "Extracted article text read; embedded images/example blend files not comprehensively inspected",
+      "version": "Online Blender5.2 manual; not proof every option exists in community binary"
+    }
+  ],
+  "author_guides": [
+    {
+      "url": "https://www.bilibili.com/opus/1167803398842482693",
+      "author": "小峰峰哥l",
+      "reading_scope": "Full available text via web reader including generation/mapping/presets/metarig/constraints; no video playback, not all images inspected",
+      "private_html": "D:/codex/temp/Goo-MMD-Eight-Foundations-2026-11-18/mmr-author-guide.html",
+      "sha256": "c3ed3c4270cb649b7755f9f632d4703a3806b8e607367ee3a5ccc1500dfb5711"
+    },
+    {
+      "url": "https://github.com/kafeijk/mmd_kafei_tools/blob/master/README.md",
+      "reading_scope": "Full short author README; points to Yuque, not full feature documentation"
+    }
+  ],
+  "reused_reading": [
+    {
+      "url": "https://www.dillongoostudios.com/gooengine-features",
+      "evidence": "docs/research/GOO_BLENDER_FOUNDATIONS_2026_11_18.json",
+      "scope": "Existing official feature notes, not new full-page read count"
+    },
+    {
+      "url": "https://github.com/MMD-Blender/blender_mmd_tools#readme",
+      "scope": "Earlier author README reading reused; public project scope and solver limitations"
+    },
+    {
+      "url": "https://docs.blender.org/manual/en/5.2/modeling/modifiers/normals/normal_edit.html",
+      "scope": "Prior actual article reading reused, new runtime control added"
+    }
+  ],
+  "installed_source_sections": [
+    {
+      "path": "D:/codex/workspace/goo-engine/5.2.1-community/portable/scripts/addons/mmd_tools/operators/fileio.py",
+      "sha256": "4f8cad309ba86c1c9b23f4fcef1a0972efce28e73ce49784adad9d4e8c7cdd01",
+      "reading_scope": "ImportVmd selected target expansion, mapping/scale/margin, pose/action/NLA/scene flags, execute path",
+      "installed_version_not_upstream_head": true
+    },
+    {
+      "path": "D:/codex/workspace/goo-engine/5.2.1-community/portable/scripts/addons/mmd_tools/core/material.py",
+      "sha256": "96093845fe7b14a70abf3312bbd85d50f92e72c88a2935d8b203393d173564d1",
+      "reading_scope": "sphere modes295-330; shader construction/fallback556-627, MMDShaderDev669-780; material conversion excerpts",
+      "installed_version_not_upstream_head": true
+    },
+    {
+      "path": "D:/codex/workspace/goo-engine/5.2.1-community/portable/scripts/addons/mmd_tools/core/bone.py",
+      "sha256": "c98e9ae80c84b35bb5c75b06808fb03fcfd13bd8578fa706b837b8e26ce7fe8e",
+      "reading_scope": "additional transform cleanup/setup381-440",
+      "installed_version_not_upstream_head": true
+    },
+    {
+      "path": "D:/codex/workspace/goo-engine/5.2.1-community/portable/scripts/addons/mmd_kafei_tools/properties/transfer_preset_properties.py",
+      "sha256": "f0281b8aa0d5982a83ca8bf9346b9bc2affca275f1fc188ca7e6d6d831de2979",
+      "reading_scope": "transfer direction and material/UV/weight/modifier/normal/face options",
+      "installed_version_not_upstream_head": true
+    },
+    {
+      "path": "D:/codex/workspace/goo-engine/5.2.1-community/portable/scripts/addons/mmd_kafei_tools/operaters/transfer_preset_operators.py",
+      "sha256": "3b75b954ea81a41d8216a287d5b0bc2027e10f3aed3daa98e94973a2b546fb59",
+      "reading_scope": "link_material965, coordinate-based weights/multislot material mapping and beginning of modifier transfer; not full operator audit",
+      "installed_version_not_upstream_head": true
+    },
+    {
+      "path": "D:/codex/workspace/goo-engine/5.2.1-community/portable/scripts/addons/Paperzhu_animehelper_extension/README.md",
+      "sha256": "298337b258ed852d96d74a46cb799eb417409919fd7a8c6e3ee8a98e83e06b70",
+      "reading_scope": "Full bundled README; package-local guidance, not independently verified author website",
+      "installed_version_not_upstream_head": true
+    },
+    {
+      "path": "D:/codex/workspace/goo-engine/5.2.1-community/portable/scripts/addons/Paperzhu_animehelper_extension/toon_shadow.py",
+      "sha256": "48b525dd320a17d56245800f0a108330974716fdc6a0724e6c9352ef0b0e3cbd",
+      "reading_scope": "group construction, light response, supported Surface detection and migration/application entry excerpts1-326; not full file audit",
+      "installed_version_not_upstream_head": true
+    },
+    {
+      "path": "D:/codex/workspace/goo-engine/5.2.1-community/portable/scripts/addons/MikuMikuRig/__init__.py",
+      "sha256": "5e141854a0def6d264cc31e0e787e683e52e50430b37ae16fded95bd7f3a18cd",
+      "reading_scope": "bundled version and author metadata only",
+      "installed_version_not_upstream_head": true
+    }
+  ],
+  "access_limits": [
+    {
+      "url": "https://www.yuque.com/laibeikafeizaishuo/xgbdou/qtop1t7zzts9nzgv",
+      "result": "401 authentication required; no bypass; detailed body not read"
+    },
+    {
+      "url": "https://mmd-blender.fandom.com/wiki/MMD_Tools",
+      "result": "403 in direct request / web reader unavailable; body not read"
+    },
+    {
+      "url": "https://github.com/XiaoFFGe/MikuMikuRig",
+      "result": "GitHub connector/web main README unavailable; author Bilibili text obtained; no guessed fork substituted"
+    },
+    {
+      "url": "https://docs.blender.org/manual/en/5.2/interface/controls/templates/color_ramp.html",
+      "result": "Network/file/SSL errors on bounded requests; only search excerpt read, excluded from full article count"
+    }
+  ],
+  "modules": [
+    {
+      "id": "B1",
+      "topic": "Coordinates and normals",
+      "status": "official_guide_read_and_mesh_normal_static_reopen_verified",
+      "remaining": "Real character head spaces, deformed meshes, target parenting and local vertex groups"
+    },
+    {
+      "id": "B2",
+      "topic": "Data blocks and modifier stack",
+      "status": "official_guide_read_and_sharing_and_stack_native_data_controls_verified",
+      "remaining": "Real character stack and all nested dependencies"
+    },
+    {
+      "id": "B3",
+      "topic": "MMD material and texture semantics",
+      "status": "official_image_guide_read_and_installed_mmd_source_sections_checked",
+      "remaining": "New model per-material mapping and Morph interactions"
+    },
+    {
+      "id": "B4",
+      "topic": "Goo lighting and shadows",
+      "status": "official_light_guide_read_with_prior_goo_controls_reused",
+      "remaining": "Full current-light parameter matrix and character face cast/self isolation"
+    },
+    {
+      "id": "B5",
+      "topic": "Basic toon material design",
+      "status": "official_material_node_guides_read",
+      "remaining": "Per-material still controls, no claim of achieved art quality"
+    },
+    {
+      "id": "B6",
+      "topic": "MMD rig and animation evaluation",
+      "status": "official_rig_action_guides_and_installed_import_source_read",
+      "remaining": "No new retargeting or real-character Action/Slot changes"
+    },
+    {
+      "id": "B7",
+      "topic": "Rigid bodies joints cache",
+      "status": "official_guides_read_and_prior_physics_notes_crosschecked",
+      "remaining": "No new physics simulation or enlarged dynamic verification"
+    },
+    {
+      "id": "B8",
+      "topic": "Compositing and plugin collaboration",
+      "status": "official_compositing_guides_author_mmr_article_and_package_source_read",
+      "remaining": "Kafei detailed guide unavailable; no new plugin production conversion or all-function certification"
+    }
+  ],
+  "new_native_controls": {
+    "version": "5.2.1 LTS",
+    "build_hash": "0051aee03764",
+    "normal_edit": {
+      "default-normal": {
+        "evaluated_vertex_max_difference": [
+          0.0,
+          0.0
+        ],
+        "mean_corner_normals": [
+          [
+            1.457286524422183e-07,
+            2.7245976033225986e-08,
+            3.1491506022520664e-09
+          ],
+          [
+            1.4558195713493525e-07,
+            2.732619726676207e-08,
+            3.3117624803595308e-09
+          ]
+        ]
+      },
+      "normal-edit": {
+        "evaluated_vertex_max_difference": [
+          0.0,
+          0.0
+        ],
+        "mean_corner_normals": [
+          [
+            4.49193132482038e-06,
+            -0.624857137397316,
+            0.5431042301983489
+          ],
+          [
+            4.86475278388674e-06,
+            -0.6248569837093807,
+            0.5431044035499254
+          ]
+        ]
+      },
+      "max_abs_linear_rgb_difference_left_half_lambert": 0.5382080078125,
+      "max_abs_linear_rgb_difference_right_normal_debug": 0.5054931640625
+    },
+    "data_sharing": {
+      "object_copy_shares_mesh": true,
+      "object_copy_shares_material": true,
+      "mesh_and_material_copies_still_share_nested_group": true,
+      "explicit_group_copy_is_independent": true
+    },
+    "modifier_order": {
+      "orders": [
+        [
+          "DISPLACE",
+          "ARMATURE"
+        ],
+        [
+          "ARMATURE",
+          "DISPLACE"
+        ]
+      ],
+      "max_evaluated_vertex_distance": 0.5000000190789816,
+      "setup": "Single fully weighted cube, one bone rotated 60deg on Y, local X Displace strength0.5/no texture/midlevel0"
+    },
+    "production_loaded": false,
+    "video_created": false,
+    "limits": "Factory sphere/cube controls only; no skinning of real characters, animation, physical simulation or plugin conversion"
+  },
+  "independent_reopen": {
+    "max_abs_linear_rgba_difference": 0.0,
+    "passed": true,
+    "production_loaded": false
+  },
+  "production_loaded": false,
+  "production_modified": false,
+  "new_character_render": false,
+  "video_created": false,
+  "eye_see_through": "still_deferred",
+  "all_basics_mastered": false,
+  "reference_quality_achieved": false
+}

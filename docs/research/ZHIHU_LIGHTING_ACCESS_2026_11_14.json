@@ -1,0 +1,22 @@
+{
+  "date": "2026-11-14",
+  "url": "https://www.zhihu.com/question/50627652",
+  "status": "body-not-obtained",
+  "user_context": "User already logged in and opened the question in the in-app browser; user separately supplied photographer/course names.",
+  "observed": [
+    "Initial in-app getTab by URL timed out; kernel reset.",
+    "Browser inventory succeeded and showed the named Zhihu question in the in-app provider.",
+    "Binding the observed in-app tab ID timed out; kernel reset.",
+    "Public web open returned403 Forbidden.",
+    "One provider fallback createBrowserTab in Chrome timed out; kernel reset.",
+    "Final browser inventory succeeded but contained no Zhihu tab in either provider. No new research tab was confirmed created. No user tab was closed by the agent."
+  ],
+  "page_title_scope": "Question title about recommendations for photographic lighting tutorials/lighting diagrams was seen in inventory only; no answer body.",
+  "answer_text_read": false,
+  "screenshot_of_answer_seen": false,
+  "login_or_permissions_failure_proven": false,
+  "captcha_or_access_control_bypassed": false,
+  "private_messages_or_account_data_copied": false,
+  "fallback": "Read actual original Strobist/Joe McNally text, user-supplied tutorial JSON and local videos; see the portrait lighting study. No claim that the Zhihu page was learned in full.",
+  "guide": "docs/PORTRAIT_LIGHTING_AND_SHADOW_STUDY.md"
+}

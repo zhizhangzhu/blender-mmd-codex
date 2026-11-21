@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "entries": [
+    {
+      "id": "fixture-a",
+      "profile": "presets/benches/fixture-a.json",
+      "kind": "original_tool_fixture",
+      "scope": "two rigs, unrelated first rig, same bone names, six static cases"
+    },
+    {
+      "id": "fixture-b",
+      "profile": "presets/benches/fixture-b.json",
+      "kind": "original_tool_fixture",
+      "scope": "renamed rigs/materials, changed camera and placement; six static cases"
+    },
+    {
+      "id": "native53-duet-v3",
+      "profile": "presets/benches/native53-duet-v3.json",
+      "kind": "unfinished_native53_diagnostic",
+      "scope": "explicit two-actor map and source4290 controls; no migration/art completion"
+    },
+    {
+      "id": "goo-duet-stage-response-v1",
+      "profile": "presets/benches/goo-duet-stage-response-v1.json",
+      "kind": "bounded_goo_artdirection",
+      "scope": "Original829f frozen source, two actors and98stage meshes;4290/sourceDOF, baseline+two response/MatCap designoptions; user approval pending"
+    },
+    {
+      "id": "goo-duet-artdirection-candidate-v1",
+      "profile": "presets/benches/goo-duet-artdirection-candidate-v1.json",
+      "kind": "verified_goo_static_candidate_baseline",
+      "scope": "fad1fdf5 candidate only4290; expected controls updated to saved strong_stage values; disabledGlow switches omitted; no doubleapply"
+    }
+  ],
+  "limits": "Explicit execution required; profiles are scoped diagnostics, not approved production recipes"
+}

@@ -1,0 +1,16 @@
+{
+  "date": "2026-11-17",
+  "guide": "docs/CITLALI_WARM_FRINGE_SHADOW_STUDY.md",
+  "source_video_url": "https://www.bilibili.com/video/BV1xCTe64EEu/",
+  "local_frame_read_seconds": 8,
+  "frame_resolution": [
+    720,
+    1280
+  ],
+  "private_frame": "D:/codex/temp/citlali-fringe-study-2026-11-17/reference-8s.jpg",
+  "reading_scope": "One locally extracted frame and user screenshot; no original author shader or whole-video analysis",
+  "implementation": "Static4290 only; narrow frontal artistic contact-shadow, not author original shader; no video",
+  "project": "D:\\codex\\output\\MMD-Citlali-Fringe-Shadow-v1\\production-v3\\Franken_Citlali_Fringe_Shadow_Still.blend",
+  "project_sha256": "10dcd973b57b24f8db99b8d250e8acd957171ef0b0cd7bef805e00a6314d7574",
+  "output_policy": "stills only; video requires explicit new request"
+}

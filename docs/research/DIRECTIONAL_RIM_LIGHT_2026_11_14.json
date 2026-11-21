@@ -1,0 +1,204 @@
+{
+  "schema_version": 1,
+  "date": "2026-11-14",
+  "status": "external-primary-body-and-selected-source-reading-only",
+  "purpose": "回应猪猪希望打光与轮廓光更明亮、人物层次更突出：学习如何分别控制边缘亮度、覆盖宽度、方向、材质许可与暗侧保留。",
+  "scope": {
+    "production_blend_opened_or_changed": false,
+    "preset_or_catalog_changed": false,
+    "render_or_visual_comparison_generated": false,
+    "shader_port_implemented": false,
+    "new_dependency_installed": false,
+    "browser_or_video_opened": false,
+    "external_access": "web工具读取官方/作者HTML正文与选定源码符号；未下载视频、图片包、完整仓库或模型。",
+    "only_file_written": "docs/research/DIRECTIONAL_RIM_LIGHT_2026_11_14.json",
+    "supersession": "本轮用户希望更明亮；旧参考账本中减弱青rim的建议属于当时比较，不能覆盖本轮意图。更亮应由新对照检验，不预先等同扩大整圈覆盖。"
+  },
+  "deduplication": {
+    "searched": "rg检索docs/research、docs与人物手册的UTS、MooaToon、MToon、Nilo、rim、边缘光、轮廓光，并定向检索ControlScreenSpaceRimlights、ControlLightingOfCharactersAndScenes、Rimlight.html、HoyoToon、Poiyomi、Roystan。",
+    "ledgers_read": [
+      "docs/research/NPR_PRIMARY_STUDY_2026_11_13.json",
+      "docs/research/TEXT_NPR_SOURCE_DISCOVERY.json",
+      "docs/research/MATERIAL_RESPONSE_STUDY.json",
+      "docs/research/EXTERNAL_MATERIAL_LIGHTING_2026_11_13.json"
+    ],
+    "already_known_not_new": [
+      "MooaToon头发高光许可、偏移与暗区抑制",
+      "MToon描边的世界/屏幕单位与Blender自动转换风险",
+      "Nilo教学示例的脸影/多灯合成",
+      "Emission输出与Glow、实际照亮场景不同",
+      "本地参考上的RGB彩边不能全部解释成物理轮廓光"
+    ],
+    "new_scope": "此前账本未发现本轮Rimlight专页、MooaToon屏幕边缘/人物场景照明专页、Poiyomi深度rim专页或HoyoToon rimlighting符号的实读记录；UTS同文件的高光段曾读，本轮只把新的rim段记作增量。",
+    "boundary": "未声称检索所有历史私人缓存。"
+  },
+  "sources": [
+    {
+      "id": "unity_uts_rim_doc",
+      "title": "Rim Light Settings",
+      "publisher": "Unity官方包文档",
+      "url": "https://docs.unity3d.com/Packages/com.unity.toonshader@0.11/manual/Rimlight.html",
+      "version": "页面元数据0.11.1-preview",
+      "access": "HTML正文实读，响应以text/plain呈现HTML",
+      "sections_read": ["开头N/view定义", "Rim Light Color/Level", "Adjust Rim Light Area", "Feather Off", "Light Direction", "Inverted Light Direction Rim Light", "Rim Light Mask/Level"],
+      "facts": [
+        "文档将颜色、标为Level的强度、覆盖区域、羽化、光向和反向光分成控制项。",
+        "灰度mask按线性数据解释，白允许、黑抑制；mask调节为正时可减少遮罩效果，不能假定黑色始终严格禁止。"
+      ],
+      "not_read_or_tested": ["独立图片/GIF画面", "Unity运行效果", "与master源码同版性"],
+      "new_value": "可把更亮与更宽、两侧全亮拆成可独立检查的目标；不能只凭参数界面名称判断数学职责。"
+    },
+    {
+      "id": "unity_uts_rim_source",
+      "title": "UCTS_DoubleShadeWithFeather.cginc的rim段",
+      "publisher": "Unity-Technologies官方仓库",
+      "url": "https://github.com/Unity-Technologies/com.unity.toonshader/blob/master/com.unity.toonshader/Runtime/Shaders/BuiltIn/UCTS_DoubleShadeWithFeather.cginc",
+      "actual_read_url": "https://raw.githubusercontent.com/Unity-Technologies/com.unity.toonshader/master/com.unity.toonshader/Runtime/Shaders/BuiltIn/UCTS_DoubleShadeWithFeather.cginc",
+      "revision": "master活分支，未固定提交；不宣称与0.11.1-preview文档同快照",
+      "access": "选定符号源码实读",
+      "symbols_read": ["_Set_RimLightMask_var", "_Is_LightColor_RimLight_var", "_RimArea_var", "_RimLightPower_var", "_Rimlight_InsideMask_var", "_VertHalfLambert_var", "_LightDirection_MaskOn_var", "_ApRimLightPower_var", "Set_RimLight", "_RimLight_var"],
+      "facts": [
+        "_RimLight_Power进入指数，改变法线/视角边缘响应曲线，并非单纯后乘亮度。InsideMask与羽化另改覆盖。",
+        "方向控制使用法线与灯向的HalfLambert；这段rim未使用真实投影可见性。",
+        "法线贴图影响、灯色影响和反向色可分别控制；最终rim再乘G通道mask加偏移后的饱和值。"
+      ],
+      "not_read_or_tested": ["URP/HDRP rim实现", "完整版本历史", "许可证细则", "实际编译或Blender移植"],
+      "new_value": "发现名称中的Power/Level可能改变宽度；后续增亮实验须新增或使用独立gain并固定边缘曲线。只原创归纳，不复制第三方源码。"
+    },
+    {
+      "id": "mooatoon_screen_rim",
+      "title": "Controlling Screen Space Rimlights",
+      "publisher": "MooaToon作者文档",
+      "url": "https://mooatoon.com/en/docs/Tutorial/ControlScreenSpaceRimlights",
+      "access": "页面全部短正文实读",
+      "sections_read": ["屏幕空间rim与N/view传统rim的差别", "材质参数与纹理/顶点色局部宽度", "BP_MooaLookDevTool全局参数入口"],
+      "facts": [
+        "作者把屏幕空间rim描述为不依赖表面曲率、宽度近似均匀，并允许纹理或顶点色控制局部宽度。"
+      ],
+      "not_read_or_tested": ["独立示意图", "UE shader源码", "深度采样方向/阈值公式", "实际像素宽度测量"],
+      "new_value": "源亮度增大无法解决因曲率而忽宽忽窄；若宽度才是问题，应另立屏幕空间实验。该短页没有给出完整深度算法，不补写成已读实现。"
+    },
+    {
+      "id": "mooatoon_character_scene_lighting",
+      "title": "Control Lighting of Characters and Scenes",
+      "publisher": "MooaToon作者文档",
+      "url": "https://mooatoon.com/en/docs/Tutorial/ControlLightingOfCharactersAndScenes",
+      "access": "正文实读；主要使用MooaToon Lighting至Character Indoor Lighting",
+      "sections_read": ["UE Default Lighting背景", "Diffuse/Specular Reflection", "Direct Lighting", "Indirect Lighting", "Separating the Lighting of Characters and Scenes", "Shadow Color First与GI First", "Character Indoor Lighting"],
+      "facts": [
+        "非黑Shadow Color可能被多盏灯重复贡献而使人物相对场景过亮；作者另设不同灯类型是否贡献暗侧颜色。",
+        "GI方向性、GI强度与Shadow Color职责不同；作者要求先确定暗侧主要由GI还是Shadow Color控制。",
+        "作者定制照明通道允许人物/场景分光而合并投影，另明确列出光追阴影等限制。"
+      ],
+      "not_read_or_tested": ["独立图像对照", "UE引擎代码", "本地礼堂灯组", "相应定制照明通道是否可在普通EEVEE等价复现"],
+      "new_value": "人物更明亮需要保留暗侧由谁负责；不能同时堆高所有补光、GI和艺术阴影色，也不直接抄作者UE的3.1415灯强。"
+    },
+    {
+      "id": "poiyomi_depth_rim",
+      "title": "Depth Rim Lighting",
+      "publisher": "Poiyomi作者项目文档",
+      "url": "https://www.poiyomi.com/10.0/shading/depth-rim-lighting",
+      "version": "10.0；页面显示2026-10-23更新",
+      "access": "页面参数正文实读",
+      "sections_read": ["Depth Buffer依赖", "Normal To Use/Rim Type", "Shape Control", "Light Direction", "Masking", "Color", "Blending"],
+      "facts": [
+        "深度rim依赖场景深度，单独列宽度、深度阈值、方向衰减、UV数据mask、颜色亮度与Emission。",
+        "可分别选择网格法线与含法线贴图的像素法线；mask为sRGB关闭的数据贴图。",
+        "灯色混合与底色混合、Add/Replace等合成方式不同，不由颜色相同便推定相同结果。"
+      ],
+      "not_read_or_tested": ["Shader源码", "深度缺失时运行表现", "DepthGet prefab", "VRChat/Unity或Blender运行"],
+      "new_value": "明确屏幕边缘形状、UV材质许可与亮度可以分开诊断；Unity的DepthGet不是Blender依赖解决方案。"
+    },
+    {
+      "id": "hoyotoon_depth_rim_source",
+      "title": "HoyoToonGenshin-common.hlsl: rimlighting",
+      "publisher": "HoyoToon社区实现作者仓库，非HoYoverse官方游戏源码",
+      "url": "https://github.com/Hoyotoon/HoyoToon/blob/main/Shaders/Genshin%20Impact/Includes/HoyoToonGenshin-common.hlsl",
+      "actual_read_url": "https://raw.githubusercontent.com/Hoyotoon/HoyoToon/main/Shaders/Genshin%20Impact/Includes/HoyoToonGenshin-common.hlsl",
+      "companion_read_url": "https://github.com/Hoyotoon/HoyoToon/blob/main/README.md",
+      "revision": "main活分支；未固定提交",
+      "access": "GetLinearZFromZDepth_WorksWithMirrors、rimlighting两分支与README Features/Rules实读",
+      "facts": [
+        "新分支在屏幕原点与偏移位置分别采线性深度，深度差经整形后乘独立方向/前后rim颜色项。",
+        "新分支偏移只改屏幕x，并含视角和相机深度补偿；不能把这份代码概括成任意灯向的完整2D偏移rim。",
+        "legacy分支含VRChat调参注释与多次饱和；计算出的局部rim_color在所读legacy返回路径未见应用，不据此宣称五材质色已实际生效。"
+      ],
+      "not_read_or_tested": ["调用点/最终Alpha合成", "深度pass覆盖透明物的完整行为", "extract_fov/fov_range实现", "shader属性默认值", "完整许可条款", "实际编译或移植"],
+      "new_value": "真正的offset rim需要深度与相机矩阵，不能只增强现有Facing；深度差只能证明屏幕几何分离，不是对背光灯的真实可见性。只原创归纳，不复制代码、游戏贴图或现成参数。"
+    }
+  ],
+  "local_source_reading": [
+    {
+      "path": "scripts/clean_aksiniya_materials.py",
+      "sha256": "09c5208f6545d7a7c25cbc996d6f0f90f68f0c168eb79acf8bbf122752d4cf9d",
+      "symbol": "_rim",
+      "finding": "已有方向许可和hair/body独立gain；Reference rim与Bold head/body分支同步进入各消费者/AOV。脸/皮肤不在该函数许可角色中。"
+    },
+    {
+      "path": "scripts/clean_ikhor_materials.py",
+      "sha256": "3d2be27eed32fbadc4730a6874dfb45c4cd98ad27897d68eafe24fca37090eac",
+      "symbol": "rim_change",
+      "finding": "power和strength分别编辑，受角色permission与rim模块控制；可针对强度单项验证。"
+    },
+    {
+      "path": "scripts/prepare_reference_transfer.py",
+      "sha256": "5a7f3f59e65992c7b4279636af3a307badb12c994ba16418398b6459fc52a60a",
+      "symbol": "add_rims",
+      "finding": "历史构建入口用N/view边缘乘方向点积和分类强度，SCREEN合到原Color，再写StageArtRim；不是直接材质读取实时背光灯的独立投影。该入口有固定输入约束，不运行。"
+    }
+  ],
+  "transfer_to_blender_5_2_emission_npr": {
+    "evidence_level": "基于已读源码与现有构建入口的可移植性判断，未在保存工程验证",
+    "low_dependency_candidate": "使用已存在的方向/材质许可与边缘形状，在独立副本只改边缘源的后乘gain；保留原MMD Color/Alpha、球面、SDF、材质闭包与主灯。先确认所有rim消费者及AOV位置，避免只改beauty而Glow源不一致。历史Reference分支将amount接SCREEN混合Fac，Fac不是HDR光强；须核对有效范围与钳位，不能把它盲目乘到大于1后宣称纯亮度控制。",
+    "direction_and_shadow": "rim方向来自向量许可；若需要它被另一角色/衣物挡住，必须另提供经核验的光源可见性。当前Diffuse综合受光包含多灯/法线/间接光，最多是艺术门控，不能标为纯投影。",
+    "material_policy": "头发、毛领、白外布、深色内衬、金属/宝石、脸手分别许可；优先在需要从背景分离的允许轮廓上增强。新mask为原创美术数据，不把现有lightmap任意通道当rim控制图。",
+    "light_color": "先保持原冷暖色相仅改线性强度，随后才能单独比较rim色与场景局部背光颜色。实际物理闭包和NPR Emission分开核验响应；增加场景灯并不保证艺术rim亮度随之增加。",
+    "screen_space_boundary": "若另做深度rim，先固定相机投影与深度定义并提供深度/法线/人物及材质mask。HLSL不能直接粘进普通EEVEE节点；尚未证明当前5.2节点/合成路径可等价提供上述接口。头发透明、双方遮挡、轮廓与背景接近深度、DOF/运动模糊均需另验。",
+    "brightness_width_caveat": "gain后乘保持上游标量形状不变，但显示变换、饱和和Glow可能扩大可见白边；因此需同时比较归一化rim形状与最终可见宽度，不能由公式保证感知恒宽。"
+  },
+  "single_switchable_experiment": {
+    "id": "brighten_permitted_directional_rim_only",
+    "performed": false,
+    "hypothesis": "在当前rim允许的发梢/背光衣缘上增加源强度，可能增强主体分离，同时保留主体暗侧与原边缘覆盖；不预先承诺更好看。",
+    "preconditions": [
+      "锁定当前Clean production-v2及其SHA，在新诊断副本核实现存节点、方向向量、各分类与AOV消费者；确认选定gain作用于rim线性颜色源或有效强度范围，排除混合Fac越界/中途饱和带来的覆盖改变。",
+      "静音所有继承的File Output，使用新诊断输出；不运行任何历史全量构建/打包入口。",
+      "固定4140与4290一远一近的同帧输入；正式选帧仍按实际构图检查覆盖，不由帧号保证都能看到全部材质。"
+    ],
+    "single_variable": "一个选定角色、一个材质类别的rim源后乘gain；每次只切换一个类别，形状power、阈值、方向、原色相与其他闭包保持一致。",
+    "own_diagnostic_values_not_source_recommendations": {"gain_relative_to_verified_current": [1.0, 1.5, 2.0]},
+    "bypass": "gain=1精确回到核验过的当前源值；可另以gain=0作该分支贡献诊断，不改其他rim。",
+    "fixed": ["主灯/补灯与场景", "曝光/显示变换", "原MMD Color/Alpha和球面", "SDF/AO及金属/布料闭包", "方向许可/法线来源", "rim power/覆盖mask", "舞台光弧隐藏状态"],
+    "outputs": [
+      "Glow关闭时的最终beauty与独立rim/AOV；以相同构图看线性源强度、归一化轮廓形状和显示后可见宽度。",
+      "恢复原Glow只作第二步同输入对照；记录新白边/雾化来自源还是Glow。",
+      "静态候选通过后，建议各24帧的固定光转头、固定人移动局部灯向/许可向量、相机轨道三种分开诊断；这些未执行。"
+    ],
+    "acceptance": [
+      "选定轮廓相对背景更易分离，原暗侧仍可辨，脸/皮肤与宝石保持独立许可。",
+      "后乘gain没有改变上游归一化rim形状；同时人工检查最终显示的宽度是否仍可接受。",
+      "材质纹理/褶皱、轮廓黑线和双方前后关系可辨；动态中无新增断裂、闪烁或整圈跳白。"
+    ],
+    "reject_if": [
+      "只在开启Glow时觉得更亮，但人物边缘被光晕吃掉或中央雾光更洗脸。",
+      "蓝青白边连成整圈，肤色/白布夹白，深色内衬与暗侧失去层次。",
+      "需要同时改power、曝光或全局补光才能得到候选，无法归因纯gain。",
+      "透明发片、双人交叠、肩袖接触处出现亮缝/漏光；方向门控被误当真实遮挡。",
+      "AOV与beauty使用不同的gain，字幕beauty缓存或Glow源未能同步。",
+      "只凭静帧、低清图或参数值就宣布动态和最终片段通过。"
+    ]
+  },
+  "other_read_but_not_used_as_core_evidence": [
+    {
+      "url": "https://roystan.net/articles/toon-shader/",
+      "scope": "4. Rim lighting及相邻上下文的作者教程正文实读",
+      "reason_not_core": "只作为基础N/view边缘再加灯向筛选的交叉核对；不能把作者的简化示例当BotW或当前角色Shader实现。未读其GitHub最终工程，也不采用文中未验证的阴影术语。"
+    }
+  ],
+  "promotion": {
+    "production_ready": false,
+    "quality_target_achieved": false,
+    "user_art_approval_obtained": false,
+    "boundary": "仅新增外部实读与一个未执行的可关闭实验；未修改生产工程、参数、catalog或恢复全曲渲染。"
+  }
+}

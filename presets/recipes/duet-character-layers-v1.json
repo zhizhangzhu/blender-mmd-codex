@@ -1,0 +1,62 @@
+{
+  "id": "duet-character-layers-v1",
+  "status": "verified-five-second-study",
+  "project": "D:\\codex\\output\\MMD-Character-Layer-Refinement-v1\\production-v2\\Franken_Duet_Character_Layers.blend",
+  "source": "D:\\codex\\output\\MMD-Duet-Shadow-Color-v1\\production-v3\\Franken_Duet_Grounded_Wedding.blend",
+  "character_profile": "presets/quality/duet-character-layers-v1.json",
+  "caption_profile": "presets/typography/duet-blue-gold-wedding-v1.json",
+  "cache": "D:\\codex\\temp\\Character-Layer-Refinement-v1\\final-cache-v1",
+  "video": "D:\\codex\\output\\MMD-Character-Layer-Refinement-v1\\captions-5s-v1\\Franken_Duet_5s_CharacterLayers_Wedding_REVIEW.mp4",
+  "without_captions_video": "D:\\codex\\output\\MMD-Character-Layer-Refinement-v1\\captions-5s-v1\\Franken_Duet_5s_CharacterLayers_NoCaptions.mp4",
+  "frames": [
+    4140,
+    4439
+  ],
+  "fps": 60,
+  "resolution": [
+    1920,
+    1080
+  ],
+  "audio_project": "presets/projects/franken-duet-full-v1.json",
+  "audio_start_seconds": 68.98333333333333,
+  "output_color_contract": {
+    "input": "Full-range display sRGB RGB24",
+    "matrix": "bt709",
+    "primaries": "bt709",
+    "transfer": "iec61966-2-1",
+    "range": "tv",
+    "hdr": false,
+    "meaning": "SDR PC-review output, preserving source sRGB transfer; not a Rec.709/BT.1886 grading master"
+  },
+  "controls": [
+    {
+      "layer": "lighting-off",
+      "mean_rgb_delta_255": 1.787423014640808,
+      "max_rgb_delta_255": 67.0
+    },
+    {
+      "layer": "ao-off",
+      "mean_rgb_delta_255": 0.07626189291477203,
+      "max_rgb_delta_255": 9.0
+    },
+    {
+      "layer": "hair-highlight-off",
+      "mean_rgb_delta_255": 0.06035542115569115,
+      "max_rgb_delta_255": 51.0
+    },
+    {
+      "layer": "cast-shadows-off",
+      "mean_rgb_delta_255": 2.3768675327301025,
+      "max_rgb_delta_255": 165.0
+    }
+  ],
+  "diagnostic_records": "D:\\codex\\output\\MMD-Character-Layer-Refinement-v1\\diagnostics-v3\\diagnostic-records.json",
+  "user_art_approval": false,
+  "limits": [
+    "限定同一双人模型、礼堂、灯组和五秒横屏；尚非全曲，待猪猪美术评价",
+    "MMD Color保留原模型合成，并非已提取纯游戏Albedo",
+    "综合Diffuse响应包含真实遮挡，但不是纯投影通道；Goo未运行",
+    "没有新增空的原游戏Lightmap或鸣潮HM/HN；并非游戏Shader完整移植",
+    "胸部适用性、动态检查边界和浏览器状态见独立报告"
+  ]
+}

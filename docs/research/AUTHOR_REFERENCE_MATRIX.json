@@ -1,0 +1,169 @@
+{
+  "schema_version": 1,
+  "as_of": "2026-11-13",
+  "purpose": "登记用户最新作者参考优先级、已有观察范围与新增署名线索，不替代现行工程状态",
+  "user_priority": {
+    "primary": "观海子",
+    "existing_reference": "Gosari542",
+    "new_supplementary_reference": "御手洗板蓝根",
+    "new_reference_user_description": "做原神动画",
+    "source": "current_conversation_user_instruction"
+  },
+  "work_performed": {
+    "local_records_reread": [
+      "README.md",
+      "catalog/current_state.json",
+      "docs/PRODUCTION_WORKFLOW.md",
+      "docs/KNOWLEDGE_INDEX.md",
+      "docs/LOCAL_ENVIRONMENT.md",
+      "docs/GUANHAIZI_REFERENCE.md",
+      "docs/GOSARI_REFERENCE.md",
+      "docs/REFERENCE_AND_LIGHTING_PLAYBOOK.md",
+      "docs/research/REFERENCE_REVIEW_LEDGER.json (opening section)"
+    ],
+    "focused_search_count": 1,
+    "search_query": "\"御手洗板蓝根\" 原神 动画 渲染 教程",
+    "strongest_original_results_open_attempted": 2,
+    "new_video_frames_seen": false,
+    "new_video_playback": false,
+    "new_transcript_obtained": false,
+    "tutorial_body_read": false,
+    "author_project_or_preset_obtained": false,
+    "logged_in_browser_used_by_this_subtask": false,
+    "downloaded_third_party_media": false,
+    "current_project_modified": false,
+    "core_catalog_modified": false
+  },
+  "authors": [
+    {
+      "id": "guanhaizi",
+      "name": "观海子",
+      "priority": "primary",
+      "profile_url": "https://space.bilibili.com/17466365",
+      "source_record": "docs/GUANHAIZI_REFERENCE.md",
+      "evidence_scope": "本轮复读既有本地抽帧记录，未新播放或解码源视频",
+      "works": [
+        {
+          "title": "亲亲小狐狸：露帕×女漂",
+          "url": "https://www.bilibili.com/video/BV1PPgpzLEdb/",
+          "previous_sample_scope": "12 representative frames plus ending checks; see source record",
+          "source_sha256": "d1b9d4d70922aede9520ad3f7579ffc1e0c7ab442f94f17b81a0f6051dfc2cf2"
+        },
+        {
+          "title": "Cherry",
+          "url": "https://www.bilibili.com/video/BV1xCTe64EEu/",
+          "previous_sample_scope": "12 representative frames; see source record",
+          "source_sha256": "bae2d220dd48469782b781f39c72c8359df8a65f1d6e1aa933bab72b6efda1ed"
+        }
+      ],
+      "learning_dimensions_from_existing_records": [
+        "face and inner-line readability",
+        "character-stage-lighting and actual floor shadows",
+        "landscape duet camera design",
+        "portrait graphic design and caption layering"
+      ],
+      "implementation_known": false,
+      "boundary": "既有抽帧观察与署名均不提供作者原Shader、灯光数值或完整时间域验证"
+    },
+    {
+      "id": "gosari542",
+      "name": "Gosari542",
+      "priority": "existing_reference",
+      "profile_url": "https://space.bilibili.com/3493265460431074",
+      "source_record": "docs/GOSARI_REFERENCE.md",
+      "evidence_scope": "本轮复读既有8帧记录，未新播放或解码源视频",
+      "works": [
+        {
+          "title": "哥伦比娅 Pretty Girl",
+          "url": "https://www.bilibili.com/video/BV1nCWH6dEp9/",
+          "previous_sample_scope": "8 representative frames at 0.567, 2.867, 5.167, 7.467, 9.767, 12.067, 14.367, 16.667 seconds",
+          "source_sha256": "958e8fa4a594d9409c6961c9e12133b47171ff10c415c4b38f7998dfb862bbe7"
+        }
+      ],
+      "learning_dimensions_from_existing_records": [
+        "eyes and bright skin remain readable",
+        "dark hair retains bright bands and color variation",
+        "white clothing, shadows and accessories remain separated",
+        "subject color coordinates with warm softened background"
+      ],
+      "implementation_known": false,
+      "boundary": "8帧不验证完整运镜、物理与闪烁；可见背景虚化不能确认原生景深或后期实现"
+    },
+    {
+      "id": "mitarashi_banlangen",
+      "name": "御手洗板蓝根",
+      "priority": "new_supplementary_reference",
+      "user_url": "https://b23.tv/B55DoZl",
+      "user_url_target": null,
+      "user_url_resolution_status": "主线程公开访问未解析目标；本子任务没有猜测短链对应作品",
+      "profile_url": null,
+      "profile_identity_verified_from_body": false,
+      "evidence_scope": "用户提供作者身份方向；一次聚焦搜索返回B站原投稿索引简介，两个正文请求均412",
+      "source_ids": [
+        "index_juzhongren",
+        "index_poxiao"
+      ],
+      "implementation_known": false,
+      "new_visual_style_analysis_performed": false,
+      "comparison_dimensions_pending_media": [
+        "face and eye structure through head motion",
+        "hair and clothing response under different light directions",
+        "character-stage lighting and contact",
+        "animation continuity and camera purpose",
+        "compositing responsibilities and source attribution"
+      ],
+      "boundary": "维度为待核问题；当前未见该作者视频画面，不能写成已观察到的风格或技术实现"
+    }
+  ],
+  "source_ledger": [
+    {
+      "id": "index_juzhongren",
+      "url": "https://www.bilibili.com/video/BV1z57n6NEna/",
+      "title": "〖原神动画〗局中人？〖bilibilionly〗",
+      "source_type": "search_index_of_original_bilibili_submission",
+      "accessed_on": "2026-11-13",
+      "observed_scope": "search-result description only",
+      "direct_body_open_status": "412 Precondition Failed",
+      "description_leads": {
+        "director_animation_post": [
+          "御手洗板蓝根"
+        ],
+        "character_render_preset_credits": [
+          "小峰峰哥l",
+          "小二今天吃啥啊"
+        ],
+        "some_scene_lighting_credit": [
+          "御手洗板蓝根"
+        ]
+      },
+      "leads_need_direct_description_recheck": true,
+      "preset_name_version_license_or_engine_confirmed": false,
+      "confirmed_as_user_short_url_target": false,
+      "boundary": "署名线索不能确定Shader实现、教程配布或可复用许可"
+    },
+    {
+      "id": "index_poxiao",
+      "url": "https://www.bilibili.com/video/BV1DKymBfEkg/",
+      "title": "〖史诗前页〗「破晓」- 盗火行者动画短片",
+      "source_type": "search_index_of_original_bilibili_submission",
+      "accessed_on": "2026-11-13",
+      "observed_scope": "search-result description only",
+      "direct_body_open_status": "412 Precondition Failed",
+      "description_leads": {
+        "credited_role_for_mitarashi_banlangen": "animation/action contributor",
+        "render_scene_and_post_have_other_credited_contributors": true
+      },
+      "leads_need_direct_description_recheck": true,
+      "confirmed_as_user_short_url_target": false,
+      "boundary": "合作署名不支持把整套渲染技术归于动作贡献者"
+    }
+  ],
+  "next_verifiable_steps": [
+    "在正常可读的一手页面确认B55DoZl目标、作者主页与完整简介",
+    "核对渲染预设署名，追溯作者正式配布，记录准确名称、版本、适用输入、引擎与许可",
+    "取得正常可用视频后留时间码，区分抽帧观察、连续播放与字幕/教程阅读范围",
+    "基于具体问题做最小材质或动态试样，通过质量关卡后再考虑生产适配"
+  ],
+  "implementation_status": "reference_registration_and_bounded_search_only",
+  "third_party_media_or_full_transcript_in_repository": false
+}

@@ -1,0 +1,58 @@
+{
+  "id": "portrait-face-fill-v2",
+  "kind": "suggested-recursive-profile-patch",
+  "base_profile": "presets/lighting/portrait-relight-v1.json",
+  "source_sha256": "0ec95ee7162512ffc405a2a7337b355caf62cd993b3d8302886ee59e1561d9d4",
+  "status": "cpu-preflight-only-gpu-review-pending",
+  "intent": "明亮人物与轻侧暗；撤回大面积半脸紫影方向。只把patch字段递归合并进主profile，由总任务负责实际渲染。",
+  "patch": {
+    "character_lights": {
+      "key_direction_head": [0.36, 0.84, 0.40],
+      "fill_direction_head": [-0.42, 0.87, 0.25]
+    },
+    "key_fill": {
+      "actors": {
+        "aksiniya": {
+          "face": {
+            "palette": [
+              [0.22, [0.88, 0.74, 0.76, 1]],
+              [0.59, [1.00, 0.95, 0.95, 1]],
+              [0.88, [1.055, 1.02, 1.015, 1]]
+            ]
+          }
+        },
+        "ikhor": {
+          "face": {
+            "analytic_form": {
+              "enabled": true,
+              "curvature": 0.55,
+              "up_bias": 0.03,
+              "range": [0.18, 0.82],
+              "floor": 0.45,
+              "gain": 1.0
+            },
+            "directional_fill": {
+              "enabled": true,
+              "strength": 0.24,
+              "range": [-0.10, 0.80],
+              "tint": [1.02, 1.0, 0.985, 1]
+            },
+            "palette": [
+              [0.24, [0.87, 0.75, 0.76, 1]],
+              [0.58, [0.995, 0.95, 0.94, 1]],
+              [0.86, [1.04, 1.01, 1.00, 1]]
+            ]
+          }
+        }
+      }
+    }
+  },
+  "limits": [
+    "Default module directional_fill.enabled remains false; v1 settings retain their active graph.",
+    "Only Ikhor main-face analytic form accepts directional_fill. Aksiniya original SDF, nose repair and all facial features remain upstream and untouched.",
+    "Face fill uses the physical fill object's WORLD position as an artistic direction, even while its real diffuse_factor stays zero.",
+    "Filled form is keyForm + strength * fillBand * (1-keyForm), before existing combined response and AO. There is no final face brightness floor.",
+    "Tint affects only the bounded fill contribution and is gated by combined response and proxy enable; it preserves palette alpha one.",
+    "The suggested head-space key/fill placement is frozen at the chosen build frame; continuous motion and final appearance need the root render review."
+  ]
+}

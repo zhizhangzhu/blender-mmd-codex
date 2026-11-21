@@ -1,0 +1,286 @@
+{
+  "schema_version": 1,
+  "date": "2026-11-14",
+  "request": "用户已明确本轮用伊科尔替换空；社区PMX已下载核查并制作独立角色、局部物理和材质，原作者精确配布页已追溯；五秒渲染中",
+  "status": "exact-author-release-found; pinned-community-archive-downloaded; native-model-and-local-physics-validated; integrated-five-second-render-in-progress",
+  "reference": {
+    "provided_name": "雏原人（灰眸）",
+    "user_clarified_name": "伊科尔",
+    "confirmed_search_names": [
+      "伊科尔",
+      "Ikhor",
+      "イコル"
+    ],
+    "related_search_terms_not_assumed_identical": [
+      "雏原人",
+      "灰眸",
+      "白沙皇",
+      "Belyi Tsar",
+      "White Tsar",
+      "Graeae",
+      "Purusa"
+    ],
+    "appearance_from_parent_description": [
+      "金色短发",
+      "青蓝眼睛",
+      "白衣金领",
+      "胸口蓝色菱形宝石",
+      "浅蓝燕尾图纹"
+    ],
+    "visual_scope": "初轮取得的是根agent的截图描述，未独立看到用户原截图或候选三维预览；不能据角色名与一般外观宣布已逐项确认同款。后续找到原作者配布页与预览URL，未据此声称已将社区PMX逐字节匹配原包。",
+    "identity_caution": "用户已补充伊科尔，故按Ikhor检索。剧情关联称谓及相似外貌不等于模型版本相同，白沙皇名称不直接替代伊科尔。"
+  },
+  "original_author_distribution": {
+    "url": "https://www.aplaybox.com/details/model/L6PalbSZMmTW",
+    "title": "伊科尔【模型配布】",
+    "work_uuid": "L6PalbSZMmTW",
+    "work_id": 75505,
+    "author_account_name": "神秘会员卡",
+    "author_account_uid": "411902800",
+    "model_editor_credit_on_page": "神秘会员日",
+    "original_game_rightsholder_on_page": "miHoYo",
+    "audited_at": "2026-08-23 00:39:31",
+    "created_at": "2026-08-13 10:21:34",
+    "listed_format": "MMD",
+    "work_format_id": 1,
+    "format_limit": "网页标注MMD；未取得原作者压缩包，不能将原页模型文件格式、版本或哈希认定与社区Ikhor.pmx完全一致。",
+    "cover_url": "https://oss.aplaybox.com/uploads/works/covers/20260813/f9a3cbe51a083f6e00182a33aaa818a1.jpg",
+    "preview_url": "https://oss.aplaybox.com/uploads/works/previews/20260813/29c19da3aea08ecfdc0e59a326729aa0.jpg",
+    "bilibili_url_on_page": "",
+    "downloaded_count_when_read": 321,
+    "visited_count_when_read": 3038,
+    "download_conditions": {
+      "normal_frontend_requires_login": true,
+      "minimum_user_rank": 2,
+      "follow_author": true,
+      "follow_duration_days_required": 0,
+      "like_work": true,
+      "collect_work": true,
+      "uploaded_work_count_required": 0,
+      "point_action_required": false,
+      "blacklist_rule_enabled": true,
+      "password_enabled": true,
+      "password_hint_source": "原配布页简介对伊科尔佩戴灯具的作用提出问题；本次未作答、未猜测或校验密码。"
+    },
+    "permission_summary": {
+      "source": "原配布页公开许可选项与简介；下方社区归档RM摘要保留其独立来源。",
+      "commercial_use": "禁止。",
+      "redistribution": "原页许可选项为禁止二次配布；社区RM写二配须联系编辑，两者不构成已知归档获许可的证据。",
+      "modification": "允许修改。",
+      "credit": "须完整标注信息；编辑神秘会员日，版权miHoYo。",
+      "other_purpose": "原页许可选项为禁止其他用途，范围未进一步明确。",
+      "content_limits": "禁成人、极端宗教宣传、血腥恐怖猎奇、人身攻击、恶搞、抹黑及被群殴等用途。",
+      "pairing_limits": "另禁米提亚、潘塔罗涅右向／右位CP作品，不扩写成其他CP的普遍限制。",
+      "personal_limits": "另列黑名单和人品相关条件，未取得名单或作者个别解释。",
+      "blender_rendering_explicit_permission": "未见明确写出Blender成片许可或禁令，不据此宣称已获个别授权。"
+    },
+    "verification_method": "沿大型原初之人精确页已核作者账号，用正常公开JSON搜索参数匿名精准查询伊科尔，第一条即同账号同署名标题；再匿名读取该work_uuid的getWorkDetails。未翻阅其余模糊结果或广泛爬取作品。",
+    "public_api_reads": [
+      {
+        "url": "https://api.aplaybox.com/api/web/v1/work/search",
+        "method": "POST",
+        "is_login": 0,
+        "keyword": "伊科尔"
+      },
+      {
+        "url": "https://api.aplaybox.com/api/web/v1/work/getWorkDetails",
+        "method": "POST",
+        "is_login": 0,
+        "work_uuid": "L6PalbSZMmTW",
+        "work_type_id": 1
+      }
+    ],
+    "download_or_password_endpoint_called": false,
+    "like_follow_collect_performed": false,
+    "original_package_obtained": false,
+    "community_archive_authorization_or_binary_equivalence": "仍未证明。原配布作者页已找到，但未取得原包或作者对Phoshco归档再分发的许可；根agent稍后统一登记下载与生产输入证据。"
+  },
+  "candidates": [
+    {
+      "id": "phoshco-gi-ikhor-community-archive",
+      "url": "https://github.com/Phoshco/gi/tree/main/chars/Ikhor",
+      "pmx_url": "https://github.com/Phoshco/gi/blob/main/chars/Ikhor/Ikhor.pmx",
+      "readme_url": "https://github.com/Phoshco/gi/blob/main/chars/Ikhor/RM.txt",
+      "title": "Phoshco/gi / chars/Ikhor",
+      "discovered_by": "根agent沿GenshinModelViewer所注明来源追到Phoshco/gi；本子任务随后用GitHub连接器独立读取目录与RM.txt。",
+      "source_kind": "community archive; not official distribution; not established as an author-authorized mirror",
+      "archive_maintainer": "Phoshco",
+      "model_editor_as_written_in_RM": "神秘会员日",
+      "original_game_rightsholder_as_written_in_RM": "miHoYo",
+      "PMX_listed": true,
+      "PMX_size_bytes": 2634704,
+      "PMX_git_blob_sha": "b7fc2483f2eaf9f900267a7b08c8d366e2533c12",
+      "hash_semantics": "GitHub contents API返回的SHA是Git blob对象哈希，不等于直接对原文件计算的SHA1；下载后应另记录文件SHA256或按Git blob规则验证。",
+      "RM_size_bytes": 628,
+      "RM_git_blob_sha": "06be470ba93fac4aa6adc817ed596b642603aafa",
+      "texture_count_independently_listed": 23,
+      "textures_tree_git_sha": "7797f765d48b80658878ea57c8b296b992838d21",
+      "texture_inventory_notes": "含Body/Hair Diffuse、Lightmap、Normal、Shadow Ramp，Face_Diffuse、瞳孔与眼部球面等。此23张清单未见单独以FaceSDF命名的文件；不能把另一个FBX包的FaceSDF资产算进本PMX包。通道语义仍待实际图集/节点检查。",
+      "RM_read_scope": "已通过GitHub fetch_file完整读取628字节UTF-8文本；仓库只保留下列原创条款摘要，不复制完整第三方说明。",
+      "RM_summary": {
+        "modification": "允许改造、优化骨骼和刚体、重制UV。",
+        "redistribution": "二次配布须联系模型编辑；当前未找到归档者已经取得该许可的证据。",
+        "commercial_use": "禁止。",
+        "content_conditions": "禁止18禁、极端宗教宣传、血腥恐怖猎奇、人身攻击、恶搞、抹黑及被群殴等用途。",
+        "pairing_conditions": "文本另禁米提亚、潘塔罗涅的右向／右位CP作品。此为这份RM的具体条件，不扩写为所有角色或所有CP的通用规则。",
+        "additional_personal_conditions": "文本还含黑名单／人品相关使用限制；未取得黑名单范围或作者个别授权，不自行编造解释。",
+        "credit": "模型编辑神秘会员日；模型版权所属miHoYo。"
+      },
+      "download_conditions": "GitHub公开目录和文本可通过已连接工具直接读取；本子任务未重复下载二进制，根agent负责拟定的社区归档下载和本机核查。",
+      "downloaded_by_this_subtask": false,
+      "download_and_import_status": "根agent已表示将下载并实际PMX导入检查；此记录尚不把计划写成已完成。",
+      "visual_match_status": "本子任务未独立看到用户原截图或该PMX实际预览；同款外观由根后续实际导入核对，不以文件名替代验证。",
+      "original_author_distribution_status": "后续已定位同署名原作者页https://www.aplaybox.com/details/model/L6PalbSZMmTW，并核日期、预览及下载规则；仍未证明本归档获再分发许可或与原包二进制相同。",
+      "production_use": "候选优先于FBX；仍需实际确认骨骼、Morph、材质/Alpha、贴图、刚体关节及许可适用边界。没有在本子任务中替换当前工程。"
+    },
+    {
+      "id": "models-resource-591606-ikhor",
+      "url": "https://models.spriters-resource.com/pc_computer/genshinimpact/asset/591606/",
+      "title": "Ikhor - Genshin Impact - The Models Resource",
+      "page_body_read": true,
+      "source_kind": "third-party-game-asset-submission-page; not an official HoYoverse distribution",
+      "uploaded_by": "Adverse56",
+      "uploader_is_original_character_author": false,
+      "original_game_rightsholder": "miHoYo / HoYoverse",
+      "submitted_date_on_page": "2026-09-10",
+      "page_section": "Non-Playable Characters",
+      "archive_size_on_page": "15.58 MB",
+      "file_count_on_page": 49,
+      "archive_format": "ZIP",
+      "listed_model_formats": [
+        "FBX",
+        "DAE"
+      ],
+      "listed_model_files": [
+        "Ikhor/Ikhor.fbx",
+        "Ikhor/Ikhor.dae",
+        "Ikhor/IkhorNoMorphs.dae"
+      ],
+      "PMX_listed": false,
+      "representative_texture_files": [
+        "Ikhor/Avatar_Boy_Tex_FaceSDF_R.png",
+        "Ikhor/Avatar_Boy_Tex_FaceSDF_G_B.png",
+        "Ikhor/Avatar_Boy_Tex_FaceSDF_A.png",
+        "Ikhor/Avatar_Boy_Undefined_Purusa_Tex_Body_Diffuse.png",
+        "Ikhor/Avatar_Boy_Undefined_Purusa_Tex_Body_Lightmap_A.png",
+        "Ikhor/Avatar_Boy_Undefined_Purusa_Tex_Body_Normal.png",
+        "Ikhor/Avatar_Boy_Undefined_Purusa_Tex_Hair_Diffuse.png",
+        "Ikhor/Avatar_Boy_Undefined_Purusa_Tex_Hair_Lightmap_R.png",
+        "Ikhor/Avatar_Boy_Undefined_Purusa_Tex_Hair_Normalmap.png"
+      ],
+      "rig_morph_physics_status": "未知；文件名NoMorphs只能说明一个DAE版本如此命名，不能证明另一个DAE/FBX包含可用MMD表情、标准骨名、IK、刚体或关节。",
+      "download_conditions": "页面可公开阅读且有download/Preview in Browser入口；实际下载未尝试，不宣称无登录／其他下载条件。页面只明确评论须登录。",
+      "license": "未知；公开49文件清单未列readme或许可附件，未取得随包条款；第三方上传不等于已获得原权利方的MMD制作／再分发许可。",
+      "downloaded": false,
+      "download_reason": "尚未确认作者授权或随包条款，且不是已确认的原生PMX配布，未按不明再分发链接下载。",
+      "production_use": "仅候选；未导入、未替换空、未复用旧物理。若以后采用FBX，需要另核骨架、Morph、重定向与原生刚体，不能当PMX直接套现有VMD/烘焙。"
+    }
+  ],
+  "secondary_leads": [
+    {
+      "url": "https://genshinmodelviewer.com/",
+      "claim_seen_in_search_index": "搜索索引的162角色目录包含Ikhor，站点自称使用PMX。",
+      "verification": "初轮直接打开所得正文与索引片段不同，当时未取得Ikhor专页或作者。后根agent报告页面注明Phoshco/gi来源并追到上述PMX；本子任务已独立核该GitHub目录和RM。站点自述不等于其镜像已获作者许可。"
+    },
+    {
+      "url": "https://www.sina.cn/news/detail/5335143632864299.html",
+      "title": "伊科尔模型配布预览",
+      "verification": "直接正文是脱离恒星小宇宙的图片贴，未见配布作者或下载链接；标题不能当作配布许可。图片链接读取失败，未借标题推定其内容。"
+    }
+  ],
+  "search_coverage": {
+    "method": "web文字检索与公开页面正文；未播放视频、未绕登录／等级／付费限制。",
+    "preferred_platforms_checked_via_search_index": [
+      "BowlRoll",
+      "DeviantArt",
+      "BOOTH",
+      "作者Bilibili配布"
+    ],
+    "representative_queries": [
+      "雏原人 灰眸 MMD 配布",
+      "伊科尔 原神 MMD 模型 下载",
+      "Ikhor MMD model DL Genshin",
+      "Ikhor site:deviantart.com",
+      "Ikhor BowlRoll",
+      "イコル MMD モデル 配布",
+      "site:booth.pm 原神 伊科尔 Ikhor",
+      "伊科尔 神秘会员卡 模型",
+      "原神 伊科尔 神帝宇 模型",
+      "White Tsar MMD",
+      "Graeae MMD",
+      "Purusa MMD"
+    ],
+    "result": "初轮索引未核实BowlRoll／DA／BOOTH或作者B站的伊科尔原生PMX配布；后沿根agent发现的Phoshco/gi社区归档确认PMX存在。再沿大型原初之人原页确定神秘会员卡账号后，匿名普通定向搜索已找到伊科尔原作者配布页；两阶段证据分开。",
+    "aplaybox_scope": "仅对指定伊科尔／雏原人和截图原初之人做定向核对；后续一次正常匿名搜索并读取精确作者页，未广泛爬取模之屋，未绕任何下载条件。",
+    "excluded_false_positives": [
+      "Ikhor同名AI模型/LoRA",
+      "毛绒挂件与手办实体商品",
+      "阿贝多换伊科尔发型的游戏Mod",
+      "仅剧情讨论或视频预览"
+    ]
+  },
+  "original_author_trace": {
+    "name_confirmed_from_archived_RM": "神秘会员日",
+    "additional_queries": [
+      "神秘会员日 伊科尔",
+      "神秘会员日 雏原人",
+      "神秘会员日 灰眸",
+      "神秘会员日 Ikhor",
+      "神秘会员日 配布",
+      "神秘会员日 site:space.bilibili.com",
+      "神秘会员日 site:aplaybox.com/u/"
+    ],
+    "partial_primary_account_lead": {
+      "indexed_author_video_url": "https://www.bilibili.com/video/BV1mQCtBYEqr/",
+      "title": "らくらく安楽死",
+      "indexed_author": "神秘会员日",
+      "relevance": "仅为作者账号线索，不是伊科尔模型配布证据。",
+      "direct_fetch": "412 Precondition Failed；未播放视频。"
+    },
+    "other_directed_lead": {
+      "url": "https://www.aplaybox.com/details/motion/Wc3mflV6Yk3e",
+      "origin": "日文视频借物表将该动作署为神秘会员日；试图沿作者身份追溯。",
+      "direct_fetch": "超时；未取得作者主页或伊科尔模型链接。",
+      "scope": "一次定向作者线索核对，非模之屋泛搜或下载条件绕过。"
+    },
+    "limits": "伊科尔原配布页与账号UID现已通过公开正常检索核实，见original_author_distribution；早期视频和动作条目只是追索历史。仍没有授权镜像声明或原包二进制匹配证据，Sina自动标题也不升格为配布实证。"
+  },
+  "other_sources_read_for_identity_or_exclusion": [
+    "https://genshin-dictionary.com/zh-CN/history",
+    "https://www.mihoyogift.com/m/goods/20211512212302475035864?bbs_presentation_style=fullscreen&mhy_presentation_style=fullscreen",
+    "https://www.hoyolab.com/article/39949992",
+    "https://mmdfr.fr/genshin-mmd/"
+  ],
+  "actions_performed": {
+    "production_blend_modified": false,
+    "model_downloaded": false,
+    "video_played": false,
+    "catalog_modified": false,
+    "third_party_complete_content_saved": false
+  },
+  "local_validation": {
+    "model_directory": "D:/codex/output/MMD-Ikhor-Model-v1/source/Ikhor",
+    "download_manifest": "D:/codex/output/MMD-Ikhor-Model-v1/download-manifest.json",
+    "downloaded_file_count": 25,
+    "total_bytes": 6489923,
+    "pinned_commit": "87f103389bb8cdfd4cc3a6e1ca9909a394744458",
+    "git_blob_header_plus_payload_verified": true,
+    "pmx_sha256": "ebba744cee847c16cfe5be037e7464d4f701c8edb2f5033e7de5730bd6654a52",
+    "pmx_header": "D:/codex/output/MMD-Ikhor-Model-v1/pmx-header.json",
+    "native_import_report": "D:/codex/output/MMD-Ikhor-Model-v1/motion-v1/import-report.json",
+    "portable_actor": "D:/codex/output/MMD-Ikhor-Model-v1/motion-v1/physics-v3/Ikhor_Hina_Portable.blend",
+    "portable_verification": "D:/codex/output/MMD-Ikhor-Model-v1/motion-v1/physics-v3/append-verification.json",
+    "material_fallback": "Missing edited y1.png explicitly replaced with bundled original FaceDiffuse after UV and still inspection; not a restoration of y1",
+    "optional_parts": "Quest collar/ring and lamp hidden in wedding variant, including inverse hull and actor matte; source PMX retained",
+    "integrated_project": "D:/codex/output/MMD-Aksiniya-Ikhor-Wedding-v1/production-v4/Franken_Aksiniya_Ikhor_Bold_Wedding.blend",
+    "integrated_verification": "D:/codex/output/MMD-Aksiniya-Ikhor-Wedding-v1/production-v4/master-verification.json",
+    "full_song_physics_verified": false,
+    "physics_review_frames": [
+      4139,
+      4441
+    ],
+    "user_art_approval": false,
+    "archive_author_redistribution_permission_verified": false,
+    "author_original_archive_hash_equality_verified": false
+  }
+}

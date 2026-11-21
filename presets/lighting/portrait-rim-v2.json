@@ -1,0 +1,97 @@
+{
+  "id": "portrait-rim-v2",
+  "status": "shader-candidate-awaiting-rendered-review",
+  "source_sha256": "0ec95ee7162512ffc405a2a7337b355caf62cd993b3d8302886ee59e1561d9d4",
+  "patch": {
+    "rim_ink": {
+      "id": "portrait-rim-ink-v2",
+      "rim": {
+        "reference_screen_gain": 0.0,
+        "left_direction_camera": [-1.0, 0.30, -0.60],
+        "right_direction_camera": [1.0, 0.35, -0.55],
+        "direction_gate": [0.08, 0.65],
+        "view_edge_range": [0.025, 0.34],
+        "contact_ao_range": [0.35, 0.92],
+        "headroom_luminance_range": [0.85, 1.90],
+        "highlight_retention": 0.68,
+        "actors": {
+          "aksiniya": {
+            "hair": {
+              "hdr_gain": 2.1,
+              "power": 3.4,
+              "left_color": [1.0, 0.92, 0.91],
+              "right_color": [1.0, 0.89, 0.93],
+              "left_gain": 1.0,
+              "right_gain": 0.78
+            },
+            "body": {
+              "hdr_gain": 1.65,
+              "power": 3.8,
+              "left_color": [1.0, 0.93, 0.92],
+              "right_color": [1.0, 0.90, 0.94],
+              "left_gain": 1.0,
+              "right_gain": 0.74
+            },
+            "fur": {
+              "hdr_gain": 0.80,
+              "power": 4.4,
+              "left_color": [1.0, 0.94, 0.93],
+              "right_color": [1.0, 0.92, 0.95],
+              "left_gain": 1.0,
+              "right_gain": 0.70
+            }
+          },
+          "ikhor": {
+            "hair": {
+              "hdr_gain": 2.1,
+              "power": 3.4,
+              "left_color": [1.0, 0.92, 0.93],
+              "right_color": [1.0, 0.91, 0.95],
+              "left_gain": 1.0,
+              "right_gain": 0.78
+            },
+            "body": {
+              "hdr_gain": 1.50,
+              "power": 3.8,
+              "left_color": [1.0, 0.94, 0.94],
+              "right_color": [1.0, 0.92, 0.96],
+              "left_gain": 1.0,
+              "right_gain": 0.74
+            }
+          }
+        },
+        "material_overrides": {
+          "带子": {"hdr_gain": 0.65, "power": 4.5},
+          "裙.001": {"hdr_gain": 0.95, "power": 4.2},
+          "衣领": {"hdr_gain": 1.05, "power": 4.2}
+        }
+      },
+      "ink": {
+        "actors": {
+          "aksiniya": {
+            "hair": {"color": [0.007, 0.009, 0.020], "strength": 1.0},
+            "fur": {"color": [0.014, 0.017, 0.027], "strength": 1.0}
+          },
+          "ikhor": {
+            "hair": {"color": [0.006, 0.008, 0.015], "strength": 0.85}
+          }
+        }
+      }
+    }
+  },
+  "observed_references": [
+    "D:/codex/output/MMD-Portrait-Lighting-Study-2026-11-14/paierer-private/frame-018s.jpg",
+    "D:/codex/output/MMD-Portrait-Lighting-Study-2026-11-14/paierer-private/frame-120s.jpg",
+    "D:/codex/output/MMD-Portrait-Lighting-Study-2026-11-14/paierer-private/frame-195s.jpg",
+    "D:/codex/output/MMD-Portrait-Relight-v1/Portrait_Relight_Preview.jpg"
+  ],
+  "rationale": [
+    "The three private reference frames were viewed again. Thin warm-white or pale-pink edges remain distinct beside dark hair and garment lines, on both lit sides, without replacing the characters' painted colors.",
+    "The v1 preview has weak secondary-side coverage and early suppression of bright hair/cloth rims. This patch raises secondary-side radiance and retains more existing highlight headroom, while a separate abs(N dot View) permission limits the contour source.",
+    "Colors are low-chroma linear RGB tints, closer to warm white and pale rose than yellow. HDR gain is independent of width power, direction permission and the optional view-edge interval.",
+    "The view-edge interval is a geometric angular permission, not a fixed pixel-width outline. It is zero beyond abs(N dot View)=0.34 and retains the separate rear-side direction gate; the two lights do not create a uniform entire-silhouette fill.",
+    "No new face, neck or hand rim is introduced in this patch. Facial features and the independent face-shadow work retain their original boundaries. Existing skin rims remain as in v1.",
+    "Gold/cyan protection, short contact AO, original PMX edge widths/weights, hidden blue/gold arcs, Alpha, physical-metal controls and source textures are preserved. Existing gold/cyan pixels outside Ikhor white permission keep their original rim branch."
+  ],
+  "validation_scope": "JSON/parameter validation and Blender 5.2.2 factory CPU node-construction smoke passed: v1-default creates no view-edge nodes; v2 creates its three optional gate nodes. The production source was not reopened for this smoke. No GPU render, image-quality certification or motion validation. The caller must review glare-on/off, both actors' silhouettes, dark internal lines, white-cloth detail and hand/body overlap at the final framing."
+}

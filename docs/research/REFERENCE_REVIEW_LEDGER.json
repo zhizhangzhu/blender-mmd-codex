@@ -1,0 +1,133 @@
+{
+  "date": "2026-11-13",
+  "private_local_study_only": true,
+  "references": [
+    {
+      "id": "gosari",
+      "source": "D:\\JiJiDownload\\哥伦比娅 Pretty Girl 【原神MMD】\\1.哥伦比娅 Pretty Girl 【原神MMD】(Av117581423844011,P1).mp4",
+      "sha256": "958e8fa4a594d9409c6961c9e12133b47171ff10c415c4b38f7998dfb862bbe7",
+      "fps_reported": 60.00013574691346,
+      "frames": [
+        {
+          "frame_zero_based": 34,
+          "seconds": 0.5666653846153846,
+          "file": "gosari-34.jpg"
+        },
+        {
+          "frame_zero_based": 310,
+          "seconds": 5.166654977375566,
+          "file": "gosari-310.jpg"
+        },
+        {
+          "frame_zero_based": 724,
+          "seconds": 12.066639366515837,
+          "file": "gosari-724.jpg"
+        }
+      ],
+      "scope": "sampled frames, not original shader or whole-video analysis"
+    },
+    {
+      "id": "fox",
+      "source": "D:\\JiJiDownload\\【鸣潮MMD】亲亲小狐狸！「露帕×女漂」\\1.【鸣潮MMD】亲亲小狐狸！「露帕×女漂」(Av114895777436699,P1).mp4",
+      "sha256": "d1b9d4d70922aede9520ad3f7579ffc1e0c7ab442f94f17b81a0f6051dfc2cf2",
+      "fps_reported": 60.0002815026612,
+      "frames": [
+        {
+          "frame_zero_based": 1170,
+          "seconds": 19.499908512064344,
+          "file": "fox-1170.jpg"
+        },
+        {
+          "frame_zero_based": 2642,
+          "seconds": 44.033126742627346,
+          "file": "fox-2642.jpg"
+        },
+        {
+          "frame_zero_based": 5128,
+          "seconds": 85.46626568364611,
+          "file": "fox-5128.jpg"
+        }
+      ],
+      "scope": "sampled frames, not original shader or whole-video analysis"
+    },
+    {
+      "id": "cherry",
+      "source": "D:\\JiJiDownload\\🍒搜全网最萌怎么给我跳转到这个视频了！\\1.🍒搜全网最萌怎么给我跳转到这个视频了！(Av116842622424810,P1).mp4",
+      "sha256": "bae2d220dd48469782b781f39c72c8359df8a65f1d6e1aa933bab72b6efda1ed",
+      "fps_reported": 60.00014591475174,
+      "frames": [
+        {
+          "frame_zero_based": 161,
+          "seconds": 2.68332680771725,
+          "file": "cherry-161.jpg"
+        },
+        {
+          "frame_zero_based": 1059,
+          "seconds": 17.64995707684825,
+          "file": "cherry-1059.jpg"
+        },
+        {
+          "frame_zero_based": 1445,
+          "seconds": 24.083274764915693,
+          "file": "cherry-1445.jpg"
+        }
+      ],
+      "scope": "sampled frames, not original shader or whole-video analysis"
+    },
+    {
+      "id": "current",
+      "source": "D:\\codex\\output\\MMD-Duet-Shadow-Color-v1\\captions-5s-v2\\Franken_Duet_5s_Grounded_NoCaptions.mp4",
+      "sha256": "fd3484013cf37093700e518753a1e458cd3e4e7093380a9895ec1d954ce28036",
+      "fps_reported": 60.0,
+      "frames": [
+        {
+          "frame_zero_based": 12,
+          "seconds": 0.2,
+          "file": "current-12.jpg"
+        },
+        {
+          "frame_zero_based": 110,
+          "seconds": 1.8333333333333333,
+          "file": "current-110.jpg"
+        },
+        {
+          "frame_zero_based": 150,
+          "seconds": 2.5,
+          "file": "current-150.jpg"
+        }
+      ],
+      "scope": "sampled frames, not original shader or whole-video analysis"
+    }
+  ],
+  "new_render_performed": false,
+  "new_bilibili_transcript_obtained": false,
+  "browser_access": {
+    "date": "2026-11-13",
+    "in_app_connection": "unavailable-missing-browser-service.mjs",
+    "bilibili_public_author_pages": "412",
+    "new_bilibili_transcript_obtained": false,
+    "fallback_scope": "复看已有本地参考与原作者公开图文；未绕过登录或访问限制"
+  },
+  "text_sources": [
+    {
+      "url": "https://dev.epicgames.com/documentation/fortnite/making-cinematics-2-lighting-and-color-in-unreal-editor-for-fortnite",
+      "read_scope": "官方正文三点职责与情绪用光，非Blender参数"
+    },
+    {
+      "url": "https://docs.blender.org/manual/sv/latest/render/lights/light_linking.html",
+      "read_scope": "官方搜索说明；正文访问受限，本机能力以旧报告为准"
+    },
+    {
+      "url": "https://learnopengl.com/Advanced-Lighting/Bloom",
+      "read_scope": "原作者正文亮区提取与合成"
+    },
+    {
+      "url": "https://learnopengl.com/Guest-Articles/2022/Phys.-Based-Bloom",
+      "read_scope": "原作者正文连续扩散、阈值和合成时序"
+    },
+    {
+      "url": "https://note.com/mashimashi_note/n/na1bc7c72e511",
+      "read_scope": "原作者ShadeRT、ExcellentShadow及SSAO输入职责"
+    }
+  ]
+}

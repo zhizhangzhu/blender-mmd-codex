@@ -1,0 +1,90 @@
+{
+  "id": "hesperides-stageart-v2",
+  "status": "verified-five-second-study",
+  "user_art_approval": false,
+  "engine": "Blender 5.2.2 EEVEE",
+  "input": "D:\\codex\\output\\MMD-Fox-Cinema-v1\\production-v2\\Franken_Duet_Fox_Cinema.blend",
+  "project": "D:\\codex\\output\\MMD-Fox-StageArt-v2\\production-v5\\Franken_Duet_StageArt_v2.blend",
+  "settings": "presets/stages/hesperides-stageart-v2.json",
+  "video": "D:\\codex\\output\\MMD-Fox-StageArt-v2\\sample-5s-v2\\Aether_Duet_5s_REVIEW.mp4",
+  "frames": [
+    4140,
+    4439
+  ],
+  "fps": 60,
+  "resolution": [
+    1920,
+    1080
+  ],
+  "physical_ground_regions": [
+    {
+      "object": "mesh_99.023",
+      "polygons": 224,
+      "materials": [
+        "mat_10.001"
+      ]
+    },
+    {
+      "object": "mesh_144.015",
+      "polygons": 1835,
+      "materials": [
+        "mat_20.010"
+      ]
+    },
+    {
+      "object": "mesh_101.028",
+      "polygons": 334,
+      "materials": [
+        "mat_10.001"
+      ]
+    }
+  ],
+  "pose_camera_lens_unchanged_samples": [
+    {
+      "frame": 1,
+      "all_bones_camera_matrix_and_lens_exactly_equal": true
+    },
+    {
+      "frame": 2100,
+      "all_bones_camera_matrix_and_lens_exactly_equal": true
+    },
+    {
+      "frame": 4140,
+      "all_bones_camera_matrix_and_lens_exactly_equal": true
+    },
+    {
+      "frame": 4200,
+      "all_bones_camera_matrix_and_lens_exactly_equal": true
+    },
+    {
+      "frame": 4250,
+      "all_bones_camera_matrix_and_lens_exactly_equal": true
+    },
+    {
+      "frame": 4262,
+      "all_bones_camera_matrix_and_lens_exactly_equal": true
+    },
+    {
+      "frame": 4290,
+      "all_bones_camera_matrix_and_lens_exactly_equal": true
+    },
+    {
+      "frame": 4439,
+      "all_bones_camera_matrix_and_lens_exactly_equal": true
+    },
+    {
+      "frame": 8400,
+      "all_bones_camera_matrix_and_lens_exactly_equal": true
+    },
+    {
+      "frame": 11899,
+      "all_bones_camera_matrix_and_lens_exactly_equal": true
+    }
+  ],
+  "limits": [
+    "Only five seconds, not a finished full song or author original MME",
+    "Art-directed light/shadow linking; wall NPR pools and added rims are not fully physical",
+    "Air and rim halation deliberately modest; no matching large colored overexposure transition",
+    "Auxiliary RGBA scenes and full linear sequence not validated for this variant"
+  ]
+}

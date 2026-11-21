@@ -1,0 +1,1314 @@
+{
+  "schema_version": 1,
+  "as_of": "2026-11-20",
+  "objective": "逐步达到原神／鸣潮风格游戏级三渲二的感知质量，形成可复用的高质量MMD制作流程",
+  "objective_achieved": false,
+  "current_task": "已完成制作闭环核心开发及Goo双人礼堂4290优化，新副本正式静帧/完整保护/独立重开通过，用户美术待评；原829f冻结保留。",
+  "preset_reuse_policy": {
+    "date": "2026-11-16",
+    "user_requested_reuse_before_reimplementation": true,
+    "guide": "docs/MME_REUSE_AND_BLENDER_COMPATIBILITY.md",
+    "inventory": "D:/codex/temp/blender-addon-inventory-2026-11-16-mme.json",
+    "native_mme_runtime_found_in_current_blender": false,
+    "scope": "Saved preferences and installed source for Blender 5.2.2; not the open GUI process or every other Blender installation",
+    "priority": [
+      "existing verified Blender presets",
+      "author-supported Blender versions or ports",
+      "native MMD/MME isolated sample",
+      "minimal adaptation only for remaining gaps"
+    ],
+    "powershader_package_read": true,
+    "tn_postpointlight_package_read": true,
+    "production_modified_by_compatibility_research": false,
+    "goo_runtime_added": "presets/runtime/goo-v1.json",
+    "deep_study_guide": "docs/MME_TO_GOO_LIGHTING_STUDY.md",
+    "deep_study_ledger": "docs/research/MME_DEEP_STUDY_2026_11_16.json"
+  },
+  "references": [
+    {
+      "name": "Gosari542",
+      "url": "https://space.bilibili.com/3493265460431074",
+      "role": "用户认可的成片质量参考",
+      "implementation_known": false
+    },
+    {
+      "name": "观海子",
+      "url": "https://space.bilibili.com/17466365",
+      "role": "用户认可的人物、灯光与后期参考",
+      "implementation_known": false
+    },
+    {
+      "name": "御手洗板蓝根",
+      "url": "https://b23.tv/B55DoZl",
+      "role": "原神动画渲染补充参考；短链目标未解析",
+      "implementation_known": false
+    }
+  ],
+  "latest_review": {
+    "entry_id": "duet-clean-game-v1",
+    "project": "D:\\codex\\output\\MMD-Clean-Game-Characters-v1\\production-v2\\Franken_Duet_Clean_Game.blend",
+    "video": "D:\\codex\\output\\MMD-Clean-Game-Characters-v1\\captions-5s\\Franken_Duet_5s_CleanGame_Wedding_REVIEW.mp4",
+    "sha256": "f0e2a8053244cbc09dc16e55a4dadcfe5f94c09fcfede25e9acc66de2061e107",
+    "delivery_report": "D:\\codex\\output\\MMD-Clean-Game-Characters-v1\\delivery.json",
+    "scope": {
+      "frames": [
+        4140,
+        4439
+      ],
+      "fps": 60,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "seconds": 5,
+      "aspect": "landscape"
+    },
+    "technical_status": "passed-limited-scope",
+    "art_status": "revision_requested",
+    "user_art_approval": false,
+    "user_feedback": "当前画面灰蒙、不够明亮，需至少达到新paierer暗场参考的人像亮度与黑线表现；观海子仍为核心。可必要调整指定礼堂舞台和灯光；当前Clean五秒未获美术认可。",
+    "feedback_date": "2026-11-14",
+    "project_sha256": "0ec95ee7162512ffc405a2a7337b355caf62cd993b3d8302886ee59e1561d9d4",
+    "diagnostic_video": "D:/codex/output/MMD-Clean-Game-Characters-v1/captions-5s/Franken_Duet_5s_CleanGame_NoCaptions.mp4"
+  },
+  "historical_approved_direction": {
+    "entry_id": "genshin-duet-hall-v3",
+    "meaning": "此前用户认可的明亮礼堂方向，保留作回退；不代表最新人物质量达标"
+  },
+  "full_song": {
+    "delivered": false,
+    "rendering_now": false,
+    "note": "历史全曲渲染已停止；保留全曲动作工程，不由旧文档恢复长渲染"
+  },
+  "project_contract": {
+    "project_profile": "presets/projects/franken-duet-full-v1.json",
+    "actors": {
+      "aksiniya": "Full HimeTanaka",
+      "ikhor": "Full HinaSuzuki"
+    },
+    "aspect": "16:9",
+    "stage": "用户选定的paierer赫斯珀利德斯之馆-礼堂",
+    "theme": "雪、婚礼、爱，悲壮中有释然与温暖",
+    "bgm": "D:/codex/output/Franken-Duet-Full-Audio-v1/HIMEHINA - フランケンシュタインの怪物.flac",
+    "full_camera_correction": "用户暂缓，优先保留已下载现成VMD",
+    "new_stage_must_be_existing_asset": true,
+    "separate_landscape_portrait_direction": true,
+    "replacement_status": "Ikhor now occupies the Hina slot in the latest delivered project/video; Aether reviews retained as history",
+    "stage_and_lighting_revision_authorization": "2026-11-14猪猪允许为人物/暗场层次必要调整指定礼堂舞台与灯光；不自动换景或恢复全曲。"
+  },
+  "priority_order": [
+    "人物统一着色结构与受光标定",
+    "脸眼与发丝材质、线条时间稳定",
+    "自然次级运动与物理",
+    "人物与舞台光照融合",
+    "镜头、字幕、后期及最终交付"
+  ],
+  "browser_research": {
+    "date": "2026-11-13",
+    "in_app_connection": "body read succeeded then network and binding timeouts",
+    "user_preferred_browser": "chrome",
+    "chrome_control": "body read succeeded then Debugger unattached",
+    "native_host_and_extension_verified": true,
+    "new_bilibili_transcript_obtained": false,
+    "agent_created_autoplay_tabs_closed": 2,
+    "closure_verified": true,
+    "evidence": "docs/research/BROWSER_ACCESS_VALIDATION.json"
+  },
+  "active_iteration": {
+    "id": "goo-duet-artdirection-still-final-v3",
+    "project": "D:/codex/output/Goo-Duet-ArtDirection-2026-11-20/final-v3/Candidate.blend",
+    "project_sha256": "fad1fdf5877bec468d1b8d357f9b3dcd8c81b61bda053b86eea2f06cdcd6af8b",
+    "status": "still-candidate-complete",
+    "technical_status": "passed-4290-static-source-dof-full-protection-independent-reopen",
+    "scope": "仅4290：收敛限定人物HDR轮廓与两层边缘辉光，20个舞台响应/14个MatCap分组；原人物脸/SDF/眼/皮肤、动作/绑定/几何/相机与灯方向保留",
+    "still": "D:/codex/output/Goo-Duet-ArtDirection-2026-11-20/final-v3/selected.png",
+    "preview": "D:\\codex\\output\\Goo-Duet-ArtDirection-2026-11-20\\final-preview.jpg",
+    "comparison": "D:\\codex\\output\\Goo-Duet-ArtDirection-2026-11-20\\before-after-4290.jpg",
+    "comparison_scope": "matched1280x720/32samples/sourceDOF cases; formal still1920x1080/64samples separate",
+    "verification": "D:\\codex\\output\\Goo-Duet-ArtDirection-2026-11-20\\reopened-v3\\reopen-report.json",
+    "acceptance": "D:\\codex\\output\\Goo-Duet-ArtDirection-2026-11-20\\acceptance.json",
+    "guide": "docs/GOO_DUET_ARTDIRECTION_2026_11_20.md",
+    "runtime": "presets/runtime/goo-v1.json",
+    "bench_profile": "presets/benches/goo-duet-artdirection-candidate-v1.json",
+    "new_video_delivered": false,
+    "new_physics_simulation": false,
+    "user_art_approval": false,
+    "art_status": "pending user review",
+    "eye_see_through": "deferred",
+    "next_action": "后续新冻结实验优先细化白衣明暗与窗/地面职责；新姿态须重新验证发影，不自动扩大视频或物理。"
+  },
+  "previous_review": {
+    "entry_id": "franken-ikhor-bold-wedding-v1",
+    "project": "D:\\codex\\output\\MMD-Aksiniya-Ikhor-Wedding-v1\\production-v7\\Franken_Aksiniya_Ikhor_Bold_Wedding.blend",
+    "video": "D:\\codex\\output\\MMD-Aksiniya-Ikhor-Wedding-v1\\captions-5s-v3\\Franken_Duet_5s_Ikhor_Wedding_REVIEW.mp4",
+    "sha256": "feeaefdef7477ed57c947122844207159e7aa4a84e75f5d24fd3d8580aff549a",
+    "delivery_report": "D:\\codex\\output\\MMD-Aksiniya-Ikhor-Wedding-v1\\delivery.json",
+    "scope": {
+      "frames": [
+        4140,
+        4439
+      ],
+      "fps": 60,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "seconds": 5,
+      "aspect": "landscape"
+    },
+    "technical_status": "passed-limited-scope",
+    "art_status": "revision_requested",
+    "user_feedback": "用户要求按两份本地参考改善伊科尔及阿克西妮娅的明净三渲二质感，并移除人物背后蓝色与金色光弧；当前基线仅保留为历史",
+    "user_art_approval": false
+  },
+  "reference_priority": [
+    "观海子",
+    "Gosari542",
+    "御手洗板蓝根"
+  ],
+  "current_learning_round": {
+    "id": "portrait-layer-study-2026-11-14",
+    "status": "initial-reading-and-controls-completed; bounded-still-implementation-in-latest_still",
+    "guide": "docs/PORTRAIT_LIGHTING_AND_SHADOW_STUDY.md",
+    "protocol": "presets/lighting/portrait-layer-study-v1.json",
+    "source_ledgers": [
+      "docs/research/PHOTOGRAPHIC_LAYERED_LIGHTING_2026_11_14.json",
+      "docs/research/DIRECTIONAL_RIM_LIGHT_2026_11_14.json",
+      "docs/research/FACE_SHADOW_DESIGN_2026_11_14.json",
+      "docs/research/BAICAI_LAYERED_LIGHTING_TUTORIAL_2026_11_14.json",
+      "docs/research/NODE_WRANGLER_LIGHTING_2026_11_14.json",
+      "docs/research/PAIERER_DARK_STAGE_PORTRAIT_2026_11_14.json"
+    ],
+    "read_scope": [
+      "摄影五篇原作者技术正文；Zack/Nikon Joe仅简介，未看完整课程",
+      "方向rim官方/作者文档与选定源码；脸阈值/完整头轴/偏移发影四篇原作者文章选节",
+      "白菜542条用户给定字幕全部实读，14时点中13有效；未连续看全片",
+      "Node Wrangler本机4.1.0临时注册注销与官方5.2选节；不改偏好、无提速测试",
+      "paierer本地新源8时点静帧，未知确切HTTP网址/Shader/灯数，未完整连续看"
+    ],
+    "source_project": "D:/codex/output/MMD-Clean-Game-Characters-v1/production-v2/Franken_Duet_Clean_Game.blend",
+    "source_project_sha256": "0ec95ee7162512ffc405a2a7337b355caf62cd993b3d8302886ee59e1561d9d4",
+    "production_blend_modified": false,
+    "new_render_created": true,
+    "diagnostic_still_count": 3,
+    "diagnostic_report": "D:/codex/output/MMD-Portrait-Lighting-Study-2026-11-14/controls-v1/control-report.json",
+    "diagnostic_scope": {
+      "frame": 4290,
+      "resolution": [
+        1280,
+        720
+      ],
+      "samples": 48,
+      "camera_lens_mm": 61.7346496582031,
+      "dof": false,
+      "motion_blur": false,
+      "source_compositor_retained": true
+    },
+    "manual_review": "主任务逐张查看A/B/C；B明显减少中央灰雾；C青边更亮但更抢眼，未解决衣服大面受光与face，未选最终风格。",
+    "source_and_preferences_sha_before_after_equal": true,
+    "new_blend_saved": false,
+    "bounded_video_delivered": false,
+    "new_five_second_video": false,
+    "new_physics_simulation": false,
+    "user_art_approval": false,
+    "limits": "720p单帧诊断不是主辅标定/脸影/动态/保存工程重开通过；没有新成片。",
+    "implementation_followup": {
+      "id": "portrait-relight-v1",
+      "delivery": "D:\\codex\\output\\MMD-Portrait-Relight-v1\\delivery.json",
+      "new_project_created": true,
+      "new_video_delivered": false
+    }
+  },
+  "review_history": [
+    {
+      "entry_id": "duet-grounded-color-v1",
+      "project": "D:/codex/output/MMD-Duet-Shadow-Color-v1/production-v3/Franken_Duet_Grounded_Wedding.blend",
+      "video": "D:/codex/output/MMD-Duet-Shadow-Color-v1/captions-5s-v2/Franken_Duet_5s_Grounded_Wedding_REVIEW.mp4",
+      "sha256": "ea72afadbeff7aae5eb47e9d976555ca33bf324d0f884afc217d68fc7d8b21fb",
+      "delivery_report": "D:/codex/output/MMD-Duet-Shadow-Color-v1/delivery.json",
+      "scope": {
+        "frames": [
+          4140,
+          4439
+        ],
+        "fps": 60,
+        "resolution": [
+          1920,
+          1080
+        ],
+        "seconds": 5,
+        "aspect": "landscape"
+      },
+      "technical_status": "passed-limited-scope",
+      "art_status": "revision_requested",
+      "user_feedback": "人物三渲二、人物自发光与受光关系仍不足，其次舞台及其他制作技术需进步",
+      "user_art_approval": false
+    },
+    {
+      "entry_id": "duet-character-layers-v1",
+      "project": "D:\\codex\\output\\MMD-Character-Layer-Refinement-v1\\production-v2\\Franken_Duet_Character_Layers.blend",
+      "video": "D:\\codex\\output\\MMD-Character-Layer-Refinement-v1\\captions-5s-v1\\Franken_Duet_5s_CharacterLayers_Wedding_REVIEW.mp4",
+      "sha256": "f714821335f507ba7e6e41ab890c2d97280a4da09f47468487c598ec0d6f54d0",
+      "delivery_report": "D:\\codex\\output\\MMD-Character-Layer-Refinement-v1\\delivery.json",
+      "scope": {
+        "frames": [
+          4140,
+          4439
+        ],
+        "fps": 60,
+        "resolution": [
+          1920,
+          1080
+        ],
+        "seconds": 5,
+        "aspect": "landscape"
+      },
+      "technical_status": "passed-limited-scope",
+      "art_status": "pending",
+      "user_feedback": "新版人物分层已生成，等待猪猪实际审看；前版提出的质量目标继续保留",
+      "user_art_approval": false
+    },
+    {
+      "entry_id": "duet-guanhai-transfer-v1",
+      "project": "D:\\codex\\output\\MMD-Guanhai-Transfer-v1\\production-v3\\Franken_Duet_Reference_Transfer.blend",
+      "video": "D:\\codex\\output\\MMD-Guanhai-Transfer-v1\\captions-5s\\Franken_Duet_5s_ReferenceTransfer_Wedding_REVIEW.mp4",
+      "sha256": "c4f1ab3e0075f448924495e573a11b650e9721843c14f8f33b56b15d681a5064",
+      "delivery_report": "D:\\codex\\output\\MMD-Guanhai-Transfer-v1\\delivery.json",
+      "scope": {
+        "frames": [
+          4140,
+          4439
+        ],
+        "fps": 60,
+        "resolution": [
+          1920,
+          1080
+        ],
+        "seconds": 5,
+        "aspect": "landscape"
+      },
+      "technical_status": "passed-limited-scope",
+      "art_status": "revision_requested",
+      "user_feedback": "人物与场景层次仍不足，舞台与灯光需更酷炫大胆，增加按材质设计的自发光、轮廓光和特效；用户追加本轮先用伊科尔替换空",
+      "user_art_approval": false
+    },
+    {
+      "entry_id": "franken-ikhor-bold-wedding-v1",
+      "project": "D:\\codex\\output\\MMD-Aksiniya-Ikhor-Wedding-v1\\production-v7\\Franken_Aksiniya_Ikhor_Bold_Wedding.blend",
+      "video": "D:\\codex\\output\\MMD-Aksiniya-Ikhor-Wedding-v1\\captions-5s-v3\\Franken_Duet_5s_Ikhor_Wedding_REVIEW.mp4",
+      "sha256": "feeaefdef7477ed57c947122844207159e7aa4a84e75f5d24fd3d8580aff549a",
+      "delivery_report": "D:\\codex\\output\\MMD-Aksiniya-Ikhor-Wedding-v1\\delivery.json",
+      "scope": {
+        "frames": [
+          4140,
+          4439
+        ],
+        "fps": 60,
+        "resolution": [
+          1920,
+          1080
+        ],
+        "seconds": 5,
+        "aspect": "landscape"
+      },
+      "technical_status": "passed-limited-scope",
+      "art_status": "revision_requested",
+      "user_feedback": "用户要求按两份本地参考改善伊科尔及阿克西妮娅的明净三渲二质感，并移除人物背后蓝色与金色光弧；当前基线仅保留为历史",
+      "user_art_approval": false
+    },
+    {
+      "entry_id": "duet-clean-game-v1",
+      "project": "D:\\codex\\output\\MMD-Clean-Game-Characters-v1\\production-v2\\Franken_Duet_Clean_Game.blend",
+      "video": "D:\\codex\\output\\MMD-Clean-Game-Characters-v1\\captions-5s\\Franken_Duet_5s_CleanGame_Wedding_REVIEW.mp4",
+      "sha256": "f0e2a8053244cbc09dc16e55a4dadcfe5f94c09fcfede25e9acc66de2061e107",
+      "delivery_report": "D:\\codex\\output\\MMD-Clean-Game-Characters-v1\\delivery.json",
+      "scope": {
+        "frames": [
+          4140,
+          4439
+        ],
+        "fps": 60,
+        "resolution": [
+          1920,
+          1080
+        ],
+        "seconds": 5,
+        "aspect": "landscape"
+      },
+      "technical_status": "passed-limited-scope",
+      "art_status": "pending",
+      "user_art_approval": false,
+      "user_feedback": "人物干净明亮NPR与去蓝金光弧五秒已输出；限定技术检查通过，等待猪猪实际美术评价。"
+    }
+  ],
+  "future_assets": {
+    "primordial_human": {
+      "purpose": "Giant background model in a possible second stage with Aksiniya and Ikhor",
+      "status": "exact-distribution-page-found; model-package-not-downloaded; not-in-current-scene",
+      "user_reference": "原初之人【模型配布】 screenshot, published2026-10-13 10:10:05",
+      "url": "https://www.aplaybox.com/details/model/5eSouS8HksfA",
+      "source_ledger": "docs/research/PRIMORDIAL_ONE_BACKGROUND_MODEL_2026_11_14.json",
+      "download_requirements": "Normal logged-in Lv2 account; follow/like/collect, per author page; no bypass or interaction performed"
+    }
+  },
+  "latest_supplemental_reading": {
+    "date": "2026-11-14",
+    "guide": "docs/LOCAL_CORRECTIVE_SHAPES.md",
+    "ledger": "docs/research/SLEEVE_CORRECTIVE_EXTERNAL_2026_11_14.json",
+    "scope": "Five official documentation bodies plus one5.2.2 source function; no video playback",
+    "limits": "v6 one-shape LBS case tested separately; Corrective Smooth, Preserve Volume inverse and pose drivers not tested"
+  },
+  "iteration_history": [
+    {
+      "id": "duet-clean-game-v1",
+      "status": "native-render-in-progress; final-composite-and-review-pending",
+      "user_authorized": true,
+      "scope": "frames4140–4439,1080p60,5s",
+      "full_song": false,
+      "project": "D:\\codex\\output\\MMD-Clean-Game-Characters-v1\\production-v2\\Franken_Duet_Clean_Game.blend",
+      "project_sha256": "0ec95ee7162512ffc405a2a7337b355caf62cd993b3d8302886ee59e1561d9d4",
+      "source_review": "franken-ikhor-bold-wedding-v1",
+      "character_profiles": [
+        "presets/quality/aksiniya-clean-game-v1.json",
+        "presets/quality/ikhor-clean-game-v1.json"
+      ],
+      "arcs_removed": [
+        "Bold wedding | blue vow arc",
+        "Bold wedding | gold vow arc"
+      ],
+      "diagnostic_frames_rendered": 72,
+      "diagnostic_technical_status": "passed; root sampled both actors in head-turn, key-orbit and camera-orbit strips",
+      "fresh_render_output": "D:\\codex\\output\\MMD-Clean-Game-Characters-v1\\native-5s",
+      "sleeve_repair_profile": "presets/quality/ikhor-sleeve-repair-v1.json",
+      "sleeve_visual_review": "D:\\codex\\output\\MMD-Aksiniya-Ikhor-Wedding-v1\\sleeve-review\\visual-review.json",
+      "geometry_collision_certified": false,
+      "rejected_v4_frames_reused": false
+    },
+    {
+      "id": "duet-clean-game-v1",
+      "status": "delivered-limited-scope",
+      "user_authorized": true,
+      "project": "D:\\codex\\output\\MMD-Clean-Game-Characters-v1\\production-v2\\Franken_Duet_Clean_Game.blend",
+      "project_sha256": "0ec95ee7162512ffc405a2a7337b355caf62cd993b3d8302886ee59e1561d9d4",
+      "delivery_report": "D:\\codex\\output\\MMD-Clean-Game-Characters-v1\\delivery.json",
+      "scope": "4140–4439,1080p60,5s",
+      "full_song": false,
+      "user_art_approval": false,
+      "geometry_collision_certified": false,
+      "physics_changed": false,
+      "arcs_hidden": true,
+      "old_beauty_reused": false
+    },
+    {
+      "id": "portrait-relight-v2",
+      "status": "quick-preview-produced-post-output-qa-skipped-by-user",
+      "user_authorized": true,
+      "project": "D:\\codex\\output\\MMD-Portrait-Relight-v2\\production-v2\\Franken_Duet_Portrait_Relight.blend",
+      "project_sha256": "1a038359425bbbe50e327b669dcd4a19ee69158846e29a1af3bbcbc9908a6489",
+      "image": "D:\\codex\\output\\MMD-Portrait-Relight-v2\\production-v2\\complete-4290.png",
+      "image_sha256": "d59818bfb31b93bbe811fa3aa88056e9c2aea570e33aabbf04b787a86b48adbe",
+      "source_project_sha256": "0ec95ee7162512ffc405a2a7337b355caf62cd993b3d8302886ee59e1561d9d4",
+      "protocol": "presets/lighting/portrait-relight-v2.json",
+      "scope": "4290 4K still plus 150 frames at 1080p30 quick captioned preview; post-output QA skipped by user",
+      "guide": "docs/PORTRAIT_RELIGHT_V2.md",
+      "user_art_approval": false,
+      "new_video_delivered": true,
+      "full_song": false,
+      "physics_changed": false,
+      "post_output_validation": "skipped at user request",
+      "next_action": "由猪猪直接审看快样片；尚不将新链登记为动态或正式成片验收通过。",
+      "quick_preview": "D:\\codex\\output\\MMD-Daylight-Wedding-v3\\quick-5s-v1\\Franken_Duet_5s_DaylightWeddingV3_SUB_1080P.mp4"
+    },
+    {
+      "id": "goo-wedding-v1",
+      "status": "quick-preview-produced-post-output-qa-skipped-by-user",
+      "user_authorized": true,
+      "project": "D:\\codex\\output\\MMD-Goo-Wedding-v1\\production-v1\\Franken_Duet_Goo_Wedding.blend",
+      "project_sha256": "707c959284e846437f5f1abeeec7ce8f69606ad68cc14904521397d89f7039b3",
+      "guide": "docs/GOO_ENGINE_MIGRATION.md",
+      "new_video_delivered": true,
+      "scope": "150 frames at 1080p30 quick captioned preview; post-output QA skipped by user",
+      "post_output_checks": "skipped at user request",
+      "art_status": "pending-user-review",
+      "quick_preview": "D:\\codex\\output\\MMD-Goo-Wedding-v1\\quick-5s-v1\\Franken_Duet_5s_GooWeddingV1_SUB_1080P.mp4",
+      "next_action": "由猪猪直接审看快样片；尚不将新链登记为动态或正式成片验收通过。"
+    },
+    {
+      "id": "goo-daylight-v2",
+      "status": "delivered-review-sample",
+      "user_authorized": true,
+      "project": "D:\\codex\\output\\MMD-Goo-Wedding-v2\\production-v2\\Franken_Duet_Goo_Daylight.blend",
+      "project_sha256": "ca610cdaea99f9eca19e9067c42f5ada798a710e9f07f49b6aef8dcbb958a71f",
+      "new_video_delivered": true,
+      "guide": "docs/MME_TO_GOO_LIGHTING_STUDY.md",
+      "scope": "150 frames at 1080p30 quick captioned preview; post-output QA skipped by user",
+      "post_output_checks": "skipped at user request",
+      "art_status": "pending-user-review",
+      "quick_preview": "D:\\codex\\output\\MMD-Goo-Wedding-v2\\quick-5s-v1\\Franken_Duet_5s_GooDaylightV2_SUB_1080P.mp4",
+      "next_action": "由猪猪直接审看快样片；尚不将新链登记为动态或正式成片验收通过。",
+      "video": "D:\\codex\\output\\MMD-Goo-Wedding-v2\\quick-5s-v1\\Franken_Duet_5s_GooDaylightV2_SUB_1080P.mp4"
+    },
+    {
+      "id": "goo-rim-glow-intermediate",
+      "status": "stopped-after-reference-clarification",
+      "rendered_frames": 35,
+      "total_frames": 150,
+      "video_delivered": false,
+      "output": "D:/codex/output/MMD-Goo-Rim-Glow-v1"
+    },
+    {
+      "id": "goo-tyndall-rim-v1",
+      "status": "delivered-review-sample",
+      "project": "D:\\codex\\output\\MMD-Goo-Tyndall-Rim-v1\\production-v7\\Franken_Duet_Goo_Tyndall_Rim.blend",
+      "project_sha256": "25565d772273d9991c5c5eedafb8283e81e4f9c81d5724b707d542ecdb652f96",
+      "video": "D:\\codex\\output\\MMD-Goo-Tyndall-Rim-v1\\quick-5s-v1\\Franken_Duet_5s_GooTyndallRim_SUB_1080P.mp4",
+      "quick_preview": "D:\\codex\\output\\MMD-Goo-Tyndall-Rim-v1\\quick-5s-v1\\Franken_Duet_5s_GooTyndallRim_SUB_1080P.mp4",
+      "new_video_delivered": true,
+      "scope": "150 frames at 1080p30 quick captioned preview; post-output QA skipped by user",
+      "post_output_checks": "skipped per user request",
+      "art_status": "revision_requested",
+      "next_action": "由猪猪直接审看快样片；尚不将新链登记为动态或正式成片验收通过。",
+      "user_feedback": "背后两束窄光柱不自然；大窗应产生大片入光；衣发需要更强的轮廓辉光和更明显的芙宁娜式发带高光。",
+      "user_art_approval": false
+    },
+    {
+      "replaced_on": "2026-11-20",
+      "reason": "New Goo artdirection still candidate independently verified; user approval pending",
+      "active_iteration": {
+        "id": "goo-duet-sdf-still-final-v1",
+        "project": "D:/codex/output/Goo-Duet-SDF-2026-11-19/final-v1/Franken_Duet_SDF_SourceDOF_Still.blend",
+        "project_sha256": "829f2d88827320c48a19ed76df4dc70af495455e4a660769c2bb53fe461caa69",
+        "status": "still-candidate-complete",
+        "technical_status": "passed-limited-4290-static-source-dof-with-minor-render-variance",
+        "scope": "仅4290：双人脸SDF重建，阿克保留自有FaceLightmap，伊科尔自制左右双通道阈值原型，统一主光/完整头轴，几何发影独立；源DOF正式图+无DOF诊断",
+        "still": "D:/codex/output/Goo-Duet-SDF-2026-11-19/final-v1/beauty-sdf-on-duet-4290.png",
+        "comparison": "D:/codex/output/Goo-Duet-SDF-2026-11-19/final-v1/comparison-beauty-before-after-duet-4290.jpg",
+        "verification": "D:/codex/output/Goo-Duet-SDF-2026-11-19/final-v1/beauty-reopen-verification.json",
+        "guide": "docs/GOO_DUET_SDF_IMPLEMENTATION_2026_11_19.md",
+        "new_video_delivered": false,
+        "new_physics_simulation": false,
+        "user_art_approval": false,
+        "art_status": "pending user review",
+        "eye_see_through": "deferred",
+        "next_action": "按猪猪静帧美术反馈继续，不自动恢复视频；新发影/美术仅4290有界验证。",
+        "acceptance": "D:/codex/output/Goo-Duet-SDF-2026-11-19/final-v1/director-acceptance.json"
+      },
+      "latest_still": {
+        "project": "D:\\codex\\output\\Goo-Character-Lookdev-2026-11-18\\final-v1\\Franken_Character_Lookdev_Still.blend",
+        "image": "D:\\codex\\output\\Goo-Character-Lookdev-2026-11-18\\final-v1\\final-duet-4290.png",
+        "baseline": "D:\\codex\\output\\Goo-Character-Lookdev-2026-11-18\\final-v1\\before-duet-4290.png",
+        "double": "D:\\codex\\output\\Goo-Character-Lookdev-2026-11-18\\final-v1\\final-duet-4290.png",
+        "frame": 4290,
+        "resolution": [
+          1920,
+          1080
+        ],
+        "art_status": "pending user review",
+        "guide": "docs/GOO_CHARACTER_LOOKDEV_2026_11_18.md"
+      }
+    }
+  ],
+  "learning_round_history": [
+    {
+      "id": "mmd-external-study-2026-11-13",
+      "status": "external-reading-completed; selected-principles-transferred-and-tested",
+      "guide": "docs/EXTERNAL_MMD_TECHNIQUES_2026_11_13.md",
+      "previous_round": "mmd-learning-system-v1",
+      "previous_round_guide": "docs/CONTINUOUS_LEARNING_SYSTEM.md",
+      "external_source_families_read": 3,
+      "read_scope": [
+        "Nilo public teaching README opening and full LightingEquation.hlsl",
+        "Ray-MMD materials and selected environment/occlusion code plus Trackdancer tutorial body",
+        "Filament selected IBL/material/linear-color/luminance sections"
+      ],
+      "source_ledgers": [
+        "docs/research/EXTERNAL_TOON_SHADOW_2026_11_13.json",
+        "docs/research/EXTERNAL_RAY_MMD_2026_11_13.json",
+        "docs/research/EXTERNAL_MATERIAL_LIGHTING_2026_11_13.json"
+      ],
+      "production_blend_modified": true,
+      "new_render_created": true,
+      "bounded_video_delivered": true,
+      "implemented_followup": {
+        "id": "duet-guanhai-transfer-v1",
+        "guide": "docs/REFERENCE_TECHNIQUE_TRANSFER.md",
+        "scope": "limited principles transferred and locally tested; see delivery",
+        "delivery": "D:\\codex\\output\\MMD-Guanhai-Transfer-v1\\delivery.json"
+      },
+      "new_physics_simulation": false,
+      "browser_or_video_opened": false,
+      "complete_subtitle_obtained": false,
+      "report_directory": "D:\\codex\\output\\MMD-Guanhai-Transfer-v1",
+      "external_reading_report_directory": "D:/codex/output/MMD-External-Study-2026-11-13",
+      "implementation_guide": "docs/REFERENCE_TECHNIQUE_TRANSFER.md"
+    }
+  ],
+  "latest_still": {
+    "project": "D:/codex/output/Goo-Duet-ArtDirection-2026-11-20/final-v3/Candidate.blend",
+    "image": "D:/codex/output/Goo-Duet-ArtDirection-2026-11-20/final-v3/selected.png",
+    "double": "D:/codex/output/Goo-Duet-ArtDirection-2026-11-20/final-v3/selected.png",
+    "baseline": "D:\\codex\\output\\Goo-Duet-ArtDirection-2026-11-20\\iteration-03\\run\\case-baseline.png",
+    "baseline_resolution": [
+      1280,
+      720
+    ],
+    "frame": 4290,
+    "resolution": [
+      1920,
+      1080
+    ],
+    "comparison": "D:\\codex\\output\\Goo-Duet-ArtDirection-2026-11-20\\before-after-4290.jpg",
+    "comparison_scope": "two1280x720/32samples matched cases; final1920x1080/64samples",
+    "art_status": "pending user review",
+    "guide": "docs/GOO_DUET_ARTDIRECTION_2026_11_20.md"
+  },
+  "latest_quick_preview": {
+    "project": "D:\\codex\\output\\MMD-Jelly-Eyes-v1\\production-v16\\Franken_Duet_Goo_Eye_Hair_Stage.blend",
+    "project_sha256": "4e189d6b098e3bfa61e45325bb7f4456d8e9a8fb8943549b5a1e89a6bbe1c4e2",
+    "source_frames": [
+      4140,
+      4438
+    ],
+    "source_frame_step": 2,
+    "output_frames": 150,
+    "fps": 30,
+    "resolution": [
+      1920,
+      1080
+    ],
+    "samples": 16,
+    "dof": true,
+    "motion_blur": false,
+    "runtime": "D:\\codex\\workspace\\goo-engine\\5.2.1-community\\blender-5.2.1-git.0051aee0-windows64\\blender.exe",
+    "runtime_build": "0051aee03764",
+    "elapsed_seconds": 2510.8908751999843,
+    "post_render_validation": "skipped at user request",
+    "video": "D:\\codex\\output\\MMD-Jelly-Eyes-v1\\quick-5s-v16\\Franken_Duet_5s_GooToonShadow_SUB_1080P.mp4",
+    "seconds": 5,
+    "subtitles": "existing blue-gold locked front/behind groups",
+    "bgm": "D:/codex/output/Franken-Duet-Full-Audio-v1/HIMEHINA - フランケンシュタインの怪物.flac",
+    "audio_start": 68.98333333333333,
+    "variants": 1,
+    "user_requested_no_post_output_checks": true,
+    "art_status": "revision_requested",
+    "caption_profile": "D:\\codex\\workspace\\blender-mmd-codex\\presets\\typography\\duet-blue-gold-wedding-v1.json",
+    "reused_scene_cache": false,
+    "cache_directory": "D:\\codex\\temp\\MMD-Jelly-Eyes-v1\\quick-5s-v16\\cache",
+    "caption_stroke_pixels_at_1080": 3,
+    "caption_shadow_opacity": 0.45,
+    "status": "delivered-review-sample",
+    "user_art_approval": false,
+    "master_verification": {
+      "project": "D:\\codex\\output\\MMD-Jelly-Eyes-v1\\production-v16\\Franken_Duet_Goo_Eye_Hair_Stage.blend",
+      "project_sha256": "4e189d6b098e3bfa61e45325bb7f4456d8e9a8fb8943549b5a1e89a6bbe1c4e2",
+      "checks": {
+        "actions": true,
+        "geometry": true,
+        "images": true,
+        "samples": true,
+        "fps": true,
+        "aksiniya_two_eye_modifiers_before_armature": true,
+        "aksiniya_non_eye_vertices_unchanged": true,
+        "aksiniya_eye_delta_bounded": true,
+        "aksiniya_eye_peek_follows_head": true,
+        "ikhor_two_eye_modifiers_before_armature": true,
+        "ikhor_non_eye_vertices_unchanged": true,
+        "ikhor_eye_delta_bounded": true,
+        "ikhor_eye_peek_follows_head": true,
+        "aksiniya_effect_nonzero": true,
+        "hair_shadow_and_peek_materials": true,
+        "added_eye_transparency_disabled": true,
+        "six_hundred_native_shadow_files": true,
+        "portable_shadow_sequence_timing": true,
+        "pure_contour_aov": true
+      },
+      "geometry_samples": [
+        {
+          "actor": "aksiniya",
+          "frame": 4140,
+          "max_eye_delta_m": 0.0007863143109716475,
+          "max_non_eye_delta_m": 0.0
+        },
+        {
+          "actor": "aksiniya",
+          "frame": 4156,
+          "max_eye_delta_m": 0.0019219231326133013,
+          "max_non_eye_delta_m": 0.0
+        },
+        {
+          "actor": "aksiniya",
+          "frame": 4160,
+          "max_eye_delta_m": 0.004094405099749565,
+          "max_non_eye_delta_m": 0.0
+        },
+        {
+          "actor": "aksiniya",
+          "frame": 4164,
+          "max_eye_delta_m": 0.0051667881198227406,
+          "max_non_eye_delta_m": 0.0
+        },
+        {
+          "actor": "aksiniya",
+          "frame": 4170,
+          "max_eye_delta_m": 0.003634045133367181,
+          "max_non_eye_delta_m": 0.0
+        },
+        {
+          "actor": "aksiniya",
+          "frame": 4200,
+          "max_eye_delta_m": 0.00043189857387915254,
+          "max_non_eye_delta_m": 0.0
+        },
+        {
+          "actor": "aksiniya",
+          "frame": 4290,
+          "max_eye_delta_m": 0.0006491136155091226,
+          "max_non_eye_delta_m": 0.0
+        },
+        {
+          "actor": "aksiniya",
+          "frame": 4370,
+          "max_eye_delta_m": 0.0033341487869620323,
+          "max_non_eye_delta_m": 0.0
+        },
+        {
+          "actor": "aksiniya",
+          "frame": 4438,
+          "max_eye_delta_m": 0.00321529945358634,
+          "max_non_eye_delta_m": 0.0
+        },
+        {
+          "actor": "aksiniya",
+          "frame": 4441,
+          "max_eye_delta_m": 0.004511757288128138,
+          "max_non_eye_delta_m": 0.0
+        },
+        {
+          "actor": "ikhor",
+          "frame": 4140,
+          "max_eye_delta_m": 1.2287812012345967e-07,
+          "max_non_eye_delta_m": 0.0
+        },
+        {
+          "actor": "ikhor",
+          "frame": 4156,
+          "max_eye_delta_m": 2.4027400513659813e-07,
+          "max_non_eye_delta_m": 0.0
+        },
+        {
+          "actor": "ikhor",
+          "frame": 4160,
+          "max_eye_delta_m": 1.2287812012345967e-07,
+          "max_non_eye_delta_m": 0.0
+        },
+        {
+          "actor": "ikhor",
+          "frame": 4164,
+          "max_eye_delta_m": 1.1920928955078125e-07,
+          "max_non_eye_delta_m": 0.0
+        },
+        {
+          "actor": "ikhor",
+          "frame": 4170,
+          "max_eye_delta_m": 1.2644053981603065e-07,
+          "max_non_eye_delta_m": 0.0
+        },
+        {
+          "actor": "ikhor",
+          "frame": 4200,
+          "max_eye_delta_m": 1.2377833513710357e-07,
+          "max_non_eye_delta_m": 0.0
+        },
+        {
+          "actor": "ikhor",
+          "frame": 4290,
+          "max_eye_delta_m": 1.2644053981603065e-07,
+          "max_non_eye_delta_m": 0.0
+        },
+        {
+          "actor": "ikhor",
+          "frame": 4370,
+          "max_eye_delta_m": 1.1920928955078125e-07,
+          "max_non_eye_delta_m": 0.0
+        },
+        {
+          "actor": "ikhor",
+          "frame": 4438,
+          "max_eye_delta_m": 1.2377833513710357e-07,
+          "max_non_eye_delta_m": 0.0
+        },
+        {
+          "actor": "ikhor",
+          "frame": 4441,
+          "max_eye_delta_m": 1.365714012990793e-07,
+          "max_non_eye_delta_m": 0.0
+        }
+      ],
+      "jelly_addon_registered": false,
+      "scope": [
+        4140,
+        4441
+      ],
+      "aksiniya": {
+        "max_eye_delta_m": 0.0051667881198227406,
+        "max_non_eye_delta_m": 0.0,
+        "max_helper_error_m": 2.4755668231600746e-07
+      },
+      "ikhor": {
+        "max_eye_delta_m": 2.4027400513659813e-07,
+        "max_non_eye_delta_m": 0.0,
+        "max_helper_error_m": 2.6026425472957743e-07
+      },
+      "passed": true
+    },
+    "rendered_shadow_aov_verification": [
+      {
+        "actor": "aksiniya",
+        "frame": 4290,
+        "expected": "aksiniya_0151.png",
+        "pixels": 4208,
+        "mean_abs_error": 0.0007530126747004192,
+        "p99_abs_error": 0.013347392370924421,
+        "frozen_first_frame_mean_abs_error": 0.047297433256826754
+      },
+      {
+        "actor": "ikhor",
+        "frame": 4290,
+        "expected": "ikhor_0151.png",
+        "pixels": 2728,
+        "mean_abs_error": 0.0006236298500677664,
+        "p99_abs_error": 0.006227479577064514,
+        "frozen_first_frame_mean_abs_error": 0.0025525933269498723
+      },
+      {
+        "actor": "aksiniya",
+        "frame": 4290,
+        "expected": "aksiniya_0151.png",
+        "pixels": 92467,
+        "mean_abs_error": 0.00042459807178827426,
+        "p99_abs_error": 0.006417270563542837,
+        "frozen_first_frame_mean_abs_error": 0.05964399140625251
+      },
+      {
+        "actor": "ikhor",
+        "frame": 4290,
+        "expected": "ikhor_0151.png",
+        "pixels": 60909,
+        "mean_abs_error": 0.00038471008191038794,
+        "p99_abs_error": 0.004616677165031433,
+        "frozen_first_frame_mean_abs_error": 0.004249640238990453
+      },
+      {
+        "actor": "aksiniya",
+        "frame": 4160,
+        "expected": "aksiniya_0021.png",
+        "pixels": 99540,
+        "mean_abs_error": 0.000678717182130138,
+        "p99_abs_error": 0.009415670335292819,
+        "frozen_first_frame_mean_abs_error": 0.04161664533913689
+      }
+    ],
+    "render_log_check": {
+      "shadow_buffer_full_messages": 0,
+      "completed_frame_log_entries": 150,
+      "scope": "Renderer log only; MP4 decode/playback skipped at user request"
+    },
+    "post_output_checks": "Skipped at user request; no MP4 decoding or playback",
+    "settings": "D:\\codex\\output\\MMD-Jelly-Eyes-v1\\effect-settings.json",
+    "limitations": [
+      "Jelly baked only4080-4441; no full-song validation or clothing resimulation",
+      "Ikhor has no source blink in this five-second interval; setup present but no new blink authored",
+      "Eye see-through deferred by user; additional hair transparency disabled",
+      "Face bang shadow baked4140-4439 from actual hair geometry with artistic local distance/height permissions; nose mask is authored",
+      "Stage hybrid PBR and emission controls reuse original architectural probes; no new GI bake",
+      "Native global shadow resolution scale0.75 to fit the build maximum2048MB pool; independent512x512 face-shadow sequence unchanged"
+    ],
+    "user_feedback": "伊科尔头发一直错位，包括刘海和左侧分叉；用户要求只修静帧，不生产新样片。"
+  },
+  "production_runtime": {
+    "id": "goo-v1",
+    "user_requested_default_for_future_work": true,
+    "executable": "D:/codex/workspace/goo-engine/5.2.1-community/blender-5.2.1-git.0051aee0-windows64/blender.exe",
+    "version": "5.2.1 LTS community Goo port",
+    "build_hash": "0051aee03764",
+    "origin": "https://github.com/NaMgAl-Studio/goo-engine-5.2.0/releases/tag/GooBlender5.2.1_2026.9.12",
+    "official_dillongoo_binary": false,
+    "user_config": "D:/codex/workspace/goo-engine/5.2.1-community/portable/config",
+    "user_scripts": "D:/codex/workspace/goo-engine/5.2.1-community/portable/scripts",
+    "mmd_module": "mmd_tools",
+    "portable_preferences_created_and_launch_tested": true,
+    "bootstrap": "scripts/goo_runtime.py",
+    "production_project": "D:\\codex\\output\\MMD-Jelly-Eyes-v1\\production-v16\\Franken_Duet_Goo_Eye_Hair_Stage.blend",
+    "preview_entry": "scripts/run_goo_eye_hair_stage_preview.py",
+    "preserve_original_blender_installation": true,
+    "native_mme_runtime_verified": false,
+    "guide": "docs/GOO_ENGINE_MIGRATION.md",
+    "static_candidate": "D:\\codex\\output\\MMD-MME-Reference-Light-v1\\production-v6\\Franken_MME_Balanced_Light_Still.blend"
+  },
+  "latest_learning": {
+    "date": "2026-11-18",
+    "guide": "docs/DESIGN_FOUNDATIONS_AND_REVIEW.md",
+    "ledger": "docs/research/DESIGN_FOUNDATIONS_2026_11_18.json",
+    "scope": "Official/collaborative design education text, NLA basics and task-based knowledge routing; no production changes"
+  },
+  "latest_production_increment": {
+    "date": "2026-11-17",
+    "project": "D:\\codex\\output\\MMD-MME-Reference-Light-v1\\production-v6\\Franken_MME_Balanced_Light_Still.blend",
+    "scope": "stills only",
+    "guide": "docs/MME_REFERENCE_LIGHT_STILLS_2026_11_17.md",
+    "status": "v6 further Ikhor-only radiance reduction; static4290 only; art pending"
+  },
+  "latest_user_visual_request": {
+    "date": "2026-11-17",
+    "reference": "Three new face/hair closeup images",
+    "guide": "docs/GOO_REFERENCE_FACE_HAIR_STUDY_2026_11_17.md",
+    "requirements": [
+      "calm coloured skin with selected warm shadow shapes",
+      "cool hair with clear strand masses and contained highlight bands",
+      "thin region-specific outlines",
+      "readable iris structure and selective eye glints",
+      "separate cloth/metal/gem highlight behavior",
+      "limited global bloom"
+    ],
+    "eye_see_through": "deferred",
+    "quality_achieved": false
+  },
+  "requested_visual_revision": {
+    "date": "2026-11-17",
+    "feedback": "感觉伊科尔还是有点太亮了，请你再降一些",
+    "candidate_project": "D:\\codex\\output\\MMD-MME-Reference-Light-v1\\production-v6\\Franken_MME_Balanced_Light_Still.blend",
+    "guide": "docs/MME_REFERENCE_LIGHT_STILLS_2026_11_17.md",
+    "status": "v6 still correction; awaiting user review"
+  },
+  "hair_shadow_toplight_study": {
+    "guide": "docs/HAIR_SHADOW_TOPLIGHT_AND_BORDERLESS_CAPTIONS.md",
+    "report": "D:/codex/output/MMD-Hair-Shadow-Toplight-Study-v1/diagnosis.json",
+    "production_modified": false,
+    "cases_viewed": [
+      "A-current",
+      "B-no-glow",
+      "C-base-shading",
+      "D-current-plus-top"
+    ],
+    "finding": "Base garment and hair shading remains; broad surface rims and hair highlights reduce dark separation; native hair Cast currently gates rim, not base palette. Physical-only soft top test had limited effect; not integrated."
+  },
+  "caption_style_preference": {
+    "date": "2026-11-16",
+    "stroke_and_shadow_enabled": true,
+    "profile": "presets/typography/duet-blue-gold-wedding-v1.json",
+    "user_request": "字幕还是保留黑边框和投影吧",
+    "supersedes": "remove-caption-border request"
+  },
+  "previous_borderless_preview": {
+    "project": "D:\\codex\\output\\MMD-Goo-Window-Wrap-v1\\production-v3\\Franken_Duet_Goo_Window_Wrap.blend",
+    "project_sha256": "ed81e7325e7ef3f47fe80dd63b53e1e0e713f7d2b93b9dd4e6e296195a350d85",
+    "source_frames": [
+      4140,
+      4438
+    ],
+    "source_frame_step": 2,
+    "output_frames": 150,
+    "fps": 30,
+    "resolution": [
+      1920,
+      1080
+    ],
+    "samples": 16,
+    "dof": true,
+    "motion_blur": false,
+    "runtime": "D:\\codex\\workspace\\goo-engine\\5.2.1-community\\blender-5.2.1-git.0051aee0-windows64\\blender.exe",
+    "runtime_build": "0051aee03764",
+    "elapsed_seconds": 3537.241422399995,
+    "post_render_validation": "skipped at user request",
+    "video": "D:\\codex\\output\\MMD-Goo-Window-Wrap-v1\\captions-no-border-v1\\video\\Franken_Duet_5s_GooWindowWrapNoBorder_SUB_1080P.mp4",
+    "seconds": 5,
+    "subtitles": "existing blue-gold locked front/behind groups",
+    "bgm": "D:/codex/output/Franken-Duet-Full-Audio-v1/HIMEHINA - フランケンシュタインの怪物.flac",
+    "audio_start": 68.98333333333333,
+    "variants": 1,
+    "user_requested_no_post_output_checks": true,
+    "art_status": "pending user review",
+    "caption_profile": "presets/typography/duet-blue-gold-wedding-no-border-v1.json",
+    "reused_scene_cache": true,
+    "cache_directory": "D:\\codex\\temp\\MMD-Goo-Window-Wrap-v1\\quick-5s-v3\\cache",
+    "caption_stroke_pixels_at_1080": 0,
+    "caption_shadow_opacity": 0
+  },
+  "pending_eye_hair_stage_render": {
+    "status": "complete",
+    "project": "D:\\codex\\output\\MMD-Jelly-Eyes-v1\\production-v16\\Franken_Duet_Goo_Eye_Hair_Stage.blend",
+    "project_sha256": "4e189d6b098e3bfa61e45325bb7f4456d8e9a8fb8943549b5a1e89a6bbe1c4e2",
+    "iteration": "quick-5s-v16",
+    "new_video_completed": true,
+    "output_frames": 150,
+    "source_frames": [
+      4140,
+      4438
+    ],
+    "post_output_video_qa": "skipped at user request",
+    "eye_see_through": "deferred",
+    "beauty_files": 150,
+    "actor_files": 150,
+    "resume_requires_user_instruction": false,
+    "video": "D:\\codex\\output\\MMD-Jelly-Eyes-v1\\quick-5s-v16\\Franken_Duet_5s_GooToonShadow_SUB_1080P.mp4"
+  },
+  "previous_requested_visual_revision": {
+    "date": "2026-11-16",
+    "feedback": "背后两束窄光柱不自然；大窗应产生大片入光；衣发需要更强的轮廓辉光和更明显的芙宁娜式发带高光。",
+    "source_iteration": "goo-tyndall-rim-v1",
+    "candidate_project": "D:\\codex\\output\\MMD-Goo-Window-Wrap-v1\\production-v3\\Franken_Duet_Goo_Window_Wrap.blend",
+    "guide": "docs/GOO_BROAD_WINDOW_AND_STRONG_RIM.md",
+    "status": "new sample delivered; awaiting user review"
+  },
+  "previous_hair_still_iteration": {
+    "id": "goo-eye-hair-stage-v1",
+    "status": "delivered-review-sample",
+    "project": "D:\\codex\\output\\MMD-Jelly-Eyes-v1\\production-v16\\Franken_Duet_Goo_Eye_Hair_Stage.blend",
+    "project_sha256": "4e189d6b098e3bfa61e45325bb7f4456d8e9a8fb8943549b5a1e89a6bbe1c4e2",
+    "video": "D:\\codex\\output\\MMD-Jelly-Eyes-v1\\quick-5s-v16\\Franken_Duet_5s_GooToonShadow_SUB_1080P.mp4",
+    "quick_preview": "D:\\codex\\output\\MMD-Jelly-Eyes-v1\\quick-5s-v16\\Franken_Duet_5s_GooToonShadow_SUB_1080P.mp4",
+    "new_video_delivered": true,
+    "caption_profile": "presets/typography/duet-blue-gold-wedding-v1.json",
+    "scope": "150 native1080p30 frames, five seconds, original-vocal FLAC and locked whole-group captions",
+    "art_status": "pending user review",
+    "user_art_approval": false,
+    "master_verification": {
+      "project": "D:\\codex\\output\\MMD-Jelly-Eyes-v1\\production-v16\\Franken_Duet_Goo_Eye_Hair_Stage.blend",
+      "project_sha256": "4e189d6b098e3bfa61e45325bb7f4456d8e9a8fb8943549b5a1e89a6bbe1c4e2",
+      "checks": {
+        "actions": true,
+        "geometry": true,
+        "images": true,
+        "samples": true,
+        "fps": true,
+        "aksiniya_two_eye_modifiers_before_armature": true,
+        "aksiniya_non_eye_vertices_unchanged": true,
+        "aksiniya_eye_delta_bounded": true,
+        "aksiniya_eye_peek_follows_head": true,
+        "ikhor_two_eye_modifiers_before_armature": true,
+        "ikhor_non_eye_vertices_unchanged": true,
+        "ikhor_eye_delta_bounded": true,
+        "ikhor_eye_peek_follows_head": true,
+        "aksiniya_effect_nonzero": true,
+        "hair_shadow_and_peek_materials": true,
+        "added_eye_transparency_disabled": true,
+        "six_hundred_native_shadow_files": true,
+        "portable_shadow_sequence_timing": true,
+        "pure_contour_aov": true
+      },
+      "geometry_samples": [
+        {
+          "actor": "aksiniya",
+          "frame": 4140,
+          "max_eye_delta_m": 0.0007863143109716475,
+          "max_non_eye_delta_m": 0.0
+        },
+        {
+          "actor": "aksiniya",
+          "frame": 4156,
+          "max_eye_delta_m": 0.0019219231326133013,
+          "max_non_eye_delta_m": 0.0
+        },
+        {
+          "actor": "aksiniya",
+          "frame": 4160,
+          "max_eye_delta_m": 0.004094405099749565,
+          "max_non_eye_delta_m": 0.0
+        },
+        {
+          "actor": "aksiniya",
+          "frame": 4164,
+          "max_eye_delta_m": 0.0051667881198227406,
+          "max_non_eye_delta_m": 0.0
+        },
+        {
+          "actor": "aksiniya",
+          "frame": 4170,
+          "max_eye_delta_m": 0.003634045133367181,
+          "max_non_eye_delta_m": 0.0
+        },
+        {
+          "actor": "aksiniya",
+          "frame": 4200,
+          "max_eye_delta_m": 0.00043189857387915254,
+          "max_non_eye_delta_m": 0.0
+        },
+        {
+          "actor": "aksiniya",
+          "frame": 4290,
+          "max_eye_delta_m": 0.0006491136155091226,
+          "max_non_eye_delta_m": 0.0
+        },
+        {
+          "actor": "aksiniya",
+          "frame": 4370,
+          "max_eye_delta_m": 0.0033341487869620323,
+          "max_non_eye_delta_m": 0.0
+        },
+        {
+          "actor": "aksiniya",
+          "frame": 4438,
+          "max_eye_delta_m": 0.00321529945358634,
+          "max_non_eye_delta_m": 0.0
+        },
+        {
+          "actor": "aksiniya",
+          "frame": 4441,
+          "max_eye_delta_m": 0.004511757288128138,
+          "max_non_eye_delta_m": 0.0
+        },
+        {
+          "actor": "ikhor",
+          "frame": 4140,
+          "max_eye_delta_m": 1.2287812012345967e-07,
+          "max_non_eye_delta_m": 0.0
+        },
+        {
+          "actor": "ikhor",
+          "frame": 4156,
+          "max_eye_delta_m": 2.4027400513659813e-07,
+          "max_non_eye_delta_m": 0.0
+        },
+        {
+          "actor": "ikhor",
+          "frame": 4160,
+          "max_eye_delta_m": 1.2287812012345967e-07,
+          "max_non_eye_delta_m": 0.0
+        },
+        {
+          "actor": "ikhor",
+          "frame": 4164,
+          "max_eye_delta_m": 1.1920928955078125e-07,
+          "max_non_eye_delta_m": 0.0
+        },
+        {
+          "actor": "ikhor",
+          "frame": 4170,
+          "max_eye_delta_m": 1.2644053981603065e-07,
+          "max_non_eye_delta_m": 0.0
+        },
+        {
+          "actor": "ikhor",
+          "frame": 4200,
+          "max_eye_delta_m": 1.2377833513710357e-07,
+          "max_non_eye_delta_m": 0.0
+        },
+        {
+          "actor": "ikhor",
+          "frame": 4290,
+          "max_eye_delta_m": 1.2644053981603065e-07,
+          "max_non_eye_delta_m": 0.0
+        },
+        {
+          "actor": "ikhor",
+          "frame": 4370,
+          "max_eye_delta_m": 1.1920928955078125e-07,
+          "max_non_eye_delta_m": 0.0
+        },
+        {
+          "actor": "ikhor",
+          "frame": 4438,
+          "max_eye_delta_m": 1.2377833513710357e-07,
+          "max_non_eye_delta_m": 0.0
+        },
+        {
+          "actor": "ikhor",
+          "frame": 4441,
+          "max_eye_delta_m": 1.365714012990793e-07,
+          "max_non_eye_delta_m": 0.0
+        }
+      ],
+      "jelly_addon_registered": false,
+      "scope": [
+        4140,
+        4441
+      ],
+      "aksiniya": {
+        "max_eye_delta_m": 0.0051667881198227406,
+        "max_non_eye_delta_m": 0.0,
+        "max_helper_error_m": 2.4755668231600746e-07
+      },
+      "ikhor": {
+        "max_eye_delta_m": 2.4027400513659813e-07,
+        "max_non_eye_delta_m": 0.0,
+        "max_helper_error_m": 2.6026425472957743e-07
+      },
+      "passed": true
+    },
+    "render_log_check": {
+      "shadow_buffer_full_messages": 0,
+      "completed_frame_log_entries": 150,
+      "scope": "Renderer log only; MP4 decode/playback skipped at user request"
+    },
+    "guide": "docs/JELLY_EYE_HAIR_STAGE_IMPLEMENTATION.md",
+    "next_action": "由猪猪审看本轮样片；未恢复全曲。"
+  },
+  "render_delivery_policy": {
+    "date": "2026-11-17",
+    "default": "stills_only",
+    "video_requires_explicit_user_request": true,
+    "user_request": "后续都只看静帧，不需要渲染生成样片，因为要修改的地方挺多",
+    "supersedes": "default five-second preview production"
+  },
+  "previous_fringe_still_iteration": {
+    "id": "ikhor-hair-alignment-still-v1",
+    "project": "D:\\codex\\output\\MMD-Ikhor-Hair-Alignment-v1\\production-v1\\Ikhor_Hair_Aligned_Still.blend",
+    "project_sha256": "43a3c10c12e0afebfea6db4048a806227d79a7da2c3b816ed3b900b9e3936032",
+    "status": "still-repair-candidate",
+    "scope": "Static4290; original hair bind restored; no new physical hair motion or video",
+    "new_video_delivered": false,
+    "art_status": "pending user review",
+    "user_art_approval": false,
+    "guide": "docs/IKHOR_HAIR_ALIGNMENT_STILL_REPAIR.md",
+    "next_action": "猪猪审看静帧；若后续制作视频，另修头发物理并重算动态发影。"
+  },
+  "previous_mme_light_iteration": {
+    "id": "mme-reference-light-balanced-still-v2",
+    "project": "D:\\codex\\output\\MMD-MME-Reference-Light-v1\\production-v5\\Franken_MME_Balanced_Light_Still.blend",
+    "project_sha256": "c42c2f1c814f025ed33affd73724b57468d63d2da39ac8189680a35e98abf6af",
+    "status": "still-candidate-complete",
+    "scope": "Ikhor only: restrain added palette and broad surface radiance with contour/gold/cyan protection. Lights, alpha and compositor unchanged. Static4290 only.",
+    "new_video_delivered": false,
+    "user_art_approval": false,
+    "art_status": "revision_requested",
+    "eye_see_through": "deferred",
+    "guide": "docs/MME_REFERENCE_LIGHT_STILLS_2026_11_17.md",
+    "next_action": "按猪猪静帧反馈继续调整；不自动生成视频。",
+    "user_feedback": "感觉伊科尔还是有点太亮了，请你再降一些"
+  },
+  "repository_organization": {
+    "date": "2026-11-17",
+    "guide": "docs/REPOSITORY_ORGANIZATION_2026_11_17.md",
+    "navigation": "docs/REPOSITORY_GUIDE.md",
+    "index": "catalog/repository_index.json",
+    "snapshot": "docs/history/2026-11-17/repository-before-organization",
+    "production_files_moved": false,
+    "historical_experiments_deleted": false
+  },
+  "workflow_evaluation": {
+    "date": "2026-11-17",
+    "status": "goo_primary_foundations_first",
+    "guide": "docs/GOO_FOUNDATIONS_AND_PARAMETERS.md",
+    "recipe": "presets/workflows/mmd-mme-goo-v1.json",
+    "native_runtime_verified": false,
+    "current_goo_project_retained": "D:\\codex\\output\\MMD-MME-Reference-Light-v1\\production-v6\\Franken_MME_Balanced_Light_Still.blend",
+    "native_mmd_route": "deferred_by_user",
+    "mme_compatibility_layer": "not_started"
+  },
+  "previous_learning_before_native_route": {
+    "date": "2026-11-17",
+    "guide": "docs/STAR_RAIL_FACE_HAIR_STUDY_2026_11_17.md",
+    "ledger": "docs/research/STAR_RAIL_FACE_HAIR_2026_11_17.json",
+    "scope": "Actual author-source reading: StarRailNPRShader face/hair/shared lighting/depth helpers and docs, plus Nilo public lighting example; local geometric approximation implemented",
+    "official_game_shader_obtained": false
+  },
+  "previous_learning_before_goo_foundations": {
+    "date": "2026-11-17",
+    "guide": "docs/MMD_MME_GOO_WORKFLOW.md",
+    "ledger": "docs/research/MMD_MME_GOO_ROUTE_2026_11_17.json",
+    "scope": "Native MME assignment, shadow RT compatibility, supported interchange and scoped local runtime search; no native execution"
+  },
+  "previous_learning_before_normal_control": {
+    "date": "2026-11-17",
+    "guide": "docs/GOO_FOUNDATIONS_AND_PARAMETERS.md",
+    "ledger": "docs/research/GOO_FOUNDATIONS_2026_11_17.json",
+    "scope": "Official basics, local 13-node parameter inventory, single-vs-multiple key light group controls and independent reopen; incomplete foundation curriculum"
+  },
+  "previous_learning_before_blender_foundations": {
+    "date": "2026-11-17",
+    "guide": "docs/GOO_REFERENCE_FACE_HAIR_STUDY_2026_11_17.md",
+    "ledger": "docs/research/GOO_REFERENCE_NORMAL_2026_11_17.json",
+    "scope": "New reference observations, Normal-input controls with analytic positive control and independent reopen; no production modification"
+  },
+  "previous_learning_before_eight_foundations": {
+    "date": "2026-11-18",
+    "guide": "docs/GOO_BLENDER_FOUNDATIONS_2026_11_18.md",
+    "ledger": "docs/research/GOO_BLENDER_FOUNDATIONS_2026_11_18.json",
+    "scope": "Official Goo targeted reread/new wrapper, Blender 4.4/5.2 foundation articles, two-build input controls and independent reopen, display-only charts; no production changes"
+  },
+  "previous_learning_before_design_routing": {
+    "date": "2026-11-18",
+    "guide": "docs/GOO_MMD_EIGHT_FOUNDATIONS_2026_11_18.md",
+    "ledger": "docs/research/GOO_MMD_EIGHT_FOUNDATIONS_2026_11_18.json",
+    "scope": "25 new Blender guide bodies; author MMR article and package/source sections; all eight topics first pass, mesh-normal static/reopen and data controls; no production changes"
+  },
+  "latest_repository_organization": {
+    "date": "2026-11-18",
+    "guide": "docs/AI_TASK_PLAYBOOK.md",
+    "routes": "catalog/task_routes.json",
+    "query": "python -m scripts.knowledge_route --task lighting",
+    "design": "docs/DESIGN_FOUNDATIONS_AND_REVIEW.md",
+    "motion": "docs/ANIMATION_AND_KEYFRAMING_PLAYBOOK.md",
+    "production_modified": false
+  },
+  "latest_face_shadow_research": {
+    "guides": [
+      "docs/FACE_SHADOW_DESIGN_STUDY_2026_11_18.md",
+      "docs/BLENDER53_TOON_PACKAGE_STUDY_2026_11_18.md"
+    ],
+    "output": "D:/codex/output/Goo-Face-Shadow-Study-2026-11-18",
+    "status": "research-read-and-bounded-static-tested-not-integrated",
+    "native_blender": {
+      "version": "5.3.0",
+      "build": "02f0899d78e3"
+    },
+    "native_undefined_nodes": 0,
+    "goo52_undefined_nodes": 22,
+    "production_changed": false,
+    "video_frames_sampled": 7,
+    "video_transcript_obtained": false,
+    "static_controls": 2,
+    "eye_see_through": "deferred"
+  },
+  "previous_character_lookdev_iteration_2026_11_18": {
+    "id": "goo-character-lookdev-still-final-v1",
+    "project": "D:\\codex\\output\\Goo-Character-Lookdev-2026-11-18\\final-v1\\Franken_Character_Lookdev_Still.blend",
+    "project_sha256": "66a030e52f93f373f009cd4308ad6b6bc6504387346ce4ca4adc43851357928a",
+    "status": "still-candidate-complete",
+    "technical_status": "passed-limited-static-with-minor-render-variance",
+    "scope": "两角色4290静帧：局部法线、真实key暖形体、当前发型刘海影、发束与白衣分区、次轮廓及Glow调整；无新动作或物理",
+    "new_video_delivered": false,
+    "new_physics_simulation": false,
+    "user_art_approval": false,
+    "art_status": "pending user review",
+    "eye_see_through": "deferred",
+    "guide": "docs/GOO_CHARACTER_LOOKDEV_2026_11_18.md",
+    "next_action": "按猪猪静帧反馈继续人物美术，不恢复视频。",
+    "still": "D:\\codex\\output\\Goo-Character-Lookdev-2026-11-18\\final-v1\\final-duet-4290.png",
+    "comparison": "D:\\codex\\output\\Goo-Character-Lookdev-2026-11-18\\final-v1\\comparison-duet-4290.jpg",
+    "acceptance": "D:\\codex\\output\\Goo-Character-Lookdev-2026-11-18\\final-v1\\director-acceptance.json"
+  },
+  "blender53_migration_request": {
+    "date": "2026-11-19",
+    "user_request": "后续试作在官方Blender5.3中进行，冻结当前Goo；人物套5.3作者shader，其余舞台、相机、动作、灯光与合成复刻Goo当前工程，不自动恢复视频、新物理或眼透。",
+    "source_project": "D:/codex/output/Goo-Duet-SDF-2026-11-19/final-v1/Franken_Duet_SDF_SourceDOF_Still.blend",
+    "source_sha256": "829f2d88827320c48a19ed76df4dc70af495455e4a660769c2bb53fe461caa69",
+    "runtime": "official Blender5.3.0 02f0899d78e3",
+    "status": "in_progress",
+    "goo_frozen": true,
+    "characters_use_author53_shader": true,
+    "noncharacters_replicate_goo": true,
+    "no_video": true
+  },
+  "goo_artdirection_request": {
+    "date": "2026-11-20",
+    "runtime": "presets/runtime/goo-v1.json",
+    "user_request": "后续直接完成需要的开发，并继续优化当前GooEngine阿克西妮娅和伊科尔工程，尤其渲染与舞台灯光光影设计。",
+    "source_project": "D:/codex/output/Goo-Duet-SDF-2026-11-19/final-v1/Franken_Duet_SDF_SourceDOF_Still.blend",
+    "source_sha256": "829f2d88827320c48a19ed76df4dc70af495455e4a660769c2bb53fe461caa69",
+    "source_frozen": true,
+    "scope": "4290静帧/指定礼堂/原相机SourceDOF，无新视频或物理，保持眼透关闭",
+    "selected_iteration": "D:/codex/output/Goo-Duet-ArtDirection-2026-11-20/iteration-03",
+    "selected_case": "strong_stage",
+    "status": "completed-limited-static-pending-user-review",
+    "guide": "docs/GOO_DUET_ARTDIRECTION_2026_11_20.md",
+    "art_status": "AI selected; user review pending",
+    "supersedes_native53_trial_default_for_this_task_only": true,
+    "candidate": {
+      "path": "D:\\codex\\output\\Goo-Duet-ArtDirection-2026-11-20\\final-v3\\Candidate.blend",
+      "sha256": "fad1fdf5877bec468d1b8d357f9b3dcd8c81b61bda053b86eea2f06cdcd6af8b"
+    },
+    "verification": "D:\\codex\\output\\Goo-Duet-ArtDirection-2026-11-20\\reopened-v3\\reopen-report.json",
+    "acceptance": "D:\\codex\\output\\Goo-Duet-ArtDirection-2026-11-20\\acceptance.json"
+  }
+}

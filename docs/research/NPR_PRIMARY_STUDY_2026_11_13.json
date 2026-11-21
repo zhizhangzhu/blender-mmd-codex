@@ -1,0 +1,184 @@
+{
+  "schema_version": 1,
+  "date": "2026-11-13",
+  "study_status": "primary-text-reading-and-local-source-inspection-only",
+  "document": "docs/NPR_PRIMARY_STUDY_2026_11_13.md",
+  "scope": {
+    "new_topics": [
+      "Hair highlight allowance after the nonlinear response versus offset before that response",
+      "Separate artistic shadow attenuation of the generated hair highlight"
+    ],
+    "no_new_face_sdf_conclusion": true,
+    "blend_opened": false,
+    "blender_experiment_run": false,
+    "render_generated": false,
+    "engine_installed_or_changed": false,
+    "production_scene_changed": false,
+    "catalog_or_state_changed": false,
+    "video_watched_or_transcribed_by_this_study": false
+  },
+  "sources": [
+    {
+      "id": "mooa-hair",
+      "title": "Add Stylized Hair Highlights",
+      "publisher": "MooaToon author documentation",
+      "url": "https://mooatoon.com/en/docs/Tutorial/AddStylizedHairHighlights",
+      "access": "page-body-text-read",
+      "sections_inspected": [
+        "Stylized Kajiya-Kay based on Tangent Transfer",
+        "Draw a Specular Mask to Precisely Control highlight Shapes",
+        "Controlling Highlight Transitions with Specular Color Ramp"
+      ],
+      "new_fact_used": "The author presents a highlight allowance/color map and Specular Ramp Offset as separate controls; this study does not infer their exact shader formula.",
+      "not_inspected": [
+        "Individual image files",
+        "Houdini assets",
+        "UE material implementation"
+      ]
+    },
+    {
+      "id": "mooa-hair-edit-link",
+      "url": "https://github.com/Jason-Ma-0012/jason-ma-0012.github.io/tree/main/docs/Tutorial/AddStylizedHairHighlights.md",
+      "access": "failed-cache-miss",
+      "claims_based_on_this_access": false
+    },
+    {
+      "id": "unity-highlight-versioned",
+      "title": "Highlight Settings",
+      "publisher": "Unity official package documentation",
+      "url": "https://docs.unity3d.com/Packages/com.unity.toonshader@0.11/manual/Highlight.html",
+      "version_reported_by_page": "0.11.1-preview",
+      "access": "html-text-body-read",
+      "sections_inspected": [
+        "Highlight",
+        "Specular Mode",
+        "Highlight Blending on Shadows",
+        "Highlight Mask"
+      ],
+      "new_fact_used": "The documentation exposes highlight masking and intensity in shadowed regions as separate controls.",
+      "not_inspected": [
+        "Animated image contents",
+        "Runtime Unity behavior"
+      ]
+    },
+    {
+      "id": "unity-highlight-master-doc",
+      "title": "Highlight.md",
+      "publisher": "Unity-Technologies official GitHub repository",
+      "url": "https://github.com/Unity-Technologies/com.unity.toonshader/blob/master/com.unity.toonshader/Documentation~/Highlight.md",
+      "revision": "master; not commit-pinned",
+      "access": "rendered-document-body-read",
+      "new_fact_used": "Cross-check of separately documented highlight mask and shadow blending controls.",
+      "not_a_same_revision_claim": "The versioned 0.11.1-preview page and master branch are not asserted to be the same snapshot."
+    },
+    {
+      "id": "unity-builtin-source",
+      "title": "UCTS_DoubleShadeWithFeather.cginc",
+      "publisher": "Unity-Technologies official GitHub repository",
+      "url": "https://github.com/Unity-Technologies/com.unity.toonshader/blob/master/com.unity.toonshader/Runtime/Shaders/BuiltIn/UCTS_DoubleShadeWithFeather.cginc",
+      "revision": "master; not commit-pinned",
+      "access": "source-text-inspected-at-selected-symbols",
+      "symbols_inspected": [
+        "_SystemShadowsLevel_var",
+        "Set_FinalShadowMask",
+        "_TweakHighColorMask_var",
+        "_HighColor_var",
+        "Set_HighColor"
+      ],
+      "new_facts_used": [
+        "The sampled highlight mask scales the generated highlight separately from shadow-region attenuation.",
+        "Set_FinalShadowMask includes artistic diffuse/shadow inputs and must not be relabeled as isolated geometric visibility."
+      ],
+      "limits": [
+        "Only the BuiltIn implementation was inspected.",
+        "No URP/HDRP behavior was verified.",
+        "No shader code was copied into this repository or executed."
+      ]
+    },
+    {
+      "id": "mooa-shadow-background-check",
+      "title": "Controlling the Shape of Shadows",
+      "publisher": "MooaToon author documentation",
+      "url": "https://mooatoon.com/en/docs/Tutorial/ControlTheShapeOfShadows",
+      "access": "page-body-text-accessible; background cross-check",
+      "new_topic_counted": false,
+      "limits": "No new face-SDF implementation claim and no new claim based on unviewed example images."
+    }
+  ],
+  "local_source_evidence": [
+    {
+      "path": "scripts/prepare_character_layers.py",
+      "sha256": "d98f089a4e039482eb6819217a8ef470b83b35f77a0859d41a6a75407e28f207",
+      "inspected_lines": [
+        [186, 337]
+      ],
+      "findings": [
+        "The surface-mask B channel is remapped to 0.35 + 0.65*B before multiplying the band, so black does not strictly disallow the new highlight.",
+        "The new hair highlight uses the head-axis projected tangent approximation, a half vector, exponent, mask modulation and strength.",
+        "The preceding calibrated illumination factor is not wired into the generated hair-highlight strength in this source section."
+      ],
+      "saved_blend_connections_rechecked": false
+    },
+    {
+      "path": "scripts/make_surface_masks.py",
+      "sha256": "27a3b2044f58dbd1acfe25ca321df119dd303b3e4b164670d4041c80505cc9cc",
+      "inspected_lines": [
+        [1, 105]
+      ],
+      "findings": [
+        "B is a source-RGB-brightness-derived painted-highlight candidate, not an original artist-authored specular allowance map."
+      ]
+    },
+    {
+      "path": "presets/quality/duet-character-layers-v1.json",
+      "sha256": "40c613429b6357ccaa33f66797d5166e2e43fb6988d07eeca2668ff992c3ecb2",
+      "findings": [
+        "Existing hair exponent is 44; this study does not change the preset."
+      ]
+    }
+  ],
+  "proposed_validation": [
+    {
+      "id": "hair-offset-versus-allowance",
+      "status": "not-implemented",
+      "hypothesis": "An independent pre-exponent offset can reshape the generated band while a post-response allowance strictly removes it in selected UV regions.",
+      "control": "Original head/light/view directions, exponent, gain and existing mask modulation are fixed.",
+      "bypass": "k=0 for offset; M=1 for new allowance",
+      "diagnostic_values": {
+        "k": [0, 0.01, 0.02],
+        "offset_neutral": 0.5,
+        "allowance": [0, 0.5, 1]
+      },
+      "not_author_parameters": true,
+      "acceptance": [
+        "Strict-zero allowance produces zero for this generated highlight branch.",
+        "Offset-only changes can be traced in upstream scalar previews.",
+        "No new UV seam or temporal flicker across fixed-light head turns, moving-key tests and camera orbit."
+      ],
+      "limits": "No claim of full tangent transfer, no changes to the base MMD color or existing authored specular appearance."
+    },
+    {
+      "id": "hair-shadow-art-gate",
+      "status": "not-implemented",
+      "hypothesis": "An optional intensity gate can make the new hair band participate in designed light/shadow regions.",
+      "input_semantics": "Existing calibrated combined-illumination response F, explicitly not isolated shadow visibility",
+      "bypass": "enable=0 or retention r=1",
+      "diagnostic_values": {
+        "retention_r": [1, 0.35, 0]
+      },
+      "not_author_parameters": true,
+      "acceptance": [
+        "Only the generated hair-highlight branch is affected.",
+        "F and ungated/gated highlight outputs explain the difference.",
+        "Fill-light sensitivity is recorded and not misreported as pure visibility.",
+        "The gate remains optional if it erases useful dark-region hair structure or becomes unstable."
+      ],
+      "limits": "Directional diffuse darkness and true light occlusion are different; this is an art policy, not a physically complete specular visibility model."
+    }
+  ],
+  "promotion": {
+    "production_ready": false,
+    "quality_target_achieved": false,
+    "reason": "No implementation, same-frame render, dynamic test or user art approval was obtained by this study."
+  }
+}

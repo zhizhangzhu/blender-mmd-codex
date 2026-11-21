@@ -1,0 +1,31 @@
+{
+  "id": "portrait-layer-study-v1",
+  "date": "2026-11-14",
+  "status": "same-frame-diagnostic-protocol-not-production-preset",
+  "source": "D:/codex/output/MMD-Clean-Game-Characters-v1/production-v2/Franken_Duet_Clean_Game.blend",
+  "source_sha256": "0ec95ee7162512ffc405a2a7337b355caf62cd993b3d8302886ee59e1561d9d4",
+  "guide": "docs/PORTRAIT_LIGHTING_AND_SHADOW_STUDY.md",
+  "scope": {"frame": 4290, "resolution": [1280, 720], "samples": 48, "dof": false, "motion_blur": false, "compositor": "unchanged", "file_outputs": "all muted", "save_blend": false},
+  "implemented_diagnostics": {
+    "script": "scripts/render_portrait_light_controls.py",
+    "report": "D:/codex/output/MMD-Portrait-Lighting-Study-2026-11-14/controls-v1/control-report.json",
+    "cases": [
+      {"id": "A-current", "hidden_scattering": [], "additive_rim_gain": 1},
+      {"id": "B-scattering-off", "hidden_scattering": ["Wedding | bounded rear scattering", "Bold wedding | bounded beam fan air"], "additive_rim_gain": 1},
+      {"id": "C-scattering-off-rim-gain2", "hidden_scattering": ["Wedding | bounded rear scattering", "Bold wedding | bounded beam fan air"], "additive_rim_gain": 2}
+    ],
+    "retained": ["six luminous cone volumes", "actual lamp energy and color", "Reference SCREEN Fac", "face/skin rim", "SDF/form and response", "AO", "geometry and native motion", "removed vow arcs stay hidden"],
+    "adoption": "No production selection. B is a useful spatial direction; C increases cyan emphasis and does not solve body illumination or face shadow design."
+  },
+  "next_tests_not_performed": {
+    "linear_rim_gain": [1, 1.5, 2],
+    "fixed_rim_variables": ["actual additive source location", "direction gate", "mask", "width/power", "exposure", "base palette"],
+    "glow_checks": ["source with Glow disabled", "same original Glow restored", "rendered highlight extraction"],
+    "lighting_signal_inventory": ["MMD Color", "SDF/form", "raw Diffuse grey", "distance-compensated grey", "response", "form times response", "palette RGB", "AO", "each additive rim source"],
+    "dynamic_cases": ["head yaw/pitch/roll", "key move with fixed head", "camera orbit with fixed head and light", "hands crossing face", "both actors overlapping and exchanging depth"],
+    "photographic_stop_examples": "Only an exposure exercise, not a Blender wattage recipe or final key/fill ratio.",
+    "reference_style": "Guanhaizi core direction; user-supplied paierer video for bright portrait/dark-stage relationship. Exact author shaders unknown."
+  },
+  "reject_if": ["deep blue turns grey", "white-cloth clipping", "eye/ink loss", "isolated nose/mouth dark blocks", "all-around bright rim", "occlusion light leaks", "motion brightness pumping", "apparent improvement depends only on haze/Glow"],
+  "limits": ["No new five-second video or saved production blend", "No head-turn/key-orbit/camera-orbit test of these new controls", "No zero-collision or physics certification", "User art target not achieved or approved", "Do not apply this script or protocol to another SHA without new input/role review"]
+}

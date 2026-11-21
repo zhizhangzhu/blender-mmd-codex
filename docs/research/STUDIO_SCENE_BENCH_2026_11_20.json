@@ -1,0 +1,129 @@
+{
+  "schema_version": 1,
+  "date": "2026-11-20",
+  "purpose": "Original implementation/review evidence for reusable native53 static diagnostics; no full third-party source copied",
+  "reading": [
+    {
+      "source": "https://docs.blender.org/api/latest/bpy.ops.wm.html",
+      "scope": "Official API search-returned open_mainfile signature and use_scripts/load_ui descriptions, not entire manual"
+    },
+    {
+      "source": "https://docs.blender.org/api/current/bpy.types.Context.html",
+      "scope": "Official search-returned evaluated_depsgraph_get description"
+    },
+    {
+      "source": "local Blender5.3 build02f0899d78e3 RNA and original repository code",
+      "scope": "Actual local Glare/Mix/output/FileOutput sockets; isolated registration and source contracts"
+    }
+  ],
+  "new_findings": [
+    "Glare uses Type menu input in this build; legacy glare_type assignment rejected",
+    "Compositor supports ShaderNodeMixRGB, CompositorNodeRGB and node-group final output; FileOutput requires file_output_items",
+    "Disable blanket Glare mute: combined Image bypasses input, effect-only Glare becomes zero",
+    "Static frame evaluation must guard viewport and render simulations, including animation/driver enabling before the target frame",
+    "Renderer assignment is checked by actual readback; successful parameter changes do not imply an artistic improvement"
+  ],
+  "runs": {
+    "fixture-a-release": {
+      "report": {
+        "path": "D:\\codex\\output\\MMD-Studio-SceneBench-2026-11-20\\fixture-a-release\\report.json",
+        "sha256": "f4beecfbf86601fa04929ae983bf083b9c147538dc552f8b8622df8a5b2a27c5"
+      },
+      "passed": true,
+      "cases": 6,
+      "source": {
+        "path": "D:\\codex\\temp\\MMD-Studio-SceneBench-2026-11-20\\fixtures-v3\\fixture-A.blend",
+        "sha256": "964c0178e4744a69e6499fc1d7a2d1bfcdee60dc953d6874ca689f2ab7e63b10"
+      },
+      "errors": []
+    },
+    "fixture-b-release": {
+      "report": {
+        "path": "D:\\codex\\output\\MMD-Studio-SceneBench-2026-11-20\\fixture-b-release\\report.json",
+        "sha256": "b47a1faa79ca781278db3c80d2e08f9884c00a3b4b8f3036ec49ea5a3372e3f1"
+      },
+      "passed": true,
+      "cases": 6,
+      "source": {
+        "path": "D:\\codex\\temp\\MMD-Studio-SceneBench-2026-11-20\\fixtures-v3\\fixture-B.blend",
+        "sha256": "fce863bd93917182b03393f20663435a48105075bbea3d221eae65e380b7eeb7"
+      },
+      "errors": []
+    },
+    "fixture-a-release-verified": {
+      "report": {
+        "path": "D:\\codex\\output\\MMD-Studio-SceneBench-2026-11-20\\fixture-a-release-verified\\report.json",
+        "sha256": "af6d0fc24a2d6d63aed3cd935d46d6be269fc74c4c8e7366b2f4575683706ff3"
+      },
+      "passed": true,
+      "cases": 6,
+      "source": {
+        "path": "D:\\codex\\temp\\MMD-Studio-SceneBench-2026-11-20\\fixtures-v3\\fixture-A.blend",
+        "sha256": "964c0178e4744a69e6499fc1d7a2d1bfcdee60dc953d6874ca689f2ab7e63b10"
+      },
+      "errors": []
+    },
+    "native53-controls-final": {
+      "report": {
+        "path": "D:\\codex\\output\\MMD-Studio-SceneBench-2026-11-20\\native53-controls-final\\report.json",
+        "sha256": "17f878705d904145507142d421f1c6257799e946ed52beedab3df69f500c8543"
+      },
+      "passed": true,
+      "cases": 2,
+      "source": {
+        "path": "D:\\codex\\output\\Blender53-Duet-Toon-2026-11-19\\author-trial-v3\\Franken_Duet_Author53_Still.blend",
+        "sha256": "b740a2b24b87572faee68ebc59a7d801c3d891304fed704312cf872918af7abb"
+      },
+      "errors": []
+    },
+    "negative-simulation-release": {
+      "report": {
+        "path": "D:\\codex\\output\\MMD-Studio-SceneBench-2026-11-20\\negative-simulation-release\\report.json",
+        "sha256": "2507d8c7550ec0309857586f19f351a5b85981a9af094c4e05a03ff966224949"
+      },
+      "passed": false,
+      "cases": 0,
+      "source": {
+        "path": "D:\\codex\\temp\\MMD-Studio-SceneBench-2026-11-20\\negative-disabled-cloth.blend",
+        "sha256": "864aac9168c0ff744ee95a0bbf7938339b0eb80def051b503f509319e4e0d7f5"
+      },
+      "errors": [
+        "Override activates a simulation: ActorOneTorso/RefusalCloth: CLOTH"
+      ]
+    },
+    "negative-animated-release": {
+      "report": {
+        "path": "D:\\codex\\output\\MMD-Studio-SceneBench-2026-11-20\\negative-animated-release\\report.json",
+        "sha256": "b7d2d4fea2bcdff99cec3465bf63af939eabe4feae0e2f0dcbc1e2ff1d1fbc1b"
+      },
+      "passed": false,
+      "cases": 0,
+      "source": {
+        "path": "D:\\codex\\temp\\MMD-Studio-SceneBench-2026-11-20\\negative-animated-cloth.blend",
+        "sha256": "5af1fab3fe22654ab539779a83373056923542951d6af1868a3bdb27c8a58cd5"
+      },
+      "errors": [
+        "Active simulation refused before frame evaluation: ActorOneTorso/AnimationCloth: animated simulation enablement"
+      ]
+    }
+  },
+  "actual_review": {
+    "fixture_a": "High-reasoning independent reviewer viewed all six original PNGs and decoded repeated baseline: pixels identical",
+    "native53": "Root viewed both final release4290 PNGs at640x360; local clothing response limited; no art approval",
+    "limits": [
+      "Original proxy fixtures verify tools, not MMD appearance",
+      "Only native53 author-trial-v3 frame4290 integrated; no full migration, new physical motion or time-stability evidence",
+      "No generic PMX shader installer or automatic style reconstruction claimed"
+    ]
+  },
+  "failures_retained": [
+    {
+      "path": "D:/codex/temp/MMD-Studio-SceneBench-2026-11-20/fixtures-v1",
+      "reason": "glare_type removed; actual RNA inspected"
+    },
+    {
+      "path": "D:/codex/temp/MMD-Studio-SceneBench-2026-11-20/fixtures-v2",
+      "reason": "CompositorNodeMixRGB removed; switched to actual available shader mix/group output"
+    }
+  ]
+}

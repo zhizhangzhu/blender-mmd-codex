@@ -1,0 +1,70 @@
+{
+  "id": "ikhor-clean-game-v1",
+  "parameter_iteration": 2,
+  "iteration_reason": "Seven v1 GPU controls at 4290 show useful skin/gold changes, but the front white sleeve is already on the bright ramp endpoint and became slightly darker. Preserve HSV boundaries; add palette-gated white midtone gain with luminance headroom, and soften hair's brown side band. Iteration 2 awaits new static controls.",
+  "source_blend_sha256": "f9442577a61a2c1cc4f39442e4468d42f13d42311fdd9f9e9616d165d40ea692",
+  "source_contract": "Only the saved production-v7 Aksiniya/Ikhor wedding master; apply in its unsaved working copy before the builder saves a new revision.",
+  "reference_ledger": "docs/research/IKHOR_PRINCE_REFERENCE_2026_11_14.json",
+  "reference_video_sha256": "ef140e1a20d1678442d2b1dbfac80b8592932dfb22bc2b1070eaecd89559a608",
+  "reference_render_samples_seconds_approx": [4.1768224819, 7.4848658876, 10.8263238731, 14.1677818587],
+  "performer_id": "ikhor",
+  "modules": {"palette": 1, "response_ramp": 1, "highlight_metal": 1, "rim": 1},
+  "exclude_materials": ["bq", "环", "灯"],
+  "expected_source_materials": ["颜", "首", "眉毛", "睫毛", "二重", "目白", "目", "目2", "口", "舌", "齿", "bq", "鬓", "衣", "衣2", "衣领", "带子", "衣饰", "裙", "手", "裤", "靴", "靴底", "靴饰", "灯", "环"],
+  "baseline_palettes": {
+    "face": [[0.72,0.55,0.56,1],[1.025,1.01,1.0,1]],
+    "skin": [[0.78,0.63,0.61,1],[1.02,1.0,0.98,1]],
+    "hair": [[0.56,0.47,0.33,1],[1.04,1.02,0.95,1]],
+    "white_outer": [[0.48,0.54,0.69,1],[1.02,1.025,1.045,1]]
+  },
+  "palettes": {
+    "face": [[0.82,0.70,0.77,1],[1.025,1.01,1.08,1]],
+    "skin": [[0.90,0.84,0.87,1],[1.02,1.01,1.06,1]],
+    "hair": [[0.84,0.79,0.66,1],[1.08,1.05,1.00,1]],
+    "white_outer": [[0.82,0.86,0.94,1],[1.02,1.025,1.035,1]]
+  },
+  "ramp": {
+    "baseline_positions": [0.24,0.80],
+    "positions": {"face": [0.24,0.74], "skin": [0.18,0.68], "hair": [0.18,0.70], "white_outer": [0.20,0.66]},
+    "interpolation": "EASE",
+    "unchanged": "Existing key-facing combined response, geometric form, face-form floor 0.60, one short AO and their calibrated ranges are retained. No final face brightness floor."
+  },
+  "white_outer": {
+    "materials": ["衣", "衣2", "衣领", "带子", "裙"],
+    "saturation_full_below": 0.12,
+    "saturation_zero_above": 0.28,
+    "value_zero_below": 0.40,
+    "value_full_above": 0.66,
+    "original_protection_masks": ["gold material partition art permission", "cyan_gems art permission"],
+    "protection_full_range": [0.001,0.04],
+    "midtone_gain": [1.38,1.30,1.22,1],
+    "headroom_full_below": 0.45,
+    "headroom_zero_above": 1.0,
+    "semantics": "Artist-selected low-chroma/high-value permission from original base-texture Color in the current linear shader domain, multiplied by exclusions from unchanged source gold/cyan masks. Not a recovered game material map; dark lining and colored decorations retain their original branches."
+  },
+  "hair_highlight": {"baseline_exponent": 44, "exponent": 28, "baseline_strength": 0.08, "strength": 0.05},
+  "gold_highlight": {
+    "materials": ["衣", "衣2", "衣领", "带子", "衣饰", "裙", "靴饰"],
+    "baseline_roughness": 0.27, "roughness": 0.39,
+    "baseline_mix": 0.62, "mix": 0.44,
+    "metallic_unchanged": 0.80
+  },
+  "rim": {
+    "baseline_power": 5.5, "power": 7.0,
+    "baseline_strength": {"face": 0.015, "skin": 0.015, "hair": 0.80, "white_outer": 0.60},
+    "strength": {"face": 0.008, "skin": 0.008, "hair": 0.38, "white_outer": 0.28},
+    "color_unchanged": [0.08,0.62,1.0],
+    "semantics": "White-cloth changes are permission-gated per pixel. Original cyan-gem emission, gold/blue masks and other material rims retain their original sources; RGB chromatic splitting seen in the reference is not copied."
+  },
+  "limits": [
+    "Candidate adaptation from four user-provided local reference frames, not the author's shader or recovered render parameters.",
+    "All palette numbers are linear multipliers of the retained MMD Color output, not sampled display-sRGB swatches.",
+    "The face uses the existing original FaceDiffuse fallback because edited y1.png is missing; no texture is replaced or claimed restored.",
+    "No new emission closure, lighting probe, AO, real-time physics, camera, motion, geometry, outline, exposure, world or stage changes.",
+    "AOV names and original Alpha links stay intact; changed highlight/rim scalar signals automatically feed the existing beauty and AOV branches.",
+    "Four switches at zero structurally select the retained baseline branches; pixel-equivalent bypass and visual improvement require render controls.",
+    "Iteration 1 all-off GPU control differed from baseline by at most one 8-bit code value (MAE 0.0044618 code values); iteration 2 has not yet been rendered.",
+    "White midtone gain is multiplicative on the existing shaded NPR color before its original AO. It is gated by palette enable, unchanged white HSV permission and luminance headroom; it adds no constant white floor, gamma remap or emission closure. Already bright whites retain less gain. Physical BaseColor and its 12% cloth closure stay untouched.",
+    "White HSV permission must be checked on actual materials/UV before visual acceptance; high-value desaturated painted details may also enter the permission."
+  ]
+}

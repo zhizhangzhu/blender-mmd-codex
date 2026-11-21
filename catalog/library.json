@@ -1,0 +1,1881 @@
+{
+  "schema_version": 1,
+  "title": "帧间 · MMD 预设与知识库",
+  "updated": "2026-11-16",
+  "featured": "goo-eye-hair-stage-v1",
+  "categories": {
+    "style": "风格套装",
+    "character": "人物与材质",
+    "stage": "灯光与舞台",
+    "post": "字幕与后期"
+  },
+  "families": {
+    "gosari542": "Gosari542 方向",
+    "guanhaizi": "观海子方向",
+    "genshin": "原神适配",
+    "wuwa": "鸣潮研究",
+    "original": "通用技法"
+  },
+  "statuses": {
+    "motion": "技术样片",
+    "still": "静帧实验",
+    "study": "研究待适配"
+  },
+  "style_packages": [
+    {
+      "id": "gosari-landscape-v1",
+      "title": "柔光 · 暖色舞台",
+      "subtitle": "柔和肤色与分区材质，让角色从舞台中自然浮现。",
+      "collection": "SOFT / WARM",
+      "aspect": "landscape",
+      "family": "gosari542"
+    },
+    {
+      "id": "guanhaizi-graphic-portrait-v1",
+      "title": "心动 · 图形片场",
+      "subtitle": "粉色菱格、白色贴纸轮廓与动态文字，适合竖屏节奏。",
+      "collection": "GRAPHIC / PINK",
+      "aspect": "portrait",
+      "family": "guanhaizi"
+    },
+    {
+      "id": "guanhaizi-neon-landscape-v1",
+      "title": "夜游 · 霓虹舞台",
+      "subtitle": "紫红轮廓光与克制的光点，保留实体舞台的空间感。",
+      "collection": "NEON / VIOLET",
+      "aspect": "landscape",
+      "family": "guanhaizi"
+    },
+    {
+      "id": "gosari-portrait-v1",
+      "title": "柔光 · 竖屏肖像",
+      "subtitle": "为半身与表情留出画幅，暖色舞台配轻量泛光。",
+      "collection": "SOFT / PORTRAIT",
+      "aspect": "portrait",
+      "family": "gosari542"
+    },
+    {
+      "id": "guanhaizi-graphic-landscape-v1",
+      "title": "心动 · 横屏图形",
+      "subtitle": "横向负空间与独立文字布局，延续粉色平面设计。",
+      "collection": "GRAPHIC / WIDE",
+      "aspect": "landscape",
+      "family": "guanhaizi"
+    },
+    {
+      "id": "guanhaizi-neon-portrait-v1",
+      "title": "夜游 · 竖屏霓虹",
+      "subtitle": "用彩色边光与背景散点，把视线收拢到角色。",
+      "collection": "NEON / PORTRAIT",
+      "aspect": "portrait",
+      "family": "guanhaizi"
+    }
+  ],
+  "entries": [
+    {
+      "id": "goo-eye-hair-stage-v1",
+      "title": "果冻眼 · 明亮肤色与分层发影",
+      "subtitle": "原生果冻眼、眼睛高光、不透明刘海、逐帧几何发影、暖鼻影、强轮廓泛光与舞台材质；眼透搁置。",
+      "collection": "GOO / EYES & HAIR",
+      "category": "character",
+      "family": "guanhaizi",
+      "aspect": "landscape",
+      "status": "motion",
+      "image": "D:\\codex\\output\\MMD-Jelly-Eyes-v1\\production-v16\\portrait-4290.jpg",
+      "video": "D:\\codex\\output\\MMD-Jelly-Eyes-v1\\quick-5s-v16\\Franken_Duet_5s_GooToonShadow_SUB_1080P.mp4",
+      "project": "D:\\codex\\output\\MMD-Jelly-Eyes-v1\\production-v16\\Franken_Duet_Goo_Eye_Hair_Stage.blend",
+      "report": "D:\\codex\\output\\MMD-Jelly-Eyes-v1\\delivery.json",
+      "docs": [
+        "JELLY_EYE_HAIR_STAGE_IMPLEMENTATION.md",
+        "STAR_RAIL_FACE_HAIR_STUDY_2026_11_17.md"
+      ],
+      "configs": [
+        "presets/lighting/goo-eye-hair-stage-v1.json",
+        "presets/runtime/goo-v1.json",
+        "presets/typography/duet-blue-gold-wedding-v1.json"
+      ],
+      "scripts": [
+        "scripts/prepare_goo_eye_hair_stage.py",
+        "scripts/prepare_goo_opaque_toon_v11.py",
+        "scripts/bake_goo_face_hair_shadows.py",
+        "scripts/finalize_goo_toon_shadow_master.py",
+        "scripts/check_goo_rendered_shadow_aovs.py",
+        "scripts/verify_goo_eye_hair_stage.py",
+        "scripts/run_goo_eye_hair_stage_preview.py"
+      ],
+      "look": [
+        "随眨眼的果冻弹动",
+        "高光与虹膜颜色分离",
+        "刘海保持原有不透明度",
+        "冷暖发束色带与逐帧几何刘海投影",
+        "受控亮肤与独立暖鼻影",
+        "纯轮廓泛光",
+        "石材／金属／烛光分区"
+      ],
+      "compatibility": "Goo5.2.1社区版0051aee03764，先注册便携MMD插件；保留原生动作与贴图。",
+      "evidence": [
+        "插件普通与Goo5.2临时注册／烘焙／独立重开",
+        "原动作与十时点眼外顶点保持",
+        "独立重开600张阴影文件与实际渲染帧号核查；两人有效脸部近景已观察",
+        "150帧实际新渲染与字幕原唱编码完成"
+      ],
+      "art_review": {
+        "status": "pending-user-review",
+        "as_of": "2026-11-16",
+        "feedback": "Awaiting user review"
+      },
+      "limits": [
+        "Jelly baked only4080-4441; no full-song validation or clothing resimulation",
+        "Ikhor has no source blink in this five-second interval; setup present but no new blink authored",
+        "Eye see-through deferred by user; additional hair transparency disabled",
+        "Face bang shadow baked4140-4439 from actual hair geometry with artistic local distance/height permissions; nose mask is authored",
+        "Stage hybrid PBR and emission controls reuse original architectural probes; no new GI bake",
+        "Native global shadow resolution scale0.75 to fit the build maximum2048MB pool; independent512x512 face-shadow sequence unchanged",
+        "No post-output MP4 QA; art awaiting user review"
+      ],
+      "command": "Use Start_Goo_Project.cmd. Existing outputs are preserved."
+    },
+    {
+      "id": "goo-window-wrap-v1",
+      "title": "大窗柔光 · 强衣发轮廓",
+      "subtitle": "窗面尺度的宽幅日照、强白蓝衣缘、明显发带高光与专用边缘辉光。",
+      "collection": "GOO / WINDOW WRAP",
+      "category": "stage",
+      "family": "guanhaizi",
+      "aspect": "landscape",
+      "status": "motion",
+      "image": "D:\\codex\\output\\MMD-Goo-Window-Wrap-v1\\production-v3\\portrait-4290.png",
+      "video": "D:\\codex\\output\\MMD-Goo-Window-Wrap-v1\\quick-5s-v3\\Franken_Duet_5s_GooWindowWrap_SUB_1080P.mp4",
+      "project": "D:\\codex\\output\\MMD-Goo-Window-Wrap-v1\\production-v3\\Franken_Duet_Goo_Window_Wrap.blend",
+      "report": "D:\\codex\\output\\MMD-Goo-Window-Wrap-v1\\delivery.json",
+      "docs": [
+        "GOO_BROAD_WINDOW_AND_STRONG_RIM.md",
+        "HAIR_SHADOW_TOPLIGHT_AND_BORDERLESS_CAPTIONS.md"
+      ],
+      "configs": [
+        "presets/lighting/goo-window-wrap-v1.json",
+        "presets/runtime/goo-v1.json",
+        "presets/typography/duet-blue-gold-wedding-no-border-v1.json",
+        "presets/typography/duet-blue-gold-wedding-v1.json"
+      ],
+      "scripts": [
+        "scripts/prepare_goo_window_wrap.py",
+        "scripts/run_goo_window_wrap_preview.py",
+        "scripts/verify_goo_window_wrap.py"
+      ],
+      "look": [
+        "大窗宽幅入光",
+        "更宽强白蓝轮廓",
+        "明确天使环高光",
+        "人物真实rim信号的专用辉光"
+      ],
+      "compatibility": "Goo5.2.1社区版0051aee03764，先注册便携MMD插件；保留原生动作与贴图。",
+      "evidence": [
+        "实际测量窗面世界坐标",
+        "两张制作图实际查看",
+        "独立重开结构与五时点姿态相机检查",
+        "150帧原生1080p30新渲染与字幕原唱编码完成"
+      ],
+      "art_review": {
+        "status": "pending-user-review",
+        "as_of": "2026-11-16",
+        "feedback": "Awaiting user review"
+      },
+      "limits": [
+        "Window-sized fill lights and estimated sun direction, not exact author window/solar reconstruction",
+        "Directional NPR rim is an art-controlled surface signal; glow AOV is not a physical light pass",
+        "Only 4140/4290 production stills manually observed; no post-output video QA",
+        "No new physics or full-song delivery"
+      ],
+      "command": "Use Start_Goo_Project.cmd. Existing outputs are preserved."
+    },
+    {
+      "id": "goo-tyndall-rim-v1",
+      "title": "白蓝轮廓 · 窗光柔辉",
+      "subtitle": "加强人物亮边／高光、窗向散射与高亮泛光；五秒快速审片。",
+      "collection": "GOO / TYNDALL RIM",
+      "category": "stage",
+      "family": "guanhaizi",
+      "aspect": "landscape",
+      "status": "motion",
+      "image": "D:\\codex\\output\\MMD-Goo-Tyndall-Rim-v1\\production-v7\\portrait-4290.png",
+      "video": "D:\\codex\\output\\MMD-Goo-Tyndall-Rim-v1\\quick-5s-v1\\Franken_Duet_5s_GooTyndallRim_SUB_1080P.mp4",
+      "project": "D:\\codex\\output\\MMD-Goo-Tyndall-Rim-v1\\production-v7\\Franken_Duet_Goo_Tyndall_Rim.blend",
+      "report": "D:\\codex\\output\\MMD-Goo-Tyndall-Rim-v1\\delivery.json",
+      "docs": [
+        "GOO_TYNDALL_RIM_PRODUCTION.md",
+        "GOO_RIM_GLOW_REVISION.md"
+      ],
+      "configs": [
+        "presets/lighting/goo-tyndall-rim-v1.json",
+        "presets/runtime/goo-v1.json"
+      ],
+      "scripts": [
+        "scripts/run_goo_tyndall_rim_preview.py",
+        "scripts/verify_goo_tyndall_master.py"
+      ],
+      "look": [
+        "后上方白蓝亮边",
+        "发带与金属高光",
+        "窗向局部散射",
+        "固定高光压缩与分区泛光"
+      ],
+      "compatibility": "Goo5.2.1社区版0051aee03764；先注册便携MMD插件，不用普通Blender直接重渲。",
+      "evidence": [
+        "最终工程独立重开与原Actions、网格、五时点姿态相机对照",
+        "两张最终制作图实际查看",
+        "150帧原生1080p30与指定原唱字幕实际编码完成"
+      ],
+      "art_review": {
+        "status": "revision_requested",
+        "as_of": "2026-11-16",
+        "feedback": "背后两束窄光柱不自然；大窗应产生大片入光；衣发需要更强的轮廓辉光和更明显的芙宁娜式发带高光。"
+      },
+      "limits": [
+        "Window-oriented interior lamps and slat accessories; not original exterior architectural transmission certification",
+        "Shaft visibility remains composition-dependent and weaker than the reference",
+        "No post-output video decode, audio recheck or visual review; not technical video QA passed",
+        "No new physics, no full-song delivery, no literal MME execution or full reference shader match"
+      ],
+      "command": "Use Start_Goo_Project.cmd; existing outputs are preserved."
+    },
+    {
+      "id": "goo-daylight-v2",
+      "title": "蓝天婚礼 · 窗光与人物投影",
+      "subtitle": "Goo 五秒快速审片：斜向窗格光带、真实落地影与受控人物亮边。",
+      "collection": "GOO / DAYLIGHT WEDDING",
+      "category": "stage",
+      "family": "guanhaizi",
+      "aspect": "landscape",
+      "status": "motion",
+      "image": "D:\\codex\\output\\MMD-Goo-Wedding-v2\\production-v2\\opening-4140.png",
+      "video": "D:\\codex\\output\\MMD-Goo-Wedding-v2\\quick-5s-v1\\Franken_Duet_5s_GooDaylightV2_SUB_1080P.mp4",
+      "project": "D:\\codex\\output\\MMD-Goo-Wedding-v2\\production-v2\\Franken_Duet_Goo_Daylight.blend",
+      "report": "D:\\codex\\output\\MMD-Goo-Wedding-v2\\delivery.json",
+      "docs": [
+        "MME_TO_GOO_LIGHTING_STUDY.md",
+        "GOO_ENGINE_MIGRATION.md"
+      ],
+      "configs": [
+        "presets/lighting/goo-daylight-v2.json",
+        "presets/runtime/goo-v1.json"
+      ],
+      "scripts": [
+        "scripts/prepare_goo_daylight_v2.py",
+        "scripts/add_goo_window_gobo.py",
+        "scripts/run_goo_daylight_v2_preview.py"
+      ],
+      "look": [
+        "明亮蓝天礼堂",
+        "真实窗格遮光附件",
+        "双人落地投影",
+        "粉冷人物明暗与局部亮边"
+      ],
+      "compatibility": "Goo 5.2.1社区移植版0051aee03764；启动前注册便携MMD插件；不在普通Blender直接重渲。",
+      "evidence": [
+        "9个MME原包重点说明/源码学习；不等于全部49位作者效果掌握",
+        "原Actions/网格/贴图及五时点姿态独立重开一致",
+        "150帧1080p30实际渲染与单版字幕原唱编码完成"
+      ],
+      "art_review": {
+        "status": "pending-user-review",
+        "as_of": "2026-11-16",
+        "feedback": "Awaiting user review"
+      },
+      "limits": [
+        "按用户要求跳过输出后的解码与审片；不是视频技术验收通过。",
+        "窗格光带由镜头外gobo模拟，并非原窗框逐格投影认证。",
+        "不是原版Ray/PowerShader执行或参考风格达标认证；没有新增物理或全曲。"
+      ],
+      "command": "Use Start_Goo_Project.cmd in the delivery; preview wrapper refuses to overwrite existing outputs."
+    },
+    {
+      "id": "portrait-relight-v1",
+      "title": "暗场婚礼 · 明亮人物与暖边",
+      "subtitle": "4K静帧：分区材质、粉紫暗面、窄暖边与冷蓝礼堂。",
+      "collection": "PORTRAIT / WEDDING RELIGHT",
+      "category": "stage",
+      "family": "guanhaizi",
+      "aspect": "landscape",
+      "status": "still",
+      "image": "D:\\codex\\output\\MMD-Portrait-Relight-v1\\production-v1\\complete-4290.png",
+      "project": "D:\\codex\\output\\MMD-Portrait-Relight-v1\\production-v1\\Franken_Duet_Portrait_Relight.blend",
+      "docs": [
+        "PORTRAIT_RELIGHT_IMPLEMENTATION.md",
+        "PORTRAIT_LIGHTING_AND_SHADOW_STUDY.md"
+      ],
+      "configs": [
+        "presets/lighting/portrait-relight-v1.json"
+      ],
+      "scripts": [
+        "scripts/prepare_portrait_relight.py",
+        "scripts/portrait_key_fill.py",
+        "scripts/portrait_rim_ink.py",
+        "scripts/portrait_fur_control.py",
+        "scripts/verify_portrait_relight.py"
+      ],
+      "report": "D:\\codex\\output\\MMD-Portrait-Relight-v1\\delivery.json",
+      "look": [
+        "明亮人物/冷暗礼堂",
+        "窄暖色轮廓光",
+        "深蓝布料与金属分离",
+        "粉紫皮肤暗面",
+        "景深与局部舞台压光"
+      ],
+      "compatibility": "Blender5.2.2 EEVEE；迁移入口仅接受固定Clean v2 SHA，新工程不可重复安装。角色实际主光/综合受光、原SDF与解析面形代理分层，非原作者Shader复刻。",
+      "evidence": [
+        "4290原相机61.73465mm，3840x2160/128samples/DOF，MB关闭",
+        "同相机1080p64samples原版/新版对照；完整Action/几何/贴图/原Alpha独立重开保护核查",
+        "阿克原SDF保留；伊科解析face是美术形体代理，非SDF或纯投影；两条细光弧保持隐藏"
+      ],
+      "art_review": {
+        "status": "revision_requested",
+        "as_of": "2026-11-15",
+        "feedback": "User: hall too dark, Ikhor half-face shadow unnatural; match local paierer environment and edge lighting."
+      },
+      "limits": [
+        "仅4290静帧；新分支无动态认证，无新五秒/全曲。",
+        "参考引擎/Shader/灯组未知，未达到或认证作者/游戏品质。",
+        "物理与袖口沿用原有有界证据；没有新增模拟。"
+      ],
+      "command": "Read docs/PORTRAIT_RELIGHT_IMPLEMENTATION.md; pinned source, fresh output and MMD camera registration required."
+    },
+    {
+      "id": "portrait-layer-study-v1",
+      "title": "明亮暗场 · 逐层布光研究",
+      "subtitle": "原相机静帧：去散射与限定加法亮边，非新成片/最终风格。",
+      "collection": "PORTRAIT / LAYERED LIGHT STUDY",
+      "category": "stage",
+      "family": "guanhaizi",
+      "aspect": "landscape",
+      "status": "still",
+      "image": "D:/codex/output/MMD-Portrait-Lighting-Study-2026-11-14/controls-v1/B-scattering-off-4290.png",
+      "project": "D:/codex/output/MMD-Clean-Game-Characters-v1/production-v2/Franken_Duet_Clean_Game.blend",
+      "docs": [
+        "PORTRAIT_LIGHTING_AND_SHADOW_STUDY.md"
+      ],
+      "configs": [
+        "presets/lighting/portrait-layer-study-v1.json"
+      ],
+      "scripts": [
+        "scripts/render_portrait_light_controls.py"
+      ],
+      "report": "D:/codex/output/MMD-Portrait-Lighting-Study-2026-11-14/controls-v1/control-report.json",
+      "look": [
+        "主光塑形与暗部可读分开",
+        "减少中央散射灰雾",
+        "方向rim源强度独立",
+        "白衣/深蓝分区标定"
+      ],
+      "compatibility": "Blender5.2.2 EEVEE；仅绑定Clean production-v2 SHA 0ec95ee7162512ffc405a2a7337b355caf62cd993b3d8302886ee59e1561d9d4。project指冻结源，三图为诊断副本，无新blend/五秒，非生产预设。",
+      "evidence": [
+        "4290原相机61.73465mm，1280x720/48samples；统一无DOF/MB，原合成保留，File Output静音",
+        "A当前；B只隐藏两散射盒、保留六发光锥；C在B上限定hair/cloth加法HDR rim gain2",
+        "源文件与偏好前后SHA一致；主任务逐张实际查看三图"
+      ],
+      "art_review": {
+        "status": "research-only-not-selected",
+        "as_of": "2026-11-14",
+        "feedback": "B明显减少灰雾；C青边更亮但更抢眼，未解决衣服大面与脸，未选最终风格。"
+      },
+      "limits": [
+        "仅720p单帧消融，非1080p新成片。",
+        "无新主辅/脸影标定通过，无动态或保存新工程重开。",
+        "生产工程/动作/物理未改；用户美术目标未达成。",
+        "paierer仅已知本地源与有限静帧，Shader/灯组未知。"
+      ],
+      "command": "Diagnostic script: scripts/render_portrait_light_controls.py; read docs/PORTRAIT_LIGHTING_AND_SHADOW_STUDY.md and presets/lighting/portrait-layer-study-v1.json. Fixed SHA/new output required; not a general converter."
+    },
+    {
+      "id": "duet-clean-game-v1",
+      "title": "清透新誓 · 阿克西妮娅 × 伊科尔",
+      "subtitle": "独立人物材质适配，保留袖修与指定礼堂，按要求隐藏蓝金光弧。",
+      "collection": "CHARACTER / CLEAN NPR",
+      "category": "character",
+      "family": "genshin",
+      "aspect": "landscape",
+      "status": "motion",
+      "image": "D:\\codex\\output\\MMD-Clean-Game-Characters-v1\\review\\native-source-4290.png",
+      "video": "D:\\codex\\output\\MMD-Clean-Game-Characters-v1\\captions-5s\\Franken_Duet_5s_CleanGame_Wedding_REVIEW.mp4",
+      "diagnostic_video": "D:\\codex\\output\\MMD-Clean-Game-Characters-v1\\captions-5s\\Franken_Duet_5s_CleanGame_NoCaptions.mp4",
+      "diagnostic_label": "无字幕审片 · 5s",
+      "duration": 5,
+      "fps": 60,
+      "project": "D:\\codex\\output\\MMD-Clean-Game-Characters-v1\\production-v2\\Franken_Duet_Clean_Game.blend",
+      "docs": [
+        "CLEAN_GAME_CHARACTER_REFINEMENT.md",
+        "CREDITS_AKSINIYA_IKHOR.md"
+      ],
+      "configs": [
+        "presets/quality/aksiniya-clean-game-v1.json",
+        "presets/quality/ikhor-clean-game-v1.json",
+        "presets/typography/duet-blue-gold-wedding-v1.json",
+        "presets/recipes/duet-clean-game-v1.json"
+      ],
+      "look": [
+        "保原配色的分区明暗",
+        "局部鼻区SDF修订",
+        "许可白布中间层",
+        "克制亮边与金属反射",
+        "去除身后蓝金光弧"
+      ],
+      "compatibility": "Blender5.2.2 EEVEE；仅绑定本轮已核SHA工程与两角色独立映射。",
+      "evidence": [
+        "人物材质321项与去弧26项分别验证",
+        "最终v2三轴72原生帧",
+        "新300原生帧、双人字幕覆盖与两版完整解码/音轨与色彩/接缝"
+      ],
+      "art_review": {
+        "status": "revision_requested",
+        "as_of": "2026-11-14",
+        "feedback": "当前画面灰蒙、不够明亮，需至少达到新paierer暗场参考的人像亮度与黑线表现；观海子仍为核心。可必要调整指定礼堂舞台和灯光；当前Clean五秒未获美术认可。",
+        "history": [
+          {
+            "status": "pending",
+            "as_of": "2026-11-14",
+            "feedback": "等待猪猪实际美术评价"
+          }
+        ]
+      },
+      "limits": [
+        "仅4140–4439、1080p60五秒；限定技术通过，猪猪要求改进人物/舞台光照层次，全曲未完成。",
+        "两份本地参考各实际检查四张清晰帧，未完整连续观看；作者Shader/MME未知，女性正式角色名与原作者未独立核定。",
+        "321项人物材质检查与26项去弧增量检查为两级独立证据；袖修/动作继承4139–4441范围，未新增物理或零碰撞认证。",
+        "仅隐藏两道蓝金弧，数据保留可逆；Probe未重烘，内部缓存负载未另作独立认证。",
+        "缺失作者自改y1脸图，继续原FaceDiffuse回退；完整体积阴影未开启，可见光束含美术Emission。",
+        "旧beauty/actor与旧视频未复用；人工仅覆盖manual-review列明抽样，不称300帧美术逐帧批准或风格达标。",
+        "Manual inspection is sampled still review, not continuous viewing of every final frame or every edge. Geometry contacts at cuff openings remain outside zero-collision certification; no new physics simulation in this material-only iteration.",
+        "Broad female crown highlight, some locally white gold reflection and relatively ochre male hair sides remain; central haze and cyan ornaments are still strong. Exact game/author style parity is not established.",
+        "User requested a lighting/art revision on 2026-11-14; complete song remains undelivered."
+      ],
+      "command": "See docs/CLEAN_GAME_CHARACTER_REFINEMENT.md and scripts/package_clean_game_duet.py --print-contract."
+    },
+    {
+      "id": "franken-ikhor-bold-wedding-v1",
+      "title": "誓约之光 · 阿克西妮娅 × 伊科尔",
+      "subtitle": "白衣与金饰分层，蓝金双弧、局部发光和仪式光束。",
+      "collection": "CEREMONY / BLUE + GOLD",
+      "category": "stage",
+      "family": "guanhaizi",
+      "aspect": "landscape",
+      "status": "motion",
+      "image": "D:\\codex\\output\\MMD-Aksiniya-Ikhor-Wedding-v1\\review\\native-4290.png",
+      "video": "D:\\codex\\output\\MMD-Aksiniya-Ikhor-Wedding-v1\\captions-5s-v3\\Franken_Duet_5s_Ikhor_Wedding_REVIEW.mp4",
+      "diagnostic_video": "D:\\codex\\output\\MMD-Aksiniya-Ikhor-Wedding-v1\\captions-5s-v3\\Franken_Duet_5s_Ikhor_NoCaptions.mp4",
+      "diagnostic_label": "无字幕审片 · 5s",
+      "duration": 5,
+      "fps": 60,
+      "project": "D:\\codex\\output\\MMD-Aksiniya-Ikhor-Wedding-v1\\production-v7\\Franken_Aksiniya_Ikhor_Bold_Wedding.blend",
+      "docs": [
+        "IKHOR_BOLD_WEDDING_PRODUCTION.md",
+        "CREDITS_AKSINIYA_IKHOR.md",
+        "IKHOR_SLEEVE_REPAIR.md",
+        "LOCAL_CORRECTIVE_SHAPES.md",
+        "CHARACTER_NPR_PLAYBOOK.md"
+      ],
+      "configs": [
+        "presets/quality/ikhor-character-v1.json",
+        "presets/quality/ikhor-native-motion-v1.json",
+        "presets/quality/ikhor-sleeve-repair-v1.json",
+        "presets/stages/hesperides-bold-wedding-v1.json",
+        "presets/typography/duet-blue-gold-wedding-v1.json",
+        "presets/recipes/franken-ikhor-bold-wedding-v1.json"
+      ],
+      "look": [
+        "人物／环境／舞台三层光",
+        "材质局部HDR与窄边光",
+        "双弧与柔化体积光束",
+        "新角色衣发与袖部局部修复",
+        "整组蓝金字幕"
+      ],
+      "compatibility": "Blender5.2.2 EEVEE；仅绑定已核对PMX、角色烘焙和指定婚礼基线。",
+      "evidence": [
+        "1049项基线核查与最终工程独立差量核查",
+        "72基线帧转头／移灯／绕拍；最终袖部连续检查另记",
+        "两版各300帧完整解码及音轨／色彩／接缝检查"
+      ],
+      "limits": [
+        "仅原帧4140–4439的五秒横屏；全曲未交付，等待猪猪美术认可",
+        "伊科尔新原生物理只验证4139–4441，不把完整body动作等同全曲衣发烘焙",
+        "v4因袖壁穿手退回并停渲；新袖修复范围与连续几何/画面检查见sleeve-review，不复用旧v4帧",
+        "缺失作者自改y1脸图，明确回退同包原FaceDiffuse；未取得验证过的FaceSDF",
+        "灯／环任务部件在婚礼版隐藏并同步关闭轮廓；原PMX未覆盖",
+        "Diffuse是综合受光近似；可见光束含美术体积Emission，不称完整Ray/Goo或观海子原始Shader",
+        "阿克西妮娅鼻影、部分手掌肤色、强蓝边与辉光主次仍可精修；最终人工范围另记",
+        "原初之人仅定位配布，未下载模型包或加入当前场景"
+      ],
+      "command": "See docs/IKHOR_BOLD_WEDDING_PRODUCTION.md; fingerprint-bound inputs and fresh directories only.",
+      "art_review_history": [],
+      "art_review": {
+        "status": "revision_requested",
+        "as_of": "2026-11-14",
+        "feedback": "用户要求按两份本地参考改善伊科尔及阿克西妮娅的明净三渲二质感，并移除人物背后蓝色与金色光弧；当前基线仅保留为历史",
+        "user_art_approval": false
+      }
+    },
+    {
+      "id": "duet-guanhai-transfer-v1",
+      "title": "映光进阶 · 阴影与礼堂层次",
+      "subtitle": "方向化受光、受控边光、镜面专用宽光与人物保护的前景明暗。",
+      "collection": "CHARACTER / REFERENCE TRANSFER",
+      "category": "character",
+      "family": "guanhaizi",
+      "aspect": "landscape",
+      "status": "motion",
+      "image": "D:\\codex\\output\\MMD-Guanhai-Transfer-v1\\review\\native-4290.png",
+      "video": "D:\\codex\\output\\MMD-Guanhai-Transfer-v1\\captions-5s\\Franken_Duet_5s_ReferenceTransfer_Wedding_REVIEW.mp4",
+      "diagnostic_video": "D:\\codex\\output\\MMD-Guanhai-Transfer-v1\\captions-5s\\Franken_Duet_5s_ReferenceTransfer_NoCaptions.mp4",
+      "diagnostic_label": "无字幕审片 · 5s",
+      "duration": 5,
+      "fps": 60,
+      "project": "D:\\codex\\output\\MMD-Guanhai-Transfer-v1\\production-v3\\Franken_Duet_Reference_Transfer.blend",
+      "docs": [
+        "REFERENCE_TECHNIQUE_TRANSFER.md",
+        "EXTERNAL_MMD_TECHNIQUES_2026_11_13.md",
+        "CHARACTER_NPR_PLAYBOOK.md"
+      ],
+      "configs": [
+        "presets/quality/duet-guanhai-transfer-v1.json",
+        "presets/typography/duet-blue-gold-wedding-v1.json",
+        "presets/recipes/duet-guanhai-transfer-v1.json"
+      ],
+      "look": [
+        "人物自阴影与形体分工",
+        "银蓝／金色受控亮边",
+        "金属宽反射",
+        "局部前景明暗",
+        "保留蓝金字幕"
+      ],
+      "compatibility": "Blender5.2.2 EEVEE；仅已指纹核对的CharacterLayers production-v2输入。",
+      "evidence": [
+        "2488项独立工程核查",
+        "72原生帧三轴测试",
+        "1080p六种开关对照",
+        "最终字幕／无字幕各300帧全解码与音色／接缝检查"
+      ],
+      "limits": [
+        "限定同一双人、礼堂和原帧4140–4439的五秒；全曲未交付，待猪猪美术评价",
+        "借鉴外部教程原理，未恢复观海子原始Shader或达到其质量认证",
+        "面向主灯的Diffuse仍是综合受光近似，不是纯visibility",
+        "鼻部孤立暗块、脸颊塑形和前景视觉主次仍需精修",
+        "本轮未新增游戏Lightmap、胸部solver或衣发烘焙；原有动作物理保留"
+      ],
+      "command": "See docs/REFERENCE_TECHNIQUE_TRANSFER.md; use exact input fingerprint and fresh output directories.",
+      "art_review": {
+        "status": "revision_requested",
+        "as_of": "2026-11-14",
+        "feedback": "人物与场景层次仍不足，舞台与灯光需更酷炫大胆，增加按材质设计的自发光、轮廓光和特效；用户追加本轮先用伊科尔替换空"
+      }
+    },
+    {
+      "id": "duet-character-layers-v1",
+      "title": "映光 · 人物材质分层",
+      "subtitle": "一次受光色带、受控接触、银蓝与金色发带，保留五官与金属分区。",
+      "collection": "CHARACTER / LAYERED LIGHT",
+      "category": "character",
+      "family": "genshin",
+      "aspect": "landscape",
+      "status": "motion",
+      "image": "D:\\codex\\output\\MMD-Character-Layer-Refinement-v1\\review\\after-4290.png",
+      "video": "D:\\codex\\output\\MMD-Character-Layer-Refinement-v1\\captions-5s-v1\\Franken_Duet_5s_CharacterLayers_Wedding_REVIEW.mp4",
+      "diagnostic_video": "D:\\codex\\output\\MMD-Character-Layer-Refinement-v1\\captions-5s-v1\\Franken_Duet_5s_CharacterLayers_NoCaptions.mp4",
+      "diagnostic_label": "无字幕人物审片 · 5s",
+      "duration": 5,
+      "fps": 60,
+      "project": "D:\\codex\\output\\MMD-Character-Layer-Refinement-v1\\production-v2\\Franken_Duet_Character_Layers.blend",
+      "docs": [
+        "CHARACTER_LAYER_REFINEMENT.md",
+        "CHARACTER_LAYER_AUDIT.md",
+        "CHARACTER_NPR_PLAYBOOK.md",
+        "CHEST_SECONDARY_MOTION_VALIDATION.md"
+      ],
+      "configs": [
+        "presets/quality/duet-character-layers-v1.json",
+        "presets/typography/duet-blue-gold-wedding-v1.json",
+        "presets/recipes/duet-character-layers-v1.json"
+      ],
+      "look": [
+        "分区明暗色",
+        "SDF与真实遮挡",
+        "短距离AO",
+        "主灯驱动发丝",
+        "保留透明与金属遮罩"
+      ],
+      "compatibility": "Blender 5.2.2 EEVEE；输入仅Grounded production-v3；原始VMD、礼堂、蓝金字幕和FLAC。",
+      "evidence": [
+        "原生300帧1080p60完整解码及音轨验证",
+        "最终人物链三轴72原生帧测试",
+        "同帧1080p四种层开关",
+        "独立重开动作／相机／贴图与节点可达性检查"
+      ],
+      "limits": [
+        "限定同一双人模型、礼堂、灯组和五秒横屏；尚非全曲，待猪猪美术评价",
+        "MMD Color保留原模型合成，并非已提取纯游戏Albedo",
+        "综合Diffuse响应包含真实遮挡，但不是纯投影通道；Goo未运行",
+        "没有新增空的原游戏Lightmap或鸣潮HM/HN；并非游戏Shader完整移植",
+        "胸部适用性、动态检查边界和浏览器状态见独立报告"
+      ],
+      "command": "See docs/CHARACTER_LAYER_REFINEMENT.md; scripts require version-matched inputs and new output directories.",
+      "art_review": {
+        "status": "pending",
+        "as_of": "2026-11-14",
+        "feedback": "新版人物分层已生成，等待猪猪实际审看；前版提出的质量目标继续保留"
+      }
+    },
+    {
+      "id": "duet-grounded-color-v1",
+      "title": "落影 · 接地与色彩",
+      "subtitle": "人物质感仍需提升；保留真实遮挡、加厚黑线和接地对照，作为后续研究起点。",
+      "collection": "GROUNDING / SDR REVIEW",
+      "category": "stage",
+      "family": "guanhaizi",
+      "aspect": "landscape",
+      "status": "motion",
+      "image": "D:\\codex\\output\\MMD-Duet-Shadow-Color-v1\\review\\shadows-after-4250.png",
+      "video": "D:\\codex\\output\\MMD-Duet-Shadow-Color-v1\\captions-5s-v2\\Franken_Duet_5s_Grounded_Wedding_REVIEW.mp4",
+      "diagnostic_video": "D:\\codex\\output\\MMD-Duet-Shadow-Color-v1\\captions-5s-v2\\Franken_Duet_5s_Grounded_NoCaptions.mp4",
+      "diagnostic_label": "无字幕接地版 · 5s",
+      "duration": 5,
+      "fps": 60,
+      "project": "D:\\codex\\output\\MMD-Duet-Shadow-Color-v1\\production-v3\\Franken_Duet_Grounded_Wedding.blend",
+      "docs": [
+        "REFERENCE_AND_LIGHTING_PLAYBOOK.md",
+        "QUALITY_GATES.md",
+        "CHARACTER_NPR_PLAYBOOK.md",
+        "SHADOW_GROUNDING_AND_PLAYBACK_COLOR.md",
+        "BLUE_GOLD_WEDDING_STUDY.md",
+        "FOX_STAGE_ART_DEEP_STUDY.md"
+      ],
+      "configs": [
+        "presets/stages/hesperides-grounded-shadows-v1.json",
+        "presets/quality/duet-graphic-self-shadow-v1.json",
+        "presets/typography/duet-blue-gold-wedding-v1.json",
+        "presets/stages/hesperides-soft-top-rim-v1.json",
+        "presets/stages/hesperides-blue-gold-wedding-v1.json",
+        "presets/recipes/duet-grounded-color-v1.json"
+      ],
+      "look": [
+        "定向地面投影",
+        "几何近地AO",
+        "SDF与真实刘海投影",
+        "分区加粗近黑描边",
+        "明确SDR色彩"
+      ],
+      "compatibility": "双人礼堂横屏五秒；Blender 5.2.2 EEVEE；需官方字幕源、原声FLAC及原生缓存。",
+      "evidence": [
+        "300原生帧／1080p60／指定原声验证",
+        "十时点动作／相机相同，95贴图打包",
+        "同帧主投影／接触AO／自身投影／线宽原生开关",
+        "编码及混音后四项色彩标记验证，矩阵像素往返核对",
+        "固定字幕层级逐帧审计，连续切换目视检查"
+      ],
+      "limits": [
+        "仅五秒横屏样片，尚非全曲，猪猪已要求继续提升人物质量",
+        "美术化灯光链接、近地AO，脸部SDF与真实遮挡组合",
+        "SDR电脑sRGB审片约定，非BT.1886调色监看母版",
+        "未确认PotPlayer具体设置及其与其他播放器的一致性"
+      ],
+      "command": "python scripts/composite_duet_official_captions.py --cache-dir \"D:\\codex\\temp\\Duet-Shadow-Color-v1\\final-cache-v2\" --profile presets/typography/duet-blue-gold-wedding-v1.json --output-dir \"D:/codex/output/Grounded-New-Captions\" --ffmpeg \"D:/codex/temp/blender-mmd-video-tools/imageio_ffmpeg/binaries/ffmpeg-win-x86_64-v7.1.exe\"",
+      "art_review": {
+        "status": "revision_requested",
+        "as_of": "2026-11-14",
+        "feedback": "人物三渲二、人物自发光与受光关系仍不足，其次舞台及其他制作技术需进步"
+      }
+    },
+    {
+      "id": "duet-blue-gold-wedding-v1",
+      "title": "誓光 · 蓝金婚礼",
+      "subtitle": "人物后方的蓝金光束、走道微光与呼应双人主题色的官方字幕。",
+      "collection": "WEDDING / BLUE & GOLD",
+      "category": "stage",
+      "family": "guanhaizi",
+      "aspect": "landscape",
+      "status": "motion",
+      "image": "D:\\codex\\output\\MMD-Duet-Blue-Gold-Wedding-v1\\captions-5s-v1\\caption-4200.png",
+      "video": "D:\\codex\\output\\MMD-Duet-Blue-Gold-Wedding-v1\\captions-5s-v1\\Franken_Duet_5s_Wedding_REVIEW.mp4",
+      "diagnostic_video": "D:\\codex\\output\\MMD-Duet-Blue-Gold-Wedding-v1\\lighting-sample-5s-v1\\Aether_Duet_5s_REVIEW.mp4",
+      "diagnostic_label": "无字幕灯光版 · 5s",
+      "duration": 5,
+      "fps": 60,
+      "project": "D:\\codex\\output\\MMD-Duet-Blue-Gold-Wedding-v1\\production-v4\\Franken_Duet_Blue_Gold_Wedding.blend",
+      "docs": [
+        "BLUE_GOLD_WEDDING_STUDY.md",
+        "SOFT_TOP_RIM_LIGHTING.md",
+        "DUET_CAPTION_STABILITY_AND_LIGHTING.md"
+      ],
+      "configs": [
+        "presets/stages/hesperides-blue-gold-wedding-v1.json",
+        "presets/typography/duet-blue-gold-wedding-v1.json",
+        "presets/recipes/duet-blue-gold-wedding-v1.json"
+      ],
+      "look": [
+        "蓝金后方光束",
+        "走道香槟微光",
+        "分开的场景／人物光晕",
+        "彩色字幕固定层级"
+      ],
+      "compatibility": "固定双人礼堂五秒横屏；Blender 5.2.2 EEVEE，需官方 Wide 字幕源和原生缓存。",
+      "evidence": [
+        "300 原生帧／1080p60／指定原声验收",
+        "局部散射与本轮光晕的原生同帧开关",
+        "独立重开十时点动作／相机相同；最终beauty缓存路由一致",
+        "蓝金字幕逐帧层级审计及四处连续切换核对"
+      ],
+      "limits": [
+        "待猪猪美术评价，仅五秒，未扩展全曲或竖屏",
+        "体积功率与表面功率为美术分配，未开启完整体积阴影",
+        "黑底视频牌面恢复与人物柔边仍是有限范围近似",
+        "旧MP4缺明确色彩标签；新的审片色彩流程见落影版，原文件保留"
+      ],
+      "command": "python scripts/composite_duet_official_captions.py --cache-dir \"D:\\codex\\temp\\Duet-Blue-Gold-Wedding-v1\\final-cache\" --profile presets/typography/duet-blue-gold-wedding-v1.json --output-dir \"D:/codex/output/Wedding-Captions-New\" --ffmpeg \"D:/codex/temp/blender-mmd-video-tools/imageio_ffmpeg/binaries/ffmpeg-win-x86_64-v7.1.exe\""
+    },
+    {
+      "id": "duet-soft-top-rim-v1",
+      "title": "柔映 · 顶光与逆光",
+      "subtitle": "提亮走道与花卉，用柔和顶光和暖色背光保留人物层次。",
+      "collection": "SOFT LIGHT / TOP & RIM",
+      "category": "stage",
+      "family": "guanhaizi",
+      "aspect": "landscape",
+      "status": "motion",
+      "image": "D:\\codex\\output\\MMD-Duet-Soft-Top-Rim-v1\\review\\soft-light-4250.png",
+      "video": "D:\\codex\\output\\MMD-Duet-Soft-Top-Rim-v1\\captions-5s-v1\\Franken_Duet_5s_Captions_REVIEW.mp4",
+      "diagnostic_video": "D:\\codex\\output\\MMD-Duet-Soft-Top-Rim-v1\\lighting-sample-5s-v1\\Aether_Duet_5s_REVIEW.mp4",
+      "diagnostic_label": "无字幕灯光版 · 5s",
+      "duration": 5,
+      "fps": 60,
+      "project": "D:\\codex\\output\\MMD-Duet-Soft-Top-Rim-v1\\production-v2\\Franken_Duet_Soft_Top_Rim.blend",
+      "docs": [
+        "SOFT_TOP_RIM_LIGHTING.md",
+        "DUET_CAPTION_STABILITY_AND_LIGHTING.md"
+      ],
+      "configs": [
+        "presets/stages/hesperides-soft-top-rim-v1.json",
+        "presets/recipes/duet-soft-top-rim-v1.json"
+      ],
+      "look": [
+        "大面积柔光提亮暗部",
+        "上方软光区",
+        "暖色后侧亮边",
+        "官方字幕固定层级"
+      ],
+      "compatibility": "固定双人礼堂五秒横屏；Blender 5.2.2 EEVEE。字幕仍需独立合成。",
+      "evidence": [
+        "300 原生帧／1080p60／指定原声验收",
+        "新增柔光直接贡献和人物逆光原生开关对照",
+        "独立重开十时点动作、相机与焦距相同；脸部排除补充边缘",
+        "官方字幕300帧审计与四处切换连续帧检查"
+      ],
+      "limits": [
+        "根据猪猪过暗反馈的新候选，尚未获美术认可",
+        "柔光关闭图保留当前GI；不等于全部提亮关闭",
+        "仅五秒，未扩展全曲、竖屏或新运镜"
+      ],
+      "command": "python scripts/render_duet_sample.py --blend \"D:\\codex\\output\\MMD-Duet-Soft-Top-Rim-v1\\production-v2\\Franken_Duet_Soft_Top_Rim.blend\" --output-dir \"D:/codex/output/Soft-Light-New/sample\" --logs \"D:/codex/temp/Soft-Light-New/logs\" --start 4140 --frames 300 --workers 2 --caption-cache-dir \"D:/codex/temp/Soft-Light-New/cache\""
+    },
+    {
+      "id": "duet-captions-focused-v1",
+      "title": "字入光 · 官方动效与冷暖舞台",
+      "subtitle": "小字在前，大牌在后；用固定分组和聚焦灯光组织双人画面。",
+      "collection": "CAPTIONS / FOCUSED LIGHT",
+      "category": "post",
+      "family": "guanhaizi",
+      "aspect": "landscape",
+      "status": "motion",
+      "image": "D:\\codex\\output\\MMD-Duet-Captions-Contrast-v1\\captions-5s-v2\\caption-4200.png",
+      "video": "D:\\codex\\output\\MMD-Duet-Captions-Contrast-v1\\captions-5s-v2\\Franken_Duet_5s_Captions_REVIEW.mp4",
+      "diagnostic_video": "D:\\codex\\output\\MMD-Duet-Captions-Contrast-v1\\lighting-sample-5s-v1\\Aether_Duet_5s_REVIEW.mp4",
+      "diagnostic_label": "无字幕灯光版 · 5s",
+      "duration": 5,
+      "fps": 60,
+      "project": "D:\\codex\\output\\MMD-Duet-Captions-Contrast-v1\\production-v3\\Franken_Duet_Focused_Caption_Source.blend",
+      "docs": [
+        "DUET_CAPTION_STABILITY_AND_LIGHTING.md",
+        "ADVANCED_MMD_SUBTITLES.md",
+        "FOX_STAGE_ART_DEEP_STUDY.md"
+      ],
+      "configs": [
+        "presets/stages/hesperides-focused-light-v3.json",
+        "presets/typography/duet-official-locked-v2.json",
+        "presets/recipes/duet-captions-focused-v1.json"
+      ],
+      "look": [
+        "HIMEHINA 官方动效",
+        "整组前后层固定",
+        "黑字实心牌面",
+        "左暖右冷与局部光区"
+      ],
+      "compatibility": "本双人礼堂五秒横屏；官方 Wide 字幕源和原生 PNG16 遮罩缓存均需在本机。",
+      "evidence": [
+        "300 原生帧／1080p60／指定原声验证通过",
+        "逐帧审计五组字幕；前景不使用脸部遮罩，背景保护不透明人物",
+        "完整教程音频自动转写与 20 个画面核对，重新布置响应光照的舞台",
+        "独立重开十时点动作／相机相同，95 张贴图打包，旧归档未改动"
+      ],
+      "limits": [
+        "五秒研究样片，待猪猪美术评价；非全曲完成",
+        "黑底 MP4 的牌面重建和柔边插入均有适用范围",
+        "场景 .blend 不含最终字幕，需运行缓存合成步骤"
+      ],
+      "command": "python scripts/composite_duet_official_captions.py --cache-dir \"D:\\codex\\temp\\Duet-Captions-Contrast-v1\\final-cache-v1\" --profile presets/typography/duet-official-locked-v2.json --output-dir \"D:/codex/output/Duet-Captions-New\" --ffmpeg \"D:/codex/temp/blender-mmd-video-tools/imageio_ffmpeg/binaries/ffmpeg-win-x86_64-v7.1.exe\""
+    },
+    {
+      "id": "hesperides-stageart-v2",
+      "title": "入光 · 舞台光影再研究",
+      "subtitle": "从光区、脚下投影到发丝溢光，让人物与礼堂建立更明确的关系。",
+      "collection": "STAGE ART / FOX II",
+      "category": "stage",
+      "family": "guanhaizi",
+      "aspect": "landscape",
+      "status": "motion",
+      "image": "D:\\codex\\output\\MMD-Fox-StageArt-v2\\review\\after-4250.png",
+      "video": "D:\\codex\\output\\MMD-Fox-StageArt-v2\\sample-5s-v2\\Aether_Duet_5s_REVIEW.mp4",
+      "duration": 5,
+      "fps": 60,
+      "docs": [
+        "FOX_STAGE_ART_DEEP_STUDY.md",
+        "FOX_LIGHTING_AND_CINEMA.md"
+      ],
+      "configs": [
+        "presets/stages/hesperides-stageart-v2.json",
+        "presets/recipes/hesperides-stageart-v2.json"
+      ],
+      "project": "D:\\codex\\output\\MMD-Fox-StageArt-v2\\production-v5\\Franken_Duet_StageArt_v2.blend",
+      "look": [
+        "可见地面与斜向投影",
+        "局部冷暖与玫瑰侧光",
+        "亮边专属 AOV 溢光",
+        "随景别收放光圈"
+      ],
+      "evidence": [
+        "300 原生帧／1080p60／指定原声与接缝验收通过",
+        "投影、后方空气、亮边溢光原生同帧开关对照",
+        "独立重开十时点骨骼／相机／焦距精确相同，13 块脸部与五官材质排除"
+      ],
+      "limits": [
+        "猪猪反馈后继续研究，尚未获美术认可",
+        "局部空气与辉光有限，未还原参考的强光转场和特写调度",
+        "仅本段五秒，辅助分层及竖屏未验收"
+      ],
+      "compatibility": "固定双人与现成礼堂；Blender 5.2.2 EEVEE，物理地面区域按高度／法线筛选。",
+      "command": "python scripts/render_duet_sample.py --blend 'D:\\codex\\output\\MMD-Fox-StageArt-v2\\production-v5\\Franken_Duet_StageArt_v2.blend' --output-dir 'D:\\codex\\output\\Stage-Art-New-Sample' --logs 'D:\\codex\\temp\\Stage-Art-New-Sample' --start 4140 --frames 300 --workers 2"
+    },
+    {
+      "id": "hesperides-fox-cinema-v1",
+      "title": "夜誓 · 灯光与镜头",
+      "collection": "FOX STUDY / CINEMA",
+      "subtitle": "参考小狐狸的舞台分离与光学层次，转成冷夜礼堂、暖色走道和双人景深。",
+      "category": "stage",
+      "family": "guanhaizi",
+      "aspect": "landscape",
+      "status": "motion",
+      "image": "D:\\codex\\output\\MMD-Fox-Cinema-v1\\review\\after-4200.png",
+      "video": "D:\\codex\\output\\MMD-Fox-Cinema-v1\\sample-5s-v1\\Aether_Duet_5s_REVIEW.mp4",
+      "duration": 5,
+      "fps": 60,
+      "docs": [
+        "FOX_LIGHTING_AND_CINEMA.md",
+        "GUANHAIZI_REFERENCE.md"
+      ],
+      "configs": [
+        "presets/stages/hesperides-fox-cinema-v1.json",
+        "presets/recipes/hesperides-fox-cinema-v1.json"
+      ],
+      "project": "D:\\codex\\output\\MMD-Fox-Cinema-v1\\production-v2\\Franken_Duet_Fox_Cinema.blend",
+      "look": [
+        "深蓝建筑与局部暖光",
+        "明亮肤色与清楚脸线",
+        "双人对焦与背景散景",
+        "原生方向运动模糊"
+      ],
+      "evidence": [
+        "300 帧 1080p60 原声样片与接缝验收通过",
+        "同帧灯光／景深／运动模糊开关；35/85 mm 近似同景别对照",
+        "原动作／相机／焦段五时点精确相等"
+      ],
+      "limits": [
+        "参考后的本机方案，非作者原参数；等待猪猪美术评价",
+        "仅五秒动态通过，双人全曲与竖屏尚未验收",
+        "NPR 色池／补充亮边无物理遮挡；辅助 RGBA 场景未校准"
+      ],
+      "compatibility": "Blender 5.2.2 / EEVEE；固定双人和现成礼堂，原生景深与快门。",
+      "command": "python scripts/render_duet_sample.py --blend 'D:\\codex\\output\\MMD-Fox-Cinema-v1\\production-v2\\Franken_Duet_Fox_Cinema.blend' --output-dir 'D:\\codex\\output\\Fox-Cinema-New-Sample' --logs 'D:\\codex\\temp\\Fox-Cinema-New-Sample' --start 4140 --frames 300 --workers 2"
+    },
+    {
+      "id": "duet-light-space-v1",
+      "title": "同光 · 双人质感修订",
+      "collection": "LIGHT SPACE / LINEAR",
+      "subtitle": "修正灯位与头部空间，让面部、材质受光和后期数据一起变得可控。",
+      "category": "character",
+      "family": "genshin",
+      "aspect": "landscape",
+      "status": "motion",
+      "image": "D:\\codex\\output\\MMD-Quality-Integration-v1\\production-v4\\preview-4200.png",
+      "video": "D:\\codex\\output\\MMD-Quality-Integration-v1\\sample-5s-v2\\Aether_Duet_5s_REVIEW.mp4",
+      "diagnostic_video": "D:\\codex\\output\\MMD-Quality-Integration-v1\\diagnostics-v3\\Shader_Stability_3_Cases.mp4",
+      "duration": 5,
+      "fps": 60,
+      "docs": [
+        "LIGHT_SPACE_AND_COLOR_PIPELINE.md",
+        "GENSHIN_CHARACTER_AND_PRESETS.md"
+      ],
+      "configs": [
+        "presets/quality/duet-light-space-v1.json",
+        "presets/recipes/duet-light-space-v1.json"
+      ],
+      "project": "D:\\codex\\output\\MMD-Quality-Integration-v1\\production-v4\\Franken_Duet_Quality_Master.blend",
+      "look": [
+        "修复空间与光向",
+        "受控真实明暗",
+        "近景稳定性测试",
+        "原生 RGBA",
+        "线性 EXR 母版"
+      ],
+      "evidence": [
+        "五秒 1080p60 原声样片、300 帧与接缝通过",
+        "72 帧近景控制测试；300 帧 RawBeauty 独立解码通过",
+        "原骨骼／相机五时点误差 0，贴图已打包"
+      ],
+      "limits": [
+        "本轮技术修订，尚未自动替代用户认可的旧美术基线",
+        "完整人物／舞台／交互分层验证五时点，全序列保存 raw／final／mask",
+        "交互层需随几何和灯光重渲；不是通用模型转换或全曲验收"
+      ],
+      "compatibility": "Blender 5.2.2 / EEVEE；当前阿克西妮娅＋空与赫斯珀利德斯礼堂。",
+      "command": "python scripts/render_duet_sample.py --blend 'D:\\codex\\output\\MMD-Quality-Integration-v1\\production-v4\\Franken_Duet_Quality_Master.blend' --output-dir 'D:\\codex\\output\\Quality-Review-New' --logs 'D:\\codex\\temp\\Quality-Review-New' --start 4140 --frames 300 --workers 2"
+    },
+    {
+      "id": "genshin-duet-hall-v3",
+      "title": "誓约 · 明亮礼堂",
+      "collection": "GENSHIN / DUET",
+      "subtitle": "目前认可的双人方向：清晰面部、轻量发光环与明亮礼堂。",
+      "category": "character",
+      "family": "genshin",
+      "aspect": "landscape",
+      "status": "motion",
+      "adopted": true,
+      "image": "D:/codex/output/MMD-Ray-Hall-Genshin-Revision-v1/production-v3/preview-4200.png",
+      "video": "D:/codex/output/MMD-Ray-Hall-Genshin-Revision-v1/sample-5s-v1/Aether_Duet_5s_REVIEW.mp4",
+      "duration": 5,
+      "fps": 60,
+      "docs": [
+        "GENSHIN_CHARACTER_AND_PRESETS.md",
+        "HESPERIDES_REFERENCE_REBUILD.md"
+      ],
+      "configs": [
+        "presets/recipes/genshin-duet-hall-v3.json"
+      ],
+      "project": "D:/codex/output/MMD-Ray-Hall-Genshin-Revision-v1/production-v3/Franken_Duet_Reference_Genshin.blend",
+      "look": [
+        "原神面部 SDF",
+        "模型专属遮罩",
+        "保留黑色轮廓",
+        "人物／背景分区调色"
+      ],
+      "evidence": [
+        "1080p60，300 帧带指定原声样片通过",
+        "五个时点的骨骼／相机误差为 0；150 张图打包"
+      ],
+      "limits": [
+        "五秒样本，不是双人全曲成品",
+        "依赖当前角色与源工程，不是任意 PMX 一键通用预设"
+      ],
+      "compatibility": "Blender 5.2.2；阿克西妮娅＋空；现有已烘焙双人工程。"
+    },
+    {
+      "id": "moonlit-vows-v1",
+      "title": "月下 · 冬夜誓言",
+      "collection": "LIGHTING / MOONLIT",
+      "subtitle": "冷色窗外、紫蓝建筑与局部暖光，研究庄重而温柔的雪夜。",
+      "category": "stage",
+      "family": "original",
+      "aspect": "landscape",
+      "status": "still",
+      "image": "D:/codex/output/Stage-Art-Wuwa-Study-v1/night-v1/night-atmosphere-4200.png",
+      "docs": [
+        "STAGE_ART_NIGHT_STUDY.md"
+      ],
+      "configs": [
+        "presets/stages/hesperides-moonlit-vows-v1.json"
+      ],
+      "project": "D:/codex/output/Stage-Art-Wuwa-Study-v1/night-v1/Moonlit_Vows_Study.blend",
+      "look": [
+        "冷暖分区",
+        "低密度薄雾",
+        "独立人物补光",
+        "夜间环境"
+      ],
+      "evidence": [
+        "4200／4420 两时点已出图并观察",
+        "4200 骨骼与相机快照未改变"
+      ],
+      "limits": [
+        "NPR 空间色池不产生真实遮挡与投影",
+        "未完成动态光向验收；薄雾不等于已完成可见光束"
+      ],
+      "compatibility": "Blender 5.2.2；当前礼堂／双人 v3；色池与灯的位置依赖场景尺度。",
+      "command": "& 'E:\\tools\\Blender Foundation\\Blender 5.2\\blender.exe' --background --disable-autoexec --threads 4 'D:\\codex\\output\\MMD-Ray-Hall-Genshin-Revision-v1\\production-v3\\Franken_Duet_Reference_Genshin.blend' --python-exit-code 1 --python scripts/stage_night_art_lab.py -- --preset presets/stages/hesperides-moonlit-vows-v1.json --output-dir 'D:\\codex\\output\\Moonlit-New-Study'"
+    },
+    {
+      "id": "hesperides-ray-reference-v1",
+      "title": "晴光 · 礼堂材质",
+      "collection": "STAGE / REFERENCE",
+      "subtitle": "读取随包 ToonBased 与加算 MatCap，研究礼堂 Ray 预览的材质关系。",
+      "category": "stage",
+      "family": "original",
+      "aspect": "landscape",
+      "status": "still",
+      "image": "D:/codex/output/Hesperides-Ray-Reference-Rebuild-v1/final-study/reference-rebuild.png",
+      "docs": [
+        "HESPERIDES_REFERENCE_REBUILD.md",
+        "HESPERIDES_AUTHOR_SETUP.md"
+      ],
+      "configs": [
+        "presets/stages/hesperides-ray-reference-v1.json"
+      ],
+      "project": "D:/codex/output/Hesperides-Ray-Reference-Rebuild-v1/final-study/Hesperides_Reference_Rebuild.blend",
+      "look": [
+        "ToonBased",
+        "加算 MatCap",
+        "探针与反射",
+        "背景单独调色"
+      ],
+      "evidence": [
+        "1080p 静帧与材质／反射／调色开关对照",
+        "56 张图打包；独立进程重开验证"
+      ],
+      "limits": [
+        "Blender 中的适配，不是作者原始完整 Ray 工程",
+        "场景研究脚本不能直接用于含双人的工程"
+      ],
+      "compatibility": "原始赫斯珀利德斯礼堂，103 对象；人物合入走独立集成流程。"
+    },
+    {
+      "id": "wuwa-hair-lab-v1",
+      "title": "流光 · 鸣潮发丝",
+      "collection": "WUWA / HAIR LAB",
+      "subtitle": "用匹配的原生数据，研究发束亮带的切分、形状与范围。",
+      "category": "character",
+      "family": "wuwa",
+      "aspect": "square",
+      "status": "study",
+      "image": "D:/codex/output/Stage-Art-Wuwa-Study-v1/wuwa-hair-v1/native-inputs.png",
+      "docs": [
+        "WUWA_TOON_STUDY.md"
+      ],
+      "configs": [
+        "presets/recipes/wuwa-hair-lab-v1.json"
+      ],
+      "project": "D:/codex/output/Stage-Art-Wuwa-Study-v1/wuwa-hair-v1/WuWa_Hair_Input_Study.blend",
+      "look": [
+        "发丝专用贴图",
+        "HM／HN 输入对照",
+        "通道与 Alpha 分开记录"
+      ],
+      "evidence": [
+        "完成原连接、HM 置零、HN 中性值三张静帧",
+        "Pro Max 库读取 28 个节点组；本实验使用独立 hair 文件"
+      ],
+      "limits": [
+        "未移植到阿克西妮娅／空，也未验收动态高光",
+        "组插口与贴图后缀反向命名；不能按名字照接",
+        "示例模型署名未独立核实，仅作本地研究"
+      ],
+      "compatibility": "用户提供的 hair高光(wuwa3.0).blend 与其配套贴图；不是通用原神数据。",
+      "command": "& 'E:\\tools\\Blender Foundation\\Blender 5.2\\blender.exe' --background --disable-autoexec --threads 4 'D:\\BaiduNetdiskDownload\\三渲二预设\\hair高光(wuwa3.0).blend' --python-exit-code 1 --python scripts/wuwa_hair_input_lab.py -- --output-dir 'D:\\codex\\output\\WuWa-Hair-New-Study'"
+    },
+    {
+      "id": "half-lambert-v1",
+      "title": "柔界 · 半兰伯特",
+      "collection": "SHADING / HALF LAMBERT",
+      "subtitle": "用可调光照响应扩展暗部，再区分色块边界与轮廓线。",
+      "category": "character",
+      "family": "original",
+      "aspect": "portrait",
+      "status": "motion",
+      "video": "D:/codex/output/MMD-Quality-Lab-v1/half-motion/half-lambert-study.mp4",
+      "duration": 4,
+      "fps": 60,
+      "docs": [
+        "HALF_LAMBERT_STUDY.md",
+        "QUALITY_LIGHTING_LAB.md"
+      ],
+      "configs": [
+        "presets/quality/half-lambert-v1.json"
+      ],
+      "look": [
+        "包裹光响应",
+        "阶梯色带",
+        "局部细节实验"
+      ],
+      "evidence": [
+        "已有静帧 A/B 与四秒技术样片"
+      ],
+      "limits": [
+        "线性包裹与 Valve 平方公式分开记录",
+        "RGB 控制信号不等于完整物理彩色打光；旧版材质实验"
+      ],
+      "compatibility": "阿克西妮娅既有 MMD NPR 分支，换模型需重新检查材质语义。"
+    },
+    {
+      "id": "surface-refinement-v2",
+      "title": "触感 · 分区材质",
+      "collection": "SURFACE / MATERIAL",
+      "subtitle": "拆开银发、蓝布、金边与毛领，分别设计反光和暗部。",
+      "category": "character",
+      "family": "original",
+      "aspect": "portrait",
+      "status": "motion",
+      "video": "D:/codex/output/MMD-Surface-Refinement-v1/motion/surface-refined.mp4",
+      "duration": 8,
+      "fps": 60,
+      "docs": [
+        "SURFACE_REFINEMENT.md"
+      ],
+      "configs": [
+        "presets/quality/surface-refinement-v2.json"
+      ],
+      "look": [
+        "发束高光",
+        "图集金属遮罩",
+        "布料宽高光",
+        "毛领层次"
+      ],
+      "evidence": [
+        "八秒样片、同姿态对照与遮罩检查"
+      ],
+      "limits": [
+        "为阿克西妮娅图集适配；换模型必须重做遮罩",
+        "旧版竖屏研究，不能视作当前双人物理或材质已升级"
+      ],
+      "compatibility": "原单角色阿克西妮娅工程与模型特定图集。"
+    },
+    {
+      "id": "face-ink-v2",
+      "title": "墨线 · 清晰面容",
+      "collection": "OUTLINE / FACE",
+      "subtitle": "外轮廓、鼻颌、眉睫与嘴缝分别控制，保留清楚的表情。",
+      "category": "character",
+      "family": "guanhaizi",
+      "aspect": "portrait",
+      "status": "motion",
+      "video": "D:/codex/output/MMD-Face-Ink-Refinement-v1/motion/face-ink-refined.mp4",
+      "duration": 8,
+      "fps": 60,
+      "docs": [
+        "FACE_INK_REFINEMENT.md"
+      ],
+      "configs": [
+        "presets/quality/outlines-v2-face-black.json"
+      ],
+      "look": [
+        "反向外壳",
+        "脸部内线",
+        "材质／顶点线宽权重"
+      ],
+      "evidence": [
+        "八秒带声样片和近景脸线对照"
+      ],
+      "limits": [
+        "厚度依赖 PMX 顶点权重；不能照抄裸数值",
+        "不同景别的像素线宽与全曲稳定性仍需检查"
+      ],
+      "compatibility": "当前阿克西妮娅 PMX 及 MMD Tools 描边链；不是屏幕边光替代物。"
+    },
+    {
+      "id": "typography-landscape",
+      "title": "字幕 · 横向叙事",
+      "collection": "TYPE / LANDSCAPE",
+      "subtitle": "横屏独立的文字布局，可选人物前层、后层或保护面部。",
+      "category": "post",
+      "family": "original",
+      "aspect": "landscape",
+      "status": "motion",
+      "video": "D:/codex/output/MMD-Advanced-Subtitle-Study-v1/landscape/landscape-typography.mp4",
+      "duration": 4,
+      "fps": 60,
+      "docs": [
+        "ADVANCED_MMD_SUBTITLES.md",
+        "SUBTITLE_DELIVERY.md"
+      ],
+      "configs": [
+        "presets/typography/landscape-study.json"
+      ],
+      "look": [
+        "前／后景字幕",
+        "Cryptomatte 保护",
+        "逐段 cue 表"
+      ],
+      "evidence": [
+        "四秒横屏带声技术样片与遮挡检查"
+      ],
+      "limits": [
+        "文字对时不等于动作与原声已精确卡点",
+        "旧单角色实验；双人交叠与透明边缘需重新验收"
+      ],
+      "compatibility": "原字幕研究场景，使用官方 Wide 文字源与匹配 cue 表。"
+    },
+    {
+      "id": "typography-portrait",
+      "title": "字幕 · 竖屏节拍",
+      "collection": "TYPE / PORTRAIT",
+      "subtitle": "使用 Tall 源文字，把字体节奏与竖屏人物关系单独编排。",
+      "category": "post",
+      "family": "original",
+      "aspect": "portrait",
+      "status": "motion",
+      "video": "D:/codex/output/MMD-Advanced-Subtitle-Study-v1/portrait/portrait-typography.mp4",
+      "duration": 4,
+      "fps": 60,
+      "docs": [
+        "ADVANCED_MMD_SUBTITLES.md"
+      ],
+      "configs": [
+        "presets/typography/portrait-study.json"
+      ],
+      "look": [
+        "竖版专用 cue",
+        "人物保护区",
+        "可选主动遮挡"
+      ],
+      "evidence": [
+        "四秒竖屏带声技术样片"
+      ],
+      "limits": [
+        "不是横屏裁切；文字与镜头需逐段设计",
+        "不代表双人全曲字幕已完成"
+      ],
+      "compatibility": "原字幕研究场景，使用官方 Tall 源文字。"
+    }
+  ],
+  "comparisons": [
+    {
+      "id": "portrait-relight-4290",
+      "title": "原版 / 暗场人物重新布光",
+      "subtitle": "同一帧4290、原相机、1080p64samples、相同DOF/曝光/显示变换；这是整套布光材质修改前后，不是单变量实验。",
+      "before_label": "Clean v2 原版",
+      "after_label": "重新布光静帧",
+      "before": "D:\\codex\\output\\MMD-Portrait-Relight-v1\\baseline-1080\\baseline-4290.png",
+      "after": "D:\\codex\\output\\MMD-Portrait-Relight-v1\\preview-v8\\complete-4290.png",
+      "doc": "PORTRAIT_RELIGHT_IMPLEMENTATION.md"
+    },
+    {
+      "id": "portrait-layer-study-scattering",
+      "title": "中央灰雾 / 仅关两散射盒",
+      "subtitle": "同4290原相机720p/48samples；DOF/MB统一关。只隐藏两散射盒，六发光锥和灯保留；B是后续研究方向。",
+      "before_label": "A 当前",
+      "after_label": "B 散射盒关",
+      "before": "D:/codex/output/MMD-Portrait-Lighting-Study-2026-11-14/controls-v1/A-current-4290.png",
+      "after": "D:/codex/output/MMD-Portrait-Lighting-Study-2026-11-14/controls-v1/B-scattering-off-4290.png",
+      "doc": "PORTRAIT_LIGHTING_AND_SHADOW_STUDY.md"
+    },
+    {
+      "id": "portrait-layer-study-rim-gain",
+      "title": "限定亮边 / 增亮与青色代价",
+      "subtitle": "B上仅hair/cloth既有加法HDR rim源乘2，方向/宽度/颜色不变；青边更抢眼，未解决衣服大面与脸，未获美术认可。",
+      "before_label": "B 原加法亮边",
+      "after_label": "C 限定gain2",
+      "before": "D:/codex/output/MMD-Portrait-Lighting-Study-2026-11-14/controls-v1/B-scattering-off-4290.png",
+      "after": "D:/codex/output/MMD-Portrait-Lighting-Study-2026-11-14/controls-v1/C-scattering-off-rim-gain2-4290.png",
+      "doc": "PORTRAIT_LIGHTING_AND_SHADOW_STUDY.md"
+    },
+    {
+      "id": "franken-ikhor-bold-wedding-v1-sleeve",
+      "title": "袖口动态 / 同帧修正",
+      "subtitle": "同角色／身体动作／材质／灯／相机；前为退回的v4袖壁穿腕，后为局部袖动态与修形后的完整原生帧。",
+      "before_label": "前版",
+      "after_label": "新版",
+      "before": "D:\\codex\\output\\MMD-Aksiniya-Ikhor-Wedding-v1\\production-v4\\native-4290.png",
+      "after": "D:\\codex\\output\\MMD-Aksiniya-Ikhor-Wedding-v1\\review\\native-4290.png",
+      "doc": "IKHOR_BOLD_WEDDING_PRODUCTION.md"
+    },
+    {
+      "id": "franken-ikhor-bold-wedding-v1-wide",
+      "title": "礼堂全貌 / 双弧与光束",
+      "subtitle": "同4250帧与原相机；包含换角、局部Emission、舞台灯和美术体积光束等多项变化。",
+      "before_label": "前版",
+      "after_label": "新版",
+      "before": "D:\\codex\\output\\MMD-Guanhai-Transfer-v1\\review\\native-4250.png",
+      "after": "D:\\codex\\output\\MMD-Aksiniya-Ikhor-Wedding-v1\\review\\native-4250.png",
+      "doc": "IKHOR_BOLD_WEDDING_PRODUCTION.md"
+    },
+    {
+      "id": "franken-ikhor-bold-wedding-v1-overall",
+      "title": "新旧整体 / 换角与仪式光",
+      "subtitle": "同4290帧与原相机，同时换角色和光效，不能当成单一Shader对照。",
+      "before_label": "前版",
+      "after_label": "新版",
+      "before": "D:\\codex\\output\\MMD-Guanhai-Transfer-v1\\review\\native-4290.png",
+      "after": "D:\\codex\\output\\MMD-Aksiniya-Ikhor-Wedding-v1\\review\\native-4290.png",
+      "doc": "IKHOR_BOLD_WEDDING_PRODUCTION.md"
+    },
+    {
+      "id": "reference-transfer-before-after",
+      "title": "人物与礼堂 / 同帧移植",
+      "subtitle": "同4290帧原生beauty，相同显示变换、原动作与相机。",
+      "before_label": "前版人物分层",
+      "after_label": "外部技术移植",
+      "before": "D:\\codex\\output\\MMD-Character-Layer-Refinement-v1\\review\\after-4290.png",
+      "after": "D:\\codex\\output\\MMD-Guanhai-Transfer-v1\\review\\native-4290.png",
+      "doc": "REFERENCE_TECHNIQUE_TRANSFER.md"
+    },
+    {
+      "id": "reference-transfer-stage-grade",
+      "title": "人物保护的前景明暗 / 开关",
+      "subtitle": "限定本轮同帧对照；投影关闭仍保留形体、SDF及烘焙GI。",
+      "before_label": "关",
+      "after_label": "开",
+      "before": "D:\\codex\\output\\MMD-Guanhai-Transfer-v1\\controls-4290\\stage-grade-off.png",
+      "after": "D:\\codex\\output\\MMD-Guanhai-Transfer-v1\\controls-4290\\complete.png",
+      "doc": "REFERENCE_TECHNIQUE_TRANSFER.md"
+    },
+    {
+      "id": "reference-transfer-reflection",
+      "title": "镜面专用宽光 / 开关",
+      "subtitle": "限定本轮同帧对照；投影关闭仍保留形体、SDF及烘焙GI。",
+      "before_label": "关",
+      "after_label": "开",
+      "before": "D:\\codex\\output\\MMD-Guanhai-Transfer-v1\\controls-4290\\reflection-off.png",
+      "after": "D:\\codex\\output\\MMD-Guanhai-Transfer-v1\\controls-4290\\complete.png",
+      "doc": "REFERENCE_TECHNIQUE_TRANSFER.md"
+    },
+    {
+      "id": "reference-transfer-cast",
+      "title": "人物与礼堂投影 / 开关",
+      "subtitle": "限定本轮同帧对照；投影关闭仍保留形体、SDF及烘焙GI。",
+      "before_label": "关",
+      "after_label": "开",
+      "before": "D:\\codex\\output\\MMD-Guanhai-Transfer-v1\\controls-4290\\cast-shadows-off.png",
+      "after": "D:\\codex\\output\\MMD-Guanhai-Transfer-v1\\controls-4290\\complete.png",
+      "doc": "REFERENCE_TECHNIQUE_TRANSFER.md"
+    },
+    {
+      "id": "reference-transfer-stage-wide",
+      "title": "礼堂主次 / 同帧远景",
+      "subtitle": "限定本轮同帧对照；投影关闭仍保留形体、SDF及烘焙GI。",
+      "before_label": "前版",
+      "after_label": "新版",
+      "before": "D:\\codex\\output\\MMD-Character-Layer-Refinement-v1\\review\\native-4250.png",
+      "after": "D:\\codex\\output\\MMD-Guanhai-Transfer-v1\\review\\native-4250.png",
+      "doc": "REFERENCE_TECHNIQUE_TRANSFER.md"
+    },
+    {
+      "id": "character-layers-before-after",
+      "title": "人物受光 / 同帧改进",
+      "subtitle": "相同4290帧原生beauty，显示变换和相机保持一致。",
+      "before_label": "Grounded前版",
+      "after_label": "新人物层",
+      "before": "D:\\codex\\output\\MMD-Character-Layer-Refinement-v1\\review\\before-4290.png",
+      "after": "D:\\codex\\output\\MMD-Character-Layer-Refinement-v1\\review\\after-4290.png",
+      "doc": "CHARACTER_LAYER_REFINEMENT.md"
+    },
+    {
+      "id": "character-layers-lighting-off",
+      "title": "一次受光色带 / 同帧开关",
+      "subtitle": "其余层保留；投影关闭不移除SDF与烘焙GI；色带关闭不移除物理闭包。",
+      "before_label": "关",
+      "after_label": "开",
+      "before": "D:\\codex\\output\\MMD-Character-Layer-Refinement-v1\\layer-controls-v2\\lighting-off.png",
+      "after": "D:\\codex\\output\\MMD-Character-Layer-Refinement-v1\\layer-controls-v2\\complete.png",
+      "doc": "CHARACTER_LAYER_REFINEMENT.md"
+    },
+    {
+      "id": "character-layers-ao-off",
+      "title": "短距接触AO / 同帧开关",
+      "subtitle": "其余层保留；投影关闭不移除SDF与烘焙GI；色带关闭不移除物理闭包。",
+      "before_label": "关",
+      "after_label": "开",
+      "before": "D:\\codex\\output\\MMD-Character-Layer-Refinement-v1\\layer-controls-v2\\ao-off.png",
+      "after": "D:\\codex\\output\\MMD-Character-Layer-Refinement-v1\\layer-controls-v2\\complete.png",
+      "doc": "CHARACTER_LAYER_REFINEMENT.md"
+    },
+    {
+      "id": "character-layers-hair-highlight-off",
+      "title": "方向性发丝高光 / 同帧开关",
+      "subtitle": "其余层保留；投影关闭不移除SDF与烘焙GI；色带关闭不移除物理闭包。",
+      "before_label": "关",
+      "after_label": "开",
+      "before": "D:\\codex\\output\\MMD-Character-Layer-Refinement-v1\\layer-controls-v2\\hair-highlight-off.png",
+      "after": "D:\\codex\\output\\MMD-Character-Layer-Refinement-v1\\layer-controls-v2\\complete.png",
+      "doc": "CHARACTER_LAYER_REFINEMENT.md"
+    },
+    {
+      "id": "character-layers-cast-shadows-off",
+      "title": "原生灯光投影 / 同帧开关",
+      "subtitle": "其余层保留；投影关闭不移除SDF与烘焙GI；色带关闭不移除物理闭包。",
+      "before_label": "关",
+      "after_label": "开",
+      "before": "D:\\codex\\output\\MMD-Character-Layer-Refinement-v1\\layer-controls-v2\\cast-shadows-off.png",
+      "after": "D:\\codex\\output\\MMD-Character-Layer-Refinement-v1\\layer-controls-v2\\complete.png",
+      "doc": "CHARACTER_LAYER_REFINEMENT.md"
+    },
+    {
+      "id": "grounding-before-after",
+      "title": "旧蓝金婚礼 / 接地与受光",
+      "subtitle": "同一4250帧、原生beauty缓存，避免旧视频未知色彩矩阵干扰。",
+      "before_label": "旧蓝金婚礼",
+      "after_label": "新增接地",
+      "before": "D:\\codex\\output\\MMD-Duet-Shadow-Color-v1\\review\\shadows-before-4250.png",
+      "after": "D:\\codex\\output\\MMD-Duet-Shadow-Color-v1\\review\\shadows-after-4250.png",
+      "doc": "SHADOW_GROUNDING_AND_PLAYBACK_COLOR.md"
+    },
+    {
+      "id": "grounding-cast",
+      "title": "人物主投影 / 原生开关",
+      "subtitle": "同帧，其他灯光与GI保留；完整图与地面局部见交付review。",
+      "before_label": "人物主投影关",
+      "after_label": "人物主投影开",
+      "before": "D:\\codex\\output\\MMD-Duet-Shadow-Color-v1\\production-v3\\control-key-shadow-off-4250.png",
+      "after": "D:\\codex\\output\\MMD-Duet-Shadow-Color-v1\\production-v3\\grounded-4250.png",
+      "doc": "SHADOW_GROUNDING_AND_PLAYBACK_COLOR.md"
+    },
+    {
+      "id": "grounding-contact",
+      "title": "近地接触AO / 原生开关",
+      "subtitle": "同帧，其他灯光与GI保留；完整图与地面局部见交付review。",
+      "before_label": "近地接触AO关",
+      "after_label": "近地接触AO开",
+      "before": "D:\\codex\\output\\MMD-Duet-Shadow-Color-v1\\production-v3\\control-contact-off-4250.png",
+      "after": "D:\\codex\\output\\MMD-Duet-Shadow-Color-v1\\production-v3\\grounded-4250.png",
+      "doc": "SHADOW_GROUNDING_AND_PLAYBACK_COLOR.md"
+    },
+    {
+      "id": "grounding-self-shadow",
+      "title": "人物真实遮挡 / 原生对照",
+      "subtitle": "同一4290帧；自身阴影控制保留SDF和形体明暗；线宽控制保留新边色。",
+      "before_label": "遮挡关",
+      "after_label": "遮挡开",
+      "before": "D:\\codex\\output\\MMD-Duet-Shadow-Color-v1\\production-v3\\control-self-cast-off-4290.png",
+      "after": "D:\\codex\\output\\MMD-Duet-Shadow-Color-v1\\production-v3\\grounded-4290.png",
+      "doc": "SHADOW_GROUNDING_AND_PLAYBACK_COLOR.md"
+    },
+    {
+      "id": "grounding-ink",
+      "title": "人物描边加粗 / 原生对照",
+      "subtitle": "同一4290帧；自身阴影控制保留SDF和形体明暗；线宽控制保留新边色。",
+      "before_label": "旧线宽",
+      "after_label": "加粗线宽",
+      "before": "D:\\codex\\output\\MMD-Duet-Shadow-Color-v1\\production-v3\\control-previous-ink-4290.png",
+      "after": "D:\\codex\\output\\MMD-Duet-Shadow-Color-v1\\production-v3\\grounded-4290.png",
+      "doc": "SHADOW_GROUNDING_AND_PLAYBACK_COLOR.md"
+    },
+    {
+      "id": "wedding-before-after",
+      "title": "柔光礼堂 / 蓝金婚礼",
+      "subtitle": "同一4250帧、相同相机；字幕关闭。",
+      "before_label": "原柔光礼堂",
+      "after_label": "蓝金婚礼",
+      "before": "D:\\codex\\output\\MMD-Duet-Blue-Gold-Wedding-v1\\review\\previous-4250.png",
+      "after": "D:\\codex\\output\\MMD-Duet-Blue-Gold-Wedding-v1\\review\\wedding-4250.png",
+      "doc": "BLUE_GOLD_WEDDING_STUDY.md"
+    },
+    {
+      "id": "wedding-caption-palette",
+      "title": "原字幕色 / 蓝金主题色",
+      "subtitle": "同一新场景、同一4200帧，仅更换字幕配色与细柔光。",
+      "before_label": "原字幕色",
+      "after_label": "蓝金字幕",
+      "before": "D:\\codex\\output\\MMD-Duet-Blue-Gold-Wedding-v1\\caption-monochrome-control\\caption-4200.png",
+      "after": "D:\\codex\\output\\MMD-Duet-Blue-Gold-Wedding-v1\\captions-5s-v1\\caption-4200.png",
+      "doc": "BLUE_GOLD_WEDDING_STUDY.md"
+    },
+    {
+      "id": "wedding-scattering",
+      "title": "后方局部散射 / 原生开关",
+      "subtitle": "局部控制；仍保留其他照明与既有光晕。",
+      "before_label": "后方局部散射关",
+      "after_label": "后方局部散射开",
+      "before": "D:\\codex\\output\\MMD-Duet-Blue-Gold-Wedding-v1\\production-v4\\control-scattering-off-4250.png",
+      "after": "D:\\codex\\output\\MMD-Duet-Blue-Gold-Wedding-v1\\production-v4\\wedding-4250.png",
+      "doc": "BLUE_GOLD_WEDDING_STUDY.md"
+    },
+    {
+      "id": "wedding-halos",
+      "title": "本轮新增光晕 / 原生开关",
+      "subtitle": "局部控制；仍保留其他照明与既有光晕。",
+      "before_label": "本轮新增光晕关",
+      "after_label": "本轮新增光晕开",
+      "before": "D:\\codex\\output\\MMD-Duet-Blue-Gold-Wedding-v1\\production-v4\\control-new-halos-off-4290.png",
+      "after": "D:\\codex\\output\\MMD-Duet-Blue-Gold-Wedding-v1\\production-v4\\wedding-4290.png",
+      "doc": "BLUE_GOLD_WEDDING_STUDY.md"
+    },
+    {
+      "id": "soft-light-before-after",
+      "title": "暗部偏低 / 柔光提亮",
+      "subtitle": "同一4250帧；场景真实补光，人物曝光与字幕不整体拉升。",
+      "before_label": "前版聚焦舞台",
+      "after_label": "柔光、顶光与逆光",
+      "before": "D:\\codex\\output\\MMD-Duet-Soft-Top-Rim-v1\\review\\previous-light-4250.png",
+      "after": "D:\\codex\\output\\MMD-Duet-Soft-Top-Rim-v1\\review\\soft-light-4250.png",
+      "doc": "SOFT_TOP_RIM_LIGHTING.md"
+    },
+    {
+      "id": "soft-light-direct-soft",
+      "title": "柔光直接贡献 / 原生开关",
+      "subtitle": "相同帧、相同相机；柔光关闭时仍保留当前GI和反射率。",
+      "before_label": "柔光直接贡献关",
+      "after_label": "柔光直接贡献开",
+      "before": "D:\\codex\\output\\MMD-Duet-Soft-Top-Rim-v1\\production-v2\\control-direct-soft-off-4250.png",
+      "after": "D:\\codex\\output\\MMD-Duet-Soft-Top-Rim-v1\\production-v2\\soft-4250.png",
+      "doc": "SOFT_TOP_RIM_LIGHTING.md"
+    },
+    {
+      "id": "soft-light-rim",
+      "title": "人物逆光与边缘 / 原生开关",
+      "subtitle": "相同帧、相同相机；柔光关闭时仍保留当前GI和反射率。",
+      "before_label": "人物逆光与边缘关",
+      "after_label": "人物逆光与边缘开",
+      "before": "D:\\codex\\output\\MMD-Duet-Soft-Top-Rim-v1\\production-v2\\control-rim-off-4290.png",
+      "after": "D:\\codex\\output\\MMD-Duet-Soft-Top-Rim-v1\\production-v2\\soft-4290.png",
+      "doc": "SOFT_TOP_RIM_LIGHTING.md"
+    },
+    {
+      "id": "caption-focused-light",
+      "title": "平均舞台 / 聚焦冷暖",
+      "subtitle": "同一 4250 帧、原动作与相机；字幕关闭。",
+      "before_label": "前版舞台",
+      "after_label": "聚焦灯光",
+      "before": "D:\\codex\\output\\MMD-Duet-Captions-Contrast-v1\\review-v2\\previous-light-4250.png",
+      "after": "D:\\codex\\output\\MMD-Duet-Captions-Contrast-v1\\review-v2\\focused-light-4250.png",
+      "doc": "DUET_CAPTION_STABILITY_AND_LIGHTING.md"
+    },
+    {
+      "id": "caption-locked-4200",
+      "title": "整组前景小牌",
+      "subtitle": "同一原生 beauty 与官方字幕合成；前景不再局部挖开脸部。",
+      "before_label": "无字幕",
+      "after_label": "整组前景小牌",
+      "before": "D:\\codex\\output\\MMD-Duet-Captions-Contrast-v1\\review-v2\\without-caption-4200.png",
+      "after": "D:\\codex\\output\\MMD-Duet-Captions-Contrast-v1\\captions-5s-v2\\caption-4200.png",
+      "doc": "DUET_CAPTION_STABILITY_AND_LIGHTING.md"
+    },
+    {
+      "id": "caption-locked-4250",
+      "title": "整组背景大牌",
+      "subtitle": "同一原生 beauty 与官方字幕合成；前景不再局部挖开脸部。",
+      "before_label": "无字幕",
+      "after_label": "整组背景大牌",
+      "before": "D:\\codex\\output\\MMD-Duet-Captions-Contrast-v1\\review-v2\\without-caption-4250.png",
+      "after": "D:\\codex\\output\\MMD-Duet-Captions-Contrast-v1\\captions-5s-v2\\caption-4250.png",
+      "doc": "DUET_CAPTION_STABILITY_AND_LIGHTING.md"
+    },
+    {
+      "id": "stageart-before-after",
+      "title": "前版夜誓 / 舞台光影再研究",
+      "subtitle": "两支实际视频同一 4250 帧；原动作、相机和焦距相同。",
+      "before_label": "前版夜誓",
+      "after_label": "舞台再研究",
+      "before": "D:\\codex\\output\\MMD-Fox-StageArt-v2\\review\\before-4250.png",
+      "after": "D:\\codex\\output\\MMD-Fox-StageArt-v2\\review\\after-4250.png",
+      "doc": "FOX_STAGE_ART_DEEP_STUDY.md"
+    },
+    {
+      "id": "stageart-shadow",
+      "title": "人物主投影 / 原生开关",
+      "subtitle": "同帧只切换此项。控制参数存在与可见影响分开验收。",
+      "before_label": "人物主投影关",
+      "after_label": "人物主投影开",
+      "before": "D:\\codex\\output\\MMD-Fox-StageArt-v2\\production-v5\\control-no-projector-shadow.png",
+      "after": "D:\\codex\\output\\MMD-Fox-StageArt-v2\\production-v5\\02-stage-wide.png",
+      "doc": "FOX_STAGE_ART_DEEP_STUDY.md"
+    },
+    {
+      "id": "stageart-air",
+      "title": "后方局部空气 / 原生开关",
+      "subtitle": "同帧只切换此项。控制参数存在与可见影响分开验收。",
+      "before_label": "后方局部空气关",
+      "after_label": "后方局部空气开",
+      "before": "D:\\codex\\output\\MMD-Fox-StageArt-v2\\production-v5\\control-no-rear-air.png",
+      "after": "D:\\codex\\output\\MMD-Fox-StageArt-v2\\production-v5\\02-stage-wide.png",
+      "doc": "FOX_STAGE_ART_DEEP_STUDY.md"
+    },
+    {
+      "id": "stageart-rim",
+      "title": "亮边专属溢光 / 原生开关",
+      "subtitle": "同帧只切换此项。控制参数存在与可见影响分开验收。",
+      "before_label": "亮边专属溢光关",
+      "after_label": "亮边专属溢光开",
+      "before": "D:\\codex\\output\\MMD-Fox-StageArt-v2\\production-v5\\control-no-rim-glow.png",
+      "after": "D:\\codex\\output\\MMD-Fox-StageArt-v2\\production-v5\\03-stage-close.png",
+      "doc": "FOX_STAGE_ART_DEEP_STUDY.md"
+    },
+    {
+      "id": "fox-cinema-lighting",
+      "title": "明亮礼堂 / 夜誓灯光与景深",
+      "subtitle": "两支真实动态样片的同一 4200 帧与原相机；人物光学效果也随新版调整。",
+      "before_label": "前版明亮",
+      "after_label": "新版夜誓",
+      "before": "D:\\codex\\output\\MMD-Fox-Cinema-v1\\review\\before-4200.png",
+      "after": "D:\\codex\\output\\MMD-Fox-Cinema-v1\\review\\after-4200.png",
+      "doc": "FOX_LIGHTING_AND_CINEMA.md"
+    },
+    {
+      "id": "fox-cinema-focus",
+      "title": "同灯光 / f/10 与 f/2.8",
+      "subtitle": "相同 4200 帧与灯光，比较较深与较浅景深；前版也开启了景深。",
+      "before_label": "原 f/10",
+      "after_label": "双人 f/2.8",
+      "before": "D:\\codex\\output\\MMD-Fox-Cinema-v1\\production-v2\\02-lighting-only.png",
+      "after": "D:\\codex\\output\\MMD-Fox-Cinema-v1\\production-v2\\03-lighting-focus.png",
+      "doc": "FOX_LIGHTING_AND_CINEMA.md"
+    },
+    {
+      "id": "fox-cinema-motion",
+      "title": "同帧 / 运动模糊开关",
+      "subtitle": "相同 4290 帧与景深；观察移动的手臂和轮廓。",
+      "before_label": "快门关",
+      "after_label": "0.35 帧快门",
+      "before": "D:\\codex\\output\\MMD-Fox-Cinema-v1\\production-v2\\control-motion-off-4290.png",
+      "after": "D:\\codex\\output\\MMD-Fox-Cinema-v1\\production-v2\\04-lighting-focus-motion.png",
+      "doc": "FOX_LIGHTING_AND_CINEMA.md"
+    },
+    {
+      "id": "light-space",
+      "title": "旧认可版 / 受光与色彩修订",
+      "subtitle": "同一 4200 帧与相机，比较灯位、头部空间、面部光向和受控明暗的综合改动。",
+      "before_label": "旧认可版",
+      "after_label": "本轮修订",
+      "before": "D:\\codex\\output\\MMD-Ray-Hall-Genshin-Revision-v1\\production-v3\\preview-4200.png",
+      "after": "D:\\codex\\output\\MMD-Quality-Integration-v1\\production-v4\\preview-4200.png",
+      "doc": "LIGHT_SPACE_AND_COLOR_PIPELINE.md"
+    },
+    {
+      "id": "night",
+      "title": "明亮礼堂 / 冷色夜景",
+      "subtitle": "同姿态、同机位 · 第 4200 帧。拖动分界，观察窗外、建筑与人物的关系。",
+      "before_label": "明亮基线",
+      "after_label": "夜景实验",
+      "before": "D:/codex/output/Stage-Art-Wuwa-Study-v1/night-v1/baseline-4200.png",
+      "after": "D:/codex/output/Stage-Art-Wuwa-Study-v1/night-v1/night-atmosphere-4200.png",
+      "doc": "STAGE_ART_NIGHT_STUDY.md"
+    },
+    {
+      "id": "hair",
+      "title": "发丝原连接 / HM 组输入置零",
+      "subtitle": "同一预设和相机，只改变组输入。看刘海高光，接口名称不等于贴图语义。",
+      "before_label": "原连接",
+      "after_label": "HM 置零",
+      "before": "D:/codex/output/Stage-Art-Wuwa-Study-v1/wuwa-hair-v1/native-inputs.png",
+      "after": "D:/codex/output/Stage-Art-Wuwa-Study-v1/wuwa-hair-v1/control-neutral-HM.png",
+      "doc": "WUWA_TOON_STUDY.md"
+    },
+    {
+      "id": "stage",
+      "title": "普通 PBR / 礼堂材质适配",
+      "subtitle": "同一研究机位，比较普通 PBR 控制图与 ToonBased／MatCap／调色组合。不是作者原工程恢复。",
+      "before_label": "普通 PBR",
+      "after_label": "适配实验",
+      "before": "D:/codex/output/Hesperides-Ray-Reference-Rebuild-v1/final-study/control-ordinary-pbr.png",
+      "after": "D:/codex/output/Hesperides-Ray-Reference-Rebuild-v1/final-study/reference-rebuild.png",
+      "doc": "HESPERIDES_REFERENCE_REBUILD.md"
+    },
+    {
+      "id": "fox-cinema-lens",
+      "title": "近似同景别 / 35 mm 与 85 mm",
+      "subtitle": "独立焦段实验，同时调整相机距离；不是正式视频的相机或原作者参数。",
+      "before_label": "35 mm 较近机位",
+      "after_label": "85 mm 退远机位",
+      "before": "D:\\codex\\output\\MMD-Fox-Cinema-v1\\production-v2\\lens-35mm-matched-framing.png",
+      "after": "D:\\codex\\output\\MMD-Fox-Cinema-v1\\production-v2\\lens-85mm-matched-framing.png",
+      "doc": "FOX_LIGHTING_AND_CINEMA.md"
+    }
+  ],
+  "knowledge_groups": [
+    {
+      "id": "render",
+      "title": "人物与着色",
+      "description": "色块、SDF、发丝、眼睛和黑线。",
+      "docs": [
+        "GOO_FEATURES_AND_MME_MECHANISMS.md",
+        "CLEAN_GAME_CHARACTER_REFINEMENT.md",
+        "IKHOR_BOLD_WEDDING_PRODUCTION.md",
+        "REFERENCE_TECHNIQUE_TRANSFER.md",
+        "EXTERNAL_MMD_TECHNIQUES_2026_11_13.md",
+        "NPR_PRIMARY_STUDY_2026_11_13.md",
+        "FACE_SHADOW_DESIGN_STUDY.md",
+        "MATERIAL_RESPONSE_STUDY.md",
+        "CHARACTER_LAYER_REFINEMENT.md",
+        "CHARACTER_LAYER_AUDIT.md",
+        "NPR_NEXT_EXPERIMENTS.md",
+        "CHARACTER_NPR_PLAYBOOK.md",
+        "LIGHT_SPACE_AND_COLOR_PIPELINE.md",
+        "GENSHIN_CHARACTER_AND_PRESETS.md",
+        "WUWA_TOON_STUDY.md",
+        "HALF_LAMBERT_STUDY.md",
+        "SURFACE_REFINEMENT.md",
+        "FACE_INK_REFINEMENT.md",
+        "LOOK_REFINEMENT.md",
+        "AETHER_LOOK_REVISION.md"
+      ]
+    },
+    {
+      "id": "lighting",
+      "title": "舞台与灯光",
+      "description": "环境、冷暖、材质、反射和氛围。",
+      "docs": [
+        "GOO_BROAD_WINDOW_AND_STRONG_RIM.md",
+        "GOO_TYNDALL_RIM_PRODUCTION.md",
+        "PORTRAIT_RELIGHT_IMPLEMENTATION.md",
+        "PORTRAIT_LIGHTING_AND_SHADOW_STUDY.md",
+        "SHADOW_GROUNDING_AND_PLAYBACK_COLOR.md",
+        "BLUE_GOLD_WEDDING_STUDY.md",
+        "SOFT_TOP_RIM_LIGHTING.md",
+        "FOX_STAGE_ART_DEEP_STUDY.md",
+        "FOX_LIGHTING_AND_CINEMA.md",
+        "STAGE_ART_NIGHT_STUDY.md",
+        "HESPERIDES_REFERENCE_REBUILD.md",
+        "HESPERIDES_STAGE_RENDERING.md",
+        "HESPERIDES_AUTHOR_SETUP.md",
+        "CLEAR_LIGHT_AND_GRADING.md",
+        "QUALITY_LIGHTING_LAB.md",
+        "STAGE_SEARCH.md"
+      ]
+    },
+    {
+      "id": "post",
+      "title": "后期与字幕",
+      "description": "分层合成、画幅与文字的前后关系。",
+      "docs": [
+        "DUET_CAPTION_STABILITY_AND_LIGHTING.md",
+        "STYLE_PRESETS.md",
+        "ADVANCED_MMD_SUBTITLES.md",
+        "SUBTITLE_DELIVERY.md"
+      ]
+    },
+    {
+      "id": "production",
+      "title": "动作与成片",
+      "description": "动作、物理、镜头、原声与交付。",
+      "docs": [
+        "ANIMATION_AND_KEYFRAMING_PLAYBOOK.md",
+        "LOCAL_CORRECTIVE_SHAPES.md",
+        "IKHOR_SLEEVE_REPAIR.md",
+        "CHEST_SECONDARY_MOTION_VALIDATION.md",
+        "PHYSICS_MOTION_PLAYBOOK.md",
+        "QUALITY_GATES.md",
+        "PRODUCTION_WORKFLOW.md",
+        "PRODUCTION_TECHNIQUES.md",
+        "DUET_FULL_PRODUCTION.md",
+        "CAMERA_SEARCH.md",
+        "AUDIO_CONVERSION.md",
+        "FINAL_DELIVERY.md",
+        "FIRST_TRIAL.md"
+      ]
+    },
+    {
+      "id": "reference",
+      "title": "参考与审美",
+      "description": "以实际观察为依据，保留作者与来源。",
+      "docs": [
+        "DESIGN_FOUNDATIONS_AND_REVIEW.md",
+        "AUTHOR_REFERENCE_MATRIX.md",
+        "REFERENCE_AND_LIGHTING_PLAYBOOK.md",
+        "GOSARI_REFERENCE.md",
+        "GUANHAIZI_REFERENCE.md",
+        "TUTORIAL_STUDY.md",
+        "NEXT_QUALITY_REVIEW.md"
+      ]
+    },
+    {
+      "id": "tools",
+      "title": "工具与环境",
+      "description": "本机能力、教程转写与复用入口。",
+      "docs": [
+        "GOO_FOUNDATIONS_AND_PARAMETERS.md",
+        "GOO_MMD_EIGHT_FOUNDATIONS_2026_11_18.md",
+        "GOO_BLENDER_FOUNDATIONS_2026_11_18.md",
+        "GOO_REFERENCE_FACE_HAIR_STUDY_2026_11_17.md",
+        "CONTINUOUS_LEARNING_SYSTEM.md",
+        "BILIBILI_SUBTITLE_WORKFLOW.md",
+        "EFFICIENT_RESEARCH_WORKFLOW.md",
+        "BROWSER_AUTONOMY.md",
+        "TOOL_AND_PRESET_MAP.md",
+        "LOCAL_ENVIRONMENT.md",
+        "TUTORIAL_TRANSCRIPTION.md",
+        "GOO_CHARACTER_LOOKDEV_2026_11_18.md",
+        "FACE_SHADOW_DESIGN_STUDY_2026_11_18.md",
+        "BLENDER53_TOON_PACKAGE_STUDY_2026_11_18.md",
+        "GOO_DUET_SDF_IMPLEMENTATION_2026_11_19.md"
+      ]
+    },
+    {
+      "id": "rights",
+      "title": "署名与素材",
+      "description": "素材来源、使用范围及成片署名。",
+      "docs": [
+        "CREDITS_AKSINIYA_IKHOR.md",
+        "CREDITS.md",
+        "CREDITS_FRANKEN_DUET.md"
+      ]
+    },
+    {
+      "id": "maintenance",
+      "title": "目录与复审",
+      "description": "现行入口、历史边界和证据清单。",
+      "docs": [
+        "AI_TASK_PLAYBOOK.md",
+        "LEARNING_ROUND_2026_11_13.md",
+        "KNOWLEDGE_INDEX.md",
+        "GALLERY_GUIDE.md",
+        "PRODUCTION_HISTORY_CONTEXT.md",
+        "REPOSITORY_REVIEW_2026_11.md"
+      ]
+    }
+  ],
+  "roadmap": [
+    {
+      "number": "01",
+      "priority": "P0",
+      "title": "统一人物着色与受光",
+      "doc": "CHARACTER_NPR_PLAYBOOK.md",
+      "description": "明确底色、SDF、遮挡、AO、高光、Emission与Glow的输入和顺序。",
+      "evidence": "多轮叠加与综合探针易受补光洗平，最新人物仍不满意。",
+      "acceptance": "同姿态中性光／婚礼光的逐层对照，肤色与材质层次成立。"
+    },
+    {
+      "number": "02",
+      "priority": "P0",
+      "title": "在最新链上补动态验证",
+      "doc": "QUALITY_GATES.md",
+      "description": "分别转头、移灯、绕拍，再查眨眼、手过脸与双人遮挡。",
+      "evidence": "旧72帧三轴诊断不能自动覆盖新自阴影与加粗描边链。",
+      "acceptance": "连续帧无阴影、高光、线条跳变，最终分辨率复查。"
+    },
+    {
+      "number": "03",
+      "priority": "P1",
+      "title": "补齐角色专属材质设计",
+      "doc": "CHARACTER_NPR_PLAYBOOK.md",
+      "description": "分别设计发束、眼睛和金属／布料，明确缺图与替代图来源。",
+      "evidence": "空缺游戏身体／发Lightmap；鸣潮HM/HN仅原预设静帧通过。",
+      "acceptance": "单角色移植先过三轴和部位对照，Glow关闭仍成立。"
+    },
+    {
+      "number": "04",
+      "priority": "P1",
+      "title": "自然的衣发与身体次级运动",
+      "doc": "PHYSICS_MOTION_PLAYBOOK.md",
+      "description": "短段检查碰撞、限位、阻尼和恢复，胸部独立研究。",
+      "evidence": "MMD与Blender软硬约束不同；胸部未专门验证。",
+      "acceptance": "无明显穿模抖动，预滚、烘焙及重开一致，幅度服务服装。"
+    },
+    {
+      "number": "05",
+      "priority": "P2",
+      "title": "舞台与导演组织情绪",
+      "doc": "REFERENCE_AND_LIGHTING_PLAYBOOK.md",
+      "description": "人物稳定后统一礼堂光区、冷暖、投影、体积、焦点和文字。",
+      "evidence": "蓝金婚礼已有光束微光，人物与主次仍需提升。",
+      "acceptance": "无后期与完整后期均成立，横竖独立，表现雪、婚礼、爱。"
+    },
+    {
+      "number": "06",
+      "priority": "P2",
+      "title": "从可复现样片扩展全曲",
+      "doc": "PRODUCTION_WORKFLOW.md",
+      "description": "视觉方向稳定后按镜头段落预算、渲染并完整验收。",
+      "evidence": "最新仅五秒，全曲未交付，旧长渲染已停止。",
+      "acceptance": "完整范围实际输出，音画、物理、颜色和署名通过。"
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "id": "hesperides-moonlit-vows-v1",
+  "scope": "Independent night art-direction study; accepted five-second sample remains unchanged",
+  "theme": ["snow", "wedding", "love", "solemn but hopeful"],
+  "ambient_tint": [0.15, 0.21, 0.36, 1],
+  "moon_pool": {"center": [-6, 9, 8], "radius": 24, "tint": [0.12, 0.18, 0.30, 1]},
+  "altar_pool": {"center": [0, 35, 4], "radius": 17, "tint": [0.60, 0.25, 0.16, 1]},
+  "actor_tint": [0.87, 0.84, 0.85, 1],
+  "sky_dark": [0.001, 0.004, 0.018, 1],
+  "sky_cloud": [0.008, 0.025, 0.065, 1],
+  "volume_density": 0.00065,
+  "volume_anisotropy": 0.3,
+  "moon_area": {"location": [-8, -12, 10], "target": [0, 5, 1], "watts": 850, "color": [0.48, 0.65, 1], "size": 8},
+  "moon_spot": {"location": [-8, 5, 16], "target": [0, 10, 0], "watts": 3500, "color": [0.45, 0.62, 1], "angle_degrees": 38, "blend": 0.65},
+  "altar_spot": {"location": [0, 35, 10], "target": [0, 24, 0], "watts": 1600, "color": [1, 0.55, 0.34], "angle_degrees": 70, "blend": 0.75},
+  "notes": "Spatial NPR tint pools are art controls, not physically shadowed spot illumination; real spots drive specular and volume. Day-reference grade disabled for this study. No new stage geometry."
+}

@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "id": "wuwa-hair-lab-v1",
+  "kind": "research_recipe",
+  "status": "controlled-stills-only",
+  "source": "D:/BaiduNetdiskDownload/三渲二预设/hair高光(wuwa3.0).blend",
+  "source_credit": "着色器：三一七片的谎言",
+  "engine_tested": "Blender 5.2.2 / EEVEE",
+  "script": "scripts/wuwa_hair_input_lab.py",
+  "group": "hair高光(wuwa3.0)",
+  "observed_connections": {"HM_group_input": "_HN image", "HN_group_input": "_HM image"},
+  "controls": [{"input": "HM", "value": [0, 0, 0]}, {"input": "HN", "value": [0.5, 0.5, 1]}],
+  "limitations": ["Only the supplied matching example maps were tested", "Socket names are not a universal channel contract", "Not applied to the Genshin duet; no motion validation", "Example mesh author not independently verified; local study only"]
+}

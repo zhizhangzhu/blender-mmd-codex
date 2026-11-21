@@ -1,0 +1,185 @@
+{
+  "schema_version": 1,
+  "recorded_date": "2026-11-14",
+  "timezone": "Asia/Shanghai",
+  "reading_completed_at_utc": "2026-11-13T22:15:26Z",
+  "status": "external_text_reading_and_source_order_crosscheck_only",
+  "summary_document": "docs/LOCAL_CORRECTIVE_SHAPES.md",
+  "local_case_document": "docs/IKHOR_SLEEVE_REPAIR.md",
+  "purpose": "区分相对ShapeKey、Armature求值顺序、Corrective Smooth、权重与刚体的修复边界，解释伊科尔袖口局部corrective的可复用条件。",
+  "scope": {
+    "manual_topics": 4,
+    "manual_pages_read": 5,
+    "extra_page_reason": "Shape Keys同章Workflow补充全顶点存储、拓扑和New Shape from Mix语义。",
+    "official_source_functions_read": 1,
+    "images_inspected": false,
+    "video_played": false,
+    "large_assets_or_repository_clone_downloaded": false,
+    "blender_started": false,
+    "render_or_simulation_performed": false,
+    "production_or_preset_or_catalog_changed": false,
+    "third_party_full_text_saved_to_repository": false,
+    "files_created": [
+      "docs/LOCAL_CORRECTIVE_SHAPES.md",
+      "docs/research/SLEEVE_CORRECTIVE_EXTERNAL_2026_11_14.json"
+    ]
+  },
+  "access": {
+    "web_tool_attempts": "web.run和连接器web_run对四个官方URL直开均返回402工具错误，未据此计为已读；不代表官方站点存在付费门槛。",
+    "github_connector_attempt": "blender/blender-manual候选GitHub路径返回404，未作为来源。",
+    "successful_method": "获批只读PowerShell Invoke-WebRequest请求官方HTML，HTTP200；提取article标签正文并实际读取工具输出。补核官方v5.2.2 raw源码的指定函数。",
+    "network_boundary": "仅文字HTTP请求，无视频、无外链素材下载、不改变登录或权限。",
+    "hash_definition": "manual article_sha256为提取的article HTML字符串以UTF-8编码后的SHA256；源码source_text_sha256为响应文本UTF-8编码后的SHA256。哈希标识读取内容，未在repo保存第三方全文。",
+    "manual_version_warning": "所有latest手册页面标题实际为Blender 5.3 Manual；未伪称为5.2.2手册或本机运行证据。v5.2.2源码只用于核对所读函数的顺序。"
+  },
+  "deduplication": {
+    "local_checks": [
+      "README.md、catalog/current_state.json、docs/PRODUCTION_WORKFLOW.md、docs/KNOWLEDGE_INDEX.md、docs/LOCAL_ENVIRONMENT.md相关入口",
+      "rg检索docs/research、docs/IKHOR_SLEEVE_REPAIR.md与docs/PHYSICS_MOTION_PLAYBOOK.md中的corrective／ShapeKey／变形顺序关键词",
+      "读取docs/research/TEXT_PHYSICS_SOURCE_DISCOVERY.json开头记录的已覆盖物理范围",
+      "读取scripts/ikhor_sleeve_repair_v1.py中corrective_prototype的LBS断言、权重逆映射与局部白名单代码"
+    ],
+    "already_measured_not_new_external_discovery": [
+      "袖权重分布、UV缝重复点、顶点在外而三角面仍相交、原生对照失败、局部14体求解与v6单shape，均为已有本机证据。",
+      "303帧扫描、连续腕图与独立delta协议均已存在；本轮未重跑。"
+    ],
+    "search_boundary": "定向官方手册与单个官方源码文件，未声称穷尽作者教程、论文、Blender修改器内部实现或全部私人研究缓存。"
+  },
+  "sources": [
+    {
+      "id": "blender_relative_shape_keys_introduction",
+      "topic": "shape_keys",
+      "title": "Introduction - Blender 5.3 Manual",
+      "url": "https://docs.blender.org/manual/en/latest/animation/shape_keys/introduction.html",
+      "publisher": "Blender官方手册贡献者／Blender Foundation发布",
+      "http_status": 200,
+      "last_modified_http": "Fri, 13 Nov 2026 04:30:31 GMT",
+      "article_chars": 4389,
+      "extracted_text_chars": 2622,
+      "article_sha256": "ab22627a36cc66febf4283f35c286bc8a73439c8ab947fea940de0571bc03b0b",
+      "read_scope": "article全文：Introduction、Relative or Absolute Shape Keys、Relative的reference／Mix／Value／Basis、Absolute的Evaluation Time；未看插图。",
+      "facts_used": [
+        "相对键定义相对Basis或其他指定键，当前Mix累计各键相对reference的加权offset。",
+        "value可以超过1或小于0，能放大或反转变形；Basis本身无可动画value。"
+      ],
+      "inference_for_case": "多键组合要验证实际叠加幅度；Basis公式只适用于相关键均明确相对Basis的情况。",
+      "not_tested": "本轮未创建或混合新shape，未测试任意reference链。"
+    },
+    {
+      "id": "blender_shape_keys_workflow",
+      "topic": "shape_keys_supplement",
+      "title": "Workflow - Blender 5.3 Manual",
+      "url": "https://docs.blender.org/manual/en/latest/animation/shape_keys/workflow.html",
+      "publisher": "Blender官方手册贡献者／Blender Foundation发布",
+      "http_status": 200,
+      "last_modified_http": "Fri, 13 Nov 2026 04:30:31 GMT",
+      "article_chars": 6183,
+      "extracted_text_chars": 3128,
+      "article_sha256": "7fbd99b0c226d8d5533dc2da5d926f3a5ccf0042d0b8143e7541f7633a1160e7",
+      "read_scope": "article全文：Adding and Removing Vertices、Adding Shape Keys、Relative Shape Keys、Absolute Shape Keys；未访问其Drivers链接或看插图。",
+      "facts_used": [
+        "键存储已有顶点的位置，所有键都包含全部顶点；建议先固定拓扑。",
+        "普通新增键复制Basis；New Shape from Mix来自当前混合，包括其他shape的影响。"
+      ],
+      "inference_for_case": "398项稀疏JSON仅是导出格式，不能据此宣称Blender内部稀疏存储或性能收益；复制已混合表情存在重复累计风险。",
+      "not_supported": "页面没有说明New Shape from Mix可自动逆解Armature；本轮没有运行该操作。"
+    },
+    {
+      "id": "blender_armature_modifier",
+      "topic": "armature",
+      "title": "Armature Modifier - Blender 5.3 Manual",
+      "url": "https://docs.blender.org/manual/en/latest/modeling/modifiers/deform/armature.html",
+      "publisher": "Blender官方手册贡献者／Blender Foundation发布",
+      "http_status": 200,
+      "last_modified_http": "Fri, 13 Nov 2026 04:30:37 GMT",
+      "article_chars": 11494,
+      "extracted_text_chars": 3466,
+      "article_sha256": "2ab9955eb895f6aedd94596acccd867b3b1a28c4110450cccbed26726d8d4e30",
+      "read_scope": "article全文：Object、Vertex Group与Invert、Preserve Volume、Multi Modifier、Bind to中的Vertex Groups／Bone Envelopes及提示；插图只读caption未看图。",
+      "facts_used": [
+        "Bind to Vertex Groups按同名骨组及其权重控制骨影响；Envelopes是另一种空间影响方式。",
+        "Preserve Volume使用四元数保体积，变形行为不同于未启用状态。",
+        "Multi Modifier可令多个Armature从同一未变形输入求值再混合，不应默认总是逐个串联。"
+      ],
+      "inference_for_case": "本案LBS逆映射需要明确权重、坐标变换和modifier前提；不能自动推广到Preserve Volume或多Armature。",
+      "not_tested": "本轮未改骨权重、envelope、Preserve Volume或Multi Modifier，未新增逆解验证。"
+    },
+    {
+      "id": "blender_smooth_corrective_modifier",
+      "topic": "corrective_smooth",
+      "title": "Smooth Corrective Modifier - Blender 5.3 Manual",
+      "url": "https://docs.blender.org/manual/en/latest/modeling/modifiers/deform/corrective_smooth.html",
+      "publisher": "Blender官方手册贡献者／Blender Foundation发布",
+      "http_status": 200,
+      "last_modified_http": "Fri, 13 Nov 2026 04:30:37 GMT",
+      "article_chars": 5319,
+      "extracted_text_chars": 2345,
+      "article_sha256": "efeb1f569bfeab84b6d39560d3a3fc511e4a8f20c535e07f039647c356ad8e99",
+      "read_scope": "article全文：Rest State、Smoothing、Factor、Repeat、Scale、Smooth Type、Vertex Group、Only Smooth、Pin Boundaries、Rest Source、Example captions；未看效果图。",
+      "facts_used": [
+        "典型用于Armature之后平滑高畸变；可用vertex group限制区域，可能损失体积。",
+        "Original Coordinates要求原网格与modifier输入顶点数一致；前面有Subdivision或Mirror等构造型modifier时需要Bind Coordinates。",
+        "Only Smooth用于预览内部平滑，Pin Boundaries防边界平滑。"
+      ],
+      "inference_for_case": "它没有手部接触目标；是否改善袖根或反使邻面切入皮肤，必须独立几何／图像试验。绑定数据与stack状态应一起记录。",
+      "not_tested": "v6未新增该modifier；本轮未bind、未改变stack、未静帧／动态测试，因此不称掌握Corrective Smooth。"
+    },
+    {
+      "id": "blender_rigid_body_introduction",
+      "topic": "rigid_body_boundary",
+      "title": "Introduction - Blender 5.3 Manual",
+      "url": "https://docs.blender.org/manual/en/latest/physics/rigid_body/introduction.html",
+      "publisher": "Blender官方手册贡献者／Blender Foundation发布",
+      "http_status": 200,
+      "last_modified_http": "Fri, 13 Nov 2026 04:30:39 GMT",
+      "article_chars": 3221,
+      "extracted_text_chars": 1881,
+      "article_sha256": "783b79c9dd9c4275393dd182f62b8891d34d9c46277a9cc54a5d8672d5263fbd",
+      "read_scope": "article全文：Introduction、Creating a Rigid Body、Working with Rigid Bodies；未续读碰撞／约束／World／缓存章节。",
+      "facts_used": [
+        "刚体模拟影响物体位置和方向，本身不使对象变形。",
+        "可结合动画、父子层级、约束和driver；动态模拟对物体位姿的覆盖类似约束，不直接改原location／rotation通道值。"
+      ],
+      "inference_for_case": "MMD刚体经骨骼驱动网格是额外系统链；不能把模拟位姿正确直接当作袖面接触正确。",
+      "not_supported": "手册没有MMD mode1／mode2或本模型的collision mask语义；这些沿用本机审计，不冒称官方页给出的结论。"
+    },
+    {
+      "id": "blender_v5_2_2_virtual_modifier_order",
+      "topic": "evaluation_order_source_crosscheck",
+      "title": "Blender v5.2.2 modifier.cc: BKE_modifiers_get_virtual_modifierlist",
+      "url": "https://github.com/blender/blender/blob/v5.2.2/source/blender/blenkernel/intern/modifier.cc#L620-L661",
+      "fetched_url": "https://raw.githubusercontent.com/blender/blender/v5.2.2/source/blender/blenkernel/intern/modifier.cc",
+      "publisher": "Blender官方源码仓库",
+      "version": "v5.2.2 tag",
+      "http_status": 200,
+      "response_text_chars": 50900,
+      "source_text_sha256": "8910099619c20f12db64025d954945a6f49088e80049b7701d91a9ee93654c88",
+      "read_scope": "重点完整读取620–661行函数；613–725作为上下文。首次定位输出475–574仅作查找，不作为额外实现阅读；未阅读整个50900字符文件。",
+      "facts_used": [
+        "函数先从ob->modifiers.first取得链，条件分支可前插旧式骨架／曲线／晶格父级modifier。",
+        "mesh／lattice有Key时，最后将ShapeKey虚拟modifier前插为链首并返回。"
+      ],
+      "inference_for_case": "本案普通mesh的ShapeKey先混合再交Armature；在已蒙皮空间拟合的目标位移需映回键坐标，不能直接照抄世界向量。",
+      "not_tested": "只核源码，不等于检查本机所有depsgraph路径、编辑模式、曲线、GN或任意modifier组合；本轮未运行Blender。"
+    }
+  ],
+  "new_knowledge": [
+    "区分稀疏delta交付与Blender全顶点shape数据，不据非零点数推断运行内存或GPU收益。",
+    "以5.2.2源码确认ShapeKey在普通mesh modifier链首，区分姿态下拟合与骨架后求值。",
+    "Corrective Smooth的rest／bind、局部组与体积损失是独立验证事项，不能以名称等同碰撞避让。",
+    "把权重、刚体、局部shape、后变形平滑分别绑定到故障类型，保留多shape叠加和适用姿态域的限制。"
+  ],
+  "local_evidence_referenced_not_rerun": {
+    "candidate": "D:/codex/output/MMD-Aksiniya-Ikhor-Wedding-v1/production-v6/Franken_Aksiniya_Ikhor_Bold_Wedding.blend",
+    "candidate_sha256": "201e2632befaf0a16f17b931963626a91bbc6b8f7e58d148d5047298a530de01",
+    "corrective_data_sha256": "0ea6bf3741c7c18be36902da5b574aae7cefc7027ce39e29761cc0457b97bea7",
+    "facts": "14体局部solver、R tanh限幅、左1shape的573允许点／398非零点、12.02794mm rest最大值与4210–4233窗；49项delta、303技术扫描、600腕图／300并排片解码、每侧33时点人工抽样等均引用IKHOR_SLEEVE_REPAIR，不是本轮重做。",
+    "raw_geometry_boundary": "原始交线和可能可见flag保留，不能直接等同beauty侧壁破口；未宣称全段零交叉。",
+    "delivery_boundary_at_recording": "新原生300帧beauty仍在重新渲染，不将腕部诊断片称新成片；最终状态由catalog/current_state.json与交付报告另行记录。"
+  },
+  "not_claimed": [
+    "未实测Corrective Smooth、Bind Coordinates、Preserve Volume逆解、多Armature、多姿态driver或多shape组合。",
+    "未把官方手册阅读升级为插件掌握、通用修形系统或全曲无穿模能力。",
+    "未改变v6参数或生产工程，未推进渲染／交付关卡。"
+  ]
+}

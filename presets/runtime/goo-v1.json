@@ -1,0 +1,21 @@
+{
+  "id": "goo-v1",
+  "user_requested_default_for_future_work": true,
+  "executable": "D:/codex/workspace/goo-engine/5.2.1-community/blender-5.2.1-git.0051aee0-windows64/blender.exe",
+  "version": "5.2.1 LTS community Goo port",
+  "version_tuple": [5, 2, 1],
+  "required_node_types": ["ShaderNodeShaderInfo"],
+  "build_hash": "0051aee03764",
+  "origin": "https://github.com/NaMgAl-Studio/goo-engine-5.2.0/releases/tag/GooBlender5.2.1_2026.9.12",
+  "official_dillongoo_binary": false,
+  "user_config": "D:/codex/workspace/goo-engine/5.2.1-community/portable/config",
+  "user_scripts": "D:/codex/workspace/goo-engine/5.2.1-community/portable/scripts",
+  "mmd_module": "mmd_tools",
+  "portable_preferences_created_and_launch_tested": true,
+  "bootstrap": "scripts/goo_runtime.py",
+  "production_project": "D:\\codex\\output\\MMD-Jelly-Eyes-v1\\production-v16\\Franken_Duet_Goo_Eye_Hair_Stage.blend",
+  "preview_entry": "scripts/run_goo_eye_hair_stage_preview.py",
+  "preserve_original_blender_installation": true,
+  "native_mme_runtime_verified": false,
+  "guide": "docs/GOO_ENGINE_MIGRATION.md"
+}

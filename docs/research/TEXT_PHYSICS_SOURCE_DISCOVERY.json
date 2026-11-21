@@ -1,0 +1,96 @@
+{
+  "schema_version": 1,
+  "recorded_date": "2026-11-13",
+  "status": "text_research_only_no_new_simulation",
+  "purpose": "复用已有物理台账，只保留两个一手文字入口和一个有界对照；不把重复知识计作制作能力增长。",
+  "scope": {
+    "retained_primary_sources": 2,
+    "browser_or_video_opened": false,
+    "large_asset_or_repository_downloaded": false,
+    "blender_started_or_rendered": false,
+    "production_file_changed": false,
+    "core_catalog_changed": false,
+    "new_physics_or_bone_bake_performed": false
+  },
+  "deduplication": {
+    "read": [
+      "docs/PHYSICS_MOTION_PLAYBOOK.md",
+      "docs/CHEST_SECONDARY_MOTION_VALIDATION.md",
+      "docs/research/PHYSICS_SOURCE_LEDGER.json",
+      "docs/EFFICIENT_RESEARCH_WORKFLOW.md",
+      "README.md: current facts and workflow entry",
+      "catalog/current_state.json: current task and latest review",
+      "docs/PRODUCTION_WORKFLOW.md: G0-G8 and learning loop",
+      "docs/KNOWLEDGE_INDEX.md: current boundaries and entry map",
+      "docs/LOCAL_ENVIRONMENT.md: installed environment and source/API boundaries"
+    ],
+    "already_covered_not_new": [
+      "原生PMX衣发路线、源30fps、120帧预滚、连续求解、6子步/30迭代已有项目证据；不是新优化预设。",
+      "先修初始互穿、碰撞形状/尺度、关节轴/自由度，再调精度；子步不改变动作时长。",
+      "MMD软约束与Blender硬约束不能保证等价；碰撞排除辅助约束增加成本。",
+      "物理缓存与视觉骨骼Action不同；必须对照后移除重复驱动、独立重开验证。",
+      "当前两模型未找到可直接复用的独立主体胸前动态链；披肩/毛领/围巾动态不算身体胸部动态。"
+    ],
+    "search_boundary": "检索docs/research文件名，完整读取物理总台账与两份物理手册；不声称遍查所有私人缓存或历史脚本。"
+  },
+  "sources": [
+    {
+      "id": "mmd_tools_maintainer_physics_limits",
+      "title": "MMD Tools README: Version Compatibility / Rigid Body Physics Limitations",
+      "url": "https://github.com/MMD-Blender/blender_mmd_tools#rigid-body-physics-limitations",
+      "author": "MMD-Blender维护者；项目一手说明",
+      "version": "main；未锁定commit，不替代本机4.5.14源码指纹",
+      "access": "web直接打开成功并实际返回README正文",
+      "read_scope": "Version Compatibility、Project Scope、Known Issues中的Rigid Body Physics Limitations与IK Solver Differences；未进入Wiki、issue讨论或MMDBridge指南。",
+      "facts": [
+        "当前兼容表将Blender 4.2–5.2对应MMD Tools v4.x/main。",
+        "维护者说明Blender碰撞排除需要大量约束，且两套Bullet约束行为不同；不能保证PMX物理在Blender中完全重现。"
+      ],
+      "new_vs_covered": "物理限制、IK差异与MMDBridge候选已在原台账，属于复核；仅补当前5.2版本入口，未发现新的衣发调参方法。",
+      "blender_5_2_applicability": "版本范围包含本机5.2.2，但本轮未重探本机插件、未升级或运行新求解；作者的替代路线收益不当作本仓库实测。",
+      "not_supported": "README未提供本模型预滚长度、margin、质量/阻尼或骨骼烘焙参数。",
+      "reread_trigger": "更换Blender/MMD Tools主版本，或现有PMX约束持续无法收敛时复读此节；无需定期全量抓取。"
+    },
+    {
+      "id": "blender_5_2_rigidbody_tips",
+      "title": "Tips — Blender 5.2 LTS Manual",
+      "url": "https://docs.blender.org/manual/ar/5.2/physics/rigid_body/tips.html",
+      "author": "Blender官方手册贡献者 / Blender Foundation发布",
+      "version": "5.2 LTS；索引正文显示Last updated 2026-06-03，非本机运行证据",
+      "access": "web搜索索引实际返回该页英文段落；英文5.2直开失败，ar/5.2直开返回402，未声称直接读取站点正文。",
+      "failed_direct_url": "https://docs.blender.org/manual/en/5.2/physics/rigid_body/tips.html",
+      "read_scope": "索引返回的首段Animated提醒、Animation、Simulation Stability、Combining Rigid Bodies with Other Simulations、Scaling Rigid Bodies；没有看图片或相邻缓存/World章节。",
+      "facts": [
+        "带关键帧移动的Passive刚体需要Animated，才会把移动交给物理碰撞；中途启用偏离初态的约束可能突然注入运动。",
+        "小而快的碰撞体、薄三角网格与动态缩放是稳定性排查点；更多步数不保证更稳定。",
+        "页面提及对象刚体Bake To Keyframes；没有承诺MMD骨骼驱动可由此无损导出。"
+      ],
+      "new_vs_covered": {
+        "small_increment": "补到Passive Animated和中途启用约束两个明确排错入口；均未检查当前人物是否存在此问题。",
+        "covered": "尺度、margin、速度、网格形状和提高精度的成本已覆盖；本轮仅把晚于本机的5.3引用补为5.2索引证据。"
+      },
+      "blender_5_2_applicability": "适合作排错概念参考；该页仍用steps per second旧措辞，不能替代本机substeps_per_frame。其20cm及零margin提示是通用刚体建议，不直接移植到细发束、服装或本项目0.08导入尺度。",
+      "bone_bake_boundary": "本项目仍使用已有视觉骨骼烘焙和矩阵对照；对象Bake To Keyframes、Rigid Body World缓存、最终骨骼Action三个层次不得混称。",
+      "preroll_boundary": "所读页面不规定预滚；120帧/30fps来源于既有项目，不能归为官方推荐或稳定性保证。",
+      "reread_trigger": "发现碰撞体画面移动而碰撞停留、约束启用时突跳，或改变模型尺度时，按对应小节复读；直开失败后本轮不再反复重试。"
+    }
+  ],
+  "minimum_experiment": {
+    "id": "future_clothing_substeps_6_vs_12",
+    "performed": false,
+    "hypothesis": "在已排除初始互穿、绑定/轴错误和碰撞失效后，提高子步可能减少小而快衣发链的穿透；也可能没有收益。",
+    "input": "独立未Build的原PMX+原VMD、scale=0.08、源30fps；选当前五秒中最快的衣发转动对应源时间段，按项目timebase实算帧号并登记，附相同120源帧预滚与60帧停稳尾段。若找不到可重复可见问题，不运行此实验。",
+    "frozen": "PMX/VMD哈希、插件版本、动作/IK、初姿态、重力、质量/阻尼、碰撞形状/margin/排除表、关节设置、30迭代、time_scale=1、固定正侧背观察方向。另记录最小碰撞体尺寸及角色高度H，不能只记导入scale。",
+    "control": "A=6子步，B=12子步；仅此一项改变。两版各清缓存后从同一预滚起点顺序求解，不复用现有便携工程中的清理后动画作求解输入。",
+    "evidence": "保存实际参数、各阶段耗时和同帧衣发根中末端轨迹；对疑似穿透/急跳逐帧核对连续轮廓。若未来需画面证据，仅在授权制作阶段生成小预览，本轮无渲染。",
+    "bake_check": "分别视觉烘焙真实受物理驱动骨骼；与各自模拟在同源帧比对，停用实时世界后独立重开再查。不得在旧烘焙上叠加实时驱动。",
+    "acceptance": "B在同一已登记问题处减少可见穿透/抖动，未新增反折、弹飞或持续振铃；独立重开与原模拟无可见变化。额外实验数值预算为对应骨位置差<=1e-5*H、旋转差<=1e-4rad，须连同H及测量空间记录；这是预设实验门槛，不是官方推荐。",
+    "reject_if": [
+      "只有轨迹更平滑，实际穿模或动作迟滞更差；或A/B都无可见问题，无法证明增加成本有收益。",
+      "同时改变尺度、margin、限位、预滚、fps或动作；存在旧缓存或对象Animated/碰撞参与状态不一致。",
+      "骨骼导出或重开超出误差预算、重复驱动，或只抽静帧就声称动态通过。"
+    ],
+    "stop_and_rollback": "B无可见收益就保留A；仍爆炸则回查初态/碰撞/约束，不继续堆子步，也不改当前生产工程。"
+  },
+  "result": "本轮主要完成去重与版本/访问边界补齐，新增量很小；未找到可直接提升当前衣发的参数秘诀，未改善胸部或新增物理能力。持续学习按实际问题触发对应小节，下一步实验保持未执行。"
+}

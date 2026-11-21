@@ -1,0 +1,13 @@
+{
+  "id": "goo-wedding-v1",
+  "source": "D:/codex/output/MMD-Sunlit-Wedding-v4/production-v2/Franken_Duet_Portrait_Relight.blend",
+  "source_sha256": "758cc2238da87e1a8849d1e5a84e4173eb0a2861acacd1637f98265b090cdd2c",
+  "runtime": "Goo 5.2.1 community port, build 0051aee03764",
+  "native_half_lambert_blend": 0.35,
+  "native_cast_shadow_endpoints": {"face": [0.9, 1.0], "skin": [0.78, 1.0], "cloth": [0.56, 1.0], "white_outer": [0.65, 1.0]},
+  "keep_authored_face_form": true,
+  "keep_original_short_ao": true,
+  "keep_original_outline_geometry": true,
+  "curvature_rim": "not enabled; primitive study output was black, requires further investigation",
+  "preview": {"width": 1920, "height": 1080, "samples": 16, "fps": 30, "seconds": 5, "captions": true, "post_output_checks": false}
+}

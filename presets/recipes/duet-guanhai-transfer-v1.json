@@ -1,0 +1,39 @@
+{
+  "id": "duet-guanhai-transfer-v1",
+  "status": "verified-five-second-transfer",
+  "project": "D:\\codex\\output\\MMD-Guanhai-Transfer-v1\\production-v3\\Franken_Duet_Reference_Transfer.blend",
+  "source": "D:\\codex\\output\\MMD-Character-Layer-Refinement-v1\\production-v2\\Franken_Duet_Character_Layers.blend",
+  "character_profile": "presets/quality/duet-guanhai-transfer-v1.json",
+  "caption_profile": "presets/typography/duet-blue-gold-wedding-v1.json",
+  "cache": "D:\\codex\\temp\\MMD-Guanhai-Transfer-v1\\final-cache",
+  "video": "D:\\codex\\output\\MMD-Guanhai-Transfer-v1\\captions-5s\\Franken_Duet_5s_ReferenceTransfer_Wedding_REVIEW.mp4",
+  "without_captions_video": "D:\\codex\\output\\MMD-Guanhai-Transfer-v1\\captions-5s\\Franken_Duet_5s_ReferenceTransfer_NoCaptions.mp4",
+  "source_frames": [
+    4140,
+    4439
+  ],
+  "fps": 60,
+  "resolution": [
+    1920,
+    1080
+  ],
+  "audio_start_seconds": 68.98333333333333,
+  "audio_gain": 0.87,
+  "output_color_contract": {
+    "input": "Full-range display sRGB RGB24",
+    "matrix": "bt709",
+    "primaries": "bt709",
+    "transfer": "iec61966-2-1",
+    "range": "tv",
+    "hdr": false,
+    "meaning": "SDR PC-review output, preserving source sRGB transfer; not a Rec.709/BT.1886 grading master"
+  },
+  "user_art_approval": false,
+  "limits": [
+    "限定同一双人、礼堂和原帧4140–4439的五秒；全曲未交付，待猪猪美术评价",
+    "借鉴外部教程原理，未恢复观海子原始Shader或达到其质量认证",
+    "面向主灯的Diffuse仍是综合受光近似，不是纯visibility",
+    "鼻部孤立暗块、脸颊塑形和前景视觉主次仍需精修",
+    "本轮未新增游戏Lightmap、胸部solver或衣发烘焙；原有动作物理保留"
+  ]
+}

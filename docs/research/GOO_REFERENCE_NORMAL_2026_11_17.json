@@ -1,0 +1,138 @@
+{
+  "date": "2026-11-17",
+  "guide": "docs/GOO_REFERENCE_FACE_HAIR_STUDY_2026_11_17.md",
+  "references": [
+    {
+      "path": "C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\codex-clipboard-5fc40036-aef6-4f73-821b-ee556a997da4.png",
+      "sha256": "afad650857f9245d41d8aed4a7028113782dda24c1ed825b5fb14caa25e004e3",
+      "dimensions": [
+        2468,
+        1671
+      ]
+    },
+    {
+      "path": "C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\codex-clipboard-402815a8-d771-4a84-ba9f-93e67de1a493.png",
+      "sha256": "2612c845cd33d98b28890e9000f4f86adc692b9a22f0d79848fa20664ac3d165",
+      "dimensions": [
+        2795,
+        2159
+      ]
+    },
+    {
+      "path": "C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\codex-clipboard-5fbf5980-4b85-48ed-b610-231e0ce25f70.png",
+      "sha256": "f898819b8a59bb1e932eb6e4c0f12fb7966d76aa6537d7948635faa6f8a491f6",
+      "dimensions": [
+        2359,
+        2159
+      ]
+    }
+  ],
+  "reference_scope": "Three supplied stills visually inspected, not animation or shader/engine identification; no user reference copies redistributed",
+  "visual_targets": [
+    "calm coloured skin with selected warm shadow shapes",
+    "cool hair with clear strand masses and contained highlight bands",
+    "thin region-specific outlines",
+    "readable iris structure and selective eye glints",
+    "separate cloth/metal/gem highlight behavior",
+    "limited global bloom"
+  ],
+  "reading": {
+    "official_url": "https://github.com/dillongoostudios/goo-engine/blob/goo-engine-v4.4-release/source/blender/nodes/shader/nodes/node_shader_shader_info.cc",
+    "community_url": "https://github.com/NaMgAl-Studio/goo-engine-5.2.0/blob/main/source/blender/draw/engines/eevee/shaders/eevee_nodetree_lib.bsl.hh",
+    "scope": "Revisited input fallback and shader_info_eval Normal/position paths; not new full-source reading or same-commit binary lock"
+  },
+  "experiment": {
+    "version": "5.2.1 LTS",
+    "build_hash": "0051aee03764",
+    "production_loaded": false,
+    "video_created": false,
+    "cases": {
+      "A-info-default-normal": {
+        "info_normal_linked": false,
+        "analytic": false,
+        "normal": null,
+        "interior_rgb_mean": [
+          0.5784816741943359,
+          0.5784816741943359,
+          0.5784816741943359
+        ],
+        "interior_min": 0.0305938720703125,
+        "interior_max": 0.99951171875
+      },
+      "B-info-normal-up": {
+        "info_normal_linked": true,
+        "analytic": false,
+        "normal": [
+          0,
+          0,
+          1
+        ],
+        "interior_rgb_mean": [
+          0.5784816741943359,
+          0.5784816741943359,
+          0.5784816741943359
+        ],
+        "interior_min": 0.0305938720703125,
+        "interior_max": 0.99951171875
+      },
+      "C-info-normal-down": {
+        "info_normal_linked": true,
+        "analytic": false,
+        "normal": [
+          0,
+          0,
+          -1
+        ],
+        "interior_rgb_mean": [
+          0.5784816741943359,
+          0.5784816741943359,
+          0.5784816741943359
+        ],
+        "interior_min": 0.0305938720703125,
+        "interior_max": 0.99951171875
+      },
+      "D-math-normal-up": {
+        "info_normal_linked": false,
+        "analytic": true,
+        "normal": [
+          0,
+          0,
+          1
+        ],
+        "interior_rgb_mean": [
+          0.9999803304672241,
+          0.9999803304672241,
+          0.9999803304672241
+        ],
+        "interior_min": 0.98583984375,
+        "interior_max": 1.0
+      },
+      "E-math-normal-down": {
+        "info_normal_linked": false,
+        "analytic": true,
+        "normal": [
+          0,
+          0,
+          -1
+        ],
+        "interior_rgb_mean": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "interior_min": 0.0,
+        "interior_max": 0.0
+      }
+    },
+    "max_abs_default_vs_up": 0.0,
+    "max_abs_default_vs_down": 0.0,
+    "positive_control_up_vs_down": 1.0,
+    "independent_reopen_max_abs": 0.0,
+    "scope": "Half-lambert output only, one SUN, smooth sphere, linked unit Normal values; not all Shader Info outputs or all builds"
+  },
+  "finding": "In the scoped local Half-lambert control, linked up/down Normal does not change pixels; explicit dot-product positive control does",
+  "production_modified": false,
+  "new_character_render": false,
+  "eye_see_through": "still deferred",
+  "all_basics_mastered": false
+}

@@ -1,0 +1,283 @@
+{
+  "id": "aether-hall-surface-v1",
+  "status": "Portrait and duet stills inspected; 20-second 1080p60 sample rendered, video/audio and seams verified; subjective look review remains user-directed; not a full movie",
+  "scope": "This Aether model and its own atlases only; not a universal character shader",
+  "render_script": "scripts/aether_look_revision.py",
+  "palettes": {
+    "face": [
+      [
+        0.8,
+        0.61,
+        0.54,
+        1
+      ],
+      [
+        1.18,
+        1.04,
+        0.99,
+        1
+      ],
+      [
+        1.42,
+        1.25,
+        1.14,
+        1
+      ]
+    ],
+    "skin": [
+      [
+        0.7,
+        0.5,
+        0.44,
+        1
+      ],
+      [
+        1.12,
+        0.98,
+        0.92,
+        1
+      ],
+      [
+        1.38,
+        1.2,
+        1.08,
+        1
+      ]
+    ],
+    "hair": [
+      [
+        0.5,
+        0.37,
+        0.22,
+        1
+      ],
+      [
+        1.0,
+        0.9,
+        0.68,
+        1
+      ],
+      [
+        1.32,
+        1.2,
+        0.88,
+        1
+      ]
+    ],
+    "cloth": [
+      [
+        0.25,
+        0.25,
+        0.33,
+        1
+      ],
+      [
+        0.74,
+        0.75,
+        0.84,
+        1
+      ],
+      [
+        1.06,
+        1.07,
+        1.12,
+        1
+      ]
+    ],
+    "leather": [
+      [
+        0.28,
+        0.27,
+        0.32,
+        1
+      ],
+      [
+        0.76,
+        0.75,
+        0.79,
+        1
+      ],
+      [
+        1.03,
+        1.03,
+        1.07,
+        1
+      ]
+    ],
+    "gold": [
+      [
+        0.5,
+        0.42,
+        0.35,
+        1
+      ],
+      [
+        0.95,
+        0.86,
+        0.72,
+        1
+      ],
+      [
+        1.12,
+        1.06,
+        0.94,
+        1
+      ]
+    ],
+    "iris": [
+      [
+        0.83,
+        0.8,
+        0.82,
+        1
+      ],
+      [
+        0.99,
+        0.98,
+        1,
+        1
+      ],
+      [
+        1.06,
+        1.05,
+        1.06,
+        1
+      ]
+    ],
+    "eye": [
+      [
+        0.82,
+        0.83,
+        0.89,
+        1
+      ],
+      [
+        1,
+        1,
+        1,
+        1
+      ],
+      [
+        1.04,
+        1.04,
+        1.04,
+        1
+      ]
+    ],
+    "ink": [
+      [
+        0.2,
+        0.17,
+        0.2,
+        1
+      ],
+      [
+        0.2,
+        0.17,
+        0.2,
+        1
+      ],
+      [
+        0.2,
+        0.17,
+        0.2,
+        1
+      ]
+    ]
+  },
+  "material_groups": {
+    "face": [
+      "面1",
+      "面2",
+      "二重"
+    ],
+    "skin": [
+      "肌",
+      "口舌"
+    ],
+    "hair": [
+      "发"
+    ],
+    "iris": [
+      "目"
+    ],
+    "eye": [
+      "目白",
+      "目星",
+      "齿"
+    ],
+    "ink": [
+      "眉",
+      "睫",
+      "> <"
+    ],
+    "leather": [
+      "手套"
+    ],
+    "gold": [
+      "发饰",
+      "耳饰"
+    ]
+  },
+  "skin": {
+    "saturation": 1.0,
+    "balance_linear": [
+      1.03,
+      1.0,
+      0.98
+    ],
+    "physical_mix": 0.0,
+    "local_ao_distance_m": 0.02,
+    "local_ao_weight": 0.12
+  },
+  "hair": {
+    "saturation": 1.08,
+    "physical_mix": 0.0,
+    "head_aligned_sheen_strength": 0.14,
+    "sheen_exponent": 34
+  },
+  "physical_mix": {
+    "cloth": 0.18,
+    "leather": 0.24,
+    "ornaments": 0.24
+  },
+  "gold": {
+    "allowed_materials": [
+      "身体",
+      "手套",
+      "手套.001",
+      "发饰",
+      "耳饰"
+    ],
+    "fabric_exclusions": [
+      "披风",
+      "围巾"
+    ],
+    "skin_exclusions": [
+      "肌",
+      "面1",
+      "面2",
+      "口舌"
+    ],
+    "mask_mix": 0.85,
+    "metallic": 0.88,
+    "roughness_gold": 0.24,
+    "base_tint_linear": [
+      1,
+      0.8,
+      0.48
+    ]
+  },
+  "eyes": {
+    "source_atlas": "发.png",
+    "saturation": 1.1,
+    "optical_normal_strength": 0.7,
+    "coat_roughness": 0.1,
+    "coat_ior": 1.4
+  },
+  "controls": "Derived artistic gold/crease/optical normal masks, not original game PBR maps",
+  "shadow_pool_megabytes": 1024,
+  "study_project": "D:/codex/output/Aether-Look-Revision-v1/look-v5/Franken_Duet_Aether_Revised.blend",
+  "reference": "Guanhaizi user-supplied local videos; original author shaders not recovered",
+  "sample_movie": "D:\\codex\\output\\Aether-Look-Revision-v1\\sample-20s-v1\\Aether_Duet_20s_REVIEW.mp4"
+}

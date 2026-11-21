@@ -1,0 +1,340 @@
+{
+  "id": "portrait-relight-v1",
+  "status": "implementation-in-progress",
+  "source_sha256": "0ec95ee7162512ffc405a2a7337b355caf62cd993b3d8302886ee59e1561d9d4",
+  "reference": "docs/research/PAIERER_DARK_STAGE_PORTRAIT_2026_11_14.json",
+  "hidden_volumes": [
+    "Wedding | bounded rear scattering",
+    "Bold wedding | bounded beam fan air",
+    "Bold wedding | blue luminous volume 0",
+    "Bold wedding | blue luminous volume 1",
+    "Bold wedding | blue luminous volume 2",
+    "Bold wedding | gold luminous volume 0",
+    "Bold wedding | gold luminous volume 1",
+    "Bold wedding | gold luminous volume 2"
+  ],
+  "stage_light_multipliers": {
+    "Focused light | cold window key": 0.64,
+    "Focused light | warm altar": 0.5,
+    "Focused light | warm vase accent": 0.75,
+    "Focused light | cool column accent": 0.65,
+    "Stage art | grounded backlight": 0.75,
+    "Wedding | blue vow shaft": 0.4,
+    "Wedding | gold vow shaft": 0.4
+  },
+  "character_lights": {
+    "key_direction_camera": [
+      -2.7,
+      1.5,
+      2.6
+    ],
+    "fill_direction_camera": [
+      1.3,
+      0.65,
+      3.2
+    ],
+    "rim_direction_camera": [
+      -1.8,
+      1.0,
+      -1.0
+    ],
+    "key_energy": 490,
+    "key_size": 1.0,
+    "key_color": [
+      1.0,
+      0.93,
+      0.86
+    ],
+    "fill_energy": 45,
+    "fill_size": 1.8,
+    "fill_color": [
+      0.73,
+      0.83,
+      1.0
+    ],
+    "rim_energy": 350,
+    "rim_size": 0.7,
+    "rim_color": [
+      1.0,
+      0.76,
+      0.61
+    ],
+    "preserve_original_light_distance": true,
+    "preserve_diffuse_factors": true,
+    "key_direction_head": [
+      0.67,
+      0.54,
+      0.5
+    ],
+    "key_specular_factor": 0.22,
+    "rim_specular_factor": 0.3,
+    "reflection_specular_factor": 0.7,
+    "fill_specular_factor": 0.25
+  },
+  "glow_strength_multiplier": 0.38,
+  "key_fill": {
+    "actors": {
+      "aksiniya": {
+        "face": {
+          "palette": [
+            [
+              0.26,
+              [
+                0.78,
+                0.56,
+                0.68,
+                1
+              ]
+            ],
+            [
+              0.62,
+              [
+                0.99,
+                0.88,
+                0.95,
+                1
+              ]
+            ],
+            [
+              0.9,
+              [
+                1.06,
+                1.015,
+                1.025,
+                1
+              ]
+            ]
+          ]
+        },
+        "skin": {
+          "form_range": [
+            0.02,
+            0.86
+          ],
+          "palette": [
+            [
+              0.16,
+              [
+                0.72,
+                0.46,
+                0.62,
+                1
+              ]
+            ],
+            [
+              0.6,
+              [
+                0.99,
+                0.81,
+                0.9,
+                1
+              ]
+            ],
+            [
+              0.94,
+              [
+                1.06,
+                1.015,
+                1.035,
+                1
+              ]
+            ]
+          ]
+        }
+      },
+      "ikhor": {
+        "face": {
+          "analytic_form": {
+            "enabled": true,
+            "half_width": 0.0823,
+            "center_offset": 0.002857,
+            "curvature": 1.2,
+            "up_bias": 0.03,
+            "range": [
+              0.4,
+              0.78
+            ],
+            "floor": 0.4,
+            "gain": 1
+          },
+          "palette": [
+            [
+              0.4,
+              [
+                0.79,
+                0.58,
+                0.73,
+                1
+              ]
+            ],
+            [
+              0.66,
+              [
+                0.99,
+                0.88,
+                0.97,
+                1
+              ]
+            ],
+            [
+              0.92,
+              [
+                1.045,
+                1.01,
+                1.055,
+                1
+              ]
+            ]
+          ]
+        },
+        "skin": {
+          "form_range": [
+            0.02,
+            0.86
+          ],
+          "palette": [
+            [
+              0.16,
+              [
+                0.72,
+                0.46,
+                0.62,
+                1
+              ]
+            ],
+            [
+              0.6,
+              [
+                0.99,
+                0.81,
+                0.9,
+                1
+              ]
+            ],
+            [
+              0.94,
+              [
+                1.06,
+                1.015,
+                1.035,
+                1
+              ]
+            ]
+          ]
+        }
+      }
+    }
+  },
+  "rim_ink": {
+    "rim": {
+      "headroom_luminance_range": [
+        0.35,
+        0.95
+      ],
+      "highlight_retention": 0.35,
+      "actors": {
+        "aksiniya": {
+          "hair": {
+            "hdr_gain": 2.8,
+            "power": 8
+          },
+          "body": {
+            "hdr_gain": 1.9,
+            "power": 10
+          },
+          "fur": {
+            "hdr_gain": 0.55,
+            "power": 20
+          }
+        },
+        "ikhor": {
+          "hair": {
+            "hdr_gain": 2.8,
+            "power": 8
+          },
+          "body": {
+            "hdr_gain": 1.9,
+            "power": 10
+          }
+        }
+      },
+      "material_overrides": {
+        "带子": {
+          "hdr_gain": 0.5
+        },
+        "裙.001": {
+          "hdr_gain": 0.85
+        },
+        "衣领": {
+          "hdr_gain": 1.0
+        }
+      }
+    },
+    "ink": {
+      "actors": {
+        "aksiniya": {
+          "face": {
+            "strength": 0.35
+          },
+          "skin": {
+            "strength": 0.25
+          },
+          "cloth": {
+            "strength": 0.6
+          }
+        },
+        "ikhor": {
+          "face": {
+            "strength": 0.35
+          },
+          "skin": {
+            "strength": 0.25
+          },
+          "cloth": {
+            "strength": 0.6
+          }
+        }
+      }
+    }
+  },
+  "stage_midtones": {
+    "enabled": true,
+    "amount": 0.6,
+    "tint": [
+      0.05,
+      0.08,
+      0.16,
+      1
+    ],
+    "ramp": [
+      [
+        0.025,
+        0
+      ],
+      [
+        0.12,
+        0.6
+      ],
+      [
+        0.45,
+        1
+      ],
+      [
+        0.95,
+        0
+      ]
+    ]
+  },
+  "note": "Character diffuse/form/palette and actual lamp roles are coordinated but remain a hybrid NPR art-lighting system. Original Color/Alpha/SDF/geometry/actions/camera retained.",
+  "physical_highlights": {
+    "materials": [
+      "带子",
+      "裙.001",
+      "衣领",
+      "衣.001",
+      "衣2"
+    ],
+    "gold_roughness": 0.54,
+    "gold_physical_mix": 0.28
+  }
+}

@@ -1,0 +1,242 @@
+{
+  "schema_version": 1,
+  "id": "face-shadow-design-2026-11-14",
+  "recorded_date": "2026-11-14",
+  "status": "external-primary-text-and-selected-local-source-read-only",
+  "topic": "新增原作者面部阈值图制作、头部坐标与偏移刘海影的实质阅读；用于后续干净明亮但保留层次的独立实验",
+  "deduplication": {
+    "checked": [
+      "docs/research/FACE_SHADOW_DESIGN_STUDY.json",
+      "docs/research/NPR_NEXT_EXPERIMENTS.json",
+      "docs/research/NPR_PRIMARY_STUDY_2026_11_13.json",
+      "docs/research/EXTERNAL_TOON_SHADOW_2026_11_13.json",
+      "docs/research/TEXT_NPR_SOURCE_DISCOVERY.json",
+      "docs/CHARACTER_NPR_PLAYBOOK.md",
+      "docs/EXTERNAL_MMD_TECHNIQUES_2026_11_13.md"
+    ],
+    "not_counted_as_new": [
+      "Nilo公开LightingEquation全文件阅读",
+      "MooaToon阴影形状、ID射线、屏幕空间发影及高光文档",
+      "UTS颜色/控制图及高光",
+      "xSnowFlakesx脸部Shader与EndfieldLighting脸SDF章节",
+      "akasaki1211阈值图生成器README",
+      "按角度画遮罩、保持每像素变化可由单阈值表达的既有实验原则"
+    ],
+    "new_source_search": "rg在docs及catalog中检索FlowingCrescent、mos9527、himoqiuhan和xueqingzhe，无既有命中；此轮计入前3位作者的新文章。"
+  },
+  "current_baseline": {
+    "engine": "Blender 5.2.2 LTS / ordinary EEVEE, per current repository state",
+    "project": "D:/codex/output/MMD-Clean-Game-Characters-v1/production-v2/Franken_Duet_Clean_Game.blend",
+    "project_sha256_per_current_contract": "0ec95ee7162512ffc405a2a7337b355caf62cd993b3d8302886ee59e1561d9d4",
+    "baseline_documents": [
+      "catalog/current_state.json",
+      "docs/PRODUCTION_WORKFLOW.md",
+      "docs/CLEAN_GAME_CHARACTER_REFINEMENT.md"
+    ],
+    "important_history_correction": "旧FACE_SHADOW_DESIGN_STUDY中的随头前向平整探针与MIN组合属于历史基线。本轮按最新文档及构建源码理解当前链，不据旧账本提出重复接线。",
+    "aksi": "原FaceLightmap red经既有动态阈值，鼻UV许可内作同图邻采样柔化；形体为0.38+0.62*SDF，再乘面向实际主灯、带距离补偿的综合Diffuse响应，进入一次现有palette。",
+    "ikhor": "没有已验证的生产脸SDF；现行Clean不新增Diffuse/Emission/AO探针，保留既有形体及综合受光链。另包出现类似FaceSDF文件名不能证明当前工程已适配。",
+    "native_response_semantics": "综合Diffuse包含灯组、法线、衰减、间接光及遮挡；不是独立几何visibility。Emission是下游计算颜色的输出，不能假定新增场景灯或最终亮度下限能恢复被抹掉的遮挡。",
+    "saved_blend_opened": false,
+    "saved_connections_independently_rechecked": false
+  },
+  "sources": [
+    {
+      "id": "flowingcrescent-threshold-authoring",
+      "author": "FlowingCrescent",
+      "title": "二次元脸部光照阈值图生成",
+      "url": "https://flowingcrescent.net/en/%E4%BA%8C%E6%AC%A1%E5%85%83%E8%84%B8%E9%83%A8%E5%85%89%E7%85%A7%E9%98%88%E5%80%BC%E5%9B%BE%E7%94%9F%E6%88%90/",
+      "published_date_per_page": "2022-07-17",
+      "source_type": "primary_author_implementation_article_not_game_source",
+      "actual_read_scope": [
+        "全文文字：描述各个光照角度、使用SDF让它们变得连续、将各个小阈值图进行合并",
+        "CSMain、CSSmooth、CSCombine以及Texture2DArray创建片段；未读其所引知乎算法原文"
+      ],
+      "facts": [
+        "作者先取得离散角度的美术明暗图；相邻图的距离比例控制中间边界，再合并成供运行时比较的阈值场。",
+        "作者记录了在定点纹理上逐次累加会被clamp的问题，改在标量中累加后统一写回。"
+      ],
+      "inspection_cautions": [
+        "页面片段CSMain将距离写入RGB且A=1，CSSmooth却读A；文本片段不足以构成可直接执行的通道一致工具。",
+        "CSSmooth含pow(...,0.45)，文末又建议计算图用Linear；本轮不把这段gamma当作Blender数据贴图的通用操作。"
+      ],
+      "not_verified": ["作者完整工具", "插图逐张内容", "Unity或Blender执行", "当前双人控制图生成"]
+    },
+    {
+      "id": "flowingcrescent-offset-hair-shadow",
+      "author": "FlowingCrescent",
+      "title": "【Unity URP】卡通渲染中的刘海投影·改",
+      "url": "https://flowingcrescent.net/en/%E3%80%90Unity%20URP%E3%80%91%E5%8D%A1%E9%80%9A%E6%B8%B2%E6%9F%93%E4%B8%AD%E7%9A%84%E5%88%98%E6%B5%B7%E6%8A%95%E5%BD%B1%C2%B7%E6%94%B9/",
+      "published_date_per_page": "2021-10-03",
+      "version_per_page": "Unity 2019.4.6f1 / URP 7.3.1",
+      "source_type": "primary_author_implementation_article_not_game_source",
+      "actual_read_scope": [
+        "全文文字及内嵌代码：效果原理、额外头发RenderFeature、Custom/HairShadow pass、改良的重绘面部pass",
+        "重点检查Stencil、ZTest/ZWrite、ColorMask、clip-space xy偏移、FaceTex采样与作者末尾限制"
+      ],
+      "facts": [
+        "作者给脸写Stencil，沿相机空间光向偏移头发额外绘制，只影响指定脸区域。它是视角相关发影代理。",
+        "直接涂一块暗色会脱离脸纹理；改版先写mask再重绘脸纹理乘暗色。作者说明复杂脸光照可能需要完整人物材质再绘制。"
+      ],
+      "project_analysis_not_author_guarantees": [
+        "所列偏移直接加在clip xy，透视除法后位移还受w影响，不能标为固定像素宽度。",
+        "双人需分离施影者/接收者身份；同一Stencil值不能单独证明只接收本人的刘海影。",
+        "屏幕方向接近零和当前几何真实发影的重复压暗均需另测。"
+      ],
+      "not_verified": ["作者插图逐张视觉", "内嵌视频", "Unity运行", "EEVEE自定义pass移植"]
+    },
+    {
+      "id": "mos9527-blender-face-frame",
+      "author": "mos9527",
+      "title": "PJSK Blender卡通渲染管线重现【3】- SDF 面部渲染实现",
+      "url": "https://mos9527.com/posts/pjsk/shading-reverse-part-3/",
+      "published_date_per_page": "2025-04-20",
+      "source_type": "primary_author_blender_implementation_article_not_game_source",
+      "actual_read_scope": [
+        "全文文字与公式，重点为3.Blender实现：Driver、构造正交基、素材处理",
+        "未观看内嵌动画，未检查图示节点的所有连接，未取得作者blend"
+      ],
+      "facts": [
+        "作者反对假定脸永远朝固定世界轴，使用头骨世界变换处理动画、父级和约束后的方向。",
+        "作者指出所用图只编码水平光向，左右镜像有对称前提；左右独立图可避免该图的对称限制。"
+      ],
+      "project_analysis_not_author_claim": "只由一个前向向量生成任意正交基，不能唯一保留头部roll。此工程宜用真实头部前/上/右的完整姿态；不能仅因本文有正交基构造便认定所有转头准确。",
+      "not_verified": ["论文全文", "原游戏Shader", "当前Blender5.2节点重建", "生产骨轴/蒙皮验证"]
+    },
+    {
+      "id": "himoqiuhan-face-palette-and-neck",
+      "author": "楸涵 / himoqiuhan",
+      "title": "【Unity】仿原神渲染2.0技术文档-角色渲染篇",
+      "url": "https://himoqiuhan.github.io/2023/12/07/Projects-GenshinLikeRenderingInURP2-Avatar/index.html",
+      "published_date_per_page": "2023-12-07",
+      "updated_date_per_page": "2024-07-27",
+      "source_type": "primary_author_community_reconstruction_not_official_genshin",
+      "actual_read_scope": [
+        "1.1-1.3：Ramp颜色职责、区域采样、固有阴影和独立颈部许可",
+        "4.面部阴影：面部图采样、左右选择、阈值、明暗调色和功能区域mask",
+        "未通读描边/脚影等其余章节，未下载项目、视频或贴图"
+      ],
+      "facts": [
+        "作者将脸影边界和明暗颜色分别处理，使用与本项目未必相同的半余弦阈值约定。",
+        "作者把颈部设独立顶点色许可及调色，并非要求其所有部位复用脸材质。"
+      ],
+      "project_caution": "作者对原游戏的描述是其复现理解；其固定颈色或眉眼mask策略不能直接当成本工程目标或原游戏源码事实。当前需要保留下颌遮挡及领口层次。",
+      "not_verified": ["仓库源码版本", "网页插图逐张内容", "角色模型通道一致性", "EEVEE移植"]
+    },
+    {
+      "id": "blender-shader-to-rgb-background",
+      "author": "Blender Foundation documentation",
+      "title": "Shader To RGB Node - page indexed as Blender 5.2 LTS Manual",
+      "url": "https://docs.blender.org/manual/nl/latest/render/shader_nodes/color/shader_to_rgb.html",
+      "access": "official_search_index_body_read; direct versioned page failed",
+      "new_topic_counted": false,
+      "read_scope": "EEVEE限定、Color输出含BSDF及光照、噪声输入经过非线性转换和render passes警告",
+      "version_limit": "latest会漂移；本次不是独立5.2运行核验。"
+    }
+  ],
+  "local_selected_source_evidence": [
+    {
+      "path": "scripts/clean_aksiniya_materials.py",
+      "sha256": "09c5208f6545d7a7c25cbc996d6f0f90f68f0c168eb79acf8bbf122752d4cf9d",
+      "read_scope": "模块说明、_nose及其紧邻辅助函数",
+      "finding": "实际鼻区修形只替换原SDF输入，保留形体下限、主灯综合响应及AO/嘴缝。"
+    },
+    {
+      "path": "scripts/prepare_reference_transfer.py",
+      "sha256": "5a7f3f59e65992c7b4279636af3a307badb12c994ba16418398b6459fc52a60a",
+      "read_scope": "character_design中的主灯方向、距离补偿、form乘response与palette连接",
+      "finding": "主灯朝向Diffuse探针和几何形体分开；仍是受多灯影响的综合响应。仅用于理解历史构建链，未运行该SHA限定入口。"
+    },
+    {
+      "path": "scripts/clean_ikhor_materials.py",
+      "sha256": "3d2be27eed32fbadc4730a6874dfb45c4cd98ad27897d68eafe24fca37090eac",
+      "read_scope": "apply的no_new_emission_probe_or_ao断言和目标角色分支",
+      "finding": "当前Clean模块禁止新建Diffuse/ShaderToRGB/AO/Emission探针；不能把其颜色修正描述成已新增脸SDF。"
+    }
+  ],
+  "new_project_conclusions": [
+    {
+      "id": "threshold-data-contract-before-painting",
+      "basis": ["flowingcrescent-threshold-authoring", "himoqiuhan-face-palette-and-neck"],
+      "inference": "开始画新图前必须冻结阈值函数、左右/明暗符号、UV、通道、数值编码和非颜色采样。相同0.5灰值在角度线性和半余弦函数中不代表相同非中点角；不得把生成图和作者另一套查询公式交叉拼接。",
+      "new_increment": "本轮新增的是生成片段的通道不一致及gamma风险检查、定点纹理累加饱和风险；按角度画图本身已有研究。"
+    },
+    {
+      "id": "one-skin-palette-with-separate-masks",
+      "basis": ["flowingcrescent-offset-hair-shadow", "himoqiuhan-face-palette-and-neck"],
+      "inference": "若以后尝试偏移发影，只把它视为独立遮挡mask；与SDF共享原肤色/腮红/嘴缝和一套受控阴影颜色，避免额外纯棕色贴片盖住脸。不要在已经含真实发影的D上默认再乘一次新发影。",
+      "eevee_limit": "URP RenderFeature、Stencil及自定义顶点/片元pass不是普通EEVEE材质节点功能。本轮未找到并验证等价接口；只能保留为独立离屏实验候选，不称直接可移植。"
+    },
+    {
+      "id": "use-full-head-frame",
+      "basis": ["mos9527-blender-face-frame"],
+      "inference": "保留真正头骨姿态的前/上/右，特别加入roll测试。只取世界Z欧拉角、世界XZ投影或从前向随意构基，都可能在俯仰/歪头时产生错误方位。光接近头部上轴时方位欠定，应预先设计退化处理并测试；clamp不能消除欠定。"
+    },
+    {
+      "id": "neck-is-a-separate-receiver",
+      "basis": ["himoqiuhan-face-palette-and-neck"],
+      "inference": "脸、下颌/颈、领口分别定响应与颜色许可。只保留小范围接触AO，颈部仍受真实下颌和衣领遮挡；不把整张脸的SDF图或固定颈色扩展到全颈。"
+    }
+  ],
+  "proposed_experiment": {
+    "id": "face-threshold-data-and-occlusion-contract",
+    "implemented": false,
+    "scope": "最新Clean工程的独立诊断副本，先阿克西妮娅颜材质；伊科尔先完成自己的UV/输入审计，不套用阿克西妮娅图。",
+    "baseline_control": "最新工程文件哈希、镜头、曝光/显示变换、既有灯组及能量、动作、Geometry/Actions、PMX Color/Alpha、球面、嘴缝、描边、Glow固定；诊断关闭雾/字幕另存，输入不覆盖。",
+    "phase_1_same_frame": {
+      "source_frame": 4290,
+      "controls": [
+        "A：现行完整脸链；B：只预览原阈值数据和当前SDF输出；C：只预览key-facing综合响应D；D：只预览既有AO；不得把C改名为纯投影。",
+        "在相同姿态灯位，比较原采样及临时校准图0/0.25/0.5/0.75/1的数值通过情况，确认通道、Non-Color及阈值函数；临时图不是新脸影成品。",
+        "只加一块独立中性遮挡片，再移除，检查D与最终脸确有几何遮挡响应；SDF数据不应因遮挡片改变。",
+        "第二组单独旁路AO；若脏块仍在，只在SDF或形体来源处理，不能靠叠补光盖掉。"
+      ],
+      "new_art_candidate": "数据契约通过后，独立UV原稿只设计鼻翼/脸颊少量连续暗面，优先保持已有脸侧及鼻部修形。用原查询函数生成/校正，不套通用Boy/Lady模板。",
+      "query_contract": "保存头前/右/上、light toward/incoming约定、水平投影、左右镜像、T(angle)、bright比较符号、过渡宽度及数据编码；每项有灰度预览。",
+      "single_color_contract": "SDF与D先合成标量，再经过现有一次肤色palette及一次原AO；新图只替换其负责的形体输入。e=0必须恢复原连接。"
+    },
+    "phase_2_head_and_light": [
+      "固定灯/相机，独立转头yaw -60至60度24帧；另作pitch -25至25度及roll -25至25度，不能把绕世界Z当完整转头测试。",
+      "固定头/相机，主灯等距离移至方位-90至90度24帧，固定高度与能量；另测正面及侧面灯在头局部接近上轴的退化情况。",
+      "固定头/灯，相机左右15度24帧：SDF边界应由头光关系决定；偏移发影若启用则记录其视角依赖，不与真实几何发影混称。",
+      "在本片段4139-4441内选有刘海摆动、手近脸、双人重叠和张嘴的连续窗口；只在已验证动作范围检查。诊断通过后才做新beauty，不从静帧升级全段认可。"
+    ],
+    "optional_hair_proxy_branch": {
+      "priority": "defer_until_a_separate_mask_and_actor_ID_path_is_proven",
+      "required_isolation": "每人自己的hair caster/face receiver ID，分别记录H_proxy与当前综合D；不将两人全部面部合为一个Stencil/全局mask。",
+      "comparison": "真实发影基线、代理发影、两者误叠的负例并排。代理应只改变额头/刘海许可区，保留脸纹理和共同阴影色。",
+      "ordinary_eevee_status": "未实现、未验证；不能通过复制URP pass直接写入现行材质。"
+    },
+    "rejection_criteria": [
+      "新增孤立鼻口棕块、眼周脏圈、下颌黑片、眉睫或嘴缝被涂平；亮区变白、暗区去色或肤色与手部断层。",
+      "移动主灯或转头时边界反向、正面过零跳变、roll时阴影贴世界轴、近上轴出现随机翻转或NaN。",
+      "只改补灯功率就被误判为投影变化；把综合D当纯visibility来作除法或反推。",
+      "同一发影重复进入D及新mask造成双重压暗；代理盖掉纹理、超出额头许可或错误投到另一人脸上。",
+      "新阈值图在Non-Color导入前后无数值记录，复制pow0.45，或未核对RGB/A便宣布图已适配。",
+      "基线旁路不等价、UV接缝或时间闪烁；相机距离变化产生未记录的发影宽度跳变。"
+    ],
+    "promotion_requirements": [
+      "静帧开关与每项标量预览可解释差异",
+      "三个独立运动测试和俯仰/歪头无退化",
+      "新文件独立重开，输入链接/数据图/动作相机一致",
+      "正式范围重新渲染与验收后，再分别记录技术通过及猪猪美术认可"
+    ]
+  },
+  "access_limits": [
+    {"url": "https://www.artstation.com/blogs/bjayers/9oOD/blender-npr-recreating-the-genshin-impact-shader", "observed": "只暴露登录/注册壳，文章正文未读，不计新增"},
+    {"url": "https://media.gdcvault.com/GDC%2B2022/Speaker%2BSlides/Finding%2BHarmony%2Bin_Chen_Zhou.pdf", "observed": "403，不计已读；未改用未授权镜像"},
+    {"url": "https://zhuanlan.zhihu.com/p/411188212", "observed": "403，未读正文"},
+    {"url": "https://zhuanlan.zhihu.com/p/670837192", "observed": "403，未读正文"},
+    {"url": "https://docs.blender.org/manual/en/5.0/render/shader_nodes/color/shader_to_rgb.html", "observed": "402；官方多语言搜索索引正文可读，但不是新5.2运行核验"}
+  ],
+  "not_performed": [
+    "生产工程、catalog、预设或动作修改",
+    "生成/绘制新SDF、节点实现、实验渲染、动态测试或独立重开",
+    "视频播放、下载、字幕获取或观海子/Gosari逐镜分析",
+    "原神/鸣潮/Goo原始Shader恢复",
+    "插件安装或新依赖下载"
+  ],
+  "production_ready": false,
+  "quality_target_achieved": false,
+  "user_art_approval": false
+}

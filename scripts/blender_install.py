@@ -51,7 +51,7 @@ def find_blender_executable(root: Path, system_name: str | None = None) -> Path:
     """Find the Blender executable inside an extracted portable installation."""
 
     system = (system_name or platform.system()).lower()
-    names = ["blender.exe", "Blender"] if system.startswith("win") else ["Blender", "blender"]
+    names = ["blender.exe", "Blender"] if system.startswith("win") else ["blender", "Blender"]
     if system.startswith("darwin"):
         names.insert(0, "Blender.app/Contents/MacOS/Blender")
     for name in names:

@@ -1,0 +1,2124 @@
+{
+  "schema_version": 1,
+  "audit_date": "2026-11-13",
+  "timezone": "Asia/Shanghai",
+  "captured_at": "2026-11-13T02:19:17.403338+08:00",
+  "snapshot_semantics": "Initial counts precede current reorganization. Capture-time hashes may change during parent integration. Historical entry snapshots preserve old text. This is not the live status registry.",
+  "initial_counts": {
+    "top_level_docs": 42,
+    "preset_json": 48,
+    "python_scripts_including_init": 142,
+    "powershell_scripts": 1,
+    "test_files": 14,
+    "skills": 7,
+    "catalog_entries_raw": 16,
+    "style_packages_generated": 6,
+    "built_entries": 22,
+    "built_docs": 42,
+    "built_components": 48,
+    "comparisons": 27,
+    "source_knowledge_groups": 7
+  },
+  "initial_preset_folders": {
+    "styles": 13,
+    "quality": 10,
+    "stages": 10,
+    "recipes": 9,
+    "typography": 5,
+    "projects": 1
+  },
+  "initial_entry_statuses": {
+    "motion": 13,
+    "still": 2,
+    "study": 1
+  },
+  "scope": {
+    "all_initial_docs": "structure/status inventory, focused prose for named docs",
+    "focused_docs": [
+      "PRODUCTION_WORKFLOW",
+      "KNOWLEDGE_INDEX",
+      "NEXT_QUALITY_REVIEW",
+      "PRODUCTION_HISTORY_CONTEXT",
+      "LOCAL_ENVIRONMENT",
+      "GALLERY_GUIDE",
+      "WUWA_TOON_STUDY",
+      "LIGHT_SPACE_AND_COLOR_PIPELINE"
+    ],
+    "all_seven_skills": "full text read",
+    "scripts": "module summaries and roles; four selected implementations",
+    "not_performed": [
+      "No full line-by-line 142-file code audit",
+      "No test suite rerun by this audit",
+      "No fresh Blender render or full video decode",
+      "No new visual art review",
+      "No plugin installation or preference changes",
+      "No old delivery edits"
+    ]
+  },
+  "latest_artifact": {
+    "path": "D:\\codex\\output\\MMD-Duet-Shadow-Color-v1\\captions-5s-v2\\Franken_Duet_5s_Grounded_Wedding_REVIEW.mp4",
+    "bytes": 9044318,
+    "sha256_recomputed": "ea72afadbeff7aae5eb47e9d976555ca33bf324d0f884afc217d68fc7d8b21fb",
+    "matches_delivery_record": true,
+    "technical_status": "existing_reports_passed_and_file_hash_rechecked",
+    "user_art_feedback": "revision_requested",
+    "feedback_source": "Latest user message in current chat, 2026-11-13",
+    "full_song_complete": false,
+    "game_level_quality_achieved": false,
+    "note": "Older accepted bright-hall comparison is not approval of every subsequent version."
+  },
+  "catalog_reference_check": {
+    "raw_entries_scanned": 16,
+    "missing_targets": [],
+    "scope": "File existence only; no fresh decode or licensing review"
+  },
+  "findings": [
+    {
+      "id": "R01",
+      "initial_issue": "`AGENTS.md`大量按轮次追加“最新”，后部仍要求监控旧全曲渲染",
+      "recommendation": "只保留持久约定、现行入口与重要禁用路线；过程移入带日期快照，禁止据旧段落复活已停止任务"
+    },
+    {
+      "id": "R02",
+      "initial_issue": "`PRODUCTION_WORKFLOW.md`仍将单人Hina与伴奏列为“当前”",
+      "recommendation": "主流程改为模型无关步骤；双人Hime/Hina、指定原声FLAC、横屏和五秒范围来自现行项目配置；单人作为历史案例"
+    },
+    {
+      "id": "R03",
+      "initial_issue": "`DUET_FULL_PRODUCTION.md`、`CREDITS_FRANKEN_DUET.md`仍写完整视频“尚在渲染”",
+      "recommendation": "历史／Aether文档已记录停止；改为“全曲未交付”，不要把工程、曾启动、目前运行和最终验收混为一谈"
+    },
+    {
+      "id": "R04",
+      "initial_issue": "README和知识目录先后列多条“最新”，旧插件框架又写“尚未导入”",
+      "recommendation": "首屏保留唯一当前状态、学习／制作入口；明确自有解析器未实现与MMD Tools实际导入已验证是两件事"
+    },
+    {
+      "id": "R05",
+      "initial_issue": "`PRODUCTION_TECHNIQUES.md`仍围绕旧单人伴奏、原创舞台、竖屏参数讲解",
+      "recommendation": "标记为已验证历史实例；通用方法可复用，音乐／场景／人数／画幅不能覆盖当前用户选择"
+    },
+    {
+      "id": "R06",
+      "initial_issue": "网站`motion/样片通过`与“用户认可”容易混读",
+      "recommendation": "技术证据、适用范围、美术反馈独立字段；最新Grounded记录需要提升，不因300帧通过自动升为推荐基线"
+    },
+    {
+      "id": "R07",
+      "initial_issue": "旧教程称Abnormal未安装，后文称临时注册通过；Goo压缩包存在但未运行",
+      "recommendation": "能力表区分读过、磁盘存在、注册、实际编辑、静帧、动态、整合；不使用单一“有／无”覆盖历史"
+    },
+    {
+      "id": "R08",
+      "initial_issue": "`vmd-workflow`仍有“未完成解析前不得称套用”的笼统末条",
+      "recommendation": "限定自有解析器；使用MMD Tools实际导入、骨骼／Morph检查通过可以如实记录数据级套用，仍不等于全片动作质量通过"
+    },
+    {
+      "id": "R09",
+      "initial_issue": "`scripts`混合探针、迁移、生成、渲染、打包；部分打包器回写catalog",
+      "recommendation": "建职责与输入契约登记；历史`package_*`会覆写新反馈，应按绑定版本使用，不能作为通用发布器随手重跑"
+    },
+    {
+      "id": "R10",
+      "initial_issue": "多份参数依赖特定模型名称、UV、世界地面高度和4140–4439片段",
+      "recommendation": "模型／通道映射与实验配方显式登记；换角色先做单材质与动作小样，不把JSON存在当作通用材质能力"
+    }
+  ],
+  "knowledge_groups_at_start": {
+    "render": [
+      "LIGHT_SPACE_AND_COLOR_PIPELINE.md",
+      "GENSHIN_CHARACTER_AND_PRESETS.md",
+      "WUWA_TOON_STUDY.md",
+      "HALF_LAMBERT_STUDY.md",
+      "SURFACE_REFINEMENT.md",
+      "FACE_INK_REFINEMENT.md",
+      "LOOK_REFINEMENT.md",
+      "AETHER_LOOK_REVISION.md"
+    ],
+    "lighting": [
+      "SHADOW_GROUNDING_AND_PLAYBACK_COLOR.md",
+      "BLUE_GOLD_WEDDING_STUDY.md",
+      "SOFT_TOP_RIM_LIGHTING.md",
+      "FOX_STAGE_ART_DEEP_STUDY.md",
+      "FOX_LIGHTING_AND_CINEMA.md",
+      "STAGE_ART_NIGHT_STUDY.md",
+      "HESPERIDES_REFERENCE_REBUILD.md",
+      "HESPERIDES_STAGE_RENDERING.md",
+      "HESPERIDES_AUTHOR_SETUP.md",
+      "CLEAR_LIGHT_AND_GRADING.md",
+      "QUALITY_LIGHTING_LAB.md",
+      "STAGE_SEARCH.md"
+    ],
+    "post": [
+      "DUET_CAPTION_STABILITY_AND_LIGHTING.md",
+      "STYLE_PRESETS.md",
+      "ADVANCED_MMD_SUBTITLES.md",
+      "SUBTITLE_DELIVERY.md"
+    ],
+    "production": [
+      "PRODUCTION_WORKFLOW.md",
+      "PRODUCTION_TECHNIQUES.md",
+      "DUET_FULL_PRODUCTION.md",
+      "CAMERA_SEARCH.md",
+      "AUDIO_CONVERSION.md",
+      "FINAL_DELIVERY.md",
+      "FIRST_TRIAL.md"
+    ],
+    "reference": [
+      "GOSARI_REFERENCE.md",
+      "GUANHAIZI_REFERENCE.md",
+      "TUTORIAL_STUDY.md",
+      "NEXT_QUALITY_REVIEW.md"
+    ],
+    "tools": [
+      "LOCAL_ENVIRONMENT.md",
+      "TUTORIAL_TRANSCRIPTION.md"
+    ],
+    "rights": [
+      "CREDITS.md",
+      "CREDITS_FRANKEN_DUET.md"
+    ],
+    "maintenance_auto": [
+      "GALLERY_GUIDE.md",
+      "KNOWLEDGE_INDEX.md",
+      "PRODUCTION_HISTORY_CONTEXT.md"
+    ]
+  },
+  "document_inventory": [
+    {
+      "path": "docs/LIGHT_SPACE_AND_COLOR_PIPELINE.md",
+      "lines": 73,
+      "sha256_at_capture": "ddd9442d40b66d90d46b1dc3eebf5ff2b2c0a750e3797564b96e86d3d0c05b09",
+      "group": "render",
+      "review_scope": "focused_prose_review"
+    },
+    {
+      "path": "docs/GENSHIN_CHARACTER_AND_PRESETS.md",
+      "lines": 95,
+      "sha256_at_capture": "1eb2194c86851aa819438aa42e655f4dbf75cc21a1eb8e1ae50bd7136f1fb1b1",
+      "group": "render",
+      "review_scope": "structure_and_status_inventory_with_selected_sections"
+    },
+    {
+      "path": "docs/WUWA_TOON_STUDY.md",
+      "lines": 58,
+      "sha256_at_capture": "9cc4ea3ba1991599a34f713723a21d8af72940e3e37324f60b77244c7b394eec",
+      "group": "render",
+      "review_scope": "focused_prose_review"
+    },
+    {
+      "path": "docs/HALF_LAMBERT_STUDY.md",
+      "lines": 68,
+      "sha256_at_capture": "85ce6ecb842ca1633bd49c08b92d7c2b4e22687774f2b736c5edce499b65f249",
+      "group": "render",
+      "review_scope": "structure_and_status_inventory_with_selected_sections"
+    },
+    {
+      "path": "docs/SURFACE_REFINEMENT.md",
+      "lines": 85,
+      "sha256_at_capture": "d5e403d190473dd40ad4a77285587219a874b39696b6ffc82dcb28dacd21c93d",
+      "group": "render",
+      "review_scope": "structure_and_status_inventory_with_selected_sections"
+    },
+    {
+      "path": "docs/FACE_INK_REFINEMENT.md",
+      "lines": 62,
+      "sha256_at_capture": "5f64198e80d01783f1fa51c9bbf0dbcc1239b557c99dfa15909b4d3ad8acd2b4",
+      "group": "render",
+      "review_scope": "structure_and_status_inventory_with_selected_sections"
+    },
+    {
+      "path": "docs/LOOK_REFINEMENT.md",
+      "lines": 69,
+      "sha256_at_capture": "2eb21e35f67fa8302fc6f8a12792381fd024768e6e26479a0a5abcf2e4371bc1",
+      "group": "render",
+      "review_scope": "structure_and_status_inventory_with_selected_sections"
+    },
+    {
+      "path": "docs/AETHER_LOOK_REVISION.md",
+      "lines": 57,
+      "sha256_at_capture": "abcf61665bb89dd696e1e6499a3a045aeca4925222d08d77503eeaeef6a5e37b",
+      "group": "render",
+      "review_scope": "structure_and_status_inventory_with_selected_sections"
+    },
+    {
+      "path": "docs/SHADOW_GROUNDING_AND_PLAYBACK_COLOR.md",
+      "lines": 103,
+      "sha256_at_capture": "092ae55b1273162985f2488f6da1e0a2b96ec6198ec16af9841fdf7ea27fe5bd",
+      "group": "lighting",
+      "review_scope": "structure_and_status_inventory_with_selected_sections"
+    },
+    {
+      "path": "docs/BLUE_GOLD_WEDDING_STUDY.md",
+      "lines": 62,
+      "sha256_at_capture": "feaed2dbed1af5f4db767645b9b77fb2b2794fa0e5fcbf6723400171b70c4dbe",
+      "group": "lighting",
+      "review_scope": "structure_and_status_inventory_with_selected_sections"
+    },
+    {
+      "path": "docs/SOFT_TOP_RIM_LIGHTING.md",
+      "lines": 49,
+      "sha256_at_capture": "d14e050a6f1d9ee2d282b19d0bb89db8bcc212a1063ec0767bf13e0b4180745e",
+      "group": "lighting",
+      "review_scope": "structure_and_status_inventory_with_selected_sections"
+    },
+    {
+      "path": "docs/FOX_STAGE_ART_DEEP_STUDY.md",
+      "lines": 77,
+      "sha256_at_capture": "e2f7941491521e628d09264fae3c0d53b17d3da49ae218cad1b783a14aaafb81",
+      "group": "lighting",
+      "review_scope": "structure_and_status_inventory_with_selected_sections"
+    },
+    {
+      "path": "docs/FOX_LIGHTING_AND_CINEMA.md",
+      "lines": 68,
+      "sha256_at_capture": "fa09f4f123977e73592b37efbb80348a50c75ec1e68b49a6a7d2a8d05b69d3cb",
+      "group": "lighting",
+      "review_scope": "structure_and_status_inventory_with_selected_sections"
+    },
+    {
+      "path": "docs/STAGE_ART_NIGHT_STUDY.md",
+      "lines": 48,
+      "sha256_at_capture": "14a1cf218839121ec6957ecc1385237c8d91b7602b91f4b80f3d2d47cb15713a",
+      "group": "lighting",
+      "review_scope": "structure_and_status_inventory_with_selected_sections"
+    },
+    {
+      "path": "docs/HESPERIDES_REFERENCE_REBUILD.md",
+      "lines": 74,
+      "sha256_at_capture": "d1288630699fc7fc8dc2fba4b26e54d23741fa5e76726bacb5742656585a51b0",
+      "group": "lighting",
+      "review_scope": "structure_and_status_inventory_with_selected_sections"
+    },
+    {
+      "path": "docs/HESPERIDES_STAGE_RENDERING.md",
+      "lines": 100,
+      "sha256_at_capture": "0f4f28adc1731629b359ecd9120c6fc6ec9b6fe424600fd0ad00ac7f090d5101",
+      "group": "lighting",
+      "review_scope": "structure_and_status_inventory_with_selected_sections"
+    },
+    {
+      "path": "docs/HESPERIDES_AUTHOR_SETUP.md",
+      "lines": 79,
+      "sha256_at_capture": "ba059f0edba5a74d0187a028372f6322ca0ac7c3fddb6c024250661b8a0beb73",
+      "group": "lighting",
+      "review_scope": "structure_and_status_inventory_with_selected_sections"
+    },
+    {
+      "path": "docs/CLEAR_LIGHT_AND_GRADING.md",
+      "lines": 67,
+      "sha256_at_capture": "72ca77c4e18b40986437c6994a2c816639da1d55cd2ebd8818b1af5ddca258d7",
+      "group": "lighting",
+      "review_scope": "structure_and_status_inventory_with_selected_sections"
+    },
+    {
+      "path": "docs/QUALITY_LIGHTING_LAB.md",
+      "lines": 62,
+      "sha256_at_capture": "4aef37749accc07321fb0bbcb5b2538ccd613acc2b8fa82e295c83369ca91ec4",
+      "group": "lighting",
+      "review_scope": "structure_and_status_inventory_with_selected_sections"
+    },
+    {
+      "path": "docs/STAGE_SEARCH.md",
+      "lines": 98,
+      "sha256_at_capture": "9b0fa5dd121e5ad6a35ebd2acceaa5e0bdf4d515cc04cd74f5772c8cd9ed586e",
+      "group": "lighting",
+      "review_scope": "structure_and_status_inventory_with_selected_sections"
+    },
+    {
+      "path": "docs/DUET_CAPTION_STABILITY_AND_LIGHTING.md",
+      "lines": 88,
+      "sha256_at_capture": "4348a21a8431693f81200e4eab39ea327e79e4a13e682c0caf863c9b09087351",
+      "group": "post",
+      "review_scope": "structure_and_status_inventory_with_selected_sections"
+    },
+    {
+      "path": "docs/STYLE_PRESETS.md",
+      "lines": 133,
+      "sha256_at_capture": "96c913b3ce6c61cff9ef2fac165b1def7b99bbffa82d8ebbc7f891a5e4b09c0d",
+      "group": "post",
+      "review_scope": "structure_and_status_inventory_with_selected_sections"
+    },
+    {
+      "path": "docs/ADVANCED_MMD_SUBTITLES.md",
+      "lines": 105,
+      "sha256_at_capture": "4a53b27f304274179145e5514567f240152daa4fe1651c7797f4c4cac36c5f9f",
+      "group": "post",
+      "review_scope": "structure_and_status_inventory_with_selected_sections"
+    },
+    {
+      "path": "docs/SUBTITLE_DELIVERY.md",
+      "lines": 28,
+      "sha256_at_capture": "7826ada5fc73593ebb42fb9be8ca74e42264a97bf5d20b1627f88e099421926a",
+      "group": "post",
+      "review_scope": "structure_and_status_inventory_with_selected_sections"
+    },
+    {
+      "path": "docs/PRODUCTION_WORKFLOW.md",
+      "lines": 50,
+      "sha256_at_capture": "c595c25ca8bd9a7df30356430202a4b663ba4bf91e29a6ff5d8e926171713147",
+      "group": "production",
+      "review_scope": "focused_prose_review",
+      "pre_reorganization_snapshot": "docs/history/2026-11-13/PRODUCTION_WORKFLOW.snapshot.md"
+    },
+    {
+      "path": "docs/PRODUCTION_TECHNIQUES.md",
+      "lines": 92,
+      "sha256_at_capture": "635618d1fe0ee38c8eba180bf751847526a914c8e3b2321333326886c8e735eb",
+      "group": "production",
+      "review_scope": "structure_and_status_inventory_with_selected_sections"
+    },
+    {
+      "path": "docs/DUET_FULL_PRODUCTION.md",
+      "lines": 86,
+      "sha256_at_capture": "cf7e22ea81dad31cff7a4ef796c129ef1b0cefa45d74a9bca04cadf618427b8f",
+      "group": "production",
+      "review_scope": "structure_and_status_inventory_with_selected_sections"
+    },
+    {
+      "path": "docs/CAMERA_SEARCH.md",
+      "lines": 59,
+      "sha256_at_capture": "6fac486d1f97c63834b55e79a78c09da2bc9f6bbca0ffb9a5ba5cf0f92255bad",
+      "group": "production",
+      "review_scope": "structure_and_status_inventory_with_selected_sections"
+    },
+    {
+      "path": "docs/AUDIO_CONVERSION.md",
+      "lines": 77,
+      "sha256_at_capture": "383752ccc116344f8933390786bd94ef31d5dafe6ca6e49892615ee7cb027aaa",
+      "group": "production",
+      "review_scope": "structure_and_status_inventory_with_selected_sections"
+    },
+    {
+      "path": "docs/FINAL_DELIVERY.md",
+      "lines": 59,
+      "sha256_at_capture": "4aa0234cda9380fd1b5a2cfb122f2223e5519ca079d605739d080c726f60e418",
+      "group": "production",
+      "review_scope": "structure_and_status_inventory_with_selected_sections"
+    },
+    {
+      "path": "docs/FIRST_TRIAL.md",
+      "lines": 33,
+      "sha256_at_capture": "fda8a22e62a7f12aea0db1d886c8ff68093f9af81ca706498e78e490bb96bb17",
+      "group": "production",
+      "review_scope": "structure_and_status_inventory_with_selected_sections"
+    },
+    {
+      "path": "docs/GOSARI_REFERENCE.md",
+      "lines": 24,
+      "sha256_at_capture": "879570ddfc780b0de26122c49de15fd6f5c68964d742fb7c392564b2ebc79e45",
+      "group": "reference",
+      "review_scope": "structure_and_status_inventory_with_selected_sections"
+    },
+    {
+      "path": "docs/GUANHAIZI_REFERENCE.md",
+      "lines": 41,
+      "sha256_at_capture": "fed304827097f3f6486867b0164ece6258f07580f4f976f8b03d8b37c86311c5",
+      "group": "reference",
+      "review_scope": "structure_and_status_inventory_with_selected_sections"
+    },
+    {
+      "path": "docs/TUTORIAL_STUDY.md",
+      "lines": 85,
+      "sha256_at_capture": "221368e67b023d84e68b316da96d874424511f4308fa98c12d05275e23042562",
+      "group": "reference",
+      "review_scope": "structure_and_status_inventory_with_selected_sections"
+    },
+    {
+      "path": "docs/NEXT_QUALITY_REVIEW.md",
+      "lines": 31,
+      "sha256_at_capture": "9d0650f7da56cc509a97a699fbe03f291d614749f8eb51e2383c69e928977ea6",
+      "group": "reference",
+      "review_scope": "focused_prose_review"
+    },
+    {
+      "path": "docs/LOCAL_ENVIRONMENT.md",
+      "lines": 60,
+      "sha256_at_capture": "6fbbc4b943c4683aaecb026cf752ecb97d0271a8cdbbd2fd46e95558de3eeda6",
+      "group": "tools",
+      "review_scope": "focused_prose_review"
+    },
+    {
+      "path": "docs/TUTORIAL_TRANSCRIPTION.md",
+      "lines": 29,
+      "sha256_at_capture": "49fe87c805ce736a901d99fd666b12f3effa984893429067dc9218b6a8aab9ef",
+      "group": "tools",
+      "review_scope": "structure_and_status_inventory_with_selected_sections"
+    },
+    {
+      "path": "docs/CREDITS.md",
+      "lines": 12,
+      "sha256_at_capture": "be5a1d16d2bf0902bb8e1c42a6a6e74caf1b9656451f34b39b51ed656e20e4cb",
+      "group": "rights",
+      "review_scope": "structure_and_status_inventory_with_selected_sections"
+    },
+    {
+      "path": "docs/CREDITS_FRANKEN_DUET.md",
+      "lines": 22,
+      "sha256_at_capture": "9fea6e01d05a1412fb3560fb347f7a95cc1e45f4de67943ae3875cb92a9d0f40",
+      "group": "rights",
+      "review_scope": "structure_and_status_inventory_with_selected_sections"
+    },
+    {
+      "path": "docs/GALLERY_GUIDE.md",
+      "lines": 46,
+      "sha256_at_capture": "2625c0bb9c154f289d51f2713a7c53282f9ced46d6ecbeff33d9f9f1cd6b5a86",
+      "group": "maintenance_auto",
+      "review_scope": "focused_prose_review"
+    },
+    {
+      "path": "docs/KNOWLEDGE_INDEX.md",
+      "lines": 75,
+      "sha256_at_capture": "0c90036686e2bb63c44fd2deb87a3784df673ee3a7402484fd7926fc3d34d45d",
+      "group": "maintenance_auto",
+      "review_scope": "focused_prose_review",
+      "pre_reorganization_snapshot": "docs/history/2026-11-13/KNOWLEDGE_INDEX.snapshot.md"
+    },
+    {
+      "path": "docs/PRODUCTION_HISTORY_CONTEXT.md",
+      "lines": 13,
+      "sha256_at_capture": "f247aa859139d8c93ab611a8a2fd3dbe18b3fbf2da1b2d2fc453d1cc7b8753cf",
+      "group": "maintenance_auto",
+      "review_scope": "focused_prose_review"
+    }
+  ],
+  "preset_inventory": [
+    {
+      "path": "presets/projects/franken-duet-full-v1.json",
+      "lines": 321,
+      "sha256_at_capture": "153e2e4c8cba66098e1a5ef1989542033751a574b10606c543350a23061abbc3",
+      "category": "projects",
+      "preset_id": "franken-duet-full-v1",
+      "review_scope": "JSON and file inventory, not a new render"
+    },
+    {
+      "path": "presets/quality/aether-hall-surface-v1.json",
+      "lines": 283,
+      "sha256_at_capture": "2907f45af86048d85f254dd701fbe97bfa5792757f5d63c74adb3e8152d5bb49",
+      "category": "quality",
+      "preset_id": "aether-hall-surface-v1",
+      "review_scope": "JSON and file inventory, not a new render"
+    },
+    {
+      "path": "presets/quality/duet-graphic-self-shadow-v1.json",
+      "lines": 9,
+      "sha256_at_capture": "4f9754da4b66f84b2a9949624a340ac19b046257767effe78111da5b9d0b6090",
+      "category": "quality",
+      "preset_id": "duet-graphic-self-shadow-v1",
+      "review_scope": "JSON and file inventory, not a new render"
+    },
+    {
+      "path": "presets/quality/duet-light-space-v1.json",
+      "lines": 64,
+      "sha256_at_capture": "da5303f0aeafd2a1bdcaa071dea275f9fa7f0c076932023b227f388404f3832b",
+      "category": "quality",
+      "preset_id": "duet-light-space-v1",
+      "review_scope": "JSON and file inventory, not a new render"
+    },
+    {
+      "path": "presets/quality/half-lambert-v1.json",
+      "lines": 17,
+      "sha256_at_capture": "c1e9dff596dc9908b0cc3c9e04388d1e202214d809f97445d26de5a47b17fd0e",
+      "category": "quality",
+      "preset_id": "half-lambert-gradient-v1",
+      "review_scope": "JSON and file inventory, not a new render"
+    },
+    {
+      "path": "presets/quality/npr-detail-lab-v1.json",
+      "lines": 8,
+      "sha256_at_capture": "0e960d123aa80474d1baf26da1d4e1ee1a29e0eaeddcd417c1590d7953b6fa85",
+      "category": "quality",
+      "preset_id": null,
+      "review_scope": "JSON and file inventory, not a new render"
+    },
+    {
+      "path": "presets/quality/outlines-v1.json",
+      "lines": 6,
+      "sha256_at_capture": "851ff9c8f457d4fe375ba5405d92225070b9a24aeafbffe20547e4ccc023157a",
+      "category": "quality",
+      "preset_id": "aksiniya-readable-ink-v1",
+      "review_scope": "JSON and file inventory, not a new render"
+    },
+    {
+      "path": "presets/quality/outlines-v2-face-black.json",
+      "lines": 20,
+      "sha256_at_capture": "18903338799993c1b6369ea8ac6fd8b1cd58f4593505d5cba2ed27e09aa229c8",
+      "category": "quality",
+      "preset_id": "aksiniya-readable-face-ink-v2",
+      "review_scope": "JSON and file inventory, not a new render"
+    },
+    {
+      "path": "presets/quality/surface-refinement-v1.json",
+      "lines": 9,
+      "sha256_at_capture": "b504046584d93e7af3c076f3e29fe0fe5c488e1ebc8258002aa62bb9de4e0041",
+      "category": "quality",
+      "preset_id": "aksiniya-surface-refinement-v1",
+      "review_scope": "JSON and file inventory, not a new render"
+    },
+    {
+      "path": "presets/quality/surface-refinement-v2.json",
+      "lines": 10,
+      "sha256_at_capture": "247edae545a75dc9b72bb6350e935270f2378f7ffc04cfa32bbc1f85b2e49b63",
+      "category": "quality",
+      "preset_id": "aksiniya-surface-refinement-v2",
+      "review_scope": "JSON and file inventory, not a new render"
+    },
+    {
+      "path": "presets/quality/winter-wedding-clear-light-v1.json",
+      "lines": 18,
+      "sha256_at_capture": "9133595b4bb01c615ea9e7511ed281c9ec32cf56f201d50223dfcecddf0d74a9",
+      "category": "quality",
+      "preset_id": "winter-wedding-clear-light-v1",
+      "review_scope": "JSON and file inventory, not a new render"
+    },
+    {
+      "path": "presets/recipes/duet-blue-gold-wedding-v1.json",
+      "lines": 40,
+      "sha256_at_capture": "dda7da180b19a1fba5c02e7cdc17a5915849ab22909d246fd77e14efa3e090b6",
+      "category": "recipes",
+      "preset_id": "duet-blue-gold-wedding-v1",
+      "review_scope": "JSON and file inventory, not a new render"
+    },
+    {
+      "path": "presets/recipes/duet-captions-focused-v1.json",
+      "lines": 33,
+      "sha256_at_capture": "21eb56a3574bf4c40292f24e47d164676f5d6e6cd96cdfc64498c5a3618e5c13",
+      "category": "recipes",
+      "preset_id": "duet-captions-focused-v1",
+      "review_scope": "JSON and file inventory, not a new render"
+    },
+    {
+      "path": "presets/recipes/duet-grounded-color-v1.json",
+      "lines": 67,
+      "sha256_at_capture": "dd1fc62cbb7f57eb0567bbf66db2d57dbd65177f11aa8543608d8d70c64203ab",
+      "category": "recipes",
+      "preset_id": "duet-grounded-color-v1",
+      "review_scope": "JSON and file inventory, not a new render"
+    },
+    {
+      "path": "presets/recipes/duet-light-space-v1.json",
+      "lines": 35,
+      "sha256_at_capture": "6496c5f0791cb1b7e3a20132d8e55a3758cfc3e3c13febbb1b57a1465c5d51b9",
+      "category": "recipes",
+      "preset_id": "duet-light-space-v1",
+      "review_scope": "JSON and file inventory, not a new render"
+    },
+    {
+      "path": "presets/recipes/duet-soft-top-rim-v1.json",
+      "lines": 40,
+      "sha256_at_capture": "951006025e37c3887b283267edd75e448ba018e1b8db4722bf60ff4cc8f6cffa",
+      "category": "recipes",
+      "preset_id": "duet-soft-top-rim-v1",
+      "review_scope": "JSON and file inventory, not a new render"
+    },
+    {
+      "path": "presets/recipes/genshin-duet-hall-v3.json",
+      "lines": 14,
+      "sha256_at_capture": "8bd0a81b2ae407b9f6945b187cdc1eaa9f6cedef2c9fde9492c806557cff254b",
+      "category": "recipes",
+      "preset_id": "genshin-duet-hall-v3",
+      "review_scope": "JSON and file inventory, not a new render"
+    },
+    {
+      "path": "presets/recipes/hesperides-fox-cinema-v1.json",
+      "lines": 52,
+      "sha256_at_capture": "d669d1713c8cf1c5e4f471ce52eba1a27cabca4398138170c8b9c9872aff1d73",
+      "category": "recipes",
+      "preset_id": "hesperides-fox-cinema-v1",
+      "review_scope": "JSON and file inventory, not a new render"
+    },
+    {
+      "path": "presets/recipes/hesperides-stageart-v2.json",
+      "lines": 90,
+      "sha256_at_capture": "5b1c57fd868fe5a8ef232c0a95a7c4c2e6e623e1ae6fbce3710b891c21b25614",
+      "category": "recipes",
+      "preset_id": "hesperides-stageart-v2",
+      "review_scope": "JSON and file inventory, not a new render"
+    },
+    {
+      "path": "presets/recipes/wuwa-hair-lab-v1.json",
+      "lines": 14,
+      "sha256_at_capture": "327ad3a4a64102d05aef4e9a553ac97fc877236e74ebf847d5a80adfadb8b0f6",
+      "category": "recipes",
+      "preset_id": "wuwa-hair-lab-v1",
+      "review_scope": "JSON and file inventory, not a new render"
+    },
+    {
+      "path": "presets/stages/hesperides-blue-gold-wedding-v1.json",
+      "lines": 109,
+      "sha256_at_capture": "ba61fef4c8d53190358a0157ee4f72c08cbc01d119206f9d6b7eaed239fba71e",
+      "category": "stages",
+      "preset_id": "hesperides-blue-gold-wedding-v1",
+      "review_scope": "JSON and file inventory, not a new render"
+    },
+    {
+      "path": "presets/stages/hesperides-bright-ray-reference-v2.json",
+      "lines": 28,
+      "sha256_at_capture": "df0b11bfbc0267ccdd7a6eb955c231c0d177ac18fd7ec088c87b4049a8fbb9d1",
+      "category": "stages",
+      "preset_id": "hesperides-bright-ray-reference-v2",
+      "review_scope": "JSON and file inventory, not a new render"
+    },
+    {
+      "path": "presets/stages/hesperides-focused-light-v3.json",
+      "lines": 17,
+      "sha256_at_capture": "6bc156c198a316bf24e02f5f17bf7f5d47319449625f9afd976ff1f71273dddc",
+      "category": "stages",
+      "preset_id": "hesperides-focused-light-v3",
+      "review_scope": "JSON and file inventory, not a new render"
+    },
+    {
+      "path": "presets/stages/hesperides-fox-cinema-v1.json",
+      "lines": 22,
+      "sha256_at_capture": "ebedfa4032f730e722395a7abf603a89d1e4e6533a346f27cd10948d076772e9",
+      "category": "stages",
+      "preset_id": "hesperides-fox-cinema-v1",
+      "review_scope": "JSON and file inventory, not a new render"
+    },
+    {
+      "path": "presets/stages/hesperides-grounded-shadows-v1.json",
+      "lines": 7,
+      "sha256_at_capture": "6aca7c0dad597b2ea1e29d7bc58fd0b5a7b465c68684686e694e2c9cb995af67",
+      "category": "stages",
+      "preset_id": "hesperides-grounded-shadows-v1",
+      "review_scope": "JSON and file inventory, not a new render"
+    },
+    {
+      "path": "presets/stages/hesperides-moonlit-vows-v1.json",
+      "lines": 17,
+      "sha256_at_capture": "9457fe8f41e39e0c0b43a33f23daabcc8579401b6ccb711012aee5752f0222b0",
+      "category": "stages",
+      "preset_id": "hesperides-moonlit-vows-v1",
+      "review_scope": "JSON and file inventory, not a new render"
+    },
+    {
+      "path": "presets/stages/hesperides-ray-reference-v1.json",
+      "lines": 372,
+      "sha256_at_capture": "e69bc55f89c632edc037a32d1737e21b4931f7620997ecfbc50df27ccca4a5be",
+      "category": "stages",
+      "preset_id": "hesperides-ray-reference-v1",
+      "review_scope": "JSON and file inventory, not a new render"
+    },
+    {
+      "path": "presets/stages/hesperides-soft-top-rim-v1.json",
+      "lines": 119,
+      "sha256_at_capture": "f4bed091fda5cd5d3acf4a5d9f1fece09dcd4f34bd30d030f4c6ec900c576144",
+      "category": "stages",
+      "preset_id": "hesperides-soft-top-rim-v1",
+      "review_scope": "JSON and file inventory, not a new render"
+    },
+    {
+      "path": "presets/stages/hesperides-stageart-v2.json",
+      "lines": 25,
+      "sha256_at_capture": "f673d6d3e0a4f87cc17d4fd134b9afa72db23453ded4e76075e9ca649edcd67a",
+      "category": "stages",
+      "preset_id": "hesperides-stageart-v2",
+      "review_scope": "JSON and file inventory, not a new render"
+    },
+    {
+      "path": "presets/stages/hesperides-winter-wedding-v1.json",
+      "lines": 33,
+      "sha256_at_capture": "38a3961d4c0e4b237e98792d8d789fa7fadc3c423952ab534002fde218b12994",
+      "category": "stages",
+      "preset_id": "hesperides-winter-wedding-v1",
+      "review_scope": "JSON and file inventory, not a new render"
+    },
+    {
+      "path": "presets/styles/catalog.json",
+      "lines": 17,
+      "sha256_at_capture": "7fe6593851f3b0e067a173b720c4d22fdf45db760f1a61311912353681fcf259",
+      "category": "styles",
+      "preset_id": null,
+      "review_scope": "JSON and file inventory, not a new render"
+    },
+    {
+      "path": "presets/styles/packages/gosari-landscape-v1.json",
+      "lines": 11,
+      "sha256_at_capture": "f9af7fa93b3c12db8bb0687f9298815a050d632ab0a8a716d9adec33205abe7a",
+      "category": "styles",
+      "preset_id": "gosari-landscape-v1",
+      "review_scope": "JSON and file inventory, not a new render"
+    },
+    {
+      "path": "presets/styles/packages/gosari-portrait-v1.json",
+      "lines": 11,
+      "sha256_at_capture": "98b9c4c9617e402faa67da5a145d14e16d0efa7f207731f5767e3aaf77f07ee4",
+      "category": "styles",
+      "preset_id": "gosari-portrait-v1",
+      "review_scope": "JSON and file inventory, not a new render"
+    },
+    {
+      "path": "presets/styles/packages/guanhaizi-graphic-landscape-v1.json",
+      "lines": 11,
+      "sha256_at_capture": "a11978472f62517c1710e396be442d6d18d0263f5b58f78633e5bd2a20bd8645",
+      "category": "styles",
+      "preset_id": "guanhaizi-graphic-landscape-v1",
+      "review_scope": "JSON and file inventory, not a new render"
+    },
+    {
+      "path": "presets/styles/packages/guanhaizi-graphic-portrait-v1.json",
+      "lines": 11,
+      "sha256_at_capture": "ca58e89c7c10c8ad281dfd8900a77b69e6a5ab9e2a27319b05501149a3ad1ea9",
+      "category": "styles",
+      "preset_id": "guanhaizi-graphic-portrait-v1",
+      "review_scope": "JSON and file inventory, not a new render"
+    },
+    {
+      "path": "presets/styles/packages/guanhaizi-neon-landscape-v1.json",
+      "lines": 11,
+      "sha256_at_capture": "24c4d36500552c765fdbeb9cddd28e435b91389de17068ee8735727d948fc67d",
+      "category": "styles",
+      "preset_id": "guanhaizi-neon-landscape-v1",
+      "review_scope": "JSON and file inventory, not a new render"
+    },
+    {
+      "path": "presets/styles/packages/guanhaizi-neon-portrait-v1.json",
+      "lines": 11,
+      "sha256_at_capture": "066b5c3d8c8797f8e669a87e7c2d28950116efcb0e198fbfe1d172c61fd8af2a",
+      "category": "styles",
+      "preset_id": "guanhaizi-neon-portrait-v1",
+      "review_scope": "JSON and file inventory, not a new render"
+    },
+    {
+      "path": "presets/styles/post/gosari-soft-v1.json",
+      "lines": 10,
+      "sha256_at_capture": "d3c0fb920973eb1ccad7502b71a2bec1918e8f917a952b32014f95ee4c0a7ece",
+      "category": "styles",
+      "preset_id": "gosari-soft-post-v1",
+      "review_scope": "JSON and file inventory, not a new render"
+    },
+    {
+      "path": "presets/styles/post/guanhaizi-graphic-v1.json",
+      "lines": 10,
+      "sha256_at_capture": "1533f20253326adaadedc69c4c42c645983c687c3a36d9524ae6072634498ee0",
+      "category": "styles",
+      "preset_id": "guanhaizi-graphic-post-v1",
+      "review_scope": "JSON and file inventory, not a new render"
+    },
+    {
+      "path": "presets/styles/post/guanhaizi-neon-v1.json",
+      "lines": 10,
+      "sha256_at_capture": "10bc6cc4e47e173f809e883e391adcf842d332825bbb70aa6b51659d3e3ed9ac",
+      "category": "styles",
+      "preset_id": "guanhaizi-neon-post-v1",
+      "review_scope": "JSON and file inventory, not a new render"
+    },
+    {
+      "path": "presets/styles/render/gosari-soft-v1.json",
+      "lines": 25,
+      "sha256_at_capture": "f860c78c565972d3cb89fe6afb00af190b9f6c3cb4c796cc1e512002ab1b9006",
+      "category": "styles",
+      "preset_id": "gosari-soft-render-v1",
+      "review_scope": "JSON and file inventory, not a new render"
+    },
+    {
+      "path": "presets/styles/render/guanhaizi-graphic-v1.json",
+      "lines": 25,
+      "sha256_at_capture": "437f41888b53fb68b7801cc44c5906262de41d74f133ab5e9a9ab3a992703096",
+      "category": "styles",
+      "preset_id": "guanhaizi-graphic-render-v1",
+      "review_scope": "JSON and file inventory, not a new render"
+    },
+    {
+      "path": "presets/styles/render/guanhaizi-neon-v1.json",
+      "lines": 25,
+      "sha256_at_capture": "8a088979d68acece80e0ee195881b18dd908f90af2171df88b95d10883c6811b",
+      "category": "styles",
+      "preset_id": "guanhaizi-neon-render-v1",
+      "review_scope": "JSON and file inventory, not a new render"
+    },
+    {
+      "path": "presets/typography/duet-blue-gold-wedding-v1.json",
+      "lines": 146,
+      "sha256_at_capture": "3677e57a947c98b4487d2f3e479d6fb034805505af240a7f4e1ade6099b1c2f8",
+      "category": "typography",
+      "preset_id": "duet-blue-gold-wedding-v1",
+      "review_scope": "JSON and file inventory, not a new render"
+    },
+    {
+      "path": "presets/typography/duet-official-locked-v2.json",
+      "lines": 107,
+      "sha256_at_capture": "d284307acefa8e666502dcf9e21d8010708bf632a32922ed3622e4dae14f8b22",
+      "category": "typography",
+      "preset_id": "duet-official-locked-v2",
+      "review_scope": "JSON and file inventory, not a new render"
+    },
+    {
+      "path": "presets/typography/landscape-study.json",
+      "lines": 15,
+      "sha256_at_capture": "52395acd4aa2e6f0969a49d0a1c25495f78e914fda2fa5a0661089cb275694d9",
+      "category": "typography",
+      "preset_id": null,
+      "review_scope": "JSON and file inventory, not a new render"
+    },
+    {
+      "path": "presets/typography/portrait-study.json",
+      "lines": 16,
+      "sha256_at_capture": "a54dcc9862c58611bd226336281c34500a0f93706f1ef06afc787bc21558c6e1",
+      "category": "typography",
+      "preset_id": null,
+      "review_scope": "JSON and file inventory, not a new render"
+    },
+    {
+      "path": "presets/typography/portrait-surface-study.json",
+      "lines": 18,
+      "sha256_at_capture": "2ebaa6c959c643cbf1bda1ce09aecc3d89eaac7e837c80ce8d19905efedc466b",
+      "category": "typography",
+      "preset_id": null,
+      "review_scope": "JSON and file inventory, not a new render"
+    }
+  ],
+  "script_inventory": [
+    {
+      "path": "scripts/__init__.py",
+      "lines": 1,
+      "sha256_at_capture": "7743d18cbc2fb7d3d21670dda8462c44a62172f505b41599afdc8d7500f76718",
+      "module_summary": "Local command-line helpers for blender-mmd-codex.",
+      "role_hint": "utility",
+      "review_scope": "module_summary_and_filename"
+    },
+    {
+      "path": "scripts/abnormal_probe.py",
+      "lines": 41,
+      "sha256_at_capture": "4d56f991aac592042330a869674c58b9cac3674d79730aa6e4b5dc1a445cd135",
+      "module_summary": "Temporarily register a pinned Abnormal source in an isolated process.",
+      "role_hint": "probe_or_study",
+      "review_scope": "module_summary_and_filename"
+    },
+    {
+      "path": "scripts/aether_look_revision.py",
+      "lines": 439,
+      "sha256_at_capture": "cbb47705a2b267703a9aad79a31a60e969fdd07d3c1e19d0f4d15537161567fa",
+      "module_summary": "Rebuild Aether's own face, eyes, hair and masked outfit surfaces.",
+      "role_hint": "utility",
+      "review_scope": "module_summary_and_filename"
+    },
+    {
+      "path": "scripts/aether_material_audit.py",
+      "lines": 95,
+      "sha256_at_capture": "60c81282d5e9c438fc2287d492bce27b7041d5b4a681e32882160259c151bd52",
+      "module_summary": "Inspect Aether's actual source materials and export supplied packed textures.",
+      "role_hint": "utility",
+      "review_scope": "module_summary_and_filename"
+    },
+    {
+      "path": "scripts/align_caption_audio.py",
+      "lines": 93,
+      "sha256_at_capture": "25aad5aee60a2fa6d852cb9221d7d5f548e996fcef7f30bf0e1688832f0b1cdd",
+      "module_summary": "Measure a typography video's audio offset against the selected original BGM.",
+      "role_hint": "utility",
+      "review_scope": "module_summary_and_filename"
+    },
+    {
+      "path": "scripts/align_duet_audio.py",
+      "lines": 66,
+      "sha256_at_capture": "e4e5a3b13f37b00813ffef3594e3fb0ad1a3e9f37c33bd084e1be06972bece61",
+      "module_summary": "Estimate the MV-intro offset from original vocal/inst audio and VMD mouth tracks.",
+      "role_hint": "utility",
+      "review_scope": "module_summary_and_filename"
+    },
+    {
+      "path": "scripts/align_typography.py",
+      "lines": 124,
+      "sha256_at_capture": "cdc9e9e159711dd15be6da8e93cfea1528dfdda1cdaab22dcf1575f9d7d56ef1",
+      "module_summary": "Estimate a typography excerpt's origin in a longer typography video.",
+      "role_hint": "utility",
+      "review_scope": "module_summary_and_filename"
+    },
+    {
+      "path": "scripts/apply_fox_cinema.py",
+      "lines": 377,
+      "sha256_at_capture": "801721e3405aac7f7d51d892f757fd0848272266147cb9462e8e3103193aef56",
+      "module_summary": "Build an independent lighting, focus and shutter study from the repaired master.",
+      "role_hint": "preparation_or_migration",
+      "review_scope": "module_summary_and_filename"
+    },
+    {
+      "path": "scripts/apply_fox_stageart.py",
+      "lines": 415,
+      "sha256_at_capture": "581d818c8443e016e05e05bfe1844aaabb0d002f1e214b93ef560d1491de4deb",
+      "module_summary": "Develop the reviewed fox study into a shadowed, spatially coherent stage.",
+      "role_hint": "preparation_or_migration",
+      "review_scope": "module_summary_and_filename"
+    },
+    {
+      "path": "scripts/assemble_render_chunks.py",
+      "lines": 94,
+      "sha256_at_capture": "ab9f9402a885dc5409809a8db2988f0576faae9a20bf49c1a527e485eca993f0",
+      "module_summary": "Join independently rendered, contiguous video chunks without recompression.",
+      "role_hint": "utility",
+      "review_scope": "module_summary_and_filename"
+    },
+    {
+      "path": "scripts/audit_review_color.py",
+      "lines": 123,
+      "sha256_at_capture": "0e345405cd0843686fa38e9e15e461c641548be9a524020998221b23bf83b74a",
+      "module_summary": "Compare actual compositor RGB with explicitly decoded video color matrices.",
+      "role_hint": "verification",
+      "review_scope": "module_summary_and_filename"
+    },
+    {
+      "path": "scripts/audit_stage_archive.py",
+      "lines": 152,
+      "sha256_at_capture": "9d6ed2c3c1561caa779d2667811fe4e905628da696922d9761f028c3a8acfd80",
+      "module_summary": "Test/extract a downloaded stage archive and compare it with existing assets.",
+      "role_hint": "verification",
+      "review_scope": "module_summary_and_filename"
+    },
+    {
+      "path": "scripts/blender_bootstrap.py",
+      "lines": 97,
+      "sha256_at_capture": "7fe5447dc1aad059e7f22653136117dfec2f4c0a9a0bed332bca2077bc922246",
+      "module_summary": "Coordinate Blender detection, verified portable installation, and validation.",
+      "role_hint": "environment",
+      "review_scope": "module_summary_and_filename"
+    },
+    {
+      "path": "scripts/blender_detect.py",
+      "lines": 173,
+      "sha256_at_capture": "c9e9d94bf27511fbaa1a16bb54b352b7604b269e5fb917584b5e4ed76ed4d356",
+      "module_summary": "Detect installed Blender executables without modifying the host system.",
+      "role_hint": "environment",
+      "review_scope": "module_summary_and_filename"
+    },
+    {
+      "path": "scripts/blender_download.py",
+      "lines": 167,
+      "sha256_at_capture": "72d9be4d17cce8afa6bf47cebf45a6e94845c4a543f43cfb926961aa8f02d080",
+      "module_summary": "Build official Blender release URLs and download files with SHA-256 verification.",
+      "role_hint": "environment",
+      "review_scope": "module_summary_and_filename"
+    },
+    {
+      "path": "scripts/blender_install.py",
+      "lines": 114,
+      "sha256_at_capture": "0ab2344be89c3005ee511e025152f6f288ea598326b21396b4f66d326a762472",
+      "module_summary": "Install Blender portable archives with path-traversal protection.",
+      "role_hint": "environment",
+      "review_scope": "module_summary_and_filename"
+    },
+    {
+      "path": "scripts/blender_inventory.py",
+      "lines": 137,
+      "sha256_at_capture": "6dc5d58897dec0a7d12fa36260cd94dc45f34a38bf461034461de6f3f255425d",
+      "module_summary": "Read installed/enabled MMD add-ons and registered APIs inside Blender.",
+      "role_hint": "environment",
+      "review_scope": "module_summary_and_filename"
+    },
+    {
+      "path": "scripts/blender_scene_audit.py",
+      "lines": 122,
+      "sha256_at_capture": "4dee9d9bb7cb631ef8737d909ac2b605c14f89c4f76a3de05972a0d6e08d7d63",
+      "module_summary": "Inspect a supplied scene without executing embedded scripts or saving it.",
+      "role_hint": "environment",
+      "review_scope": "module_summary_and_filename"
+    },
+    {
+      "path": "scripts/blender_validate.py",
+      "lines": 147,
+      "sha256_at_capture": "09012ac6070d811c3410360b137b28092ee08d950bf38d0847b40765eb88239a",
+      "module_summary": "Validate Blender, its Python API, and optionally this project's Add-on.",
+      "role_hint": "environment",
+      "review_scope": "module_summary_and_filename"
+    },
+    {
+      "path": "scripts/bowlroll_public_download.py",
+      "lines": 149,
+      "sha256_at_capture": "a968c8a8620c1d92ec5950228d41f826b8af066b6105ff3cdbd74dd048af8e78",
+      "module_summary": "Download an author-published BowlRoll package only when open and password-free.",
+      "role_hint": "utility",
+      "review_scope": "module_summary_and_filename"
+    },
+    {
+      "path": "scripts/brightness_scene_probe.py",
+      "lines": 128,
+      "sha256_at_capture": "d442258ab9747badc474b90e8a743c8aa134fa72cd0804547ae49d8f036c3756",
+      "module_summary": "Inspect reachable emission, lighting and color transforms on the same HDR frame.",
+      "role_hint": "probe_or_study",
+      "review_scope": "module_summary_and_filename"
+    },
+    {
+      "path": "scripts/build_gallery.py",
+      "lines": 325,
+      "sha256_at_capture": "ed9eae885d668aa5eb212c87d2b539f4a2a582889a674b45915039ffb067de59",
+      "module_summary": "Build the offline MMD Atlas from curated metadata and real local renders.",
+      "role_hint": "utility",
+      "review_scope": "selected_source_sections"
+    },
+    {
+      "path": "scripts/cinema_scene_probe.py",
+      "lines": 70,
+      "sha256_at_capture": "bf20fdbafc018837990ae9c501d8157f3097bf9f73031695646afcb130f4b1be",
+      "module_summary": "Read camera, lighting and motion controls without modifying the source file.",
+      "role_hint": "probe_or_study",
+      "review_scope": "module_summary_and_filename"
+    },
+    {
+      "path": "scripts/compare_look_frames.py",
+      "lines": 58,
+      "sha256_at_capture": "caaee2e880518cb6945b5907de4f178e69e1fb1b02b43c2f4fc0a180400bbfb6",
+      "module_summary": "Create an unretouched same-pose look comparison and a scene QA contact sheet.",
+      "role_hint": "utility",
+      "review_scope": "module_summary_and_filename"
+    },
+    {
+      "path": "scripts/composite_duet_official_captions.py",
+      "lines": 252,
+      "sha256_at_capture": "6ad8f5a21150aeb3fcf66f830633d2b8bfc5acc3e607364d886e7528f46d538a",
+      "module_summary": "Composite official caption groups onto native duet beauty/matte caches.",
+      "role_hint": "utility",
+      "review_scope": "module_summary_and_filename"
+    },
+    {
+      "path": "scripts/diagnose_actor_light.py",
+      "lines": 61,
+      "sha256_at_capture": "f13680e48c5489d5cc2c0f13622eb1064843458e35db129689056942dac32678",
+      "module_summary": "Measure the actual unclipped native actor illumination and material classes.",
+      "role_hint": "probe_or_study",
+      "review_scope": "module_summary_and_filename"
+    },
+    {
+      "path": "scripts/duet_engine_benchmark.py",
+      "lines": 71,
+      "sha256_at_capture": "fb300f819e3ff5d3191cf726c207264df5edce6c2b06f2fcd89b63499d8d298f",
+      "module_summary": "Measure full-frame EEVEE variants without changing animation or source file.",
+      "role_hint": "probe_or_study",
+      "review_scope": "module_summary_and_filename"
+    },
+    {
+      "path": "scripts/duet_region_probe.py",
+      "lines": 97,
+      "sha256_at_capture": "6d624136fdb742f841df4d2765baff2a00da9bd377410fa596c145d3002fbeb7",
+      "module_summary": "Compare native full and cropped renders before considering local revisions.",
+      "role_hint": "probe_or_study",
+      "review_scope": "module_summary_and_filename"
+    },
+    {
+      "path": "scripts/duet_render_benchmark.py",
+      "lines": 56,
+      "sha256_at_capture": "58612e52d47da53b2b6fc2c0264face93ff61447ef1218207a66f299d69eab7e",
+      "module_summary": "Measure full-resolution animation cost before the full-song render.",
+      "role_hint": "probe_or_study",
+      "review_scope": "module_summary_and_filename"
+    },
+    {
+      "path": "scripts/duet_source_preflight.py",
+      "lines": 182,
+      "sha256_at_capture": "215075fa1ecf61a4e3784c9dd6ad8cf7267d1e45fa8d5574d3b07b9e6033780b",
+      "module_summary": "Read duet source data using the installed MMD Tools PMX/VMD readers.",
+      "role_hint": "utility",
+      "review_scope": "module_summary_and_filename"
+    },
+    {
+      "path": "scripts/encode_review_cache.py",
+      "lines": 71,
+      "sha256_at_capture": "7a7f90e601fda508cf4f0bf830e9555d2ea4eb923f2f383d645bb3e10ef9ee76",
+      "module_summary": "Encode native display-sRGB beauty caches with an explicit SDR color contract.",
+      "role_hint": "utility",
+      "review_scope": "module_summary_and_filename"
+    },
+    {
+      "path": "scripts/export_linear_pipeline.py",
+      "lines": 291,
+      "sha256_at_capture": "24ae47d48b32d5773016b2f433c694b6ca359565601d9323e9a07f69970a192d",
+      "module_summary": "Validate native RGBA layers, a signed interaction pass and linear archives.",
+      "role_hint": "utility",
+      "review_scope": "module_summary_and_filename"
+    },
+    {
+      "path": "scripts/extract_tutorial_overlays.py",
+      "lines": 95,
+      "sha256_at_capture": "3e871e3c5966bee56b78bda77baf5a7259ce1ce07319749d36ea8367c8fed08d",
+      "module_summary": "Read colored on-screen annotations from a local tutorial at sampled times.",
+      "role_hint": "utility",
+      "review_scope": "module_summary_and_filename"
+    },
+    {
+      "path": "scripts/fetch_public_bilibili_study.py",
+      "lines": 116,
+      "sha256_at_capture": "b74eb5921e8b4814c54d2507d7f5833b2078d054d407177cdb6be0f8c1f8566d",
+      "module_summary": "Retrieve normally accessible public tutorial metadata/media for private study.",
+      "role_hint": "utility",
+      "review_scope": "module_summary_and_filename"
+    },
+    {
+      "path": "scripts/finalize_face_contract.py",
+      "lines": 59,
+      "sha256_at_capture": "6426beda37b537d11688df4db348f0dc09c7c05d3b09dd7da0196d119b26fbdc",
+      "module_summary": "Fix the adapted Face Factor's incoming-vector contract in a new master.",
+      "role_hint": "preparation_or_migration",
+      "review_scope": "module_summary_and_filename"
+    },
+    {
+      "path": "scripts/finish_grounded_review.py",
+      "lines": 163,
+      "sha256_at_capture": "2c770d8066348b2fffcf92de3bbea08fbe42827c5763ad6eb0de6384e165280a",
+      "module_summary": "Finish the bounded shadow review after its native renderer has completed.",
+      "role_hint": "utility",
+      "review_scope": "selected_source_sections"
+    },
+    {
+      "path": "scripts/fit_reference_camera.py",
+      "lines": 166,
+      "sha256_at_capture": "e10ef621bd7040a4f4856f20e292cc86c02b0e3745813e4e6d204c6928b6fc84",
+      "module_summary": "Match architectural texture features and estimate a research camera pose.",
+      "role_hint": "utility",
+      "review_scope": "module_summary_and_filename"
+    },
+    {
+      "path": "scripts/fit_stage_grade.py",
+      "lines": 78,
+      "sha256_at_capture": "9fa60b60b9a4a33308e6478e68946a3d0f9d1c3761c384d2dd9ef21beffb1d2b",
+      "module_summary": "Fit global, monotonic RGB grading curves from a stage render and reference.",
+      "role_hint": "utility",
+      "review_scope": "module_summary_and_filename"
+    },
+    {
+      "path": "scripts/genshin_character_probe.py",
+      "lines": 135,
+      "sha256_at_capture": "70a89fdef8a7c25bf1555330194481ff73ff654c5fdc31c87543c233adc8d34f",
+      "module_summary": "Inventory actual duet material inputs before adapting game-style shading.",
+      "role_hint": "probe_or_study",
+      "review_scope": "module_summary_and_filename"
+    },
+    {
+      "path": "scripts/genshin_library_probe.py",
+      "lines": 108,
+      "sha256_at_capture": "e972ee2f4ce50578bddae5b3df0a57f3d8f5a046aab4e8140f88f6ead7bda612",
+      "module_summary": "Read festivities' downloaded node library without executing embedded code.",
+      "role_hint": "probe_or_study",
+      "review_scope": "module_summary_and_filename"
+    },
+    {
+      "path": "scripts/genshin_material_adapt.py",
+      "lines": 268,
+      "sha256_at_capture": "b9ac975d08fa1686d426c89f8cf3eca7ff0d793163be340b8d09cce3deb47c0c",
+      "module_summary": "Adapt downloaded shader components to the duet's actual MMD inputs.",
+      "role_hint": "utility",
+      "review_scope": "module_summary_and_filename"
+    },
+    {
+      "path": "scripts/hesperides_camera_geometry.py",
+      "lines": 154,
+      "sha256_at_capture": "e2ec48e7b3b61b9ecddbb776729562ea5896577509353f6b0893f8633d0f9f88",
+      "module_summary": "Render textured geometry or ray-cast feature positions for reference fitting.",
+      "role_hint": "utility",
+      "review_scope": "module_summary_and_filename"
+    },
+    {
+      "path": "scripts/hesperides_reference_probe.py",
+      "lines": 53,
+      "sha256_at_capture": "c67573156a95ba98efb490d9a61159a718604a9d3b7006e5a8b7202e49bc6612",
+      "module_summary": "Read camera-ray intersections and render the world alone for sky diagnosis.",
+      "role_hint": "probe_or_study",
+      "review_scope": "module_summary_and_filename"
+    },
+    {
+      "path": "scripts/hesperides_reference_rebuild.py",
+      "lines": 569,
+      "sha256_at_capture": "42804ad62ebe892b903aeb5823e0ff732054787c67365f60d89156709c8e0c70",
+      "module_summary": "Stage-only reconstruction of the supplied Ray preview; never run on a duet.",
+      "role_hint": "utility",
+      "review_scope": "module_summary_and_filename"
+    },
+    {
+      "path": "scripts/integrate_light_space.py",
+      "lines": 550,
+      "sha256_at_capture": "986725d8d2291bc0585eb190b6ff3e61040578cc698afeb13f28586463318f6e",
+      "module_summary": "Repair fixture transforms and head axes, then connect bounded real shading.",
+      "role_hint": "preparation_or_migration",
+      "review_scope": "module_summary_and_filename"
+    },
+    {
+      "path": "scripts/integrate_reference_duet.py",
+      "lines": 264,
+      "sha256_at_capture": "9355350d0c7cb0c84aed2e5a4573f6c3682d5aa242f9f802f1750c5a672d6eed",
+      "module_summary": "Integrate the tested hall and bounded character study; preserve animation.",
+      "role_hint": "preparation_or_migration",
+      "review_scope": "module_summary_and_filename"
+    },
+    {
+      "path": "scripts/make_aether_look_review.py",
+      "lines": 59,
+      "sha256_at_capture": "6864bbba9482546b516c4383f0aeffcc80c4b76cadd66bea9ff0b20c173c3570",
+      "module_summary": "Arrange faithfully rendered before/after portraits for material review.",
+      "role_hint": "utility",
+      "review_scope": "module_summary_and_filename"
+    },
+    {
+      "path": "scripts/make_aether_masks.py",
+      "lines": 102,
+      "sha256_at_capture": "916a292fafb584a3a74091e03db4f411771ccfe8d22b4def3c665e3d299d4f9c",
+      "module_summary": "Derive reviewed, Aether-specific artistic controls from supplied textures.",
+      "role_hint": "utility",
+      "review_scope": "module_summary_and_filename"
+    },
+    {
+      "path": "scripts/make_clear_light_review.py",
+      "lines": 62,
+      "sha256_at_capture": "b65a4bc5c2a9f5870ed7c838519bdb4f6fc0db38a48e9ad5bbdab2dc1feb6743",
+      "module_summary": "Compare true same-camera renders and measure actor/background brightness.",
+      "role_hint": "utility",
+      "review_scope": "module_summary_and_filename"
+    },
+    {
+      "path": "scripts/make_face_ink_review.py",
+      "lines": 138,
+      "sha256_at_capture": "fa67d4a6cad458f37a1b47670759fe30840b8929f4968ddf49d73aa955e1c67a",
+      "module_summary": "Build aspect-preserving crops from reference and actual A/B renders.",
+      "role_hint": "utility",
+      "review_scope": "module_summary_and_filename"
+    },
+    {
+      "path": "scripts/make_surface_masks.py",
+      "lines": 99,
+      "sha256_at_capture": "27a3b2044f58dbd1acfe25ca321df119dd303b3e4b164670d4041c80505cc9cc",
+      "module_summary": "Create explicitly heuristic control maps from the model's actual atlases.",
+      "role_hint": "utility",
+      "review_scope": "module_summary_and_filename"
+    },
+    {
+      "path": "scripts/mmd_camera_check.py",
+      "lines": 122,
+      "sha256_at_capture": "b3f906eb76d8db41700562c1d20295d18e3f2554735a03d2e054598b05fcb5f3",
+      "module_summary": "Import an authored camera VMD into an existing draft and audit sample frames.",
+      "role_hint": "utility",
+      "review_scope": "module_summary_and_filename"
+    },
+    {
+      "path": "scripts/mmd_caption_probe.py",
+      "lines": 98,
+      "sha256_at_capture": "06659b211ac3c8226cbe211fd065991d72563cf5eeb11096a16d97284dc4e1ac",
+      "module_summary": "Inspect locally supported compositor matte and text-output APIs.",
+      "role_hint": "probe_or_study",
+      "review_scope": "module_summary_and_filename"
+    },
+    {
+      "path": "scripts/mmd_caption_render.py",
+      "lines": 228,
+      "sha256_at_capture": "fe3bd9d061dc79ed7cf4c62f1ee3d74b0681e574e49817b07214ffa655d85f33",
+      "module_summary": "Render aspect-specific picture and Cryptomatte sequences for typography.",
+      "role_hint": "utility",
+      "review_scope": "module_summary_and_filename"
+    },
+    {
+      "path": "scripts/mmd_clear_light_revision.py",
+      "lines": 276,
+      "sha256_at_capture": "f3e5e53dd13136b79e06f0cb47b69394a703b5bf5292516a7142fb01661aa791",
+      "module_summary": "Relight the selected hall and create a controlled SDR toon finish.",
+      "role_hint": "utility",
+      "review_scope": "module_summary_and_filename"
+    },
+    {
+      "path": "scripts/mmd_duet_finish.py",
+      "lines": 337,
+      "sha256_at_capture": "7e38659b4181afa91e9b9f2a9a0657be8d019b6fbc4318bcc56fe281593cd056",
+      "module_summary": "Build the full-song duet from portable physics and the selected existing hall.",
+      "role_hint": "utility",
+      "review_scope": "module_summary_and_filename"
+    },
+    {
+      "path": "scripts/mmd_duet_layout_probe.py",
+      "lines": 199,
+      "sha256_at_capture": "a55d75b49e061677fea0740757d11b28565dfc0899dee44d3e4a126f9bc42e8c",
+      "module_summary": "Import the assigned full duet and an authored camera for draft layout QA.",
+      "role_hint": "probe_or_study",
+      "review_scope": "module_summary_and_filename"
+    },
+    {
+      "path": "scripts/mmd_duet_physics.py",
+      "lines": 173,
+      "sha256_at_capture": "a753d45a572a85d453bf7288619d2f1d4c84f37d6708ebe756cd30024fdee116",
+      "module_summary": "Bake both performers' native physics for the full source choreography.",
+      "role_hint": "utility",
+      "review_scope": "module_summary_and_filename"
+    },
+    {
+      "path": "scripts/mmd_duet_polish.py",
+      "lines": 231,
+      "sha256_at_capture": "4c1513ba9fee2830755b891b797ec91458c88de0606150202a2f27c0bcd28e94",
+      "module_summary": "Apply the user's brighter Ray-preview hall and Guanhaizi character direction.",
+      "role_hint": "utility",
+      "review_scope": "module_summary_and_filename"
+    },
+    {
+      "path": "scripts/mmd_face_ink.py",
+      "lines": 96,
+      "sha256_at_capture": "0ebaa41169a705f343f77468f0c754bcd79aaf9a65e3bf892b6cd7f45c3c0da3",
+      "module_summary": "Selective facial strokes; source texture/UV/alpha and expression stay intact.",
+      "role_hint": "utility",
+      "review_scope": "module_summary_and_filename"
+    },
+    {
+      "path": "scripts/mmd_final_scene.py",
+      "lines": 403,
+      "sha256_at_capture": "6c0884711e5add8e37f3a54d7c035b16ec9c2f493430e2b7f3f0f27dbc1c6820",
+      "module_summary": "Art direct the physics-baked Aksiniya project with pastel stage and NPR materials.",
+      "role_hint": "utility",
+      "review_scope": "module_summary_and_filename"
+    },
+    {
+      "path": "scripts/mmd_first_scene.py",
+      "lines": 176,
+      "sha256_at_capture": "8c53ee040ca17b2ecb35210ff5a7991acbefb0ab59c355bb0353b4d6d3f2e494",
+      "module_summary": "Create a new, explicitly labeled PMX + VMD import draft in Blender.",
+      "role_hint": "utility",
+      "review_scope": "module_summary_and_filename"
+    },
+    {
+      "path": "scripts/mmd_half_lambert.py",
+      "lines": 47,
+      "sha256_at_capture": "ed34c67ecf55f29593f1ae36e45013bb9ceeb1994094036984fbd8c821b3994a",
+      "module_summary": "A named Half-Lambert response followed by per-material artistic gradients.",
+      "role_hint": "utility",
+      "review_scope": "module_summary_and_filename"
+    },
+    {
+      "path": "scripts/mmd_hesperides_stage.py",
+      "lines": 441,
+      "sha256_at_capture": "f4737511ad8133c37e7c5110f731fe5a82b5e0c37398f396d07d78e97b4f9a6c",
+      "module_summary": "Adapt Hesperides' supplied Ray texture controls to Blender and render QA.",
+      "role_hint": "utility",
+      "review_scope": "module_summary_and_filename"
+    },
+    {
+      "path": "scripts/mmd_look_upgrade.py",
+      "lines": 232,
+      "sha256_at_capture": "999ae963489988482eab43cf0c28df3599ecca72327c7bbf508fc60eb2ea2122",
+      "module_summary": "Rebuild the Aksiniya look on a portable baked scene, preserving MMD layers.",
+      "role_hint": "utility",
+      "review_scope": "module_summary_and_filename"
+    },
+    {
+      "path": "scripts/mmd_outlines.py",
+      "lines": 148,
+      "sha256_at_capture": "506a62edd80013b8aa6b007ce3962f8526559da5443bdd4ee5b62231112042b7",
+      "module_summary": "Readable MMD inverse-hull ink, retaining model edge/vertex weights.",
+      "role_hint": "utility",
+      "review_scope": "module_summary_and_filename"
+    },
+    {
+      "path": "scripts/mmd_physics_bake.py",
+      "lines": 159,
+      "sha256_at_capture": "cd9b729b3502039f5fdd243bec3698618a546c15352a75b3037caacd60562fc0",
+      "module_summary": "Build PMX rigid bodies, simulate sequentially, and export portable pose keys.",
+      "role_hint": "utility",
+      "review_scope": "module_summary_and_filename"
+    },
+    {
+      "path": "scripts/mmd_production_inspect.py",
+      "lines": 79,
+      "sha256_at_capture": "97a1122ff90db5e791a6ccb2636dba5df03c31ae3e54dead911bc57f25b9bf1b",
+      "module_summary": "Print production-relevant material, rig, and physics facts inside Blender.",
+      "role_hint": "utility",
+      "review_scope": "module_summary_and_filename"
+    },
+    {
+      "path": "scripts/mmd_production_qa.py",
+      "lines": 101,
+      "sha256_at_capture": "535e108309d7e9a103e4db10ba9583e11bd41d82c45bbc5038b2e761460c147f",
+      "module_summary": "Reopen verification and representative-frame QA for a baked production file.",
+      "role_hint": "utility",
+      "review_scope": "module_summary_and_filename"
+    },
+    {
+      "path": "scripts/mmd_quality_lab.py",
+      "lines": 277,
+      "sha256_at_capture": "805fa5ec92f271d0982f82d919660237f75e636204b133c18da96734e407fe68",
+      "module_summary": "Isolate normal design, local AO, metallic trim and real volumetric light.",
+      "role_hint": "probe_or_study",
+      "review_scope": "module_summary_and_filename"
+    },
+    {
+      "path": "scripts/mmd_quality_probe.py",
+      "lines": 80,
+      "sha256_at_capture": "48f0663e806acd9ff67f0a8ad7ca504f3c487e745fea6e04ff31c588e5abd765",
+      "module_summary": "Read local NPR/AO/normal/plugin compatibility before changing a scene.",
+      "role_hint": "probe_or_study",
+      "review_scope": "module_summary_and_filename"
+    },
+    {
+      "path": "scripts/mmd_sample_pose.py",
+      "lines": 37,
+      "sha256_at_capture": "a3a3ff14f4b801395365453296808e084351f8b9e9f2d6a9793a1c9118b95003",
+      "module_summary": "Export selected evaluated bone matrices for before/after integration checks.",
+      "role_hint": "utility",
+      "review_scope": "module_summary_and_filename"
+    },
+    {
+      "path": "scripts/mmd_style_apply.py",
+      "lines": 75,
+      "sha256_at_capture": "28092cb9449dabdc654cb7b9178d488308cfb3ba6d6497e0dd6061a320464b5f",
+      "module_summary": "Apply a versioned NPR style to the validated local tutorial scene.",
+      "role_hint": "utility",
+      "review_scope": "module_summary_and_filename"
+    },
+    {
+      "path": "scripts/mmd_surface_probe.py",
+      "lines": 73,
+      "sha256_at_capture": "8e2266bad9b1bb6cefbf2ccadf6c32c9dad616c41197ec9075091eacb67d74c6",
+      "module_summary": "Inspect actual source maps, material regions and head space for refinement.",
+      "role_hint": "probe_or_study",
+      "review_scope": "module_summary_and_filename"
+    },
+    {
+      "path": "scripts/mmd_surface_refine.py",
+      "lines": 343,
+      "sha256_at_capture": "4e7d12e046ab30c29e1e9b7b28456472daba5444414d7bcdb9669a307c3296fa",
+      "module_summary": "Model-adapted hair sheen, masked metal and restrained cloth/stage response.",
+      "role_hint": "utility",
+      "review_scope": "module_summary_and_filename"
+    },
+    {
+      "path": "scripts/mmd_tutorial_lab.py",
+      "lines": 431,
+      "sha256_at_capture": "8371ab8e23fe009e6fe3003ac195eac479bea328cf344aaf5bb5ede7c93ecc54",
+      "module_summary": "Validate selected toon-lighting, outline, glow and camera tutorial concepts.",
+      "role_hint": "probe_or_study",
+      "review_scope": "module_summary_and_filename"
+    },
+    {
+      "path": "scripts/mmd_tutorial_probe.py",
+      "lines": 101,
+      "sha256_at_capture": "fb0eed3938a78af20a046c90c0cc1f1f2a67f3b7e2ac1f1a922655d6beceaf0e",
+      "module_summary": "Read local Blender APIs needed by the tutorial lighting/outline lab.",
+      "role_hint": "probe_or_study",
+      "review_scope": "module_summary_and_filename"
+    },
+    {
+      "path": "scripts/mux_production_audio.py",
+      "lines": 95,
+      "sha256_at_capture": "410144d1523e7bd5a59643277b72252f762de03aeb7f0473582e9cf7194b82e2",
+      "module_summary": "Mix a selected BGM segment into an existing video without rerendering.",
+      "role_hint": "utility",
+      "review_scope": "module_summary_and_filename"
+    },
+    {
+      "path": "scripts/ncm_convert.py",
+      "lines": 352,
+      "sha256_at_capture": "25b27fa30c12d2e1314fb8187e095d181469807f784f1d14581c8614b511f88d",
+      "module_summary": "Convert local NCM files with ncmdump; preserve native FLAC/MP3 by default.",
+      "role_hint": "utility",
+      "review_scope": "module_summary_and_filename"
+    },
+    {
+      "path": "scripts/package_blue_gold_wedding.py",
+      "lines": 262,
+      "sha256_at_capture": "0cad34d9b60c1e91cd78e5dcbd3f129c52f282b51df3f20ad6e523ef4faa1cfc",
+      "module_summary": "Package verified wedding lighting and blue/gold official typography.",
+      "role_hint": "packaging",
+      "review_scope": "module_summary_and_filename"
+    },
+    {
+      "path": "scripts/package_duet_captions.py",
+      "lines": 263,
+      "sha256_at_capture": "8ed2ba65352d3934c722b6aa430f91208f55899a7b0e27b4f80d9555a3fbdfbf",
+      "module_summary": "Package the verified official-caption study and add its offline Atlas entry.",
+      "role_hint": "packaging",
+      "review_scope": "module_summary_and_filename"
+    },
+    {
+      "path": "scripts/package_duet_delivery.py",
+      "lines": 100,
+      "sha256_at_capture": "3ecefe0d766f231ce849c4d0d85bfcc97e3fda9b56b0fd8c44ed6f8cc045ab8b",
+      "module_summary": "Publish local delivery notes only after the full movie passes verification.",
+      "role_hint": "packaging",
+      "review_scope": "module_summary_and_filename"
+    },
+    {
+      "path": "scripts/package_face_ink.py",
+      "lines": 109,
+      "sha256_at_capture": "6813e00bb093ff9ffa56487449ceb12cd3884704de534a199ff42a2985157485",
+      "module_summary": "Archive a verified eight-second face-ink refinement and its exact recipe.",
+      "role_hint": "packaging",
+      "review_scope": "module_summary_and_filename"
+    },
+    {
+      "path": "scripts/package_fox_cinema.py",
+      "lines": 313,
+      "sha256_at_capture": "931581813ae205c61b767d2bf5bec0e4b89c6d11596e97acc4deee9946ad6a0d",
+      "module_summary": "Publish only the verified five-second cinema study and its real comparisons.",
+      "role_hint": "packaging",
+      "review_scope": "module_summary_and_filename"
+    },
+    {
+      "path": "scripts/package_fox_stageart.py",
+      "lines": 305,
+      "sha256_at_capture": "e3791d59235435f031e25fa4606fc9542f7d21d40ae37ba304d5999a9644b6e5",
+      "module_summary": "Archive and catalog the verified second fox lighting study.",
+      "role_hint": "packaging",
+      "review_scope": "module_summary_and_filename"
+    },
+    {
+      "path": "scripts/package_grounded_review.py",
+      "lines": 320,
+      "sha256_at_capture": "7701455ae500d1a23f518a293a5f316ff246a8d6a982b50599df30eec5a6fc02",
+      "module_summary": "Package the verified shadow/color review without replacing accepted baselines.",
+      "role_hint": "packaging",
+      "review_scope": "selected_source_sections"
+    },
+    {
+      "path": "scripts/package_quality_upgrade.py",
+      "lines": 327,
+      "sha256_at_capture": "642855cf60f7ab467f1de684d0d4bff545ee4eab2b31be23ee648ec7ecc48942",
+      "module_summary": "Publish a verified local quality revision into the reusable offline catalog.",
+      "role_hint": "packaging",
+      "review_scope": "module_summary_and_filename"
+    },
+    {
+      "path": "scripts/package_soft_top_rim.py",
+      "lines": 245,
+      "sha256_at_capture": "7428b3908f0ec6508f207abc551cf9be4fc3d8d425d87423c7eaae38ec035786",
+      "module_summary": "Archive a verified soft-top/rim revision with actual lighting comparisons.",
+      "role_hint": "packaging",
+      "review_scope": "module_summary_and_filename"
+    },
+    {
+      "path": "scripts/package_stage_wuwa_study.py",
+      "lines": 91,
+      "sha256_at_capture": "956993a6f6a06f2ea29011720da95ac63969f2c1ee94e01823f2ec2b04fcfd30",
+      "module_summary": "Package original notes and rendered comparisons; preserve the accepted movie.",
+      "role_hint": "packaging",
+      "review_scope": "module_summary_and_filename"
+    },
+    {
+      "path": "scripts/package_style_suite.py",
+      "lines": 119,
+      "sha256_at_capture": "dceff98cfcfc66903d8ef176a205e21cdee401b35237d0fd64b013ca582c4a16",
+      "module_summary": "Archive a completed six-package style study after actual media verification.",
+      "role_hint": "packaging",
+      "review_scope": "module_summary_and_filename"
+    },
+    {
+      "path": "scripts/package_surface_refinement.py",
+      "lines": 100,
+      "sha256_at_capture": "c5774564c857b98cba87fb76d2ef43e9fb8f1267ec8a5dd33e98ec721556e786",
+      "module_summary": "Archive completed surface refinement media and the exact reviewed controls.",
+      "role_hint": "packaging",
+      "review_scope": "module_summary_and_filename"
+    },
+    {
+      "path": "scripts/prepare_aether_production.py",
+      "lines": 68,
+      "sha256_at_capture": "6c6d00ff6322272717372604afcd5f3aea6326249edff17615eb695d5d505986",
+      "module_summary": "Save the revised Aether scene as a fresh, explicitly recorded production file.",
+      "role_hint": "preparation_or_migration",
+      "review_scope": "module_summary_and_filename"
+    },
+    {
+      "path": "scripts/prepare_blue_gold_wedding.py",
+      "lines": 197,
+      "sha256_at_capture": "0f35a306da27997cfde0b0ad859fc44851da7e8f149f8b7364a85824e6625828",
+      "module_summary": "Add wedding shafts, luminous aisle accents and isolated highlight halos.",
+      "role_hint": "preparation_or_migration",
+      "review_scope": "module_summary_and_filename"
+    },
+    {
+      "path": "scripts/prepare_duet_caption_lighting.py",
+      "lines": 291,
+      "sha256_at_capture": "529af4a2a3072280949eeb46f61c94fda865f0e0f96ca97fce4bffc890c40191",
+      "module_summary": "Build responsive stage lighting and native matte/beauty caches for captions.",
+      "role_hint": "preparation_or_migration",
+      "review_scope": "module_summary_and_filename"
+    },
+    {
+      "path": "scripts/prepare_graphic_self_shadows.py",
+      "lines": 229,
+      "sha256_at_capture": "7d5f73817fca302ae9bc88b891980edb922edd22b1f69ade2c3f809489b98a50",
+      "module_summary": "Refine native hull ink and connect readable geometric self-shadow to NPR.",
+      "role_hint": "preparation_or_migration",
+      "review_scope": "selected_source_sections"
+    },
+    {
+      "path": "scripts/prepare_grounded_shadows.py",
+      "lines": 199,
+      "sha256_at_capture": "620eb7c9d500c550da196c651071bfd228a9300c8918ba34e296d78e83e34824",
+      "module_summary": "Restore visible cast/contact shadows and bounded actor self-shadow response.",
+      "role_hint": "preparation_or_migration",
+      "review_scope": "module_summary_and_filename"
+    },
+    {
+      "path": "scripts/prepare_quality_render.py",
+      "lines": 45,
+      "sha256_at_capture": "397a2dfb7834c8c2de84da7484f0372ac107b8cf87eba7b84c953661b4ba4fde",
+      "module_summary": "Reopen the integrated master, validate scene persistence and archive naming.",
+      "role_hint": "preparation_or_migration",
+      "review_scope": "module_summary_and_filename"
+    },
+    {
+      "path": "scripts/prepare_soft_top_rim.py",
+      "lines": 190,
+      "sha256_at_capture": "e51651c139f8424ba83ddc512fab549fc86f87486e570b02fab21800f3e147e2",
+      "module_summary": "Add broad soft fill, overhead illumination and a controlled rear rim.",
+      "role_hint": "preparation_or_migration",
+      "review_scope": "module_summary_and_filename"
+    },
+    {
+      "path": "scripts/prepare_surface_motion.py",
+      "lines": 55,
+      "sha256_at_capture": "7ec52e7f25e558ced87f4cd62c3734fa4336f310bcb65bb6652680bd893e218a",
+      "module_summary": "Extend the reviewed surface scene to an eight-second portrait camera study.",
+      "role_hint": "preparation_or_migration",
+      "review_scope": "module_summary_and_filename"
+    },
+    {
+      "path": "scripts/probe_actor_ink_shadow.py",
+      "lines": 112,
+      "sha256_at_capture": "4c4e1a39ce9f2f9d6a5e15ff25dd21d7967899257ef7e2cd2cafb7ae5f8f3ce2",
+      "module_summary": "Inspect the current actor hull and the preset's actual shadow sockets.",
+      "role_hint": "probe_or_study",
+      "review_scope": "module_summary_and_filename"
+    },
+    {
+      "path": "scripts/probe_face_direction.py",
+      "lines": 40,
+      "sha256_at_capture": "cabad37f6d0823dfaefd5821ba90d2d15039a84066f4a237ae0ac52cb7cff854",
+      "module_summary": "Compare Face Factor light-direction conventions in independent stills.",
+      "role_hint": "probe_or_study",
+      "review_scope": "module_summary_and_filename"
+    },
+    {
+      "path": "scripts/probe_fox_stage.py",
+      "lines": 92,
+      "sha256_at_capture": "edf49e12754ead35ed0c8916d22e0d175043f1d60f70b85176e1ea977dc41428",
+      "module_summary": "Audit real ground surfaces, existing light linking and compositor routing.",
+      "role_hint": "probe_or_study",
+      "review_scope": "module_summary_and_filename"
+    },
+    {
+      "path": "scripts/probe_shadow_grounding.py",
+      "lines": 115,
+      "sha256_at_capture": "a3f50ec56b0406179c3d3a9125c60f644e008d2961c050c6bcf2e57c5166ce4e",
+      "module_summary": "Read actual light, material, foot and floor data before grounding changes.",
+      "role_hint": "probe_or_study",
+      "review_scope": "module_summary_and_filename"
+    },
+    {
+      "path": "scripts/probe_stage_focal_targets.py",
+      "lines": 61,
+      "sha256_at_capture": "25cc948394010d27fd9abe5165eddf9ada43787b212a4baf88895f30613b15c0",
+      "module_summary": "Locate actual rendered surfaces under image-space lighting targets.",
+      "role_hint": "probe_or_study",
+      "review_scope": "module_summary_and_filename"
+    },
+    {
+      "path": "scripts/quality_layer_capability.py",
+      "lines": 60,
+      "sha256_at_capture": "339b0cb52cae448cf74397867ad7dc5f0a87e59548b221976f8fa7b9f1d031a6",
+      "module_summary": "Small native EEVEE test for sky suppression and collection holdout.",
+      "role_hint": "utility",
+      "review_scope": "module_summary_and_filename"
+    },
+    {
+      "path": "scripts/quality_pipeline_probe.py",
+      "lines": 151,
+      "sha256_at_capture": "7e173b102dd1fac6fdcdc471228336df9b09a7f6849c364e56a96af467df23d6",
+      "module_summary": "Audit current light/shader/layer capabilities without saving the source blend.",
+      "role_hint": "probe_or_study",
+      "review_scope": "module_summary_and_filename"
+    },
+    {
+      "path": "scripts/refine_reference_duet.py",
+      "lines": 79,
+      "sha256_at_capture": "24a959d10675faf795b590d7200d715f97c54e03c7bf62183140fbeae6bbc1ca",
+      "module_summary": "Refine the NPC SDF mapping and shadow cost before the 5-second render.",
+      "role_hint": "preparation_or_migration",
+      "review_scope": "module_summary_and_filename"
+    },
+    {
+      "path": "scripts/render_camera_preview.py",
+      "lines": 44,
+      "sha256_at_capture": "558f4094c5a8ca689d701ca872b9e3b439752c8100439b29cd9553b0a8b71153",
+      "module_summary": "Render the open draft's frame range as a small, silent H.264 camera preview.",
+      "role_hint": "render",
+      "review_scope": "module_summary_and_filename"
+    },
+    {
+      "path": "scripts/render_duet_chunk.py",
+      "lines": 77,
+      "sha256_at_capture": "755657dc7bc52a8d22a2b25d8579d7824ab4359e47941640dbdb86b77ccb1045",
+      "module_summary": "Render one recoverable production chunk and expose progress as JSON.",
+      "role_hint": "render",
+      "review_scope": "module_summary_and_filename"
+    },
+    {
+      "path": "scripts/render_duet_full.py",
+      "lines": 249,
+      "sha256_at_capture": "44e27f8972c1a41df27f40951c8e3548414685077ee9fc3a5c86e5a42228eef6",
+      "module_summary": "Render full-song chunks, validate/join them, mux selected FLAC, then verify.",
+      "role_hint": "render",
+      "review_scope": "module_summary_and_filename"
+    },
+    {
+      "path": "scripts/render_duet_sample.py",
+      "lines": 304,
+      "sha256_at_capture": "3be34a51f58a5191df36cab7d308eb0e4359bd282161c95ebcc46bfb0ffeab59",
+      "module_summary": "Render a bounded duet review clip, reuse verified matching chunks, and verify.",
+      "role_hint": "render",
+      "review_scope": "module_summary_and_filename"
+    },
+    {
+      "path": "scripts/render_production.py",
+      "lines": 51,
+      "sha256_at_capture": "5b9dcb1267673e4ae5d41993ce384c2a0565f23f612b592d78c75c322bb97fb4",
+      "module_summary": "Render a saved production project to a new H.264 picture master.",
+      "role_hint": "render",
+      "review_scope": "module_summary_and_filename"
+    },
+    {
+      "path": "scripts/render_shader_diagnostics.py",
+      "lines": 260,
+      "sha256_at_capture": "21e62843a2c72376813997cacfb91175085da00d6d7815f1f8602a0cfd7e0ac1",
+      "module_summary": "Render three controlled motion probes on an unsaved independent scene copy.",
+      "role_hint": "render",
+      "review_scope": "module_summary_and_filename"
+    },
+    {
+      "path": "scripts/repair_quality_archive_frame.py",
+      "lines": 25,
+      "sha256_at_capture": "8716277f3ab18de8fb0dd2964211cad86a7fc0795d9539a966e40462fc061c74",
+      "module_summary": "Rerender an explicitly requested master frame and its native linear archive.",
+      "role_hint": "utility",
+      "review_scope": "module_summary_and_filename"
+    },
+    {
+      "path": "scripts/review_face_ink.py",
+      "lines": 87,
+      "sha256_at_capture": "954a95a1e4b51f3bd95da9384b79bcb33422a3dd936a3ebdd9cfaf9d146ccb83",
+      "module_summary": "Same-camera face ink comparison and face-shell ablation renders.",
+      "role_hint": "utility",
+      "review_scope": "module_summary_and_filename"
+    },
+    {
+      "path": "scripts/review_hesperides_reference.py",
+      "lines": 96,
+      "sha256_at_capture": "c13feed5c2fd34112c1e4102be7da6539b2c9e43fa1c5ed567ca64af72bc559b",
+      "module_summary": "Package actual stage renders into labeled reference and switch comparisons.",
+      "role_hint": "utility",
+      "review_scope": "module_summary_and_filename"
+    },
+    {
+      "path": "scripts/review_hesperides_stage.py",
+      "lines": 80,
+      "sha256_at_capture": "e1832fd1beede6982b546c66cfc4a12e533a86b6a224c0c0fce0b205e1804049",
+      "module_summary": "Create a labeled stage comparison and compare independent reopen renders.",
+      "role_hint": "utility",
+      "review_scope": "module_summary_and_filename"
+    },
+    {
+      "path": "scripts/review_shader_diagnostics.py",
+      "lines": 154,
+      "sha256_at_capture": "433ccce9f56b0d573faf8db503d15170a9912e023b1653cba0aec65a21bd84f4",
+      "module_summary": "Create visual inspection sheets and motion-compensated face-change metrics.",
+      "role_hint": "utility",
+      "review_scope": "module_summary_and_filename"
+    },
+    {
+      "path": "scripts/review_style_presets.py",
+      "lines": 68,
+      "sha256_at_capture": "1fb7333cb7ee43498c3b9c9b0c97bb3c3f39493fd061ef9e3135cb3fe6bbe030",
+      "module_summary": "Build same-pose style matrices from actual Blender beauty/matte outputs.",
+      "role_hint": "utility",
+      "review_scope": "module_summary_and_filename"
+    },
+    {
+      "path": "scripts/review_tutorial_study.py",
+      "lines": 141,
+      "sha256_at_capture": "e2aec33316fd9440c1d63dfbea3730eb3f501936f0c2717effbe36c832020726",
+      "module_summary": "Decode the four-second tutorial study and lay out unretouched comparisons.",
+      "role_hint": "utility",
+      "review_scope": "module_summary_and_filename"
+    },
+    {
+      "path": "scripts/review_video_color.py",
+      "lines": 34,
+      "sha256_at_capture": "7a837775d20f92a1f730fa569de47315f8cc310aaf110698674c2f14dc350bf4",
+      "module_summary": "Explicit SDR desktop-review color contract for sRGB compositor pixels.",
+      "role_hint": "utility",
+      "review_scope": "module_summary_and_filename"
+    },
+    {
+      "path": "scripts/stable_caption_layers.py",
+      "lines": 198,
+      "sha256_at_capture": "db20403fc6a5bbfc218e783b682464ed20322461ac45388f9b3d4e8001c0cf9b",
+      "module_summary": "Whole-group caption compositing with explicit layer order and continuous masks.",
+      "role_hint": "utility",
+      "review_scope": "module_summary_and_filename"
+    },
+    {
+      "path": "scripts/stage_night_art_lab.py",
+      "lines": 231,
+      "sha256_at_capture": "1d1723fa504cd61d34ecef683aa5911a81431769c4ede43a6dd208b0757344d9",
+      "module_summary": "Test moonlight, localized warmth and thin volume on a separate duet copy.",
+      "role_hint": "probe_or_study",
+      "review_scope": "module_summary_and_filename"
+    },
+    {
+      "path": "scripts/study_cinema_reference.py",
+      "lines": 64,
+      "sha256_at_capture": "df48d8af44afa687c0b8c024399c0534129012fe7c7581557b2218adfaee210f",
+      "module_summary": "Extract targeted full frames and consecutive bursts from a supplied reference.",
+      "role_hint": "probe_or_study",
+      "review_scope": "module_summary_and_filename"
+    },
+    {
+      "path": "scripts/study_reference_sequences.py",
+      "lines": 68,
+      "sha256_at_capture": "f95a9d542f3e5d32aab55e14d34561a97b92651a95047a779d940878357a8574",
+      "module_summary": "Sample multi-second reference sequences for temporal art-direction review.",
+      "role_hint": "probe_or_study",
+      "review_scope": "module_summary_and_filename"
+    },
+    {
+      "path": "scripts/style_post.py",
+      "lines": 101,
+      "sha256_at_capture": "f9ac42ab8ab52545836cb9ac2bf16b5829254fb6b8e4da71de2dfa6efd3f137e",
+      "module_summary": "Aspect-aware graphic post effects using real Blender character mattes.",
+      "role_hint": "utility",
+      "review_scope": "module_summary_and_filename"
+    },
+    {
+      "path": "scripts/style_presets.py",
+      "lines": 85,
+      "sha256_at_capture": "3d17ba093a9b230c435564ebcf5dfede1c4037319970081bfa852c98b0a7fb02",
+      "module_summary": "Load independent render, post and aspect-specific direction recipes.",
+      "role_hint": "utility",
+      "review_scope": "module_summary_and_filename"
+    },
+    {
+      "path": "scripts/transcribe_tutorial.py",
+      "lines": 177,
+      "sha256_at_capture": "9a6e8e1ce68db31a8195f035c08eddbe7cd5400c2650ca9318efa4584be2e246",
+      "module_summary": "Create a private, timestamped ASR study draft from local tutorial media.",
+      "role_hint": "utility",
+      "review_scope": "module_summary_and_filename"
+    },
+    {
+      "path": "scripts/typography_composite.py",
+      "lines": 390,
+      "sha256_at_capture": "7755f650619e068b3475d18fbc9568ef5017c5e7625963b57dd6e8db2d43b241",
+      "module_summary": "Composite native-aspect typography with cue-specific front/back placement.",
+      "role_hint": "utility",
+      "review_scope": "module_summary_and_filename"
+    },
+    {
+      "path": "scripts/verify_audio_blender.py",
+      "lines": 39,
+      "sha256_at_capture": "e734c6965d158efda359917bde76ece4d0ac9e9424518ab2addc5bd9e123ad2f",
+      "module_summary": "Decode the finished MP4 audio using Blender's Audaspace/FFmpeg runtime.",
+      "role_hint": "verification",
+      "review_scope": "module_summary_and_filename"
+    },
+    {
+      "path": "scripts/verify_caption_master.py",
+      "lines": 344,
+      "sha256_at_capture": "5fa7b757f056f7207c5d85d89de8d77bc3408f7972ac919c3c8c888184091c81",
+      "module_summary": "Reopen the focused-light master and verify motion and cache isolation.",
+      "role_hint": "verification",
+      "review_scope": "module_summary_and_filename"
+    },
+    {
+      "path": "scripts/verify_duet_integration.py",
+      "lines": 91,
+      "sha256_at_capture": "c6bfc2ef648668a1d17219aae935e47d2694d1612bcc64b30e297d13231d5bcd",
+      "module_summary": "Compare both baked skeletons and authored camera across the time transform.",
+      "role_hint": "verification",
+      "review_scope": "module_summary_and_filename"
+    },
+    {
+      "path": "scripts/verify_gallery.py",
+      "lines": 463,
+      "sha256_at_capture": "8b19b238f383c7c9a9ab4ce6db846981251ad293d50913d0f05c75cfe721e664",
+      "module_summary": "Exercise the delivered gallery through a fresh, headless system Chrome.",
+      "role_hint": "verification",
+      "review_scope": "module_summary_and_filename"
+    },
+    {
+      "path": "scripts/verify_hesperides_reference.py",
+      "lines": 82,
+      "sha256_at_capture": "0785cdb776e2c5ac1436d49479181d3501fec373b8a67dc0528ffbe5f6dad0f2",
+      "module_summary": "Reopen the independent hall study, verify switches/packing, and re-render.",
+      "role_hint": "verification",
+      "review_scope": "module_summary_and_filename"
+    },
+    {
+      "path": "scripts/verify_light_space_repairs.py",
+      "lines": 103,
+      "sha256_at_capture": "ef07b6d9ec337d208fe537422d7db582c8fd7f8c56506db45f4963ee5364145e",
+      "module_summary": "Native regression check of reusable head-axis and stage-import repairs.",
+      "role_hint": "verification",
+      "review_scope": "module_summary_and_filename"
+    },
+    {
+      "path": "scripts/verify_linear_archive.py",
+      "lines": 260,
+      "sha256_at_capture": "02454bd9f19a70b1dbfb9a6dd04b89661d63fa16f153b4be94d7d6111f44d711",
+      "module_summary": "Verify numbered multipart EXRs and independently decode their color data.",
+      "role_hint": "verification",
+      "review_scope": "module_summary_and_filename"
+    },
+    {
+      "path": "scripts/verify_render_seams.py",
+      "lines": 85,
+      "sha256_at_capture": "6caeea605c48ae7d55b9018d4e625ad3dd71a05f3011c8f58dab58a5f470babb",
+      "module_summary": "Inspect decoded frames around known render boundaries for visible jumps.",
+      "role_hint": "verification",
+      "review_scope": "module_summary_and_filename"
+    },
+    {
+      "path": "scripts/verify_review_color.py",
+      "lines": 73,
+      "sha256_at_capture": "84fb6cdd658933b06eb2ecf1852a94df42e611f85ee3a83c8a7d7dea0f99b052",
+      "module_summary": "Require explicit decoded SDR review metadata, including after audio muxing.",
+      "role_hint": "verification",
+      "review_scope": "module_summary_and_filename"
+    },
+    {
+      "path": "scripts/verify_stageart_master.py",
+      "lines": 164,
+      "sha256_at_capture": "7872eb6eefb251a862021255655a135860cafbf65dfb258acb388a9f2b27160d",
+      "module_summary": "Reopen a stage-art master and verify motion, output isolation and ground scope.",
+      "role_hint": "verification",
+      "review_scope": "module_summary_and_filename"
+    },
+    {
+      "path": "scripts/verify_video.py",
+      "lines": 146,
+      "sha256_at_capture": "8fe5c7ae982213ec444087163e508e26836043c9f6120da5dca9a94670d981d0",
+      "module_summary": "Decode every output frame; verify timing, image dimensions, and MP4 streams.",
+      "role_hint": "verification",
+      "review_scope": "module_summary_and_filename"
+    },
+    {
+      "path": "scripts/video_reference_frames.py",
+      "lines": 75,
+      "sha256_at_capture": "d7b658b70463556747837abf82dd61305792a51aa4eab87ac6ccd3a52d110aa5",
+      "module_summary": "Extract timestamped local reference frames and a contact sheet (OpenCV/Pillow).",
+      "role_hint": "utility",
+      "review_scope": "module_summary_and_filename"
+    },
+    {
+      "path": "scripts/wuwa_hair_input_lab.py",
+      "lines": 149,
+      "sha256_at_capture": "7f52252a9070b5f7b09e5890b7bda235bf7cb534e9293eaea919aa293fe75075",
+      "module_summary": "Render the user's WuWa hair example and controlled HM/HN input removals.",
+      "role_hint": "probe_or_study",
+      "review_scope": "module_summary_and_filename"
+    }
+  ],
+  "skill_inventory": [
+    {
+      "path": "skills/blender-setup/SKILL.md",
+      "lines": 28,
+      "sha256_at_capture": "9f28a69f7fcc0c1435daf6fde3a2bc57193ede1af642c295d969105f1c195752"
+    },
+    {
+      "path": "skills/mmd-camera-search/SKILL.md",
+      "lines": 20,
+      "sha256_at_capture": "1d58fc07828e2dbc6ebe4f8686d1bdfa6e70381ef7cba9cacb54d37b74721f64"
+    },
+    {
+      "path": "skills/mmd-finish-render/SKILL.md",
+      "lines": 20,
+      "sha256_at_capture": "4e29bd095fa48b2c07c9199cd0a523215c3e8a333c2f98e08ccd0a1ef1e84c5a"
+    },
+    {
+      "path": "skills/mmd-model-check/SKILL.md",
+      "lines": 28,
+      "sha256_at_capture": "9641119b2957aa79371c86641cb3923baf08b4945bc6b069419436502b8235a5"
+    },
+    {
+      "path": "skills/mmd-video-reference/SKILL.md",
+      "lines": 27,
+      "sha256_at_capture": "424eac1ac8129d06f2664a3b97cd096f6c249ec74b421e2f1f0346f7d5adf33f"
+    },
+    {
+      "path": "skills/troubleshooting/SKILL.md",
+      "lines": 19,
+      "sha256_at_capture": "d8d8c40b9ebcb416270af8cbf7c01073b72126e8966937bc685ae5411bac4717"
+    },
+    {
+      "path": "skills/vmd-workflow/SKILL.md",
+      "lines": 24,
+      "sha256_at_capture": "749a098afba2e796f8fce4244d2df4ca55394e3639301d3a58c4f5bdb4d86201"
+    }
+  ],
+  "report_evidence": [
+    {
+      "path": "D:\\codex\\output\\MMD-Duet-Shadow-Color-v1\\delivery.json",
+      "sha256": "55e59ea2dad534a9bf93537e23511d6bc6ae7ceb8b82cb298ae94e7d4a0e4626",
+      "fields": {
+        "movie": "D:\\codex\\output\\MMD-Duet-Shadow-Color-v1\\captions-5s-v2\\Franken_Duet_5s_Grounded_Wedding_REVIEW.mp4",
+        "movie_sha256": "ea72afadbeff7aae5eb47e9d976555ca33bf324d0f884afc217d68fc7d8b21fb",
+        "project": "D:\\codex\\output\\MMD-Duet-Shadow-Color-v1\\production-v3\\Franken_Duet_Grounded_Wedding.blend",
+        "frames": 300,
+        "seconds": 5,
+        "video_audio_verified": true,
+        "full_song_complete": false,
+        "user_art_approval": false,
+        "potplayer_settings_verified": false
+      }
+    },
+    {
+      "path": "D:\\codex\\output\\MMD-Duet-Shadow-Color-v1\\master-verification-v3.json",
+      "sha256": "0a1c343c116935086878b2dda3be07ba7d75ceb13f029f2ee2fbcc223ed1d7d5",
+      "fields": {
+        "passed": true,
+        "packed_images": 95,
+        "motion_samples_exactly_preserved": [
+          1,
+          2100,
+          4140,
+          4200,
+          4250,
+          4262,
+          4290,
+          4439,
+          8400,
+          11899
+        ]
+      }
+    },
+    {
+      "path": "D:\\codex\\output\\MMD-Duet-Shadow-Color-v1\\captions-5s-v2\\video-qa\\video-verification.json",
+      "sha256": "76a5f8efdf367a3692d5763ca28d8e25338db60f09eb89c3ed099d34091367b0",
+      "fields": {
+        "seconds": 5.0,
+        "passed": true,
+        "decoded_frames": 300,
+        "sha256": "ea72afadbeff7aae5eb47e9d976555ca33bf324d0f884afc217d68fc7d8b21fb"
+      }
+    },
+    {
+      "path": "D:\\codex\\output\\MMD-Duet-Shadow-Color-v1\\captions-5s-v2\\color-verification.json",
+      "sha256": "fd9efbe7c7cf3958f0c627f1ef048f3843b34dc8a38dcc253f29cb2ef0afcad0",
+      "fields": {
+        "passed": true
+      }
+    },
+    {
+      "path": "D:\\codex\\output\\MMD-Atlas-v1\\build-manifest.json",
+      "sha256": "20e75555005bf256a9ebcaa4e5c0506543bd2745450fd5747bee3a6656689898",
+      "fields": {
+        "entries": 22,
+        "documents": 42,
+        "components": 48,
+        "comparisons": 27,
+        "catalog_sha256": "21488354eb046dc42d589fd13000a455f8d753daf06ac37cb4fe7481cbf94eab"
+      }
+    },
+    {
+      "path": "D:\\codex\\output\\MMD-Atlas-v1\\qa-grounded-color-v1\\browser-report.json",
+      "sha256": "98a06ce64876ce5e3979cbb90aa14832409b75c36d7038ccd2885fe589825efd",
+      "fields": {
+        "passed": true,
+        "entries": 22,
+        "components": 48,
+        "errors": [],
+        "remote_requests": []
+      },
+      "browser_check_count": 16
+    }
+  ],
+  "parent_integration_note": "Root is updating README/AGENTS/WORKFLOW/INDEX and current_state/production_pipeline with dated snapshots. These findings describe initial conditions, not instructions to revert resolved changes."
+}

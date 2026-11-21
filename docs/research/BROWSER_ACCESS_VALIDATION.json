@@ -1,0 +1,142 @@
+{
+  "schema_version": 1,
+  "updated_date": "2026-11-13",
+  "overall_status": "intermittent_body_read_success_then_debugger_unattached",
+  "latest_recheck": {
+    "date": "2026-11-13",
+    "bundle_version": "26.1111.21308",
+    "iab_home_body_read": true,
+    "iab_reference_description_read": true,
+    "iab_network_capture": "timed_out_no_complete_subtitle_saved",
+    "user_selected_browser": "chrome",
+    "chrome_installed": true,
+    "chrome_extension_installed_registered_enabled": true,
+    "chrome_selected_profile": "Profile 2",
+    "native_host_check_outside_sandbox": "correct_name_origins_registry_and_path",
+    "chrome_initially_running": false,
+    "official_open_chrome_window_invoked_with_user_authorization": true,
+    "chrome_became_discoverable": true,
+    "chrome_tutorial_dom_body_read": true,
+    "subsequent_control_error": "Debugger unattached",
+    "new_complete_bilibili_transcript_obtained": false,
+    "new_ai_subtitle_generation_verified": false,
+    "agent_created_autoplay_tabs_closed": 2,
+    "closed_tab_absence_verified": true,
+    "global_autoplay_preference_changed": false,
+    "native_host_repaired": false,
+    "cookie_or_credential_export": false,
+    "installed_extension_state_checked_by_official_script": true,
+    "stable_control_certified": false,
+    "note": "All original sections below are historical observations, not the latest diagnosis."
+  },
+  "authorization": {
+    "preferred_browser": "iab",
+    "fallback_browser": "chrome",
+    "fallback_explicitly_authorized": true,
+    "credential_or_profile_access_authorized": false
+  },
+  "earlier_cua_observation": {
+    "observer": "root agent actual CUA tool results, relayed to browser_recovery agent",
+    "browser_id": "2",
+    "tab_id": "2",
+    "tab_url": "https://www.bilibili.com/",
+    "discovery": "passed_one_tab",
+    "get_tab": "timed_out_after_approximately_30_seconds_and_runtime_reset",
+    "body_read": false,
+    "reference_navigation": false,
+    "new_tutorial_or_description_read": false,
+    "cua_completion_summary_submitted": true
+  },
+  "earlier_chrome_fallback": {
+    "selection_result": "Browser is not available: chrome",
+    "native_computer_api": "disabled_in_current_tool_surface",
+    "installed_executable": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+    "observed_version": "157.0.8103.51",
+    "extension_installed_or_enabled": "not_verified",
+    "working_browser_control": false
+  },
+  "earlier_runtime": {
+    "current_bundle_version": "26.1106.51428",
+    "current_bundle_root": "C:\\Users\\Administrator\\.codex\\plugins\\cache\\openai-bundled\\browser\\26.1106.51428",
+    "browser_client_exists": true,
+    "browser_service_exists": true,
+    "node_setup_completed": true,
+    "earlier_node_discovery": [],
+    "earlier_node_iab_selection": "Browser is not available: iab",
+    "earlier_node_chrome_selection": "Browser is not available: chrome",
+    "observation_order_note": "Empty Node inventory preceded the latest CUA result that discovered one Bilibili tab. These are distinct runtimes and observations; neither establishes successful page control."
+  },
+  "historical_failure": {
+    "bundle_version": "26.1103.32239",
+    "description": "Previously reported missing browser-service.mjs",
+    "is_current_diagnosis": false
+  },
+  "earlier_readonly_diagnostics": {
+    "native_host_sandbox_result": {
+      "command": "node scripts/check-native-host-manifest.js --browser chrome --json",
+      "exit_code": 1,
+      "reported_registry_key_exists": false,
+      "reported_manifest_exists": false,
+      "registry_key": "HKCU\\Software\\Google\\Chrome\\NativeMessagingHosts\\com.openai.codexextension",
+      "manifest_path": "C:\\Users\\Administrator\\AppData\\Local\\OpenAI\\extension\\com.openai.codexextension.json",
+      "outside_sandbox_recheck": "interrupted_no_result",
+      "conclusion": "unverified_connection_component_hint_only_not_proof_extension_is_absent"
+    },
+    "running_script": {
+      "command": "node scripts/chrome-is-running.js --browser chrome --json",
+      "sandbox_result": "tasklist_access_denied",
+      "outside_sandbox_recheck": "interrupted_no_result",
+      "conclusion": "current_process_state_not_verified_by_this_script"
+    },
+    "earlier_powershell_process_snapshot": "no_chrome_process_at_that_time_not_a_current_claim",
+    "profile_scan_performed": false
+  },
+  "earlier_security_boundaries": {
+    "cookies_read": false,
+    "passwords_read": false,
+    "browser_profiles_read": false,
+    "preferences_changed": false,
+    "registry_changed": false,
+    "extensions_installed_or_removed": false,
+    "native_host_installed_or_repaired": false,
+    "remote_debugging_enabled": false,
+    "missing_modules_fabricated_or_copied": false
+  },
+  "historical_user_connection_check": [
+    "Open desktop app Settings > Computer Use > Chrome; expand More browsers if needed.",
+    "If Install is shown, follow the app-provided plugin and extension installation flow and review permission prompts; if Manage is shown, do not reinstall automatically.",
+    "Open the Chrome profile containing the extension and a Bilibili tab; log in only if that Chrome session requires it.",
+    "Select or mention the actual @Chrome Bilibili tab in the chat, then run one bounded page-read and reference-navigation validation."
+  ],
+  "earlier_acceptance": {
+    "discovery": "passed_latest_cua",
+    "page_body_read": "not_passed",
+    "navigation_to_reference": "not_passed",
+    "tutorial_or_reference_description_read": "not_passed",
+    "required_to_mark_restored": [
+      "Actually read Bilibili visible page body.",
+      "Navigate to Gosari542 or Guanhaizi reference page or video.",
+      "Read at least one usable tutorial or reference description and record its actual reading scope."
+    ]
+  },
+  "sources": [
+    {
+      "url": "https://learn.chatgpt.com/docs/chrome-extension.md",
+      "reading_scope": "Connection setup and troubleshooting sections"
+    },
+    {
+      "url": "https://learn.chatgpt.com/docs/browser",
+      "reading_scope": "Browser integration overview"
+    },
+    {
+      "local_bundle_file": "docs/bootstrap-troubleshooting.md",
+      "reading_scope": "Full troubleshooting document in bundle 26.1106.51428"
+    },
+    {
+      "local_bundle_file": "docs/chrome-troubleshooting.md",
+      "reading_scope": "Full troubleshooting document in bundle 26.1106.51428"
+    }
+  ],
+  "new_mmd_research_obtained_from_logged_in_browser": false,
+  "next_action": "User-visible official connection check, then one bounded validation; continue MMD work independently."
+}

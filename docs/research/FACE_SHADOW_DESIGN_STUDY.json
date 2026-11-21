@@ -1,0 +1,148 @@
+{
+  "id": "face-shadow-design-study-2026-11-13",
+  "recorded_date": "2026-11-13",
+  "status": "research_only_not_implemented",
+  "topic": "Local authored face-shadow relief upstream of existing native-response MIN; distinguish screen-depth proxies from geometric light shadows",
+  "local_read_scope": [
+    "docs/CHARACTER_NPR_PLAYBOOK.md",
+    "docs/NPR_NEXT_EXPERIMENTS.md",
+    "docs/NPR_PRIMARY_STUDY_2026_11_13.md",
+    "presets/quality/duet-character-layers-v1.json"
+  ],
+  "baseline_from_task_and_documents": {
+    "engine": "Blender 5.2.2 EEVEE",
+    "face_probe_normal": "flat diffuse probe following head forward",
+    "body_normal": "original surface normal",
+    "combination": "SDF and native combined diffuse MIN before one palette",
+    "native_response_is_pure_visibility": false,
+    "aksi_has_face_lightmap": true,
+    "aether_has_matching_game_control_maps": false,
+    "current_blend_opened": false,
+    "current_saved_node_connections_independently_inspected": false
+  },
+  "sources": [
+    {
+      "id": "snowflakes_face_shader",
+      "author": "xSnowFlakesx",
+      "title": "GenShinAvatarRender / Genshin_Face_Render.shader",
+      "url": "https://github.com/xSnowFlakesx/GenShinAvatarRender/blob/main/Genshin_Face_Render.shader",
+      "raw_url": "https://raw.githubusercontent.com/xSnowFlakesx/GenShinAvatarRender/main/Genshin_Face_Render.shader",
+      "source_type": "primary_author_community_implementation_not_game_source",
+      "accessed_date": "2026-11-13",
+      "revision": "moving main branch; commit not resolved",
+      "read_scope": [
+        "HeadDirection: head basis, horizontal light projection, angle curve and mirrored UV sampling",
+        "ShadowMask G and A adjustments before SDF multiplication by shadowAttenuation",
+        "Local shadowAttenuation initialization and _SCREEN_SPACE_SHADOW depth-offset calculation"
+      ],
+      "direct_evidence": [
+        "Local SDF relief occurs before its final occlusion multiplication",
+        "The local variable named shadowAttenuation is a screen-depth proxy, not a read of mainLight.shadowAttenuation",
+        "The inspected screen-depth block has no face/hair material ID test"
+      ],
+      "not_established": [
+        "Original Genshin shader implementation",
+        "Physical hair-shadow visibility",
+        "Channel compatibility with either current character"
+      ],
+      "version_caution": "HTML metadata reports 712 lines; raw web extraction reports 695 lines. No assumption that separately cached responses share a revision. Findings use symbols in the raw response; no stable source line claims."
+    },
+    {
+      "id": "endfield_author_face_shader",
+      "author": "congyuxiaoyoudao",
+      "title": "Endfield_Character_Rendering / EndfieldLighting.hlsl",
+      "url": "https://github.com/congyuxiaoyoudao/Endfield_Character_Rendering/blob/master/Assets/Shaders/Library/EndfieldLighting.hlsl",
+      "raw_url": "https://raw.githubusercontent.com/congyuxiaoyoudao/Endfield_Character_Rendering/master/Assets/Shaders/Library/EndfieldLighting.hlsl",
+      "source_type": "primary_author_community_implementation_not_game_source",
+      "accessed_date": "2026-11-13",
+      "revision": "moving master branch; commit not resolved",
+      "read_scope": [
+        "LightningFaceSDF: SDF sampling and sceneShadow assignment from mainLight.shadowAttenuation",
+        "faceAreaMask.g chin-area response and MIN composition before diffuse ramp",
+        "Related face-only call context"
+      ],
+      "direct_evidence": [
+        "The face implementation combines scene shadow and SDF before ramp lookup",
+        "A distinct chin-area input limits where geometric form lighting participates"
+      ],
+      "not_established": [
+        "Applicability of its channel packing to the current PMX models",
+        "A reason to restore failed whole-face geometric-normal thresholding",
+        "Genshin or Wuthering Waves official implementation"
+      ],
+      "version_caution": "HTML metadata reports 980 lines; raw web extraction reports 881 lines. No cross-response version equivalence assumed."
+    },
+    {
+      "id": "mooatoon_author_shadow_control",
+      "author": "MooaToon project author",
+      "title": "Controlling the Shape of Shadows",
+      "url": "https://mooatoon.com/en/docs/Tutorial/ControlTheShapeOfShadows",
+      "source_type": "primary_author_documentation",
+      "accessed_date": "2026-11-13",
+      "revision": "unversioned current page; publication and modification date not established",
+      "read_scope": [
+        "Ray Tracing: self and other material IDs",
+        "Shadow Bias and its distance/pop limitations",
+        "Custom Hair Shadow: screen-space face/hair IDs, depth offset and viewpoint dependency"
+      ],
+      "direct_evidence": [
+        "ID-controlled ray shadows and screen-space hair shadows are separate facilities",
+        "Screen-space hair-shadow shape depends on the hair silhouette in the current view",
+        "A large generic shadow bias can remove desired nearby occluders"
+      ],
+      "not_read_or_run": [
+        "Individual illustrations",
+        "UE project or shader implementation",
+        "Blender port"
+      ]
+    }
+  ],
+  "access_failures": [
+    "GitHub /raw/refs/heads links returned Cache miss; raw.githubusercontent.com alternatives were readable",
+    "GitHub commits API queries for both inspected paths were inaccessible through the web tool"
+  ],
+  "project_inferences_not_source_claims": [
+    "Near head-local zenith/nadir, horizontal light projection has unstable azimuth; clamping acos input does not solve a zero-vector direction",
+    "Existing map calibration must not be combined blindly with a different author angle-to-threshold curve",
+    "Nose, mouth and eye-area relief must be artist-authored and restricted to the SDF responsibility",
+    "A local SDF relief placed before current MIN is bounded above by the unchanged native response"
+  ],
+  "single_proposed_experiment": {
+    "id": "exp_face_design_relief",
+    "implemented": false,
+    "scope": "Aksi face-skin branch in an independent diagnostic copy only",
+    "new_art_input": "E: newly authored Non-Color local relief permission map; zero is unchanged; no automatic color threshold or unknown-channel substitution",
+    "formula": "S_art = S + e*k*E*(1-S); F_test = min(S_art,D); existing palette(F_test) once",
+    "inputs": {
+      "S": "existing SDF bright response entering current MIN, range 0..1",
+      "D": "existing native combined diffuse entering the same MIN, range 0..1; not pure visibility",
+      "enable_e": "total enable switch e, 0 or 1",
+      "k": "fixed diagnostic strength, compare 0, 0.25, 0.5",
+      "relief_E": "artist-controlled small local face-skin region E, range 0..1"
+    },
+    "off_state": "e=0 or k=0 restores existing SDF input; E=0 preserves each corresponding pixel",
+    "analytical_invariant": "F_test <= D; formula reasoning only, not an executed shader test",
+    "does_not_fix": [
+      "Artifacts already present in D",
+      "Fill light washing out the combined native response",
+      "Incorrect UV, light-direction sign or head axes",
+      "Missing Aether game control maps"
+    ],
+    "future_validation": [
+      "Preview S, E, S_art, D and F_test separately; verify off-state alignment",
+      "Add/remove one independent proxy occluder at fixed light and pose",
+      "Inspect real hair boundary, hand crossing face, left/right transition, pitch and mouth expressions continuously",
+      "Reject fragmented facial shape, asymmetry or expression-dependent UV seams; preserve mouth crease, eye features and cavity"
+    ]
+  },
+  "not_performed": [
+    "Production project or parameter edits",
+    "New mask creation or node implementation",
+    "Static or dynamic Blender render",
+    "Independent blend reopen verification",
+    "Game shader recovery or Goo restoration",
+    "New video, subtitle or reference-frame analysis"
+  ],
+  "production_promotion": false,
+  "document": "docs/FACE_SHADOW_DESIGN_STUDY.md"
+}

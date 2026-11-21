@@ -1,0 +1,109 @@
+{
+  "id": "hesperides-blue-gold-wedding-v1",
+  "intent": "Bright snow-country wedding hall, blue and champagne-gold rear shafts, localized halos and preserved soft key/fill/rim hierarchy.",
+  "rear_air": {
+    "center": [
+      0,
+      13,
+      6
+    ],
+    "scale": [
+      10,
+      10.5,
+      7
+    ],
+    "density": 0.009,
+    "color": [
+      0.88,
+      0.93,
+      1,
+      1
+    ],
+    "anisotropy": 0.35
+  },
+  "spots": [
+    {
+      "name": "blue vow shaft",
+      "location": [
+        -6,
+        18,
+        11
+      ],
+      "target": [
+        2,
+        6,
+        0.3
+      ],
+      "watts": 9000,
+      "color": [
+        0.24,
+        0.48,
+        1
+      ],
+      "angle_degrees": 16,
+      "blend": 0.55,
+      "volume_factor": 3.5,
+      "diffuse_factor": 0.12,
+      "specular_factor": 0.1
+    },
+    {
+      "name": "gold vow shaft",
+      "location": [
+        6,
+        18,
+        11
+      ],
+      "target": [
+        -2,
+        6,
+        0.3
+      ],
+      "watts": 9000,
+      "color": [
+        1,
+        0.68,
+        0.3
+      ],
+      "angle_degrees": 16,
+      "blend": 0.55,
+      "volume_factor": 3.5,
+      "diffuse_factor": 0.12,
+      "specular_factor": 0.1
+    }
+  ],
+  "aisle_lights": {
+    "ys": [
+      4,
+      7.5,
+      11,
+      14.5,
+      18,
+      21.5
+    ],
+    "x": 3.0,
+    "z": 0.52,
+    "radius": 0.035,
+    "strength": 9,
+    "color": [
+      1,
+      0.65,
+      0.25,
+      1
+    ]
+  },
+  "stage_glow": {
+    "threshold": 1.2,
+    "strength": 0.2,
+    "size": 0.038
+  },
+  "actor_glow": {
+    "threshold": 0.08,
+    "strength": 0.6,
+    "size": 0.03
+  },
+  "limits": [
+    "Local interpretation of three-point lighting; not recovered reference-author settings",
+    "Rear scattering starts behind the performers; no world-volume fog",
+    "Only five seconds in the existing landscape camera"
+  ]
+}

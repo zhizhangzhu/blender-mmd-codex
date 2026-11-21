@@ -1,0 +1,7 @@
+{
+  "id": "hesperides-grounded-shadows-v1",
+  "key": {"location": [-3.5, -4.0, 5.5], "target": [0, 0.6, 0], "watts": 1500, "angle_degrees": 70, "blend": 0.4, "radius": 0.08},
+  "physical_response": {"low": 0.015, "high": 0.65, "body_floor": 0.68, "hair_floor": 0.78, "skin_body_floor": 0.78, "face_floor": 0.95},
+  "floor_contact": {"distance": 0.15, "strength": 0.4, "height_limit": 0.2, "minimum_normal_z": 0.9},
+  "limits": ["Only bounded horizontal floor receives the added contact occlusion; shared wall materials stay outside the mask", "NPR self-shadow response remains art-directed and preserves face/ink", "Actual light casting and geometric AO, not glued-on foot blobs"]
+}
