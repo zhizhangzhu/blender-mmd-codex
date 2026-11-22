@@ -22,7 +22,7 @@
     ],
     "runtime_production_project_is_historical_launcher_input": true,
     "do_not_duplicate_sha_or_candidate_paths_here": true,
-    "runtime_resolution_note": "2026-11-20 user explicitly requested Goo artdirection in a new copy; frozen829f retained. Native53 migration remains separate. Always resolve active/trial runtime from current_state and exact profile."
+    "runtime_resolution_note": "2026-11-22 GooEngine (presets/runtime/goo-v1.json) established as primary runtime; official Blender 5.3 retained as reference/fallback only. See docs/GOO_RUNTIME_POLICY.md."
   },
   "evidence_levels": [
     "reading",
@@ -143,6 +143,8 @@
         "材质"
       ],
       "read": [
+        "docs/AUTO_QC.md",
+        "docs/GOO_RUNTIME_POLICY.md",
         "docs/STUDIO_ITERATION.md",
         "docs/STUDIO_SCENE_BENCH.md",
         "docs/GOO_FOUNDATIONS_AND_PARAMETERS.md",
@@ -158,7 +160,8 @@
       "parameters": [
         "presets/workflows/goo-foundations-v1.json",
         "presets/workflows/goo-mmd-foundations-v1.json",
-        "catalog/scene_benches.json"
+        "catalog/scene_benches.json",
+        "presets/qc/auto-qc-v1.json"
       ],
       "tools": [
         {
@@ -175,6 +178,11 @@
           "path": "scripts/studio_bench.py",
           "mode": "inspect_input_and_side_effects",
           "scope": "Opt-in inspect/static controls from exact source/actor/material profile; never saves source; rejects active simulations; not a generic shader installer"
+        },
+        {
+          "path": "scripts/auto_qc.py",
+          "mode": "inspect_input_and_side_effects",
+          "scope": "Hard-metric still QC, 8-12 sparse multiframe check, 1-2s low-res temporal flicker/jitter diagnostics, VLM judge packet and feedback backtest calibration; never approves art or delivers video"
         }
       ],
       "decisions": [
@@ -284,6 +292,8 @@
         "light"
       ],
       "read": [
+        "docs/AUTO_QC.md",
+        "docs/GOO_RUNTIME_POLICY.md",
         "docs/STUDIO_ITERATION.md",
         "docs/STUDIO_SCENE_BENCH.md",
         "docs/DESIGN_FOUNDATIONS_AND_REVIEW.md",
@@ -298,7 +308,8 @@
       ],
       "parameters": [
         "presets/templates/iteration-brief-v1.json",
-        "catalog/scene_benches.json"
+        "catalog/scene_benches.json",
+        "presets/qc/auto-qc-v1.json"
       ],
       "tools": [
         {
@@ -310,6 +321,11 @@
           "path": "scripts/studio_bench.py",
           "mode": "inspect_input_and_side_effects",
           "scope": "Opt-in inspect/static controls from exact source/actor/material profile; never saves source; rejects active simulations; not a generic shader installer"
+        },
+        {
+          "path": "scripts/auto_qc.py",
+          "mode": "inspect_input_and_side_effects",
+          "scope": "Hard-metric still QC, 8-12 sparse multiframe check, 1-2s low-res temporal flicker/jitter diagnostics, VLM judge packet and feedback backtest calibration; never approves art or delivers video"
         }
       ],
       "decisions": [
@@ -337,6 +353,8 @@
         "art"
       ],
       "read": [
+        "docs/AUTO_QC.md",
+        "docs/GOO_RUNTIME_POLICY.md",
         "docs/STUDIO_ITERATION.md",
         "docs/DESIGN_FOUNDATIONS_AND_REVIEW.md",
         "docs/AUTHOR_REFERENCE_MATRIX.md",
@@ -344,9 +362,16 @@
         "docs/QUALITY_GATES.md"
       ],
       "parameters": [
-        "presets/templates/iteration-brief-v1.json"
+        "presets/templates/iteration-brief-v1.json",
+        "presets/qc/auto-qc-v1.json"
       ],
-      "tools": [],
+      "tools": [
+        {
+          "path": "scripts/auto_qc.py",
+          "mode": "inspect_input_and_side_effects",
+          "scope": "Hard-metric still QC, 8-12 sparse multiframe check, 1-2s low-res temporal flicker/jitter diagnostics, VLM judge packet and feedback backtest calibration; never approves art or delivers video"
+        }
+      ],
       "decisions": [
         "Story/action, emotion and focal hierarchy before effects",
         "Value grouping, palette, silhouette, staging and timing",
@@ -460,17 +485,26 @@
       ],
       "read": [
         "SPEC.md",
-        "docs/STUDIO_WORKFLOW.md"
+        "docs/STUDIO_WORKFLOW.md",
+        "docs/GOO_RUNTIME_POLICY.md",
+        "docs/AUTO_QC.md",
+        "docs/PROJECT_FRANKEN_DUET_RULES.md"
       ],
       "parameters": [
         "catalog/studio.json",
-        "catalog/model_policy.json"
+        "catalog/model_policy.json",
+        "presets/qc/auto-qc-v1.json"
       ],
       "tools": [
         {
           "path": "scripts/studio_tasks.py",
           "mode": "inspect_input_and_side_effects",
           "scope": "Plan/validate a bounded task packet; real dispatch uses current session collaboration tools"
+        },
+        {
+          "path": "scripts/auto_qc.py",
+          "mode": "inspect_input_and_side_effects",
+          "scope": "Hard-metric still QC, 8-12 sparse multiframe check, 1-2s low-res temporal flicker/jitter diagnostics, VLM judge packet and feedback backtest calibration; never approves art or delivers video"
         }
       ],
       "decisions": [

@@ -12,15 +12,15 @@
     ".codex-plugin": 1,
     "blender_addon": 7,
     "catalog": 11,
-    "docs": 106,
-    "history": 13,
-    "presets": 89,
-    "research_ledgers": 47,
+    "docs": 109,
+    "history": 16,
+    "presets": 91,
+    "research_ledgers": 48,
     "root": 5,
-    "scripts": 326,
+    "scripts": 327,
     "site": 4,
     "skills": 8,
-    "tests": 32
+    "tests": 33
   },
   "entries": [
     {
@@ -36,7 +36,7 @@
     {
       "path": "AGENTS.md",
       "section": "root",
-      "summary": "制作目标与仓库工作约定"
+      "summary": "仓库工作约定"
     },
     {
       "path": "LICENSE",
@@ -172,6 +172,11 @@
       "path": "docs/AUTHOR_REFERENCE_MATRIX.md",
       "section": "docs",
       "summary": "作者参考优先级与证据矩阵"
+    },
+    {
+      "path": "docs/AUTO_QC.md",
+      "section": "docs",
+      "summary": "自动 QC 判官、多帧稀疏检查与时序诊断"
     },
     {
       "path": "docs/BILIBILI_SUBTITLE_WORKFLOW.md",
@@ -384,6 +389,11 @@
       "summary": "Goo 人物亮边、高光与场景泛光加强"
     },
     {
+      "path": "docs/GOO_RUNTIME_POLICY.md",
+      "section": "docs",
+      "summary": "GooEngine 主线运行时政策与风险管控"
+    },
+    {
       "path": "docs/GOO_TYNDALL_RIM_PRODUCTION.md",
       "section": "docs",
       "summary": "白蓝轮廓光、窗向体积与高光泛光"
@@ -552,6 +562,11 @@
       "path": "docs/PRODUCTION_WORKFLOW.md",
       "section": "docs",
       "summary": "高质量MMD制作流程"
+    },
+    {
+      "path": "docs/PROJECT_FRANKEN_DUET_RULES.md",
+      "section": "docs",
+      "summary": "《フランケンシュタインの怪物》双人作品专属约定"
     },
     {
       "path": "docs/QUALITY_GATES.md",
@@ -737,6 +752,21 @@
       "path": "docs/history/2026-11-17/repository-before-organization/git-status-before.txt",
       "section": "history",
       "summary": "Repository source or supporting file"
+    },
+    {
+      "path": "docs/history/2026-11-22/AGENTS.before-slimming.md",
+      "section": "history",
+      "summary": "制作目标与仓库工作约定"
+    },
+    {
+      "path": "docs/history/2026-11-22/current_state.before-slimming.json",
+      "section": "history",
+      "summary": "JSON data"
+    },
+    {
+      "path": "docs/history/2026-11-22/state_history.json",
+      "section": "history",
+      "summary": "JSON data"
     },
     {
       "path": "docs/research/AUTHOR_REFERENCE_MATRIX.json",
@@ -954,6 +984,11 @@
       "summary": "JSON data"
     },
     {
+      "path": "docs/research/STUDIO_ITERATION_2026_11_20.json",
+      "section": "research_ledgers",
+      "summary": "Original record of implemented reference-experiment-review-lesson-save/reopen workflow and real Goo use"
+    },
+    {
       "path": "docs/research/STUDIO_SCENE_BENCH_2026_11_20.json",
       "section": "research_ledgers",
       "summary": "Original implementation/review evidence for reusable native53 static diagnostics; no full third-party source copied"
@@ -982,6 +1017,11 @@
       "path": "presets/benches/fixture-b.json",
       "section": "presets",
       "summary": "studio-fixture-b"
+    },
+    {
+      "path": "presets/benches/goo-duet-artdirection-candidate-v1.json",
+      "section": "presets",
+      "summary": "goo-duet-artdirection-candidate-v1"
     },
     {
       "path": "presets/benches/goo-duet-stage-response-v1.json",
@@ -1077,6 +1117,11 @@
       "path": "presets/projects/franken-duet-full-v1.json",
       "section": "presets",
       "summary": "franken-duet-full-v1"
+    },
+    {
+      "path": "presets/qc/auto-qc-v1.json",
+      "section": "presets",
+      "summary": "auto-qc-v1"
     },
     {
       "path": "presets/quality/aether-hall-surface-v1.json",
@@ -1607,6 +1652,16 @@
         "writes_text_files"
       ],
       "role": "diagnostics",
+      "execution_status": "review_input_and_side_effects"
+    },
+    {
+      "path": "scripts/auto_qc.py",
+      "section": "scripts",
+      "summary": "Automated hard-metric QC, sparse multiframe checks, low-res temporal diagnostics and judge calibration.",
+      "static_hints": [
+        "writes_text_files"
+      ],
+      "role": "utility",
       "execution_status": "review_input_and_side_effects"
     },
     {
@@ -4754,6 +4809,11 @@
       "path": "tests/__init__.py",
       "section": "tests",
       "summary": "Unit tests for the local Blender preparation helpers."
+    },
+    {
+      "path": "tests/test_auto_qc.py",
+      "section": "tests",
+      "summary": "Tests for automated QC hard metrics, sparse multiframe, temporal flicker and calibration."
     },
     {
       "path": "tests/test_blender_detect.py",

@@ -38,7 +38,7 @@
 | [catalog/studio.json](../catalog/studio.json) | 经验索引与学习路线；不替代原始阅读、实际制作或美术认可 |
 | [catalog/task_routes.json](../catalog/task_routes.json) | Read-only task-to-knowledge routing; no permission to execute listed production scripts and no certification of art quality |
 
-## docs（106）
+## docs（109）
 
 | 文件 | 用途 |
 | --- | --- |
@@ -48,6 +48,7 @@
 | [docs/ANIMATION_AND_KEYFRAMING_PLAYBOOK.md](../docs/ANIMATION_AND_KEYFRAMING_PLAYBOOK.md) | 动作数据、模型驱动与局部K帧 |
 | [docs/AUDIO_CONVERSION.md](../docs/AUDIO_CONVERSION.md) | NCM 转 FLAC / MP3 与双人全曲 BGM |
 | [docs/AUTHOR_REFERENCE_MATRIX.md](../docs/AUTHOR_REFERENCE_MATRIX.md) | 作者参考优先级与证据矩阵 |
+| [docs/AUTO_QC.md](../docs/AUTO_QC.md) | 自动 QC 判官、多帧稀疏检查与时序诊断 |
 | [docs/BILIBILI_SUBTITLE_WORKFLOW.md](../docs/BILIBILI_SUBTITLE_WORKFLOW.md) | B站字幕：合法采集后的离线整理 |
 | [docs/BLENDER53_DUET_TOON_MIGRATION_2026_11_19.md](../docs/BLENDER53_DUET_TOON_MIGRATION_2026_11_19.md) | Blender5.3原生作者节点双人试作 |
 | [docs/BLENDER53_TOON_PACKAGE_STUDY_2026_11_18.md](../docs/BLENDER53_TOON_PACKAGE_STUDY_2026_11_18.md) | 作者5.3卡渲节点：原生语义与Goo迁移边界 |
@@ -90,6 +91,7 @@
 | [docs/GOO_MMD_EIGHT_FOUNDATIONS_2026_11_18.md](../docs/GOO_MMD_EIGHT_FOUNDATIONS_2026_11_18.md) | Goo、MMD Tools与插件协作：八项基础的第一轮指南学习 |
 | [docs/GOO_REFERENCE_FACE_HAIR_STUDY_2026_11_17.md](../docs/GOO_REFERENCE_FACE_HAIR_STUDY_2026_11_17.md) | 新近景参考与 Goo 法线基础验证 |
 | [docs/GOO_RIM_GLOW_REVISION.md](../docs/GOO_RIM_GLOW_REVISION.md) | Goo 人物亮边、高光与场景泛光加强 |
+| [docs/GOO_RUNTIME_POLICY.md](../docs/GOO_RUNTIME_POLICY.md) | GooEngine 主线运行时政策与风险管控 |
 | [docs/GOO_TYNDALL_RIM_PRODUCTION.md](../docs/GOO_TYNDALL_RIM_PRODUCTION.md) | 白蓝轮廓光、窗向体积与高光泛光 |
 | [docs/GOSARI_REFERENCE.md](../docs/GOSARI_REFERENCE.md) | Gosari542《Pretty Girl》本地视频观察 |
 | [docs/GUANHAIZI_REFERENCE.md](../docs/GUANHAIZI_REFERENCE.md) | 观海子：横屏舞台与竖屏图形排版参考 |
@@ -124,6 +126,7 @@
 | [docs/PRODUCTION_HISTORY_CONTEXT.md](../docs/PRODUCTION_HISTORY_CONTEXT.md) | 旧制作状态记录（历史归档） |
 | [docs/PRODUCTION_TECHNIQUES.md](../docs/PRODUCTION_TECHNIQUES.md) | 衣发物理、参考风格与成片：已验证的制作方法 |
 | [docs/PRODUCTION_WORKFLOW.md](../docs/PRODUCTION_WORKFLOW.md) | 高质量MMD制作流程 |
+| [docs/PROJECT_FRANKEN_DUET_RULES.md](../docs/PROJECT_FRANKEN_DUET_RULES.md) | 《フランケンシュタインの怪物》双人作品专属约定 |
 | [docs/QUALITY_GATES.md](../docs/QUALITY_GATES.md) | 高质量MMD的质量关卡 |
 | [docs/QUALITY_LIGHTING_LAB.md](../docs/QUALITY_LIGHTING_LAB.md) | 进阶质感：插件学习、材质与光影实测 |
 | [docs/REFERENCE_AND_LIGHTING_PLAYBOOK.md](../docs/REFERENCE_AND_LIGHTING_PLAYBOOK.md) | 参考研究、舞台灯光与后期的制作手册 |
@@ -149,7 +152,7 @@
 | [docs/TUTORIAL_TRANSCRIPTION.md](../docs/TUTORIAL_TRANSCRIPTION.md) | 教程学习：本地语音转写与屏幕说明 OCR |
 | [docs/WUWA_TOON_STUDY.md](../docs/WUWA_TOON_STUDY.md) | 鸣潮三渲二：资料、预设审计与发丝对照 |
 
-## history（13）
+## history（16）
 
 | 文件 | 用途 |
 | --- | --- |
@@ -166,13 +169,17 @@
 | [docs/history/2026-11-17/repository-before-organization/docs__PRODUCTION_WORKFLOW.md](../docs/history/2026-11-17/repository-before-organization/docs__PRODUCTION_WORKFLOW.md) | 高质量MMD制作流程 |
 | [docs/history/2026-11-17/repository-before-organization/docs__TOOL_AND_PRESET_MAP.md](../docs/history/2026-11-17/repository-before-organization/docs__TOOL_AND_PRESET_MAP.md) | 工具、预设与知识的职责地图 |
 | [docs/history/2026-11-17/repository-before-organization/git-status-before.txt](../docs/history/2026-11-17/repository-before-organization/git-status-before.txt) | Repository source or supporting file |
+| [docs/history/2026-11-22/AGENTS.before-slimming.md](../docs/history/2026-11-22/AGENTS.before-slimming.md) | 制作目标与仓库工作约定 |
+| [docs/history/2026-11-22/current_state.before-slimming.json](../docs/history/2026-11-22/current_state.before-slimming.json) | JSON data |
+| [docs/history/2026-11-22/state_history.json](../docs/history/2026-11-22/state_history.json) | JSON data |
 
-## presets（89）
+## presets（91）
 
 | 文件 | 用途 |
 | --- | --- |
 | [presets/benches/fixture-a.json](../presets/benches/fixture-a.json) | studio-fixture-a |
 | [presets/benches/fixture-b.json](../presets/benches/fixture-b.json) | studio-fixture-b |
+| [presets/benches/goo-duet-artdirection-candidate-v1.json](../presets/benches/goo-duet-artdirection-candidate-v1.json) | goo-duet-artdirection-candidate-v1 |
 | [presets/benches/goo-duet-stage-response-v1.json](../presets/benches/goo-duet-stage-response-v1.json) | goo-duet-stage-response-v1 |
 | [presets/benches/native53-duet-v3.json](../presets/benches/native53-duet-v3.json) | native53-duet-v3-static |
 | [presets/lighting/citlali-fringe-contact-still-v1.json](../presets/lighting/citlali-fringe-contact-still-v1.json) | JSON data |
@@ -192,6 +199,7 @@
 | [presets/lighting/portrait-rim-v2.json](../presets/lighting/portrait-rim-v2.json) | portrait-rim-v2 |
 | [presets/lighting/portrait-sunlit-v4.json](../presets/lighting/portrait-sunlit-v4.json) | portrait-sunlit-v4 |
 | [presets/projects/franken-duet-full-v1.json](../presets/projects/franken-duet-full-v1.json) | franken-duet-full-v1 |
+| [presets/qc/auto-qc-v1.json](../presets/qc/auto-qc-v1.json) | auto-qc-v1 |
 | [presets/quality/aether-hall-surface-v1.json](../presets/quality/aether-hall-surface-v1.json) | aether-hall-surface-v1 |
 | [presets/quality/aksiniya-clean-game-v1.json](../presets/quality/aksiniya-clean-game-v1.json) | aksiniya-clean-game-v1 |
 | [presets/quality/duet-bold-wedding-emission-v1.json](../presets/quality/duet-bold-wedding-emission-v1.json) | duet-bold-wedding-emission-v1 |
@@ -261,7 +269,7 @@
 | [presets/workflows/goo-mmd-foundations-v1.json](../presets/workflows/goo-mmd-foundations-v1.json) | goo-mmd-foundations-v1 |
 | [presets/workflows/mmd-mme-goo-v1.json](../presets/workflows/mmd-mme-goo-v1.json) | mmd-mme-goo-workflow-v1 |
 
-## research_ledgers（47）
+## research_ledgers（48）
 
 | 文件 | 用途 |
 | --- | --- |
@@ -308,6 +316,7 @@
 | [docs/research/REPOSITORY_AUDIT.json](../docs/research/REPOSITORY_AUDIT.json) | JSON data |
 | [docs/research/SLEEVE_CORRECTIVE_EXTERNAL_2026_11_14.json](../docs/research/SLEEVE_CORRECTIVE_EXTERNAL_2026_11_14.json) | 区分相对ShapeKey、Armature求值顺序、Corrective Smooth、权重与刚体的修复边界，解释伊科尔袖口局部corrective的可复用条件。 |
 | [docs/research/STAR_RAIL_FACE_HAIR_2026_11_17.json](../docs/research/STAR_RAIL_FACE_HAIR_2026_11_17.json) | JSON data |
+| [docs/research/STUDIO_ITERATION_2026_11_20.json](../docs/research/STUDIO_ITERATION_2026_11_20.json) | Original record of implemented reference-experiment-review-lesson-save/reopen workflow and real Goo use |
 | [docs/research/STUDIO_SCENE_BENCH_2026_11_20.json](../docs/research/STUDIO_SCENE_BENCH_2026_11_20.json) | Original implementation/review evidence for reusable native53 static diagnostics; no full third-party source copied |
 | [docs/research/TEXT_NPR_SOURCE_DISCOVERY.json](../docs/research/TEXT_NPR_SOURCE_DISCOVERY.json) | 以现有人物质量缺口筛选可持续复读的一手文字来源；本轮集中补描边单位、分色参数语义和Blender迁移边界。 |
 | [docs/research/TEXT_PHYSICS_SOURCE_DISCOVERY.json](../docs/research/TEXT_PHYSICS_SOURCE_DISCOVERY.json) | 复用已有物理台账，只保留两个一手文字入口和一个有界对照；不把重复知识计作制作能力增长。 |
@@ -318,12 +327,12 @@
 | 文件 | 用途 |
 | --- | --- |
 | [.gitignore](../.gitignore) | Repository source or supporting file |
-| [AGENTS.md](../AGENTS.md) | 制作目标与仓库工作约定 |
+| [AGENTS.md](../AGENTS.md) | 仓库工作约定 |
 | [LICENSE](../LICENSE) | Repository source or supporting file |
 | [README.md](../README.md) | blender-mmd-codex |
 | [SPEC.md](../SPEC.md) | AI MMD 长期创作体系：项目顶层规范 |
 
-## scripts（326）
+## scripts（327）
 
 | 文件 | 用途 |
 | --- | --- |
@@ -346,6 +355,7 @@
 | [scripts/audit_knowledge.py](../scripts/audit_knowledge.py) | Validate current production facts, knowledge links and offline packaging. |
 | [scripts/audit_review_color.py](../scripts/audit_review_color.py) | Compare actual compositor RGB with explicitly decoded video color matrices. |
 | [scripts/audit_stage_archive.py](../scripts/audit_stage_archive.py) | Test/extract a downloaded stage archive and compare it with existing assets. |
+| [scripts/auto_qc.py](../scripts/auto_qc.py) | Automated hard-metric QC, sparse multiframe checks, low-res temporal diagnostics and judge calibration. |
 | [scripts/bake_goo_face_hair_shadows.py](../scripts/bake_goo_face_hair_shadows.py) | Bake the two actors' actual animated bang occlusion to portable face-UV sequences. |
 | [scripts/benchmark_bold_wedding.py](../scripts/benchmark_bold_wedding.py) | Unsaved 1080p benchmark of constant-one palette bypass pruning only. |
 | [scripts/blender_bootstrap.py](../scripts/blender_bootstrap.py) | Coordinate Blender detection, verified portable installation, and validation. |
@@ -676,11 +686,12 @@
 | [skills/troubleshooting/SKILL.md](../skills/troubleshooting/SKILL.md) | MMD 故障排除 |
 | [skills/vmd-workflow/SKILL.md](../skills/vmd-workflow/SKILL.md) | VMD 工作流程 |
 
-## tests（32）
+## tests（33）
 
 | 文件 | 用途 |
 | --- | --- |
 | [tests/__init__.py](../tests/__init__.py) | Unit tests for the local Blender preparation helpers. |
+| [tests/test_auto_qc.py](../tests/test_auto_qc.py) | Tests for automated QC hard metrics, sparse multiframe, temporal flicker and calibration. |
 | [tests/test_blender_detect.py](../tests/test_blender_detect.py) | No module description; read source before use |
 | [tests/test_blender_download.py](../tests/test_blender_download.py) | No module description; read source before use |
 | [tests/test_blender_install.py](../tests/test_blender_install.py) | No module description; read source before use |

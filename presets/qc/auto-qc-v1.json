@@ -1,0 +1,119 @@
+{
+  "schema_version": 1,
+  "id": "auto-qc-v1",
+  "created_on": "2026-11-22",
+  "purpose": "将猪猪历史反馈转化为可测硬指标、多帧稀疏检查与低分辨率时序诊断规则，以及 VLM 判官校准协议。仅用于筛除明显不合格候选与排序，绝不替代用户美术认可（ART-01）。",
+  "replaces_user_approval": false,
+  "feedback_provenance": [
+    {
+      "id": "fb-2026-11-14-clean-game",
+      "date": "2026-11-14",
+      "verdict": "revision_requested",
+      "summary": "当前画面灰蒙、不够明亮，需至少达到新paierer暗场参考的人像亮度与黑线表现；观海子仍为核心。"
+    },
+    {
+      "id": "fb-2026-11-17-ikhor-overbright",
+      "date": "2026-11-17",
+      "verdict": "revision_requested",
+      "summary": "感觉伊科尔还是有点太亮了，请你再降一些（保留白衣与亮肤色的层次，避免局部过亮）。"
+    },
+    {
+      "id": "fb-2026-11-16-window-rim",
+      "date": "2026-11-16",
+      "verdict": "revision_requested",
+      "summary": "背后两束窄光柱不自然；大窗应产生大片入光；衣发需要更强的轮廓辉光和更明显的发带高光。"
+    },
+    {
+      "id": "fb-historical-layering",
+      "date": "2026-11-13",
+      "verdict": "revision_requested",
+      "summary": "人物三渲二、人物自发光与受光关系、人物与场景层次仍不足，舞台与灯光需更大胆有层次。"
+    }
+  ],
+  "still_hard_metrics": {
+    "luma_mean_min": 0.22,
+    "luma_mean_max": 0.72,
+    "luma_p01_max": 0.22,
+    "luma_p05_max": 0.34,
+    "luma_p95_min": 0.62,
+    "dynamic_range_p95_p05_min": 0.50,
+    "luma_std_min": 0.16,
+    "clipped_white_threshold": 0.985,
+    "clipped_white_ratio_max": 0.08,
+    "highlight_threshold": 0.85,
+    "highlight_ratio_min": 0.005,
+    "highlight_ratio_max": 0.25,
+    "saturation_mean_min": 0.08,
+    "saturation_mean_max": 0.65,
+    "saturation_p90_min": 0.20,
+    "dark_edge_density_min": 0.012,
+    "laplacian_sharpness_min": 0.0008,
+    "subject_luma_mean_min": 0.32,
+    "subject_luma_mean_max": 0.76,
+    "subject_luma_p90_min": 0.72,
+    "subject_clipped_white_ratio_max": 0.045,
+    "subject_bg_luma_separation_min": 0.05
+  },
+  "sparse_multiframe": {
+    "min_frames": 8,
+    "recommended_frames": 10,
+    "max_frames": 12,
+    "max_frame_fail_ratio": 0.15,
+    "luma_mean_drift_max": 0.35,
+    "worst_clipped_white_ratio_max": 0.12,
+    "counts_as_video_delivery": false
+  },
+  "temporal_diagnostic": {
+    "duration_seconds_min": 1.0,
+    "duration_seconds_max": 2.0,
+    "default_duration_seconds": 1.5,
+    "default_fps": 30,
+    "recommended_resolution": [640, 360],
+    "luma_flicker_p95_max": 0.025,
+    "edge_jitter_mean_max": 0.05,
+    "hard_luma_jump_threshold": 0.06,
+    "hard_luma_jump_ratio_max": 0.05,
+    "counts_as_video_delivery": false,
+    "delivery_note": "仅作时序闪烁／阴影跳变／描边抖动诊断证据，严禁编码为样片交付。"
+  },
+  "vlm_judge_protocol": {
+    "dimensions": [
+      {
+        "id": "clarity_brightness",
+        "label": "画面明净度与亮度平衡（抗灰蒙、无死白）",
+        "scale": [1, 5],
+        "pass_min": 4
+      },
+      {
+        "id": "character_npr_shading",
+        "label": "人物三渲二形体、受光与白衣／肤色层次",
+        "scale": [1, 5],
+        "pass_min": 4
+      },
+      {
+        "id": "outline_detail",
+        "label": "黑线清晰度与脸眼发丝可读性",
+        "scale": [1, 5],
+        "pass_min": 4
+      },
+      {
+        "id": "stage_separation",
+        "label": "人物与舞台光影分离及空间氛围动机",
+        "scale": [1, 5],
+        "pass_min": 4
+      },
+      {
+        "id": "reference_alignment",
+        "label": "与观海子（主）／Gosari542 视觉关系的一致性",
+        "scale": [1, 5],
+        "pass_min": 3
+      }
+    ],
+    "calibration_gate": {
+      "min_labeled_cases": 4,
+      "min_reject_recall": 0.80,
+      "min_overall_accuracy": 0.75,
+      "rule": "VLM 判官须在含猪猪真实否决案例的标注集上通过回测后，方可作为自动初筛器；且永远不可将 user_approval 置为 true。"
+    }
+  }
+}

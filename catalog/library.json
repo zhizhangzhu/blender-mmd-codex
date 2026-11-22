@@ -1747,6 +1747,8 @@
       "title": "动作与成片",
       "description": "动作、物理、镜头、原声与交付。",
       "docs": [
+        "AUTO_QC.md",
+        "PROJECT_FRANKEN_DUET_RULES.md",
         "ANIMATION_AND_KEYFRAMING_PLAYBOOK.md",
         "LOCAL_CORRECTIVE_SHAPES.md",
         "IKHOR_SLEEVE_REPAIR.md",
@@ -1781,6 +1783,7 @@
       "title": "工具与环境",
       "description": "本机能力、教程转写与复用入口。",
       "docs": [
+        "GOO_RUNTIME_POLICY.md",
         "GOO_FOUNDATIONS_AND_PARAMETERS.md",
         "GOO_MMD_EIGHT_FOUNDATIONS_2026_11_18.md",
         "GOO_BLENDER_FOUNDATIONS_2026_11_18.md",

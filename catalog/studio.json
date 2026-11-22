@@ -453,6 +453,51 @@
       "exceptions": [
         "不以笔记数量或登记通过代替学习和作品进步"
       ]
+    },
+    {
+      "id": "anti-hazy-bright-ink-counterexample",
+      "statement": "拒绝画面灰蒙、不够明亮；人像亮度、清晰度与黑线表现须明确拉开层次",
+      "scope": "2026-11-14 Clean-Game 5秒审片反馈；转化为 auto-qc-v1 抗灰蒙与主体亮度规则",
+      "source": {
+        "kind": "user_feedback",
+        "provenance": "catalog/current_state.json"
+      },
+      "examples": [
+        {
+          "path": "D:/codex/output/MMD-Clean-Game-Characters-v1/native-5s/video-qa/video-frame-0138.png",
+          "sha256": "9700ed39d9aceca281dc40d1630bf8fa9454c222ddabb3c4623a9c32b21810de",
+          "role": "negative"
+        }
+      ],
+      "exceptions": [
+        "暗场剧情镜头允许深背景，但主体脸眼与黑线不能发灰发闷"
+      ]
+    },
+    {
+      "id": "broad-window-and-hair-rim",
+      "statement": "大窗应产生自然大片入光而非生硬窄光柱；衣发需要清晰轮廓辉光与发带高光",
+      "scope": "2026-11-16 礼堂舞台灯光与人物轮廓反馈",
+      "source": {
+        "kind": "user_feedback",
+        "provenance": "docs/history/2026-11-22/state_history.json"
+      },
+      "examples": [],
+      "exceptions": [
+        "需配合白衣与亮肤层次保护，避免轮廓辉光过曝洗白"
+      ]
+    },
+    {
+      "id": "goo-primary-runtime-and-standard-qc",
+      "statement": "以 GooEngine 为全自动 MMD 主线运行时；每轮标准 QC 包含硬指标、8–12 帧稀疏检查与 1–2 秒低分辨率时序诊断（仅作 QC 证据，不属视频交付）",
+      "scope": "2026-11-22 猪猪确认的 SPEC v1.3 架构升级",
+      "source": {
+        "kind": "user_instruction",
+        "provenance": "SPEC.md"
+      },
+      "examples": [],
+      "exceptions": [
+        "自动 QC 通过绝不替代用户美术认可（ART-01）"
+      ]
     }
   ],
   "curriculum": [

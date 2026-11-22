@@ -269,7 +269,7 @@ python -m scripts.learning_queue plan --limit 3
 | [transcribe_tutorial.py](transcribe_tutorial.py) | Create a private, timestamped ASR study draft from local tutorial media. | starts_external_process, writes_text_files |
 | [video_reference_frames.py](video_reference_frames.py) | Extract timestamped local reference frames and a contact sheet (OpenCV/Pillow). | writes_text_files |
 
-## 其他工具与库模块（105）
+## 其他工具与库模块（106）
 
 | 文件 | 模块说明 | 静态提示 |
 | --- | --- | --- |
@@ -279,6 +279,7 @@ python -m scripts.learning_queue plan --limit 3
 | [align_caption_audio.py](align_caption_audio.py) | Measure a typography video's audio offset against the selected original BGM. | starts_external_process, writes_text_files |
 | [align_duet_audio.py](align_duet_audio.py) | Estimate the MV-intro offset from original vocal/inst audio and VMD mouth tracks. | starts_external_process |
 | [align_typography.py](align_typography.py) | Estimate a typography excerpt's origin in a longer typography video. | starts_external_process |
+| [auto_qc.py](auto_qc.py) | Automated hard-metric QC, sparse multiframe checks, low-res temporal diagnostics and judge calibration. | writes_text_files |
 | [bake_goo_face_hair_shadows.py](bake_goo_face_hair_shadows.py) | Bake the two actors' actual animated bang occlusion to portable face-UV sequences. | saves_blend, writes_text_files |
 | [benchmark_bold_wedding.py](benchmark_bold_wedding.py) | Unsaved 1080p benchmark of constant-one palette bypass pruning only. | native_render_call |
 | [blender_bootstrap.py](blender_bootstrap.py) | Coordinate Blender detection, verified portable installation, and validation. | 未检出上述关键字；仍需读源码 |
